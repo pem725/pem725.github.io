@@ -5,3 +5,5 @@ My Projects
 2. GMU757:  A set of functions useful for teaching Bayesian analyses
 3. TMA:  Trust measurement analysis code repository for our collaboration
 4. ProPre:  Analysis code for our promotion/prevention project
+
+[testme](./_book/index.html)
