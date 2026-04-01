@@ -1,9 +1,31 @@
 # pem725.github.io
-My Projects
 
-1. MRES (R package - not listed on CRAN):  some functions I find useful in my work.
-2. GMU757:  A set of functions useful for teaching Bayesian analyses
-3. TMA:  Trust measurement analysis code repository for our collaboration
-4. ProPre:  Analysis code for our promotion/prevention project
+Personal homepage for Patrick E. McKnight, Ph.D. — George Mason University.
 
-[testme](./_book/index.html)
+## Structure
+
+```
+index.html          <- Main homepage
+cv/                 <- Academic CV & NIH Biosketch (Quarto source + rendered)
+  index.html        <- Rendered CV page
+  cv.qmd            <- Quarto source
+  publications.yaml <- Publication data
+  *.pdf             <- PDF versions
+impact/             <- Scholarly impact & publication list
+  index.html        <- Searchable publication browser
+  data/             <- Google Scholar scraped data
+  *.py              <- Scraper scripts
+```
+
+## Live site
+
+**https://pem725.github.io**
+
+- [Homepage](https://pem725.github.io)
+- [Academic CV](https://pem725.github.io/cv/)
+- [Scholarly Impact](https://pem725.github.io/impact/)
+
+## Related projects (separate repos)
+
+- [The Sports Page](https://pem725.github.io/the-sports-page/) — Daily sports stats newsletter
+- [GitHub Profile README](https://github.com/pem725/pem725) — Profile shown on github.com/pem725

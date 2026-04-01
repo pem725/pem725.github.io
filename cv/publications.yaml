@@ -1,0 +1,1235 @@
+# Publications data for Patrick E. McKnight, Ph.D.
+# Complete CV data - single source of truth for all documents
+# Last updated: 2026-01-29
+
+# Identifiers
+scholar_id: "sH44LC4AAAAJ"
+orcid: "0000-0002-9067-9066"
+era_commons: "PMCKNIGHT"
+erdos_number: 6
+
+# Contact
+contact:
+  email: "pmcknigh@gmu.edu"
+  personal_email: "pem@alumni.nd.edu"
+  phone: "703-993-8292"
+  office: "MSN 3F5, 4400 University Drive, Fairfax, VA 22030-4444"
+
+# Metrics (from Google Scholar)
+metrics:
+  total_citations: 17454
+  h_index: 62
+  i10_index: 108
+  publications_count: 90
+  last_updated: "2026-01-29"
+
+# Education
+education:
+  - degree: "Ph.D."
+    institution: "University of Arizona"
+    location: "Tucson, AZ"
+    year: 1997
+    field: "Psychology (Clinical)"
+    major: "Clinical Psychology"
+    minor: "Program Evaluation and Research Methods"
+    details: "Dissertation: Calibration of Psychological Measures: An illustration of three quantitative calibration procedures. Chair: Lee Sechrest, Ph.D."
+
+  - degree: "M.S."
+    institution: "University of Arizona"
+    location: "Tucson, AZ"
+    year: 1992
+    field: "Exercise and Sports Sciences"
+    details: "Thesis: The effects of cohesion and identifiability on social loafing. Chair: Jean M. Williams, Ph.D."
+
+  - degree: "B.S."
+    institution: "University of Notre Dame"
+    location: "Notre Dame, IN"
+    year: 1988
+    field: "Mechanical Engineering"
+
+# Employment
+positions:
+  current:
+    - title: "Associate Professor"
+      institution: "George Mason University"
+      department: "Department of Psychology: Human Factors and Applied Cognition"
+      start: 2011
+      current: true
+      featured: true
+
+    - title: "Advisory Board Member"
+      institution: "Sense about Science USA"
+      department: "STATS.org"
+      start: 2015
+      current: true
+
+    - title: "Consultant"
+      institution: "McKnight Consulting, LLC"
+      department: "Research and Technical Consulting"
+      start: 2005
+      current: true
+
+  previous:
+    - title: "Assistant Professor"
+      institution: "George Mason University"
+      department: "Department of Psychology"
+      start: 2005
+      end: 2011
+
+    - title: "Research Assistant Professor"
+      institution: "University of Arizona"
+      department: "Department of Psychology, EGAD"
+      start: 2002
+      end: 2005
+
+    - title: "Health Sciences Specialist"
+      institution: "VA Puget Sound Health Care System"
+      department: "CESATE"
+      location: "Seattle, WA"
+      start: 1999
+      end: 2001
+
+    - title: "Psychology Resident"
+      institution: "University of Washington"
+      department: "College of Medicine, Psychiatry and Behavioral Sciences"
+      start: 1998
+      end: 1999
+
+# Publications
+publications:
+  books:
+    - authors: "McKnight, P.E., McKnight, K.M., Sidani, S. & Figueredo, A.J."
+      year: 2007
+      title: "Missing Data: A Gentle Introduction"
+      publisher: "Guilford Press"
+      location: "New York"
+      citations: 3200
+      category: "methodology"
+
+    - authors: "Bootzin, R.R. & McKnight, P.E. (Eds)"
+      year: 2006
+      title: "Strengthening Research Methodology: Psychological Measurement and Evaluation"
+      publisher: "American Psychological Association"
+      location: "Washington"
+      citations: 6
+      category: "methodology"
+
+  articles:
+    # 2025 and in press
+    - authors: "McKnight, P.E., Kashdan, T.B., MacKay, A., Kelso, K., & Gross, M."
+      year: 2025
+      title: "Purpose and happiness: A comparison"
+      journal: "Journal of Positive Psychology"
+      status: "in press"
+      category: "purpose"
+
+    - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., Guenoun, B., & Naughton, C."
+      year: 2025
+      title: "Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries"
+      journal: "Personality and Individual Differences"
+      status: "in press"
+      category: "curiosity"
+
+    - authors: "Blanco-Donoso, Torio, L., Hurtado, M., Lecuona, O., Carmona-Cobo, I., Kashdan, T.B., McKnight, P.E., & Garrosa, E."
+      year: 2025
+      title: "Spanish adaptation of the Multidimensional Workplace Curiosity Scale"
+      journal: "Acta Psychologica"
+      status: "in press"
+      category: "curiosity"
+
+    # 2024
+    - authors: "Jackson, K.M., Thayer, S.C., Simpson, K.L., Shaw, T.H., McKnight, P.E., & Helton, W.S."
+      year: 2024
+      title: "Swimming with a head-mounted display: dual-task costs"
+      journal: "Ergonomics"
+      pages: "1-10"
+      citations: 0
+      category: "cognition"
+
+    - authors: "Kashdan, T.B., Kaufman, J.C., & McKnight, P.E."
+      year: 2024
+      title: "The costs of curiosity and creativity: Minimizing the downsides while maximizing the upsides"
+      journal: "Behavioral and Brain Sciences"
+      volume: "47"
+      pages: "e105"
+      citations: 0
+      category: "curiosity"
+
+    # 2023
+    - authors: "Kashdan, T.B., Goodman, F.R., McKnight, P.E., Brown, B., & Rum, R."
+      year: 2023
+      title: "Purpose in life: A resolution on the definition, conceptual model, and optimal measurement"
+      journal: "American Psychologist"
+      citations: 50
+      category: "purpose"
+
+    - authors: "Dang, J.A., Shaw, T.H., McKnight, P.E., & Helton, W.S."
+      year: 2023
+      title: "A closer look at warning cues on the sustained attention to response task performance"
+      journal: "Human Factors"
+      volume: "65"
+      issue: "8"
+      pages: "1793-1803"
+      citations: 5
+      category: "cognition"
+
+    - authors: "Harwood, A.E., Satterfield, K., Helton, W.S., McKnight, P.E., & Shaw, T.H."
+      year: 2023
+      title: "The Role of State and Trait Self-Control on the Sustained Attention to Response Task"
+      journal: "Human Factors"
+      citations: 2
+      category: "cognition"
+
+    # 2022
+    - authors: "Lockhart, P.B., Thornhill, M.H., Zhao, J., et al. & McKnight, P.E."
+      year: 2022
+      title: "Factors that affect dentists' use of antibiotic prophylaxis"
+      journal: "Journal of the American Dental Association"
+      citations: 10
+      category: "health"
+
+    - authors: "Kashdan, T.B., McKnight, P.E., & Goodman, F.R."
+      year: 2022
+      title: "Evolving positive psychology: A blueprint for advancing the study of purpose in life, psychological strengths, and resilience"
+      journal: "Journal of Positive Psychology"
+      volume: "17"
+      issue: "2"
+      pages: "210-218"
+      citations: 45
+      category: "purpose"
+
+    - authors: "Dang, J.A., Shaw, T.H., McKnight, P.E., & Helton, W.S."
+      year: 2022
+      title: "A closer look at warning cues on the sustained attention to response task performance"
+      journal: "Human Factors"
+      citations: 5
+      category: "cognition"
+
+    # 2021
+    - authors: "McKnight, P.E., Kidd, J.K., Gallington, D.A., Strauss, L.I., Lyu, H., Gadzichowski, K.M., & Pasnak, R."
+      year: 2021
+      title: "The Efficacy of Teaching Advanced Forms of Patterning to Kindergartners"
+      journal: "Creative Education"
+      volume: "12"
+      issue: "03"
+      pages: "557"
+      citations: 5
+      category: "education"
+
+    # 2020
+    - authors: "Kashdan, T.B., Disabato, D.J., Goodman, F.R., & McKnight, P.E."
+      year: 2020
+      title: "The Five-Dimensional Curiosity Scale Revised (5DCR): Briefer subscales while separating overt and covert social curiosity"
+      journal: "Personality and Individual Differences"
+      volume: "157"
+      pages: "109836"
+      citations: 280
+      category: "curiosity"
+
+    - authors: "Kashdan, T.B., Goodman, F.R., Disabato, D.J., McKnight, P.E., Kelso, K., & Naughton, C."
+      year: 2020
+      title: "Curiosity has comprehensive benefits in the workplace"
+      journal: "Personality and Individual Differences"
+      volume: "155"
+      pages: "109717"
+      citations: 195
+      category: "curiosity"
+
+    - authors: "Kashdan, T.B., Disabato, D.J., Goodman, F.R., Doorley, J.D., & McKnight, P.E."
+      year: 2020
+      title: "Understanding psychological flexibility: A multimethod exploration of pursuing valued goals despite the presence of distress"
+      journal: "Psychological Assessment"
+      volume: "32"
+      issue: "9"
+      pages: "829"
+      citations: 120
+      category: "flexibility"
+
+    - authors: "Kashdan, T.B., Disabato, D.J., McKnight, P.E., Kelso, K.C., Lauber, M., & Goodman, F.R."
+      year: 2020
+      title: "Sexual assault: Exploring real-time consequences the next day and in subsequent days"
+      journal: "International Journal of Wellbeing"
+      volume: "10"
+      issue: "4"
+      citations: 15
+      category: "wellbeing"
+
+    - authors: "Gonçalves, S.F., Chaplin, T.M., López Jr, R., et al. & McKnight, P.E."
+      year: 2020
+      title: "High-Frequency Heart Rate Variability and Emotion-Driven Impulse Control Difficulties During Adolescence"
+      journal: "Journal of Early Adolescence"
+      citations: 25
+      category: "emotion"
+
+    - authors: "Lockhart, P.B., Thornhill, M.H., Zhao, J., et al. & McKnight, P.E."
+      year: 2020
+      title: "Prophylactic antibiotic prescribing in dental practice"
+      journal: "Journal of the American Dental Association"
+      volume: "151"
+      issue: "10"
+      pages: "770-781"
+      citations: 35
+      category: "health"
+
+    # 2019
+    - authors: "Doorley, J.D., Kashdan, T.B., Alexander, L.A., Blalock, D.V., & McKnight, P.E."
+      year: 2019
+      title: "Distress tolerance in romantic relationships: A daily diary exploration with methodological considerations"
+      journal: "Motivation and Emotion"
+      volume: "43"
+      issue: "3"
+      pages: "505-516"
+      citations: 25
+      category: "relationships"
+
+    - authors: "Fontana, M., Eckert, G.J., Keels, M.A., et al. & McKnight, P."
+      year: 2019
+      title: "Predicting Caries in Medical Settings: Risk Factors in Diverse Infant Groups"
+      journal: "Journal of Dental Research"
+      volume: "98"
+      issue: "1"
+      pages: "68-76"
+      citations: 45
+      category: "health"
+
+    - authors: "Curby, T., McKnight, P., Alexander, L., & Erchov, S."
+      year: 2019
+      title: "Sources of variance in end-of-course student evaluations"
+      journal: "Assessment & Evaluation in Higher Education"
+      citations: 15
+      category: "education"
+
+    # 2018
+    - authors: "Kashdan, T.B., Stiksma, M.C., Disabato, D.D., McKnight, P.E., Bekier, J., Kaji, J., & Lazarus, R."
+      year: 2018
+      title: "The five-dimensional curiosity scale: Capturing the bandwidth of curiosity and identifying four unique subgroups of curious people"
+      journal: "Journal of Research in Personality"
+      volume: "73"
+      pages: "130-149"
+      citations: 520
+      category: "curiosity"
+
+    - authors: "Yarbro, J.L., & McKnight, P.E."
+      year: 2018
+      title: "An introduction to cost-effectiveness acceptability curves"
+      journal: "Clinical Practice in Pediatric Psychology"
+      volume: "6"
+      issue: "2"
+      pages: "179"
+      citations: 8
+      category: "methodology"
+
+    - authors: "Bock, A.M., Cartwright, K.B., McKnight, P.E., et al. & Pasnak, R."
+      year: 2018
+      title: "Patterning, reading, and executive functions"
+      journal: "Frontiers in Psychology"
+      volume: "9"
+      pages: "1802"
+      citations: 45
+      category: "education"
+
+    # 2017
+    - authors: "Alexander, L.A., McKnight, P.E., Disabato, D.J., & Kashdan, T.B."
+      year: 2017
+      title: "When and How to use Multiple Informants to Improve Clinical Assessments"
+      journal: "Journal of Psychopathology and Behavioral Assessment"
+      citations: 35
+      category: "methodology"
+
+    - authors: "Kashdan, T.B., Blalock, D.V., Young, K.C., Machell, K.A., Monfort, S.S., McKnight, P.E., & Ferssizidis, P."
+      year: 2017
+      title: "Personality Strengths in Romantic relationships"
+      journal: "Psychological Assessment"
+      citations: 65
+      category: "relationships"
+
+    - authors: "Kashdan, T.B., Goodman, F.R., Stiksma, M., Milius, C.R., & McKnight, P.E."
+      year: 2017
+      title: "Sexuality Leads to Boosts in Mood and Meaning in Life"
+      journal: "Emotion"
+      citations: 45
+      category: "wellbeing"
+
+    - authors: "Monfort, S.S., Graybeal, J.J., Harwood, A.E., McKnight, P.E., & Shaw, T.H."
+      year: 2017
+      title: "A single-item assessment for remaining mental resources: development and validation of the Gas Tank Questionnaire"
+      journal: "Theoretical Issues in Ergonomics Science"
+      citations: 25
+      category: "measurement"
+
+    - authors: "Bono, G., Froh, J.J., Disabato, D., Blalock, D., McKnight, P., & Bausert, S."
+      year: 2017
+      title: "Gratitude's role in adolescent antisocial and prosocial behavior: A 4-year longitudinal investigation"
+      journal: "Journal of Positive Psychology"
+      citations: 55
+      category: "wellbeing"
+
+    # 2016
+    - authors: "de Visser, E.J., Monfort, S.S., McKendrick, R., Smith, M.A.B., McKnight, P.E., Krueger, F., & Parasuraman, R."
+      year: 2016
+      title: "Almost Human: Anthropomorphism Increases Trust Resilience in Cognitive Agents"
+      journal: "Journal of Experimental Psychology: Applied"
+      citations: 280
+      category: "cognition"
+
+    - authors: "Foroughi, C.K., Monfort, S.S., Paczynski, M., McKnight, P.E., & Greenwood, P.M."
+      year: 2016
+      title: "Placebo effects in cognitive training"
+      journal: "Proceedings of the National Academy of Sciences"
+      volume: "113"
+      issue: "27"
+      pages: "7470-7474"
+      citations: 350
+      category: "cognition"
+
+    - authors: "Saad, M.A., McKnight, P., Quartuccio, J., Nicholas, D., Jaladi, R., & Corriveau, P."
+      year: 2016
+      title: "Online subjective testing for consumer-photo quality evaluation"
+      journal: "Journal of Electronic Imaging"
+      volume: "25"
+      issue: "4"
+      pages: "043009"
+      citations: 15
+      category: "methodology"
+
+    # 2015
+    - authors: "Kashdan, T.B., Feldman-Barrett, L., & McKnight, P.E."
+      year: 2015
+      title: "Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity"
+      journal: "Current Directions in Psychological Science"
+      volume: "24"
+      issue: "1"
+      pages: "10-16"
+      citations: 450
+      category: "emotion"
+
+    - authors: "McKnight, P.E., Monfort, S.S., Kashdan, T.B., Blalock, D.V., & Calton, J.M."
+      year: 2015
+      title: "Anxiety Symptoms and Functional Impairment: A Systematic Review of the Correlation between the Two Measures"
+      journal: "Clinical Psychology Review"
+      volume: "45"
+      pages: "115-130"
+      citations: 180
+      category: "anxiety"
+
+    - authors: "Shaw, T.H., Nguyen, C., Satterfield, K., Ramirez, R., & McKnight, P.E."
+      year: 2015
+      title: "Cerebral hemovelocity reveals differential resource allocation strategies for extraverts and introverts during vigilance"
+      journal: "Experimental Brain Research"
+      volume: "234"
+      issue: "2"
+      citations: 35
+      category: "cognition"
+
+    - authors: "Sattler, D.N., McKnight, P.E., Naney, L., & Mathis, R."
+      year: 2015
+      title: "Grant peer review: Improving inter-rater reliability with training"
+      journal: "PLoS One"
+      volume: "10"
+      issue: "6"
+      pages: "e0130450"
+      citations: 85
+      category: "methodology"
+
+    - authors: "Graybeal, J.J., Bozzelli, P.L., Graybeal, L.L., Groeber, C.M., McKnight, P.E., Cox, D.N., & Flinn, J.M."
+      year: 2015
+      title: "Human ApoE ε4 Alters Circadian Rhythm Activity, IL-1β, and GFAP in CRND8 Mice"
+      journal: "Journal of Alzheimer's Disease"
+      volume: "43"
+      issue: "3"
+      pages: "823-834"
+      citations: 45
+      category: "health"
+
+    - authors: "Young, K.C., Kashdan, T.B., McKnight, P.E., Blalock, D.V., Yuen, M., & Richberg, J.B."
+      year: 2015
+      title: "Happy and unhappy adolescent bullies: Evidence for theoretically meaningful subgroups"
+      journal: "Personality and Individual Differences"
+      volume: "75"
+      pages: "224-228"
+      citations: 25
+      category: "wellbeing"
+
+    # 2014
+    - authors: "VanDerhei, S., Rojahn, J., Stuewig, J., & McKnight, P.E."
+      year: 2014
+      title: "The Effect of Shame-Proneness, Guilt-Proneness, and Internalizing Tendencies on Nonsuicidal Self-Injury"
+      journal: "Suicide and Life-Threatening Behavior"
+      volume: "44"
+      issue: "3"
+      pages: "317-330"
+      citations: 95
+      category: "emotion"
+
+    - authors: "Kashdan, T.B., Adams, L.M., Farmer, A.S., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
+      year: 2014
+      title: "Sexual healing: Daily diary investigation of the benefits of intimate and pleasurable sexual activity in socially anxious adults"
+      journal: "Archives of Sexual Behavior"
+      volume: "43"
+      issue: "7"
+      pages: "1417-1429"
+      citations: 55
+      category: "anxiety"
+
+    - authors: "Kashdan, T.B., Yarbro, J., McKnight, P.E., & Nezlek, J.B."
+      year: 2014
+      title: "Laughter with someone else leads to future social rewards: Temporal change using experience sampling methodology"
+      journal: "Personality and Individual Differences"
+      volume: "58"
+      pages: "15-19"
+      citations: 85
+      category: "wellbeing"
+
+    - authors: "Yarbro, J., Arfstrom, K.M., McKnight, K., & McKnight, P."
+      year: 2014
+      title: "Extension of a review of flipped learning"
+      journal: "Flipped Learning Network"
+      citations: 450
+      category: "education"
+
+    - authors: "Kidd, J.K., Pasnak, R., Gadzichowski, K.M., Gallington, D.A., McKnight, P., Boyer, C.E., & Carlson, A."
+      year: 2014
+      title: "Instructing first-grade children on patterning improves reading and mathematics"
+      journal: "Early Education & Development"
+      volume: "25"
+      issue: "1"
+      pages: "134-151"
+      citations: 145
+      category: "education"
+
+    # 2013
+    - authors: "Kashdan, T.B., & McKnight, P.E."
+      year: 2013
+      title: "Commitment to a purpose in life: An antidote to the suffering by individuals with social anxiety disorder"
+      journal: "Emotion"
+      volume: "13"
+      issue: "6"
+      pages: "1150"
+      citations: 380
+      category: "purpose"
+
+    - authors: "Kashdan, T.B., Farmer, A.S., Adams, L.M., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
+      year: 2013
+      title: "Distinguishing health adults from people with social anxiety disorder"
+      journal: "Journal of Abnormal Psychology"
+      volume: "122"
+      issue: "3"
+      pages: "645"
+      citations: 280
+      category: "anxiety"
+
+    - authors: "Kashdan, T.B., Ferssizidis, P., Farmer, A.S., Adams, L.M., & McKnight, P.E."
+      year: 2013
+      title: "Failure to capitalize on sharing good news with romantic partners"
+      journal: "Behaviour Research and Therapy"
+      volume: "51"
+      issue: "10"
+      pages: "656-668"
+      citations: 120
+      category: "relationships"
+
+    # 2012
+    - authors: "Kashdan, T.B., Young, K.C., & McKnight, P.E."
+      year: 2012
+      title: "When is rumination an adaptive mood repair strategy?"
+      journal: "Journal of Anxiety Disorders"
+      volume: "26"
+      issue: "7"
+      pages: "762-768"
+      citations: 95
+      category: "anxiety"
+
+    # 2011
+    - authors: "Thompson, J.C., Trafton, J.G., & McKnight, P."
+      year: 2011
+      title: "The perception of humanness from the movements of synthetic agents"
+      journal: "Perception"
+      volume: "40"
+      pages: "695-704"
+      citations: 145
+      category: "cognition"
+
+    - authors: "Renshaw, K.D., McKnight, P., Caska, C.M., & Blais, R.K."
+      year: 2011
+      title: "The utility of the relationship assessment scale in multiple types of relationships"
+      journal: "Journal of Social and Personal Relationships"
+      volume: "28"
+      pages: "435-447"
+      citations: 185
+      category: "relationships"
+
+    - authors: "Kashdan, T.B., Adams, L., Savostyanova, A., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
+      year: 2011
+      title: "Effects of social anxiety and depressive symptoms on the frequency and quality of sexual activity"
+      journal: "Behaviour Research and Therapy"
+      volume: "49"
+      pages: "352-360"
+      citations: 185
+      category: "anxiety"
+
+    - authors: "Kashdan, T.B., & McKnight, P.E."
+      year: 2011
+      title: "Dynamic, contextual approaches to studying personality in the social world"
+      journal: "Journal of Personality"
+      volume: "79"
+      pages: "1177-1190"
+      citations: 65
+      category: "methodology"
+
+    - authors: "Kashdan, T.B., McKnight, P.E., Fincham, F.D., & Rose, P."
+      year: 2011
+      title: "When curiosity breeds intimacy"
+      journal: "Journal of Personality"
+      volume: "79"
+      pages: "1369-1401"
+      citations: 195
+      category: "curiosity"
+
+    - authors: "McKnight, P.E., Johns, M.J., McGovern, P.J., & Najab, J."
+      year: 2011
+      title: "The pitfalls of a tool-based science and the promise of a problem-focused science"
+      journal: "Journal of Methods and Measurement in the Social Sciences"
+      volume: "1"
+      pages: "1-14"
+      citations: 15
+      category: "methodology"
+
+    - authors: "Voelkle, M.C. & McKnight, P.E."
+      year: 2011
+      title: "One size fits all? A Monte-Carlo simulation on repeated measures (M)ANOVA and latent curve modeling"
+      journal: "Methodology"
+      volume: "8"
+      pages: "23-38"
+      citations: 35
+      category: "methodology"
+
+    # 2010
+    - authors: "Kashdan, T.B. & McKnight, P.E."
+      year: 2010
+      title: "The darker side of social anxiety"
+      journal: "Current Directions in Psychological Science"
+      volume: "19"
+      issue: "1"
+      pages: "47-50"
+      citations: 285
+      category: "anxiety"
+
+    - authors: "Farr, J., Going, S., McKnight, P.E., Kasle, S., Cussler, E., & Cornette, M."
+      year: 2010
+      title: "Progressive resistance training improves overall physical activity levels in patients with early osteoarthritis of the knee"
+      journal: "Physical Therapy"
+      volume: "90"
+      pages: "356-366"
+      citations: 245
+      category: "health"
+
+    - authors: "Kasle, S., Wilhelm, M.S., McKnight, P.E., Sheikh, S.Z., & Zautra, A.J."
+      year: 2010
+      title: "Mutuality's prospective beneficial effect on inflammation in female rheumatoid arthritis patients"
+      journal: "Arthritis Care & Research"
+      volume: "62"
+      issue: "1"
+      pages: "92-100"
+      citations: 45
+      category: "health"
+
+    - authors: "McKnight, P.E., Kasle, S., Going, S., Villanueva, I., Cornett, M., Farr, J., Wright, J., Streeter, C., & Zautra, A."
+      year: 2010
+      title: "A comparison of strength training, self-management, and the combination for early osteoarthritis of the knee"
+      journal: "Arthritis Care & Research"
+      volume: "62"
+      issue: "1"
+      pages: "45-53"
+      citations: 265
+      category: "health"
+
+    - authors: "McKnight, P.E., Afram, A., Kashdan, T.B., Kasle, S., & Zautra, A."
+      year: 2010
+      title: "Coping self-efficacy as a mediator between catastrophizing and physical functioning"
+      journal: "Journal of Behavioral Medicine"
+      volume: "33"
+      pages: "239-249"
+      citations: 115
+      category: "health"
+
+    # 2009
+    - authors: "Hofmann, S.G., Richey, J.A., Kashdan, T.B., & McKnight, P.E."
+      year: 2009
+      title: "Anxiety disorders moderate the association between externalizing problems and substance use disorders"
+      journal: "Journal of Anxiety Disorders"
+      volume: "23"
+      issue: "4"
+      pages: "529-534"
+      citations: 145
+      category: "anxiety"
+
+    - authors: "Kashdan, T.B., McKnight, P.E., Richey, J.A., & Hofmann, S.G."
+      year: 2009
+      title: "When social anxiety disorder co-exists with risk-prone, approach behavior"
+      journal: "Behaviour Research and Therapy"
+      volume: "47"
+      issue: "7"
+      pages: "559-568"
+      citations: 245
+      category: "anxiety"
+
+    - authors: "McKnight, P.E. & Kashdan, T.B."
+      year: 2009
+      title: "The importance of functional impairment to mental health outcomes"
+      journal: "Clinical Psychology Review"
+      volume: "29"
+      issue: "3"
+      pages: "243-259"
+      citations: 685
+      category: "methodology"
+
+    - authors: "McKnight, P.E. & Kashdan, T.B."
+      year: 2009
+      title: "Purpose in life as a system that creates and sustains health and well-being"
+      journal: "Review of General Psychology"
+      volume: "13"
+      issue: "3"
+      pages: "242-251"
+      citations: 1250
+      category: "purpose"
+
+    # 2007
+    - authors: "McKnight, P. & Babcock-Parziale, J."
+      year: 2007
+      title: "Respondent impact on functional ability outcome measures in vision rehabilitation"
+      journal: "Optometry and Vision Sciences"
+      volume: "84"
+      issue: "8"
+      pages: "721-728"
+      citations: 25
+      category: "measurement"
+
+    # 2006
+    - authors: "Coan, J.A., Allen, J.J., & McKnight, P.E."
+      year: 2006
+      title: "A capability model of individual differences in frontal EEG asymmetry"
+      journal: "Biological Psychology"
+      volume: "72"
+      issue: "2"
+      pages: "198-207"
+      citations: 685
+      category: "neuroscience"
+
+    - authors: "Caspi, O., McKnight, P., Kruse, L., Cunningham, V., Figueredo, A.J., & Sechrest, L."
+      year: 2006
+      title: "Evidence-based medicine: discrepancy between perceived competence and actual performance among graduating medical students"
+      journal: "Medical Teacher"
+      volume: "28"
+      issue: "4"
+      pages: "318-325"
+      citations: 165
+      category: "education"
+
+    # 2005
+    - authors: "Babcock-Parziale, J., McKnight, P.E. & Head, D.N."
+      year: 2005
+      title: "Evaluating the psychometric properties of a clinical and a self-report blind rehabilitation outcome measure"
+      journal: "Journal of Rehabilitation Research and Development"
+      volume: "42"
+      issue: "4"
+      pages: "487-498"
+      citations: 45
+      category: "measurement"
+
+    - authors: "McKnight, K.M., Sechrest, L., & McKnight, P.E."
+      year: 2005
+      title: "Psychology, psychologists, and public policy"
+      journal: "Annual Review of Clinical Psychology"
+      volume: "1"
+      pages: "557-576"
+      citations: 85
+      category: "methodology"
+
+    - authors: "Bayles, K.A., Kim, E.S., Azuma, T., et al. & McKnight, P."
+      year: 2005
+      title: "Developing Evidence-Based Practice Guidelines for Speech-Language Pathologists Serving Individuals with Alzheimer's Dementia"
+      journal: "Journal of Medical Speech-Language Pathology"
+      volume: "13"
+      issue: "4"
+      pages: "xiii-xxv"
+      citations: 85
+      category: "health"
+
+    - authors: "Schnyer, R., Conboy, L., Jacobson, E., McKnight, P., et al."
+      year: 2005
+      title: "Development of a Chinese Medicine Assessment Measure: An Interdisciplinary Approach using the Delphi Method"
+      journal: "Journal of Complementary and Alternative Medicine"
+      volume: "11"
+      issue: "6"
+      pages: "1005-1013"
+      citations: 165
+      category: "methodology"
+
+    # 2004
+    - authors: "Stroud, M., McKnight, P.E. & Jensen, M."
+      year: 2004
+      title: "Assessment of Self-Reported Physical Activity in Chronic Pain Patients: Development of an Abbreviated Roland-Morris Disability Scale"
+      journal: "Journal of Pain"
+      volume: "5"
+      issue: "5"
+      pages: "257-263"
+      citations: 185
+      category: "measurement"
+
+    - authors: "Conrad, K.J., Wright, B.D. & McKnight, P.E."
+      year: 2004
+      title: "Comparing Traditional and Rasch Analyses of the Mississippi PTSD Scale"
+      journal: "Journal of Applied Measurement"
+      volume: "5"
+      issue: "1"
+      pages: "15-30"
+      citations: 165
+      category: "measurement"
+
+    - authors: "Bayles, K.A., Tomoeda, C.K., McKnight, P.E., Helm-Estabrooks, N., & Hawley, J.N."
+      year: 2004
+      title: "Verbal perseveration in individuals with Alzheimer's disease"
+      journal: "Seminars in Speech and Language"
+      volume: "25"
+      issue: "4"
+      pages: "335-347"
+      citations: 95
+      category: "health"
+
+    # 2003
+    - authors: "McKnight, P.E. & Sechrest, L."
+      year: 2003
+      title: "The use and misuse of the term 'experience' in contemporary psychology"
+      journal: "Philosophical Psychology"
+      volume: "16"
+      issue: "3"
+      pages: "431-460"
+      citations: 85
+      category: "methodology"
+
+    - authors: "Reed, R.L., Hepburn, K., Adelson, R., Center, B., & McKnight, P."
+      year: 2003
+      title: "Low serum albumin levels, confusion and fecal incontinence: Are these risk factors for pressure ulcers?"
+      journal: "Gerontology"
+      volume: "49"
+      issue: "4"
+      pages: "255-259"
+      citations: 285
+      category: "health"
+
+    - authors: "Doctor, J.N., Wolfson, A.M., McKnight, P.E. & Burns, S.P."
+      year: 2003
+      title: "The effect of inaccurate FIM instrument ratings on prospective payment"
+      journal: "Archives of Physical Medicine and Rehabilitation"
+      volume: "84"
+      issue: "1"
+      pages: "46-50"
+      citations: 45
+      category: "measurement"
+
+    # 2002
+    - authors: "Schmaling, K.B., McKnight, P.E. & Afari, N."
+      year: 2002
+      title: "A prospective daily study of the relationship of moods and stress to pulmonary function among patients with asthma"
+      journal: "Journal of Asthma"
+      volume: "39"
+      issue: "6"
+      pages: "501-510"
+      citations: 125
+      category: "health"
+
+    # 2001
+    - authors: "Baer, J.S., Kivlahan, D.R., Blume, A., McKnight, P.E., & Marlatt, G.A."
+      year: 2001
+      title: "Brief intervention for heavy drinking college students: Four-year follow-up and natural history"
+      journal: "American Journal of Public Health"
+      volume: "91"
+      issue: "8"
+      pages: "1310-1316"
+      citations: 1450
+      category: "intervention"
+
+    # 2000
+    - authors: "Figueredo, A.J., McKnight, P.E., McKnight, K.M. & Sidani, S."
+      year: 2000
+      title: "Multivariate modeling of missing data within and across assessment waves"
+      journal: "Addiction"
+      volume: "95"
+      issue: "Suppl 3"
+      pages: "361-380"
+      citations: 385
+      category: "methodology"
+
+    # 1996
+    - authors: "Sechrest, L., McKnight, P., & McKnight, K."
+      year: 1996
+      title: "Calibration of measures for psychotherapy outcome studies"
+      journal: "American Psychologist"
+      volume: "51"
+      issue: "10"
+      pages: "1065-1071"
+      citations: 485
+      category: "measurement"
+
+    # 1995
+    - authors: "Erickson, J.R., Stevens, S., McKnight, P.E., & Figueredo, A.J."
+      year: 1995
+      title: "Willingness for treatment as a predictor of retention and outcomes"
+      journal: "Journal of Addictive Diseases"
+      volume: "14"
+      issue: "4"
+      pages: "135-150"
+      citations: 165
+      category: "intervention"
+
+  book_chapters:
+    - authors: "McKnight, P.E. & McKnight, K.M."
+      year: 2013
+      title: "Missing Data in Psychological Science"
+      book: "Oxford Handbook of Research Strategies for Clinical Psychology"
+      editors: "Comer, J.S. & Kendall, P.C."
+      publisher: "Oxford University Press"
+
+    - authors: "McKnight, P.E. & McKnight, K.M."
+      year: 2011
+      title: "Missing data in archival research"
+      book: "Obtaining and Analyzing Archival Data: Methods and Illustrations"
+      editors: "Trzesniewski, K.H., Donnellan, M.B., & Lucas, R.E."
+      publisher: "American Psychological Association"
+
+    - authors: "McKnight, K.M. & McKnight, P.E."
+      year: 2009
+      title: "Measures for Improving Measures"
+      book: "When Research Goes Off the Rails"
+      editors: "Streiner, D.L. & Sidani, S."
+      publisher: "Guilford Press"
+
+    - authors: "McKnight, P.E., McKnight, K.M., & Figueredo, A.J."
+      year: 2005
+      title: "The nature of a scientific legacy: The case study of Lee Sechrest"
+      book: "Strengthening Research Methodology: Psychological Measurement and Evaluation"
+      editors: "Bootzin, R. & McKnight, P.E."
+      publisher: "American Psychological Association"
+
+    - authors: "Wilhelm, O. & McKnight, P.E."
+      year: 2002
+      title: "Ability and achievement testing on the World Wide Web"
+      book: "Online Social Sciences"
+      editors: "Batinic, B., Reips, U.D., & Bosnjak, M."
+      publisher: "Hogrefe & Hubers"
+      citations: 45
+
+    - authors: "Sechrest, L., Davis, M.F., Stickle, T.R., & McKnight, P.E."
+      year: 1999
+      title: "Understanding 'method' variance"
+      book: "Research Design: Donald Campbell's Legacy"
+      editor: "Bickman, L."
+      publisher: "Sage Publications"
+
+# Grants
+grants:
+  funded:
+    - title: "Crowdsourcing forecast models in intelligence"
+      funder: "IARPA"
+      role: "Co-Investigator"
+      pi: "Georghe Tecuci"
+      start: 2016
+      end: 2021
+      status: "completed"
+
+    - title: "Distinguishing extraordinarily happy from psychologically flexible people"
+      funder: "Koch Foundation"
+      role: "Co-Investigator"
+      pi: "Todd Kashdan"
+      start: 2016
+      end: 2021
+      amount: 248000
+      status: "completed"
+
+    - title: "Evaluation and Review of ONR Immersive Training Environments"
+      funder: "Office of Naval Research (ONR)"
+      role: "Principal Investigator"
+      start: 2014
+      end: 2016
+      amount: 899577
+      status: "completed"
+
+    - title: "Diagnosis and prediction of mild traumatic brain injury"
+      funder: "VA Health Services Research and Development"
+      role: "Co-Investigator"
+      pi: "Judith Babcock-Parziale"
+      start: 2009
+      end: 2012
+      status: "completed"
+
+    - title: "Advancing Outcomes Measurement and Micro-costing in Blind Rehabilitation"
+      funder: "VA Health Services Research and Development"
+      role: "Co-Investigator"
+      start: 2006
+      end: 2010
+      amount: 550080
+      status: "completed"
+
+    - title: "Trait and State Frontal Brain Asymmetry in Depression"
+      funder: "NIH-NIMH"
+      role: "Co-Investigator"
+      start: 2004
+      end: 2009
+      amount: 1869813
+      status: "completed"
+
+    - title: "Multidimensional Intervention in Osteoarthritis"
+      funder: "NIAMS"
+      role: "Co-Investigator"
+      start: 2003
+      end: 2007
+      amount: 2630000
+      status: "completed"
+
+    - title: "Comprehensive Plan to Insure Capacity for Screening and Early Detection of Colorectal Cancer in Arizona"
+      funder: "Arizona Department of Health Services"
+      role: "Co-Investigator"
+      start: 2004
+      end: 2006
+      amount: 275000
+      status: "completed"
+
+    - title: "Positive Mental Health and Outcomes in Osteoarthritis"
+      funder: "Arthritis Foundation"
+      role: "Co-Investigator"
+      start: 2002
+      end: 2006
+      amount: 313500
+      status: "completed"
+
+    - title: "Tucson Energy Baseline Study"
+      funder: "Department of Energy / TMEC"
+      role: "Principal Investigator"
+      start: 2001
+      end: 2002
+      amount: 19000
+      status: "completed"
+
+    - title: "Calibration of Measures for Assessing Low-Vision Rehabilitation Patients"
+      funder: "VA Rehabilitation Research and Development"
+      role: "Co-Investigator"
+      start: 2001
+      end: 2003
+      amount: 85236
+      status: "completed"
+
+# Research areas for visualization
+research_areas:
+  - name: "Measurement & Methods"
+    weight: 30
+    color: "#4f46e5"
+  - name: "Purpose in Life"
+    weight: 20
+    color: "#0891b2"
+  - name: "Curiosity"
+    weight: 18
+    color: "#059669"
+  - name: "Anxiety & Emotion"
+    weight: 15
+    color: "#d97706"
+  - name: "Health Psychology"
+    weight: 12
+    color: "#dc2626"
+  - name: "Cognition"
+    weight: 5
+    color: "#7c3aed"
+
+# Teaching
+courses:
+  graduate:
+    - code: "PSYC 611"
+      title: "Introductory Statistics and Methods I"
+      years: "2006-2023"
+    - code: "PSYC 612"
+      title: "Introductory Statistics and Methods II"
+      years: "2007-2016"
+    - code: "PSYC 642"
+      title: "General Linear Modeling I"
+      years: "2023-2024"
+    - code: "PSYC 643"
+      title: "General Linear Modeling II"
+      years: "2024"
+    - code: "PSYC 754"
+      title: "Multiple Regression"
+      years: "2012-2023"
+    - code: "PSYC 757"
+      title: "Bayesian Data Analysis"
+      years: "2010-2024"
+    - code: "PSYC 734"
+      title: "Measurement & Study of Peak Performance"
+      years: "2022"
+
+  undergraduate:
+    - code: "PSYC 301"
+      title: "Introductory Statistics"
+      years: "2007, 2024"
+    - code: "PSYC 325"
+      title: "Psychopathology"
+      years: "2023-2024"
+    - code: "PSYC 405"
+      title: "Mystery, Madness, and Murder"
+      years: "2024"
+
+# PhD students
+students_graduated:
+  - name: "Richard Lane"
+    institution: "University of Arizona"
+    year: 2000
+  - name: "Opher Caspi"
+    institution: "University of Arizona"
+    year: 2000
+  - name: "Kim Bissel"
+    institution: "University of Arizona"
+    year: 2001
+  - name: "Michael Menke"
+    institution: "University of Arizona"
+    year: 2005
+  - name: "Mei Kuang Chen"
+    institution: "University of Arizona"
+    year: 2008
+  - name: "Julius Najab"
+    institution: "George Mason University"
+    year: 2013
+  - name: "John Graybeal"
+    institution: "George Mason University"
+    year: 2016
+  - name: "Dan Blalock"
+    institution: "George Mason University"
+    year: 2016
+  - name: "Jessica Yarbro"
+    institution: "George Mason University"
+    year: 2016
+  - name: "Simone Erchov"
+    institution: "George Mason University"
+    year: 2017
+  - name: "Jake Quartuccio"
+    institution: "George Mason University"
+    year: 2017
+  - name: "Sam Monfort"
+    institution: "George Mason University"
+    year: 2017
+  - name: "Max Shear"
+    institution: "George Mason University"
+    year: 2018
+  - name: "Lisa Alexander"
+    institution: "George Mason University"
+    year: 2019
+  - name: "Amanda Harwood"
+    institution: "George Mason University"
+    year: 2020
+  - name: "Michael Waltrip"
+    institution: "George Mason University"
+    year: 2020
+  - name: "Dean Cisler"
+    institution: "George Mason University"
+    year: 2024
+  - name: "Kara Massick"
+    institution: "George Mason University"
+    year: 2024
+
+students_current:
+  - name: "Amrote Getu"
+  - name: "Kristin Carpenter"
+  - name: "Amie MacKay"
+  - name: "Dan Singer"
+
+# Professional affiliations
+affiliations:
+  - name: "American Evaluation Association"
+    start: 1991
+    role: "Chair, Quantitative Methods TIG (2001-present)"
+  - name: "American Statistical Association"
+    start: 1997
+  - name: "Association for Psychological Science"
+    start: 1992
+  - name: "Psychometric Society"
+    start: 1997
+  - name: "Society for the Science of Clinical Psychology"
+    start: 1992
+  - name: "American Association for the Advancement of Science"
+    start: 2001
+  - name: "American Psychological Association - Division 5"
+    start: 2009
+  - name: "Society for Judgment and Decision Making"
+    start: 2010
+
+# Skills
+skills:
+  statistical:
+    - "R"
+    - "SAS"
+    - "SPSS"
+    - "Python"
+    - "Stan"
+    - "JAGS"
+    - "Julia"
+  sem:
+    - "lavaan"
+    - "Mplus"
+    - "EQS"
+    - "LISREL"
+    - "Onyx"
+    - "Mx"
+  irt:
+    - "mirt"
+    - "ltm"
+    - "Winsteps"
+    - "Multilog"
+    - "Bilog"
+  programming:
+    - "R"
+    - "Python"
+    - "C/C++"
+    - "Fortran"
+    - "Julia"
+    - "SQL"
+    - "LaTeX"
+    - "Quarto"
+    - "Shiny"
+  web:
+    - "JavaScript"
+    - "PHP"
+    - "Perl"
+    - "HTML/CSS"
+
+# Personal achievements
+personal:
+  athletics:
+    open_water_swimming:
+      - event: "English Channel"
+        date: "July 21, 2016"
+      - event: "Catalina Channel"
+        date: "July 12, 2016"
+      - event: "20 Bridges Manhattan"
+        date: "August 15, 2016"
+      - achievement: "Triple Crown of Marathon Swimming - Fastest Known Time (34 days)"
+      - achievement: "Ranked Top 50 Most Adventurous Open Water Swimmers"
+      - achievement: "10th Member of Peak & Pond Club (2018)"
+
+    mountaineering:
+      - summit: "Everest"
+        year: 2018
+        type: "self-guided"
+      - summit: "Aconcagua"
+        year: 2017
+        type: "self-guided"
+      - summit: "Denali"
+        year: 2011
+        type: "self-guided"
+      - achievement: "Successful ascents of most 14ers in continental US"
+      - achievement: "200+ days backcountry skiing"
+
+    triathlon:
+      - event: "Canadian Ironman"
+        time: "10:03"
+        placement: "Top 100"
+
+    sailing:
+      - achievement: "Newport-Bermuda Race (multiple)"
+      - achievement: "Won Vineyard Race - Overall Winner (1980)"
+      - achievement: "Notre Dame sailing team (1984-1988)"

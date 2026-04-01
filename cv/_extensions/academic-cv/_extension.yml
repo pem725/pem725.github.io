@@ -1,0 +1,7 @@
+title: Academic CV
+author: Patrick McKnight
+version: 1.0.0
+contributes:
+  formats:
+    typst:
+      template: typst-template.typ

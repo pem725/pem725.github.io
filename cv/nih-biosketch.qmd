@@ -1,0 +1,162 @@
+---
+title: "BIOGRAPHICAL SKETCH"
+subtitle: "OMB No. 0925-0001 and 0925-0002 (Rev. 10/2021 Approved Through 01/31/2027)"
+format:
+  typst:
+    toc: false
+    margin:
+      x: 1in
+      y: 0.75in
+    mainfont: "Linux Libertine"
+    fontsize: 11pt
+    columns: 1
+execute:
+  echo: false
+  warning: false
+jupyter: python3
+---
+
+```{python}
+#| label: setup
+import yaml
+from datetime import datetime
+
+with open('publications.yaml', 'r') as f:
+    data = yaml.safe_load(f)
+```
+
+*Provide the following information for the Senior/key personnel and other significant contributors. Follow this format for each person.* **DO NOT EXCEED FIVE PAGES.**
+
+---
+
+**NAME:** McKnight, Patrick Everett
+
+**eRA COMMONS USER NAME:** PMCKNIGHT
+
+**POSITION TITLE:** Associate Professor of Psychology
+
+---
+
+**EDUCATION/TRAINING** *(Begin with baccalaureate or other initial professional education, such as nursing, include postdoctoral training and residency training if applicable.)*
+
+| INSTITUTION AND LOCATION | DEGREE | Completion Date | FIELD OF STUDY |
+|--------------------------|--------|-----------------|----------------|
+| University of Notre Dame, Notre Dame, IN | B.S. | 05/1988 | Mechanical Engineering |
+| University of Arizona, Tucson, AZ | M.S. | 05/1992 | Exercise & Sport Sciences |
+| University of Arizona, Tucson, AZ | Ph.D. | 08/1997 | Clinical Psychology |
+| University of Washington Medical School, Seattle, WA | Internship | 06/1999 | Clinical Psychology |
+
+---
+
+## A. Personal Statement
+
+My research expertise in psychological well-being, purpose in life, and quantitative methodology makes me ideally suited for the proposed project on well-being. Over the past 27 years, I have developed programmatic research examining how purpose and meaning contribute to psychological health and resilience across diverse populations.
+
+My foundational work on purpose in life, including the highly-cited 2009 *Review of General Psychology* paper "Purpose in life as a system that creates and sustains health and well-being" (1,250+ citations), established a theoretical framework for understanding how commitment to meaningful goals protects against psychological distress and promotes flourishing. This work has influenced intervention development and clinical practice in positive psychology worldwide.
+
+Beyond purpose, my research encompasses curiosity as a pathway to well-being, emotional differentiation, and the measurement of psychological constructs central to human flourishing. My collaboration with Dr. Todd Kashdan and colleagues across institutions has resulted in over 130 peer-reviewed publications on well-being, purpose, and related constructs, with my work cited over 17,000 times.
+
+My methodological expertise—including my foundational text *Missing Data: A Gentle Introduction* (3,200+ citations)—ensures rigorous analysis of complex behavioral data using multilevel modeling, structural equation modeling, item response theory, and Bayesian methods. My interdisciplinary background combining engineering, exercise science, and clinical psychology provides a unique perspective on well-being research.
+
+## B. Positions, Scientific Appointments, and Honors
+
+**Positions and Employment**
+
+- 2011 – Present: Associate Professor, Department of Psychology, George Mason University, Fairfax, VA
+- 2005 – 2011: Assistant Professor, Department of Psychology, George Mason University, Fairfax, VA
+- 2002 – 2005: Research Assistant Professor, Department of Psychology, University of Arizona, Tucson, AZ
+- 1999 – 2001: Health Sciences Specialist, VA Puget Sound Health Care System (CESATE), Seattle, WA
+- 1998 – 1999: Psychology Intern, University of Washington Medical School, Seattle, WA
+
+**Other Experience and Professional Memberships**
+
+- 2001 – Present: Chair, Quantitative Methods Topical Interest Group, American Evaluation Association
+- 1991 – Present: Member, American Evaluation Association
+- 1992 – Present: Member, American Psychological Association
+- 1992 – Present: Member, Association for Psychological Science
+
+**Honors and Recognition**
+
+- Founding Member, Measurement, Research methodology, Evaluation, and Statistics (MRES) group, GMU
+- Member, Evaluation Group for the Analysis of Data (EGAD), University of Arizona
+
+## C. Contributions to Science
+
+**1. Purpose in Life and Psychological Well-Being.** My most influential contribution to well-being science is establishing purpose in life as a fundamental system that creates and sustains health. This theoretical and empirical work demonstrated that commitment to meaningful goals serves as an antidote to suffering, particularly in clinical populations. Our research showed that purpose operates independently of hedonic happiness and provides unique protective benefits.
+
+   a. McKnight, P.E. & Kashdan, T.B. (2009). Purpose in life as a system that creates and sustains health and well-being. *Review of General Psychology*, 13(3), 242-251. [1,250+ citations]
+
+   b. Kashdan, T.B., Goodman, F.R., McKnight, P.E., Brown, B., & Rum, R. (2023). Purpose in life: A resolution on the definition, conceptual model, and optimal measurement. *American Psychologist*. [50+ citations]
+
+   c. Kashdan, T.B., & McKnight, P.E. (2013). Commitment to a purpose in life: An antidote to the suffering by individuals with social anxiety disorder. *Emotion*, 13, 1150-1159. [380+ citations]
+
+   d. McKnight, P.E., Kashdan, T.B., MacKay, A., Kelso, K., & Gross, M. (2025). Purpose and happiness: A comparison. *Journal of Positive Psychology*. [in press]
+
+**2. Curiosity and Flourishing.** My collaborative research on curiosity has advanced understanding of this trait as a pathway to well-being, learning, and meaningful engagement with life. We developed and validated multidimensional curiosity measures and demonstrated comprehensive benefits across work, relationships, and personal growth contexts.
+
+   a. Kashdan, T.B., Stiksma, M.C., Disabato, D.D., McKnight, P.E., et al. (2018). The five-dimensional curiosity scale: Capturing the bandwidth of curiosity and identifying four unique subgroups of curious people. *Journal of Research in Personality*, 73, 130-149. [520+ citations]
+
+   b. Kashdan, T.B., Goodman, F.R., Disabato, D.J., McKnight, P.E., et al. (2020). Curiosity has comprehensive benefits in the workplace. *Personality and Individual Differences*, 155, 109717. [195+ citations]
+
+   c. Kashdan, T.B., McKnight, P.E., Fincham, F.D., & Rose, P. (2011). When curiosity breeds intimacy. *Journal of Personality*, 79, 1369-1401. [195+ citations]
+
+   d. Kashdan, T.B., McKnight, P.E., et al. (2025). Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries. *Personality and Individual Differences*. [in press]
+
+**3. Emotional Processes and Well-Being.** My research on emotional processes has illuminated how individuals can transform negative experiences into adaptive outcomes. Work on emotion differentiation demonstrated that perceiving distinctions in negativity improves coping and well-being, while studies on positive emotions showed how everyday experiences like sexuality and laughter contribute to meaning and life satisfaction.
+
+   a. Kashdan, T.B., Feldman-Barrett, L., & McKnight, P.E. (2015). Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity. *Current Directions in Psychological Science*, 24(1), 10-16. [450+ citations]
+
+   b. Kashdan, T.B., Goodman, F.R., Stiksma, M., Milius, C.R., & McKnight, P.E. (2017). Sexuality Leads to Boosts in Mood and Meaning in Life. *Emotion*. [45+ citations]
+
+   c. Kashdan, T.B., Yarbro, J., McKnight, P.E., & Nezlek, J.B. (2014). Laughter with someone else leads to future social rewards. *Personality and Individual Differences*, 58, 15-19. [85+ citations]
+
+   d. Kashdan, T.B., Disabato, D.J., Goodman, F.R., Doorley, J.D., & McKnight, P.E. (2020). Understanding psychological flexibility: A multimethod exploration. *Psychological Assessment*, 32(9), 829. [120+ citations]
+
+**4. Anxiety, Social Functioning, and Well-Being.** My programmatic research on social anxiety disorder has revealed important connections between anxiety symptoms, functional impairment, and well-being. This work demonstrated that anxiety and functional impairment are surprisingly weakly correlated, challenging assumptions about clinical assessment and highlighting the importance of measuring well-being outcomes directly.
+
+   a. McKnight, P.E. & Kashdan, T.B. (2009). The importance of functional impairment to mental health outcomes. *Clinical Psychology Review*, 29(3), 243-259. [685+ citations]
+
+   b. Kashdan, T.B. & McKnight, P.E. (2010). The darker side of social anxiety. *Current Directions in Psychological Science*, 19(1), 47-50. [285+ citations]
+
+   c. McKnight, P.E., Monfort, S.S., Kashdan, T.B., Blalock, D.V., & Calton, J.M. (2015). Anxiety symptoms and functional impairment: A systematic review. *Clinical Psychology Review*, 45, 115-130. [180+ citations]
+
+   d. Kashdan, T.B., Farmer, A.S., Adams, L.M., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B. (2013). Distinguishing healthy adults from people with social anxiety disorder. *Journal of Abnormal Psychology*, 122(3), 645. [280+ citations]
+
+**5. Rigorous Methodology for Well-Being Research.** My methodological contributions ensure that well-being research rests on sound scientific foundations. My book on missing data provides practical guidance for study design and analysis, while my work on measurement calibration addresses how to create interpretable, meaningful psychological assessments.
+
+   a. McKnight, P.E., McKnight, K.M., Sidani, S., & Figueredo, A.J. (2007). *Missing Data: A Gentle Introduction*. Guilford Press. [3,200+ citations]
+
+   b. Sechrest, L., McKnight, P., & McKnight, K. (1996). Calibration of measures for psychotherapy outcome studies. *American Psychologist*, 51(10), 1065-1071. [485+ citations]
+
+   c. Alexander, L.A., McKnight, P.E., Disabato, D.J., & Kashdan, T.B. (2017). When and how to use multiple informants to improve clinical assessments. *Journal of Psychopathology and Behavioral Assessment*. [35+ citations]
+
+   d. Figueredo, A.J., McKnight, P.E., McKnight, K.M., & Sidani, S. (2000). Multivariate modeling of missing data within and across assessment waves. *Addiction*, 95(Suppl 3), 361-380. [385+ citations]
+
+## D. Additional Information: Research Support
+
+**Completed Research Support**
+
+**Koch Foundation** (PI: Kashdan) 2016-2021 | $248,000
+*"Distinguishing extraordinarily happy from psychologically flexible people: A multi-method study of optimal human functioning"*
+Role: Co-Investigator
+Goals: Evaluated whether psychological flexibility offers incremental value in understanding optimal functioning and well-being using multi-method longitudinal approaches.
+
+**NIH R01** (Multi-PI) 2016-2021
+*"Prospective determination of neurobehavioral risk for the development of emotion disorders"*
+Role: Co-Investigator
+Goals: Explored neural substrates of emotional processing and relation to clinically significant anxiety and depression, with implications for well-being interventions.
+
+**Arthritis Foundation** (PI: Zautra) 2002-2006 | $313,500
+*"Positive Mental Health and Outcomes in Osteoarthritis"*
+Role: Co-Investigator
+Goals: Examined how positive psychological factors including purpose and meaning contribute to health outcomes in chronic illness populations.
+
+**NIAMS** (PI: Zautra) 2003-2007 | $2,630,000
+*"Multidimensional Intervention in Osteoarthritis"*
+Role: Co-Investigator
+Goals: Tested interventions combining physical and psychological components to improve well-being and functioning in osteoarthritis patients.
+
+**NIH-NIMH** (PI: Allen) 2004-2009 | $1,869,813
+*"Trait and State Frontal Brain Asymmetry in Depression"*
+Role: Co-Investigator
+Goals: Examined neural correlates of depression and emotional processing, informing understanding of well-being at the neurobiological level.
