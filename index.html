@@ -120,6 +120,7 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
     <a class="qlink primary" href="cv/">Academic CV</a>
     <a class="qlink primary" href="impact/">Scholarly Impact</a>
     <a class="qlink fun" href="https://pem725.github.io/the-sports-page/">The Sports Page</a>
+    <a class="qlink fun" href="apps/">Interactive Stats Lab</a>
     <a class="qlink" href="#teaching">Teaching</a>
     <a class="qlink" href="#research">Research</a>
     <a class="qlink" href="#ai-tools">AI Tools</a>
@@ -225,9 +226,9 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
       <div class="proj-tags"><span class="tag r">R Package</span><span class="tag research">Research</span></div>
     </div>
     <div class="proj">
-      <div class="proj-name"><a href="https://github.com/pem725/Dunning-Kruger">Dunning-Kruger</a></div>
-      <div class="proj-desc">Simulation-based replication and analysis of the Dunning-Kruger effect — what the data actually show vs. what people think they show.</div>
-      <div class="proj-tags"><span class="tag research">Research</span><span class="tag r">R</span></div>
+      <div class="proj-name"><a href="apps/#/dunning-kruger">Dunning-Kruger Simulator</a></div>
+      <div class="proj-desc">Interactive simulation of the Dunning-Kruger effect — adjust sample size, reliability, and bias to see how the classic pattern emerges from simple statistical properties. <a href="https://github.com/pem725/Dunning-Kruger">Source code.</a></div>
+      <div class="proj-tags"><span class="tag research">Research</span><span class="tag">Interactive</span></div>
     </div>
   </div>
 
@@ -275,9 +276,9 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
       <div class="proj-tags"><span class="tag">Games</span><span class="tag">Web</span></div>
     </div>
     <div class="proj">
-      <div class="proj-name"><a href="https://github.com/pem725/ShinyApps">Shiny Apps</a></div>
-      <div class="proj-desc">Interactive R Shiny applications — PCA, EFA, and MLM demos for teaching and exploration.</div>
-      <div class="proj-tags"><span class="tag r">R Shiny</span><span class="tag teach">Teaching</span></div>
+      <div class="proj-name"><a href="apps/">Interactive Stats Lab</a></div>
+      <div class="proj-desc">Browser-based statistical demos — Dunning-Kruger simulator, distribution explorer, EFA, levels of measurement, and more. No R required. <a href="https://github.com/pem725/ShinyApps">Source code.</a></div>
+      <div class="proj-tags"><span class="tag teach">Teaching</span><span class="tag">Interactive</span><span class="tag">JavaScript</span></div>
     </div>
   </div>
 
@@ -333,5 +334,11 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
 
 </div>
 
+<script>
+document.querySelectorAll('a[href]').forEach(function(a){
+  var h=a.getAttribute('href');
+  if(h&&h.charAt(0)!=='#'){a.target='_blank';a.rel='noopener'}
+});
+</script>
 </body>
 </html>
