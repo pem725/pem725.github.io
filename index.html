@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrick E. McKnight, Ph.D. — George Mason University</title>
+<meta name="description" content="Professor, quantitative data enthusiast, and builder of things. George Mason University.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #1a1208;
+  --cream:  #f5f0e8;
+  --aged:   #e0d8c5;
+  --rust:   #b83a1e;
+  --steel:  #2c4a6e;
+  --gold:   #c9962a;
+  --muted:  #6b5e4a;
+  --div:    #c8b99a;
+  --card:   #ede5d2;
+  --green:  #2a6e3f;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--aged);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;font-size:16px;line-height:1.72;padding:1.5rem 1rem 3rem}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:var(--rust)}
+
+/* ── MASTHEAD ── */
+.masthead{max-width:860px;margin:0 auto;text-align:center;border-top:4px solid var(--ink);padding:.5rem 0 0}
+.kicker{font-family:'Roboto Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:.15rem 0}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--muted);margin:.1rem 0 .3rem}
+.datebar{display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:.3rem 0;margin-top:.3rem;flex-wrap:wrap;gap:.2rem}
+
+/* ── PAPER ── */
+.paper{max-width:860px;margin:.8rem auto 0;background:var(--cream);padding:2.5rem 3rem 2.8rem;box-shadow:0 6px 40px rgba(0,0,0,.2);border:1px solid var(--div)}
+@media(max-width:600px){.paper{padding:1.6rem 1.4rem}}
+
+/* ── ABOUT ── */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.8rem}
+@media(max-width:580px){.about{grid-template-columns:1fr}}
+.about p{font-size:.95rem;line-height:1.75;margin-bottom:.7rem}
+.about p:last-child{margin-bottom:0}
+
+/* ── QUICK LINKS ── */
+.quick{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.8rem;justify-content:center}
+.qlink{font-family:'Roboto Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem 1rem;border:1.5px solid var(--div);color:var(--ink);background:var(--card);transition:all .2s;text-decoration:none}
+.qlink:hover{border-color:var(--rust);background:var(--cream);color:var(--rust);border-bottom-color:var(--rust)}
+.qlink.primary{background:var(--steel);color:#fff;border-color:var(--steel)}
+.qlink.primary:hover{background:#1e3a56;border-bottom-color:#1e3a56;color:#fff}
+.qlink.fun{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.qlink.fun:hover{background:#e0aa30;border-bottom-color:#e0aa30}
+
+/* ── SECTION HEADS ── */
+.sh{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--rust);padding-bottom:.2rem;margin:2rem 0 1rem}
+
+/* ── PROJECT GRID ── */
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+@media(max-width:560px){.projects{grid-template-columns:1fr}}
+.proj{border:1px solid var(--div);background:var(--card);padding:1rem 1.1rem;transition:box-shadow .2s}
+.proj:hover{box-shadow:0 3px 12px rgba(0,0,0,.1)}
+.proj-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
+.proj-name a{color:var(--ink);border-bottom:none}
+.proj-name a:hover{color:var(--rust)}
+.proj-desc{font-size:.85rem;color:var(--muted);line-height:1.55;margin-bottom:.4rem}
+.proj-meta{font-family:'Roboto Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.proj-tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.35rem}
+.tag{font-family:'Roboto Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;padding:.12rem .4rem;border:1px solid var(--div);color:var(--muted)}
+.tag.r{border-color:var(--steel);color:var(--steel)}
+.tag.ai{border-color:var(--gold);color:var(--gold)}
+.tag.teach{border-color:var(--green);color:var(--green)}
+.tag.research{border-color:var(--rust);color:var(--rust)}
+
+/* ── FEATURED (full width) ── */
+.featured{border:2px solid var(--gold);background:var(--card);padding:1.2rem 1.4rem;margin:1rem 0;position:relative}
+.featured::before{content:'FEATURED';font-family:'Roboto Mono',monospace;font-size:.55rem;letter-spacing:.15em;color:#fff;background:var(--gold);padding:.15rem .5rem;position:absolute;top:-.5rem;left:1rem}
+.featured .proj-name{font-size:1.15rem}
+
+/* ── REPO LIST (compact) ── */
+.repo-list{columns:2;column-gap:1.5rem;margin:1rem 0}
+@media(max-width:500px){.repo-list{columns:1}}
+.repo-item{break-inside:avoid;margin-bottom:.5rem;font-size:.88rem;line-height:1.5}
+.repo-item a{font-family:'Roboto Mono',monospace;font-size:.8rem;font-weight:600}
+.repo-item .rdesc{color:var(--muted);font-size:.8rem}
+
+/* ── PULL QUOTE ── */
+.pull{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:.9rem 0;margin:1.8rem 0;text-align:center}
+.pull p{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;font-style:italic;color:var(--steel);line-height:1.45}
+
+/* ── CONTACT BOX ── */
+.contact{background:var(--steel);color:#dce8f5;padding:1.5rem 1.8rem;margin:1.8rem 0}
+.contact h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.6rem}
+.contact p{font-size:.9rem;color:#c8daed;line-height:1.6;margin-bottom:.4rem}
+.contact a{color:var(--gold);border-bottom:1px solid rgba(201,150,42,.4)}
+.contact a:hover{border-bottom-color:var(--gold)}
+
+/* ── FOOTER ── */
+.footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
+hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="kicker">George Mason University · Department of Psychology</div>
+  <div class="title">Patrick E. McKnight, Ph.D.</div>
+  <div class="subtitle">Partner, father, professor, adventurer, and quantitative data enthusiast</div>
+  <div class="datebar">
+    <span>Fairfax, Virginia</span>
+    <span><a href="http://patrickemcknight.com" style="color:inherit;border:none">patrickemcknight.com</a></span>
+    <span><a href="https://github.com/pem725" style="color:inherit;border:none">github.com/pem725</a></span>
+  </div>
+</div>
+
+<!-- PAPER -->
+<div class="paper">
+
+  <!-- QUICK LINKS -->
+  <div class="quick">
+    <a class="qlink primary" href="https://pem725.github.io/cv/">Academic CV</a>
+    <a class="qlink fun" href="https://pem725.github.io/the-sports-page/">The Sports Page</a>
+    <a class="qlink" href="#teaching">Teaching</a>
+    <a class="qlink" href="#research">Research</a>
+    <a class="qlink" href="#ai-tools">AI Tools</a>
+    <a class="qlink" href="#all-repos">All Repos</a>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <div>
+      <p>I'm a professor at George Mason University who believes the best way to learn statistics is to care about the answer. My research lives at the intersection of measurement, motivation, and meaning — how people find purpose, how we measure psychological constructs, and how to do both without fooling ourselves.</p>
+    </div>
+    <div>
+      <p>This page collects my public work: course materials for students, research code, R packages, AI-powered tools, and the occasional project born purely from curiosity. If something here is useful to you, take it. If something is broken, let me know.</p>
+    </div>
+  </div>
+
+  <div class="pull">
+    <p>"The best way to learn statistics is to care about the answer."</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FEATURED PROJECTS -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="featured">Featured</h2>
+
+  <div class="featured">
+    <div class="proj-name"><a href="https://pem725.github.io/the-sports-page/">The Sports Page</a></div>
+    <div class="proj-desc">A daily sports statistics newsletter for friends and family. Each issue takes one strange, extreme, or counterintuitive stat and explains what it actually means — the history, the math, and the forecast. Bayesian models, broadsheet design, editorial voice. Updated 5x/week.</div>
+    <div class="proj-tags">
+      <span class="tag ai">AI-Powered</span>
+      <span class="tag r">Statistics</span>
+      <span class="tag">Sports</span>
+      <span class="tag">Newsletter</span>
+    </div>
+  </div>
+
+  <div class="projects">
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/cv">Academic CV &amp; NIH Biosketch</a></div>
+      <div class="proj-desc">Reproducible academic CV and NIH biosketch, kept current.</div>
+      <div class="proj-tags"><span class="tag">Professional</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/GradStats-Book">Graduate Statistics Book</a></div>
+      <div class="proj-desc">A comprehensive guide to statistical estimation and inference for social and behavioral sciences. Gentle on-ramp, rigorous destination.</div>
+      <div class="proj-tags"><span class="tag teach">Teaching</span><span class="tag r">R</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TEACHING -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="teaching">Teaching</h2>
+
+  <div class="projects">
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/GMU-PSYC-405-Mystery-Madness-Murder">Mystery, Madness &amp; Murder</a></div>
+      <div class="proj-desc">PSYC 405 — Forensic psychology through the lens of real cases. Students learn research methods by investigating the psychology of crime.</div>
+      <div class="proj-tags"><span class="tag teach">Course</span><span class="tag">PSYC 405</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/GMU-PSYC-325-PSYCHOPATHOLOGY">Psychopathology</a></div>
+      <div class="proj-desc">PSYC 325 — Understanding mental disorders through evidence, not folklore.</div>
+      <div class="proj-tags"><span class="tag teach">Course</span><span class="tag">PSYC 325</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/PSYC642">General Linear Modeling I</a></div>
+      <div class="proj-desc">Graduate-level GLM — regression, ANOVA, and the framework that unifies them.</div>
+      <div class="proj-tags"><span class="tag teach">Course</span><span class="tag r">R</span><span class="tag">PSYC 642</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/PSYC643">General Linear Modeling II</a></div>
+      <div class="proj-desc">The sequel — mixed models, multilevel modeling, and the edges of the GLM.</div>
+      <div class="proj-tags"><span class="tag teach">Course</span><span class="tag r">R</span><span class="tag">PSYC 643</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/GMU757">Bayesian Data Analysis</a></div>
+      <div class="proj-desc">PSYC 757 — Introduction to Bayesian methods for psychologists who want to update their priors.</div>
+      <div class="proj-tags"><span class="tag teach">Course</span><span class="tag r">R</span><span class="tag">Bayesian</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/statistical-rethinking-2-2023">Statistical Rethinking Notes</a></div>
+      <div class="proj-desc">Reading notes from McElreath's <em>Statistical Rethinking</em> (2nd ed.) — a modern Bayesian approach to applied statistics.</div>
+      <div class="proj-tags"><span class="tag r">R</span><span class="tag">Bayesian</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- RESEARCH -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="research">Research</h2>
+
+  <div class="projects">
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/Purpose3">Purpose vs. Happiness</a></div>
+      <div class="proj-desc">Differential prediction across strivings, daily reconstructed method, coping strategies, and life events. Can purpose predict outcomes that happiness cannot?</div>
+      <div class="proj-tags"><span class="tag research">Research</span><span class="tag r">R</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/PsychFlex">PsychFlex</a></div>
+      <div class="proj-desc">Scoring algorithm for the Psychological Flexibility measure — turning survey responses into meaningful composites.</div>
+      <div class="proj-tags"><span class="tag research">Measurement</span><span class="tag r">R</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/TMA">Trust Measurement Analysis</a></div>
+      <div class="proj-desc">Analysis code for ETI trust studies — collaborative research on how people decide who and what to trust.</div>
+      <div class="proj-tags"><span class="tag research">Research</span><span class="tag r">R</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/MRES">MRES</a></div>
+      <div class="proj-desc">An R package of functions I find useful in my work — social science research utilities not on CRAN, battle-tested in actual papers.</div>
+      <div class="proj-tags"><span class="tag r">R Package</span><span class="tag research">Research</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- AI TOOLS -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="ai-tools">AI &amp; Automation</h2>
+
+  <div class="projects">
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/humanizer">Humanizer</a></div>
+      <div class="proj-desc">Claude Code skill that removes signs of AI-generated writing from text. Because good writing should sound like a person wrote it.</div>
+      <div class="proj-tags"><span class="tag ai">Claude Code</span><span class="tag">Writing</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/clauderator">Clauderator</a></div>
+      <div class="proj-desc">Enforces phased task execution — clarify, propose, review, then act. Prevents premature execution and ensures alignment.</div>
+      <div class="proj-tags"><span class="tag ai">Claude Code</span><span class="tag">Workflow</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/NeuronAutomator">Neuron Automator</a></div>
+      <div class="proj-desc">Automates The Neuron's daily AI newsletter — aggregation, summarization, and distribution.</div>
+      <div class="proj-tags"><span class="tag ai">Automation</span><span class="tag">Newsletter</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/academic-manuscript-template">Academic Manuscript Template</a></div>
+      <div class="proj-desc">Rapid manuscript generation from data to publication — statistical models, reproducible Quarto documents, ready to submit.</div>
+      <div class="proj-tags"><span class="tag ai">Claude Code</span><span class="tag research">Research</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FUN PROJECTS -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="fun">Fun &amp; Curiosity</h2>
+
+  <div class="projects">
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/crossword-builder">Crossword Builder</a></div>
+      <div class="proj-desc">A generic crossword puzzle builder for online and print. Make your own and distribute to others.</div>
+      <div class="proj-tags"><span class="tag">Games</span><span class="tag">Web</span></div>
+    </div>
+    <div class="proj">
+      <div class="proj-name"><a href="https://github.com/pem725/ShinyApps">Shiny Apps</a></div>
+      <div class="proj-desc">Interactive R Shiny applications — PCA, EFA, and MLM demos for teaching and exploration.</div>
+      <div class="proj-tags"><span class="tag r">R Shiny</span><span class="tag teach">Teaching</span></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ALL REPOS -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh" id="all-repos">All Public Repositories</h2>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-bottom:.8rem">60 public repos, sorted by most recent activity. <a href="https://github.com/pem725?tab=repositories">View all on GitHub &rarr;</a></p>
+
+  <div class="repo-list">
+    <div class="repo-item"><a href="https://github.com/pem725/the-sports-page">the-sports-page</a> <span class="rdesc">— Sports stats newsletter</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/cv">cv</a> <span class="rdesc">— Academic CV</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/GMU-PSYC-405-Mystery-Madness-Murder">GMU-PSYC-405</a> <span class="rdesc">— Mystery, Madness &amp; Murder</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/ai-jumpstart">ai-jumpstart</a></div>
+    <div class="repo-item"><a href="https://github.com/pem725/Purpose3">Purpose3</a> <span class="rdesc">— Purpose vs Happiness</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/crossword-builder">crossword-builder</a> <span class="rdesc">— Puzzle maker</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/be-critical">be-critical</a></div>
+    <div class="repo-item"><a href="https://github.com/pem725/clauderator">clauderator</a> <span class="rdesc">— Task phasing</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/humanizer">humanizer</a> <span class="rdesc">— AI writing fix</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/sillyprograms">sillyprograms</a></div>
+    <div class="repo-item"><a href="https://github.com/pem725/NeuronAutomator">NeuronAutomator</a> <span class="rdesc">— Newsletter bot</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/GMU-PSYC-325-PSYCHOPATHOLOGY">PSYC-325</a> <span class="rdesc">— Psychopathology</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/PsychFlex">PsychFlex</a> <span class="rdesc">— Flex measure scoring</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/PSYC642">PSYC642</a> <span class="rdesc">— GLM I</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/GradStats-Book">GradStats-Book</a> <span class="rdesc">— Grad stats textbook</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/Curiosity">Curiosity</a></div>
+    <div class="repo-item"><a href="https://github.com/pem725/PSYC643">PSYC643</a> <span class="rdesc">— GLM II</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/MRES">MRES</a> <span class="rdesc">— R package</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/GMU757">GMU757</a> <span class="rdesc">— Bayesian</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/TMA">TMA</a> <span class="rdesc">— Trust analysis</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/Dunning-Kruger">Dunning-Kruger</a></div>
+    <div class="repo-item"><a href="https://github.com/pem725/ProPre">ProPre</a> <span class="rdesc">— Promotion/Prevention</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/trust-studies">trust-studies</a> <span class="rdesc">— MTurk studies</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/PEMfunctions">PEMfunctions</a> <span class="rdesc">— Personal R utils</span></div>
+    <div class="repo-item"><a href="https://github.com/pem725/BayesianIntro">BayesianIntro</a> <span class="rdesc">— Bayes intro</span></div>
+  </div>
+
+  <p style="font-size:.82rem;color:var(--muted);margin-top:.8rem;text-align:center"><a href="https://github.com/pem725?tab=repositories">See all 60 repositories on GitHub &rarr;</a></p>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h3>Find Me</h3>
+    <p><strong>University:</strong> George Mason University, Department of Psychology, Fairfax, VA</p>
+    <p><strong>Web:</strong> <a href="http://patrickemcknight.com">patrickemcknight.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/pem725">github.com/pem725</a></p>
+    <p><strong>CV:</strong> <a href="https://pem725.github.io/cv/">pem725.github.io/cv</a></p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Patrick E. McKnight, Ph.D.</span>
+    <span>George Mason University</span>
+    <span>Built with stubbornness and serif fonts</span>
+  </div>
+
+</div>
+
+</body>
+</html>
