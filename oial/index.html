@@ -139,17 +139,38 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
   <!-- EXAMPLE -->
   <div class="box">
     <h3>Position Rule in Action</h3>
-    <p>Suppose you have four stacks and draw a new card:</p>
-    <div class="math">Stack positions:  Z       C       Y       X       [New Card]
-                     K♠      5♦      7♣      9♥      A♠
+    <p>Suppose you have four stacks and draw a new card (A&#9824;). Which stacks can it match?</p>
 
-New card A♠ checks:
-  ✓ Adjacent (X):  A♠ vs 9♥ — different suit, different rank → NO MATCH
-  ✓ 3-back (Z):   A♠ vs K♠ — same suit! → MATCH!
-  ✗ 2-back (C):   Not allowed by rules
+    <!-- Visual card layout -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;max-width:480px;margin:1.2rem auto;text-align:center">
+      <!-- Position labels -->
+      <div style="font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.08em">3-BACK</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.35);letter-spacing:.08em">2-BACK</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.35);letter-spacing:.08em">1-BACK</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.08em">ADJACENT</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.65rem;color:#fff;letter-spacing:.08em">NEW CARD</div>
+      <!-- Cards -->
+      <div style="background:#fff;color:#1a1208;border-radius:6px;padding:.7rem .4rem;font-family:'Roboto Mono',monospace;font-size:1.1rem;font-weight:700;border:2px solid var(--gold);box-shadow:0 0 0 3px rgba(201,150,42,.3)">K&#9824;</div>
+      <div style="background:#fff;color:#b83a1e;border-radius:6px;padding:.7rem .4rem;font-family:'Roboto Mono',monospace;font-size:1.1rem;font-weight:700;border:2px solid rgba(255,255,255,.15);opacity:.5">5&#9830;</div>
+      <div style="background:#fff;color:#1a1208;border-radius:6px;padding:.7rem .4rem;font-family:'Roboto Mono',monospace;font-size:1.1rem;font-weight:700;border:2px solid rgba(255,255,255,.15);opacity:.5">7&#9827;</div>
+      <div style="background:#fff;color:#b83a1e;border-radius:6px;padding:.7rem .4rem;font-family:'Roboto Mono',monospace;font-size:1.1rem;font-weight:700;border:2px solid var(--gold);box-shadow:0 0 0 3px rgba(201,150,42,.3)">9&#9829;</div>
+      <div style="background:var(--gold);color:#1a1208;border-radius:6px;padding:.7rem .4rem;font-family:'Roboto Mono',monospace;font-size:1.1rem;font-weight:700;border:2px solid #fff">A&#9824;</div>
+      <!-- Check/X labels -->
+      <div style="font-family:'Roboto Mono',monospace;font-size:.7rem;color:#8fdf8f;font-weight:700">&#10003; MATCH!</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.7rem;color:rgba(255,255,255,.3)">&#10007; N/A</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.7rem;color:rgba(255,255,255,.3)">&#10007; N/A</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.7rem;color:#ff8a80;font-weight:700">&#10007; NO</div>
+      <div></div>
+      <!-- Reason labels -->
+      <div style="font-family:'Roboto Mono',monospace;font-size:.58rem;color:#c8daed;line-height:1.3">Same suit<br>(both &#9824;)</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.25);line-height:1.3">Not allowed<br>by rules</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.25);line-height:1.3">Not allowed<br>by rules</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.58rem;color:#c8daed;line-height:1.3">Diff suit<br>Diff rank</div>
+      <div></div>
+    </div>
 
-Result: A♠ goes on top of Z. Stack Z is now A♠ over K♠.</div>
-    <p>The restriction to only adjacent and 3-back positions is what makes the game so brutally difficult. Most cards have no valid match and start a new stack, pushing you further from the goal.</p>
+    <p style="text-align:center;margin-top:1rem;font-size:.88rem;color:#fff"><strong>Result:</strong> A&#9824; matches K&#9824; (same suit). A&#9824; goes on top of the K&#9824; stack.</p>
+    <p>Only the <strong>adjacent</strong> and <strong>3-back</strong> positions are ever checked. The dimmed cards in between? Off limits. This restriction is what makes the game so brutally difficult.</p>
   </div>
 
   <hr>
