@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Once In A Lifetime — Patrick E. McKnight, Ph.D.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1208;--cream:#f5f0e8;--aged:#e0d8c5;--rust:#b83a1e;--steel:#2c4a6e;--gold:#c9962a;--muted:#6b5e4a;--div:#c8b99a;--card:#ede5d2;--green:#2a6e3f}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--aged);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;font-size:16px;line-height:1.72;padding:1.5rem 1rem 3rem}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:var(--rust)}
+
+.masthead{max-width:860px;margin:0 auto;text-align:center;border-top:4px solid var(--ink);padding:.5rem 0 0}
+.kicker{font-family:'Roboto Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:.15rem 0}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--muted);margin:.1rem 0 .3rem}
+.datebar{display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:.3rem 0;margin-top:.3rem;flex-wrap:wrap;gap:.2rem}
+
+.paper{max-width:860px;margin:.8rem auto 0;background:var(--cream);padding:2.5rem 3rem 2.8rem;box-shadow:0 6px 40px rgba(0,0,0,.2);border:1px solid var(--div)}
+@media(max-width:600px){.paper{padding:1.6rem 1.4rem}}
+
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--div);border:1px solid var(--div);margin:0 0 1.8rem}
+@media(max-width:460px){.stat-row{grid-template-columns:1fr 1fr}}
+.sc{background:var(--card);padding:1rem .8rem;text-align:center}
+.sc .v{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1}
+.sc .v.bad{color:var(--rust)}.sc .v.steel{color:var(--steel)}.sc .v.gold{color:var(--gold)}
+.sc .l{font-family:'Roboto Mono',monospace;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.25rem}
+
+.sh{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--rust);padding-bottom:.2rem;margin:2rem 0 1rem}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:1.4rem 0}
+@media(max-width:580px){.two-col{grid-template-columns:1fr}}
+
+.pull{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:.9rem 0;margin:1.8rem 0;text-align:center}
+.pull p{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;font-style:italic;color:var(--steel);line-height:1.45}
+.pull cite{font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.1em;display:block;margin-top:.5rem}
+
+.box{background:var(--steel);color:#dce8f5;padding:1.5rem 1.8rem;margin:1.8rem 0}
+.box h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.8rem}
+.box p{font-size:.92rem;color:#c8daed;line-height:1.65;margin-bottom:.7rem}
+.box p:last-child{margin-bottom:0}
+.math{font-family:'Roboto Mono',monospace;background:rgba(255,255,255,.1);padding:.7rem 1rem;font-size:.8rem;color:#eef6ff;margin:.6rem 0;line-height:1.9;white-space:pre-wrap}
+
+.chart-wrap{background:var(--card);border:1px solid var(--div);padding:1.2rem;margin:1.5rem 0;overflow-x:auto}
+.chart-label{font-family:'Roboto Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+svg.chart{width:100%;height:auto;display:block}
+
+table.rules{width:100%;border-collapse:collapse;font-size:.88rem;margin:1rem 0}
+table.rules th{font-family:'Roboto Mono',monospace;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink);padding:.4rem .6rem;text-align:left}
+table.rules td{padding:.5rem .6rem;border-bottom:1px solid var(--div);vertical-align:top}
+table.rules tr:last-child td{border-bottom:none}
+table.rules .mono{font-family:'Roboto Mono',monospace;font-size:.82rem;font-weight:700}
+table.rules .hl td{background:#e0f0e8;font-weight:700}
+table.rules .rare td{background:#fef0ec}
+
+/* card visuals */
+.card-demo{display:flex;gap:.4rem;flex-wrap:wrap;margin:.8rem 0;justify-content:center}
+.card{width:42px;height:60px;background:#fff;border:1.5px solid var(--div);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Roboto Mono',monospace;font-size:.75rem;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.card.red{color:var(--rust)}.card.black{color:var(--ink)}
+.card.highlight{border-color:var(--gold);box-shadow:0 0 0 2px rgba(201,150,42,.4)}
+.card.stack{margin-top:-45px;position:relative}
+
+.step{display:grid;grid-template-columns:32px 1fr;gap:.8rem;margin-bottom:1rem;align-items:start}
+.step-num{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--rust);text-align:center;line-height:1}
+.step p{margin:0;font-size:.92rem}
+
+.footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
+hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker"><a href="../" style="color:inherit;border:none">Patrick E. McKnight, Ph.D.</a> · Fun &amp; Curiosity</div>
+  <div class="title">Once In A Lifetime</div>
+  <div class="subtitle">A family solitaire game, 700 million simulations, and a probability of exactly zero</div>
+  <div class="datebar">
+    <span><a href="../" style="color:inherit;border:none">&larr; Homepage</a></span>
+    <span>Family Card Game &amp; Computational Probability</span>
+    <span><a href="https://github.com/pem725/OnceInALifetime" style="color:inherit;border:none">Source Code</a></span>
+  </div>
+</div>
+
+<div class="paper">
+
+  <div class="stat-row">
+    <div class="sc"><div class="v bad">700M+</div><div class="l">Games Simulated</div></div>
+    <div class="sc"><div class="v gold">0</div><div class="l">Wins Found</div></div>
+    <div class="sc"><div class="v steel">&lt;1 in 700M</div><div class="l">Win Probability</div></div>
+  </div>
+
+  <!-- THE STORY -->
+  <div class="two-col">
+    <div>
+      <p>It started, as most good arguments do, at the family table. A confident family member claimed to have won this solitaire game "several times" and found it "boring." With 40-plus years of playing this game and a background in quantitative analysis, the gauntlet was thrown.</p>
+      <p>The mission: simulate the game hundreds of millions of times and prove just how extraordinary — or ordinary — a win truly is.</p>
+    </div>
+    <div>
+      <p>The answer, after <strong>700 million simulated games</strong> across Python and Julia implementations: not a single win. Zero. The game's name, passed down through generations, turns out to be an understatement. It's not once in a lifetime. It's once in a geological epoch.</p>
+      <p>This page tells the story of the game, the math, and the computational experiment that settled a family debate forever.</p>
+    </div>
+  </div>
+
+  <div class="pull">
+    <p>"The best part about a 1-in-700-million chance? It's not zero."</p>
+    <cite>— The family motto, undefeated</cite>
+  </div>
+
+  <!-- HOW TO PLAY -->
+  <h2 class="sh">How to Play</h2>
+
+  <p>Start with a standard 52-card deck, shuffled. Your goal: consolidate all 52 cards into a single stack. The rules are deceptively simple.</p>
+
+  <div style="margin:1.5rem 0">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div><p>Draw cards one at a time and place them in a row of stacks, left to right.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div><p>Each new card can match with exactly two positions: the <strong>adjacent stack</strong> (immediately left) or the stack <strong>exactly 3 positions back</strong>. No other positions count.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div><p>Cards match if they share the <strong>same suit</strong> or <strong>same rank</strong>. When matched, the new card goes on top of the matched stack, consolidating them.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div><p>After any match, <strong>cascading matches</strong> may occur — check if the newly merged stack can now match with its own adjacent or 3-back positions.</p></div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div><p>If neither position matches, the card starts a new stack. Continue until all 52 cards are drawn. <strong>Fewer stacks = better.</strong></p></div>
+    </div>
+  </div>
+
+  <!-- EXAMPLE -->
+  <div class="box">
+    <h3>Position Rule in Action</h3>
+    <p>Suppose you have four stacks and draw a new card:</p>
+    <div class="math">Stack positions:  Z       C       Y       X       [New Card]
+                     K♠      5♦      7♣      9♥      A♠
+
+New card A♠ checks:
+  ✓ Adjacent (X):  A♠ vs 9♥ — different suit, different rank → NO MATCH
+  ✓ 3-back (Z):   A♠ vs K♠ — same suit! → MATCH!
+  ✗ 2-back (C):   Not allowed by rules
+
+Result: A♠ goes on top of Z. Stack Z is now A♠ over K♠.</div>
+    <p>The restriction to only adjacent and 3-back positions is what makes the game so brutally difficult. Most cards have no valid match and start a new stack, pushing you further from the goal.</p>
+  </div>
+
+  <hr>
+
+  <!-- SCORING -->
+  <h2 class="sh">Scoring &amp; Rarity</h2>
+
+  <table class="rules">
+    <thead>
+      <tr><th>Final Stacks</th><th>Achievement</th><th>Frequency</th><th>Rarity</th></tr>
+    </thead>
+    <tbody>
+      <tr class="rare"><td class="mono">1 stack</td><td>ONCE IN A LIFETIME</td><td class="mono">0 in 700M</td><td>Astronomically rare</td></tr>
+      <tr><td class="mono">2 stacks</td><td>Legendary</td><td class="mono">0.18%</td><td>~1 in 550 games</td></tr>
+      <tr><td class="mono">3 stacks</td><td>Exceptional</td><td class="mono">13.3%</td><td>~1 in 8 games</td></tr>
+      <tr class="hl"><td class="mono">4 stacks</td><td>Great game</td><td class="mono">46.5%</td><td>Most common outcome</td></tr>
+      <tr><td class="mono">5 stacks</td><td>Good game</td><td class="mono">31.7%</td><td>Typical</td></tr>
+      <tr><td class="mono">6+ stacks</td><td>Keep trying</td><td class="mono">8.3%</td><td>Below average</td></tr>
+    </tbody>
+  </table>
+
+  <p>The median game ends with 4 stacks. Getting to 3 is a good night. Getting to 2 is a story you tell people. Getting to 1 is something nobody has ever seen — not in 700 million tries.</p>
+
+  <hr>
+
+  <!-- DISTRIBUTION CHART -->
+  <h2 class="sh">Score Distribution (1 Million Games)</h2>
+
+  <div class="chart-wrap">
+    <div class="chart-label">Final stack count &middot; 1,000,000 simulated games</div>
+    <svg class="chart" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+      <!-- Y axis -->
+      <line x1="80" y1="20" x2="80" y2="210" stroke="#c8b99a" stroke-width="1"/>
+      <line x1="80" y1="210" x2="640" y2="210" stroke="#1a1208" stroke-width="1.5"/>
+
+      <!-- Y labels (percentage) -->
+      <text x="72" y="25" text-anchor="end" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">50%</text>
+      <line x1="78" y1="20" x2="640" y2="20" stroke="#e8e0cf" stroke-width="0.5"/>
+      <text x="72" y="63" text-anchor="end" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">40%</text>
+      <line x1="78" y1="58" x2="640" y2="58" stroke="#e8e0cf" stroke-width="0.5"/>
+      <text x="72" y="101" text-anchor="end" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">30%</text>
+      <line x1="78" y1="96" x2="640" y2="96" stroke="#e8e0cf" stroke-width="0.5"/>
+      <text x="72" y="139" text-anchor="end" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">20%</text>
+      <line x1="78" y1="134" x2="640" y2="134" stroke="#e8e0cf" stroke-width="0.5"/>
+      <text x="72" y="177" text-anchor="end" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">10%</text>
+      <line x1="78" y1="172" x2="640" y2="172" stroke="#e8e0cf" stroke-width="0.5"/>
+
+      <!-- Scale: 50% = y20, 0% = y210. Each 1% = 3.8px. y = 210 - pct*3.8 -->
+      <!-- Bars: 1=0%, 2=0.18%, 3=13.3%, 4=46.5%, 5=31.7%, 6+=8.3% -->
+
+      <!-- 1 stack: ~0% — show tiny sliver -->
+      <rect x="110" y="209" width="70" height="1" fill="#b83a1e"/>
+      <text x="145" y="200" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#b83a1e" font-weight="700">~0%</text>
+      <text x="145" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">1 stack</text>
+
+      <!-- 2 stacks: 0.18% → h=0.68px, show min 2px -->
+      <rect x="200" y="208" width="70" height="2" fill="#c9962a"/>
+      <text x="235" y="200" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#c9962a" font-weight="700">0.18%</text>
+      <text x="235" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">2 stacks</text>
+
+      <!-- 3 stacks: 13.3% → h=50.5px, y=159.5 -->
+      <rect x="290" y="159" width="70" height="51" fill="#2c4a6e" opacity="0.7"/>
+      <text x="325" y="152" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#2c4a6e" font-weight="700">13.3%</text>
+      <text x="325" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">3 stacks</text>
+
+      <!-- 4 stacks: 46.5% → h=176.7px, y=33.3 -->
+      <rect x="380" y="33" width="70" height="177" fill="#2c4a6e"/>
+      <text x="415" y="26" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#2c4a6e" font-weight="700">46.5%</text>
+      <text x="415" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">4 stacks</text>
+
+      <!-- 5 stacks: 31.7% → h=120.5px, y=89.5 -->
+      <rect x="470" y="90" width="70" height="120" fill="#2c4a6e" opacity="0.85"/>
+      <text x="505" y="83" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#2c4a6e" font-weight="700">31.7%</text>
+      <text x="505" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">5 stacks</text>
+
+      <!-- 6+ stacks: 8.3% → h=31.5px, y=178.5 -->
+      <rect x="560" y="178" width="70" height="32" fill="#6b5e4a" opacity="0.6"/>
+      <text x="595" y="172" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a" font-weight="700">8.3%</text>
+      <text x="595" y="228" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a">6+ stacks</text>
+
+      <!-- X axis label -->
+      <text x="380" y="250" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#6b5e4a" letter-spacing="0.1em">FINAL STACK COUNT</text>
+    </svg>
+  </div>
+
+  <hr>
+
+  <!-- THE MATH -->
+  <h2 class="sh">The Mathematics of Impossibility</h2>
+
+  <div class="box">
+    <h3>Why Is This Game So Hard?</h3>
+    <p>A standard deck has <strong>52!</strong> possible arrangements — that's 8.07 &times; 10<sup>67</sup> unique shuffles. The game's position rule (adjacent or 3-back only) creates an extraordinarily constrained state space where winning requires a precise cascade of matches across all 52 cards.</p>
+    <div class="math">Possible deck arrangements:  52! = 8.07 × 10⁶⁷
+Games simulated:             700,000,000
+Coverage:                    8.67 × 10⁻⁵⁹ of state space
+Wins found:                  0
+
+Upper bound on P(win):       < 1/700,000,000
+                             < 1.43 × 10⁻⁹
+
+For context:
+  Powerball jackpot odds:    1 in 292,201,338
+  OIAL win (upper bound):   < 1 in 700,000,000
+  → Winning Powerball is at least 2.4× more likely</div>
+    <p>Five compounding factors make the game nearly impossible:</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <p><strong>Restrictive position rules.</strong> Only 2 of potentially dozens of stacks can be matched. Most cards land with no valid match at all.</p>
+      <p><strong>Sequential dependencies.</strong> Card order matters enormously. A winning sequence requires dozens of rare events in exact succession.</p>
+      <p><strong>Choice constraints.</strong> When both positions match, picking one eliminates the other permanently.</p>
+    </div>
+    <div>
+      <p><strong>Cascade fragility.</strong> Chain reactions can consolidate stacks dramatically — but they require multiple stacks to align by suit or rank in precisely the right positions.</p>
+      <p><strong>Convergence requirements.</strong> Going from 4 stacks to 3 is a 13% event. Going from 3 to 2 is 0.18%. Going from 2 to 1 has never been observed. Each step is exponentially harder than the last.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- THE EXPERIMENT -->
+  <h2 class="sh">The Computational Experiment</h2>
+
+  <table class="rules">
+    <thead>
+      <tr><th>Implementation</th><th>Language</th><th>Speed</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="mono">OiaLver0.0.5</td><td>Python</td><td class="mono">~35,000 games/sec</td><td>Visualization &amp; learning</td></tr>
+      <tr><td class="mono">GoodOne2</td><td>Python</td><td class="mono">~35,000 games/sec</td><td>Clean object-oriented design</td></tr>
+      <tr class="hl"><td class="mono">OnceInALifetime.jl</td><td>Julia</td><td class="mono">~240,000 games/sec</td><td>Large-scale analysis</td></tr>
+    </tbody>
+  </table>
+
+  <p>The Julia implementation ran the heavy lifting — 700 million games at 240,000 games per second. Multiple implementations in different languages verified the same distribution, ruling out bugs. The game is simply that hard.</p>
+
+  <div class="pull">
+    <p>"A family member claimed to have won several times and found it boring. 700 million simulations later, we can confidently say: no, you didn't."</p>
+    <cite>— The conclusion, backed by math</cite>
+  </div>
+
+  <!-- LEGACY -->
+  <h2 class="sh">The Family Legacy</h2>
+
+  <p>This game has been played at family gatherings for decades. It teaches patience, probability intuition, and the humbling experience of attempting something genuinely, mathematically near-impossible. Every game is a fresh chance — not to win, but to see how close you can get.</p>
+
+  <p>The code is open source. Try it yourself: <a href="https://github.com/pem725/OnceInALifetime">github.com/pem725/OnceInALifetime</a></p>
+
+  <div class="footer">
+    <span>Patrick E. McKnight, Ph.D.</span>
+    <span>700M+ simulated games</span>
+    <span><a href="../" style="color:inherit">Back to homepage</a></span>
+  </div>
+
+</div>
+
+</body>
+</html>
