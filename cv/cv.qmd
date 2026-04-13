@@ -137,10 +137,16 @@ for article in articles:
     if 'journal' in article:
         cite += f"*{article['journal']}*"
         if 'volume' in article:
-            cite += f", {article['volume']}"
+            cite += f", *{article['volume']}*"
+            if 'issue' in article:
+                cite += f"({article['issue']})"
         if 'pages' in article:
             cite += f", {article['pages']}"
         cite += "."
+    if article.get('status'):
+        cite = cite.rstrip('.') + f" ({article['status']})."
+    if article.get('doi'):
+        cite += f" https://doi.org/{article['doi']}"
 
     cite_count = f" *[{article['citations']} citations]*" if article.get('citations') else ""
     print(f"- {cite}{cite_count}\n")

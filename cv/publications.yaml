@@ -20,8 +20,8 @@ metrics:
   total_citations: 17454
   h_index: 62
   i10_index: 108
-  publications_count: 90
-  last_updated: "2026-01-29"
+  publications_count: 91
+  last_updated: "2026-04-13"
 
 # Education
 education:
@@ -115,26 +115,38 @@ publications:
       category: "methodology"
 
   articles:
-    # 2025 and in press
+    # 2025
+    - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., & Gross, M."
+      year: 2025
+      title: "Enhancing curiosity with a wise intervention to improve political conversations and relationships"
+      journal: "Scientific Reports"
+      volume: "15"
+      issue: "1"
+      pages: "40272"
+      doi: "10.1038/s41598-025-24021-8"
+      category: "curiosity"
+
     - authors: "McKnight, P.E., Kashdan, T.B., MacKay, A., Kelso, K., & Gross, M."
       year: 2025
       title: "Purpose and happiness: A comparison"
       journal: "Journal of Positive Psychology"
-      status: "in press"
+      doi: "10.1080/17439760.2025.2515942"
       category: "purpose"
 
     - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., Guenoun, B., & Naughton, C."
       year: 2025
       title: "Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries"
       journal: "Personality and Individual Differences"
-      status: "in press"
+      doi: "10.1016/j.paid.2024.112760"
       category: "curiosity"
 
-    - authors: "Blanco-Donoso, Torio, L., Hurtado, M., Lecuona, O., Carmona-Cobo, I., Kashdan, T.B., McKnight, P.E., & Garrosa, E."
+    - authors: "Blanco-Donoso, L.M., Torio, L., Hernández-Hurtado, M., Lecuona, O., Carmona-Cobo, I., Kashdan, T.B., McKnight, P.E., & Garrosa, E."
       year: 2025
       title: "Spanish adaptation of the Multidimensional Workplace Curiosity Scale"
       journal: "Acta Psychologica"
-      status: "in press"
+      volume: "258"
+      pages: "105140"
+      doi: "10.1016/j.actpsy.2025.105140"
       category: "curiosity"
 
     # 2024
