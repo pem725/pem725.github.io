@@ -49,14 +49,16 @@ svg.chart{height:auto;display:block}
 .footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
 hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
 
-details.callout{border:1px solid var(--div);background:var(--card);margin:1rem 0;transition:box-shadow .2s}
-details.callout[open]{box-shadow:0 2px 8px rgba(0,0,0,.08)}
-details.callout summary{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.7rem 1rem;cursor:pointer;color:var(--steel);list-style:none;display:flex;align-items:center;gap:.5rem;user-select:none}
-details.callout summary::-webkit-details-marker{display:none}
-details.callout summary::before{content:'\25B6';font-size:.6rem;transition:transform .2s;color:var(--muted)}
-details.callout[open] summary::before{transform:rotate(90deg)}
-details.callout summary:hover{color:var(--rust)}
-details.callout .callout-body{padding:0 1rem 1rem}
+details.pub-detail{margin-top:.3rem}
+details.pub-detail summary{font-family:'Roboto Mono',monospace;font-size:.65rem;letter-spacing:.06em;color:var(--steel);cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.3rem;padding:.15rem .4rem;border:1px solid var(--div);background:var(--card);transition:all .15s;user-select:none}
+details.pub-detail summary::-webkit-details-marker{display:none}
+details.pub-detail summary::before{content:'\25B6';font-size:.45rem;transition:transform .15s;color:var(--muted)}
+details.pub-detail[open] summary::before{transform:rotate(90deg)}
+details.pub-detail summary:hover{border-color:var(--steel);color:var(--rust)}
+details.pub-detail .pub-extra{margin-top:.4rem;padding:.5rem .7rem;background:var(--card);border-left:3px solid var(--steel);font-size:.8rem;line-height:1.6;color:var(--muted)}
+details.pub-detail .pub-extra a{color:var(--steel);font-family:'Roboto Mono',monospace;font-size:.72rem}
+details.pub-detail .pub-extra .pub-doi{margin-bottom:.25rem}
+details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace;font-size:.68rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -74,49 +76,42 @@ details.callout .callout-body{padding:0 1rem 1rem}
 
 <div class="paper">
 
-  <details class="callout">
-    <summary>Summary Metrics</summary>
-    <div class="callout-body">
-      <div class="stat-row">
-        <div class="sc"><div class="v">272</div><div class="l">Publications</div></div>
-        <div class="sc"><div class="v">110</div><div class="l">Unique Journals</div></div>
-        <div class="sc"><div class="v">31</div><div class="l">Years Active</div></div>
-      </div>
-    </div>
-  </details>
+  <div class="stat-row">
+    <div class="sc"><div class="v">272</div><div class="l">Publications</div></div>
+    <div class="sc"><div class="v">110</div><div class="l">Unique Journals</div></div>
+    <div class="sc"><div class="v">31</div><div class="l">Years Active</div></div>
+  </div>
 
-  <details class="callout">
-    <summary>Publications by Period</summary>
-    <div class="callout-body">
-      <div class="chart-wrap">
-        <div class="chart-label">Publication count by 5-year period</div>
-        <svg class="chart" viewBox="0 0 472 220" xmlns="http://www.w3.org/2000/svg">
-          <line x1="55" y1="190" x2="456" y2="190" stroke="#c8b99a" stroke-width="1"/>
-          <rect x="60" y="163.33333333333334" width="48" height="26.666666666666664" fill="#2c4a6e" opacity="0.85"/>
-          <text x="84.0" y="158.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">12</text>
-          <text x="84.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">1995-1999</text>
-          <rect x="116" y="123.33333333333333" width="48" height="66.66666666666667" fill="#2c4a6e" opacity="0.85"/>
-          <text x="140.0" y="118.33333333333333" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">30</text>
-          <text x="140.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2000-2004</text>
-          <rect x="172" y="92.22222222222221" width="48" height="97.77777777777779" fill="#2c4a6e" opacity="0.85"/>
-          <text x="196.0" y="87.22222222222221" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">44</text>
-          <text x="196.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2005-2009</text>
-          <rect x="228" y="43.33333333333334" width="48" height="146.66666666666666" fill="#2c4a6e" opacity="0.85"/>
-          <text x="252.0" y="38.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">66</text>
-          <text x="252.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2010-2014</text>
-          <rect x="284" y="30.0" width="48" height="160.0" fill="#2c4a6e" opacity="0.85"/>
-          <text x="308.0" y="25.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">72</text>
-          <text x="308.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2015-2019</text>
-          <rect x="340" y="110.0" width="48" height="80.0" fill="#2c4a6e" opacity="0.85"/>
-          <text x="364.0" y="105.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">36</text>
-          <text x="364.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2020-2024</text>
-          <rect x="396" y="181.11" width="48" height="8.89" fill="#c9962a" opacity="0.85"/>
-          <text x="420.0" y="176.11" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">4</text>
-          <text x="420.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2025-2029</text>
-        </svg>
-      </div>
-    </div>
-  </details>
+  <h2 class="sh">Publications by Period</h2>
+  <div class="chart-wrap">
+    <div class="chart-label">Publication count by 5-year period</div>
+    <svg class="chart" viewBox="0 0 472 220" xmlns="http://www.w3.org/2000/svg">
+      <line x1="55" y1="190" x2="456" y2="190" stroke="#c8b99a" stroke-width="1"/>
+      <rect x="60" y="163.33333333333334" width="48" height="26.666666666666664" fill="#2c4a6e" opacity="0.85"/>
+      <text x="84.0" y="158.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">12</text>
+      <text x="84.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">1995-1999</text>
+      <rect x="116" y="123.33333333333333" width="48" height="66.66666666666667" fill="#2c4a6e" opacity="0.85"/>
+      <text x="140.0" y="118.33333333333333" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">30</text>
+      <text x="140.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2000-2004</text>
+      <rect x="172" y="92.22222222222221" width="48" height="97.77777777777779" fill="#2c4a6e" opacity="0.85"/>
+      <text x="196.0" y="87.22222222222221" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">44</text>
+      <text x="196.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2005-2009</text>
+      <rect x="228" y="43.33333333333334" width="48" height="146.66666666666666" fill="#2c4a6e" opacity="0.85"/>
+      <text x="252.0" y="38.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">66</text>
+      <text x="252.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2010-2014</text>
+      <rect x="284" y="30.0" width="48" height="160.0" fill="#2c4a6e" opacity="0.85"/>
+      <text x="308.0" y="25.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">72</text>
+      <text x="308.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2015-2019</text>
+      <rect x="340" y="110.0" width="48" height="80.0" fill="#2c4a6e" opacity="0.85"/>
+      <text x="364.0" y="105.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">36</text>
+      <text x="364.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2020-2024</text>
+      <rect x="396" y="181.11" width="48" height="8.89" fill="#c9962a" opacity="0.85"/>
+      <text x="420.0" y="176.11" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">4</text>
+      <text x="420.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2025-2029</text>
+    </svg>
+  </div>
+
+  <hr>
 
   <h2 class="sh">Publication List</h2>
 
@@ -129,21 +124,38 @@ details.callout .callout-body{padding:0 1rem 1rem}
       <div class="pub-title">Enhancing curiosity with a wise intervention to improve political conversations and relationships</div>
       <div class="pub-authors">Todd B Kashdan, <strong>Patrick E McKnight</strong>, Kerry Kelso, Logan Craig, Madeleine Gross</div>
       <span class="pub-journal">Scientific Reports, 15(1), 40272</span>
+      <details class="pub-detail"><summary>Details</summary><div class="pub-extra">
+        <div class="pub-doi"><a href="https://doi.org/10.1038/s41598-025-24021-8">doi.org/10.1038/s41598-025-24021-8</a></div>
+        <div>Published November 17, 2025. Political curiosity is associated with positive political conversations. A social norm referencing intervention minimized bias toward assuming one's own party is less open-minded, increasing curiosity and improving cross-partisan dialogue.</div>
+        <div class="pub-cite-info">PMID: 41249311 &middot; Open Access</div>
+      </div></details>
     </div>
     <div class="pub" data-search="purpose and happiness: a comparison <strong>patrick e mcknight</strong>, todd b kashdan, amie mackay, kerry kelso, madeleine gross journal of positive psychology">
       <div class="pub-title">Purpose and happiness: A comparison</div>
       <div class="pub-authors"><strong>Patrick E McKnight</strong>, Todd B Kashdan, Amie MacKay, Kerry Kelso, Madeleine Gross</div>
       <span class="pub-journal">Journal of Positive Psychology</span>
+      <details class="pub-detail"><summary>Details</summary><div class="pub-extra">
+        <div class="pub-doi"><a href="https://doi.org/10.1080/17439760.2025.2515942">doi.org/10.1080/17439760.2025.2515942</a></div>
+        <div>Published online June 8, 2025. Despite widespread assumptions about the distinct nature of purpose in life and happiness, limited empirical studies have directly compared them. Happy people tended to remain happy; people high in purpose tended to remain high in purpose. Happiness at Time 2 predicted purpose at Time 3, 18 months later.</div>
+      </div></details>
     </div>
     <div class="pub" data-search="multiple dimensions of workplace curiosity: evidence of generalizability in nine countries todd b kashdan, <strong>patrick e mcknight</strong>, kerry kelso, logan craig, benjamin guenoun, carl naughton personality and individual differences">
       <div class="pub-title">Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries</div>
       <div class="pub-authors">Todd B Kashdan, <strong>Patrick E McKnight</strong>, Kerry Kelso, Logan Craig, Benjamin Guenoun, Carl Naughton</div>
       <span class="pub-journal">Personality and Individual Differences</span>
+      <details class="pub-detail"><summary>Details</summary><div class="pub-extra">
+        <div class="pub-doi"><a href="https://doi.org/10.1016/j.paid.2024.112760">doi.org/10.1016/j.paid.2024.112760</a></div>
+        <div>Four workplace curiosity dimensions (Joyous Exploration, Deprivation Sensitivity, Stress Tolerance, Openness to People's Ideas) examined across employees in nine countries: Germany (2,742), USA (1,860), China (1,131), France (705), India (451), Italy (413), Taiwan (320), Brazil (298), and Mexico (264). Evidence supports generalizability across geography, sex, and age.</div>
+      </div></details>
     </div>
     <div class="pub" data-search="spanish adaptation of the multidimensional workplace curiosity scale luis manuel blanco-donoso, laura torio, mercedes hernández-hurtado, oscar lecuona, isabel carmona-cobo, todd b kashdan, <strong>patrick e mcknight</strong>, eva garrosa acta psychologica">
       <div class="pub-title">Spanish adaptation of the Multidimensional Workplace Curiosity Scale</div>
       <div class="pub-authors">Luis Manuel Blanco-Donoso, Laura Torio, Mercedes Hernández-Hurtado, Oscar Lecuona, Isabel Carmona-Cobo, Todd B Kashdan, <strong>Patrick E McKnight</strong>, Eva Garrosa</div>
       <span class="pub-journal">Acta Psychologica, 258, 105140</span>
+      <details class="pub-detail"><summary>Details</summary><div class="pub-extra">
+        <div class="pub-doi"><a href="https://doi.org/10.1016/j.actpsy.2025.105140">doi.org/10.1016/j.actpsy.2025.105140</a></div>
+        <div>Cross-sectional survey with 722 Spanish workers (57.8% women). Confirmed a hierarchical model with a general workplace curiosity factor and four second-order dimensions. Model invariant across sex and education; satisfactory internal consistency; evidence of convergent, concurrent, and incremental validity.</div>
+      </div></details>
     </div>
 <div class="year-header" id="y2024">2024</div>
     <div class="pub" data-search="swimming with a head-mounted display: dual-task costs kenneth m jackson, sean c thayer, kassidy l simpson, tyler h shaw, <strong>patrick e mcknight</strong>, william s helton ergonomics">
