@@ -48,6 +48,15 @@ svg.chart{height:auto;display:block}
 
 .footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
 hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
+
+details.callout{border:1px solid var(--div);background:var(--card);margin:1rem 0;transition:box-shadow .2s}
+details.callout[open]{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+details.callout summary{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:.7rem 1rem;cursor:pointer;color:var(--steel);list-style:none;display:flex;align-items:center;gap:.5rem;user-select:none}
+details.callout summary::-webkit-details-marker{display:none}
+details.callout summary::before{content:'\25B6';font-size:.6rem;transition:transform .2s;color:var(--muted)}
+details.callout[open] summary::before{transform:rotate(90deg)}
+details.callout summary:hover{color:var(--rust)}
+details.callout .callout-body{padding:0 1rem 1rem}
 </style>
 </head>
 <body>
@@ -65,42 +74,49 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
 
 <div class="paper">
 
-  <div class="stat-row">
-    <div class="sc"><div class="v">272</div><div class="l">Publications</div></div>
-    <div class="sc"><div class="v">110</div><div class="l">Unique Journals</div></div>
-    <div class="sc"><div class="v">31</div><div class="l">Years Active</div></div>
-  </div>
+  <details class="callout">
+    <summary>Summary Metrics</summary>
+    <div class="callout-body">
+      <div class="stat-row">
+        <div class="sc"><div class="v">272</div><div class="l">Publications</div></div>
+        <div class="sc"><div class="v">110</div><div class="l">Unique Journals</div></div>
+        <div class="sc"><div class="v">31</div><div class="l">Years Active</div></div>
+      </div>
+    </div>
+  </details>
 
-  <h2 class="sh">Publications by Period</h2>
-  <div class="chart-wrap">
-    <div class="chart-label">Publication count by 5-year period</div>
-    <svg class="chart" viewBox="0 0 472 220" xmlns="http://www.w3.org/2000/svg">
-      <line x1="55" y1="190" x2="456" y2="190" stroke="#c8b99a" stroke-width="1"/>
-<rect x="60" y="163.33333333333334" width="48" height="26.666666666666664" fill="#2c4a6e" opacity="0.85"/>
-      <text x="84.0" y="158.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">12</text>
-      <text x="84.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">1995-1999</text>
-      <rect x="116" y="123.33333333333333" width="48" height="66.66666666666667" fill="#2c4a6e" opacity="0.85"/>
-      <text x="140.0" y="118.33333333333333" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">30</text>
-      <text x="140.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2000-2004</text>
-      <rect x="172" y="92.22222222222221" width="48" height="97.77777777777779" fill="#2c4a6e" opacity="0.85"/>
-      <text x="196.0" y="87.22222222222221" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">44</text>
-      <text x="196.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2005-2009</text>
-      <rect x="228" y="43.33333333333334" width="48" height="146.66666666666666" fill="#2c4a6e" opacity="0.85"/>
-      <text x="252.0" y="38.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">66</text>
-      <text x="252.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2010-2014</text>
-      <rect x="284" y="30.0" width="48" height="160.0" fill="#2c4a6e" opacity="0.85"/>
-      <text x="308.0" y="25.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">72</text>
-      <text x="308.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2015-2019</text>
-      <rect x="340" y="110.0" width="48" height="80.0" fill="#2c4a6e" opacity="0.85"/>
-      <text x="364.0" y="105.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">36</text>
-      <text x="364.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2020-2024</text>
-      <rect x="396" y="181.11" width="48" height="8.89" fill="#c9962a" opacity="0.85"/>
-      <text x="420.0" y="176.11" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">4</text>
-      <text x="420.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2025-2029</text>
-    </svg>
-  </div>
-
-  <hr>
+  <details class="callout">
+    <summary>Publications by Period</summary>
+    <div class="callout-body">
+      <div class="chart-wrap">
+        <div class="chart-label">Publication count by 5-year period</div>
+        <svg class="chart" viewBox="0 0 472 220" xmlns="http://www.w3.org/2000/svg">
+          <line x1="55" y1="190" x2="456" y2="190" stroke="#c8b99a" stroke-width="1"/>
+          <rect x="60" y="163.33333333333334" width="48" height="26.666666666666664" fill="#2c4a6e" opacity="0.85"/>
+          <text x="84.0" y="158.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">12</text>
+          <text x="84.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">1995-1999</text>
+          <rect x="116" y="123.33333333333333" width="48" height="66.66666666666667" fill="#2c4a6e" opacity="0.85"/>
+          <text x="140.0" y="118.33333333333333" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">30</text>
+          <text x="140.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2000-2004</text>
+          <rect x="172" y="92.22222222222221" width="48" height="97.77777777777779" fill="#2c4a6e" opacity="0.85"/>
+          <text x="196.0" y="87.22222222222221" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">44</text>
+          <text x="196.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2005-2009</text>
+          <rect x="228" y="43.33333333333334" width="48" height="146.66666666666666" fill="#2c4a6e" opacity="0.85"/>
+          <text x="252.0" y="38.33333333333334" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">66</text>
+          <text x="252.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2010-2014</text>
+          <rect x="284" y="30.0" width="48" height="160.0" fill="#2c4a6e" opacity="0.85"/>
+          <text x="308.0" y="25.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">72</text>
+          <text x="308.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2015-2019</text>
+          <rect x="340" y="110.0" width="48" height="80.0" fill="#2c4a6e" opacity="0.85"/>
+          <text x="364.0" y="105.0" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">36</text>
+          <text x="364.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2020-2024</text>
+          <rect x="396" y="181.11" width="48" height="8.89" fill="#c9962a" opacity="0.85"/>
+          <text x="420.0" y="176.11" text-anchor="middle" font-family="Roboto Mono" font-size="10" fill="#1a1208" font-weight="700">4</text>
+          <text x="420.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2025-2029</text>
+        </svg>
+      </div>
+    </div>
+  </details>
 
   <h2 class="sh">Publication List</h2>
 
