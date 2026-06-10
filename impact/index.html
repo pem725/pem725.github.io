@@ -59,6 +59,22 @@ details.pub-detail .pub-extra{margin-top:.4rem;padding:.5rem .7rem;background:va
 details.pub-detail .pub-extra a{color:var(--steel);font-family:'Roboto Mono',monospace;font-size:.72rem}
 details.pub-detail .pub-extra .pub-doi{margin-bottom:.25rem}
 details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace;font-size:.68rem;color:var(--muted)}
+
+/* Live ORCID feed widget */
+.orcid-live{margin:0 0 1.8rem;border:1px solid var(--div);background:var(--card);padding:1rem 1.2rem}
+.orcid-live .ol-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.4rem;border-bottom:1px solid var(--div);padding-bottom:.5rem;margin-bottom:.6rem}
+.orcid-live .ol-title{font-family:'Playfair Display',serif;font-weight:900;font-size:1.05rem;color:var(--ink);display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.orcid-live .ol-live{font-family:'Roboto Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.3rem}
+.orcid-live .ol-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:olpulse 2s infinite}
+@keyframes olpulse{0%{box-shadow:0 0 0 0 rgba(42,110,63,.5)}70%{box-shadow:0 0 0 6px rgba(42,110,63,0)}100%{box-shadow:0 0 0 0 rgba(42,110,63,0)}}
+.orcid-live .ol-id{font-family:'Roboto Mono',monospace;font-size:.62rem;color:var(--steel);border:none}
+.orcid-live .ol-id img{vertical-align:middle;height:14px;margin-right:.25rem}
+.orcid-live .ol-item{padding:.45rem 0;border-bottom:1px solid rgba(200,185,154,.4)}
+.orcid-live .ol-item:last-child{border-bottom:none}
+.orcid-live .ol-it-title{font-size:.86rem;font-weight:700;line-height:1.35}
+.orcid-live .ol-it-meta{font-family:'Roboto Mono',monospace;font-size:.66rem;color:var(--steel);letter-spacing:.03em;margin-top:.12rem}
+.orcid-live .ol-it-meta .ol-yr{color:var(--rust);font-weight:600}
+.orcid-live .ol-msg{font-size:.8rem;color:var(--muted);font-style:italic}
 </style>
 </head>
 <body>
@@ -80,6 +96,17 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
     <div class="sc"><div class="v">272</div><div class="l">Publications</div></div>
     <div class="sc"><div class="v">110</div><div class="l">Unique Journals</div></div>
     <div class="sc"><div class="v">31</div><div class="l">Years Active</div></div>
+  </div>
+
+  <div class="orcid-live">
+    <div class="ol-head">
+      <div class="ol-title">Latest Work
+        <span class="ol-live"><span class="ol-dot"></span>Live from ORCID</span>
+      </div>
+      <a class="ol-id" href="https://orcid.org/0000-0002-9067-9066" target="_blank" rel="noopener">
+        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID iD" loading="lazy">0000-0002-9067-9066</a>
+    </div>
+    <div id="orcid-live-list"><div class="ol-msg">Loading latest publications from ORCID&hellip;</div></div>
   </div>
 
   <h2 class="sh">Publications by Period</h2>
@@ -1577,6 +1604,52 @@ function filterPubs() {
     ? `Showing ${shown} of 268 publications matching "${q}"`
     : 'Showing all 272 publications';
 }
+
+// Live ORCID feed: fetch the public record and show the 5 most recent works.
+// Public API, no auth/secret; CORS-enabled. Fails soft to a link.
+(function loadOrcidFeed(){
+  var ORCID = '0000-0002-9067-9066';
+  var el = document.getElementById('orcid-live-list');
+  if (!el) return;
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  fetch('https://pub.orcid.org/v3.0/' + ORCID + '/works', {headers:{Accept:'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){
+      var works = (d.group || []).map(function(g){
+        var s = g['work-summary'][0];
+        var doi = '';
+        var ids = ((s['external-ids'] || {})['external-id']) || [];
+        for (var i=0;i<ids.length;i++){ if(ids[i]['external-id-type']==='doi'){ doi=ids[i]['external-id-value']; break; } }
+        var pd = s['publication-date'] || {};
+        return {
+          title: ((s.title||{}).title||{}).value || 'Untitled',
+          year: ((pd.year||{}).value) || '',
+          month: ((pd.month||{}).value) || '',
+          journal: (s['journal-title']||{}).value || '',
+          type: (s.type||'').replace(/-/g,' '),
+          doi: doi
+        };
+      });
+      works.sort(function(a,b){
+        return (parseInt(b.year||0)*100 + parseInt(b.month||0)) - (parseInt(a.year||0)*100 + parseInt(a.month||0));
+      });
+      var top = works.slice(0,5);
+      if (!top.length){ el.innerHTML = '<div class="ol-msg">No works found on the ORCID record.</div>'; return; }
+      el.innerHTML = top.map(function(w){
+        var title = w.doi
+          ? '<a href="https://doi.org/' + esc(w.doi) + '" target="_blank" rel="noopener">' + esc(w.title) + '</a>'
+          : esc(w.title);
+        return '<div class="ol-item"><div class="ol-it-title">' + title + '</div>' +
+               '<div class="ol-it-meta"><span class="ol-yr">' + esc(w.year || '—') + '</span> &middot; ' +
+               esc(w.journal || w.type) + '</div></div>';
+      }).join('');
+    })
+    .catch(function(){
+      el.innerHTML = '<div class="ol-msg">Live ORCID feed unavailable right now &mdash; view the full record on ' +
+        '<a href="https://orcid.org/' + ORCID + '" target="_blank" rel="noopener">ORCID</a>.</div>';
+    });
+})();
 </script>
 
 </body>

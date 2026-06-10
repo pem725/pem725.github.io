@@ -115,6 +115,67 @@ publications:
       category: "methodology"
 
   articles:
+    - authors: "Mougeot, J.L.C., Davis, J.M., Zhao, J., Sullivan, K.A., Thornhill, M.H., McKnight, P.E., Stephens, C., & Lockhart, P.B."
+      year: 2020
+      title: "Methodology for the development of a national Dental Practice-Based Research Network survey on dentist’s beliefs and behaviors concerning antibiotic prophylaxis"
+      journal: "Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology"
+      doi: "10.1016/j.oooo.2020.03.004"
+      category: "methodology"  # verify (ORCID import)
+
+    - authors: "Schnyer, R.N., McKnight, P., Conboy, L.A., Jacobson, E., Ledegza, A.T., Quilty, M.T., Davis, R.B., & Wayne, P.M."
+      year: 2019
+      title: "Can Reliability of the Chinese Medicine Diagnostic Process Be Improved? Results of a Prospective Randomized Controlled Trial"
+      journal: "Journal of Alternative and Complementary Medicine"
+      doi: "10.1089/acm.2019.0260"
+      category: "measurement"  # verify (ORCID import)
+
+    - authors: "Jacobson, E., Conboy, L., Tsering, D., Shields, M., McKnight, P., Wayne, P.M., & Schnyer, R."
+      year: 2019
+      title: "Experimental Studies of Inter-Rater Agreement in Traditional Chinese Medicine: A Systematic Review"
+      journal: "Journal of Alternative and Complementary Medicine"
+      doi: "10.1089/acm.2019.0197"
+      category: "measurement"  # verify (ORCID import)
+
+    - authors: "Brailo, V., McKnight, P., Kerr, A.R., Lodi, G., & Lockhart, P.B."
+      year: 2019
+      title: "World Workshop on Oral Medicine VII: What participants perceive as important"
+      journal: "Oral Diseases"
+      doi: "10.1111/odi.13091"
+      category: "health"  # verify (ORCID import)
+
+    - authors: "Blalock, D.V., Kashdan, T.B., & McKnight, P.E."
+      year: 2018
+      title: "High risk, high reward: Daily perceptions of social challenge and performance in social anxiety disorder"
+      journal: "Journal of Anxiety Disorders"
+      doi: "10.1016/j.janxdis.2018.01.006"
+      category: "anxiety"  # verify (ORCID import)
+
+    - authors: "Blalock, D.V., McKnight, P.E., Kashdan, T.B., & Franz, S.C."
+      year: 2018
+      title: "Predicting treatment course and outcome using a promotion and prevention framework in a community sample of arthritis sufferers"
+      journal: "Patient Preference and Adherence"
+      doi: "10.2147/ppa.s161144"
+      category: "health"  # verify (ORCID import)
+
+    - authors: "Cowan, A., Sarabia-Estrada, R., Wilkerson, G., Mcknight, P., & Guarnieri, M."
+      year: 2015
+      title: "Lack of adverse effects during a target animal safety trial of extended-release buprenorphine in fischer 344 rats"
+      journal: "Lab Animal"
+      doi: "10.1038/laban.745"
+      category: "health"  # verify (ORCID import)
+
+    - authors: "Crane, N.B., & McKnight, P."
+      year: 2012
+      title: "Impact of self-assembly process errors on thermoelectric performance"
+      journal: "Journal of Electronic Packaging, Transactions of the ASME"
+      doi: "10.1115/1.4006709"
+      category: "methodology"  # verify (ORCID import)
+
+    - authors: "Kashdan, T.B., & McKnight, P.E."
+      year: 2009
+      title: "Origins of purpose in life: Refining our understanding of a life well lived"
+      journal: "Psihologijske Teme"
+      category: "purpose"  # verify (ORCID import)
     # 2025
     - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., & Gross, M."
       year: 2025
@@ -232,6 +293,7 @@ publications:
     - authors: "Kashdan, T.B., Disabato, D.J., Goodman, F.R., & McKnight, P.E."
       year: 2020
       title: "The Five-Dimensional Curiosity Scale Revised (5DCR): Briefer subscales while separating overt and covert social curiosity"
+      doi: "10.1016/j.paid.2020.109836"
       journal: "Personality and Individual Differences"
       volume: "157"
       pages: "109836"
@@ -241,6 +303,7 @@ publications:
     - authors: "Kashdan, T.B., Goodman, F.R., Disabato, D.J., McKnight, P.E., Kelso, K., & Naughton, C."
       year: 2020
       title: "Curiosity has comprehensive benefits in the workplace"
+      doi: "10.1016/j.paid.2019.109717"
       journal: "Personality and Individual Differences"
       volume: "155"
       pages: "109717"
@@ -250,6 +313,7 @@ publications:
     - authors: "Kashdan, T.B., Disabato, D.J., Goodman, F.R., Doorley, J.D., & McKnight, P.E."
       year: 2020
       title: "Understanding psychological flexibility: A multimethod exploration of pursuing valued goals despite the presence of distress"
+      doi: "10.1037/pas0000834"
       journal: "Psychological Assessment"
       volume: "32"
       issue: "9"
@@ -260,6 +324,7 @@ publications:
     - authors: "Kashdan, T.B., Disabato, D.J., McKnight, P.E., Kelso, K.C., Lauber, M., & Goodman, F.R."
       year: 2020
       title: "Sexual assault: Exploring real-time consequences the next day and in subsequent days"
+      doi: "10.5502/ijw.v10i4.1319"
       journal: "International Journal of Wellbeing"
       volume: "10"
       issue: "4"
@@ -276,6 +341,7 @@ publications:
     - authors: "Lockhart, P.B., Thornhill, M.H., Zhao, J., et al. & McKnight, P.E."
       year: 2020
       title: "Prophylactic antibiotic prescribing in dental practice"
+      doi: "10.1016/j.adaj.2020.04.027"
       journal: "Journal of the American Dental Association"
       volume: "151"
       issue: "10"
@@ -287,6 +353,7 @@ publications:
     - authors: "Doorley, J.D., Kashdan, T.B., Alexander, L.A., Blalock, D.V., & McKnight, P.E."
       year: 2019
       title: "Distress tolerance in romantic relationships: A daily diary exploration with methodological considerations"
+      doi: "10.1007/s11031-019-09751-3"
       journal: "Motivation and Emotion"
       volume: "43"
       issue: "3"
@@ -307,6 +374,7 @@ publications:
     - authors: "Curby, T., McKnight, P., Alexander, L., & Erchov, S."
       year: 2019
       title: "Sources of variance in end-of-course student evaluations"
+      doi: "10.1080/02602938.2019.1607249"
       journal: "Assessment & Evaluation in Higher Education"
       citations: 15
       category: "education"
@@ -315,6 +383,7 @@ publications:
     - authors: "Kashdan, T.B., Stiksma, M.C., Disabato, D.D., McKnight, P.E., Bekier, J., Kaji, J., & Lazarus, R."
       year: 2018
       title: "The five-dimensional curiosity scale: Capturing the bandwidth of curiosity and identifying four unique subgroups of curious people"
+      doi: "10.1016/j.jrp.2017.11.011"
       journal: "Journal of Research in Personality"
       volume: "73"
       pages: "130-149"
@@ -324,6 +393,7 @@ publications:
     - authors: "Yarbro, J.L., & McKnight, P.E."
       year: 2018
       title: "An introduction to cost-effectiveness acceptability curves"
+      doi: "10.1037/cpp0000243"
       journal: "Clinical Practice in Pediatric Psychology"
       volume: "6"
       issue: "2"
@@ -334,6 +404,7 @@ publications:
     - authors: "Bock, A.M., Cartwright, K.B., McKnight, P.E., et al. & Pasnak, R."
       year: 2018
       title: "Patterning, reading, and executive functions"
+      doi: "10.3389/fpsyg.2018.01802"
       journal: "Frontiers in Psychology"
       volume: "9"
       pages: "1802"
@@ -344,6 +415,7 @@ publications:
     - authors: "Alexander, L.A., McKnight, P.E., Disabato, D.J., & Kashdan, T.B."
       year: 2017
       title: "When and How to use Multiple Informants to Improve Clinical Assessments"
+      doi: "10.1007/s10862-017-9607-9"
       journal: "Journal of Psychopathology and Behavioral Assessment"
       citations: 35
       category: "methodology"
@@ -351,6 +423,7 @@ publications:
     - authors: "Kashdan, T.B., Blalock, D.V., Young, K.C., Machell, K.A., Monfort, S.S., McKnight, P.E., & Ferssizidis, P."
       year: 2017
       title: "Personality Strengths in Romantic relationships"
+      doi: "10.1037/pas0000464"
       journal: "Psychological Assessment"
       citations: 65
       category: "relationships"
@@ -358,6 +431,7 @@ publications:
     - authors: "Kashdan, T.B., Goodman, F.R., Stiksma, M., Milius, C.R., & McKnight, P.E."
       year: 2017
       title: "Sexuality Leads to Boosts in Mood and Meaning in Life"
+      doi: "10.1037/emo0000324"
       journal: "Emotion"
       citations: 45
       category: "wellbeing"
@@ -365,6 +439,7 @@ publications:
     - authors: "Monfort, S.S., Graybeal, J.J., Harwood, A.E., McKnight, P.E., & Shaw, T.H."
       year: 2017
       title: "A single-item assessment for remaining mental resources: development and validation of the Gas Tank Questionnaire"
+      doi: "10.1080/1463922x.2017.1397228"
       journal: "Theoretical Issues in Ergonomics Science"
       citations: 25
       category: "measurement"
@@ -372,6 +447,7 @@ publications:
     - authors: "Bono, G., Froh, J.J., Disabato, D., Blalock, D., McKnight, P., & Bausert, S."
       year: 2017
       title: "Gratitude's role in adolescent antisocial and prosocial behavior: A 4-year longitudinal investigation"
+      doi: "10.1080/17439760.2017.1402078"
       journal: "Journal of Positive Psychology"
       citations: 55
       category: "wellbeing"
@@ -380,6 +456,7 @@ publications:
     - authors: "de Visser, E.J., Monfort, S.S., McKendrick, R., Smith, M.A.B., McKnight, P.E., Krueger, F., & Parasuraman, R."
       year: 2016
       title: "Almost Human: Anthropomorphism Increases Trust Resilience in Cognitive Agents"
+      doi: "10.1037/xap0000092"
       journal: "Journal of Experimental Psychology: Applied"
       citations: 280
       category: "cognition"
@@ -387,6 +464,7 @@ publications:
     - authors: "Foroughi, C.K., Monfort, S.S., Paczynski, M., McKnight, P.E., & Greenwood, P.M."
       year: 2016
       title: "Placebo effects in cognitive training"
+      doi: "10.1073/pnas.1601243113"
       journal: "Proceedings of the National Academy of Sciences"
       volume: "113"
       issue: "27"
@@ -397,6 +475,7 @@ publications:
     - authors: "Saad, M.A., McKnight, P., Quartuccio, J., Nicholas, D., Jaladi, R., & Corriveau, P."
       year: 2016
       title: "Online subjective testing for consumer-photo quality evaluation"
+      doi: "10.1117/1.jei.25.4.043009"
       journal: "Journal of Electronic Imaging"
       volume: "25"
       issue: "4"
@@ -408,6 +487,7 @@ publications:
     - authors: "Kashdan, T.B., Feldman-Barrett, L., & McKnight, P.E."
       year: 2015
       title: "Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity"
+      doi: "10.1177/0963721414550708"
       journal: "Current Directions in Psychological Science"
       volume: "24"
       issue: "1"
@@ -418,6 +498,7 @@ publications:
     - authors: "McKnight, P.E., Monfort, S.S., Kashdan, T.B., Blalock, D.V., & Calton, J.M."
       year: 2015
       title: "Anxiety Symptoms and Functional Impairment: A Systematic Review of the Correlation between the Two Measures"
+      doi: "10.1016/j.cpr.2015.10.005"
       journal: "Clinical Psychology Review"
       volume: "45"
       pages: "115-130"
@@ -427,6 +508,7 @@ publications:
     - authors: "Shaw, T.H., Nguyen, C., Satterfield, K., Ramirez, R., & McKnight, P.E."
       year: 2015
       title: "Cerebral hemovelocity reveals differential resource allocation strategies for extraverts and introverts during vigilance"
+      doi: "10.1007/s00221-015-4481-8"
       journal: "Experimental Brain Research"
       volume: "234"
       issue: "2"
@@ -436,6 +518,7 @@ publications:
     - authors: "Sattler, D.N., McKnight, P.E., Naney, L., & Mathis, R."
       year: 2015
       title: "Grant peer review: Improving inter-rater reliability with training"
+      doi: "10.1371/journal.pone.0130450"
       journal: "PLoS One"
       volume: "10"
       issue: "6"
@@ -446,6 +529,7 @@ publications:
     - authors: "Graybeal, J.J., Bozzelli, P.L., Graybeal, L.L., Groeber, C.M., McKnight, P.E., Cox, D.N., & Flinn, J.M."
       year: 2015
       title: "Human ApoE ε4 Alters Circadian Rhythm Activity, IL-1β, and GFAP in CRND8 Mice"
+      doi: "10.3233/jad-132009"
       journal: "Journal of Alzheimer's Disease"
       volume: "43"
       issue: "3"
@@ -456,6 +540,7 @@ publications:
     - authors: "Young, K.C., Kashdan, T.B., McKnight, P.E., Blalock, D.V., Yuen, M., & Richberg, J.B."
       year: 2015
       title: "Happy and unhappy adolescent bullies: Evidence for theoretically meaningful subgroups"
+      doi: "10.1016/j.paid.2014.11.024"
       journal: "Personality and Individual Differences"
       volume: "75"
       pages: "224-228"
@@ -466,6 +551,7 @@ publications:
     - authors: "VanDerhei, S., Rojahn, J., Stuewig, J., & McKnight, P.E."
       year: 2014
       title: "The Effect of Shame-Proneness, Guilt-Proneness, and Internalizing Tendencies on Nonsuicidal Self-Injury"
+      doi: "10.1111/sltb.12069"
       journal: "Suicide and Life-Threatening Behavior"
       volume: "44"
       issue: "3"
@@ -476,6 +562,7 @@ publications:
     - authors: "Kashdan, T.B., Adams, L.M., Farmer, A.S., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
       year: 2014
       title: "Sexual healing: Daily diary investigation of the benefits of intimate and pleasurable sexual activity in socially anxious adults"
+      doi: "10.1007/s10508-013-0171-4"
       journal: "Archives of Sexual Behavior"
       volume: "43"
       issue: "7"
@@ -486,6 +573,7 @@ publications:
     - authors: "Kashdan, T.B., Yarbro, J., McKnight, P.E., & Nezlek, J.B."
       year: 2014
       title: "Laughter with someone else leads to future social rewards: Temporal change using experience sampling methodology"
+      doi: "10.1016/j.paid.2013.09.025"
       journal: "Personality and Individual Differences"
       volume: "58"
       pages: "15-19"
@@ -502,6 +590,7 @@ publications:
     - authors: "Kidd, J.K., Pasnak, R., Gadzichowski, K.M., Gallington, D.A., McKnight, P., Boyer, C.E., & Carlson, A."
       year: 2014
       title: "Instructing first-grade children on patterning improves reading and mathematics"
+      doi: "10.1080/10409289.2013.794448"
       journal: "Early Education & Development"
       volume: "25"
       issue: "1"
@@ -513,6 +602,7 @@ publications:
     - authors: "Kashdan, T.B., & McKnight, P.E."
       year: 2013
       title: "Commitment to a purpose in life: An antidote to the suffering by individuals with social anxiety disorder"
+      doi: "10.1037/a0033278"
       journal: "Emotion"
       volume: "13"
       issue: "6"
@@ -522,7 +612,8 @@ publications:
 
     - authors: "Kashdan, T.B., Farmer, A.S., Adams, L.M., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
       year: 2013
-      title: "Distinguishing health adults from people with social anxiety disorder"
+      title: "Distinguishing healthy adults from people with social anxiety disorder"
+      doi: "10.1037/a0032733"
       journal: "Journal of Abnormal Psychology"
       volume: "122"
       issue: "3"
@@ -533,6 +624,7 @@ publications:
     - authors: "Kashdan, T.B., Ferssizidis, P., Farmer, A.S., Adams, L.M., & McKnight, P.E."
       year: 2013
       title: "Failure to capitalize on sharing good news with romantic partners"
+      doi: "10.1016/j.brat.2013.04.006"
       journal: "Behaviour Research and Therapy"
       volume: "51"
       issue: "10"
@@ -544,6 +636,7 @@ publications:
     - authors: "Kashdan, T.B., Young, K.C., & McKnight, P.E."
       year: 2012
       title: "When is rumination an adaptive mood repair strategy?"
+      doi: "10.1016/j.janxdis.2012.07.004"
       journal: "Journal of Anxiety Disorders"
       volume: "26"
       issue: "7"
@@ -555,6 +648,7 @@ publications:
     - authors: "Thompson, J.C., Trafton, J.G., & McKnight, P."
       year: 2011
       title: "The perception of humanness from the movements of synthetic agents"
+      doi: "10.1068/p6900"
       journal: "Perception"
       volume: "40"
       pages: "695-704"
@@ -564,6 +658,7 @@ publications:
     - authors: "Renshaw, K.D., McKnight, P., Caska, C.M., & Blais, R.K."
       year: 2011
       title: "The utility of the relationship assessment scale in multiple types of relationships"
+      doi: "10.1177/0265407510377850"
       journal: "Journal of Social and Personal Relationships"
       volume: "28"
       pages: "435-447"
@@ -573,6 +668,7 @@ publications:
     - authors: "Kashdan, T.B., Adams, L., Savostyanova, A., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
       year: 2011
       title: "Effects of social anxiety and depressive symptoms on the frequency and quality of sexual activity"
+      doi: "10.1016/j.brat.2011.03.004"
       journal: "Behaviour Research and Therapy"
       volume: "49"
       pages: "352-360"
@@ -582,6 +678,7 @@ publications:
     - authors: "Kashdan, T.B., & McKnight, P.E."
       year: 2011
       title: "Dynamic, contextual approaches to studying personality in the social world"
+      doi: "10.1111/j.1467-6494.2011.00737.x"
       journal: "Journal of Personality"
       volume: "79"
       pages: "1177-1190"
@@ -591,6 +688,7 @@ publications:
     - authors: "Kashdan, T.B., McKnight, P.E., Fincham, F.D., & Rose, P."
       year: 2011
       title: "When curiosity breeds intimacy"
+      doi: "10.1111/j.1467-6494.2010.00697.x"
       journal: "Journal of Personality"
       volume: "79"
       pages: "1369-1401"
@@ -609,6 +707,7 @@ publications:
     - authors: "Voelkle, M.C. & McKnight, P.E."
       year: 2011
       title: "One size fits all? A Monte-Carlo simulation on repeated measures (M)ANOVA and latent curve modeling"
+      doi: "10.1027/1614-2241/a000044"
       journal: "Methodology"
       volume: "8"
       pages: "23-38"
@@ -619,6 +718,7 @@ publications:
     - authors: "Kashdan, T.B. & McKnight, P.E."
       year: 2010
       title: "The darker side of social anxiety"
+      doi: "10.1177/0963721409359280"
       journal: "Current Directions in Psychological Science"
       volume: "19"
       issue: "1"
@@ -629,6 +729,7 @@ publications:
     - authors: "Farr, J., Going, S., McKnight, P.E., Kasle, S., Cussler, E., & Cornette, M."
       year: 2010
       title: "Progressive resistance training improves overall physical activity levels in patients with early osteoarthritis of the knee"
+      doi: "10.2522/ptj.20090041"
       journal: "Physical Therapy"
       volume: "90"
       pages: "356-366"
@@ -638,6 +739,7 @@ publications:
     - authors: "Kasle, S., Wilhelm, M.S., McKnight, P.E., Sheikh, S.Z., & Zautra, A.J."
       year: 2010
       title: "Mutuality's prospective beneficial effect on inflammation in female rheumatoid arthritis patients"
+      doi: "10.1002/acr.20019"
       journal: "Arthritis Care & Research"
       volume: "62"
       issue: "1"
@@ -648,6 +750,7 @@ publications:
     - authors: "McKnight, P.E., Kasle, S., Going, S., Villanueva, I., Cornett, M., Farr, J., Wright, J., Streeter, C., & Zautra, A."
       year: 2010
       title: "A comparison of strength training, self-management, and the combination for early osteoarthritis of the knee"
+      doi: "10.1002/acr.20013"
       journal: "Arthritis Care & Research"
       volume: "62"
       issue: "1"
@@ -658,6 +761,7 @@ publications:
     - authors: "McKnight, P.E., Afram, A., Kashdan, T.B., Kasle, S., & Zautra, A."
       year: 2010
       title: "Coping self-efficacy as a mediator between catastrophizing and physical functioning"
+      doi: "10.1007/s10865-010-9252-1"
       journal: "Journal of Behavioral Medicine"
       volume: "33"
       pages: "239-249"
@@ -668,6 +772,7 @@ publications:
     - authors: "Hofmann, S.G., Richey, J.A., Kashdan, T.B., & McKnight, P.E."
       year: 2009
       title: "Anxiety disorders moderate the association between externalizing problems and substance use disorders"
+      doi: "10.1016/j.janxdis.2008.10.011"
       journal: "Journal of Anxiety Disorders"
       volume: "23"
       issue: "4"
@@ -678,6 +783,7 @@ publications:
     - authors: "Kashdan, T.B., McKnight, P.E., Richey, J.A., & Hofmann, S.G."
       year: 2009
       title: "When social anxiety disorder co-exists with risk-prone, approach behavior"
+      doi: "10.1016/j.brat.2009.03.010"
       journal: "Behaviour Research and Therapy"
       volume: "47"
       issue: "7"
@@ -688,6 +794,7 @@ publications:
     - authors: "McKnight, P.E. & Kashdan, T.B."
       year: 2009
       title: "The importance of functional impairment to mental health outcomes"
+      doi: "10.1016/j.cpr.2009.01.005"
       journal: "Clinical Psychology Review"
       volume: "29"
       issue: "3"
@@ -698,6 +805,7 @@ publications:
     - authors: "McKnight, P.E. & Kashdan, T.B."
       year: 2009
       title: "Purpose in life as a system that creates and sustains health and well-being"
+      doi: "10.1037/a0017152"
       journal: "Review of General Psychology"
       volume: "13"
       issue: "3"
@@ -709,6 +817,7 @@ publications:
     - authors: "McKnight, P. & Babcock-Parziale, J."
       year: 2007
       title: "Respondent impact on functional ability outcome measures in vision rehabilitation"
+      doi: "10.1097/opx.0b013e31812f756f"
       journal: "Optometry and Vision Sciences"
       volume: "84"
       issue: "8"
@@ -720,6 +829,7 @@ publications:
     - authors: "Coan, J.A., Allen, J.J., & McKnight, P.E."
       year: 2006
       title: "A capability model of individual differences in frontal EEG asymmetry"
+      doi: "10.1016/j.biopsycho.2005.10.003"
       journal: "Biological Psychology"
       volume: "72"
       issue: "2"
@@ -730,6 +840,7 @@ publications:
     - authors: "Caspi, O., McKnight, P., Kruse, L., Cunningham, V., Figueredo, A.J., & Sechrest, L."
       year: 2006
       title: "Evidence-based medicine: discrepancy between perceived competence and actual performance among graduating medical students"
+      doi: "10.1080/01421590600624422"
       journal: "Medical Teacher"
       volume: "28"
       issue: "4"
@@ -741,6 +852,7 @@ publications:
     - authors: "Babcock-Parziale, J., McKnight, P.E. & Head, D.N."
       year: 2005
       title: "Evaluating the psychometric properties of a clinical and a self-report blind rehabilitation outcome measure"
+      doi: "10.1682/jrrd.2004.07.0080"
       journal: "Journal of Rehabilitation Research and Development"
       volume: "42"
       issue: "4"
@@ -751,6 +863,7 @@ publications:
     - authors: "McKnight, K.M., Sechrest, L., & McKnight, P.E."
       year: 2005
       title: "Psychology, psychologists, and public policy"
+      doi: "10.1146/annurev.clinpsy.1.102803.144130"
       journal: "Annual Review of Clinical Psychology"
       volume: "1"
       pages: "557-576"
@@ -770,6 +883,7 @@ publications:
     - authors: "Schnyer, R., Conboy, L., Jacobson, E., McKnight, P., et al."
       year: 2005
       title: "Development of a Chinese Medicine Assessment Measure: An Interdisciplinary Approach using the Delphi Method"
+      doi: "10.1089/acm.2005.11.1005"
       journal: "Journal of Complementary and Alternative Medicine"
       volume: "11"
       issue: "6"
@@ -781,6 +895,7 @@ publications:
     - authors: "Stroud, M., McKnight, P.E. & Jensen, M."
       year: 2004
       title: "Assessment of Self-Reported Physical Activity in Chronic Pain Patients: Development of an Abbreviated Roland-Morris Disability Scale"
+      doi: "10.1016/j.jpain.2004.04.002"
       journal: "Journal of Pain"
       volume: "5"
       issue: "5"
@@ -801,6 +916,7 @@ publications:
     - authors: "Bayles, K.A., Tomoeda, C.K., McKnight, P.E., Helm-Estabrooks, N., & Hawley, J.N."
       year: 2004
       title: "Verbal perseveration in individuals with Alzheimer's disease"
+      doi: "10.1055/s-2004-837246"
       journal: "Seminars in Speech and Language"
       volume: "25"
       issue: "4"
@@ -812,6 +928,7 @@ publications:
     - authors: "McKnight, P.E. & Sechrest, L."
       year: 2003
       title: "The use and misuse of the term 'experience' in contemporary psychology"
+      doi: "10.1080/0951508032000121814"
       journal: "Philosophical Psychology"
       volume: "16"
       issue: "3"
@@ -822,6 +939,7 @@ publications:
     - authors: "Reed, R.L., Hepburn, K., Adelson, R., Center, B., & McKnight, P."
       year: 2003
       title: "Low serum albumin levels, confusion and fecal incontinence: Are these risk factors for pressure ulcers?"
+      doi: "10.1159/000070407"
       journal: "Gerontology"
       volume: "49"
       issue: "4"
@@ -832,6 +950,7 @@ publications:
     - authors: "Doctor, J.N., Wolfson, A.M., McKnight, P.E. & Burns, S.P."
       year: 2003
       title: "The effect of inaccurate FIM instrument ratings on prospective payment"
+      doi: "10.1053/apmr.2003.50063"
       journal: "Archives of Physical Medicine and Rehabilitation"
       volume: "84"
       issue: "1"
@@ -843,6 +962,7 @@ publications:
     - authors: "Schmaling, K.B., McKnight, P.E. & Afari, N."
       year: 2002
       title: "A prospective daily study of the relationship of moods and stress to pulmonary function among patients with asthma"
+      doi: "10.1081/jas-120004916"
       journal: "Journal of Asthma"
       volume: "39"
       issue: "6"
@@ -854,6 +974,7 @@ publications:
     - authors: "Baer, J.S., Kivlahan, D.R., Blume, A., McKnight, P.E., & Marlatt, G.A."
       year: 2001
       title: "Brief intervention for heavy drinking college students: Four-year follow-up and natural history"
+      doi: "10.2105/ajph.91.8.1310"
       journal: "American Journal of Public Health"
       volume: "91"
       issue: "8"
@@ -865,6 +986,7 @@ publications:
     - authors: "Figueredo, A.J., McKnight, P.E., McKnight, K.M. & Sidani, S."
       year: 2000
       title: "Multivariate modeling of missing data within and across assessment waves"
+      doi: "10.1046/j.1360-0443.95.11s3.6.x"
       journal: "Addiction"
       volume: "95"
       issue: "Suppl 3"
@@ -876,6 +998,7 @@ publications:
     - authors: "Sechrest, L., McKnight, P., & McKnight, K."
       year: 1996
       title: "Calibration of measures for psychotherapy outcome studies"
+      doi: "10.1037/0003-066x.51.10.1065"
       journal: "American Psychologist"
       volume: "51"
       issue: "10"
@@ -887,6 +1010,7 @@ publications:
     - authors: "Erickson, J.R., Stevens, S., McKnight, P.E., & Figueredo, A.J."
       year: 1995
       title: "Willingness for treatment as a predictor of retention and outcomes"
+      doi: "10.1300/j069v14n04_08"
       journal: "Journal of Addictive Diseases"
       volume: "14"
       issue: "4"

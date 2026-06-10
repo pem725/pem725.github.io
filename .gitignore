@@ -19,3 +19,12 @@ vignettes/*.pdf
 .httr-oauth
 
 /.quarto/
+
+# Python cache + sync backups (ORCID tooling)
+__pycache__/
+*.pyc
+cv/publications.yaml.bak
+
+# Never commit ORCID/OAuth client secrets
+*.secret
+.env
