@@ -20,10 +20,10 @@ vignettes/*.pdf
 
 /.quarto/
 
-# Python cache + sync backups (ORCID tooling)
+# Python cache + edit backups (ORCID/impact tooling)
 __pycache__/
 *.pyc
-cv/publications.yaml.bak
+*.bak
 
 # Never commit ORCID/OAuth client secrets
 *.secret

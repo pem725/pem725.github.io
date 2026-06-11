@@ -198,7 +198,7 @@ publications:
       year: 2025
       title: "Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries"
       journal: "Personality and Individual Differences"
-      doi: "10.1016/j.paid.2024.112760"
+      doi: "10.1016/j.paid.2024.113011"
       category: "curiosity"
 
     - authors: "Blanco-Donoso, L.M., Torio, L., Hernández-Hurtado, M., Lecuona, O., Carmona-Cobo, I., Kashdan, T.B., McKnight, P.E., & Garrosa, E."
@@ -270,13 +270,6 @@ publications:
       pages: "210-218"
       citations: 45
       category: "purpose"
-
-    - authors: "Dang, J.A., Shaw, T.H., McKnight, P.E., & Helton, W.S."
-      year: 2022
-      title: "A closer look at warning cues on the sustained attention to response task performance"
-      journal: "Human Factors"
-      citations: 5
-      category: "cognition"
 
     # 2021
     - authors: "McKnight, P.E., Kidd, J.K., Gallington, D.A., Strauss, L.I., Lyu, H., Gadzichowski, K.M., & Pasnak, R."
@@ -421,7 +414,7 @@ publications:
       category: "methodology"
 
     - authors: "Kashdan, T.B., Blalock, D.V., Young, K.C., Machell, K.A., Monfort, S.S., McKnight, P.E., & Ferssizidis, P."
-      year: 2017
+      year: 2018
       title: "Personality Strengths in Romantic relationships"
       doi: "10.1037/pas0000464"
       journal: "Psychological Assessment"
@@ -429,7 +422,7 @@ publications:
       category: "relationships"
 
     - authors: "Kashdan, T.B., Goodman, F.R., Stiksma, M., Milius, C.R., & McKnight, P.E."
-      year: 2017
+      year: 2018
       title: "Sexuality Leads to Boosts in Mood and Meaning in Life"
       doi: "10.1037/emo0000324"
       journal: "Emotion"
@@ -496,7 +489,7 @@ publications:
       category: "emotion"
 
     - authors: "McKnight, P.E., Monfort, S.S., Kashdan, T.B., Blalock, D.V., & Calton, J.M."
-      year: 2015
+      year: 2016
       title: "Anxiety Symptoms and Functional Impairment: A Systematic Review of the Correlation between the Two Measures"
       doi: "10.1016/j.cpr.2015.10.005"
       journal: "Clinical Psychology Review"
@@ -527,7 +520,7 @@ publications:
       category: "methodology"
 
     - authors: "Graybeal, J.J., Bozzelli, P.L., Graybeal, L.L., Groeber, C.M., McKnight, P.E., Cox, D.N., & Flinn, J.M."
-      year: 2015
+      year: 2014
       title: "Human ApoE ε4 Alters Circadian Rhythm Activity, IL-1β, and GFAP in CRND8 Mice"
       doi: "10.3233/jad-132009"
       journal: "Journal of Alzheimer's Disease"
@@ -705,7 +698,7 @@ publications:
       category: "methodology"
 
     - authors: "Voelkle, M.C. & McKnight, P.E."
-      year: 2011
+      year: 2012
       title: "One size fits all? A Monte-Carlo simulation on repeated measures (M)ANOVA and latent curve modeling"
       doi: "10.1027/1614-2241/a000044"
       journal: "Methodology"
@@ -1008,7 +1001,7 @@ publications:
 
     # 1995
     - authors: "Erickson, J.R., Stevens, S., McKnight, P.E., & Figueredo, A.J."
-      year: 1995
+      year: 1996
       title: "Willingness for treatment as a predictor of retention and outcomes"
       doi: "10.1300/j069v14n04_08"
       journal: "Journal of Addictive Diseases"

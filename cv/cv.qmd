@@ -146,7 +146,7 @@ for article in articles:
     if article.get('status'):
         cite = cite.rstrip('.') + f" ({article['status']})."
     if article.get('doi'):
-        cite += f" https://doi.org/{article['doi']}"
+        cite += f" [doi:{article['doi']}](https://doi.org/{article['doi']})"
 
     cite_count = f" *[{article['citations']} citations]*" if article.get('citations') else ""
     print(f"- {cite}{cite_count}\n")
