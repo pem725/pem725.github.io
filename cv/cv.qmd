@@ -9,8 +9,7 @@ format:
     toc-depth: 2
     page-layout: article
     smooth-scroll: true
-    embed-resources: true
-    self-contained: true
+    embed-resources: false
   typst:
     toc: false
     margin:
