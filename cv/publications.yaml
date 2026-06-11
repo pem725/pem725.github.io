@@ -17,11 +17,11 @@ contact:
 
 # Metrics (from Google Scholar)
 metrics:
-  total_citations: 17454
-  h_index: 62
-  i10_index: 108
+  total_citations: 16449
+  h_index: 52
+  i10_index: 80
   publications_count: 91
-  last_updated: "2026-04-13"
+  last_updated: "2026-06-11"
 
 # Education
 education:
@@ -103,7 +103,7 @@ publications:
       title: "Missing Data: A Gentle Introduction"
       publisher: "Guilford Press"
       location: "New York"
-      citations: 3200
+      citations: 1502
       category: "methodology"
 
     - authors: "Bootzin, R.R. & McKnight, P.E. (Eds)"
@@ -111,7 +111,7 @@ publications:
       title: "Strengthening Research Methodology: Psychological Measurement and Evaluation"
       publisher: "American Psychological Association"
       location: "Washington"
-      citations: 6
+      citations: 34
       category: "methodology"
 
   articles:
@@ -120,6 +120,7 @@ publications:
       title: "Methodology for the development of a national Dental Practice-Based Research Network survey on dentist’s beliefs and behaviors concerning antibiotic prophylaxis"
       journal: "Oral Surgery, Oral Medicine, Oral Pathology and Oral Radiology"
       doi: "10.1016/j.oooo.2020.03.004"
+      citations: 3
       category: "methodology"  # verify (ORCID import)
 
     - authors: "Schnyer, R.N., McKnight, P., Conboy, L.A., Jacobson, E., Ledegza, A.T., Quilty, M.T., Davis, R.B., & Wayne, P.M."
@@ -127,6 +128,7 @@ publications:
       title: "Can Reliability of the Chinese Medicine Diagnostic Process Be Improved? Results of a Prospective Randomized Controlled Trial"
       journal: "Journal of Alternative and Complementary Medicine"
       doi: "10.1089/acm.2019.0260"
+      citations: 11
       category: "measurement"  # verify (ORCID import)
 
     - authors: "Jacobson, E., Conboy, L., Tsering, D., Shields, M., McKnight, P., Wayne, P.M., & Schnyer, R."
@@ -134,6 +136,7 @@ publications:
       title: "Experimental Studies of Inter-Rater Agreement in Traditional Chinese Medicine: A Systematic Review"
       journal: "Journal of Alternative and Complementary Medicine"
       doi: "10.1089/acm.2019.0197"
+      citations: 33
       category: "measurement"  # verify (ORCID import)
 
     - authors: "Brailo, V., McKnight, P., Kerr, A.R., Lodi, G., & Lockhart, P.B."
@@ -141,6 +144,7 @@ publications:
       title: "World Workshop on Oral Medicine VII: What participants perceive as important"
       journal: "Oral Diseases"
       doi: "10.1111/odi.13091"
+      citations: 1
       category: "health"  # verify (ORCID import)
 
     - authors: "Blalock, D.V., Kashdan, T.B., & McKnight, P.E."
@@ -148,6 +152,7 @@ publications:
       title: "High risk, high reward: Daily perceptions of social challenge and performance in social anxiety disorder"
       journal: "Journal of Anxiety Disorders"
       doi: "10.1016/j.janxdis.2018.01.006"
+      citations: 14
       category: "anxiety"  # verify (ORCID import)
 
     - authors: "Blalock, D.V., McKnight, P.E., Kashdan, T.B., & Franz, S.C."
@@ -155,6 +160,7 @@ publications:
       title: "Predicting treatment course and outcome using a promotion and prevention framework in a community sample of arthritis sufferers"
       journal: "Patient Preference and Adherence"
       doi: "10.2147/ppa.s161144"
+      citations: 2
       category: "health"  # verify (ORCID import)
 
     - authors: "Cowan, A., Sarabia-Estrada, R., Wilkerson, G., Mcknight, P., & Guarnieri, M."
@@ -162,6 +168,7 @@ publications:
       title: "Lack of adverse effects during a target animal safety trial of extended-release buprenorphine in fischer 344 rats"
       journal: "Lab Animal"
       doi: "10.1038/laban.745"
+      citations: 13
       category: "health"  # verify (ORCID import)
 
     - authors: "Crane, N.B., & McKnight, P."
@@ -175,6 +182,7 @@ publications:
       year: 2009
       title: "Origins of purpose in life: Refining our understanding of a life well lived"
       journal: "Psihologijske Teme"
+      citations: 351
       category: "purpose"  # verify (ORCID import)
     # 2025
     - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., & Gross, M."
@@ -185,6 +193,7 @@ publications:
       issue: "1"
       pages: "40272"
       doi: "10.1038/s41598-025-24021-8"
+      citations: 2
       category: "curiosity"
 
     - authors: "McKnight, P.E., Kashdan, T.B., MacKay, A., Kelso, K., & Gross, M."
@@ -192,6 +201,7 @@ publications:
       title: "Purpose and happiness: A comparison"
       journal: "Journal of Positive Psychology"
       doi: "10.1080/17439760.2025.2515942"
+      citations: 1
       category: "purpose"
 
     - authors: "Kashdan, T.B., McKnight, P.E., Kelso, K., Craig, L., Guenoun, B., & Naughton, C."
@@ -199,6 +209,7 @@ publications:
       title: "Multiple dimensions of workplace curiosity: Evidence of generalizability in nine countries"
       journal: "Personality and Individual Differences"
       doi: "10.1016/j.paid.2024.113011"
+      citations: 5
       category: "curiosity"
 
     - authors: "Blanco-Donoso, L.M., Torio, L., Hernández-Hurtado, M., Lecuona, O., Carmona-Cobo, I., Kashdan, T.B., McKnight, P.E., & Garrosa, E."
@@ -208,6 +219,7 @@ publications:
       volume: "258"
       pages: "105140"
       doi: "10.1016/j.actpsy.2025.105140"
+      citations: 0
       category: "curiosity"
 
     # 2024
@@ -216,7 +228,7 @@ publications:
       title: "Swimming with a head-mounted display: dual-task costs"
       journal: "Ergonomics"
       pages: "1-10"
-      citations: 0
+      citations: 1
       category: "cognition"
 
     - authors: "Kashdan, T.B., Kaufman, J.C., & McKnight, P.E."
@@ -225,7 +237,7 @@ publications:
       journal: "Behavioral and Brain Sciences"
       volume: "47"
       pages: "e105"
-      citations: 0
+      citations: 1
       category: "curiosity"
 
     # 2023
@@ -233,7 +245,7 @@ publications:
       year: 2023
       title: "Purpose in life: A resolution on the definition, conceptual model, and optimal measurement"
       journal: "American Psychologist"
-      citations: 50
+      citations: 75
       category: "purpose"
 
     - authors: "Dang, J.A., Shaw, T.H., McKnight, P.E., & Helton, W.S."
@@ -243,14 +255,14 @@ publications:
       volume: "65"
       issue: "8"
       pages: "1793-1803"
-      citations: 5
+      citations: 10
       category: "cognition"
 
     - authors: "Harwood, A.E., Satterfield, K., Helton, W.S., McKnight, P.E., & Shaw, T.H."
       year: 2023
       title: "The Role of State and Trait Self-Control on the Sustained Attention to Response Task"
       journal: "Human Factors"
-      citations: 2
+      citations: 6
       category: "cognition"
 
     # 2022
@@ -258,7 +270,7 @@ publications:
       year: 2022
       title: "Factors that affect dentists' use of antibiotic prophylaxis"
       journal: "Journal of the American Dental Association"
-      citations: 10
+      citations: 14
       category: "health"
 
     - authors: "Kashdan, T.B., McKnight, P.E., & Goodman, F.R."
@@ -268,7 +280,7 @@ publications:
       volume: "17"
       issue: "2"
       pages: "210-218"
-      citations: 45
+      citations: 32
       category: "purpose"
 
     # 2021
@@ -279,7 +291,7 @@ publications:
       volume: "12"
       issue: "03"
       pages: "557"
-      citations: 5
+      citations: 7
       category: "education"
 
     # 2020
@@ -290,7 +302,7 @@ publications:
       journal: "Personality and Individual Differences"
       volume: "157"
       pages: "109836"
-      citations: 280
+      citations: 306
       category: "curiosity"
 
     - authors: "Kashdan, T.B., Goodman, F.R., Disabato, D.J., McKnight, P.E., Kelso, K., & Naughton, C."
@@ -300,7 +312,7 @@ publications:
       journal: "Personality and Individual Differences"
       volume: "155"
       pages: "109717"
-      citations: 195
+      citations: 168
       category: "curiosity"
 
     - authors: "Kashdan, T.B., Disabato, D.J., Goodman, F.R., Doorley, J.D., & McKnight, P.E."
@@ -311,7 +323,7 @@ publications:
       volume: "32"
       issue: "9"
       pages: "829"
-      citations: 120
+      citations: 388
       category: "flexibility"
 
     - authors: "Kashdan, T.B., Disabato, D.J., McKnight, P.E., Kelso, K.C., Lauber, M., & Goodman, F.R."
@@ -321,14 +333,14 @@ publications:
       journal: "International Journal of Wellbeing"
       volume: "10"
       issue: "4"
-      citations: 15
+      citations: 3
       category: "wellbeing"
 
     - authors: "Gonçalves, S.F., Chaplin, T.M., López Jr, R., et al. & McKnight, P.E."
       year: 2020
       title: "High-Frequency Heart Rate Variability and Emotion-Driven Impulse Control Difficulties During Adolescence"
       journal: "Journal of Early Adolescence"
-      citations: 25
+      citations: 8
       category: "emotion"
 
     - authors: "Lockhart, P.B., Thornhill, M.H., Zhao, J., et al. & McKnight, P.E."
@@ -339,7 +351,7 @@ publications:
       volume: "151"
       issue: "10"
       pages: "770-781"
-      citations: 35
+      citations: 24
       category: "health"
 
     # 2019
@@ -351,7 +363,7 @@ publications:
       volume: "43"
       issue: "3"
       pages: "505-516"
-      citations: 25
+      citations: 62
       category: "relationships"
 
     - authors: "Fontana, M., Eckert, G.J., Keels, M.A., et al. & McKnight, P."
@@ -361,7 +373,7 @@ publications:
       volume: "98"
       issue: "1"
       pages: "68-76"
-      citations: 45
+      citations: 24
       category: "health"
 
     - authors: "Curby, T., McKnight, P., Alexander, L., & Erchov, S."
@@ -369,7 +381,7 @@ publications:
       title: "Sources of variance in end-of-course student evaluations"
       doi: "10.1080/02602938.2019.1607249"
       journal: "Assessment & Evaluation in Higher Education"
-      citations: 15
+      citations: 23
       category: "education"
 
     # 2018
@@ -380,7 +392,7 @@ publications:
       journal: "Journal of Research in Personality"
       volume: "73"
       pages: "130-149"
-      citations: 520
+      citations: 713
       category: "curiosity"
 
     - authors: "Yarbro, J.L., & McKnight, P.E."
@@ -391,7 +403,7 @@ publications:
       volume: "6"
       issue: "2"
       pages: "179"
-      citations: 8
+      citations: 1
       category: "methodology"
 
     - authors: "Bock, A.M., Cartwright, K.B., McKnight, P.E., et al. & Pasnak, R."
@@ -401,7 +413,7 @@ publications:
       journal: "Frontiers in Psychology"
       volume: "9"
       pages: "1802"
-      citations: 45
+      citations: 52
       category: "education"
 
     # 2017
@@ -410,7 +422,7 @@ publications:
       title: "When and How to use Multiple Informants to Improve Clinical Assessments"
       doi: "10.1007/s10862-017-9607-9"
       journal: "Journal of Psychopathology and Behavioral Assessment"
-      citations: 35
+      citations: 61
       category: "methodology"
 
     - authors: "Kashdan, T.B., Blalock, D.V., Young, K.C., Machell, K.A., Monfort, S.S., McKnight, P.E., & Ferssizidis, P."
@@ -418,7 +430,7 @@ publications:
       title: "Personality Strengths in Romantic relationships"
       doi: "10.1037/pas0000464"
       journal: "Psychological Assessment"
-      citations: 65
+      citations: 114
       category: "relationships"
 
     - authors: "Kashdan, T.B., Goodman, F.R., Stiksma, M., Milius, C.R., & McKnight, P.E."
@@ -426,7 +438,7 @@ publications:
       title: "Sexuality Leads to Boosts in Mood and Meaning in Life"
       doi: "10.1037/emo0000324"
       journal: "Emotion"
-      citations: 45
+      citations: 109
       category: "wellbeing"
 
     - authors: "Monfort, S.S., Graybeal, J.J., Harwood, A.E., McKnight, P.E., & Shaw, T.H."
@@ -434,7 +446,7 @@ publications:
       title: "A single-item assessment for remaining mental resources: development and validation of the Gas Tank Questionnaire"
       doi: "10.1080/1463922x.2017.1397228"
       journal: "Theoretical Issues in Ergonomics Science"
-      citations: 25
+      citations: 35
       category: "measurement"
 
     - authors: "Bono, G., Froh, J.J., Disabato, D., Blalock, D., McKnight, P., & Bausert, S."
@@ -442,7 +454,7 @@ publications:
       title: "Gratitude's role in adolescent antisocial and prosocial behavior: A 4-year longitudinal investigation"
       doi: "10.1080/17439760.2017.1402078"
       journal: "Journal of Positive Psychology"
-      citations: 55
+      citations: 141
       category: "wellbeing"
 
     # 2016
@@ -451,7 +463,7 @@ publications:
       title: "Almost Human: Anthropomorphism Increases Trust Resilience in Cognitive Agents"
       doi: "10.1037/xap0000092"
       journal: "Journal of Experimental Psychology: Applied"
-      citations: 280
+      citations: 955
       category: "cognition"
 
     - authors: "Foroughi, C.K., Monfort, S.S., Paczynski, M., McKnight, P.E., & Greenwood, P.M."
@@ -462,7 +474,7 @@ publications:
       volume: "113"
       issue: "27"
       pages: "7470-7474"
-      citations: 350
+      citations: 325
       category: "cognition"
 
     - authors: "Saad, M.A., McKnight, P., Quartuccio, J., Nicholas, D., Jaladi, R., & Corriveau, P."
@@ -473,7 +485,7 @@ publications:
       volume: "25"
       issue: "4"
       pages: "043009"
-      citations: 15
+      citations: 5
       category: "methodology"
 
     # 2015
@@ -485,7 +497,7 @@ publications:
       volume: "24"
       issue: "1"
       pages: "10-16"
-      citations: 450
+      citations: 797
       category: "emotion"
 
     - authors: "McKnight, P.E., Monfort, S.S., Kashdan, T.B., Blalock, D.V., & Calton, J.M."
@@ -495,7 +507,7 @@ publications:
       journal: "Clinical Psychology Review"
       volume: "45"
       pages: "115-130"
-      citations: 180
+      citations: 203
       category: "anxiety"
 
     - authors: "Shaw, T.H., Nguyen, C., Satterfield, K., Ramirez, R., & McKnight, P.E."
@@ -505,7 +517,7 @@ publications:
       journal: "Experimental Brain Research"
       volume: "234"
       issue: "2"
-      citations: 35
+      citations: 21
       category: "cognition"
 
     - authors: "Sattler, D.N., McKnight, P.E., Naney, L., & Mathis, R."
@@ -516,7 +528,7 @@ publications:
       volume: "10"
       issue: "6"
       pages: "e0130450"
-      citations: 85
+      citations: 97
       category: "methodology"
 
     - authors: "Graybeal, J.J., Bozzelli, P.L., Graybeal, L.L., Groeber, C.M., McKnight, P.E., Cox, D.N., & Flinn, J.M."
@@ -527,7 +539,7 @@ publications:
       volume: "43"
       issue: "3"
       pages: "823-834"
-      citations: 45
+      citations: 48
       category: "health"
 
     - authors: "Young, K.C., Kashdan, T.B., McKnight, P.E., Blalock, D.V., Yuen, M., & Richberg, J.B."
@@ -537,7 +549,7 @@ publications:
       journal: "Personality and Individual Differences"
       volume: "75"
       pages: "224-228"
-      citations: 25
+      citations: 21
       category: "wellbeing"
 
     # 2014
@@ -549,7 +561,7 @@ publications:
       volume: "44"
       issue: "3"
       pages: "317-330"
-      citations: 95
+      citations: 92
       category: "emotion"
 
     - authors: "Kashdan, T.B., Adams, L.M., Farmer, A.S., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
@@ -560,7 +572,7 @@ publications:
       volume: "43"
       issue: "7"
       pages: "1417-1429"
-      citations: 55
+      citations: 45
       category: "anxiety"
 
     - authors: "Kashdan, T.B., Yarbro, J., McKnight, P.E., & Nezlek, J.B."
@@ -570,7 +582,7 @@ publications:
       journal: "Personality and Individual Differences"
       volume: "58"
       pages: "15-19"
-      citations: 85
+      citations: 80
       category: "wellbeing"
 
     - authors: "Yarbro, J., Arfstrom, K.M., McKnight, K., & McKnight, P."
@@ -588,7 +600,7 @@ publications:
       volume: "25"
       issue: "1"
       pages: "134-151"
-      citations: 145
+      citations: 125
       category: "education"
 
     # 2013
@@ -600,7 +612,7 @@ publications:
       volume: "13"
       issue: "6"
       pages: "1150"
-      citations: 380
+      citations: 178
       category: "purpose"
 
     - authors: "Kashdan, T.B., Farmer, A.S., Adams, L.M., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
@@ -611,7 +623,7 @@ publications:
       volume: "122"
       issue: "3"
       pages: "645"
-      citations: 280
+      citations: 270
       category: "anxiety"
 
     - authors: "Kashdan, T.B., Ferssizidis, P., Farmer, A.S., Adams, L.M., & McKnight, P.E."
@@ -622,7 +634,7 @@ publications:
       volume: "51"
       issue: "10"
       pages: "656-668"
-      citations: 120
+      citations: 103
       category: "relationships"
 
     # 2012
@@ -634,7 +646,7 @@ publications:
       volume: "26"
       issue: "7"
       pages: "762-768"
-      citations: 95
+      citations: 34
       category: "anxiety"
 
     # 2011
@@ -645,7 +657,7 @@ publications:
       journal: "Perception"
       volume: "40"
       pages: "695-704"
-      citations: 145
+      citations: 99
       category: "cognition"
 
     - authors: "Renshaw, K.D., McKnight, P., Caska, C.M., & Blais, R.K."
@@ -655,7 +667,7 @@ publications:
       journal: "Journal of Social and Personal Relationships"
       volume: "28"
       pages: "435-447"
-      citations: 185
+      citations: 146
       category: "relationships"
 
     - authors: "Kashdan, T.B., Adams, L., Savostyanova, A., Ferssizidis, P., McKnight, P.E., & Nezlek, J.B."
@@ -665,7 +677,7 @@ publications:
       journal: "Behaviour Research and Therapy"
       volume: "49"
       pages: "352-360"
-      citations: 185
+      citations: 130
       category: "anxiety"
 
     - authors: "Kashdan, T.B., & McKnight, P.E."
@@ -675,7 +687,7 @@ publications:
       journal: "Journal of Personality"
       volume: "79"
       pages: "1177-1190"
-      citations: 65
+      citations: 18
       category: "methodology"
 
     - authors: "Kashdan, T.B., McKnight, P.E., Fincham, F.D., & Rose, P."
@@ -685,7 +697,7 @@ publications:
       journal: "Journal of Personality"
       volume: "79"
       pages: "1369-1401"
-      citations: 195
+      citations: 157
       category: "curiosity"
 
     - authors: "McKnight, P.E., Johns, M.J., McGovern, P.J., & Najab, J."
@@ -694,7 +706,7 @@ publications:
       journal: "Journal of Methods and Measurement in the Social Sciences"
       volume: "1"
       pages: "1-14"
-      citations: 15
+      citations: 2
       category: "methodology"
 
     - authors: "Voelkle, M.C. & McKnight, P.E."
@@ -704,7 +716,7 @@ publications:
       journal: "Methodology"
       volume: "8"
       pages: "23-38"
-      citations: 35
+      citations: 1
       category: "methodology"
 
     # 2010
@@ -716,7 +728,7 @@ publications:
       volume: "19"
       issue: "1"
       pages: "47-50"
-      citations: 285
+      citations: 179
       category: "anxiety"
 
     - authors: "Farr, J., Going, S., McKnight, P.E., Kasle, S., Cussler, E., & Cornette, M."
@@ -726,7 +738,7 @@ publications:
       journal: "Physical Therapy"
       volume: "90"
       pages: "356-366"
-      citations: 245
+      citations: 153
       category: "health"
 
     - authors: "Kasle, S., Wilhelm, M.S., McKnight, P.E., Sheikh, S.Z., & Zautra, A.J."
@@ -748,7 +760,7 @@ publications:
       volume: "62"
       issue: "1"
       pages: "45-53"
-      citations: 265
+      citations: 147
       category: "health"
 
     - authors: "McKnight, P.E., Afram, A., Kashdan, T.B., Kasle, S., & Zautra, A."
@@ -758,7 +770,7 @@ publications:
       journal: "Journal of Behavioral Medicine"
       volume: "33"
       pages: "239-249"
-      citations: 115
+      citations: 61
       category: "health"
 
     # 2009
@@ -770,7 +782,7 @@ publications:
       volume: "23"
       issue: "4"
       pages: "529-534"
-      citations: 145
+      citations: 66
       category: "anxiety"
 
     - authors: "Kashdan, T.B., McKnight, P.E., Richey, J.A., & Hofmann, S.G."
@@ -781,7 +793,7 @@ publications:
       volume: "47"
       issue: "7"
       pages: "559-568"
-      citations: 245
+      citations: 157
       category: "anxiety"
 
     - authors: "McKnight, P.E. & Kashdan, T.B."
@@ -792,7 +804,7 @@ publications:
       volume: "29"
       issue: "3"
       pages: "243-259"
-      citations: 685
+      citations: 530
       category: "methodology"
 
     - authors: "McKnight, P.E. & Kashdan, T.B."
@@ -803,7 +815,7 @@ publications:
       volume: "13"
       issue: "3"
       pages: "242-251"
-      citations: 1250
+      citations: 1608
       category: "purpose"
 
     # 2007
@@ -815,7 +827,7 @@ publications:
       volume: "84"
       issue: "8"
       pages: "721-728"
-      citations: 25
+      citations: 6
       category: "measurement"
 
     # 2006
@@ -827,7 +839,7 @@ publications:
       volume: "72"
       issue: "2"
       pages: "198-207"
-      citations: 685
+      citations: 494
       category: "neuroscience"
 
     - authors: "Caspi, O., McKnight, P., Kruse, L., Cunningham, V., Figueredo, A.J., & Sechrest, L."
@@ -838,7 +850,7 @@ publications:
       volume: "28"
       issue: "4"
       pages: "318-325"
-      citations: 165
+      citations: 87
       category: "education"
 
     # 2005
@@ -860,7 +872,7 @@ publications:
       journal: "Annual Review of Clinical Psychology"
       volume: "1"
       pages: "557-576"
-      citations: 85
+      citations: 38
       category: "methodology"
 
     - authors: "Bayles, K.A., Kim, E.S., Azuma, T., et al. & McKnight, P."
@@ -870,7 +882,7 @@ publications:
       volume: "13"
       issue: "4"
       pages: "xiii-xxv"
-      citations: 85
+      citations: 33
       category: "health"
 
     - authors: "Schnyer, R., Conboy, L., Jacobson, E., McKnight, P., et al."
@@ -881,7 +893,7 @@ publications:
       volume: "11"
       issue: "6"
       pages: "1005-1013"
-      citations: 165
+      citations: 67
       category: "methodology"
 
     # 2004
@@ -903,7 +915,7 @@ publications:
       volume: "5"
       issue: "1"
       pages: "15-30"
-      citations: 165
+      citations: 82
       category: "measurement"
 
     - authors: "Bayles, K.A., Tomoeda, C.K., McKnight, P.E., Helm-Estabrooks, N., & Hawley, J.N."
@@ -914,7 +926,7 @@ publications:
       volume: "25"
       issue: "4"
       pages: "335-347"
-      citations: 95
+      citations: 57
       category: "health"
 
     # 2003
@@ -926,7 +938,7 @@ publications:
       volume: "16"
       issue: "3"
       pages: "431-460"
-      citations: 85
+      citations: 27
       category: "methodology"
 
     - authors: "Reed, R.L., Hepburn, K., Adelson, R., Center, B., & McKnight, P."
@@ -937,7 +949,7 @@ publications:
       volume: "49"
       issue: "4"
       pages: "255-259"
-      citations: 285
+      citations: 144
       category: "health"
 
     - authors: "Doctor, J.N., Wolfson, A.M., McKnight, P.E. & Burns, S.P."
@@ -948,7 +960,7 @@ publications:
       volume: "84"
       issue: "1"
       pages: "46-50"
-      citations: 45
+      citations: 9
       category: "measurement"
 
     # 2002
@@ -984,7 +996,7 @@ publications:
       volume: "95"
       issue: "Suppl 3"
       pages: "361-380"
-      citations: 385
+      citations: 152
       category: "methodology"
 
     # 1996
@@ -996,7 +1008,7 @@ publications:
       volume: "51"
       issue: "10"
       pages: "1065-1071"
-      citations: 485
+      citations: 219
       category: "measurement"
 
     # 1995
@@ -1008,7 +1020,7 @@ publications:
       volume: "14"
       issue: "4"
       pages: "135-150"
-      citations: 165
+      citations: 78
       category: "intervention"
 
   book_chapters:
@@ -1032,7 +1044,7 @@ publications:
       book: "When Research Goes Off the Rails"
       editors: "Streiner, D.L. & Sidani, S."
       publisher: "Guilford Press"
-
+      citations: 1
     - authors: "McKnight, P.E., McKnight, K.M., & Figueredo, A.J."
       year: 2005
       title: "The nature of a scientific legacy: The case study of Lee Sechrest"
