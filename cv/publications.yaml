@@ -226,6 +226,7 @@ publications:
     - authors: "Jackson, K.M., Thayer, S.C., Simpson, K.L., Shaw, T.H., McKnight, P.E., & Helton, W.S."
       year: 2024
       title: "Swimming with a head-mounted display: dual-task costs"
+      doi: "10.1080/00140139.2024.2339436"
       journal: "Ergonomics"
       pages: "1-10"
       citations: 1
@@ -234,6 +235,7 @@ publications:
     - authors: "Kashdan, T.B., Kaufman, J.C., & McKnight, P.E."
       year: 2024
       title: "The costs of curiosity and creativity: Minimizing the downsides while maximizing the upsides"
+      doi: "10.1017/s0140525x23003539"
       journal: "Behavioral and Brain Sciences"
       volume: "47"
       pages: "e105"
@@ -244,6 +246,7 @@ publications:
     - authors: "Kashdan, T.B., Goodman, F.R., McKnight, P.E., Brown, B., & Rum, R."
       year: 2023
       title: "Purpose in life: A resolution on the definition, conceptual model, and optimal measurement"
+      doi: "10.1037/amp0001223"
       journal: "American Psychologist"
       citations: 75
       category: "purpose"
@@ -251,6 +254,7 @@ publications:
     - authors: "Dang, J.A., Shaw, T.H., McKnight, P.E., & Helton, W.S."
       year: 2023
       title: "A closer look at warning cues on the sustained attention to response task performance"
+      doi: "10.1177/00187208211060708"
       journal: "Human Factors"
       volume: "65"
       issue: "8"
@@ -261,6 +265,7 @@ publications:
     - authors: "Harwood, A.E., Satterfield, K., Helton, W.S., McKnight, P.E., & Shaw, T.H."
       year: 2023
       title: "The Role of State and Trait Self-Control on the Sustained Attention to Response Task"
+      doi: "10.1177/00187208231209151"
       journal: "Human Factors"
       citations: 6
       category: "cognition"
@@ -269,6 +274,7 @@ publications:
     - authors: "Lockhart, P.B., Thornhill, M.H., Zhao, J., et al. & McKnight, P.E."
       year: 2022
       title: "Factors that affect dentists' use of antibiotic prophylaxis"
+      doi: "10.1016/j.adaj.2021.11.010"
       journal: "Journal of the American Dental Association"
       citations: 14
       category: "health"
@@ -276,6 +282,7 @@ publications:
     - authors: "Kashdan, T.B., McKnight, P.E., & Goodman, F.R."
       year: 2022
       title: "Evolving positive psychology: A blueprint for advancing the study of purpose in life, psychological strengths, and resilience"
+      doi: "10.1080/17439760.2021.2016906"
       journal: "Journal of Positive Psychology"
       volume: "17"
       issue: "2"
@@ -287,6 +294,7 @@ publications:
     - authors: "McKnight, P.E., Kidd, J.K., Gallington, D.A., Strauss, L.I., Lyu, H., Gadzichowski, K.M., & Pasnak, R."
       year: 2021
       title: "The Efficacy of Teaching Advanced Forms of Patterning to Kindergartners"
+      doi: "10.4236/ce.2021.123038"
       journal: "Creative Education"
       volume: "12"
       issue: "03"
@@ -339,6 +347,7 @@ publications:
     - authors: "Gonçalves, S.F., Chaplin, T.M., López Jr, R., et al. & McKnight, P.E."
       year: 2020
       title: "High-Frequency Heart Rate Variability and Emotion-Driven Impulse Control Difficulties During Adolescence"
+      doi: "10.1177/0272431620983453"
       journal: "Journal of Early Adolescence"
       citations: 8
       category: "emotion"
@@ -369,6 +378,7 @@ publications:
     - authors: "Fontana, M., Eckert, G.J., Keels, M.A., et al. & McKnight, P."
       year: 2019
       title: "Predicting Caries in Medical Settings: Risk Factors in Diverse Infant Groups"
+      doi: "10.1177/0022034518799080"
       journal: "Journal of Dental Research"
       volume: "98"
       issue: "1"
@@ -703,6 +713,7 @@ publications:
     - authors: "McKnight, P.E., Johns, M.J., McGovern, P.J., & Najab, J."
       year: 2011
       title: "The pitfalls of a tool-based science and the promise of a problem-focused science"
+      doi: "10.2458/jmm.v1i2.99"
       journal: "Journal of Methods and Measurement in the Social Sciences"
       volume: "1"
       pages: "1-14"
