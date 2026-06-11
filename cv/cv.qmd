@@ -18,6 +18,7 @@ format:
       y: 0.75in
     mainfont: "Linux Libertine"
     fontsize: 11pt
+format-links: false
 execute:
   echo: false
   warning: false
