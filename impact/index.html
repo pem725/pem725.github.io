@@ -77,6 +77,23 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
 .orcid-live .ol-msg{font-size:.8rem;color:var(--muted);font-style:italic}
 .pub-doi-link{font-family:'Roboto Mono',monospace;font-size:.64rem;color:var(--rust);border:none;letter-spacing:.04em;white-space:nowrap}
 .pub-doi-link:hover{text-decoration:underline}
+
+/* Research areas + most-cited + trends additions */
+.area-bars{margin:.6rem 0 0}
+.area-row{display:grid;grid-template-columns:7rem 1fr auto;align-items:center;gap:.6rem;padding:.3rem 0;border-bottom:1px solid rgba(200,185,154,.35)}
+.area-row:last-child{border-bottom:none}
+.area-name{font-family:'Playfair Display',serif;font-weight:700;font-size:.84rem;text-transform:capitalize;color:var(--ink)}
+.area-bar-wrap{background:rgba(200,185,154,.28);height:.72rem;border:1px solid rgba(200,185,154,.4)}
+.area-bar{display:block;height:100%;background:var(--steel)}
+.area-meta{font-family:'Roboto Mono',monospace;font-size:.62rem;color:var(--muted);white-space:nowrap;letter-spacing:.02em}
+@media(max-width:560px){.area-row{grid-template-columns:5.5rem 1fr}.area-meta{grid-column:1/-1;text-align:right;margin-top:-.15rem}}
+.cited-list{list-style:none;margin:.5rem 0 0;padding:0}
+.cited-item{display:grid;grid-template-columns:1.5rem 3.1rem 1fr;align-items:baseline;gap:.55rem;padding:.42rem 0;border-bottom:1px solid rgba(200,185,154,.4)}
+.cited-item:last-child{border-bottom:none}
+.cited-rank{font-family:'Playfair Display',serif;font-weight:900;font-size:1.05rem;color:var(--div);text-align:right}
+.cited-cites{font-family:'Roboto Mono',monospace;font-weight:600;font-size:.88rem;color:var(--rust);text-align:right}
+.cited-title{font-size:.85rem;font-weight:700;line-height:1.36}
+.cited-year{font-family:'Roboto Mono',monospace;font-size:.64rem;color:var(--muted);margin-left:.35rem;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -111,7 +128,26 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
     <div id="orcid-live-list"><div class="ol-msg">Loading latest publications from ORCID&hellip;</div></div>
   </div>
 
-  <h2 class="sh">Publications by Period</h2>
+  <h2 class="sh">Research Contributions by Area</h2>
+  <div class="chart-label">Curated articles &amp; books by topic &mdash; bar length &prop; total citations</div>
+  <div class="area-bars">
+    <div class="area-row"><span class="area-name">methodology</span><span class="area-bar-wrap"><span class="area-bar" style="width:100%"></span></span><span class="area-meta">16 papers &middot; 2,538 cites</span></div>
+    <div class="area-row"><span class="area-name">purpose</span><span class="area-bar-wrap"><span class="area-bar" style="width:88%"></span></span><span class="area-meta">6 papers &middot; 2,245 cites</span></div>
+    <div class="area-row"><span class="area-name">intervention</span><span class="area-bar-wrap"><span class="area-bar" style="width:60%"></span></span><span class="area-meta">2 papers &middot; 1,528 cites</span></div>
+    <div class="area-row"><span class="area-name">cognition</span><span class="area-bar-wrap"><span class="area-bar" style="width:56%"></span></span><span class="area-meta">7 papers &middot; 1,417 cites</span></div>
+    <div class="area-row"><span class="area-name">curiosity</span><span class="area-bar-wrap"><span class="area-bar" style="width:53%"></span></span><span class="area-meta">8 papers &middot; 1,352 cites</span></div>
+    <div class="area-row"><span class="area-name">anxiety</span><span class="area-bar-wrap"><span class="area-bar" style="width:43%"></span></span><span class="area-meta">9 papers &middot; 1,098 cites</span></div>
+    <div class="area-row"><span class="area-name">emotion</span><span class="area-bar-wrap"><span class="area-bar" style="width:35%"></span></span><span class="area-meta">3 papers &middot; 897 cites</span></div>
+    <div class="area-row"><span class="area-name">health</span><span class="area-bar-wrap"><span class="area-bar" style="width:35%"></span></span><span class="area-meta">15 papers &middot; 891 cites</span></div>
+    <div class="area-row"><span class="area-name">education</span><span class="area-bar-wrap"><span class="area-bar" style="width:29%"></span></span><span class="area-meta">6 papers &middot; 744 cites</span></div>
+    <div class="area-row"><span class="area-name">measurement</span><span class="area-bar-wrap"><span class="area-bar" style="width:25%"></span></span><span class="area-meta">9 papers &middot; 625 cites</span></div>
+    <div class="area-row"><span class="area-name">neuroscience</span><span class="area-bar-wrap"><span class="area-bar" style="width:19%"></span></span><span class="area-meta">1 paper &middot; 494 cites</span></div>
+    <div class="area-row"><span class="area-name">relationships</span><span class="area-bar-wrap"><span class="area-bar" style="width:17%"></span></span><span class="area-meta">4 papers &middot; 425 cites</span></div>
+    <div class="area-row"><span class="area-name">flexibility</span><span class="area-bar-wrap"><span class="area-bar" style="width:15%"></span></span><span class="area-meta">1 paper &middot; 388 cites</span></div>
+    <div class="area-row"><span class="area-name">wellbeing</span><span class="area-bar-wrap"><span class="area-bar" style="width:14%"></span></span><span class="area-meta">5 papers &middot; 354 cites</span></div>
+  </div>
+
+  <h2 class="sh">Publication &amp; Citation Trends</h2>
   <div class="chart-wrap">
     <div class="chart-label">Publication count by 5-year period</div>
     <svg class="chart" viewBox="0 0 472 220" xmlns="http://www.w3.org/2000/svg">
@@ -139,6 +175,62 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
       <text x="420.0" y="207" text-anchor="middle" font-family="Roboto Mono" font-size="8" fill="#6b5e4a">2025-2029</text>
     </svg>
   </div>
+
+  <div class="chart-wrap">
+    <div class="chart-label">Citations received per year &mdash; Google Scholar (2026 in progress, omitted)</div>
+    <svg class="chart" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="195" x2="687" y2="195" stroke="#c8b99a" stroke-width="1"/>
+      <rect x="45.0" y="190.0" width="20.6" height="5.0" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="72.8" y="187.8" width="20.6" height="7.2" fill="#2c4a6e" opacity="0.85"/>
+      <text x="83.1" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2004</text>
+      <rect x="100.7" y="184.6" width="20.6" height="10.4" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="128.5" y="184.1" width="20.6" height="10.9" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="156.3" y="181.2" width="20.6" height="13.8" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="184.1" y="178.8" width="20.6" height="16.2" fill="#2c4a6e" opacity="0.85"/>
+      <text x="194.4" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2008</text>
+      <rect x="212.0" y="174.4" width="20.6" height="20.6" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="239.8" y="168.7" width="20.6" height="26.3" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="267.6" y="165.9" width="20.6" height="29.1" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="295.4" y="159.0" width="20.6" height="36.0" fill="#2c4a6e" opacity="0.85"/>
+      <text x="305.7" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2012</text>
+      <rect x="323.3" y="148.8" width="20.6" height="46.2" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="351.1" y="136.7" width="20.6" height="58.3" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="378.9" y="124.1" width="20.6" height="70.9" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="406.7" y="109.4" width="20.6" height="85.6" fill="#2c4a6e" opacity="0.85"/>
+      <text x="417.0" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2016</text>
+      <rect x="434.6" y="104.5" width="20.6" height="90.5" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="462.4" y="97.5" width="20.6" height="97.5" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="490.2" y="80.3" width="20.6" height="114.7" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="518.0" y="71.7" width="20.6" height="123.3" fill="#2c4a6e" opacity="0.85"/>
+      <text x="528.3" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2020</text>
+      <rect x="545.9" y="55.9" width="20.6" height="139.1" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="573.7" y="38.4" width="20.6" height="156.6" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="601.5" y="44.2" width="20.6" height="150.8" fill="#2c4a6e" opacity="0.85"/>
+      <rect x="629.3" y="31.6" width="20.6" height="163.4" fill="#2c4a6e" opacity="0.85"/>
+      <text x="639.6" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2024</text>
+      <rect x="657.2" y="30.0" width="20.6" height="165.0" fill="#c9962a" opacity="0.85"/>
+      <text x="667.5" y="208" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#6b5e4a">2025</text>
+      <text x="55.3" y="185.0" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#1a1208" font-weight="700">47</text>
+      <text x="667.5" y="25.0" text-anchor="middle" font-family="Roboto Mono" font-size="9" fill="#1a1208" font-weight="700">1,544</text>
+    </svg>
+  </div>
+
+  <hr>
+
+  <h2 class="sh">10 Most Cited Works</h2>
+  <div class="chart-label">By Google Scholar citations</div>
+  <ol class="cited-list">
+    <li class="cited-item"><span class="cited-rank">1</span><span class="cited-cites">1,981</span><span class="cited-body"><span class="cited-title">The flipped learning model: A white paper based on the literature review titled a review of flipped learning</span><span class="cited-year">2013</span></span></li>
+    <li class="cited-item"><span class="cited-rank">2</span><span class="cited-cites">1,608</span><span class="cited-body"><span class="cited-title">Purpose in life as a system that creates and sustains health and well-being: An integrative, testable theory</span><span class="cited-year">2009</span></span></li>
+    <li class="cited-item"><span class="cited-rank">3</span><span class="cited-cites">1,502</span><span class="cited-body"><span class="cited-title">Missing data: A gentle introduction</span><span class="cited-year">2007</span></span></li>
+    <li class="cited-item"><span class="cited-rank">4</span><span class="cited-cites">955</span><span class="cited-body"><span class="cited-title">Almost human: Anthropomorphism increases trust resilience in cognitive agents.</span><span class="cited-year">2016</span></span></li>
+    <li class="cited-item"><span class="cited-rank">5</span><span class="cited-cites">797</span><span class="cited-body"><span class="cited-title">Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity</span><span class="cited-year">2015</span></span></li>
+    <li class="cited-item"><span class="cited-rank">6</span><span class="cited-cites">778</span><span class="cited-body"><span class="cited-title">Brief intervention for heavy-drinking college students: 4-year follow-up and natural history</span><span class="cited-year">2001</span></span></li>
+    <li class="cited-item"><span class="cited-rank">7</span><span class="cited-cites">713</span><span class="cited-body"><span class="cited-title">The five-dimensional curiosity scale: Capturing the bandwidth of curiosity and identifying four unique subgroups of curious people</span><span class="cited-year">2018</span></span></li>
+    <li class="cited-item"><span class="cited-rank">8</span><span class="cited-cites">530</span><span class="cited-body"><span class="cited-title">The importance of functional impairment to mental health outcomes: a case for reassessing our goals in depression treatment research</span><span class="cited-year">2009</span></span></li>
+    <li class="cited-item"><span class="cited-rank">9</span><span class="cited-cites">494</span><span class="cited-body"><span class="cited-title">A capability model of individual differences in frontal EEG asymmetry</span><span class="cited-year">2006</span></span></li>
+    <li class="cited-item"><span class="cited-rank">10</span><span class="cited-cites">388</span><span class="cited-body"><span class="cited-title">Understanding psychological flexibility: A multimethod exploration of pursuing valued goals despite the presence of distress.</span><span class="cited-year">2020</span></span></li>
+  </ol>
 
   <hr>
 
