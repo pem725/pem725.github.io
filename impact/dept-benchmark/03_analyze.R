@@ -14,8 +14,9 @@ fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default
 m   <- read_csv("metrics_long.csv", show_col_types = FALSE, col_types = cols(.default = col_character())) |>
   mutate(across(c(works_count, cited_by_count, h_index, i10_index, two_yr_mean_citedness), as.numeric))
 
-# Peer group: tenure-line faculty plus me (the reference point).
-peers <- fac |> filter(is_tenure_line == "TRUE" | is_self == "TRUE") |>
+# Peer group: ALL active full-time faculty (professors, instructors, research) —
+# including the research-zeros, so the distribution shows how skewed it really is.
+peers <- fac |> filter(active == "TRUE") |>
   select(faculty_key, full_name, discipline, is_self, rank)
 
 latest <- max(m$snapshot_date)

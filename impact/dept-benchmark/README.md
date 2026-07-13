@@ -74,8 +74,16 @@ One row per (person × source × year × metric). Columns:
 
 ## Status / open items
 
-- [x] Roster seeded from the live directory (26 tenure-line + self). **Still verify my own
-      GMU status** — I did not appear in the tenure-line directory fetch.
+- [x] **Full department roster: 60 active full-time faculty** (49 professorial + 5
+      admin-titled professors [Chair, Assoc Chair, Directors] + 5 instructors + 1 research).
+      Peer set is `active=="TRUE"` (whole department, incl. research-zeros — that's the point).
+      An earlier 26-person "tenure-line" list was a *truncated* directory fetch; rebuilt from
+      the live page's DOM. McKnight confirmed Associate Professor, Human Factors.
+- [x] Concentration is the headline: Gini 0.70, top-6 hold 55%, bottom-30 hold 5.8%.
+      McKnight #6/60 OpenAlex, #8/60 Scholar.
+- [x] Data-quality caveats baked into the page: James C. Thompson OpenAlex unresolved
+      (fragmented + homonym pollution; Scholar stands); Nastassia Savage Scholar profile
+      lists Old Dominion (recent hire).
 - [x] OpenAlex IDs resolved (ORCID-first) and **fragmentation-corrected** (totals summed
       from works via ORCID, not from a single author record).
 - [x] Google Scholar harvested via browser: IDs + totals + h/i10 + citations-by-year for
@@ -96,9 +104,12 @@ All commands run from `impact/dept-benchmark/`. **Never delete old snapshot rows
 year-over-year deltas depend on keeping them. Use a fixed snapshot date so both sources
 line up: `DATE=$(date +%F)`.
 
-1. **Refresh the roster** — reopen https://psychology.gmu.edu/people (filter: Tenure-line).
-   In `faculty.csv`: add new hires (blank IDs), mark departures `active,FALSE` (keep the row
-   and its history), keep every `faculty_key` stable. Never reuse a key for a different person.
+1. **Refresh the roster** — reopen https://psychology.gmu.edu/people. Extract ALL full-time
+   faculty, not just tenure-line. **Pitfall:** filtering by rank-title keyword MISSES faculty
+   whose listed title is administrative (Chair, Associate Chair, Director of Clinical Training,
+   Director CCMH) — include them. Exclude Adjunct, Emeritus, Graduate*, Postdoc, and staff
+   titles. In `faculty.csv`: add new hires (blank IDs), mark departures `active,FALSE` (keep
+   the row + history), keep every `faculty_key` stable. Never reuse a key for a different person.
 
 2. **Resolve IDs for new hires only** — `Rscript 01_resolve_openalex_ids.R`
    Auto-fills high-confidence matches + harvests ORCIDs; check `resolve_review.csv` for the

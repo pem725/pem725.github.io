@@ -26,3 +26,36 @@ layman_s,Layman,Shannon,Shannon Layman,Assistant,tenure_line,CBN,TRUE,FALSE,NA,A
 lee_p,Lee,Philseok,Philseok Lee,Associate,tenure_line,I-O,TRUE,FALSE,NA,A5026904477,aNGET7sAAAAJ,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
 lee_y,Lee,Yi-Ching,Yi-Ching Lee,Associate,tenure_line,Human Factors,TRUE,FALSE,0000-0002-9383-4105,A5040845275,SpiiI5cAAAAJ,NA,NA,TRUE,NA
 liang_y,Liang,Yijue,Yijue Liang,Assistant,tenure_line,I-O,TRUE,FALSE,0000-0003-2055-8805,A5042931603,HRORhnAAAAAJ,NA,NA,TRUE,NA
+bradni_r,Bradni,Raymond,Raymond Abraham Bradni,Instructor,instructor,Unknown,FALSE,FALSE,NA,NA,NA,NA,NA,TRUE,Full-time non-TT instructor
+dufresne_d,Dufresne,Danielle,Danielle Dufresne,Instructor,instructor,Unknown,FALSE,FALSE,NA,NA,NA,NA,NA,TRUE,Full-time non-TT instructor
+furman_s,Furman,Susanne,Susanne M Furman,Instructor,instructor,Human Factors,FALSE,FALSE,NA,NA,NA,NA,NA,TRUE,Full-time non-TT instructor
+matthews_g,Matthews,Gerald,Gerald Matthews,Professor,tenure_line,Human Factors,TRUE,FALSE,NA,A5104071588,9-y-tKAAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+mcdonald_c,McDonald,Craig,Craig McDonald,Associate,tenure_line,Unknown,TRUE,FALSE,0000-0002-2901-9157,A5031686041,akkzr1AAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+mcquaid_g,McQuaid,Goldie,Goldie Ann McQuaid,Research Assistant Professor,research,CBN,FALSE,FALSE,0000-0003-3614-616X,A5046377229,uoGt0cQAAAAJ,NA,NA,TRUE,Full-time research faculty
+melley_a,Melley,Alison,Alison Heinhold Melley,Associate,tenure_line,Unknown,TRUE,FALSE,NA,A5001145646,EfQsitEAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+montiel_s,Montiel,Sara,Sara Montiel,Instructor,instructor,Unknown,FALSE,FALSE,NA,NA,NA,NA,NA,TRUE,Full-time non-TT instructor
+murdoch_e,Murdoch,Erin,Erin Quinlivan Murdoch,Associate,tenure_line,Unknown,TRUE,FALSE,NA,A5031732627,NA,NA,NA,TRUE,Added in full-dept expansion
+peterson_m,Peterson,Matthew,Matthew S. Peterson,Professor,tenure_line,CBN,TRUE,FALSE,0000-0003-2773-5966,A5111958127,1eS_2TAAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+phillips_e,Phillips,Elizabeth,Elizabeth Phillips,Assistant,tenure_line,Human Factors,TRUE,FALSE,NA,A5088774049,NGr6f94AAAAJ,NA,NA,TRUE,Added in full-dept expansion
+renshaw_k,Renshaw,Keith,Keith D Renshaw,Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-8452-3436,A5046249119,HyhRPaAAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+roesler_e,Roesler,Eileen,Eileen Roesler,Assistant,tenure_line,Human Factors,TRUE,FALSE,0000-0002-7243-4882,A5027518779,q3NoF0oAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+rupp_d,Rupp,Deborah,Deborah E. Rupp,Professor,tenure_line,I-O,TRUE,FALSE,0000-0001-5992-3879,A5029019936,ioOrO_MAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+sanchez_a,Sanchez,Amanda,Amanda L Sanchez,Assistant,tenure_line,Clinical,TRUE,FALSE,0000-0003-3269-4150,A5016552243,cj01akEAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+savage_n,Savage,Nastassia,Nastassia Savage,Assistant,tenure_line,Unknown,TRUE,FALSE,0000-0003-2567-7053,A5018374152,4eE5logAAAAJ,NA,NA,TRUE,Scholar profile lists Old Dominion (recent GMU hire); tentative match
+sheridan_k,Sheridan,Kimberly,Kimberly M Sheridan,Professor,tenure_line,Applied Developmental,TRUE,FALSE,0000-0002-1113-7788,A5052848539,OUbrOXcAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+short_j,Short,Jerome,Jerome Short,Associate,tenure_line,Clinical,TRUE,FALSE,NA,A5024505319,ix-E0ZQAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+shusko_r,Shusko,Robin,Robin Shusko,Instructor,instructor,Unknown,FALSE,FALSE,NA,NA,NA,NA,NA,TRUE,Full-time non-TT instructor
+smithgray_s,Smith-Gray,Sybil,Sybil Smith-Gray,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5043425289,NA,NA,NA,TRUE,Added in full-dept expansion
+stagl_k,Stagl,Kevin,Kevin C Stagl,Associate,tenure_line,I-O,TRUE,FALSE,NA,A5075118367,Gm5m6zIAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+stuewig_j,Stuewig,Jeffrey,Jeffrey B Stuewig,Associate,tenure_line,Clinical,TRUE,FALSE,NA,A5076800459,3-AdJBMAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+tangney_j,Tangney,June,June P Tangney,Distinguished Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-9486-5026,A5090645557,cVlspjMAAAAJ,NA,NA,TRUE,Distinguished University Professor
+thompson_d,Thompson,Dawna,Dawna M Thompson,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5027690329,NA,NA,NA,TRUE,Added in full-dept expansion
+thompson_j,Thompson,James,James C Thompson,Professor,tenure_line,CBN,TRUE,FALSE,NA,NA,2VKzuqwAAAAJ,NA,NA,TRUE,UNRESOLVED-OA: real CBN researcher but OpenAlex record fragmented across IDs and polluted by a homonymous biologist; do NOT treat as zero. Use Scholar.
+tonge_n,Tonge,Natasha,Natasha A Tonge,Assistant,tenure_line,Clinical,TRUE,FALSE,0000-0001-7670-7991,A5077877685,bpou7qoAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+wiener_m,Wiener,Martin,Martin Wiener,Associate,tenure_line,CBN,TRUE,FALSE,0000-0001-6006-2594,A5021965223,d35WLWYAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+winsler_a,Winsler,Adam,Adam Winsler,Professor,tenure_line,Applied Developmental,TRUE,FALSE,0000-0001-6504-0802,A5048244213,_Ekthu4AAAAJ,NA,NA,TRUE,Added in full-dept expansion
+young_k,Young,Kevin,Kevin Christopher Young,Assistant,tenure_line,Clinical,TRUE,FALSE,NA,NA,NA,NA,NA,TRUE,No OpenAlex record found (new/low-output assistant prof); treated as ~0
+zaccaro_s,Zaccaro,Stephen,Stephen Zaccaro,Professor,tenure_line,I-O,TRUE,FALSE,0000-0002-8313-2206,A5045784042,EtEt5w0AAAAJ,NA,NA,TRUE,Added in full-dept expansion
+mehlenbeck_r,Mehlenbeck,Robyn,Robyn Mehlenbeck,Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-4879-5856,A5064629725,9HsQFBwAAAAJ,NA,NA,TRUE,Director Center for Community Mental Health; clinical faculty
+ramsdell_j,Ramsdell,Justin,Justin Ramsdell,Associate Chair,tenure_line,Clinical,TRUE,FALSE,NA,NA,NA,NA,NA,TRUE,Associate Chair; faculty
+shaw_t,Shaw,Tyler,Tyler H. Shaw,Professor,tenure_line,Human Factors,TRUE,FALSE,0000-0002-4202-1120,A5047722560,aCY_eesAAAAJ,NA,NA,TRUE,Associate Chair; Human Factors faculty

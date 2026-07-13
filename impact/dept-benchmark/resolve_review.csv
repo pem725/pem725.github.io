@@ -1,28 +1,35 @@
 faculty_key,full_name,resolved_id,oa_name,works_count,confidence,note
-mcknight_p,Patrick E. McKnight,A5015449344,Patrick E. McKnight,156,high (orcid),
-adams_l,Leah M Adams,A5084875053,L. Adams,157,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
-ahmad_a,Afra Saeed Ahmad,A5005396931,Afra Ahmad,33,high (single GMU match),
-brielmaier_j,Jennifer Brielmaier,A5008134767,Jennifer Brielmaier,26,high (single GMU match),
-burns_s,M Susan Burns,A5109546563,M. Susan Burns,27,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
-cattaneo_l,Lauren B Cattaneo,A5029943794,Lauren Bennett Cattaneo,86,high (single GMU match),
-chaplin_t,Tara Chaplin,A5007157490,Tara M. Chaplin,87,high (single GMU match),
-curby_t,Timothy W Curby,A5039289241,Timothy W. Curby,102,high (single GMU match),
-dalal_r,Reeshad S. Dalal,A5062819665,Reeshad S. Dalal,138,high (single GMU match),
-davis_d,Doris Bitler Davis,A5000928877,Doris Bitler Davis,8,high (single GMU match),
-doebel_s,Sabine Doebel,A5085712293,Sabine Doebel,57,high (single GMU match),
-dumas_t,Theodore Constantine Dumas,A5046234279,Theodore C. Dumas,92,high (single GMU match),
-esposito_smythers_c,Christianne Esposito-Smythers,A5111990225,Christianne Esposito‐Smythers,124,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
-fischer_s,Sarah Fischer,A5076444135,Sarah Fischer,112,review (multiple GMU matches),3 GMU matches; picked max-works. Verify.
-flinn_j,Jane M Flinn,A5089818985,Jane M. Flinn,56,high (single GMU match),
-goldstein_t,Thalia R Goldstein,A5060480503,Thalia R. Goldstein,165,high (single GMU match),
 harb_c,Camelia Harb,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
-helton_w,William S Helton,A5059994897,William S. Helton,270,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
-jack_a,Allison E Jack,A5046498386,Allison Jack,51,high (single GMU match),
-kaplan_s,Seth Kaplan,A5082413122,Seth A. Kaplan,126,review (multiple GMU matches),4 GMU matches; picked max-works. Verify.
-kashdan_t,Todd B. Kashdan,A5026254695,Todd B. Kashdan,335,high (single GMU match),
-kornienko_o,Olga Kornienko,A5081832457,Olga Kornienko,60,high (single GMU match),
-kuykendall_l,Lauren E. Kuykendall,A5066787586,Lauren Kuykendall,38,high (single GMU match),
-layman_s,Shannon Layman,A5026660495,Shannon Layman,10,high (single GMU match),
-lee_p,Philseok Lee,A5026904477,Philseok Lee,48,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
-lee_y,Yi-Ching Lee,A5040845275,Yi‐Ching Lee,127,high (single GMU match),
-liang_y,Yijue Liang,A5042931603,Yijue Liang,21,high (single GMU match),
+bradni_r,Raymond Abraham Bradni,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+dufresne_d,Danielle Dufresne,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+furman_s,Susanne M Furman,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+matthews_g,Gerald Matthews,A5104071588,Gerald Matthews,223,review (multiple GMU matches),8 GMU matches; picked max-works. Verify.
+mcdonald_c,Craig McDonald,A5031686041,Craig G. McDonald,72,high (single GMU match),
+mcquaid_g,Goldie Ann McQuaid,A5046377229,Goldie A. McQuaid,81,high (single GMU match),
+melley_a,Alison Heinhold Melley,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+montiel_s,Sara Montiel,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+murdoch_e,Erin Quinlivan Murdoch,A5031732627,Erin Quinlivan Murdoch,4,high (single GMU match),
+peterson_m,Matthew S. Peterson,A5111958127,Matthew S. Peterson,114,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
+phillips_e,Elizabeth Phillips,A5080985934,Elizabeth J. Phillips,581,review (multiple GMU matches),5 GMU matches; picked max-works. Verify.
+renshaw_k,Keith D Renshaw,A5046249119,Keith D. Renshaw,141,high (single GMU match),
+roesler_e,Eileen Roesler,A5027518779,Eileen Roesler,61,high (single GMU match),
+rupp_d,Deborah E. Rupp,A5029019936,Deborah E. Rupp,243,high (single GMU match),
+sanchez_a,Amanda L Sanchez,A5016552243,Amanda L. Sanchez,62,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
+savage_n,Nastassia Savage,A5018374152,Nastassia Savage,20,high (single GMU match),
+sheridan_k,Kimberly M Sheridan,A5052848539,Kimberly Sheridan,85,high (single GMU match),
+short_j,Jerome Short,A5024505319,Jerome L. Short,27,high (single GMU match),
+shusko_r,Robin Shusko,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+smithgray_s,Sybil Smith-Gray,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+stagl_k,Kevin C Stagl,A5075118367,Kevin C. Stagl,39,high (single GMU match),
+stuewig_j,Jeffrey B Stuewig,A5076800459,Jeffrey Stuewig,78,high (single GMU match),
+tangney_j,June P Tangney,A5090645557,June P. Tangney,184,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
+thompson_d,Dawna M Thompson,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+thompson_j,James C Thompson,A5103394448,James C. Thompson,477,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
+tonge_n,Natasha A Tonge,A5077877685,Natasha Tonge,47,high (single GMU match),
+wiener_m,Martin Wiener,A5048712438,Martin Wiener,266,review (multiple GMU matches),4 GMU matches; picked max-works. Verify.
+winsler_a,Adam Winsler,A5048244213,Adam Winsler,184,high (single GMU match),
+young_k,Kevin Christopher Young,NA,NA,NA,none,no GMU-affiliated match; resolve by hand
+zaccaro_s,Stephen Zaccaro,A5045784042,Stephen J. Zaccaro,212,high (single GMU match),
+mehlenbeck_r,Robyn Mehlenbeck,A5064629725,Robyn Mehlenbeck,44,high (single GMU match),
+ramsdell_j,Justin Ramsdell,A5111226530,J.D. Ramsdell,10,review (multiple GMU matches),2 GMU matches; picked max-works. Verify.
+shaw_t,Tyler H. Shaw,A5047722560,Tyler H. Shaw,133,high (single GMU match),
