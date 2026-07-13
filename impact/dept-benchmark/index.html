@@ -34,6 +34,8 @@
   .tile .v{font-size:1.9rem;font-weight:650;margin-top:2px;letter-spacing:-.02em}
   .tile .v small{font-size:.85rem;font-weight:500;color:var(--ink2)}
   .tile.you{outline:2px solid var(--you);outline-offset:-2px;background:var(--you-soft)}
+  .tile.team{background:var(--you);border-color:var(--you)}
+  .tile.team .k{color:rgba(255,255,255,.82)} .tile.team .v{color:#fff} .tile.team .v small{color:rgba(255,255,255,.8)}
   figure{margin:14px 0 6px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px 10px}
   figcaption{color:var(--ink2);font-size:.92rem;margin-top:6px;padding:0 4px}
   svg{display:block;width:100%;height:auto;overflow:visible}
@@ -134,6 +136,7 @@ $("#tiles").innerHTML=`
   <div class="tile you"><div class="k">You · Scholar</div><div class="v">#${s.sch_rank}<small> / ${s.n} · ${s.sch_pct}th</small></div></div>
   <div class="tile"><div class="k">Your citations</div><div class="v">${cur(s.oa_cites)}<small> OA · ${cur(s.sch_cites)} Sch</small></div></div>
   <div class="tile"><div class="k">Your share of dept</div><div class="v">${s.share}%<small> of all citations</small></div></div>
+  <div class="tile team"><div class="k">Your lab · combined</div><div class="v">${B.team.share_union}%<small> of dept · #${B.team.rank} of ${B.team.n_others}</small></div></div>
   <div class="tile"><div class="k">Your source-gap</div><div class="v">${s.fold}×<small> · CV ${s.cv}</small></div></div>`;
 $("#selfline").innerHTML=`Read honestly against the <b>entire</b> department: you are <b>#${s.oa_rank} of ${s.n}</b>
   on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly six people who
