@@ -90,6 +90,39 @@ One row per (person × source × year × metric). Columns:
 (scholar_manual.csv + scholar_byyear.txt) → `03_analyze.R` (console) → `05_export_web.R`
 (web_data.js → index.html). Data of record: `faculty.csv` + `metrics_long.csv` (append-only).
 
+## Annual update checklist (do this each July for the yearly evaluation)
+
+All commands run from `impact/dept-benchmark/`. **Never delete old snapshot rows** —
+year-over-year deltas depend on keeping them. Use a fixed snapshot date so both sources
+line up: `DATE=$(date +%F)`.
+
+1. **Refresh the roster** — reopen https://psychology.gmu.edu/people (filter: Tenure-line).
+   In `faculty.csv`: add new hires (blank IDs), mark departures `active,FALSE` (keep the row
+   and its history), keep every `faculty_key` stable. Never reuse a key for a different person.
+
+2. **Resolve IDs for new hires only** — `Rscript 01_resolve_openalex_ids.R`
+   Auto-fills high-confidence matches + harvests ORCIDs; check `resolve_review.csv` for the
+   flagged ones and hand-correct in `faculty.csv` (watch shared/initials-only names — see the
+   Leah Adams cautionary tale above).
+
+3. **Pull OpenAlex** — `Rscript 02_pull_openalex.R $DATE`
+   Fragmentation-proof (sums works via ORCID). Appends a dated snapshot; idempotent per date.
+
+4. **Refresh Google Scholar** (browser, ~22 profiles — no API):
+   For each faculty, open `scholar.google.com/citations?user=<scholar_id>` and read the
+   Citations / h-index / i10 totals + the by-year bars. New faculty: find the id via
+   `…/citations?view_op=search_authors&mauthors=<First+Last>` (filter to the George Mason
+   result). Update the numbers + `snapshot_date` in `scholar_manual.csv` and the by-year line
+   in `scholar_byyear.txt`, then `Rscript 04_load_scholar.R`.
+   *(This is the only manual step. Claude can drive the browser harvest — the working method
+   and the GMU org id (11304740246128990681) are recorded in the session memory / git log.)*
+
+5. **Analyze + export** — `Rscript 03_analyze.R` (sanity-check ranks in the console),
+   then `Rscript 05_export_web.R` (regenerates `web_data.js` → the page updates automatically).
+
+6. **Ship** — eyeball `index.html` locally, then `git add -A && git commit && git push`.
+   The delta vs. last year is now in `metrics_long.csv`; add a chart for it if useful.
+
 ## Provenance
 Legacy scripts (`../GMUfacultyScholarImpact.py`, `../GFacImpactver_0.0.1.py`,
 `../GFIv.0.0.2.py`, `../GMUurls.txt`) used the `scholarly` library and produced an empty
