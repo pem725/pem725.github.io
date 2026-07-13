@@ -46,6 +46,28 @@ conc <- list(
   top6 = round(100*sum(oc[1:6])/tot), bottom30 = round(100*sum(tail(oc,30))/tot,1),
   median = median(wide$oa_c0))
 
+# ---- Team view: my lab, counted as one unit (co-authored papers deduplicated) ----
+source("_openalex.R")
+TEAM_KEYS <- c("mcknight_p", "kashdan_t")   # shared lab — edit if the lab changes
+team_orcids <- fac$orcid[match(TEAM_KEYS, fac$faculty_key)]
+umap <- list(); sets <- list()
+for (orc in team_orcids) {
+  if (is.na(orc) || !nzchar(orc)) { sets[[length(sets)+1]] <- character(0); next }
+  ids <- character(0)
+  for (w in oa_author_works(orcid = orc)) if (!is.na(w$id)) { umap[[w$id]] <- w$cites; ids <- c(ids, w$id) }
+  sets[[length(sets)+1]] <- ids
+}
+team_union  <- sum(unlist(umap)); team_works <- length(umap)
+team_simple <- sum(wide$oa_c0[wide$faculty_key %in% TEAM_KEYS])
+team_shared <- if (length(sets) >= 2) length(Reduce(intersect, sets)) else 0
+team_others <- wide$oa_c0[!wide$faculty_key %in% TEAM_KEYS]
+team <- list(
+  members = fac$full_name[match(TEAM_KEYS, fac$faculty_key)], keys = TEAM_KEYS,
+  union_cites = team_union, simple_cites = team_simple, works = team_works,
+  shared_works = team_shared,
+  share_union = round(100*team_union/tot, 1), share_simple = round(100*team_simple/tot, 1),
+  rank = sum(team_others > team_union) + 1, n_others = length(team_others) + 1)
+
 self <- wide |> filter(is_self)
 byyear <- function(src) m |> filter(faculty_key=="mcknight_p", source==src, metric_year!="lifetime",
                                      snapshot_date==latest) |>
@@ -56,6 +78,7 @@ out <- list(
   n_openalex = sum(wide$oa_resolved), n_scholar = sum(wide$sch_resolved),
   no_profile = wide$full_name[!wide$oa_resolved & !wide$sch_resolved],
   concentration = conc,
+  team = team,
   self = list(
     oa_rank = self$oa_rank, sch_rank = self$sch_rank, n = n,
     oa_pct = round(100*(1-(self$oa_rank-1)/(n-1))),

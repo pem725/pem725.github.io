@@ -13,6 +13,18 @@
     "bottom30": 5.8,
     "median": 1617.5
   },
+  "team": {
+    "members": ["Patrick E. McKnight", "Todd B. Kashdan"],
+    "keys": ["mcknight_p", "kashdan_t"],
+    "union_cites": 40764,
+    "simple_cites": 45117,
+    "works": 435,
+    "shared_works": 57,
+    "share_union": 17.6,
+    "share_simple": 19.4,
+    "rank": 1,
+    "n_others": 59
+  },
   "self": {
     "oa_rank": 6,
     "sch_rank": 8,

@@ -89,6 +89,7 @@ oa_author_works <- function(orcid = NA, author_id = NA) {
       cby <- list()
       for (c in (w$counts_by_year %||% list())) cby[[as.character(c$year)]] <- c$cited_by_count %||% 0L
       works[[length(works) + 1]] <- list(
+        id    = if (!is.null(w$id)) sub(".*/", "", w$id) else NA_character_,
         year  = w$publication_year %||% NA,
         cites = w$cited_by_count %||% 0L,
         cby   = cby)

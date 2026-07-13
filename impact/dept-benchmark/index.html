@@ -71,6 +71,7 @@
 
   <div class="tiles" id="tiles"></div>
   <p class="sub" id="selfline"></p>
+  <div id="teamBox"></div>
 
   <h2>1 · The whole department — a few people carry most of the impact</h2>
   <div class="callout" id="callout"></div>
@@ -138,13 +139,21 @@ $("#selfline").innerHTML=`Read honestly against the <b>entire</b> department: yo
   on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly six people who
   carry the department, holding <b>${s.share}% of all its citations</b>. Not the top, not the bottom: a driver. And your
   ${s.fold}× source-gap sits near the department median, so your standing isn't an artifact of a favorable database.`;
+const T=B.team;
+$("#teamBox").innerHTML=`<div style="background:var(--you-soft);border:1px solid var(--you);border-radius:12px;padding:15px 18px;margin:16px 0">
+  <div style="font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Team view — one lab</div>
+  <div style="font-size:1.06rem;margin-top:5px;max-width:70ch"><b>${T.members[0]} + ${T.members[1]}</b> run one lab together —
+  <b>${T.shared_works} co-authored papers</b>. As a single unit the lab holds <b>${T.union_cites.toLocaleString()} citations</b>
+  (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, nearly one in five — which would rank
+  <b>#${T.rank} of ${T.n_others}</b>, ahead of every individual. <span class="muted">(Summing both totals raw: ${T.share_simple}%.)</span></div>
+</div>`;
 $("#callout").innerHTML=`
   <div class="cc"><div class="v">${C.gini}</div><div class="k">Gini coefficient (0=equal, 1=one person has all)</div></div>
   <div class="cc"><div class="v">${C.top5}%</div><div class="k">of all citations held by the top 5</div></div>
   <div class="cc"><div class="v">${C.bottom30}%</div><div class="k">held by the bottom 30 faculty</div></div>
   <div class="cc"><div class="v">${cur(C.median)}</div><div class="k">median faculty citations</div></div>`;
 function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c}"></span>${i.t}</span>`).join("");}
-legend("#leg1",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
+legend("#leg1",[{c:"var(--you)",t:"Your lab (McKnight + Kashdan)"},{c:"var(--oa)",t:"Other faculty"}]);
 legend("#leg2",[{c:"var(--you)",t:"You"},{c:"var(--muted)",t:"Other faculty"}]);
 legend("#leg3",[{c:"var(--oa)",t:"Faculty (OpenAlex)"},{c:"var(--you)",t:"You"}]);
 legend("#leg4",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
@@ -152,7 +161,8 @@ legend("#leg5",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}
 
 /* 1. department distribution (all 60, sorted, linear) */
 function dept(){
-  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank}));
+  const team=new Set(B.team.keys);
+  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:team.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank}));
   const W=980,H=420,pl=48,pr=14,pt=16; const pbb=54;
   const n=data.length, bw=(W-pl-pr)/n, cmax=Math.max(...data.map(d=>d.c));
   const Y=v=>H-pbb-v/cmax*(H-pt-pbb);
@@ -168,15 +178,15 @@ function dept(){
     const x=pl+i*bw, h=Math.max(d.c>0?1.5:0, Y(0)-Y(d.c)), you=d.is_self;
     const g=el("g",{}); g.style.cursor="default";
     g.appendChild(el("rect",{x:x+bw*0.12,y:Y(d.c),width:Math.max(1,bw*0.76),height:h,rx:1.5,
-      fill:you?css("--you"):css("--oa"),"fill-opacity":you?1:(d.resolved?.8:.35)}));
-    g.addEventListener("pointermove",e=>showTip(`<b>${d.name}</b><br><span class="r">#${d.rk} · ${d.resolved?cur(d.c)+' citations':'no indexed profile'}</span>`,e));
+      fill:d.team?css("--you"):css("--oa"),"fill-opacity":d.team?(you?1:.82):(d.resolved?.8:.35)}));
+    g.addEventListener("pointermove",e=>showTip(`<b>${d.name}</b>${d.team?' · your lab':''}<br><span class="r">#${d.rk} · ${d.resolved?cur(d.c)+' citations':'no indexed profile'}</span>`,e));
     g.addEventListener("pointerleave",hideTip);
     S.appendChild(g);
   });
   // direct labels: top 5 + you
-  data.forEach((d,i)=>{ if(d.is_self||d.rk<=5){ const x=pl+i*bw+bw/2;
+  data.forEach((d,i)=>{ if(d.team||d.rk<=5){ const x=pl+i*bw+bw/2;
     const t=txt(x,Y(d.c)-6,ab(d.name),"middle","glabel");
-    if(d.is_self){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");}
+    if(d.team){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");}
     t.setAttribute("transform",`rotate(-32 ${x} ${Y(d.c)-6})`); S.appendChild(t);} });
   S.appendChild(txt(W/2,H-8,"60 full-time faculty, ranked by citations →","middle","lbl"));
   $("#dept").appendChild(S);
