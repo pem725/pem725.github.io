@@ -1,0 +1,28 @@
+faculty_key,last_name,first_name,full_name,rank,category,discipline,is_tenure_line,is_self,orcid,openalex_id,scholar_id,scopus_id,wos_id,active,notes
+mcknight_p,McKnight,Patrick,Patrick E. McKnight,Associate,tenure_line,Human Factors,TRUE,TRUE,0000-0002-9067-9066,A5015449344,sH44LC4AAAAJ,NA,NA,TRUE,"Reference point (is_self=TRUE); Associate Professor, tenure-line, Human Factors/Applied Cognition (same group as Helton, Yi-Ching Lee)"
+adams_l,Adams,Leah,Leah M Adams,Associate,tenure_line,Clinical,TRUE,FALSE,0000-0002-1627-743X,A5064571573,wAEIo6UAAAAJ,NA,NA,TRUE,Corrected: auto-match grabbed a pulmonary 'L. Adams'; this is the clinical psychologist
+ahmad_a,Ahmad,Afra,Afra Saeed Ahmad,Associate,tenure_line,I-O,TRUE,FALSE,0000-0002-6101-7776,A5005396931,gVP7QUAAAAAJ,NA,NA,TRUE,NA
+brielmaier_j,Brielmaier,Jennifer,Jennifer Brielmaier,Associate,tenure_line,CBN,TRUE,FALSE,NA,A5008134767,xVd9FrgAAAAJ,NA,NA,TRUE,NA
+burns_s,Burns,Susan,M Susan Burns,Professor,tenure_line,Applied Developmental,TRUE,FALSE,NA,A5109546563,NA,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
+cattaneo_l,Cattaneo,Lauren,Lauren B Cattaneo,Associate,tenure_line,Clinical,TRUE,FALSE,0000-0003-0210-7509,A5029943794,suR2J5cAAAAJ,NA,NA,TRUE,NA
+chaplin_t,Chaplin,Tara,Tara Chaplin,Professor,tenure_line,Clinical,TRUE,FALSE,0000-0003-3405-865X,A5007157490,VXB9MP0AAAAJ,NA,NA,TRUE,NA
+curby_t,Curby,Timothy,Timothy W Curby,Professor,tenure_line,Applied Developmental,TRUE,FALSE,0000-0001-8289-1748,A5039289241,LBxYkRUAAAAJ,NA,NA,TRUE,Department Chair
+dalal_r,Dalal,Reeshad,Reeshad S. Dalal,Professor,tenure_line,I-O,TRUE,FALSE,0000-0003-4040-4686,A5062819665,QkDLr-MAAAAJ,NA,NA,TRUE,NA
+davis_d,Davis,Doris,Doris Bitler Davis,Associate,tenure_line,CBN,TRUE,FALSE,0000-0002-5543-2738,A5000928877,NA,NA,NA,TRUE,NA
+doebel_s,Doebel,Sabine,Sabine Doebel,Associate,tenure_line,Applied Developmental,TRUE,FALSE,0000-0002-1851-7011,A5085712293,75UfqO0AAAAJ,NA,NA,TRUE,NA
+dumas_t,Dumas,Theodore,Theodore Constantine Dumas,Associate,tenure_line,CBN,TRUE,FALSE,0000-0003-1616-8011,A5046234279,NA,NA,NA,TRUE,NA
+esposito_smythers_c,Esposito-Smythers,Christianne,Christianne Esposito-Smythers,Professor,tenure_line,Clinical,TRUE,FALSE,NA,A5111990225,BqNFZ9QAAAAJ,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
+fischer_s,Fischer,Sarah,Sarah Fischer,Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-3514-4122,A5076444135,ZRXfaDAAAAAJ,NA,NA,TRUE,Verified via eating-disorders topic match
+flinn_j,Flinn,Jane,Jane M Flinn,Associate,tenure_line,CBN,TRUE,FALSE,0000-0002-3920-2772,A5089818985,u2j_B8gAAAAJ,NA,NA,TRUE,NA
+goldstein_t,Goldstein,Thalia,Thalia R Goldstein,Associate,tenure_line,Applied Developmental,TRUE,FALSE,0000-0002-3892-0852,A5060480503,9kfR7yUAAAAJ,NA,NA,TRUE,NA
+harb_c,Harb,Camelia,Camelia Harb,Assistant,tenure_line,Clinical,TRUE,FALSE,NA,NA,NA,NA,NA,TRUE,"No resolvable OpenAlex profile (<=3 works, fragmented); thin bibliometric footprint"
+helton_w,Helton,William,William S Helton,Professor,tenure_line,Human Factors,TRUE,FALSE,NA,A5059994897,NbjH3RAAAAAJ,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
+jack_a,Jack,Allison,Allison E Jack,Assistant,tenure_line,Applied Developmental,TRUE,FALSE,0000-0002-7792-6464,A5046498386,4qt396gAAAAJ,NA,NA,TRUE,Cross-listed CBN
+kaplan_s,Kaplan,Seth,Seth Kaplan,Professor,tenure_line,I-O,TRUE,FALSE,NA,A5082413122,Qlhi2hEAAAAJ,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
+kashdan_t,Kashdan,Todd,Todd B. Kashdan,Professor,tenure_line,Clinical,TRUE,FALSE,0000-0001-6438-0485,A5026254695,rC3rn04AAAAJ,NA,NA,TRUE,NA
+kornienko_o,Kornienko,Olga,Olga Kornienko,Associate,tenure_line,Applied Developmental,TRUE,FALSE,0000-0002-7327-0250,A5081832457,Kx1l_I4AAAAJ,NA,NA,TRUE,NA
+kuykendall_l,Kuykendall,Lauren,Lauren E. Kuykendall,Associate,tenure_line,I-O,TRUE,FALSE,0000-0003-1520-1596,A5066787586,w1u2dLoAAAAJ,NA,NA,TRUE,NA
+layman_s,Layman,Shannon,Shannon Layman,Assistant,tenure_line,CBN,TRUE,FALSE,NA,A5026660495,NA,NA,NA,TRUE,NA
+lee_p,Lee,Philseok,Philseok Lee,Associate,tenure_line,I-O,TRUE,FALSE,NA,A5026904477,aNGET7sAAAAJ,NA,NA,TRUE,OpenAlex fragments name; picked GMU max-works record
+lee_y,Lee,Yi-Ching,Yi-Ching Lee,Associate,tenure_line,Human Factors,TRUE,FALSE,0000-0002-9383-4105,A5040845275,SpiiI5cAAAAJ,NA,NA,TRUE,NA
+liang_y,Liang,Yijue,Yijue Liang,Assistant,tenure_line,I-O,TRUE,FALSE,0000-0003-2055-8805,A5042931603,HRORhnAAAAAJ,NA,NA,TRUE,NA

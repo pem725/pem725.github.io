@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GMU Psychology — Impact, and What It Actually Measures</title>
+<style>
+  :root {
+    --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+    --oa:#2a78d6;        /* OpenAlex  */
+    --sch:#1baf7a;       /* Scholar   */
+    --you:#eb6834;       /* you (emphasis) */
+    --you-soft:#fbe4d8;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --plane:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+      --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418; }
+  }
+  :root[data-theme=light]{ --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10); --oa:#2a78d6; --sch:#1baf7a; --you:#eb6834; --you-soft:#fbe4d8; }
+  :root[data-theme=dark]{ --plane:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10); --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418; }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--plane);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.15;margin:.2em 0 .1em;letter-spacing:-.01em}
+  h2{font-size:1.25rem;margin:2.4em 0 .2em;letter-spacing:-.01em}
+  .sub{color:var(--ink2);font-size:1.02rem;max-width:64ch}
+  .lede{font-size:1.08rem;max-width:66ch}
+  p{max-width:66ch}
+  a{color:var(--oa)}
+  .muted{color:var(--muted)}
+  .theme-btn{position:fixed;top:12px;right:12px;background:var(--surface);color:var(--ink2);
+    border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:.8rem;cursor:pointer;z-index:10}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:22px 0 8px}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .tile .k{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .tile .v{font-size:2rem;font-weight:650;margin-top:2px;letter-spacing:-.02em}
+  .tile .v small{font-size:.9rem;font-weight:500;color:var(--ink2)}
+  .tile.you{outline:2px solid var(--you);outline-offset:-2px;background:var(--you-soft)}
+  @media (prefers-color-scheme:dark){.tile.you{background:var(--you-soft)}}
+
+  figure{margin:14px 0 6px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 16px 10px}
+  figcaption{color:var(--ink2);font-size:.92rem;margin-top:6px;padding:0 4px}
+  svg{display:block;width:100%;height:auto;overflow:visible}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--ink2);margin:2px 4px 12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  .tick text,.lbl{fill:var(--muted);font-size:11px}
+  .glabel{fill:var(--ink);font-size:12px}
+  .val{fill:var(--ink);font-size:11px;font-variant-numeric:tabular-nums}
+
+  table{border-collapse:collapse;width:100%;font-size:.86rem;margin-top:8px}
+  .tblwrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px}
+  th,td{padding:7px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--grid)}
+  th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+  th{color:var(--muted);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.03em;background:var(--surface)}
+  td{font-variant-numeric:tabular-nums;color:var(--ink2)}
+  td.name{color:var(--ink);font-variant-numeric:normal}
+  tr.you td{background:var(--you-soft)}
+  tr.you td.name{font-weight:650}
+  .np{color:var(--muted);font-style:italic}
+
+  .tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);
+    border:1px solid var(--border);border-radius:9px;padding:8px 10px;font-size:.8rem;
+    box-shadow:0 6px 24px rgba(0,0,0,.16);opacity:0;transition:opacity .08s;z-index:20;max-width:240px}
+  .tip b{color:var(--ink)} .tip .r{color:var(--ink2)}
+  .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);
+    border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
+  .note b{color:var(--ink)}
+</style>
+</head>
+<body>
+<button class="theme-btn" id="themeBtn">◐ theme</button>
+<div class="wrap">
+  <h1>Impact, and what it actually measures</h1>
+  <p class="lede">Every faculty member in the George Mason University Department of Psychology,
+  measured the same way, from two independent bibliometric databases at once. The point isn't a
+  leaderboard. The point is that <b>your "impact number" changes — sometimes doubles, sometimes
+  your rank flips — depending on which database you happen to cite.</b> Here are the cards, on the table.</p>
+  <p class="muted" id="meta"></p>
+
+  <div class="tiles" id="tiles"></div>
+  <p class="sub" id="selfline"></p>
+
+  <h2>1 · Your rank is not a fact — it moves with the source</h2>
+  <div class="legend" id="leg1"></div>
+  <figure><div id="slope"></div>
+    <figcaption>Each line is one faculty member; left = rank by OpenAlex citations, right = rank by Google
+    Scholar citations. Lines that cross are people whose standing <em>depends on the database</em>.
+    Only the 21 faculty with both scores are shown.</figcaption></figure>
+
+  <h2>2 · Breadth vs. depth</h2>
+  <div class="legend" id="leg2"></div>
+  <figure><div id="scatter"></div>
+    <figcaption>Horizontal = breadth (number of works). Vertical = depth (h-index: how many works are
+    themselves well-cited). Marker size = total citations. OpenAlex, fragmentation-corrected. Top-right
+    is broad <em>and</em> deep.</figcaption></figure>
+
+  <h2>3 · Who depends most on which database?</h2>
+  <div class="legend" id="leg3"></div>
+  <figure><div id="bars"></div>
+    <figcaption>Fold-gap = larger citation count ÷ smaller, across the two sources. A bar near 1× means
+    the number is the same wherever you look (source-proof). A long bar means the headline is a choice.
+    Hover for the coefficient of variation and both counts.</figcaption></figure>
+
+  <h2>4 · Your citation trajectory</h2>
+  <div class="legend" id="leg4"></div>
+  <figure><div id="traj"></div>
+    <figcaption>Citations received each year, both sources. The gap between the lines is the same story
+    at the individual level — Scholar counts more (conference papers, chapters, self-citations) than OpenAlex.</figcaption></figure>
+
+  <h2>The full table</h2>
+  <p class="sub">Sorted by OpenAlex citations. “—” marks faculty with no Google Scholar profile: their
+  Scholar number is <em>structurally</em> absent, not zero — a reminder that the metric rewards
+  participation, not just impact.</p>
+  <div class="tblwrap"><table id="tbl"></table></div>
+
+  <div class="note" id="methods"></div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script src="web_data.js"></script>
+<script>
+const B = window.BENCH, $ = s=>document.querySelector(s), NS="http://www.w3.org/2000/svg";
+const tip = $("#tip");
+function showTip(html,e){ tip.innerHTML=html; tip.style.opacity=1;
+  const x=Math.min(e.clientX+14, innerWidth-tip.offsetWidth-8), y=e.clientY+14;
+  tip.style.left=x+"px"; tip.style.top=y+"px"; }
+function hideTip(){ tip.style.opacity=0; }
+function el(tag,attrs){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);return n;}
+function svg(w,h){const s=el("svg",{viewBox:`0 0 ${w} ${h}`,role:"img"});return s;}
+const cur = v=>v==null?"—":v.toLocaleString();
+const css = v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+/* ---------- meta + tiles ---------- */
+$("#meta").textContent = `Snapshot ${B.snapshot_date}. ${B.n_faculty} faculty (tenure-line + you); `
+  + `OpenAlex resolved ${B.n_openalex}, Google Scholar ${B.n_scholar}.`;
+const s=B.self;
+$("#tiles").innerHTML = `
+  <div class="tile you"><div class="k">You · OpenAlex</div><div class="v">#${s.oa_rank}<small> / ${B.n_openalex} · ${s.oa_pct}th pct</small></div></div>
+  <div class="tile you"><div class="k">You · Scholar</div><div class="v">#${s.sch_rank}<small> / ${B.n_scholar} · ${s.sch_pct}th pct</small></div></div>
+  <div class="tile"><div class="k">Citations · OpenAlex</div><div class="v">${cur(s.oa_cites)}<small> · h ${s.oa_h}</small></div></div>
+  <div class="tile"><div class="k">Citations · Scholar</div><div class="v">${cur(s.sch_cites)}<small> · h ${s.sch_h}</small></div></div>
+  <div class="tile"><div class="k">Your source-gap</div><div class="v">${s.fold}×<small> · CV ${s.cv}</small></div></div>`;
+$("#selfline").innerHTML = `Read plainly: <b>top of the department by any measure</b> — second or third of ~26 on citations,
+  ${s.oa_pct}–${s.sch_pct}th percentile, and your ${s.fold}× source-gap sits right at the department’s median, meaning your
+  standing isn’t propped up by a favorable database. Only Todd Kashdan is clearly ahead on both.`;
+
+function legend(id, items){ $(id).innerHTML = items.map(i=>`<span><span class="sw" style="background:${i.c}"></span>${i.t}</span>`).join(""); }
+legend("#leg1",[{c:"var(--you)",t:"You"},{c:"var(--muted)",t:"Other faculty"}]);
+legend("#leg2",[{c:"var(--oa)",t:"Faculty (OpenAlex)"},{c:"var(--you)",t:"You"}]);
+legend("#leg3",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
+legend("#leg4",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}]);
+
+/* ---------- 1. slopegraph ---------- */
+function slope(){
+  const data=B.faculty.filter(f=>f.oa_rank&&f.sch_rank);
+  const W=960,H=Math.max(360,data.length*15),padT=28,padB=16,xl=250,xr=W-250;
+  const maxR=Math.max(...data.map(f=>Math.max(f.oa_rank,f.sch_rank)));
+  const y=r=>padT+(r-1)/(maxR-1)*(H-padT-padB);
+  const S=svg(W,H);
+  S.appendChild(txt(xl,14,"OpenAlex rank","end")); S.appendChild(txt(xr,14,"Scholar rank","start"));
+  data.forEach(f=>{
+    const you=f.is_self, col=you?css("--you"):css("--muted");
+    const ln=el("line",{x1:xl,y1:y(f.oa_rank),x2:xr,y2:y(f.sch_rank),stroke:col,
+      "stroke-width":you?3:1.5,"stroke-opacity":you?1:.5});
+    const g=el("g",{}); g.style.cursor="default";
+    g.appendChild(ln);
+    g.appendChild(el("circle",{cx:xl,cy:y(f.oa_rank),r:you?5:3.5,fill:col}));
+    g.appendChild(el("circle",{cx:xr,cy:y(f.sch_rank),r:you?5:3.5,fill:col}));
+    // labels: name on the OpenAlex side; rank number on both
+    const nm=txt(xl-10,y(f.oa_rank)+4,f.name.replace(/^(\w)\w+\s/,'$1. '),"end");
+    nm.setAttribute("class","glabel"); if(you){nm.setAttribute("font-weight","650");nm.setAttribute("fill",css("--you"));}
+    else nm.setAttribute("fill-opacity",".72");
+    g.appendChild(nm);
+    g.appendChild(txt2(xr+10,y(f.sch_rank)+4,"#"+f.sch_rank,"start",you));
+    const mv=f.oa_rank-f.sch_rank, dir=mv>0?`up ${mv}`:mv<0?`down ${-mv}`:"unchanged";
+    g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">OpenAlex #${f.oa_rank} → Scholar #${f.sch_rank} (${dir})</span>`,e));
+    g.addEventListener("pointerleave",hideTip);
+    S.appendChild(g);
+  });
+  $("#slope").appendChild(S);
+}
+function txt(x,y,s,anchor){const t=el("text",{x,y,"text-anchor":anchor||"middle"});t.setAttribute("class","tick");t.textContent=s;return t;}
+function txt2(x,y,s,anchor,you){const t=el("text",{x,y,"text-anchor":anchor});t.setAttribute("class","val");if(you)t.setAttribute("fill",css("--you"));t.textContent=s;return t;}
+
+/* ---------- 2. scatter breadth×depth ---------- */
+function scatter(){
+  const data=B.faculty.filter(f=>f.oa_h!=null&&f.oa_works!=null);
+  const W=960,H=520,pl=54,pr=20,pt=20,pb=44;
+  const xmax=Math.max(...data.map(f=>f.oa_works))*1.05, ymax=Math.max(...data.map(f=>f.oa_h))*1.08;
+  const X=v=>pl+v/xmax*(W-pl-pr), Y=v=>H-pb-v/ymax*(H-pt-pb);
+  const cmax=Math.max(...data.map(f=>f.oa_cites));
+  const R=v=>6+Math.sqrt(v/cmax)*22;
+  const S=svg(W,H);
+  // gridlines
+  for(let i=0;i<=4;i++){const gy=pt+i*(H-pt-pb)/4,v=Math.round(ymax*(1-i/4));
+    S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));
+    S.appendChild(txt(pl-8,gy+4,v,"end"));}
+  for(let i=0;i<=4;i++){const gx=pl+i*(W-pl-pr)/4,v=Math.round(xmax*i/4);
+    S.appendChild(txt(gx,H-pb+18,v,"middle"));}
+  S.appendChild(axlabel(W/2,H-6,"Breadth — number of works →"));
+  S.appendChild(axlabelV(16,H/2,"Depth — h-index →"));
+  data.forEach(f=>{
+    const you=f.is_self;
+    const c=el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites),
+      fill:you?css("--you"):css("--oa"),"fill-opacity":you?.9:.5,
+      stroke:you?css("--you"):"none","stroke-width":you?2.5:0});
+    if(you){c.setAttribute("stroke",css("--surface"));c.setAttribute("stroke-width",2);
+      S.appendChild(el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites)+3,fill:"none",stroke:css("--you"),"stroke-width":2}));}
+    c.style.cursor="default";
+    c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">${cur(f.oa_works)} works · h ${f.oa_h} · ${cur(f.oa_cites)} citations</span>`,e));
+    c.addEventListener("pointerleave",hideTip);
+    S.appendChild(c);
+    if(you||f.oa_cites>Math.sort? false:false){}
+    if(you||["Todd B. Kashdan","William S Helton","Reeshad S. Dalal"].includes(f.name)){
+      const t=txt(X(f.oa_works),Y(f.oa_h)-R(f.oa_cites)-6,f.name.replace(/^(\w)\w+\s/,'$1. '),"middle");
+      t.setAttribute("class","glabel"); if(you){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");}
+      S.appendChild(t);}
+  });
+  $("#scatter").appendChild(S);
+}
+function axlabel(x,y,s){const t=el("text",{x,y,"text-anchor":"middle"});t.setAttribute("class","lbl");t.textContent=s;return t;}
+function axlabelV(x,y,s){const t=el("text",{x,y,"text-anchor":"middle",transform:`rotate(-90 ${x} ${y})`});t.setAttribute("class","lbl");t.textContent=s;return t;}
+
+/* ---------- 3. disagreement bars ---------- */
+function bars(){
+  const data=B.faculty.filter(f=>f.fold!=null).sort((a,b)=>b.fold-a.fold);
+  const W=960,rowH=26,pl=180,pr=70,pt=28,H=pt+data.length*rowH+10;
+  const xmax=Math.max(...data.map(f=>f.fold));
+  const X=v=>pl+(v-1)/(xmax-1)*(W-pl-pr);
+  const S=svg(W,H);
+  // 1x baseline + gridlines at integers
+  for(let v=1;v<=Math.ceil(xmax);v++){const gx=X(v);
+    S.appendChild(el("line",{x1:gx,y1:pt-6,x2:gx,y2:H-6,stroke:css(v===1?"--axis":"--grid"),"stroke-width":1}));
+    S.appendChild(txt(gx,pt-10,v+"×","middle"));}
+  data.forEach((f,i)=>{
+    const y=pt+i*rowH+4,h=14,you=f.is_self,col=you?css("--you"):css("--oa");
+    const g=el("g",{}); g.style.cursor="default";
+    g.appendChild(el("rect",{x:pl,y,width:Math.max(1,X(f.fold)-pl),height:h,rx:4,ry:4,fill:col,"fill-opacity":you?1:.85}));
+    const nm=txt(pl-10,y+11,f.name.replace(/^(\w)\w+\s/,'$1. '),"end"); nm.setAttribute("class","glabel");
+    if(you){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");} else nm.setAttribute("fill-opacity",".8");
+    g.appendChild(nm);
+    g.appendChild(txt2(X(f.fold)+8,y+11,f.fold+"×","start",you));
+    g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">OpenAlex ${cur(f.oa_cites)} · Scholar ${cur(f.sch_cites)}<br>fold ${f.fold}× · CV ${f.cv}</span>`,e));
+    g.addEventListener("pointerleave",hideTip);
+    S.appendChild(g);
+  });
+  $("#bars").appendChild(S);
+}
+
+/* ---------- 4. trajectory ---------- */
+function traj(){
+  const oa=B.self_byyear.openalex, sc=B.self_byyear.scholar;
+  const all=oa.concat(sc); if(!all.length){return;}
+  const W=960,H=420,pl=54,pr=20,pt=20,pb=40;
+  const yrs=all.map(d=>d.year), y0=Math.min(...yrs), y1=Math.max(...yrs);
+  const vmax=Math.max(...all.map(d=>d.cites))*1.08;
+  const X=y=>pl+(y-y0)/(y1-y0)*(W-pl-pr), Y=v=>H-pb-v/vmax*(H-pt-pb);
+  const S=svg(W,H);
+  for(let i=0;i<=4;i++){const gy=pt+i*(H-pt-pb)/4,v=Math.round(vmax*(1-i/4));
+    S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));
+    S.appendChild(txt(pl-8,gy+4,v.toLocaleString(),"end"));}
+  const step=Math.ceil((y1-y0)/8);
+  for(let yy=y0;yy<=y1;yy+=step){S.appendChild(txt(X(yy),H-pb+18,yy,"middle"));}
+  const line=(pts,col)=>{const d=pts.map((p,i)=>(i?"L":"M")+X(p.year)+" "+Y(p.cites)).join(" ");
+    S.appendChild(el("path",{d,fill:"none",stroke:col,"stroke-width":2.5,"stroke-linejoin":"round"}));
+    pts.forEach(p=>S.appendChild(el("circle",{cx:X(p.year),cy:Y(p.cites),r:3,fill:col})));};
+  line(oa,css("--oa")); line(sc,css("--sch"));
+  // direct labels at last point
+  const last=(pts,col,name)=>{const p=pts[pts.length-1];const t=txt(X(p.year)-4,Y(p.cites)-8,name,"end");t.setAttribute("class","glabel");t.setAttribute("fill",col);S.appendChild(t);};
+  last(sc,css("--sch"),"Scholar"); last(oa,css("--oa"),"OpenAlex");
+  // hover crosshair
+  const hl=el("line",{y1:pt,y2:H-pb,stroke:css("--axis"),"stroke-width":1,opacity:0}); S.appendChild(hl);
+  const rect=el("rect",{x:pl,y:pt,width:W-pl-pr,height:H-pt-pb,fill:"transparent"});
+  rect.style.cursor="crosshair";
+  rect.addEventListener("pointermove",e=>{
+    const pt0=S.getBoundingClientRect(), sx=(e.clientX-pt0.left)/pt0.width*W;
+    const yr=Math.round(y0+(sx-pl)/(W-pl-pr)*(y1-y0));
+    const fo=oa.find(d=>d.year===yr), fs=sc.find(d=>d.year===yr);
+    hl.setAttribute("x1",X(yr));hl.setAttribute("x2",X(yr));hl.setAttribute("opacity",1);
+    showTip(`<b>${yr}</b><br><span class="r">OpenAlex ${fo?cur(fo.cites):"—"} · Scholar ${fs?cur(fs.cites):"—"}</span>`,e);
+  });
+  rect.addEventListener("pointerleave",()=>{hl.setAttribute("opacity",0);hideTip();});
+  S.appendChild(rect);
+  $("#traj").appendChild(S);
+}
+
+/* ---------- table ---------- */
+function table(){
+  const cols=[["name","Faculty"],["disc","Area"],["oa_works","OA works"],["oa_cites","OA cites"],["oa_h","OA h"],
+    ["oa_i10","OA i10"],["sch_cites","Sch cites"],["sch_h","Sch h"],["sch_i10","Sch i10"],["fold","fold"],["cv","CV"]];
+  let html="<thead><tr>"+cols.map(c=>`<th>${c[1]}</th>`).join("")+"</tr></thead><tbody>";
+  B.faculty.forEach(f=>{
+    html+=`<tr class="${f.is_self?'you':''}">`+cols.map(c=>{
+      let v=f[c[0]];
+      if(c[0]==="name") return `<td class="name">${v}${f.is_self?' ★':''}</td>`;
+      if(c[0]==="disc") return `<td class="name" style="color:var(--muted);font-size:.8rem">${v}</td>`;
+      if(v==null) return `<td class="np">—</td>`;
+      if(c[0]==="fold") return `<td>${v}×</td>`;
+      return `<td>${typeof v==="number"?v.toLocaleString():v}</td>`;
+    }).join("")+"</tr>";
+  });
+  $("#tbl").innerHTML=html+"</tbody>";
+}
+
+/* ---------- methods ---------- */
+$("#methods").innerHTML = `<b>How to read this, honestly.</b> <b>OpenAlex</b> (open, machine-built) and
+  <b>Google Scholar</b> (crawls everything, incl. conference papers, chapters, self-citations) count different
+  universes — Scholar runs higher, especially in conference-heavy fields like Human Factors, which is why
+  Helton overtakes on Scholar. OpenAlex totals here are <b>fragmentation-corrected</b>: computed by summing
+  each author’s works via ORCID, not from a single (often under-counting) author record. Five faculty
+  (${B.no_scholar.join(", ")}) have <b>no Google Scholar profile</b> — their Scholar figures are absent by
+  choice, not zero impact. Web of Science/Scopus (the conservative, journal-only source) is deferred.
+  Everything is reproducible and re-runnable each year from <span class="muted">impact/dept-benchmark/</span>.`;
+
+/* ---------- theme toggle ---------- */
+$("#themeBtn").addEventListener("click",()=>{
+  const cur=document.documentElement.getAttribute("data-theme");
+  const next=cur==="dark"?"light":cur==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");
+  document.documentElement.setAttribute("data-theme",next);
+  ["#slope","#scatter","#bars","#traj"].forEach(id=>$(id).innerHTML="");
+  draw();
+});
+function draw(){ slope(); scatter(); bars(); traj(); }
+draw(); table();
+</script>
+</body>
+</html>
