@@ -139,7 +139,7 @@ $("#tiles").innerHTML=`
   <div class="tile team"><div class="k">Your lab · combined</div><div class="v">${B.team.share_union}%<small> of dept · #${B.team.rank} of ${B.team.n_others}</small></div></div>
   <div class="tile"><div class="k">Your source-gap</div><div class="v">${s.fold}×<small> · CV ${s.cv}</small></div></div>`;
 $("#selfline").innerHTML=`Read honestly against the <b>entire</b> department: you are <b>#${s.oa_rank} of ${s.n}</b>
-  on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly six people who
+  on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly five people who
   carry the department, holding <b>${s.share}% of all its citations</b>. Not the top, not the bottom: a driver. And your
   ${s.fold}× source-gap sits near the department median, so your standing isn't an artifact of a favorable database.`;
 const T=B.team;
@@ -147,7 +147,7 @@ $("#teamBox").innerHTML=`<div style="background:var(--you-soft);border:1px solid
   <div style="font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Team view — one lab</div>
   <div style="font-size:1.06rem;margin-top:5px;max-width:70ch"><b>${T.members[0]} + ${T.members[1]}</b> run one lab together —
   <b>${T.shared_works} co-authored papers</b>. As a single unit the lab holds <b>${T.union_cites.toLocaleString()} citations</b>
-  (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, nearly one in five — which would rank
+  (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, about one in five — which would rank
   <b>#${T.rank} of ${T.n_others}</b>, ahead of every individual. <span class="muted">(Summing both totals raw: ${T.share_simple}%.)</span></div>
 </div>`;
 $("#callout").innerHTML=`
@@ -162,7 +162,7 @@ legend("#leg3",[{c:"var(--oa)",t:"Faculty (OpenAlex)"},{c:"var(--you)",t:"You"}]
 legend("#leg4",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
 legend("#leg5",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}]);
 
-/* 1. department distribution (all 60, sorted, linear) */
+/* 1. department distribution (all active faculty, sorted, linear) */
 function dept(){
   const team=new Set(B.team.keys);
   const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:team.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank}));
@@ -191,7 +191,7 @@ function dept(){
     const t=txt(x,Y(d.c)-6,ab(d.name),"middle","glabel");
     if(d.team){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");}
     t.setAttribute("transform",`rotate(-32 ${x} ${Y(d.c)-6})`); S.appendChild(t);} });
-  S.appendChild(txt(W/2,H-8,"60 full-time faculty, ranked by citations →","middle","lbl"));
+  S.appendChild(txt(W/2,H-8,`${B.n_faculty} full-time faculty, ranked by citations →`,"middle","lbl"));
   $("#dept").appendChild(S);
 }
 
@@ -238,7 +238,7 @@ function scatter(){
     c.style.cursor="default";
     c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">${cur(f.oa_works)} works · h ${f.oa_h} · ${cur(f.oa_cites)} cites</span>`,e));
     c.addEventListener("pointerleave",hideTip); S.appendChild(c);
-    if(you||["Todd B. Kashdan","June P Tangney","Gerald Matthews","Stephen Zaccaro","Deborah E. Rupp"].includes(f.name)){
+    if(you||["Todd B. Kashdan","Gerald Matthews","Stephen Zaccaro","Deborah E. Rupp"].includes(f.name)){
       const t=txt(X(f.oa_works),Y(f.oa_h)-R(f.oa_cites)-6,ab(f.name),"middle","glabel"); if(you){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");} S.appendChild(t);}});
   $("#scatter").appendChild(S);
 }

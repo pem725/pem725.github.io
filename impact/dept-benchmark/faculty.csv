@@ -48,7 +48,7 @@ shusko_r,Shusko,Robin,Robin Shusko,Instructor,instructor,Unknown,FALSE,FALSE,NA,
 smithgray_s,Smith-Gray,Sybil,Sybil Smith-Gray,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5043425289,NA,NA,NA,TRUE,Added in full-dept expansion
 stagl_k,Stagl,Kevin,Kevin C Stagl,Associate,tenure_line,I-O,TRUE,FALSE,NA,A5075118367,Gm5m6zIAAAAJ,NA,NA,TRUE,Added in full-dept expansion
 stuewig_j,Stuewig,Jeffrey,Jeffrey B Stuewig,Associate,tenure_line,Clinical,TRUE,FALSE,NA,A5076800459,3-AdJBMAAAAJ,NA,NA,TRUE,Added in full-dept expansion
-tangney_j,Tangney,June,June P Tangney,Distinguished Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-9486-5026,A5090645557,cVlspjMAAAAJ,NA,NA,TRUE,Distinguished University Professor
+tangney_j,Tangney,June,June P Tangney,Distinguished Professor,tenure_line,Clinical,TRUE,FALSE,0000-0002-9486-5026,A5090645557,cVlspjMAAAAJ,NA,NA,FALSE,Distinguished University Professor; retired 2026 - excluded from comparison (row + history kept)
 thompson_d,Thompson,Dawna,Dawna M Thompson,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5027690329,NA,NA,NA,TRUE,Added in full-dept expansion
 thompson_j,Thompson,James,James C Thompson,Professor,tenure_line,CBN,TRUE,FALSE,NA,NA,2VKzuqwAAAAJ,NA,NA,TRUE,UNRESOLVED-OA: real CBN researcher but OpenAlex record fragmented across IDs and polluted by a homonymous biologist; do NOT treat as zero. Use Scholar.
 tonge_n,Tonge,Natasha,Natasha A Tonge,Assistant,tenure_line,Clinical,TRUE,FALSE,0000-0001-7670-7991,A5077877685,bpou7qoAAAAJ,NA,NA,TRUE,Added in full-dept expansion
