@@ -64,6 +64,7 @@
   .seg button{background:var(--surface);color:var(--ink2);border:none;border-left:1px solid var(--border);padding:5px 12px;font-size:.8rem;cursor:pointer;font-family:inherit}
   .seg button:first-child{border-left:none}
   .seg button.on{background:var(--ink);color:var(--plane);font-weight:600}
+  .exp{font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--you);border:1px solid var(--you);border-radius:5px;padding:1px 6px;vertical-align:middle;margin-left:6px}
   .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
   .note b{color:var(--ink)}
   .callout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
@@ -134,14 +135,31 @@
     <div class="seg" id="segMetric"><button data-v="year" class="on">Per-year</button><button data-v="cum">Cumulative</button></div>
     <span class="seglab">Scale</span>
     <div class="seg" id="segScale"><button data-v="lin" class="on">Linear</button><button data-v="log">Log</button></div>
-    <div class="seg" id="segAvg"><button data-v="on" class="on">Dept median</button></div>
+    <span class="seglab">Median</span>
+    <div class="seg" id="segMed"><button data-v="off">Off</button><button data-v="all" class="on">Whole dept</button><button data-v="rank">My rank</button></div>
   </div>
   <div class="legend" id="leg5b"></div>
   <figure><div id="trajB"></div>
     <figcaption>Career year 0 = each person's first year with an indexed citation on the selected source.
-    Your lab is highlighted; hover any faint line to trace and color it by rank. The dashed line is the
-    department <b>median</b> at each career year (median, not mean — a few superstars would make the mean
-    misleading), drawn only where at least 5 faculty have reached that career year.</figcaption></figure>
+    Your lab is highlighted; hover any faint line to trace it, or <b>click to pin</b> it for a head-to-head
+    (click again to unpin). The dashed line is the <b>median</b> — of the whole department or just your own
+    rank — because a few superstars would make the mean misleading; it's drawn only where enough faculty
+    have reached that career year.</figcaption></figure>
+
+  <h2>6 · Relative to the pack <span class="exp">experimental</span></h2>
+  <p class="sub">Each faculty's cumulative citations divided by the <b>department median at the same career
+  year</b>. The solid line at <b>1×</b> is the median itself: above it means pulling ahead of the typical
+  colleague at that stage, below means behind. This strips out both career length <em>and</em> absolute
+  scale, so it asks one honest question — are you out- or under-performing the middle of the pack, and is
+  the gap widening or closing over a career? (Shares the pins from 5B — click any line.)</p>
+  <div class="segwrap">
+    <span class="seglab">Source</span>
+    <div class="seg" id="segRelSrc"><button data-v="openalex" class="on">OpenAlex</button><button data-v="scholar">Google Scholar</button></div>
+  </div>
+  <div class="legend" id="leg6"></div>
+  <figure><div id="rel"></div>
+    <figcaption>Cumulative citations ÷ department median, matched by career year (log axis; the median is
+    1× by construction). Your lab is highlighted; hover to trace, click to pin.</figcaption></figure>
 
   <h2>The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
@@ -332,7 +350,9 @@ function traj(){
 }
 
 /* 5B. career-centered trajectories for the whole department (interactive) */
-const B5={src:"openalex",metric:"year",scale:"lin",avg:true};
+const B5={src:"openalex",metric:"year",scale:"lin",med:"all"};
+const PINS=new Set();                                   // faculty keys pinned by clicking
+const SELF_RG=(B.traj_all.find(t=>t.is_self)||{}).rg;   // your rank group, for the cohort median
 function centered(t){ // re-center a faculty's selected-source series on their first cited year; project current year
   const raw=t[B5.src]; if(!raw||!raw.length) return null;
   const i0=raw.findIndex(p=>p.cites>0); if(i0<0) return null;
@@ -360,29 +380,72 @@ function trajB(){
   const xstep=Math.max(1,Math.ceil(tmax/10)); for(let tt=0;tt<=tmax;tt+=xstep)S.appendChild(txt(X(tt),H-pb+18,tt,"middle"));
   S.appendChild(txt(W/2,H-4,"Career year — 0 = first indexed citation →","middle","lbl"));
   const yl=txt(15,H/2,(B5.metric==="cum"?"Cumulative ":"")+(B5.src==="scholar"?"Scholar":"OpenAlex")+" citations"+(log?" (log)":"")+" →","middle","lbl");yl.setAttribute("transform",`rotate(-90 15 ${H/2})`);S.appendChild(yl);
-  // faint non-team lines first, then team on top
-  const draw=s=>{const tm=s.t.team,col=tm?css("--you"):css("--muted");
-    const path=el("path",{d:pathd(s.pts),fill:"none",stroke:col,"stroke-width":tm?2.6:1,"stroke-opacity":tm?1:.26,"stroke-linejoin":"round"});
-    S.appendChild(path); s.el=path; s.col=col;
-    if(tm){const q=s.pts[s.pts.length-1];const t=txt(X(q.t)+5,Y(q.v)+4,ab(s.t.name),"start","glabel");t.setAttribute("fill",col);t.setAttribute("font-weight","650");S.appendChild(t);}};
-  series.filter(s=>!s.t.team).forEach(draw); series.filter(s=>s.t.team).forEach(draw);
-  // department median line (median, not mean — a few superstars make the mean misleading).
-  // Only drawn where >=5 faculty have reached that career year, so the tail isn't one long career.
-  if(B5.avg){const byT={};series.forEach(s=>s.pts.forEach(p=>{(byT[p.t]=byT[p.t]||[]).push(p.v);}));
-    const med=Object.keys(byT).map(Number).sort((a,b)=>a-b).filter(t=>byT[t].length>=5).map(t=>({t,v:median(byT[t])}));
+  // featured = your lab (always) OR pinned by click. Featured lines are colored + labeled;
+  // team stays orange, pinned faculty take their rank color. Everyone else is faint gray.
+  const feat=s=>s.t.team||PINS.has(s.t.key);
+  const draw=s=>{const ft=feat(s),col=s.t.team?css("--you"):(ft?rankcss(s.t):css("--muted"));
+    const path=el("path",{d:pathd(s.pts),fill:"none",stroke:col,"stroke-width":ft?2.6:1,"stroke-opacity":ft?1:.24,"stroke-linejoin":"round"});
+    S.appendChild(path); s.el=path; s.col=col; s.ft=ft;
+    if(ft){const q=s.pts[s.pts.length-1];const t=txt(X(q.t)+5,Y(q.v)+4,ab(s.t.name),"start","glabel");t.setAttribute("fill",col);t.setAttribute("font-weight","650");S.appendChild(t);}};
+  series.filter(s=>!feat(s)).forEach(draw); series.filter(feat).forEach(draw);
+  // reference line: median (not mean — superstars skew the mean). Dept-wide or just your rank cohort.
+  // Only drawn where enough faculty have reached that career year, so the tail isn't one long career.
+  if(B5.med!=="off"){const cohort=B5.med==="rank", pool=cohort?series.filter(s=>s.t.rg===SELF_RG):series, mn=cohort?3:5;
+    const byT={};pool.forEach(s=>s.pts.forEach(p=>{(byT[p.t]=byT[p.t]||[]).push(p.v);}));
+    const med=Object.keys(byT).map(Number).sort((a,b)=>a-b).filter(t=>byT[t].length>=mn).map(t=>({t,v:median(byT[t])}));
     if(med.length){S.appendChild(el("path",{d:pathd(med),fill:"none",stroke:css("--ink"),"stroke-width":2.4,"stroke-dasharray":"7 4","stroke-opacity":.9}));
-      const l=med[med.length-1];const t=txt(X(l.t)+5,Y(l.v)+4,"dept median","start","glabel");t.setAttribute("fill",css("--ink"));t.setAttribute("font-weight","650");S.appendChild(t);}}
-  // hover-to-trace: fat invisible hit paths raise + recolor the real line by rank
-  const hi=(s,on)=>{if(s.t.team)return;s.el.setAttribute("stroke",on?rankcss(s.t):s.col);s.el.setAttribute("stroke-opacity",on?1:.26);s.el.setAttribute("stroke-width",on?2.4:1);if(on)s.el.parentNode.appendChild(s.el);};
+      const l=med[med.length-1],lab=cohort?(SELF_RG+" median"):"dept median";const t=txt(X(l.t)+5,Y(l.v)+4,lab,"start","glabel");t.setAttribute("fill",css("--ink"));t.setAttribute("font-weight","650");S.appendChild(t);}}
+  // hover-to-trace + click-to-pin: fat invisible hit paths
+  const hi=(s,on)=>{if(s.ft)return;s.el.setAttribute("stroke",on?rankcss(s.t):s.col);s.el.setAttribute("stroke-opacity",on?1:.24);s.el.setAttribute("stroke-width",on?2.4:1);if(on)s.el.parentNode.appendChild(s.el);};
   series.forEach(s=>{const hit=el("path",{d:pathd(s.pts),fill:"none",stroke:"transparent","stroke-width":10,"pointer-events":"stroke"});hit.style.cursor="pointer";
-    hit.addEventListener("pointermove",e=>{hi(s,true);const q=s.pts[s.pts.length-1];showTip(`<b>${s.t.name}</b> · ${s.t.rg}<br><span class="r">career yr ${q.t} · ${B5.metric==="cum"?"cumulative ":""}${Math.round(q.v).toLocaleString()} cites${q.proj?" (proj)":""}</span>`,e);});
-    hit.addEventListener("pointerleave",()=>{hi(s,false);hideTip();});S.appendChild(hit);});
+    hit.addEventListener("pointermove",e=>{hi(s,true);const q=s.pts[s.pts.length-1];showTip(`<b>${s.t.name}</b> · ${s.t.rg}${PINS.has(s.t.key)?" · pinned":""}<br><span class="r">career yr ${q.t} · ${B5.metric==="cum"?"cumulative ":""}${Math.round(q.v).toLocaleString()} cites${q.proj?" (proj)":""}<br>click to ${PINS.has(s.t.key)?"unpin":"pin"}</span>`,e);});
+    hit.addEventListener("pointerleave",()=>{hi(s,false);hideTip();});
+    hit.addEventListener("click",()=>{if(s.t.team)return;PINS.has(s.t.key)?PINS.delete(s.t.key):PINS.add(s.t.key);trajB();rel();});
+    S.appendChild(hit);});
   host.appendChild(S);
 }
 function wireSeg(id,key){$(id).querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
-  if(key==="avg"){B5.avg=!B5.avg;b.classList.toggle("on",B5.avg);}
-  else{B5[key]=b.dataset.v;$(id).querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));}
-  trajB();}));}
+  B5[key]=b.dataset.v;$(id).querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));trajB();}));}
+
+/* 6. relative-to-median trajectory (EXPERIMENTAL): each faculty's cumulative citations ÷ dept median at the same career year */
+const B6={src:"openalex"};
+function relCentered(t,src){const raw=t[src];if(!raw||!raw.length)return null;const i0=raw.findIndex(p=>p.cites>0);if(i0<0)return null;const y0=raw[i0].year;let cum=0;const pts=[];for(let i=i0;i<raw.length;i++){cum+=proj(raw[i].year,raw[i].cites);pts.push({t:raw[i].year-y0,v:cum});}return pts;}
+function rel(){
+  const host=$("#rel"); host.innerHTML="";
+  const series=B.traj_all.map(t=>({t,pts:relCentered(t,B6.src)})).filter(s=>s.pts&&s.pts.length);
+  if(!series.length)return;
+  const byT={};series.forEach(s=>s.pts.forEach(p=>{(byT[p.t]=byT[p.t]||[]).push(p.v);}));
+  const medAt={};Object.keys(byT).forEach(t=>{if(byT[t].length>=5)medAt[t]=median(byT[t]);});
+  const rs=series.map(s=>({t:s.t,pts:s.pts.filter(p=>medAt[p.t]>0).map(p=>({t:p.t,v:p.v/medAt[p.t]}))})).filter(s=>s.pts.length);
+  if(!rs.length)return;
+  const W=980,H=460,pl=60,pr=112,pt=18,pb=44;
+  const tmax=Math.max(...rs.flatMap(s=>s.pts.map(p=>p.t)))||1;
+  const rv=rs.flatMap(s=>s.pts.map(p=>p.v)).filter(v=>v>0);
+  const vmax=Math.max(...rv,1.2),vmin=Math.max(0.05,Math.min(...rv,0.8));
+  const X=t=>pl+t/tmax*(W-pl-pr);
+  const lo=Math.log10(vmin),hi=Math.log10(vmax),Y=v=>H-pb-(Math.log10(Math.max(v,vmin))-lo)/(hi-lo)*(H-pt-pb);
+  const S=svg(W,H),pathd=pts=>pts.map((p,i)=>(i?"L":"M")+X(p.t).toFixed(1)+" "+Y(p.v).toFixed(1)).join(" ");
+  [0.1,0.3,1,3,10,30].filter(v=>v>=vmin*0.9&&v<=vmax*1.1).forEach(v=>{const gy=Y(v);S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:v===1?css("--axis"):css("--grid"),"stroke-width":v===1?1.6:1}));S.appendChild(txt(pl-8,gy+4,v+"×","end"));});
+  const xstep=Math.max(1,Math.ceil(tmax/10));for(let tt=0;tt<=tmax;tt+=xstep)S.appendChild(txt(X(tt),H-pb+18,tt,"middle"));
+  S.appendChild(txt(W/2,H-4,"Career year — 0 = first indexed citation →","middle","lbl"));
+  const yl=txt(15,H/2,(B6.src==="scholar"?"Scholar":"OpenAlex")+" cumulative ÷ dept median (log) →","middle","lbl");yl.setAttribute("transform",`rotate(-90 15 ${H/2})`);S.appendChild(yl);
+  S.appendChild(txt(W-pr+4,Y(1)-5,"median 1×","start","glabel"));
+  const feat=s=>s.t.team||PINS.has(s.t.key);
+  const draw=s=>{const ft=feat(s),col=s.t.team?css("--you"):(ft?rankcss(s.t):css("--muted"));
+    const path=el("path",{d:pathd(s.pts),fill:"none",stroke:col,"stroke-width":ft?2.6:1,"stroke-opacity":ft?1:.24,"stroke-linejoin":"round"});
+    S.appendChild(path);s.el=path;s.col=col;s.ft=ft;
+    if(ft){const q=s.pts[s.pts.length-1];const t=txt(X(q.t)+5,Y(q.v)+4,ab(s.t.name),"start","glabel");t.setAttribute("fill",col);t.setAttribute("font-weight","650");S.appendChild(t);}};
+  rs.filter(s=>!feat(s)).forEach(draw);rs.filter(feat).forEach(draw);
+  const trace=(s,on)=>{if(s.ft)return;s.el.setAttribute("stroke",on?rankcss(s.t):s.col);s.el.setAttribute("stroke-opacity",on?1:.24);s.el.setAttribute("stroke-width",on?2.4:1);if(on)s.el.parentNode.appendChild(s.el);};
+  rs.forEach(s=>{const hit=el("path",{d:pathd(s.pts),fill:"none",stroke:"transparent","stroke-width":10,"pointer-events":"stroke"});hit.style.cursor="pointer";
+    hit.addEventListener("pointermove",e=>{trace(s,true);const q=s.pts[s.pts.length-1];showTip(`<b>${s.t.name}</b> · ${s.t.rg}<br><span class="r">career yr ${q.t} · <b>${q.v.toFixed(1)}×</b> the dept median<br>click to ${PINS.has(s.t.key)?"unpin":"pin"}</span>`,e);});
+    hit.addEventListener("pointerleave",()=>{trace(s,false);hideTip();});
+    hit.addEventListener("click",()=>{if(s.t.team)return;PINS.has(s.t.key)?PINS.delete(s.t.key):PINS.add(s.t.key);rel();trajB();});
+    S.appendChild(hit);});
+  host.appendChild(S);
+}
+function wireSeg6(){$("#segRelSrc").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+  B6.src=b.dataset.v;$("#segRelSrc").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));rel();}));}
 
 function table(){
   const cols=[
@@ -422,10 +485,11 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 
-$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB"].forEach(id=>$(id).innerHTML="");draw();});
-function draw(){dept();slope();scatter();bars();traj();trajB();}
-legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover to trace)"},{c:"var(--ink)",t:"Dept median"}]);
-wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segAvg","avg");
+$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel"].forEach(id=>$(id).innerHTML="");draw();});
+function draw(){dept();slope();scatter();bars();traj();trajB();rel();}
+legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);
+legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
+wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segMed","med");wireSeg6();
 draw(); table();
 </script>
 </body>
