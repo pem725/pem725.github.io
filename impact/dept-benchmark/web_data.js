@@ -1,5 +1,5 @@
 window.BENCH = {
-  "snapshot_date": "2026-07-12",
+  "snapshot_date": "2026-07-13",
   "n_faculty": 59,
   "n_openalex": 50,
   "n_scholar": 44,
@@ -32,7 +32,7 @@ window.BENCH = {
     "oa_pct": 93,
     "sch_pct": 90,
     "oa_cites": 10029,
-    "sch_cites": 16616,
+    "sch_cites": 16629,
     "oa_h": 45,
     "sch_h": 52,
     "fold": 1.66,
@@ -135,7 +135,7 @@ window.BENCH = {
       "oa_cites": 10029,
       "oa_h": 45,
       "oa_i10": 77,
-      "sch_cites": 16616,
+      "sch_cites": 16629,
       "sch_h": 52,
       "sch_i10": 80,
       "fold": 1.66,
@@ -177,9 +177,9 @@ window.BENCH = {
       "oa_cites": 8895,
       "oa_h": 39,
       "oa_i10": 67,
-      "sch_cites": 14871,
+      "sch_cites": 14873,
       "sch_h": 43,
-      "sch_i10": 72,
+      "sch_i10": 71,
       "fold": 1.67,
       "cv": 0.356,
       "oa_rank": 7,
@@ -198,7 +198,7 @@ window.BENCH = {
       "oa_cites": 6178,
       "oa_h": 42,
       "oa_i10": 111,
-      "sch_cites": 20113,
+      "sch_cites": 20124,
       "sch_h": 51,
       "sch_i10": 140,
       "fold": 3.26,
@@ -219,11 +219,11 @@ window.BENCH = {
       "oa_cites": 5734,
       "oa_h": 35,
       "oa_i10": 58,
-      "sch_cites": 9370,
+      "sch_cites": 9380,
       "sch_h": 40,
       "sch_i10": 61,
-      "fold": 1.63,
-      "cv": 0.34,
+      "fold": 1.64,
+      "cv": 0.341,
       "oa_rank": 9,
       "sch_rank": 11,
       "oa_resolved": true,
@@ -261,7 +261,7 @@ window.BENCH = {
       "oa_cites": 4982,
       "oa_h": 30,
       "oa_i10": 53,
-      "sch_cites": 8774,
+      "sch_cites": 8777,
       "sch_h": 37,
       "sch_i10": 62,
       "fold": 1.76,
@@ -303,11 +303,11 @@ window.BENCH = {
       "oa_cites": 4666,
       "oa_h": 36,
       "oa_i10": 63,
-      "sch_cites": 9022,
+      "sch_cites": 9029,
       "sch_h": 42,
       "sch_i10": 75,
-      "fold": 1.93,
-      "cv": 0.45,
+      "fold": 1.94,
+      "cv": 0.451,
       "oa_rank": 13,
       "sch_rank": 12,
       "oa_resolved": true,
@@ -429,10 +429,10 @@ window.BENCH = {
       "oa_cites": 2899,
       "oa_h": 24,
       "oa_i10": 38,
-      "sch_cites": 6622,
+      "sch_cites": 6626,
       "sch_h": 37,
       "sch_i10": 51,
-      "fold": 2.28,
+      "fold": 2.29,
       "cv": 0.553,
       "oa_rank": 19,
       "sch_rank": 17,
@@ -492,11 +492,11 @@ window.BENCH = {
       "oa_cites": 2287,
       "oa_h": 22,
       "oa_i10": 40,
-      "sch_cites": 2661,
+      "sch_cites": 2664,
       "sch_h": 24,
       "sch_i10": 44,
       "fold": 1.16,
-      "cv": 0.107,
+      "cv": 0.108,
       "oa_rank": 22,
       "sch_rank": 30,
       "oa_resolved": true,
@@ -639,11 +639,11 @@ window.BENCH = {
       "oa_cites": 1639,
       "oa_h": 21,
       "oa_i10": 29,
-      "sch_cites": 2731,
+      "sch_cites": 2736,
       "sch_h": 28,
       "sch_i10": 37,
       "fold": 1.67,
-      "cv": 0.353,
+      "cv": 0.355,
       "oa_rank": 29,
       "sch_rank": 28,
       "oa_resolved": true,
@@ -744,11 +744,11 @@ window.BENCH = {
       "oa_cites": 1341,
       "oa_h": 19,
       "oa_i10": 28,
-      "sch_cites": 1703,
+      "sch_cites": 1704,
       "sch_h": 21,
       "sch_i10": 28,
       "fold": 1.27,
-      "cv": 0.168,
+      "cv": 0.169,
       "oa_rank": 34,
       "sch_rank": 35,
       "oa_resolved": true,
@@ -1478,11 +1478,11 @@ window.BENCH = {
       },
       {
         "year": 2019,
-        "cites": 1075
+        "cites": 1076
       },
       {
         "year": 2020,
-        "cites": 1159
+        "cites": 1161
       },
       {
         "year": 2021,
@@ -1490,11 +1490,11 @@ window.BENCH = {
       },
       {
         "year": 2022,
-        "cites": 1469
+        "cites": 1468
       },
       {
         "year": 2023,
-        "cites": 1405
+        "cites": 1406
       },
       {
         "year": 2024,
@@ -1502,11 +1502,11 @@ window.BENCH = {
       },
       {
         "year": 2025,
-        "cites": 1545
+        "cites": 1552
       },
       {
         "year": 2026,
-        "cites": 793
+        "cites": 796
       }
     ]
   }
