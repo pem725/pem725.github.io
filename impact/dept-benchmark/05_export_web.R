@@ -34,7 +34,13 @@ wide <- peers |>
          cv   = ifelse(oa_resolved & sch_resolved,
                        round(apply(cbind(sch_cites,oa_cites),1,function(r) sd(r)/mean(r)),3), NA),
          oa_rank  = rank(-oa_c0,  ties.method="min"),
-         sch_rank = rank(-sch_c0, ties.method="min"))
+         sch_rank = rank(-sch_c0, ties.method="min"),
+         rank_group = case_when(
+           category %in% c("instructor", "research") ~ "Other",
+           rank == "Assistant"                        ~ "Assistant",
+           rank == "Professor"                        ~ "Full",
+           grepl("Associate", rank)                   ~ "Associate",
+           TRUE                                       ~ "Other"))
 
 n <- nrow(wide)
 # concentration on OpenAlex (0-filled)
@@ -69,9 +75,21 @@ team <- list(
   rank = sum(team_others > team_union) + 1, n_others = length(team_others) + 1)
 
 self <- wide |> filter(is_self)
-byyear <- function(src) m |> filter(faculty_key=="mcknight_p", source==src, metric_year!="lifetime",
+byyear <- function(key, src) m |> filter(faculty_key==key, source==src, metric_year!="lifetime",
                                      snapshot_date==latest) |>
   transmute(year=as.integer(metric_year), cites=cited_by_count) |> arrange(year) |> filter(!is.na(cites))
+
+# All-faculty by-year trajectories (both sources) for the career-centered overlay (Fig 5B).
+# Each faculty is later re-centered client-side on their own first indexed-citation year.
+traj_all <- lapply(seq_len(n), function(i) {
+  k <- wide$faculty_key[i]
+  oa <- byyear(k, "openalex"); sc <- byyear(k, "scholar")
+  list(key = k, name = wide$full_name[i], rg = wide$rank_group[i],
+       is_self = wide$is_self[i], team = k %in% TEAM_KEYS,
+       openalex = oa, scholar = sc)
+})
+# keep only faculty who have at least one by-year series
+traj_all <- Filter(function(t) nrow(t$openalex) > 0 || nrow(t$scholar) > 0, traj_all)
 
 out <- list(
   snapshot_date = latest, n_faculty = n,
@@ -87,16 +105,11 @@ out <- list(
     oa_h = self$oa_h, sch_h = self$sch_h, fold = self$fold, cv = self$cv,
     share = round(100*self$oa_c0/tot,1)),
   faculty = wide |> arrange(desc(oa_c0)) |>
-    mutate(rank_group = case_when(
-      category %in% c("instructor", "research") ~ "Other",
-      rank == "Assistant"                        ~ "Assistant",
-      rank == "Professor"                        ~ "Full",
-      grepl("Associate", rank)                   ~ "Associate",  # incl. "Associate Chair"
-      TRUE                                       ~ "Other")) |>
     transmute(key=faculty_key, name=full_name, disc=discipline, rank, rank_group, category, is_self,
               oa_works, oa_cites, oa_h, oa_i10, sch_cites, sch_h, sch_i10,
               fold, cv, oa_rank, sch_rank, oa_resolved, sch_resolved),
-  self_byyear = list(openalex = byyear("openalex"), scholar = byyear("scholar"))
+  self_byyear = list(openalex = byyear("mcknight_p","openalex"), scholar = byyear("mcknight_p","scholar")),
+  traj_all = traj_all
 )
 json <- toJSON(out, auto_unbox=TRUE, na="null", pretty=TRUE)
 write(json, "web_data.json")

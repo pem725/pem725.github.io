@@ -58,6 +58,12 @@
   .tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:9px;padding:8px 10px;font-size:.8rem;box-shadow:0 6px 24px rgba(0,0,0,.16);opacity:0;transition:opacity .08s;z-index:20;max-width:250px}
   .tip .r{color:var(--ink2)}
   th.hcol{cursor:help;text-decoration:underline dotted var(--axis);text-underline-offset:3px;text-decoration-thickness:1px}
+  .segwrap{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:10px 4px 4px}
+  .seglab{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .seg button{background:var(--surface);color:var(--ink2);border:none;border-left:1px solid var(--border);padding:5px 12px;font-size:.8rem;cursor:pointer;font-family:inherit}
+  .seg button:first-child{border-left:none}
+  .seg button.on{background:var(--ink);color:var(--plane);font-weight:600}
   .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
   .note b{color:var(--ink)}
   .callout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
@@ -107,11 +113,34 @@
     <figcaption>Fold-gap = larger citation count ÷ smaller, across the two sources. Near 1× =
     source-proof; a long bar = the headline is a choice. Hover for CV and both counts.</figcaption></figure>
 
-  <h2>5 · Your citation trajectory</h2>
+  <h2>5A · Your citation trajectory</h2>
   <div class="legend" id="leg5"></div>
   <figure><div id="traj"></div>
     <figcaption>Citations received each year, both sources. The gap is the same story at the
-    individual level: Scholar counts more (conference papers, chapters, self-citations).</figcaption></figure>
+    individual level: Scholar counts more (conference papers, chapters, self-citations).
+    <b>2026 is a projection*</b> (hollow marker, dashed) — year-to-date citations scaled to a full
+    year by the fraction of the year elapsed at the snapshot date. A flat, linear estimate, not a model.</figcaption></figure>
+
+  <h2>5B · Career-centered trajectories — the whole department</h2>
+  <p class="sub">Every faculty member's trajectory, each re-centered so <b>year 0 = their first indexed
+  citation</b>. Strip away <em>when</em> someone started and you can compare the <em>shape</em> of a career:
+  who accelerates, who plateaus, who is still climbing. Hover any line to trace one person; your lab is
+  always lit. (These databases post-date many careers, so early years can be undercounted; the current
+  year is projected as in 5A.)</p>
+  <div class="segwrap">
+    <span class="seglab">Source</span>
+    <div class="seg" id="segSrc"><button data-v="openalex" class="on">OpenAlex</button><button data-v="scholar">Google Scholar</button></div>
+    <span class="seglab">Measure</span>
+    <div class="seg" id="segMetric"><button data-v="year" class="on">Per-year</button><button data-v="cum">Cumulative</button></div>
+    <span class="seglab">Scale</span>
+    <div class="seg" id="segScale"><button data-v="lin" class="on">Linear</button><button data-v="log">Log</button></div>
+    <div class="seg" id="segAvg"><button data-v="on" class="on">Dept average</button></div>
+  </div>
+  <div class="legend" id="leg5b"></div>
+  <figure><div id="trajB"></div>
+    <figcaption>Career year 0 = each person's first year with an indexed citation on the selected source.
+    Your lab is highlighted; hover any faint line to trace and color it by rank. The dashed line is the
+    department average at each career year.</figcaption></figure>
 
   <h2>The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
@@ -138,6 +167,9 @@ const TEAMSET=new Set(B.team.keys);
 const RKC={Assistant:"--rk-asst",Associate:"--rk-assoc",Full:"--rk-full",Other:"--rk-other"};
 const rankcss=f=>css(RKC[f.rank_group]||"--rk-other");
 const rankLeg=[{c:"var(--rk-asst)",t:"Assistant"},{c:"var(--rk-assoc)",t:"Associate"},{c:"var(--rk-full)",t:"Full professor"},{c:"var(--rk-other)",t:"Instructor / research"},{b:"var(--you)",t:"Your lab (outlined)"}];
+// current-year projection: scale year-to-date citations to a full year by the fraction of the year elapsed at the snapshot
+const SNAP=(()=>{const p=B.snapshot_date.split("-").map(Number),d=Date.UTC(p[0],p[1]-1,p[2]),y0=Date.UTC(p[0],0,1),y1=Date.UTC(p[0]+1,0,1);return {year:p[0],frac:(d-y0)/(y1-y0)};})();
+const proj=(year,cites)=>year===SNAP.year?cites/SNAP.frac:cites;
 
 const s=B.self, C=B.concentration;
 $("#meta").textContent=`Snapshot ${B.snapshot_date}. ${B.n_faculty} full-time faculty; OpenAlex resolved ${B.n_openalex}, Google Scholar ${B.n_scholar}.`;
@@ -272,24 +304,82 @@ function bars(){
   $("#bars").appendChild(S);
 }
 
-/* 5. trajectory */
+/* 5A. your trajectory — current year projected to a full-year estimate */
 function traj(){
-  const oa=B.self_byyear.openalex, sc=B.self_byyear.scholar, all=oa.concat(sc); if(!all.length)return;
+  // project the snapshot-year point to a full-year estimate
+  const P=p=>p.map(q=>({year:q.year,cites:Math.round(proj(q.year,q.cites)),proj:q.year===SNAP.year}));
+  const oa=P(B.self_byyear.openalex), sc=P(B.self_byyear.scholar), all=oa.concat(sc); if(!all.length)return;
   const W=980,H=420,pl=52,pr=18,pt=18,pb=40;
   const yrs=all.map(d=>d.year),y0=Math.min(...yrs),y1=Math.max(...yrs),vmax=Math.max(...all.map(d=>d.cites))*1.08;
   const X=y=>pl+(y-y0)/(y1-y0)*(W-pl-pr),Y=v=>H-pb-v/vmax*(H-pt-pb); const S=svg(W,H);
   for(let i=0;i<=4;i++){const gy=pt+i*(H-pt-pb)/4;S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(pl-8,gy+4,Math.round(vmax*(1-i/4)).toLocaleString(),"end"));}
-  const step=Math.ceil((y1-y0)/8); for(let yy=y0;yy<=y1;yy+=step)S.appendChild(txt(X(yy),H-pb+18,yy,"middle"));
-  const line=(p,c)=>{S.appendChild(el("path",{d:p.map((q,i)=>(i?"L":"M")+X(q.year)+" "+Y(q.cites)).join(" "),fill:"none",stroke:c,"stroke-width":2.5,"stroke-linejoin":"round"}));p.forEach(q=>S.appendChild(el("circle",{cx:X(q.year),cy:Y(q.cites),r:3,fill:c})));};
+  const step=Math.ceil((y1-y0)/8); for(let yy=y0;yy<=y1;yy+=step)S.appendChild(txt(X(yy),H-pb+18,yy===SNAP.year?yy+"*":yy,"middle"));
+  const line=(p,c)=>{
+    const solid=p.slice(0,p[p.length-1].proj?p.length-1:p.length);
+    S.appendChild(el("path",{d:solid.map((q,i)=>(i?"L":"M")+X(q.year)+" "+Y(q.cites)).join(" "),fill:"none",stroke:c,"stroke-width":2.5,"stroke-linejoin":"round"}));
+    if(p[p.length-1].proj&&p.length>=2){const a=p[p.length-2],b=p[p.length-1];S.appendChild(el("path",{d:`M${X(a.year)} ${Y(a.cites)} L${X(b.year)} ${Y(b.cites)}`,fill:"none",stroke:c,"stroke-width":2.5,"stroke-dasharray":"5 4"}));}
+    p.forEach(q=>S.appendChild(el("circle",{cx:X(q.year),cy:Y(q.cites),r:q.proj?4.2:3,fill:q.proj?css("--plane"):c,stroke:c,"stroke-width":q.proj?2:0})));};
   line(oa,css("--oa")); line(sc,css("--sch"));
   const lp=(p,c,nm)=>{const q=p[p.length-1];const t=txt(X(q.year)-4,Y(q.cites)-8,nm,"end","glabel");t.setAttribute("fill",c);S.appendChild(t);};
   lp(sc,css("--sch"),"Scholar"); lp(oa,css("--oa"),"OpenAlex");
   const hl=el("line",{y1:pt,y2:H-pb,stroke:css("--axis"),"stroke-width":1,opacity:0});S.appendChild(hl);
   const rect=el("rect",{x:pl,y:pt,width:W-pl-pr,height:H-pt-pb,fill:"transparent"});rect.style.cursor="crosshair";
-  rect.addEventListener("pointermove",e=>{const bb=S.getBoundingClientRect(),sx=(e.clientX-bb.left)/bb.width*W,yr=Math.round(y0+(sx-pl)/(W-pl-pr)*(y1-y0));const fo=oa.find(d=>d.year===yr),fs=sc.find(d=>d.year===yr);hl.setAttribute("x1",X(yr));hl.setAttribute("x2",X(yr));hl.setAttribute("opacity",1);showTip(`<b>${yr}</b><br><span class="r">OpenAlex ${fo?cur(fo.cites):"—"} · Scholar ${fs?cur(fs.cites):"—"}</span>`,e);});
+  rect.addEventListener("pointermove",e=>{const bb=S.getBoundingClientRect(),sx=(e.clientX-bb.left)/bb.width*W,yr=Math.round(y0+(sx-pl)/(W-pl-pr)*(y1-y0));const fo=oa.find(d=>d.year===yr),fs=sc.find(d=>d.year===yr);hl.setAttribute("x1",X(yr));hl.setAttribute("x2",X(yr));hl.setAttribute("opacity",1);const pj=yr===SNAP.year?" (projected)":"";showTip(`<b>${yr}${yr===SNAP.year?"*":""}</b>${pj}<br><span class="r">OpenAlex ${fo?cur(fo.cites):"—"} · Scholar ${fs?cur(fs.cites):"—"}</span>`,e);});
   rect.addEventListener("pointerleave",()=>{hl.setAttribute("opacity",0);hideTip();}); S.appendChild(rect);
   $("#traj").appendChild(S);
 }
+
+/* 5B. career-centered trajectories for the whole department (interactive) */
+const B5={src:"openalex",metric:"year",scale:"lin",avg:true};
+function centered(t){ // re-center a faculty's selected-source series on their first cited year; project current year
+  const raw=t[B5.src]; if(!raw||!raw.length) return null;
+  const i0=raw.findIndex(p=>p.cites>0); if(i0<0) return null;
+  const y0=raw[i0].year; let cum=0; const pts=[];
+  for(let i=i0;i<raw.length;i++){const c=proj(raw[i].year,raw[i].cites); cum+=c;
+    pts.push({t:raw[i].year-y0,v:B5.metric==="cum"?cum:c,proj:raw[i].year===SNAP.year});}
+  return pts;
+}
+function trajB(){
+  const host=$("#trajB"); host.innerHTML="";
+  const series=B.traj_all.map(t=>({t,pts:centered(t)})).filter(s=>s.pts&&s.pts.length);
+  if(!series.length)return;
+  const W=980,H=470,pl=60,pr=108,pt=18,pb=44, log=B5.scale==="log";
+  const tmax=Math.max(...series.flatMap(s=>s.pts.map(p=>p.t)))||1;
+  const vals=series.flatMap(s=>s.pts.map(p=>p.v)).filter(v=>v>0);
+  const vmax=Math.max(...vals), vmin=log?Math.max(0.8,Math.min(...vals)):0;
+  const X=t=>pl+t/tmax*(W-pl-pr);
+  const Y=log?(v=>{const lo=Math.log10(vmin||1),hi=Math.log10(vmax);return H-pb-(Math.log10(Math.max(v,vmin))-lo)/(hi-lo)*(H-pt-pb);})
+             :(v=>H-pb-(v-vmin)/((vmax-vmin)||1)*(H-pt-pb));
+  const S=svg(W,H), pathd=pts=>pts.map((p,i)=>(i?"L":"M")+X(p.t).toFixed(1)+" "+Y(p.v).toFixed(1)).join(" ");
+  // y gridlines + labels
+  const ylabs=log?[1,10,100,1000,10000].filter(v=>v>=vmin&&v<=vmax*1.2):Array.from({length:5},(_,i)=>Math.round(vmax*(1-i/4)));
+  ylabs.forEach(v=>{const gy=Y(v);S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(pl-8,gy+4,v.toLocaleString(),"end"));});
+  // x ticks
+  const xstep=Math.max(1,Math.ceil(tmax/10)); for(let tt=0;tt<=tmax;tt+=xstep)S.appendChild(txt(X(tt),H-pb+18,tt,"middle"));
+  S.appendChild(txt(W/2,H-4,"Career year — 0 = first indexed citation →","middle","lbl"));
+  const yl=txt(15,H/2,(B5.metric==="cum"?"Cumulative ":"")+(B5.src==="scholar"?"Scholar":"OpenAlex")+" citations"+(log?" (log)":"")+" →","middle","lbl");yl.setAttribute("transform",`rotate(-90 15 ${H/2})`);S.appendChild(yl);
+  // faint non-team lines first, then team on top
+  const draw=s=>{const tm=s.t.team,col=tm?css("--you"):css("--muted");
+    const path=el("path",{d:pathd(s.pts),fill:"none",stroke:col,"stroke-width":tm?2.6:1,"stroke-opacity":tm?1:.26,"stroke-linejoin":"round"});
+    S.appendChild(path); s.el=path; s.col=col;
+    if(tm){const q=s.pts[s.pts.length-1];const t=txt(X(q.t)+5,Y(q.v)+4,ab(s.t.name),"start","glabel");t.setAttribute("fill",col);t.setAttribute("font-weight","650");S.appendChild(t);}};
+  series.filter(s=>!s.t.team).forEach(draw); series.filter(s=>s.t.team).forEach(draw);
+  // average line
+  if(B5.avg){const byT={};series.forEach(s=>s.pts.forEach(p=>{(byT[p.t]=byT[p.t]||[]).push(p.v);}));
+    const avg=Object.keys(byT).map(Number).sort((a,b)=>a-b).map(t=>({t,v:byT[t].reduce((a,b)=>a+b,0)/byT[t].length}));
+    S.appendChild(el("path",{d:pathd(avg),fill:"none",stroke:css("--ink"),"stroke-width":2.4,"stroke-dasharray":"7 4","stroke-opacity":.85}));
+    const l=avg[avg.length-1];const t=txt(X(l.t)+5,Y(l.v)+4,"dept avg","start","glabel");t.setAttribute("fill",css("--ink"));t.setAttribute("font-weight","650");S.appendChild(t);}
+  // hover-to-trace: fat invisible hit paths raise + recolor the real line by rank
+  const hi=(s,on)=>{if(s.t.team)return;s.el.setAttribute("stroke",on?rankcss(s.t):s.col);s.el.setAttribute("stroke-opacity",on?1:.26);s.el.setAttribute("stroke-width",on?2.4:1);if(on)s.el.parentNode.appendChild(s.el);};
+  series.forEach(s=>{const hit=el("path",{d:pathd(s.pts),fill:"none",stroke:"transparent","stroke-width":10,"pointer-events":"stroke"});hit.style.cursor="pointer";
+    hit.addEventListener("pointermove",e=>{hi(s,true);const q=s.pts[s.pts.length-1];showTip(`<b>${s.t.name}</b> · ${s.t.rg}<br><span class="r">career yr ${q.t} · ${B5.metric==="cum"?"cumulative ":""}${Math.round(q.v).toLocaleString()} cites${q.proj?" (proj)":""}</span>`,e);});
+    hit.addEventListener("pointerleave",()=>{hi(s,false);hideTip();});S.appendChild(hit);});
+  host.appendChild(S);
+}
+function wireSeg(id,key){$(id).querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+  if(key==="avg"){B5.avg=!B5.avg;b.classList.toggle("on",B5.avg);}
+  else{B5[key]=b.dataset.v;$(id).querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));}
+  trajB();}));}
 
 function table(){
   const cols=[
@@ -329,8 +419,10 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 
-$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj"].forEach(id=>$(id).innerHTML="");draw();});
-function draw(){dept();slope();scatter();bars();traj();}
+$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB"].forEach(id=>$(id).innerHTML="");draw();});
+function draw(){dept();slope();scatter();bars();traj();trajB();}
+legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover to trace)"},{c:"var(--ink)",t:"Dept average"}]);
+wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segAvg","avg");
 draw(); table();
 </script>
 </body>

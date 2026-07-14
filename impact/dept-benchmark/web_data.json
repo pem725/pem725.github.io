@@ -1568,5 +1568,8796 @@
         "cites": 796
       }
     ]
-  }
+  },
+  "traj_all": [
+    {
+      "key": "mcknight_p",
+      "name": "Patrick E. McKnight",
+      "rg": "Associate",
+      "is_self": true,
+      "team": true,
+      "openalex": [
+        {
+          "year": 1986,
+          "cites": 0
+        },
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 1992,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 240
+        },
+        {
+          "year": 2013,
+          "cites": 301
+        },
+        {
+          "year": 2014,
+          "cites": 357
+        },
+        {
+          "year": 2015,
+          "cites": 387
+        },
+        {
+          "year": 2016,
+          "cites": 355
+        },
+        {
+          "year": 2017,
+          "cites": 371
+        },
+        {
+          "year": 2018,
+          "cites": 469
+        },
+        {
+          "year": 2019,
+          "cites": 596
+        },
+        {
+          "year": 2020,
+          "cites": 816
+        },
+        {
+          "year": 2021,
+          "cites": 831
+        },
+        {
+          "year": 2022,
+          "cites": 822
+        },
+        {
+          "year": 2023,
+          "cites": 883
+        },
+        {
+          "year": 2024,
+          "cites": 989
+        },
+        {
+          "year": 2025,
+          "cites": 919
+        },
+        {
+          "year": 2026,
+          "cites": 506
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2003,
+          "cites": 47
+        },
+        {
+          "year": 2004,
+          "cites": 67
+        },
+        {
+          "year": 2005,
+          "cites": 97
+        },
+        {
+          "year": 2006,
+          "cites": 102
+        },
+        {
+          "year": 2007,
+          "cites": 130
+        },
+        {
+          "year": 2008,
+          "cites": 152
+        },
+        {
+          "year": 2009,
+          "cites": 192
+        },
+        {
+          "year": 2010,
+          "cites": 246
+        },
+        {
+          "year": 2011,
+          "cites": 274
+        },
+        {
+          "year": 2012,
+          "cites": 338
+        },
+        {
+          "year": 2013,
+          "cites": 435
+        },
+        {
+          "year": 2014,
+          "cites": 545
+        },
+        {
+          "year": 2015,
+          "cites": 667
+        },
+        {
+          "year": 2016,
+          "cites": 801
+        },
+        {
+          "year": 2017,
+          "cites": 852
+        },
+        {
+          "year": 2018,
+          "cites": 908
+        },
+        {
+          "year": 2019,
+          "cites": 1076
+        },
+        {
+          "year": 2020,
+          "cites": 1161
+        },
+        {
+          "year": 2021,
+          "cites": 1304
+        },
+        {
+          "year": 2022,
+          "cites": 1468
+        },
+        {
+          "year": 2023,
+          "cites": 1406
+        },
+        {
+          "year": 2024,
+          "cites": 1538
+        },
+        {
+          "year": 2025,
+          "cites": 1552
+        },
+        {
+          "year": 2026,
+          "cites": 796
+        }
+      ]
+    },
+    {
+      "key": "adams_l",
+      "name": "Leah M Adams",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1972,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2013,
+          "cites": 3
+        },
+        {
+          "year": 2014,
+          "cites": 14
+        },
+        {
+          "year": 2015,
+          "cites": 19
+        },
+        {
+          "year": 2016,
+          "cites": 16
+        },
+        {
+          "year": 2017,
+          "cites": 13
+        },
+        {
+          "year": 2018,
+          "cites": 26
+        },
+        {
+          "year": 2019,
+          "cites": 30
+        },
+        {
+          "year": 2020,
+          "cites": 35
+        },
+        {
+          "year": 2021,
+          "cites": 50
+        },
+        {
+          "year": 2022,
+          "cites": 54
+        },
+        {
+          "year": 2023,
+          "cites": 52
+        },
+        {
+          "year": 2024,
+          "cites": 54
+        },
+        {
+          "year": 2025,
+          "cites": 39
+        },
+        {
+          "year": 2026,
+          "cites": 19
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2012,
+          "cites": 9
+        },
+        {
+          "year": 2013,
+          "cites": 24
+        },
+        {
+          "year": 2014,
+          "cites": 67
+        },
+        {
+          "year": 2015,
+          "cites": 109
+        },
+        {
+          "year": 2016,
+          "cites": 114
+        },
+        {
+          "year": 2017,
+          "cites": 163
+        },
+        {
+          "year": 2018,
+          "cites": 230
+        },
+        {
+          "year": 2019,
+          "cites": 232
+        },
+        {
+          "year": 2020,
+          "cites": 302
+        },
+        {
+          "year": 2021,
+          "cites": 323
+        },
+        {
+          "year": 2022,
+          "cites": 343
+        },
+        {
+          "year": 2023,
+          "cites": 360
+        },
+        {
+          "year": 2024,
+          "cites": 309
+        },
+        {
+          "year": 2025,
+          "cites": 351
+        },
+        {
+          "year": 2026,
+          "cites": 179
+        }
+      ]
+    },
+    {
+      "key": "ahmad_a",
+      "name": "Afra Saeed Ahmad",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 5
+        },
+        {
+          "year": 2013,
+          "cites": 19
+        },
+        {
+          "year": 2014,
+          "cites": 15
+        },
+        {
+          "year": 2015,
+          "cites": 30
+        },
+        {
+          "year": 2016,
+          "cites": 24
+        },
+        {
+          "year": 2017,
+          "cites": 44
+        },
+        {
+          "year": 2018,
+          "cites": 72
+        },
+        {
+          "year": 2019,
+          "cites": 80
+        },
+        {
+          "year": 2020,
+          "cites": 72
+        },
+        {
+          "year": 2021,
+          "cites": 95
+        },
+        {
+          "year": 2022,
+          "cites": 97
+        },
+        {
+          "year": 2023,
+          "cites": 68
+        },
+        {
+          "year": 2024,
+          "cites": 96
+        },
+        {
+          "year": 2025,
+          "cites": 41
+        },
+        {
+          "year": 2026,
+          "cites": 29
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2011,
+          "cites": 4
+        },
+        {
+          "year": 2012,
+          "cites": 8
+        },
+        {
+          "year": 2013,
+          "cites": 22
+        },
+        {
+          "year": 2014,
+          "cites": 21
+        },
+        {
+          "year": 2015,
+          "cites": 51
+        },
+        {
+          "year": 2016,
+          "cites": 43
+        },
+        {
+          "year": 2017,
+          "cites": 79
+        },
+        {
+          "year": 2018,
+          "cites": 76
+        },
+        {
+          "year": 2019,
+          "cites": 129
+        },
+        {
+          "year": 2020,
+          "cites": 147
+        },
+        {
+          "year": 2021,
+          "cites": 147
+        },
+        {
+          "year": 2022,
+          "cites": 165
+        },
+        {
+          "year": 2023,
+          "cites": 176
+        },
+        {
+          "year": 2024,
+          "cites": 179
+        },
+        {
+          "year": 2025,
+          "cites": 139
+        },
+        {
+          "year": 2026,
+          "cites": 60
+        }
+      ]
+    },
+    {
+      "key": "brielmaier_j",
+      "name": "Jennifer Brielmaier",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 36
+        },
+        {
+          "year": 2013,
+          "cites": 50
+        },
+        {
+          "year": 2014,
+          "cites": 64
+        },
+        {
+          "year": 2015,
+          "cites": 63
+        },
+        {
+          "year": 2016,
+          "cites": 65
+        },
+        {
+          "year": 2017,
+          "cites": 53
+        },
+        {
+          "year": 2018,
+          "cites": 36
+        },
+        {
+          "year": 2019,
+          "cites": 48
+        },
+        {
+          "year": 2020,
+          "cites": 44
+        },
+        {
+          "year": 2021,
+          "cites": 44
+        },
+        {
+          "year": 2022,
+          "cites": 42
+        },
+        {
+          "year": 2023,
+          "cites": 41
+        },
+        {
+          "year": 2024,
+          "cites": 26
+        },
+        {
+          "year": 2025,
+          "cites": 23
+        },
+        {
+          "year": 2026,
+          "cites": 5
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2007,
+          "cites": 10
+        },
+        {
+          "year": 2008,
+          "cites": 17
+        },
+        {
+          "year": 2009,
+          "cites": 21
+        },
+        {
+          "year": 2010,
+          "cites": 25
+        },
+        {
+          "year": 2011,
+          "cites": 17
+        },
+        {
+          "year": 2012,
+          "cites": 45
+        },
+        {
+          "year": 2013,
+          "cites": 60
+        },
+        {
+          "year": 2014,
+          "cites": 65
+        },
+        {
+          "year": 2015,
+          "cites": 87
+        },
+        {
+          "year": 2016,
+          "cites": 79
+        },
+        {
+          "year": 2017,
+          "cites": 58
+        },
+        {
+          "year": 2018,
+          "cites": 44
+        },
+        {
+          "year": 2019,
+          "cites": 64
+        },
+        {
+          "year": 2020,
+          "cites": 66
+        },
+        {
+          "year": 2021,
+          "cites": 60
+        },
+        {
+          "year": 2022,
+          "cites": 52
+        },
+        {
+          "year": 2023,
+          "cites": 67
+        },
+        {
+          "year": 2024,
+          "cites": 52
+        },
+        {
+          "year": 2025,
+          "cites": 40
+        },
+        {
+          "year": 2026,
+          "cites": 15
+        }
+      ]
+    },
+    {
+      "key": "burns_s",
+      "name": "M Susan Burns",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1990,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 12
+        },
+        {
+          "year": 2013,
+          "cites": 7
+        },
+        {
+          "year": 2014,
+          "cites": 12
+        },
+        {
+          "year": 2015,
+          "cites": 10
+        },
+        {
+          "year": 2016,
+          "cites": 15
+        },
+        {
+          "year": 2017,
+          "cites": 12
+        },
+        {
+          "year": 2018,
+          "cites": 7
+        },
+        {
+          "year": 2019,
+          "cites": 16
+        },
+        {
+          "year": 2020,
+          "cites": 6
+        },
+        {
+          "year": 2021,
+          "cites": 18
+        },
+        {
+          "year": 2022,
+          "cites": 8
+        },
+        {
+          "year": 2023,
+          "cites": 8
+        },
+        {
+          "year": 2024,
+          "cites": 16
+        },
+        {
+          "year": 2025,
+          "cites": 16
+        },
+        {
+          "year": 2026,
+          "cites": 3
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "cattaneo_l",
+      "name": "Lauren B Cattaneo",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 80
+        },
+        {
+          "year": 2013,
+          "cites": 82
+        },
+        {
+          "year": 2014,
+          "cites": 134
+        },
+        {
+          "year": 2015,
+          "cites": 117
+        },
+        {
+          "year": 2016,
+          "cites": 107
+        },
+        {
+          "year": 2017,
+          "cites": 132
+        },
+        {
+          "year": 2018,
+          "cites": 163
+        },
+        {
+          "year": 2019,
+          "cites": 244
+        },
+        {
+          "year": 2020,
+          "cites": 245
+        },
+        {
+          "year": 2021,
+          "cites": 296
+        },
+        {
+          "year": 2022,
+          "cites": 224
+        },
+        {
+          "year": 2023,
+          "cites": 266
+        },
+        {
+          "year": 2024,
+          "cites": 276
+        },
+        {
+          "year": 2025,
+          "cites": 227
+        },
+        {
+          "year": 2026,
+          "cites": 107
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2000,
+          "cites": 30
+        },
+        {
+          "year": 2001,
+          "cites": 24
+        },
+        {
+          "year": 2002,
+          "cites": 30
+        },
+        {
+          "year": 2003,
+          "cites": 49
+        },
+        {
+          "year": 2004,
+          "cites": 69
+        },
+        {
+          "year": 2005,
+          "cites": 77
+        },
+        {
+          "year": 2006,
+          "cites": 65
+        },
+        {
+          "year": 2007,
+          "cites": 85
+        },
+        {
+          "year": 2008,
+          "cites": 87
+        },
+        {
+          "year": 2009,
+          "cites": 104
+        },
+        {
+          "year": 2010,
+          "cites": 91
+        },
+        {
+          "year": 2011,
+          "cites": 190
+        },
+        {
+          "year": 2012,
+          "cites": 162
+        },
+        {
+          "year": 2013,
+          "cites": 192
+        },
+        {
+          "year": 2014,
+          "cites": 228
+        },
+        {
+          "year": 2015,
+          "cites": 286
+        },
+        {
+          "year": 2016,
+          "cites": 272
+        },
+        {
+          "year": 2017,
+          "cites": 309
+        },
+        {
+          "year": 2018,
+          "cites": 345
+        },
+        {
+          "year": 2019,
+          "cites": 392
+        },
+        {
+          "year": 2020,
+          "cites": 426
+        },
+        {
+          "year": 2021,
+          "cites": 557
+        },
+        {
+          "year": 2022,
+          "cites": 534
+        },
+        {
+          "year": 2023,
+          "cites": 529
+        },
+        {
+          "year": 2024,
+          "cites": 528
+        },
+        {
+          "year": 2025,
+          "cites": 541
+        },
+        {
+          "year": 2026,
+          "cites": 290
+        }
+      ]
+    },
+    {
+      "key": "chaplin_t",
+      "name": "Tara Chaplin",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 161
+        },
+        {
+          "year": 2013,
+          "cites": 157
+        },
+        {
+          "year": 2014,
+          "cites": 237
+        },
+        {
+          "year": 2015,
+          "cites": 219
+        },
+        {
+          "year": 2016,
+          "cites": 268
+        },
+        {
+          "year": 2017,
+          "cites": 294
+        },
+        {
+          "year": 2018,
+          "cites": 318
+        },
+        {
+          "year": 2019,
+          "cites": 355
+        },
+        {
+          "year": 2020,
+          "cites": 468
+        },
+        {
+          "year": 2021,
+          "cites": 471
+        },
+        {
+          "year": 2022,
+          "cites": 451
+        },
+        {
+          "year": 2023,
+          "cites": 543
+        },
+        {
+          "year": 2024,
+          "cites": 545
+        },
+        {
+          "year": 2025,
+          "cites": 577
+        },
+        {
+          "year": 2026,
+          "cites": 306
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2006,
+          "cites": 24
+        },
+        {
+          "year": 2007,
+          "cites": 49
+        },
+        {
+          "year": 2008,
+          "cites": 77
+        },
+        {
+          "year": 2009,
+          "cites": 103
+        },
+        {
+          "year": 2010,
+          "cites": 130
+        },
+        {
+          "year": 2011,
+          "cites": 167
+        },
+        {
+          "year": 2012,
+          "cites": 190
+        },
+        {
+          "year": 2013,
+          "cites": 229
+        },
+        {
+          "year": 2014,
+          "cites": 312
+        },
+        {
+          "year": 2015,
+          "cites": 336
+        },
+        {
+          "year": 2016,
+          "cites": 450
+        },
+        {
+          "year": 2017,
+          "cites": 471
+        },
+        {
+          "year": 2018,
+          "cites": 546
+        },
+        {
+          "year": 2019,
+          "cites": 570
+        },
+        {
+          "year": 2020,
+          "cites": 624
+        },
+        {
+          "year": 2021,
+          "cites": 754
+        },
+        {
+          "year": 2022,
+          "cites": 748
+        },
+        {
+          "year": 2023,
+          "cites": 866
+        },
+        {
+          "year": 2024,
+          "cites": 883
+        },
+        {
+          "year": 2025,
+          "cites": 1095
+        },
+        {
+          "year": 2026,
+          "cites": 608
+        }
+      ]
+    },
+    {
+      "key": "curby_t",
+      "name": "Timothy W Curby",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 82
+        },
+        {
+          "year": 2013,
+          "cites": 139
+        },
+        {
+          "year": 2014,
+          "cites": 181
+        },
+        {
+          "year": 2015,
+          "cites": 204
+        },
+        {
+          "year": 2016,
+          "cites": 273
+        },
+        {
+          "year": 2017,
+          "cites": 283
+        },
+        {
+          "year": 2018,
+          "cites": 322
+        },
+        {
+          "year": 2019,
+          "cites": 412
+        },
+        {
+          "year": 2020,
+          "cites": 445
+        },
+        {
+          "year": 2021,
+          "cites": 447
+        },
+        {
+          "year": 2022,
+          "cites": 412
+        },
+        {
+          "year": 2023,
+          "cites": 425
+        },
+        {
+          "year": 2024,
+          "cites": 408
+        },
+        {
+          "year": 2025,
+          "cites": 349
+        },
+        {
+          "year": 2026,
+          "cites": 179
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2010,
+          "cites": 40
+        },
+        {
+          "year": 2011,
+          "cites": 82
+        },
+        {
+          "year": 2012,
+          "cites": 143
+        },
+        {
+          "year": 2013,
+          "cites": 211
+        },
+        {
+          "year": 2014,
+          "cites": 250
+        },
+        {
+          "year": 2015,
+          "cites": 355
+        },
+        {
+          "year": 2016,
+          "cites": 481
+        },
+        {
+          "year": 2017,
+          "cites": 499
+        },
+        {
+          "year": 2018,
+          "cites": 611
+        },
+        {
+          "year": 2019,
+          "cites": 728
+        },
+        {
+          "year": 2020,
+          "cites": 819
+        },
+        {
+          "year": 2021,
+          "cites": 781
+        },
+        {
+          "year": 2022,
+          "cites": 847
+        },
+        {
+          "year": 2023,
+          "cites": 903
+        },
+        {
+          "year": 2024,
+          "cites": 868
+        },
+        {
+          "year": 2025,
+          "cites": 874
+        },
+        {
+          "year": 2026,
+          "cites": 413
+        }
+      ]
+    },
+    {
+      "key": "dalal_r",
+      "name": "Reeshad S. Dalal",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 401
+        },
+        {
+          "year": 2013,
+          "cites": 359
+        },
+        {
+          "year": 2014,
+          "cites": 411
+        },
+        {
+          "year": 2015,
+          "cites": 428
+        },
+        {
+          "year": 2016,
+          "cites": 445
+        },
+        {
+          "year": 2017,
+          "cites": 477
+        },
+        {
+          "year": 2018,
+          "cites": 500
+        },
+        {
+          "year": 2019,
+          "cites": 579
+        },
+        {
+          "year": 2020,
+          "cites": 730
+        },
+        {
+          "year": 2021,
+          "cites": 736
+        },
+        {
+          "year": 2022,
+          "cites": 629
+        },
+        {
+          "year": 2023,
+          "cites": 667
+        },
+        {
+          "year": 2024,
+          "cites": 639
+        },
+        {
+          "year": 2025,
+          "cites": 639
+        },
+        {
+          "year": 2026,
+          "cites": 327
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2004,
+          "cites": 58
+        },
+        {
+          "year": 2005,
+          "cites": 54
+        },
+        {
+          "year": 2006,
+          "cites": 94
+        },
+        {
+          "year": 2007,
+          "cites": 120
+        },
+        {
+          "year": 2008,
+          "cites": 168
+        },
+        {
+          "year": 2009,
+          "cites": 197
+        },
+        {
+          "year": 2010,
+          "cites": 308
+        },
+        {
+          "year": 2011,
+          "cites": 309
+        },
+        {
+          "year": 2012,
+          "cites": 489
+        },
+        {
+          "year": 2013,
+          "cites": 521
+        },
+        {
+          "year": 2014,
+          "cites": 604
+        },
+        {
+          "year": 2015,
+          "cites": 691
+        },
+        {
+          "year": 2016,
+          "cites": 734
+        },
+        {
+          "year": 2017,
+          "cites": 846
+        },
+        {
+          "year": 2018,
+          "cites": 875
+        },
+        {
+          "year": 2019,
+          "cites": 923
+        },
+        {
+          "year": 2020,
+          "cites": 1081
+        },
+        {
+          "year": 2021,
+          "cites": 1159
+        },
+        {
+          "year": 2022,
+          "cites": 1124
+        },
+        {
+          "year": 2023,
+          "cites": 1108
+        },
+        {
+          "year": 2024,
+          "cites": 1196
+        },
+        {
+          "year": 2025,
+          "cites": 1206
+        },
+        {
+          "year": 2026,
+          "cites": 678
+        }
+      ]
+    },
+    {
+      "key": "davis_d",
+      "name": "Doris Bitler Davis",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2015,
+          "cites": 0
+        },
+        {
+          "year": 2016,
+          "cites": 0
+        },
+        {
+          "year": 2017,
+          "cites": 1
+        },
+        {
+          "year": 2018,
+          "cites": 3
+        },
+        {
+          "year": 2019,
+          "cites": 5
+        },
+        {
+          "year": 2020,
+          "cites": 3
+        },
+        {
+          "year": 2021,
+          "cites": 2
+        },
+        {
+          "year": 2022,
+          "cites": 10
+        },
+        {
+          "year": 2023,
+          "cites": 7
+        },
+        {
+          "year": 2024,
+          "cites": 1
+        },
+        {
+          "year": 2025,
+          "cites": 7
+        },
+        {
+          "year": 2026,
+          "cites": 6
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "doebel_s",
+      "name": "Sabine Doebel",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 7
+        },
+        {
+          "year": 2013,
+          "cites": 9
+        },
+        {
+          "year": 2014,
+          "cites": 14
+        },
+        {
+          "year": 2015,
+          "cites": 18
+        },
+        {
+          "year": 2016,
+          "cites": 18
+        },
+        {
+          "year": 2017,
+          "cites": 30
+        },
+        {
+          "year": 2018,
+          "cites": 46
+        },
+        {
+          "year": 2019,
+          "cites": 78
+        },
+        {
+          "year": 2020,
+          "cites": 83
+        },
+        {
+          "year": 2021,
+          "cites": 109
+        },
+        {
+          "year": 2022,
+          "cites": 172
+        },
+        {
+          "year": 2023,
+          "cites": 225
+        },
+        {
+          "year": 2024,
+          "cites": 267
+        },
+        {
+          "year": 2025,
+          "cites": 272
+        },
+        {
+          "year": 2026,
+          "cites": 140
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2011,
+          "cites": 7
+        },
+        {
+          "year": 2012,
+          "cites": 14
+        },
+        {
+          "year": 2013,
+          "cites": 14
+        },
+        {
+          "year": 2014,
+          "cites": 23
+        },
+        {
+          "year": 2015,
+          "cites": 25
+        },
+        {
+          "year": 2016,
+          "cites": 24
+        },
+        {
+          "year": 2017,
+          "cites": 44
+        },
+        {
+          "year": 2018,
+          "cites": 68
+        },
+        {
+          "year": 2019,
+          "cites": 61
+        },
+        {
+          "year": 2020,
+          "cites": 101
+        },
+        {
+          "year": 2021,
+          "cites": 127
+        },
+        {
+          "year": 2022,
+          "cites": 223
+        },
+        {
+          "year": 2023,
+          "cites": 291
+        },
+        {
+          "year": 2024,
+          "cites": 400
+        },
+        {
+          "year": 2025,
+          "cites": 463
+        },
+        {
+          "year": 2026,
+          "cites": 287
+        }
+      ]
+    },
+    {
+      "key": "dumas_t",
+      "name": "Theodore Constantine Dumas",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1962,
+          "cites": 0
+        },
+        {
+          "year": 1964,
+          "cites": 0
+        },
+        {
+          "year": 1966,
+          "cites": 0
+        },
+        {
+          "year": 1967,
+          "cites": 0
+        },
+        {
+          "year": 1968,
+          "cites": 0
+        },
+        {
+          "year": 1969,
+          "cites": 0
+        },
+        {
+          "year": 1972,
+          "cites": 0
+        },
+        {
+          "year": 1973,
+          "cites": 0
+        },
+        {
+          "year": 1974,
+          "cites": 0
+        },
+        {
+          "year": 1975,
+          "cites": 0
+        },
+        {
+          "year": 1976,
+          "cites": 0
+        },
+        {
+          "year": 1977,
+          "cites": 0
+        },
+        {
+          "year": 1978,
+          "cites": 0
+        },
+        {
+          "year": 1979,
+          "cites": 0
+        },
+        {
+          "year": 1980,
+          "cites": 0
+        },
+        {
+          "year": 1981,
+          "cites": 0
+        },
+        {
+          "year": 1982,
+          "cites": 0
+        },
+        {
+          "year": 1983,
+          "cites": 0
+        },
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1985,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 71
+        },
+        {
+          "year": 2013,
+          "cites": 69
+        },
+        {
+          "year": 2014,
+          "cites": 79
+        },
+        {
+          "year": 2015,
+          "cites": 111
+        },
+        {
+          "year": 2016,
+          "cites": 99
+        },
+        {
+          "year": 2017,
+          "cites": 98
+        },
+        {
+          "year": 2018,
+          "cites": 130
+        },
+        {
+          "year": 2019,
+          "cites": 124
+        },
+        {
+          "year": 2020,
+          "cites": 122
+        },
+        {
+          "year": 2021,
+          "cites": 148
+        },
+        {
+          "year": 2022,
+          "cites": 85
+        },
+        {
+          "year": 2023,
+          "cites": 94
+        },
+        {
+          "year": 2024,
+          "cites": 100
+        },
+        {
+          "year": 2025,
+          "cites": 83
+        },
+        {
+          "year": 2026,
+          "cites": 39
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "esposito_smythers_c",
+      "name": "Christianne Esposito-Smythers",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 220
+        },
+        {
+          "year": 2013,
+          "cites": 258
+        },
+        {
+          "year": 2014,
+          "cites": 333
+        },
+        {
+          "year": 2015,
+          "cites": 276
+        },
+        {
+          "year": 2016,
+          "cites": 258
+        },
+        {
+          "year": 2017,
+          "cites": 282
+        },
+        {
+          "year": 2018,
+          "cites": 331
+        },
+        {
+          "year": 2019,
+          "cites": 278
+        },
+        {
+          "year": 2020,
+          "cites": 336
+        },
+        {
+          "year": 2021,
+          "cites": 426
+        },
+        {
+          "year": 2022,
+          "cites": 360
+        },
+        {
+          "year": 2023,
+          "cites": 375
+        },
+        {
+          "year": 2024,
+          "cites": 367
+        },
+        {
+          "year": 2025,
+          "cites": 342
+        },
+        {
+          "year": 2026,
+          "cites": 170
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2005,
+          "cites": 46
+        },
+        {
+          "year": 2006,
+          "cites": 88
+        },
+        {
+          "year": 2007,
+          "cites": 90
+        },
+        {
+          "year": 2008,
+          "cites": 137
+        },
+        {
+          "year": 2009,
+          "cites": 176
+        },
+        {
+          "year": 2010,
+          "cites": 213
+        },
+        {
+          "year": 2011,
+          "cites": 274
+        },
+        {
+          "year": 2012,
+          "cites": 348
+        },
+        {
+          "year": 2013,
+          "cites": 394
+        },
+        {
+          "year": 2014,
+          "cites": 483
+        },
+        {
+          "year": 2015,
+          "cites": 479
+        },
+        {
+          "year": 2016,
+          "cites": 452
+        },
+        {
+          "year": 2017,
+          "cites": 421
+        },
+        {
+          "year": 2018,
+          "cites": 511
+        },
+        {
+          "year": 2019,
+          "cites": 536
+        },
+        {
+          "year": 2020,
+          "cites": 569
+        },
+        {
+          "year": 2021,
+          "cites": 566
+        },
+        {
+          "year": 2022,
+          "cites": 630
+        },
+        {
+          "year": 2023,
+          "cites": 641
+        },
+        {
+          "year": 2024,
+          "cites": 586
+        },
+        {
+          "year": 2025,
+          "cites": 596
+        },
+        {
+          "year": 2026,
+          "cites": 292
+        }
+      ]
+    },
+    {
+      "key": "fischer_s",
+      "name": "Sarah Fischer",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1981,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 108
+        },
+        {
+          "year": 2013,
+          "cites": 103
+        },
+        {
+          "year": 2014,
+          "cites": 119
+        },
+        {
+          "year": 2015,
+          "cites": 110
+        },
+        {
+          "year": 2016,
+          "cites": 91
+        },
+        {
+          "year": 2017,
+          "cites": 80
+        },
+        {
+          "year": 2018,
+          "cites": 90
+        },
+        {
+          "year": 2019,
+          "cites": 116
+        },
+        {
+          "year": 2020,
+          "cites": 130
+        },
+        {
+          "year": 2021,
+          "cites": 158
+        },
+        {
+          "year": 2022,
+          "cites": 174
+        },
+        {
+          "year": 2023,
+          "cites": 216
+        },
+        {
+          "year": 2024,
+          "cites": 162
+        },
+        {
+          "year": 2025,
+          "cites": 180
+        },
+        {
+          "year": 2026,
+          "cites": 76
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2005,
+          "cites": 46
+        },
+        {
+          "year": 2006,
+          "cites": 53
+        },
+        {
+          "year": 2007,
+          "cites": 107
+        },
+        {
+          "year": 2008,
+          "cites": 165
+        },
+        {
+          "year": 2009,
+          "cites": 244
+        },
+        {
+          "year": 2010,
+          "cites": 300
+        },
+        {
+          "year": 2011,
+          "cites": 315
+        },
+        {
+          "year": 2012,
+          "cites": 421
+        },
+        {
+          "year": 2013,
+          "cites": 540
+        },
+        {
+          "year": 2014,
+          "cites": 544
+        },
+        {
+          "year": 2015,
+          "cites": 647
+        },
+        {
+          "year": 2016,
+          "cites": 636
+        },
+        {
+          "year": 2017,
+          "cites": 655
+        },
+        {
+          "year": 2018,
+          "cites": 703
+        },
+        {
+          "year": 2019,
+          "cites": 709
+        },
+        {
+          "year": 2020,
+          "cites": 696
+        },
+        {
+          "year": 2021,
+          "cites": 701
+        },
+        {
+          "year": 2022,
+          "cites": 654
+        },
+        {
+          "year": 2023,
+          "cites": 687
+        },
+        {
+          "year": 2024,
+          "cites": 674
+        },
+        {
+          "year": 2025,
+          "cites": 696
+        },
+        {
+          "year": 2026,
+          "cites": 318
+        }
+      ]
+    },
+    {
+      "key": "flinn_j",
+      "name": "Jane M Flinn",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1969,
+          "cites": 0
+        },
+        {
+          "year": 1971,
+          "cites": 0
+        },
+        {
+          "year": 1974,
+          "cites": 0
+        },
+        {
+          "year": 1977,
+          "cites": 0
+        },
+        {
+          "year": 1979,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 63
+        },
+        {
+          "year": 2013,
+          "cites": 49
+        },
+        {
+          "year": 2014,
+          "cites": 66
+        },
+        {
+          "year": 2015,
+          "cites": 43
+        },
+        {
+          "year": 2016,
+          "cites": 57
+        },
+        {
+          "year": 2017,
+          "cites": 67
+        },
+        {
+          "year": 2018,
+          "cites": 77
+        },
+        {
+          "year": 2019,
+          "cites": 78
+        },
+        {
+          "year": 2020,
+          "cites": 104
+        },
+        {
+          "year": 2021,
+          "cites": 85
+        },
+        {
+          "year": 2022,
+          "cites": 118
+        },
+        {
+          "year": 2023,
+          "cites": 92
+        },
+        {
+          "year": 2024,
+          "cites": 94
+        },
+        {
+          "year": 2025,
+          "cites": 65
+        },
+        {
+          "year": 2026,
+          "cites": 31
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2005,
+          "cites": 7
+        },
+        {
+          "year": 2006,
+          "cites": 12
+        },
+        {
+          "year": 2007,
+          "cites": 16
+        },
+        {
+          "year": 2008,
+          "cites": 36
+        },
+        {
+          "year": 2009,
+          "cites": 45
+        },
+        {
+          "year": 2010,
+          "cites": 57
+        },
+        {
+          "year": 2011,
+          "cites": 75
+        },
+        {
+          "year": 2012,
+          "cites": 76
+        },
+        {
+          "year": 2013,
+          "cites": 62
+        },
+        {
+          "year": 2014,
+          "cites": 89
+        },
+        {
+          "year": 2015,
+          "cites": 64
+        },
+        {
+          "year": 2016,
+          "cites": 71
+        },
+        {
+          "year": 2017,
+          "cites": 89
+        },
+        {
+          "year": 2018,
+          "cites": 104
+        },
+        {
+          "year": 2019,
+          "cites": 100
+        },
+        {
+          "year": 2020,
+          "cites": 114
+        },
+        {
+          "year": 2021,
+          "cites": 113
+        },
+        {
+          "year": 2022,
+          "cites": 118
+        },
+        {
+          "year": 2023,
+          "cites": 114
+        },
+        {
+          "year": 2024,
+          "cites": 113
+        },
+        {
+          "year": 2025,
+          "cites": 88
+        },
+        {
+          "year": 2026,
+          "cites": 51
+        }
+      ]
+    },
+    {
+      "key": "goldstein_t",
+      "name": "Thalia R Goldstein",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 28
+        },
+        {
+          "year": 2013,
+          "cites": 48
+        },
+        {
+          "year": 2014,
+          "cites": 95
+        },
+        {
+          "year": 2015,
+          "cites": 84
+        },
+        {
+          "year": 2016,
+          "cites": 92
+        },
+        {
+          "year": 2017,
+          "cites": 183
+        },
+        {
+          "year": 2018,
+          "cites": 300
+        },
+        {
+          "year": 2019,
+          "cites": 195
+        },
+        {
+          "year": 2020,
+          "cites": 257
+        },
+        {
+          "year": 2021,
+          "cites": 297
+        },
+        {
+          "year": 2022,
+          "cites": 311
+        },
+        {
+          "year": 2023,
+          "cites": 369
+        },
+        {
+          "year": 2024,
+          "cites": 237
+        },
+        {
+          "year": 2025,
+          "cites": 257
+        },
+        {
+          "year": 2026,
+          "cites": 146
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2011,
+          "cites": 45
+        },
+        {
+          "year": 2012,
+          "cites": 41
+        },
+        {
+          "year": 2013,
+          "cites": 92
+        },
+        {
+          "year": 2014,
+          "cites": 152
+        },
+        {
+          "year": 2015,
+          "cites": 200
+        },
+        {
+          "year": 2016,
+          "cites": 199
+        },
+        {
+          "year": 2017,
+          "cites": 404
+        },
+        {
+          "year": 2018,
+          "cites": 294
+        },
+        {
+          "year": 2019,
+          "cites": 346
+        },
+        {
+          "year": 2020,
+          "cites": 448
+        },
+        {
+          "year": 2021,
+          "cites": 440
+        },
+        {
+          "year": 2022,
+          "cites": 572
+        },
+        {
+          "year": 2023,
+          "cites": 514
+        },
+        {
+          "year": 2024,
+          "cites": 577
+        },
+        {
+          "year": 2025,
+          "cites": 750
+        },
+        {
+          "year": 2026,
+          "cites": 401
+        }
+      ]
+    },
+    {
+      "key": "helton_w",
+      "name": "William S Helton",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1965,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 178
+        },
+        {
+          "year": 2013,
+          "cites": 302
+        },
+        {
+          "year": 2014,
+          "cites": 290
+        },
+        {
+          "year": 2015,
+          "cites": 373
+        },
+        {
+          "year": 2016,
+          "cites": 326
+        },
+        {
+          "year": 2017,
+          "cites": 300
+        },
+        {
+          "year": 2018,
+          "cites": 382
+        },
+        {
+          "year": 2019,
+          "cites": 385
+        },
+        {
+          "year": 2020,
+          "cites": 336
+        },
+        {
+          "year": 2021,
+          "cites": 380
+        },
+        {
+          "year": 2022,
+          "cites": 494
+        },
+        {
+          "year": 2023,
+          "cites": 519
+        },
+        {
+          "year": 2024,
+          "cites": 439
+        },
+        {
+          "year": 2025,
+          "cites": 522
+        },
+        {
+          "year": 2026,
+          "cites": 208
+        }
+      ],
+      "scholar": [
+        {
+          "year": 1988,
+          "cites": 55
+        },
+        {
+          "year": 1989,
+          "cites": 97
+        },
+        {
+          "year": 1990,
+          "cites": 75
+        },
+        {
+          "year": 1991,
+          "cites": 86
+        },
+        {
+          "year": 1992,
+          "cites": 99
+        },
+        {
+          "year": 1993,
+          "cites": 101
+        },
+        {
+          "year": 1994,
+          "cites": 136
+        },
+        {
+          "year": 1995,
+          "cites": 145
+        },
+        {
+          "year": 1996,
+          "cites": 152
+        },
+        {
+          "year": 1997,
+          "cites": 204
+        },
+        {
+          "year": 1998,
+          "cites": 185
+        },
+        {
+          "year": 1999,
+          "cites": 207
+        },
+        {
+          "year": 2000,
+          "cites": 235
+        },
+        {
+          "year": 2001,
+          "cites": 262
+        },
+        {
+          "year": 2002,
+          "cites": 332
+        },
+        {
+          "year": 2003,
+          "cites": 355
+        },
+        {
+          "year": 2004,
+          "cites": 386
+        },
+        {
+          "year": 2005,
+          "cites": 418
+        },
+        {
+          "year": 2006,
+          "cites": 449
+        },
+        {
+          "year": 2007,
+          "cites": 435
+        },
+        {
+          "year": 2008,
+          "cites": 450
+        },
+        {
+          "year": 2009,
+          "cites": 518
+        },
+        {
+          "year": 2010,
+          "cites": 488
+        },
+        {
+          "year": 2011,
+          "cites": 576
+        },
+        {
+          "year": 2012,
+          "cites": 603
+        },
+        {
+          "year": 2013,
+          "cites": 794
+        },
+        {
+          "year": 2014,
+          "cites": 825
+        },
+        {
+          "year": 2015,
+          "cites": 899
+        },
+        {
+          "year": 2016,
+          "cites": 884
+        },
+        {
+          "year": 2017,
+          "cites": 984
+        },
+        {
+          "year": 2018,
+          "cites": 959
+        },
+        {
+          "year": 2019,
+          "cites": 1010
+        },
+        {
+          "year": 2020,
+          "cites": 930
+        },
+        {
+          "year": 2021,
+          "cites": 873
+        },
+        {
+          "year": 2022,
+          "cites": 904
+        },
+        {
+          "year": 2023,
+          "cites": 1008
+        },
+        {
+          "year": 2024,
+          "cites": 982
+        },
+        {
+          "year": 2025,
+          "cites": 1051
+        },
+        {
+          "year": 2026,
+          "cites": 555
+        }
+      ]
+    },
+    {
+      "key": "jack_a",
+      "name": "Allison E Jack",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 12
+        },
+        {
+          "year": 2013,
+          "cites": 24
+        },
+        {
+          "year": 2014,
+          "cites": 60
+        },
+        {
+          "year": 2015,
+          "cites": 62
+        },
+        {
+          "year": 2016,
+          "cites": 66
+        },
+        {
+          "year": 2017,
+          "cites": 82
+        },
+        {
+          "year": 2018,
+          "cites": 92
+        },
+        {
+          "year": 2019,
+          "cites": 84
+        },
+        {
+          "year": 2020,
+          "cites": 106
+        },
+        {
+          "year": 2021,
+          "cites": 177
+        },
+        {
+          "year": 2022,
+          "cites": 166
+        },
+        {
+          "year": 2023,
+          "cites": 174
+        },
+        {
+          "year": 2024,
+          "cites": 189
+        },
+        {
+          "year": 2025,
+          "cites": 216
+        },
+        {
+          "year": 2026,
+          "cites": 134
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2011,
+          "cites": 9
+        },
+        {
+          "year": 2012,
+          "cites": 13
+        },
+        {
+          "year": 2013,
+          "cites": 22
+        },
+        {
+          "year": 2014,
+          "cites": 71
+        },
+        {
+          "year": 2015,
+          "cites": 94
+        },
+        {
+          "year": 2016,
+          "cites": 86
+        },
+        {
+          "year": 2017,
+          "cites": 100
+        },
+        {
+          "year": 2018,
+          "cites": 137
+        },
+        {
+          "year": 2019,
+          "cites": 124
+        },
+        {
+          "year": 2020,
+          "cites": 124
+        },
+        {
+          "year": 2021,
+          "cites": 136
+        },
+        {
+          "year": 2022,
+          "cites": 121
+        },
+        {
+          "year": 2023,
+          "cites": 83
+        },
+        {
+          "year": 2024,
+          "cites": 72
+        },
+        {
+          "year": 2025,
+          "cites": 86
+        },
+        {
+          "year": 2026,
+          "cites": 47
+        }
+      ]
+    },
+    {
+      "key": "kaplan_s",
+      "name": "Seth Kaplan",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 187
+        },
+        {
+          "year": 2013,
+          "cites": 168
+        },
+        {
+          "year": 2014,
+          "cites": 177
+        },
+        {
+          "year": 2015,
+          "cites": 193
+        },
+        {
+          "year": 2016,
+          "cites": 214
+        },
+        {
+          "year": 2017,
+          "cites": 231
+        },
+        {
+          "year": 2018,
+          "cites": 287
+        },
+        {
+          "year": 2019,
+          "cites": 308
+        },
+        {
+          "year": 2020,
+          "cites": 432
+        },
+        {
+          "year": 2021,
+          "cites": 447
+        },
+        {
+          "year": 2022,
+          "cites": 504
+        },
+        {
+          "year": 2023,
+          "cites": 436
+        },
+        {
+          "year": 2024,
+          "cites": 380
+        },
+        {
+          "year": 2025,
+          "cites": 363
+        },
+        {
+          "year": 2026,
+          "cites": 172
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2005,
+          "cites": 27
+        },
+        {
+          "year": 2006,
+          "cites": 54
+        },
+        {
+          "year": 2007,
+          "cites": 49
+        },
+        {
+          "year": 2008,
+          "cites": 107
+        },
+        {
+          "year": 2009,
+          "cites": 95
+        },
+        {
+          "year": 2010,
+          "cites": 150
+        },
+        {
+          "year": 2011,
+          "cites": 238
+        },
+        {
+          "year": 2012,
+          "cites": 276
+        },
+        {
+          "year": 2013,
+          "cites": 274
+        },
+        {
+          "year": 2014,
+          "cites": 312
+        },
+        {
+          "year": 2015,
+          "cites": 320
+        },
+        {
+          "year": 2016,
+          "cites": 394
+        },
+        {
+          "year": 2017,
+          "cites": 415
+        },
+        {
+          "year": 2018,
+          "cites": 517
+        },
+        {
+          "year": 2019,
+          "cites": 518
+        },
+        {
+          "year": 2020,
+          "cites": 631
+        },
+        {
+          "year": 2021,
+          "cites": 772
+        },
+        {
+          "year": 2022,
+          "cites": 846
+        },
+        {
+          "year": 2023,
+          "cites": 814
+        },
+        {
+          "year": 2024,
+          "cites": 726
+        },
+        {
+          "year": 2025,
+          "cites": 743
+        },
+        {
+          "year": 2026,
+          "cites": 362
+        }
+      ]
+    },
+    {
+      "key": "kashdan_t",
+      "name": "Todd B. Kashdan",
+      "rg": "Full",
+      "is_self": false,
+      "team": true,
+      "openalex": [
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 968
+        },
+        {
+          "year": 2013,
+          "cites": 1162
+        },
+        {
+          "year": 2014,
+          "cites": 1606
+        },
+        {
+          "year": 2015,
+          "cites": 1600
+        },
+        {
+          "year": 2016,
+          "cites": 1678
+        },
+        {
+          "year": 2017,
+          "cites": 1707
+        },
+        {
+          "year": 2018,
+          "cites": 2175
+        },
+        {
+          "year": 2019,
+          "cites": 2297
+        },
+        {
+          "year": 2020,
+          "cites": 2928
+        },
+        {
+          "year": 2021,
+          "cites": 3006
+        },
+        {
+          "year": 2022,
+          "cites": 3004
+        },
+        {
+          "year": 2023,
+          "cites": 2965
+        },
+        {
+          "year": 2024,
+          "cites": 3060
+        },
+        {
+          "year": 2025,
+          "cites": 2830
+        },
+        {
+          "year": 2026,
+          "cites": 1390
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2006,
+          "cites": 210
+        },
+        {
+          "year": 2007,
+          "cites": 298
+        },
+        {
+          "year": 2008,
+          "cites": 407
+        },
+        {
+          "year": 2009,
+          "cites": 642
+        },
+        {
+          "year": 2010,
+          "cites": 842
+        },
+        {
+          "year": 2011,
+          "cites": 1193
+        },
+        {
+          "year": 2012,
+          "cites": 1455
+        },
+        {
+          "year": 2013,
+          "cites": 1970
+        },
+        {
+          "year": 2014,
+          "cites": 2361
+        },
+        {
+          "year": 2015,
+          "cites": 2766
+        },
+        {
+          "year": 2016,
+          "cites": 3058
+        },
+        {
+          "year": 2017,
+          "cites": 3333
+        },
+        {
+          "year": 2018,
+          "cites": 3509
+        },
+        {
+          "year": 2019,
+          "cites": 3994
+        },
+        {
+          "year": 2020,
+          "cites": 4707
+        },
+        {
+          "year": 2021,
+          "cites": 5104
+        },
+        {
+          "year": 2022,
+          "cites": 5254
+        },
+        {
+          "year": 2023,
+          "cites": 5199
+        },
+        {
+          "year": 2024,
+          "cites": 5436
+        },
+        {
+          "year": 2025,
+          "cites": 5552
+        },
+        {
+          "year": 2026,
+          "cites": 2800
+        }
+      ]
+    },
+    {
+      "key": "kornienko_o",
+      "name": "Olga Kornienko",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 16
+        },
+        {
+          "year": 2013,
+          "cites": 30
+        },
+        {
+          "year": 2014,
+          "cites": 49
+        },
+        {
+          "year": 2015,
+          "cites": 53
+        },
+        {
+          "year": 2016,
+          "cites": 64
+        },
+        {
+          "year": 2017,
+          "cites": 52
+        },
+        {
+          "year": 2018,
+          "cites": 90
+        },
+        {
+          "year": 2019,
+          "cites": 135
+        },
+        {
+          "year": 2020,
+          "cites": 160
+        },
+        {
+          "year": 2021,
+          "cites": 171
+        },
+        {
+          "year": 2022,
+          "cites": 185
+        },
+        {
+          "year": 2023,
+          "cites": 175
+        },
+        {
+          "year": 2024,
+          "cites": 200
+        },
+        {
+          "year": 2025,
+          "cites": 148
+        },
+        {
+          "year": 2026,
+          "cites": 95
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2011,
+          "cites": 9
+        },
+        {
+          "year": 2012,
+          "cites": 19
+        },
+        {
+          "year": 2013,
+          "cites": 33
+        },
+        {
+          "year": 2014,
+          "cites": 56
+        },
+        {
+          "year": 2015,
+          "cites": 70
+        },
+        {
+          "year": 2016,
+          "cites": 91
+        },
+        {
+          "year": 2017,
+          "cites": 97
+        },
+        {
+          "year": 2018,
+          "cites": 136
+        },
+        {
+          "year": 2019,
+          "cites": 181
+        },
+        {
+          "year": 2020,
+          "cites": 245
+        },
+        {
+          "year": 2021,
+          "cites": 268
+        },
+        {
+          "year": 2022,
+          "cites": 270
+        },
+        {
+          "year": 2023,
+          "cites": 336
+        },
+        {
+          "year": 2024,
+          "cites": 319
+        },
+        {
+          "year": 2025,
+          "cites": 355
+        },
+        {
+          "year": 2026,
+          "cites": 214
+        }
+      ]
+    },
+    {
+      "key": "kuykendall_l",
+      "name": "Lauren E. Kuykendall",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2013,
+          "cites": 1
+        },
+        {
+          "year": 2014,
+          "cites": 11
+        },
+        {
+          "year": 2015,
+          "cites": 15
+        },
+        {
+          "year": 2016,
+          "cites": 34
+        },
+        {
+          "year": 2017,
+          "cites": 62
+        },
+        {
+          "year": 2018,
+          "cites": 91
+        },
+        {
+          "year": 2019,
+          "cites": 116
+        },
+        {
+          "year": 2020,
+          "cites": 226
+        },
+        {
+          "year": 2021,
+          "cites": 232
+        },
+        {
+          "year": 2022,
+          "cites": 256
+        },
+        {
+          "year": 2023,
+          "cites": 262
+        },
+        {
+          "year": 2024,
+          "cites": 246
+        },
+        {
+          "year": 2025,
+          "cites": 270
+        },
+        {
+          "year": 2026,
+          "cites": 131
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2014,
+          "cites": 12
+        },
+        {
+          "year": 2015,
+          "cites": 20
+        },
+        {
+          "year": 2016,
+          "cites": 48
+        },
+        {
+          "year": 2017,
+          "cites": 78
+        },
+        {
+          "year": 2018,
+          "cites": 150
+        },
+        {
+          "year": 2019,
+          "cites": 186
+        },
+        {
+          "year": 2020,
+          "cites": 273
+        },
+        {
+          "year": 2021,
+          "cites": 355
+        },
+        {
+          "year": 2022,
+          "cites": 444
+        },
+        {
+          "year": 2023,
+          "cites": 424
+        },
+        {
+          "year": 2024,
+          "cites": 408
+        },
+        {
+          "year": 2025,
+          "cites": 496
+        },
+        {
+          "year": 2026,
+          "cites": 243
+        }
+      ]
+    },
+    {
+      "key": "layman_s",
+      "name": "Shannon Layman",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 2021,
+          "cites": 0
+        },
+        {
+          "year": 2022,
+          "cites": 0
+        },
+        {
+          "year": 2023,
+          "cites": 0
+        },
+        {
+          "year": 2024,
+          "cites": 3
+        },
+        {
+          "year": 2025,
+          "cites": 11
+        },
+        {
+          "year": 2026,
+          "cites": 1
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "lee_p",
+      "name": "Philseok Lee",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2014,
+          "cites": 1
+        },
+        {
+          "year": 2016,
+          "cites": 2
+        },
+        {
+          "year": 2017,
+          "cites": 3
+        },
+        {
+          "year": 2018,
+          "cites": 6
+        },
+        {
+          "year": 2019,
+          "cites": 17
+        },
+        {
+          "year": 2020,
+          "cites": 29
+        },
+        {
+          "year": 2021,
+          "cites": 64
+        },
+        {
+          "year": 2022,
+          "cites": 71
+        },
+        {
+          "year": 2023,
+          "cites": 82
+        },
+        {
+          "year": 2024,
+          "cites": 88
+        },
+        {
+          "year": 2025,
+          "cites": 103
+        },
+        {
+          "year": 2026,
+          "cites": 77
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2017,
+          "cites": 7
+        },
+        {
+          "year": 2018,
+          "cites": 9
+        },
+        {
+          "year": 2019,
+          "cites": 35
+        },
+        {
+          "year": 2020,
+          "cites": 47
+        },
+        {
+          "year": 2021,
+          "cites": 113
+        },
+        {
+          "year": 2022,
+          "cites": 135
+        },
+        {
+          "year": 2023,
+          "cites": 205
+        },
+        {
+          "year": 2024,
+          "cites": 269
+        },
+        {
+          "year": 2025,
+          "cites": 299
+        },
+        {
+          "year": 2026,
+          "cites": 190
+        }
+      ]
+    },
+    {
+      "key": "lee_y",
+      "name": "Yi-Ching Lee",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 35
+        },
+        {
+          "year": 2013,
+          "cites": 42
+        },
+        {
+          "year": 2014,
+          "cites": 74
+        },
+        {
+          "year": 2015,
+          "cites": 64
+        },
+        {
+          "year": 2016,
+          "cites": 90
+        },
+        {
+          "year": 2017,
+          "cites": 94
+        },
+        {
+          "year": 2018,
+          "cites": 128
+        },
+        {
+          "year": 2019,
+          "cites": 112
+        },
+        {
+          "year": 2020,
+          "cites": 160
+        },
+        {
+          "year": 2021,
+          "cites": 171
+        },
+        {
+          "year": 2022,
+          "cites": 211
+        },
+        {
+          "year": 2023,
+          "cites": 275
+        },
+        {
+          "year": 2024,
+          "cites": 249
+        },
+        {
+          "year": 2025,
+          "cites": 310
+        },
+        {
+          "year": 2026,
+          "cites": 189
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2007,
+          "cites": 7
+        },
+        {
+          "year": 2008,
+          "cites": 10
+        },
+        {
+          "year": 2009,
+          "cites": 17
+        },
+        {
+          "year": 2010,
+          "cites": 13
+        },
+        {
+          "year": 2011,
+          "cites": 27
+        },
+        {
+          "year": 2012,
+          "cites": 34
+        },
+        {
+          "year": 2013,
+          "cites": 37
+        },
+        {
+          "year": 2014,
+          "cites": 73
+        },
+        {
+          "year": 2015,
+          "cites": 72
+        },
+        {
+          "year": 2016,
+          "cites": 94
+        },
+        {
+          "year": 2017,
+          "cites": 96
+        },
+        {
+          "year": 2018,
+          "cites": 127
+        },
+        {
+          "year": 2019,
+          "cites": 113
+        },
+        {
+          "year": 2020,
+          "cites": 159
+        },
+        {
+          "year": 2021,
+          "cites": 196
+        },
+        {
+          "year": 2022,
+          "cites": 220
+        },
+        {
+          "year": 2023,
+          "cites": 316
+        },
+        {
+          "year": 2024,
+          "cites": 345
+        },
+        {
+          "year": 2025,
+          "cites": 407
+        },
+        {
+          "year": 2026,
+          "cites": 258
+        }
+      ]
+    },
+    {
+      "key": "liang_y",
+      "name": "Yijue Liang",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2017,
+          "cites": 0
+        },
+        {
+          "year": 2019,
+          "cites": 0
+        },
+        {
+          "year": 2020,
+          "cites": 1
+        },
+        {
+          "year": 2021,
+          "cites": 4
+        },
+        {
+          "year": 2022,
+          "cites": 11
+        },
+        {
+          "year": 2023,
+          "cites": 49
+        },
+        {
+          "year": 2024,
+          "cites": 37
+        },
+        {
+          "year": 2025,
+          "cites": 61
+        },
+        {
+          "year": 2026,
+          "cites": 40
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2020,
+          "cites": 1
+        },
+        {
+          "year": 2021,
+          "cites": 6
+        },
+        {
+          "year": 2022,
+          "cites": 21
+        },
+        {
+          "year": 2023,
+          "cites": 47
+        },
+        {
+          "year": 2024,
+          "cites": 75
+        },
+        {
+          "year": 2025,
+          "cites": 121
+        },
+        {
+          "year": 2026,
+          "cites": 88
+        }
+      ]
+    },
+    {
+      "key": "matthews_g",
+      "name": "Gerald Matthews",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1951,
+          "cites": 0
+        },
+        {
+          "year": 1952,
+          "cites": 0
+        },
+        {
+          "year": 1953,
+          "cites": 0
+        },
+        {
+          "year": 1954,
+          "cites": 0
+        },
+        {
+          "year": 1955,
+          "cites": 0
+        },
+        {
+          "year": 1956,
+          "cites": 0
+        },
+        {
+          "year": 1957,
+          "cites": 0
+        },
+        {
+          "year": 1958,
+          "cites": 0
+        },
+        {
+          "year": 1961,
+          "cites": 0
+        },
+        {
+          "year": 1962,
+          "cites": 0
+        },
+        {
+          "year": 1963,
+          "cites": 0
+        },
+        {
+          "year": 1964,
+          "cites": 0
+        },
+        {
+          "year": 1966,
+          "cites": 0
+        },
+        {
+          "year": 1967,
+          "cites": 0
+        },
+        {
+          "year": 1969,
+          "cites": 0
+        },
+        {
+          "year": 1970,
+          "cites": 0
+        },
+        {
+          "year": 1972,
+          "cites": 0
+        },
+        {
+          "year": 1973,
+          "cites": 0
+        },
+        {
+          "year": 1974,
+          "cites": 0
+        },
+        {
+          "year": 1975,
+          "cites": 0
+        },
+        {
+          "year": 1977,
+          "cites": 0
+        },
+        {
+          "year": 1982,
+          "cites": 0
+        },
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1985,
+          "cites": 0
+        },
+        {
+          "year": 1986,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 1988,
+          "cites": 0
+        },
+        {
+          "year": 1989,
+          "cites": 0
+        },
+        {
+          "year": 1990,
+          "cites": 0
+        },
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 1992,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 511
+        },
+        {
+          "year": 2013,
+          "cites": 509
+        },
+        {
+          "year": 2014,
+          "cites": 604
+        },
+        {
+          "year": 2015,
+          "cites": 560
+        },
+        {
+          "year": 2016,
+          "cites": 479
+        },
+        {
+          "year": 2017,
+          "cites": 521
+        },
+        {
+          "year": 2018,
+          "cites": 514
+        },
+        {
+          "year": 2019,
+          "cites": 495
+        },
+        {
+          "year": 2020,
+          "cites": 1014
+        },
+        {
+          "year": 2021,
+          "cites": 493
+        },
+        {
+          "year": 2022,
+          "cites": 453
+        },
+        {
+          "year": 2023,
+          "cites": 442
+        },
+        {
+          "year": 2024,
+          "cites": 447
+        },
+        {
+          "year": 2025,
+          "cites": 354
+        },
+        {
+          "year": 2026,
+          "cites": 159
+        }
+      ],
+      "scholar": [
+        {
+          "year": 1997,
+          "cites": 213
+        },
+        {
+          "year": 1998,
+          "cites": 235
+        },
+        {
+          "year": 1999,
+          "cites": 277
+        },
+        {
+          "year": 2000,
+          "cites": 337
+        },
+        {
+          "year": 2001,
+          "cites": 339
+        },
+        {
+          "year": 2002,
+          "cites": 596
+        },
+        {
+          "year": 2003,
+          "cites": 588
+        },
+        {
+          "year": 2004,
+          "cites": 985
+        },
+        {
+          "year": 2005,
+          "cites": 973
+        },
+        {
+          "year": 2006,
+          "cites": 1178
+        },
+        {
+          "year": 2007,
+          "cites": 1255
+        },
+        {
+          "year": 2008,
+          "cites": 1473
+        },
+        {
+          "year": 2009,
+          "cites": 1613
+        },
+        {
+          "year": 2010,
+          "cites": 1709
+        },
+        {
+          "year": 2011,
+          "cites": 2045
+        },
+        {
+          "year": 2012,
+          "cites": 2064
+        },
+        {
+          "year": 2013,
+          "cites": 2520
+        },
+        {
+          "year": 2014,
+          "cites": 2563
+        },
+        {
+          "year": 2015,
+          "cites": 2782
+        },
+        {
+          "year": 2016,
+          "cites": 2833
+        },
+        {
+          "year": 2017,
+          "cites": 3157
+        },
+        {
+          "year": 2018,
+          "cites": 3129
+        },
+        {
+          "year": 2019,
+          "cites": 3429
+        },
+        {
+          "year": 2020,
+          "cites": 3272
+        },
+        {
+          "year": 2021,
+          "cites": 3458
+        },
+        {
+          "year": 2022,
+          "cites": 3260
+        },
+        {
+          "year": 2023,
+          "cites": 3212
+        },
+        {
+          "year": 2024,
+          "cites": 3321
+        },
+        {
+          "year": 2025,
+          "cites": 3106
+        },
+        {
+          "year": 2026,
+          "cites": 1484
+        }
+      ]
+    },
+    {
+      "key": "mcdonald_c",
+      "name": "Craig McDonald",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 53
+        },
+        {
+          "year": 2013,
+          "cites": 86
+        },
+        {
+          "year": 2014,
+          "cites": 104
+        },
+        {
+          "year": 2015,
+          "cites": 114
+        },
+        {
+          "year": 2016,
+          "cites": 114
+        },
+        {
+          "year": 2017,
+          "cites": 112
+        },
+        {
+          "year": 2018,
+          "cites": 121
+        },
+        {
+          "year": 2019,
+          "cites": 132
+        },
+        {
+          "year": 2020,
+          "cites": 114
+        },
+        {
+          "year": 2021,
+          "cites": 147
+        },
+        {
+          "year": 2022,
+          "cites": 126
+        },
+        {
+          "year": 2023,
+          "cites": 147
+        },
+        {
+          "year": 2024,
+          "cites": 113
+        },
+        {
+          "year": 2025,
+          "cites": 118
+        },
+        {
+          "year": 2026,
+          "cites": 51
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2000,
+          "cites": 14
+        },
+        {
+          "year": 2001,
+          "cites": 12
+        },
+        {
+          "year": 2002,
+          "cites": 8
+        },
+        {
+          "year": 2003,
+          "cites": 4
+        },
+        {
+          "year": 2004,
+          "cites": 17
+        },
+        {
+          "year": 2005,
+          "cites": 4
+        },
+        {
+          "year": 2006,
+          "cites": 11
+        },
+        {
+          "year": 2007,
+          "cites": 25
+        },
+        {
+          "year": 2008,
+          "cites": 38
+        },
+        {
+          "year": 2009,
+          "cites": 60
+        },
+        {
+          "year": 2010,
+          "cites": 48
+        },
+        {
+          "year": 2011,
+          "cites": 46
+        },
+        {
+          "year": 2012,
+          "cites": 78
+        },
+        {
+          "year": 2013,
+          "cites": 104
+        },
+        {
+          "year": 2014,
+          "cites": 134
+        },
+        {
+          "year": 2015,
+          "cites": 181
+        },
+        {
+          "year": 2016,
+          "cites": 172
+        },
+        {
+          "year": 2017,
+          "cites": 137
+        },
+        {
+          "year": 2018,
+          "cites": 163
+        },
+        {
+          "year": 2019,
+          "cites": 181
+        },
+        {
+          "year": 2020,
+          "cites": 193
+        },
+        {
+          "year": 2021,
+          "cites": 184
+        },
+        {
+          "year": 2022,
+          "cites": 184
+        },
+        {
+          "year": 2023,
+          "cites": 207
+        },
+        {
+          "year": 2024,
+          "cites": 173
+        },
+        {
+          "year": 2025,
+          "cites": 165
+        },
+        {
+          "year": 2026,
+          "cites": 73
+        }
+      ]
+    },
+    {
+      "key": "mcquaid_g",
+      "name": "Goldie Ann McQuaid",
+      "rg": "Other",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2012,
+          "cites": 0
+        },
+        {
+          "year": 2017,
+          "cites": 2
+        },
+        {
+          "year": 2018,
+          "cites": 4
+        },
+        {
+          "year": 2019,
+          "cites": 3
+        },
+        {
+          "year": 2020,
+          "cites": 11
+        },
+        {
+          "year": 2021,
+          "cites": 17
+        },
+        {
+          "year": 2022,
+          "cites": 61
+        },
+        {
+          "year": 2023,
+          "cites": 107
+        },
+        {
+          "year": 2024,
+          "cites": 199
+        },
+        {
+          "year": 2025,
+          "cites": 279
+        },
+        {
+          "year": 2026,
+          "cites": 155
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2017,
+          "cites": 3
+        },
+        {
+          "year": 2018,
+          "cites": 3
+        },
+        {
+          "year": 2019,
+          "cites": 3
+        },
+        {
+          "year": 2020,
+          "cites": 13
+        },
+        {
+          "year": 2021,
+          "cites": 15
+        },
+        {
+          "year": 2022,
+          "cites": 64
+        },
+        {
+          "year": 2023,
+          "cites": 128
+        },
+        {
+          "year": 2024,
+          "cites": 235
+        },
+        {
+          "year": 2025,
+          "cites": 424
+        },
+        {
+          "year": 2026,
+          "cites": 257
+        }
+      ]
+    },
+    {
+      "key": "melley_a",
+      "name": "Alison Heinhold Melley",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 6
+        },
+        {
+          "year": 2013,
+          "cites": 6
+        },
+        {
+          "year": 2014,
+          "cites": 12
+        },
+        {
+          "year": 2015,
+          "cites": 5
+        },
+        {
+          "year": 2016,
+          "cites": 2
+        },
+        {
+          "year": 2017,
+          "cites": 6
+        },
+        {
+          "year": 2018,
+          "cites": 6
+        },
+        {
+          "year": 2019,
+          "cites": 3
+        },
+        {
+          "year": 2020,
+          "cites": 6
+        },
+        {
+          "year": 2021,
+          "cites": 8
+        },
+        {
+          "year": 2022,
+          "cites": 4
+        },
+        {
+          "year": 2023,
+          "cites": 3
+        },
+        {
+          "year": 2024,
+          "cites": 3
+        },
+        {
+          "year": 2025,
+          "cites": 2
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2003,
+          "cites": 1
+        },
+        {
+          "year": 2004,
+          "cites": 4
+        },
+        {
+          "year": 2005,
+          "cites": 6
+        },
+        {
+          "year": 2006,
+          "cites": 10
+        },
+        {
+          "year": 2007,
+          "cites": 12
+        },
+        {
+          "year": 2008,
+          "cites": 11
+        },
+        {
+          "year": 2009,
+          "cites": 5
+        },
+        {
+          "year": 2010,
+          "cites": 13
+        },
+        {
+          "year": 2011,
+          "cites": 9
+        },
+        {
+          "year": 2012,
+          "cites": 8
+        },
+        {
+          "year": 2013,
+          "cites": 16
+        },
+        {
+          "year": 2014,
+          "cites": 17
+        },
+        {
+          "year": 2015,
+          "cites": 12
+        },
+        {
+          "year": 2016,
+          "cites": 12
+        },
+        {
+          "year": 2017,
+          "cites": 16
+        },
+        {
+          "year": 2018,
+          "cites": 17
+        },
+        {
+          "year": 2019,
+          "cites": 20
+        },
+        {
+          "year": 2020,
+          "cites": 21
+        },
+        {
+          "year": 2021,
+          "cites": 19
+        },
+        {
+          "year": 2022,
+          "cites": 19
+        },
+        {
+          "year": 2023,
+          "cites": 10
+        },
+        {
+          "year": 2024,
+          "cites": 14
+        },
+        {
+          "year": 2025,
+          "cites": 13
+        },
+        {
+          "year": 2026,
+          "cites": 3
+        }
+      ]
+    },
+    {
+      "key": "murdoch_e",
+      "name": "Erin Quinlivan Murdoch",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 3
+        },
+        {
+          "year": 2013,
+          "cites": 2
+        },
+        {
+          "year": 2014,
+          "cites": 5
+        },
+        {
+          "year": 2015,
+          "cites": 4
+        },
+        {
+          "year": 2016,
+          "cites": 5
+        },
+        {
+          "year": 2017,
+          "cites": 3
+        },
+        {
+          "year": 2018,
+          "cites": 8
+        },
+        {
+          "year": 2019,
+          "cites": 5
+        },
+        {
+          "year": 2020,
+          "cites": 17
+        },
+        {
+          "year": 2021,
+          "cites": 17
+        },
+        {
+          "year": 2022,
+          "cites": 13
+        },
+        {
+          "year": 2023,
+          "cites": 24
+        },
+        {
+          "year": 2024,
+          "cites": 12
+        },
+        {
+          "year": 2025,
+          "cites": 20
+        },
+        {
+          "year": 2026,
+          "cites": 11
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "peterson_m",
+      "name": "Matthew S. Peterson",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 140
+        },
+        {
+          "year": 2013,
+          "cites": 117
+        },
+        {
+          "year": 2014,
+          "cites": 100
+        },
+        {
+          "year": 2015,
+          "cites": 107
+        },
+        {
+          "year": 2016,
+          "cites": 95
+        },
+        {
+          "year": 2017,
+          "cites": 106
+        },
+        {
+          "year": 2018,
+          "cites": 67
+        },
+        {
+          "year": 2019,
+          "cites": 113
+        },
+        {
+          "year": 2020,
+          "cites": 101
+        },
+        {
+          "year": 2021,
+          "cites": 88
+        },
+        {
+          "year": 2022,
+          "cites": 78
+        },
+        {
+          "year": 2023,
+          "cites": 72
+        },
+        {
+          "year": 2024,
+          "cites": 62
+        },
+        {
+          "year": 2025,
+          "cites": 87
+        },
+        {
+          "year": 2026,
+          "cites": 35
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2001,
+          "cites": 49
+        },
+        {
+          "year": 2002,
+          "cites": 19
+        },
+        {
+          "year": 2003,
+          "cites": 50
+        },
+        {
+          "year": 2004,
+          "cites": 48
+        },
+        {
+          "year": 2005,
+          "cites": 73
+        },
+        {
+          "year": 2006,
+          "cites": 127
+        },
+        {
+          "year": 2007,
+          "cites": 197
+        },
+        {
+          "year": 2008,
+          "cites": 208
+        },
+        {
+          "year": 2009,
+          "cites": 217
+        },
+        {
+          "year": 2010,
+          "cites": 243
+        },
+        {
+          "year": 2011,
+          "cites": 282
+        },
+        {
+          "year": 2012,
+          "cites": 290
+        },
+        {
+          "year": 2013,
+          "cites": 246
+        },
+        {
+          "year": 2014,
+          "cites": 283
+        },
+        {
+          "year": 2015,
+          "cites": 234
+        },
+        {
+          "year": 2016,
+          "cites": 258
+        },
+        {
+          "year": 2017,
+          "cites": 304
+        },
+        {
+          "year": 2018,
+          "cites": 202
+        },
+        {
+          "year": 2019,
+          "cites": 229
+        },
+        {
+          "year": 2020,
+          "cites": 200
+        },
+        {
+          "year": 2021,
+          "cites": 211
+        },
+        {
+          "year": 2022,
+          "cites": 152
+        },
+        {
+          "year": 2023,
+          "cites": 157
+        },
+        {
+          "year": 2024,
+          "cites": 169
+        },
+        {
+          "year": 2025,
+          "cites": 172
+        },
+        {
+          "year": 2026,
+          "cites": 108
+        }
+      ]
+    },
+    {
+      "key": "phillips_e",
+      "name": "Elizabeth Phillips",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1978,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 31
+        },
+        {
+          "year": 2013,
+          "cites": 38
+        },
+        {
+          "year": 2014,
+          "cites": 25
+        },
+        {
+          "year": 2015,
+          "cites": 21
+        },
+        {
+          "year": 2016,
+          "cites": 41
+        },
+        {
+          "year": 2017,
+          "cites": 27
+        },
+        {
+          "year": 2018,
+          "cites": 67
+        },
+        {
+          "year": 2019,
+          "cites": 104
+        },
+        {
+          "year": 2020,
+          "cites": 185
+        },
+        {
+          "year": 2021,
+          "cites": 221
+        },
+        {
+          "year": 2022,
+          "cites": 262
+        },
+        {
+          "year": 2023,
+          "cites": 270
+        },
+        {
+          "year": 2024,
+          "cites": 305
+        },
+        {
+          "year": 2025,
+          "cites": 330
+        },
+        {
+          "year": 2026,
+          "cites": 153
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2012,
+          "cites": 14
+        },
+        {
+          "year": 2013,
+          "cites": 44
+        },
+        {
+          "year": 2014,
+          "cites": 28
+        },
+        {
+          "year": 2015,
+          "cites": 18
+        },
+        {
+          "year": 2016,
+          "cites": 53
+        },
+        {
+          "year": 2017,
+          "cites": 34
+        },
+        {
+          "year": 2018,
+          "cites": 76
+        },
+        {
+          "year": 2019,
+          "cites": 152
+        },
+        {
+          "year": 2020,
+          "cites": 267
+        },
+        {
+          "year": 2021,
+          "cites": 319
+        },
+        {
+          "year": 2022,
+          "cites": 396
+        },
+        {
+          "year": 2023,
+          "cites": 556
+        },
+        {
+          "year": 2024,
+          "cites": 648
+        },
+        {
+          "year": 2025,
+          "cites": 696
+        },
+        {
+          "year": 2026,
+          "cites": 339
+        }
+      ]
+    },
+    {
+      "key": "renshaw_k",
+      "name": "Keith D Renshaw",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 94
+        },
+        {
+          "year": 2013,
+          "cites": 121
+        },
+        {
+          "year": 2014,
+          "cites": 154
+        },
+        {
+          "year": 2015,
+          "cites": 223
+        },
+        {
+          "year": 2016,
+          "cites": 262
+        },
+        {
+          "year": 2017,
+          "cites": 225
+        },
+        {
+          "year": 2018,
+          "cites": 315
+        },
+        {
+          "year": 2019,
+          "cites": 285
+        },
+        {
+          "year": 2020,
+          "cites": 347
+        },
+        {
+          "year": 2021,
+          "cites": 318
+        },
+        {
+          "year": 2022,
+          "cites": 308
+        },
+        {
+          "year": 2023,
+          "cites": 291
+        },
+        {
+          "year": 2024,
+          "cites": 342
+        },
+        {
+          "year": 2025,
+          "cites": 235
+        },
+        {
+          "year": 2026,
+          "cites": 131
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2008,
+          "cites": 29
+        },
+        {
+          "year": 2009,
+          "cites": 47
+        },
+        {
+          "year": 2010,
+          "cites": 64
+        },
+        {
+          "year": 2011,
+          "cites": 123
+        },
+        {
+          "year": 2012,
+          "cites": 168
+        },
+        {
+          "year": 2013,
+          "cites": 205
+        },
+        {
+          "year": 2014,
+          "cites": 282
+        },
+        {
+          "year": 2015,
+          "cites": 313
+        },
+        {
+          "year": 2016,
+          "cites": 422
+        },
+        {
+          "year": 2017,
+          "cites": 447
+        },
+        {
+          "year": 2018,
+          "cites": 490
+        },
+        {
+          "year": 2019,
+          "cites": 502
+        },
+        {
+          "year": 2020,
+          "cites": 575
+        },
+        {
+          "year": 2021,
+          "cites": 537
+        },
+        {
+          "year": 2022,
+          "cites": 594
+        },
+        {
+          "year": 2023,
+          "cites": 642
+        },
+        {
+          "year": 2024,
+          "cites": 615
+        },
+        {
+          "year": 2025,
+          "cites": 589
+        },
+        {
+          "year": 2026,
+          "cites": 287
+        }
+      ]
+    },
+    {
+      "key": "roesler_e",
+      "name": "Eileen Roesler",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1977,
+          "cites": 0
+        },
+        {
+          "year": 2019,
+          "cites": 0
+        },
+        {
+          "year": 2020,
+          "cites": 13
+        },
+        {
+          "year": 2021,
+          "cites": 40
+        },
+        {
+          "year": 2022,
+          "cites": 113
+        },
+        {
+          "year": 2023,
+          "cites": 171
+        },
+        {
+          "year": 2024,
+          "cites": 229
+        },
+        {
+          "year": 2025,
+          "cites": 366
+        },
+        {
+          "year": 2026,
+          "cites": 243
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2020,
+          "cites": 12
+        },
+        {
+          "year": 2021,
+          "cites": 43
+        },
+        {
+          "year": 2022,
+          "cites": 147
+        },
+        {
+          "year": 2023,
+          "cites": 221
+        },
+        {
+          "year": 2024,
+          "cites": 329
+        },
+        {
+          "year": 2025,
+          "cites": 549
+        },
+        {
+          "year": 2026,
+          "cites": 414
+        }
+      ]
+    },
+    {
+      "key": "rupp_d",
+      "name": "Deborah E. Rupp",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 737
+        },
+        {
+          "year": 2013,
+          "cites": 845
+        },
+        {
+          "year": 2014,
+          "cites": 989
+        },
+        {
+          "year": 2015,
+          "cites": 999
+        },
+        {
+          "year": 2016,
+          "cites": 915
+        },
+        {
+          "year": 2017,
+          "cites": 1068
+        },
+        {
+          "year": 2018,
+          "cites": 1118
+        },
+        {
+          "year": 2019,
+          "cites": 1318
+        },
+        {
+          "year": 2020,
+          "cites": 1379
+        },
+        {
+          "year": 2021,
+          "cites": 1405
+        },
+        {
+          "year": 2022,
+          "cites": 1462
+        },
+        {
+          "year": 2023,
+          "cites": 1447
+        },
+        {
+          "year": 2024,
+          "cites": 1314
+        },
+        {
+          "year": 2025,
+          "cites": 1220
+        },
+        {
+          "year": 2026,
+          "cites": 601
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2004,
+          "cites": 118
+        },
+        {
+          "year": 2005,
+          "cites": 164
+        },
+        {
+          "year": 2006,
+          "cites": 283
+        },
+        {
+          "year": 2007,
+          "cites": 368
+        },
+        {
+          "year": 2008,
+          "cites": 552
+        },
+        {
+          "year": 2009,
+          "cites": 737
+        },
+        {
+          "year": 2010,
+          "cites": 818
+        },
+        {
+          "year": 2011,
+          "cites": 1086
+        },
+        {
+          "year": 2012,
+          "cites": 1197
+        },
+        {
+          "year": 2013,
+          "cites": 1529
+        },
+        {
+          "year": 2014,
+          "cites": 1727
+        },
+        {
+          "year": 2015,
+          "cites": 2009
+        },
+        {
+          "year": 2016,
+          "cites": 1967
+        },
+        {
+          "year": 2017,
+          "cites": 2171
+        },
+        {
+          "year": 2018,
+          "cites": 2247
+        },
+        {
+          "year": 2019,
+          "cites": 2559
+        },
+        {
+          "year": 2020,
+          "cites": 2494
+        },
+        {
+          "year": 2021,
+          "cites": 2635
+        },
+        {
+          "year": 2022,
+          "cites": 2586
+        },
+        {
+          "year": 2023,
+          "cites": 2662
+        },
+        {
+          "year": 2024,
+          "cites": 2485
+        },
+        {
+          "year": 2025,
+          "cites": 2627
+        },
+        {
+          "year": 2026,
+          "cites": 1359
+        }
+      ]
+    },
+    {
+      "key": "sanchez_a",
+      "name": "Amanda L Sanchez",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 5
+        },
+        {
+          "year": 2013,
+          "cites": 1
+        },
+        {
+          "year": 2014,
+          "cites": 8
+        },
+        {
+          "year": 2015,
+          "cites": 10
+        },
+        {
+          "year": 2016,
+          "cites": 8
+        },
+        {
+          "year": 2017,
+          "cites": 17
+        },
+        {
+          "year": 2018,
+          "cites": 50
+        },
+        {
+          "year": 2019,
+          "cites": 78
+        },
+        {
+          "year": 2020,
+          "cites": 126
+        },
+        {
+          "year": 2021,
+          "cites": 191
+        },
+        {
+          "year": 2022,
+          "cites": 181
+        },
+        {
+          "year": 2023,
+          "cites": 183
+        },
+        {
+          "year": 2024,
+          "cites": 232
+        },
+        {
+          "year": 2025,
+          "cites": 190
+        },
+        {
+          "year": 2026,
+          "cites": 112
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2015,
+          "cites": 7
+        },
+        {
+          "year": 2016,
+          "cites": 12
+        },
+        {
+          "year": 2017,
+          "cites": 21
+        },
+        {
+          "year": 2018,
+          "cites": 73
+        },
+        {
+          "year": 2019,
+          "cites": 112
+        },
+        {
+          "year": 2020,
+          "cites": 149
+        },
+        {
+          "year": 2021,
+          "cites": 226
+        },
+        {
+          "year": 2022,
+          "cites": 277
+        },
+        {
+          "year": 2023,
+          "cites": 274
+        },
+        {
+          "year": 2024,
+          "cites": 307
+        },
+        {
+          "year": 2025,
+          "cites": 342
+        },
+        {
+          "year": 2026,
+          "cites": 188
+        }
+      ]
+    },
+    {
+      "key": "savage_n",
+      "name": "Nastassia Savage",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2014,
+          "cites": 0
+        },
+        {
+          "year": 2015,
+          "cites": 0
+        },
+        {
+          "year": 2016,
+          "cites": 1
+        },
+        {
+          "year": 2017,
+          "cites": 3
+        },
+        {
+          "year": 2018,
+          "cites": 4
+        },
+        {
+          "year": 2019,
+          "cites": 3
+        },
+        {
+          "year": 2020,
+          "cites": 2
+        },
+        {
+          "year": 2021,
+          "cites": 4
+        },
+        {
+          "year": 2022,
+          "cites": 10
+        },
+        {
+          "year": 2023,
+          "cites": 9
+        },
+        {
+          "year": 2024,
+          "cites": 17
+        },
+        {
+          "year": 2025,
+          "cites": 25
+        },
+        {
+          "year": 2026,
+          "cites": 6
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2015,
+          "cites": 3
+        },
+        {
+          "year": 2016,
+          "cites": 4
+        },
+        {
+          "year": 2017,
+          "cites": 10
+        },
+        {
+          "year": 2018,
+          "cites": 9
+        },
+        {
+          "year": 2019,
+          "cites": 7
+        },
+        {
+          "year": 2020,
+          "cites": 11
+        },
+        {
+          "year": 2021,
+          "cites": 9
+        },
+        {
+          "year": 2022,
+          "cites": 18
+        },
+        {
+          "year": 2023,
+          "cites": 24
+        },
+        {
+          "year": 2024,
+          "cites": 25
+        },
+        {
+          "year": 2025,
+          "cites": 34
+        },
+        {
+          "year": 2026,
+          "cites": 16
+        }
+      ]
+    },
+    {
+      "key": "sheridan_k",
+      "name": "Kimberly M Sheridan",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 11
+        },
+        {
+          "year": 2013,
+          "cites": 21
+        },
+        {
+          "year": 2014,
+          "cites": 35
+        },
+        {
+          "year": 2015,
+          "cites": 39
+        },
+        {
+          "year": 2016,
+          "cites": 122
+        },
+        {
+          "year": 2017,
+          "cites": 188
+        },
+        {
+          "year": 2018,
+          "cites": 206
+        },
+        {
+          "year": 2019,
+          "cites": 352
+        },
+        {
+          "year": 2020,
+          "cites": 309
+        },
+        {
+          "year": 2021,
+          "cites": 307
+        },
+        {
+          "year": 2022,
+          "cites": 300
+        },
+        {
+          "year": 2023,
+          "cites": 249
+        },
+        {
+          "year": 2024,
+          "cites": 271
+        },
+        {
+          "year": 2025,
+          "cites": 187
+        },
+        {
+          "year": 2026,
+          "cites": 83
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2007,
+          "cites": 17
+        },
+        {
+          "year": 2008,
+          "cites": 45
+        },
+        {
+          "year": 2009,
+          "cites": 50
+        },
+        {
+          "year": 2010,
+          "cites": 95
+        },
+        {
+          "year": 2011,
+          "cites": 89
+        },
+        {
+          "year": 2012,
+          "cites": 86
+        },
+        {
+          "year": 2013,
+          "cites": 146
+        },
+        {
+          "year": 2014,
+          "cites": 161
+        },
+        {
+          "year": 2015,
+          "cites": 201
+        },
+        {
+          "year": 2016,
+          "cites": 343
+        },
+        {
+          "year": 2017,
+          "cites": 512
+        },
+        {
+          "year": 2018,
+          "cites": 526
+        },
+        {
+          "year": 2019,
+          "cites": 637
+        },
+        {
+          "year": 2020,
+          "cites": 688
+        },
+        {
+          "year": 2021,
+          "cites": 569
+        },
+        {
+          "year": 2022,
+          "cites": 549
+        },
+        {
+          "year": 2023,
+          "cites": 605
+        },
+        {
+          "year": 2024,
+          "cites": 553
+        },
+        {
+          "year": 2025,
+          "cites": 597
+        },
+        {
+          "year": 2026,
+          "cites": 276
+        }
+      ]
+    },
+    {
+      "key": "short_j",
+      "name": "Jerome Short",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1988,
+          "cites": 0
+        },
+        {
+          "year": 1989,
+          "cites": 0
+        },
+        {
+          "year": 1990,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 27
+        },
+        {
+          "year": 2013,
+          "cites": 13
+        },
+        {
+          "year": 2014,
+          "cites": 20
+        },
+        {
+          "year": 2015,
+          "cites": 27
+        },
+        {
+          "year": 2016,
+          "cites": 53
+        },
+        {
+          "year": 2017,
+          "cites": 59
+        },
+        {
+          "year": 2018,
+          "cites": 58
+        },
+        {
+          "year": 2019,
+          "cites": 87
+        },
+        {
+          "year": 2020,
+          "cites": 115
+        },
+        {
+          "year": 2021,
+          "cites": 146
+        },
+        {
+          "year": 2022,
+          "cites": 136
+        },
+        {
+          "year": 2023,
+          "cites": 144
+        },
+        {
+          "year": 2024,
+          "cites": 129
+        },
+        {
+          "year": 2025,
+          "cites": 123
+        },
+        {
+          "year": 2026,
+          "cites": 63
+        }
+      ],
+      "scholar": [
+        {
+          "year": 1989,
+          "cites": 8
+        },
+        {
+          "year": 1990,
+          "cites": 15
+        },
+        {
+          "year": 1991,
+          "cites": 23
+        },
+        {
+          "year": 1992,
+          "cites": 20
+        },
+        {
+          "year": 1993,
+          "cites": 27
+        },
+        {
+          "year": 1994,
+          "cites": 22
+        },
+        {
+          "year": 1995,
+          "cites": 38
+        },
+        {
+          "year": 1996,
+          "cites": 27
+        },
+        {
+          "year": 1997,
+          "cites": 35
+        },
+        {
+          "year": 1998,
+          "cites": 39
+        },
+        {
+          "year": 1999,
+          "cites": 39
+        },
+        {
+          "year": 2000,
+          "cites": 44
+        },
+        {
+          "year": 2001,
+          "cites": 37
+        },
+        {
+          "year": 2002,
+          "cites": 50
+        },
+        {
+          "year": 2003,
+          "cites": 43
+        },
+        {
+          "year": 2004,
+          "cites": 35
+        },
+        {
+          "year": 2005,
+          "cites": 43
+        },
+        {
+          "year": 2006,
+          "cites": 41
+        },
+        {
+          "year": 2007,
+          "cites": 30
+        },
+        {
+          "year": 2008,
+          "cites": 38
+        },
+        {
+          "year": 2009,
+          "cites": 43
+        },
+        {
+          "year": 2010,
+          "cites": 45
+        },
+        {
+          "year": 2011,
+          "cites": 33
+        },
+        {
+          "year": 2012,
+          "cites": 35
+        },
+        {
+          "year": 2013,
+          "cites": 35
+        },
+        {
+          "year": 2014,
+          "cites": 40
+        },
+        {
+          "year": 2015,
+          "cites": 55
+        },
+        {
+          "year": 2016,
+          "cites": 75
+        },
+        {
+          "year": 2017,
+          "cites": 104
+        },
+        {
+          "year": 2018,
+          "cites": 130
+        },
+        {
+          "year": 2019,
+          "cites": 150
+        },
+        {
+          "year": 2020,
+          "cites": 180
+        },
+        {
+          "year": 2021,
+          "cites": 237
+        },
+        {
+          "year": 2022,
+          "cites": 231
+        },
+        {
+          "year": 2023,
+          "cites": 251
+        },
+        {
+          "year": 2024,
+          "cites": 275
+        },
+        {
+          "year": 2025,
+          "cites": 229
+        },
+        {
+          "year": 2026,
+          "cites": 125
+        }
+      ]
+    },
+    {
+      "key": "smithgray_s",
+      "name": "Sybil Smith-Gray",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 3
+        },
+        {
+          "year": 2013,
+          "cites": 2
+        },
+        {
+          "year": 2014,
+          "cites": 1
+        },
+        {
+          "year": 2015,
+          "cites": 1
+        },
+        {
+          "year": 2017,
+          "cites": 1
+        },
+        {
+          "year": 2020,
+          "cites": 2
+        },
+        {
+          "year": 2021,
+          "cites": 1
+        },
+        {
+          "year": 2022,
+          "cites": 2
+        },
+        {
+          "year": 2023,
+          "cites": 2
+        },
+        {
+          "year": 2026,
+          "cites": 1
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "stagl_k",
+      "name": "Kevin C Stagl",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 180
+        },
+        {
+          "year": 2013,
+          "cites": 171
+        },
+        {
+          "year": 2014,
+          "cites": 178
+        },
+        {
+          "year": 2015,
+          "cites": 200
+        },
+        {
+          "year": 2016,
+          "cites": 188
+        },
+        {
+          "year": 2017,
+          "cites": 211
+        },
+        {
+          "year": 2018,
+          "cites": 231
+        },
+        {
+          "year": 2019,
+          "cites": 172
+        },
+        {
+          "year": 2020,
+          "cites": 172
+        },
+        {
+          "year": 2021,
+          "cites": 214
+        },
+        {
+          "year": 2022,
+          "cites": 169
+        },
+        {
+          "year": 2023,
+          "cites": 179
+        },
+        {
+          "year": 2024,
+          "cites": 189
+        },
+        {
+          "year": 2025,
+          "cites": 159
+        },
+        {
+          "year": 2026,
+          "cites": 62
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2006,
+          "cites": 47
+        },
+        {
+          "year": 2007,
+          "cites": 85
+        },
+        {
+          "year": 2008,
+          "cites": 161
+        },
+        {
+          "year": 2009,
+          "cites": 117
+        },
+        {
+          "year": 2010,
+          "cites": 247
+        },
+        {
+          "year": 2011,
+          "cites": 246
+        },
+        {
+          "year": 2012,
+          "cites": 340
+        },
+        {
+          "year": 2013,
+          "cites": 337
+        },
+        {
+          "year": 2014,
+          "cites": 372
+        },
+        {
+          "year": 2015,
+          "cites": 380
+        },
+        {
+          "year": 2016,
+          "cites": 409
+        },
+        {
+          "year": 2017,
+          "cites": 469
+        },
+        {
+          "year": 2018,
+          "cites": 483
+        },
+        {
+          "year": 2019,
+          "cites": 402
+        },
+        {
+          "year": 2020,
+          "cites": 386
+        },
+        {
+          "year": 2021,
+          "cites": 362
+        },
+        {
+          "year": 2022,
+          "cites": 310
+        },
+        {
+          "year": 2023,
+          "cites": 367
+        },
+        {
+          "year": 2024,
+          "cites": 344
+        },
+        {
+          "year": 2025,
+          "cites": 362
+        },
+        {
+          "year": 2026,
+          "cites": 164
+        }
+      ]
+    },
+    {
+      "key": "stuewig_j",
+      "name": "Jeffrey B Stuewig",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 144
+        },
+        {
+          "year": 2013,
+          "cites": 172
+        },
+        {
+          "year": 2014,
+          "cites": 181
+        },
+        {
+          "year": 2015,
+          "cites": 204
+        },
+        {
+          "year": 2016,
+          "cites": 219
+        },
+        {
+          "year": 2017,
+          "cites": 240
+        },
+        {
+          "year": 2018,
+          "cites": 232
+        },
+        {
+          "year": 2019,
+          "cites": 255
+        },
+        {
+          "year": 2020,
+          "cites": 312
+        },
+        {
+          "year": 2021,
+          "cites": 283
+        },
+        {
+          "year": 2022,
+          "cites": 270
+        },
+        {
+          "year": 2023,
+          "cites": 306
+        },
+        {
+          "year": 2024,
+          "cites": 221
+        },
+        {
+          "year": 2025,
+          "cites": 205
+        },
+        {
+          "year": 2026,
+          "cites": 106
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2006,
+          "cites": 73
+        },
+        {
+          "year": 2007,
+          "cites": 91
+        },
+        {
+          "year": 2008,
+          "cites": 155
+        },
+        {
+          "year": 2009,
+          "cites": 194
+        },
+        {
+          "year": 2010,
+          "cites": 231
+        },
+        {
+          "year": 2011,
+          "cites": 370
+        },
+        {
+          "year": 2012,
+          "cites": 364
+        },
+        {
+          "year": 2013,
+          "cites": 525
+        },
+        {
+          "year": 2014,
+          "cites": 626
+        },
+        {
+          "year": 2015,
+          "cites": 641
+        },
+        {
+          "year": 2016,
+          "cites": 769
+        },
+        {
+          "year": 2017,
+          "cites": 774
+        },
+        {
+          "year": 2018,
+          "cites": 839
+        },
+        {
+          "year": 2019,
+          "cites": 947
+        },
+        {
+          "year": 2020,
+          "cites": 978
+        },
+        {
+          "year": 2021,
+          "cites": 1033
+        },
+        {
+          "year": 2022,
+          "cites": 1123
+        },
+        {
+          "year": 2023,
+          "cites": 1015
+        },
+        {
+          "year": 2024,
+          "cites": 1064
+        },
+        {
+          "year": 2025,
+          "cites": 1115
+        },
+        {
+          "year": 2026,
+          "cites": 648
+        }
+      ]
+    },
+    {
+      "key": "thompson_d",
+      "name": "Dawna M Thompson",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 2
+        },
+        {
+          "year": 2013,
+          "cites": 2
+        },
+        {
+          "year": 2014,
+          "cites": 7
+        },
+        {
+          "year": 2015,
+          "cites": 6
+        },
+        {
+          "year": 2016,
+          "cites": 6
+        },
+        {
+          "year": 2017,
+          "cites": 5
+        },
+        {
+          "year": 2018,
+          "cites": 4
+        },
+        {
+          "year": 2019,
+          "cites": 5
+        },
+        {
+          "year": 2020,
+          "cites": 11
+        },
+        {
+          "year": 2021,
+          "cites": 3
+        },
+        {
+          "year": 2022,
+          "cites": 8
+        },
+        {
+          "year": 2023,
+          "cites": 12
+        },
+        {
+          "year": 2024,
+          "cites": 1
+        },
+        {
+          "year": 2025,
+          "cites": 9
+        },
+        {
+          "year": 2026,
+          "cites": 3
+        }
+      ],
+      "scholar": []
+    },
+    {
+      "key": "thompson_j",
+      "name": "James C Thompson",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [],
+      "scholar": [
+        {
+          "year": 2001,
+          "cites": 15
+        },
+        {
+          "year": 2002,
+          "cites": 10
+        },
+        {
+          "year": 2003,
+          "cites": 11
+        },
+        {
+          "year": 2004,
+          "cites": 30
+        },
+        {
+          "year": 2005,
+          "cites": 36
+        },
+        {
+          "year": 2006,
+          "cites": 59
+        },
+        {
+          "year": 2007,
+          "cites": 78
+        },
+        {
+          "year": 2008,
+          "cites": 88
+        },
+        {
+          "year": 2009,
+          "cites": 110
+        },
+        {
+          "year": 2010,
+          "cites": 114
+        },
+        {
+          "year": 2011,
+          "cites": 119
+        },
+        {
+          "year": 2012,
+          "cites": 143
+        },
+        {
+          "year": 2013,
+          "cites": 188
+        },
+        {
+          "year": 2014,
+          "cites": 150
+        },
+        {
+          "year": 2015,
+          "cites": 202
+        },
+        {
+          "year": 2016,
+          "cites": 181
+        },
+        {
+          "year": 2017,
+          "cites": 165
+        },
+        {
+          "year": 2018,
+          "cites": 214
+        },
+        {
+          "year": 2019,
+          "cites": 190
+        },
+        {
+          "year": 2020,
+          "cites": 225
+        },
+        {
+          "year": 2021,
+          "cites": 262
+        },
+        {
+          "year": 2022,
+          "cites": 270
+        },
+        {
+          "year": 2023,
+          "cites": 272
+        },
+        {
+          "year": 2024,
+          "cites": 254
+        },
+        {
+          "year": 2025,
+          "cites": 262
+        },
+        {
+          "year": 2026,
+          "cites": 152
+        }
+      ]
+    },
+    {
+      "key": "tonge_n",
+      "name": "Natasha A Tonge",
+      "rg": "Assistant",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 11
+        },
+        {
+          "year": 2013,
+          "cites": 26
+        },
+        {
+          "year": 2014,
+          "cites": 15
+        },
+        {
+          "year": 2015,
+          "cites": 27
+        },
+        {
+          "year": 2016,
+          "cites": 30
+        },
+        {
+          "year": 2017,
+          "cites": 26
+        },
+        {
+          "year": 2018,
+          "cites": 57
+        },
+        {
+          "year": 2019,
+          "cites": 63
+        },
+        {
+          "year": 2020,
+          "cites": 81
+        },
+        {
+          "year": 2021,
+          "cites": 89
+        },
+        {
+          "year": 2022,
+          "cites": 89
+        },
+        {
+          "year": 2023,
+          "cites": 97
+        },
+        {
+          "year": 2024,
+          "cites": 89
+        },
+        {
+          "year": 2025,
+          "cites": 90
+        },
+        {
+          "year": 2026,
+          "cites": 51
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2010,
+          "cites": 6
+        },
+        {
+          "year": 2011,
+          "cites": 17
+        },
+        {
+          "year": 2012,
+          "cites": 11
+        },
+        {
+          "year": 2013,
+          "cites": 19
+        },
+        {
+          "year": 2014,
+          "cites": 25
+        },
+        {
+          "year": 2015,
+          "cites": 25
+        },
+        {
+          "year": 2016,
+          "cites": 47
+        },
+        {
+          "year": 2017,
+          "cites": 32
+        },
+        {
+          "year": 2018,
+          "cites": 37
+        },
+        {
+          "year": 2019,
+          "cites": 101
+        },
+        {
+          "year": 2020,
+          "cites": 109
+        },
+        {
+          "year": 2021,
+          "cites": 97
+        },
+        {
+          "year": 2022,
+          "cites": 103
+        },
+        {
+          "year": 2023,
+          "cites": 115
+        },
+        {
+          "year": 2024,
+          "cites": 135
+        },
+        {
+          "year": 2025,
+          "cites": 128
+        },
+        {
+          "year": 2026,
+          "cites": 86
+        }
+      ]
+    },
+    {
+      "key": "wiener_m",
+      "name": "Martin Wiener",
+      "rg": "Associate",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1932,
+          "cites": 0
+        },
+        {
+          "year": 1949,
+          "cites": 0
+        },
+        {
+          "year": 1950,
+          "cites": 0
+        },
+        {
+          "year": 1951,
+          "cites": 0
+        },
+        {
+          "year": 1971,
+          "cites": 0
+        },
+        {
+          "year": 1972,
+          "cites": 0
+        },
+        {
+          "year": 1973,
+          "cites": 0
+        },
+        {
+          "year": 1974,
+          "cites": 0
+        },
+        {
+          "year": 1976,
+          "cites": 0
+        },
+        {
+          "year": 1979,
+          "cites": 0
+        },
+        {
+          "year": 1980,
+          "cites": 0
+        },
+        {
+          "year": 1981,
+          "cites": 0
+        },
+        {
+          "year": 1982,
+          "cites": 0
+        },
+        {
+          "year": 1983,
+          "cites": 0
+        },
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1985,
+          "cites": 0
+        },
+        {
+          "year": 1986,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 1989,
+          "cites": 0
+        },
+        {
+          "year": 1992,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 133
+        },
+        {
+          "year": 2013,
+          "cites": 107
+        },
+        {
+          "year": 2014,
+          "cites": 129
+        },
+        {
+          "year": 2015,
+          "cites": 155
+        },
+        {
+          "year": 2016,
+          "cites": 103
+        },
+        {
+          "year": 2017,
+          "cites": 170
+        },
+        {
+          "year": 2018,
+          "cites": 141
+        },
+        {
+          "year": 2019,
+          "cites": 227
+        },
+        {
+          "year": 2020,
+          "cites": 254
+        },
+        {
+          "year": 2021,
+          "cites": 321
+        },
+        {
+          "year": 2022,
+          "cites": 316
+        },
+        {
+          "year": 2023,
+          "cites": 332
+        },
+        {
+          "year": 2024,
+          "cites": 360
+        },
+        {
+          "year": 2025,
+          "cites": 444
+        },
+        {
+          "year": 2026,
+          "cites": 251
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2010,
+          "cites": 36
+        },
+        {
+          "year": 2011,
+          "cites": 86
+        },
+        {
+          "year": 2012,
+          "cites": 120
+        },
+        {
+          "year": 2013,
+          "cites": 182
+        },
+        {
+          "year": 2014,
+          "cites": 262
+        },
+        {
+          "year": 2015,
+          "cites": 214
+        },
+        {
+          "year": 2016,
+          "cites": 279
+        },
+        {
+          "year": 2017,
+          "cites": 257
+        },
+        {
+          "year": 2018,
+          "cites": 277
+        },
+        {
+          "year": 2019,
+          "cites": 263
+        },
+        {
+          "year": 2020,
+          "cites": 297
+        },
+        {
+          "year": 2021,
+          "cites": 351
+        },
+        {
+          "year": 2022,
+          "cites": 372
+        },
+        {
+          "year": 2023,
+          "cites": 353
+        },
+        {
+          "year": 2024,
+          "cites": 447
+        },
+        {
+          "year": 2025,
+          "cites": 410
+        },
+        {
+          "year": 2026,
+          "cites": 261
+        }
+      ]
+    },
+    {
+      "key": "winsler_a",
+      "name": "Adam Winsler",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 307
+        },
+        {
+          "year": 2013,
+          "cites": 340
+        },
+        {
+          "year": 2014,
+          "cites": 356
+        },
+        {
+          "year": 2015,
+          "cites": 385
+        },
+        {
+          "year": 2016,
+          "cites": 481
+        },
+        {
+          "year": 2017,
+          "cites": 421
+        },
+        {
+          "year": 2018,
+          "cites": 555
+        },
+        {
+          "year": 2019,
+          "cites": 562
+        },
+        {
+          "year": 2020,
+          "cites": 610
+        },
+        {
+          "year": 2021,
+          "cites": 706
+        },
+        {
+          "year": 2022,
+          "cites": 654
+        },
+        {
+          "year": 2023,
+          "cites": 703
+        },
+        {
+          "year": 2024,
+          "cites": 623
+        },
+        {
+          "year": 2025,
+          "cites": 583
+        },
+        {
+          "year": 2026,
+          "cites": 251
+        }
+      ],
+      "scholar": [
+        {
+          "year": 1997,
+          "cites": 49
+        },
+        {
+          "year": 1998,
+          "cites": 83
+        },
+        {
+          "year": 1999,
+          "cites": 95
+        },
+        {
+          "year": 2000,
+          "cites": 98
+        },
+        {
+          "year": 2001,
+          "cites": 114
+        },
+        {
+          "year": 2002,
+          "cites": 140
+        },
+        {
+          "year": 2003,
+          "cites": 192
+        },
+        {
+          "year": 2004,
+          "cites": 133
+        },
+        {
+          "year": 2005,
+          "cites": 210
+        },
+        {
+          "year": 2006,
+          "cites": 213
+        },
+        {
+          "year": 2007,
+          "cites": 263
+        },
+        {
+          "year": 2008,
+          "cites": 338
+        },
+        {
+          "year": 2009,
+          "cites": 399
+        },
+        {
+          "year": 2010,
+          "cites": 384
+        },
+        {
+          "year": 2011,
+          "cites": 508
+        },
+        {
+          "year": 2012,
+          "cites": 610
+        },
+        {
+          "year": 2013,
+          "cites": 634
+        },
+        {
+          "year": 2014,
+          "cites": 750
+        },
+        {
+          "year": 2015,
+          "cites": 801
+        },
+        {
+          "year": 2016,
+          "cites": 986
+        },
+        {
+          "year": 2017,
+          "cites": 981
+        },
+        {
+          "year": 2018,
+          "cites": 1195
+        },
+        {
+          "year": 2019,
+          "cites": 1137
+        },
+        {
+          "year": 2020,
+          "cites": 1204
+        },
+        {
+          "year": 2021,
+          "cites": 1270
+        },
+        {
+          "year": 2022,
+          "cites": 1391
+        },
+        {
+          "year": 2023,
+          "cites": 1515
+        },
+        {
+          "year": 2024,
+          "cites": 1439
+        },
+        {
+          "year": 2025,
+          "cites": 1438
+        },
+        {
+          "year": 2026,
+          "cites": 669
+        }
+      ]
+    },
+    {
+      "key": "zaccaro_s",
+      "name": "Stephen Zaccaro",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1982,
+          "cites": 0
+        },
+        {
+          "year": 1983,
+          "cites": 0
+        },
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1985,
+          "cites": 0
+        },
+        {
+          "year": 1986,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 1988,
+          "cites": 0
+        },
+        {
+          "year": 1989,
+          "cites": 0
+        },
+        {
+          "year": 1990,
+          "cites": 0
+        },
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 1992,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 943
+        },
+        {
+          "year": 2013,
+          "cites": 866
+        },
+        {
+          "year": 2014,
+          "cites": 939
+        },
+        {
+          "year": 2015,
+          "cites": 1002
+        },
+        {
+          "year": 2016,
+          "cites": 978
+        },
+        {
+          "year": 2017,
+          "cites": 1008
+        },
+        {
+          "year": 2018,
+          "cites": 971
+        },
+        {
+          "year": 2019,
+          "cites": 923
+        },
+        {
+          "year": 2020,
+          "cites": 1130
+        },
+        {
+          "year": 2021,
+          "cites": 1044
+        },
+        {
+          "year": 2022,
+          "cites": 983
+        },
+        {
+          "year": 2023,
+          "cites": 967
+        },
+        {
+          "year": 2024,
+          "cites": 869
+        },
+        {
+          "year": 2025,
+          "cites": 704
+        },
+        {
+          "year": 2026,
+          "cites": 394
+        }
+      ],
+      "scholar": [
+        {
+          "year": 1995,
+          "cites": 120
+        },
+        {
+          "year": 1996,
+          "cites": 131
+        },
+        {
+          "year": 1997,
+          "cites": 141
+        },
+        {
+          "year": 1998,
+          "cites": 112
+        },
+        {
+          "year": 1999,
+          "cites": 158
+        },
+        {
+          "year": 2000,
+          "cites": 253
+        },
+        {
+          "year": 2001,
+          "cites": 282
+        },
+        {
+          "year": 2002,
+          "cites": 333
+        },
+        {
+          "year": 2003,
+          "cites": 442
+        },
+        {
+          "year": 2004,
+          "cites": 636
+        },
+        {
+          "year": 2005,
+          "cites": 616
+        },
+        {
+          "year": 2006,
+          "cites": 774
+        },
+        {
+          "year": 2007,
+          "cites": 840
+        },
+        {
+          "year": 2008,
+          "cites": 1171
+        },
+        {
+          "year": 2009,
+          "cites": 1095
+        },
+        {
+          "year": 2010,
+          "cites": 1221
+        },
+        {
+          "year": 2011,
+          "cites": 1465
+        },
+        {
+          "year": 2012,
+          "cites": 1830
+        },
+        {
+          "year": 2013,
+          "cites": 1784
+        },
+        {
+          "year": 2014,
+          "cites": 2064
+        },
+        {
+          "year": 2015,
+          "cites": 2141
+        },
+        {
+          "year": 2016,
+          "cites": 2214
+        },
+        {
+          "year": 2017,
+          "cites": 2401
+        },
+        {
+          "year": 2018,
+          "cites": 2286
+        },
+        {
+          "year": 2019,
+          "cites": 2286
+        },
+        {
+          "year": 2020,
+          "cites": 2369
+        },
+        {
+          "year": 2021,
+          "cites": 2520
+        },
+        {
+          "year": 2022,
+          "cites": 2256
+        },
+        {
+          "year": 2023,
+          "cites": 2336
+        },
+        {
+          "year": 2024,
+          "cites": 2185
+        },
+        {
+          "year": 2025,
+          "cites": 2016
+        },
+        {
+          "year": 2026,
+          "cites": 1065
+        }
+      ]
+    },
+    {
+      "key": "mehlenbeck_r",
+      "name": "Robyn Mehlenbeck",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 71
+        },
+        {
+          "year": 2013,
+          "cites": 74
+        },
+        {
+          "year": 2014,
+          "cites": 69
+        },
+        {
+          "year": 2015,
+          "cites": 73
+        },
+        {
+          "year": 2016,
+          "cites": 71
+        },
+        {
+          "year": 2017,
+          "cites": 76
+        },
+        {
+          "year": 2018,
+          "cites": 78
+        },
+        {
+          "year": 2019,
+          "cites": 79
+        },
+        {
+          "year": 2020,
+          "cites": 69
+        },
+        {
+          "year": 2021,
+          "cites": 90
+        },
+        {
+          "year": 2022,
+          "cites": 84
+        },
+        {
+          "year": 2023,
+          "cites": 92
+        },
+        {
+          "year": 2024,
+          "cites": 71
+        },
+        {
+          "year": 2025,
+          "cites": 60
+        },
+        {
+          "year": 2026,
+          "cites": 39
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2002,
+          "cites": 8
+        },
+        {
+          "year": 2003,
+          "cites": 13
+        },
+        {
+          "year": 2004,
+          "cites": 17
+        },
+        {
+          "year": 2005,
+          "cites": 18
+        },
+        {
+          "year": 2006,
+          "cites": 21
+        },
+        {
+          "year": 2007,
+          "cites": 44
+        },
+        {
+          "year": 2008,
+          "cites": 59
+        },
+        {
+          "year": 2009,
+          "cites": 68
+        },
+        {
+          "year": 2010,
+          "cites": 74
+        },
+        {
+          "year": 2011,
+          "cites": 93
+        },
+        {
+          "year": 2012,
+          "cites": 115
+        },
+        {
+          "year": 2013,
+          "cites": 135
+        },
+        {
+          "year": 2014,
+          "cites": 121
+        },
+        {
+          "year": 2015,
+          "cites": 116
+        },
+        {
+          "year": 2016,
+          "cites": 116
+        },
+        {
+          "year": 2017,
+          "cites": 122
+        },
+        {
+          "year": 2018,
+          "cites": 138
+        },
+        {
+          "year": 2019,
+          "cites": 132
+        },
+        {
+          "year": 2020,
+          "cites": 127
+        },
+        {
+          "year": 2021,
+          "cites": 136
+        },
+        {
+          "year": 2022,
+          "cites": 135
+        },
+        {
+          "year": 2023,
+          "cites": 153
+        },
+        {
+          "year": 2024,
+          "cites": 137
+        },
+        {
+          "year": 2025,
+          "cites": 111
+        },
+        {
+          "year": 2026,
+          "cites": 67
+        }
+      ]
+    },
+    {
+      "key": "shaw_t",
+      "name": "Tyler H. Shaw",
+      "rg": "Full",
+      "is_self": false,
+      "team": false,
+      "openalex": [
+        {
+          "year": 1980,
+          "cites": 0
+        },
+        {
+          "year": 1983,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 73
+        },
+        {
+          "year": 2013,
+          "cites": 81
+        },
+        {
+          "year": 2014,
+          "cites": 124
+        },
+        {
+          "year": 2015,
+          "cites": 137
+        },
+        {
+          "year": 2016,
+          "cites": 76
+        },
+        {
+          "year": 2017,
+          "cites": 89
+        },
+        {
+          "year": 2018,
+          "cites": 145
+        },
+        {
+          "year": 2019,
+          "cites": 158
+        },
+        {
+          "year": 2020,
+          "cites": 241
+        },
+        {
+          "year": 2021,
+          "cites": 204
+        },
+        {
+          "year": 2022,
+          "cites": 261
+        },
+        {
+          "year": 2023,
+          "cites": 323
+        },
+        {
+          "year": 2024,
+          "cites": 356
+        },
+        {
+          "year": 2025,
+          "cites": 432
+        },
+        {
+          "year": 2026,
+          "cites": 213
+        }
+      ],
+      "scholar": [
+        {
+          "year": 2008,
+          "cites": 19
+        },
+        {
+          "year": 2009,
+          "cites": 26
+        },
+        {
+          "year": 2010,
+          "cites": 40
+        },
+        {
+          "year": 2011,
+          "cites": 67
+        },
+        {
+          "year": 2012,
+          "cites": 70
+        },
+        {
+          "year": 2013,
+          "cites": 124
+        },
+        {
+          "year": 2014,
+          "cites": 144
+        },
+        {
+          "year": 2015,
+          "cites": 176
+        },
+        {
+          "year": 2016,
+          "cites": 113
+        },
+        {
+          "year": 2017,
+          "cites": 151
+        },
+        {
+          "year": 2018,
+          "cites": 157
+        },
+        {
+          "year": 2019,
+          "cites": 263
+        },
+        {
+          "year": 2020,
+          "cites": 211
+        },
+        {
+          "year": 2021,
+          "cites": 296
+        },
+        {
+          "year": 2022,
+          "cites": 361
+        },
+        {
+          "year": 2023,
+          "cites": 485
+        },
+        {
+          "year": 2024,
+          "cites": 569
+        },
+        {
+          "year": 2025,
+          "cites": 702
+        },
+        {
+          "year": 2026,
+          "cites": 412
+        }
+      ]
+    }
+  ]
 }
