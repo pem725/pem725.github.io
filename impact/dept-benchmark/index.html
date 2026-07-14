@@ -167,7 +167,7 @@ $("#callout").innerHTML=`
   <div class="cc"><div class="v">${cur(C.median)}</div><div class="k">median faculty citations</div></div>`;
 function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c||'transparent'}${i.b?`;border:2px solid ${i.b};box-shadow:none`:''}"></span>${i.t}</span>`).join("");}
 legend("#leg1",rankLeg);
-legend("#leg2",[{c:"var(--you)",t:"You"},{c:"var(--muted)",t:"Other faculty"}]);
+legend("#leg2",rankLeg);
 legend("#leg3",rankLeg);
 legend("#leg4",rankLeg);
 legend("#leg5",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}]);
@@ -217,12 +217,12 @@ function slope(){
   const y=r=>padT+(r-1)/(mx-1)*(H-padT-padB);
   const S=svg(W,H);
   S.appendChild(txt(xl,13,"OpenAlex rank","end","tick")); S.appendChild(txt(xr,13,"Scholar rank","start","tick"));
-  data.forEach(f=>{const you=f.is_self,col=you?css("--you"):css("--muted"),a=ro.get(f.key),b=rs.get(f.key);
+  data.forEach(f=>{const tm=TEAMSET.has(f.key),col=rankcss(f),a=ro.get(f.key),b=rs.get(f.key);
     const g=el("g",{}); g.style.cursor="default";
-    g.appendChild(el("line",{x1:xl,y1:y(a),x2:xr,y2:y(b),stroke:col,"stroke-width":you?3:1.4,"stroke-opacity":you?1:.5}));
-    g.appendChild(el("circle",{cx:xl,cy:y(a),r:you?5:3.2,fill:col}));
-    g.appendChild(el("circle",{cx:xr,cy:y(b),r:you?5:3.2,fill:col}));
-    const nm=txt(xl-10,y(a)+4,ab(f.name),"end","glabel"); if(you){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}else nm.setAttribute("fill-opacity",".7");
+    g.appendChild(el("line",{x1:xl,y1:y(a),x2:xr,y2:y(b),stroke:col,"stroke-width":tm?3:1.4,"stroke-opacity":tm?1:.6}));
+    [[xl,a],[xr,b]].forEach(([cx,r])=>{const d=el("circle",{cx,cy:y(r),r:tm?5:3.2,fill:col});
+      if(tm){d.setAttribute("stroke",css("--you"));d.setAttribute("stroke-width",1.8);}g.appendChild(d);});
+    const nm=txt(xl-10,y(a)+4,ab(f.name),"end","glabel"); if(tm){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}else nm.setAttribute("fill-opacity",".7");
     g.appendChild(nm);
     const mv=a-b,dir=mv>0?`up ${mv}`:mv<0?`down ${-mv}`:"same";
     g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">OpenAlex #${a} → Scholar #${b} (${dir})</span>`,e));
