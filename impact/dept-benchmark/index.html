@@ -190,6 +190,8 @@
   <b>median</b> marked. Ranks are supposed to reflect a rising research record — so a dot that sits far to
   the left of its row, down among a more junior rank's range, is the signal worth discussing. The question
   isn't any one person; it's whether rank and research impact still track each other here.</p>
+  <div class="segwrap"><span class="seglab">Source</span>
+    <div class="seg" id="segStripSrc"><button data-v="openalex" class="on">OpenAlex</button><button data-v="scholar">Google Scholar</button></div></div>
   <div class="legend" id="leg9"></div>
   <figure><div id="rankstrip"></div>
     <figcaption>OpenAlex career citations, log scale. Dashed tick = that rank's median. OpenAlex-unresolved
@@ -201,6 +203,8 @@
   medians, splitting everyone into four quadrants — <b>Sustained</b> (big and still landing), <b>Rising</b>
   (early but accelerating), <b>Slowing</b> (a large body of work the field cites less each year), and
   <b>Quiet</b>. Where you sit — and where the senior ranks sit — is the whole question.</p>
+  <div class="segwrap"><span class="seglab">Source</span>
+    <div class="seg" id="segQuadSrc"><button data-v="openalex" class="on">OpenAlex</button><button data-v="scholar">Google Scholar</button></div></div>
   <div class="legend" id="leg10"></div>
   <figure><div id="quad"></div>
     <figcaption>OpenAlex, both axes log; current year projected as in 5A. Colored by rank; your lab outlined
@@ -491,6 +495,8 @@ function rel(){
 }
 function wireSeg6(){$("#segRelSrc").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
   B6.src=b.dataset.v;$("#segRelSrc").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));rel();}));}
+function wireSrc(id,state,fn){$(id).querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+  state.src=b.dataset.v;$(id).querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));fn();}));}
 
 /* 7. impact per paper — citations / works, sorted (OpenAlex) */
 function cpwFig(){
@@ -541,60 +547,66 @@ function recentFig(){
   host.appendChild(S);
 }
 
-/* 9. citations by rank — strip plot showing within-rank distributions (OpenAlex) */
+/* 9. citations by rank — strip plot showing within-rank distributions (source-switchable) */
+const B9={src:"openalex"};
+const sCites=(f,src)=>src==="scholar"?f.sch_cites:f.oa_cites;
+const sResolved=(f,src)=>src==="scholar"?f.sch_resolved:f.oa_resolved;
 function rankStrip(){
   const host=$("#rankstrip"); host.innerHTML="";
-  const groups=["Full","Associate","Assistant","Other"].filter(g=>B.faculty.some(f=>f.rank_group===g&&f.oa_resolved&&f.oa_cites>0));
-  const data=B.faculty.filter(f=>f.oa_resolved&&f.oa_cites>0);
+  const src=B9.src, cit=f=>sCites(f,src), ok=f=>sResolved(f,src)&&cit(f)>0;
+  const groups=["Full","Associate","Assistant","Other"].filter(g=>B.faculty.some(f=>f.rank_group===g&&ok(f)));
+  const data=B.faculty.filter(ok);
   const W=980,H=90+groups.length*76,pl=104,pr=26,pt=22,pb=44, lg=Math.log10;
-  const xmin=Math.min(...data.map(f=>f.oa_cites)),xmax=Math.max(...data.map(f=>f.oa_cites));
+  const xmin=Math.min(...data.map(cit)),xmax=Math.max(...data.map(cit));
   const X=v=>pl+(lg(v)-lg(xmin))/(lg(xmax)-lg(xmin))*(W-pl-pr);
   const band=(H-pt-pb)/groups.length, rowY=g=>pt+groups.indexOf(g)*band+band/2;
-  const S=svg(W,H);
+  const S=svg(W,H), sN=src==="scholar"?"Scholar":"OpenAlex";
   const dec=[];for(let e=Math.floor(lg(xmin));e<=Math.ceil(lg(xmax));e++)for(const m of [1,2,5]){const v=m*10**e;if(v>=xmin*0.9&&v<=xmax*1.1)dec.push(v);}
   dec.forEach(v=>{const gx=X(v);S.appendChild(el("line",{x1:gx,y1:pt-4,x2:gx,y2:H-pb+4,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(gx,H-pb+18,v.toLocaleString(),"middle"));});
-  S.appendChild(txt(W/2,H-6,"OpenAlex career citations (log) →","middle","lbl"));
+  S.appendChild(txt(W/2,H-6,sN+" career citations (log) →","middle","lbl"));
   groups.forEach(g=>{const y=rowY(g); S.appendChild(txt(pl-14,y+4,g,"end","glabel"));
     const gd=data.filter(f=>f.rank_group===g);
-    if(gd.length){const med=median(gd.map(f=>f.oa_cites)); S.appendChild(el("line",{x1:X(med),y1:y-22,x2:X(med),y2:y+22,stroke:css("--ink"),"stroke-width":2,"stroke-dasharray":"3 3"})); S.appendChild(txt(X(med),y-26,"med "+Math.round(med).toLocaleString(),"middle","val"));}
+    if(gd.length){const med=median(gd.map(cit)); S.appendChild(el("line",{x1:X(med),y1:y-22,x2:X(med),y2:y+22,stroke:css("--ink"),"stroke-width":2,"stroke-dasharray":"3 3"})); S.appendChild(txt(X(med),y-26,"med "+Math.round(med).toLocaleString(),"middle","val"));}
     gd.forEach((f,i)=>{const tm=TEAMSET.has(f.key), jy=y+(((i*37)%9)-4)*3.4;
-      if(tm)S.appendChild(el("circle",{cx:X(f.oa_cites),cy:jy,r:7.5,fill:"none",stroke:css("--you"),"stroke-width":2}));
-      const c=el("circle",{cx:X(f.oa_cites),cy:jy,r:5,fill:rankcss(f),"fill-opacity":.72}); c.style.cursor="default";
-      c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b> · ${f.rank_group}<br><span class="r">${cur(f.oa_cites)} OpenAlex citations · ${cur(f.oa_works)} works</span>`,e));
+      if(tm)S.appendChild(el("circle",{cx:X(cit(f)),cy:jy,r:7.5,fill:"none",stroke:css("--you"),"stroke-width":2}));
+      const c=el("circle",{cx:X(cit(f)),cy:jy,r:5,fill:rankcss(f),"fill-opacity":.72}); c.style.cursor="default";
+      c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b> · ${f.rank_group}<br><span class="r">${cur(cit(f))} ${sN} citations${src==="openalex"?" · "+cur(f.oa_works)+" works":""}</span>`,e));
       c.addEventListener("pointerleave",hideTip); S.appendChild(c);});});
   host.appendChild(S);
 }
 
 /* 10. coasting vs climbing — career citations (stature) vs recent rate (momentum), split at the medians */
+const B10={src:"openalex"};
 function quad(){
   const host=$("#quad"); host.innerHTML="";
+  const src=B10.src, sN=src==="scholar"?"Scholar":"OpenAlex", cit=f=>sCites(f,src);
   const tbk=Object.fromEntries(B.traj_all.map(t=>[t.key,t]));
-  const rate=t=>{const raw=t&&t.openalex; if(!raw)return null; const w=raw.filter(p=>p.year>=2020); if(!w.length)return null; return w.reduce((a,p)=>a+proj(p.year,p.cites),0)/w.length;};
-  const data=B.faculty.filter(f=>f.oa_resolved&&f.oa_cites>0).map(f=>({f,r:rate(tbk[f.key])})).filter(d=>d.r>0);
+  const rate=t=>{const raw=t&&t[src]; if(!raw)return null; const w=raw.filter(p=>p.year>=2020); if(!w.length)return null; return w.reduce((a,p)=>a+proj(p.year,p.cites),0)/w.length;};
+  const data=B.faculty.filter(f=>sResolved(f,src)&&cit(f)>0).map(f=>({f,c:cit(f),r:rate(tbk[f.key])})).filter(d=>d.r>0);
   if(!data.length)return;
   const W=980,H=560,pl=66,pr=22,pt=30,pb=48, lg=Math.log10;
-  const xmin=Math.min(...data.map(d=>d.f.oa_cites)),xmax=Math.max(...data.map(d=>d.f.oa_cites));
+  const xmin=Math.min(...data.map(d=>d.c)),xmax=Math.max(...data.map(d=>d.c));
   const ymin=Math.min(...data.map(d=>d.r)),ymax=Math.max(...data.map(d=>d.r));
   const X=v=>pl+(lg(v)-lg(xmin))/(lg(xmax)-lg(xmin))*(W-pl-pr), Y=v=>H-pb-(lg(v)-lg(ymin))/(lg(ymax)-lg(ymin))*(H-pt-pb);
   const S=svg(W,H);
   const dec=(mn,mx)=>{const a=[];for(let e=Math.floor(lg(mn));e<=Math.ceil(lg(mx));e++)for(const m of [1,2,5]){const v=m*10**e;if(v>=mn*0.9&&v<=mx*1.1)a.push(v);}return a;};
   dec(ymin,ymax).forEach(v=>{const gy=Y(v);S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(pl-8,gy+4,v.toLocaleString(),"end"));});
   dec(xmin,xmax).forEach(v=>{const gx=X(v);S.appendChild(txt(gx,H-pb+18,v.toLocaleString(),"middle"));});
-  S.appendChild(txt(W/2,H-6,"Career citations — accumulated stature (log) →","middle","lbl"));
-  const vl=txt(15,H/2,"Recent citations/yr since 2020 — momentum (log) →","middle","lbl"); vl.setAttribute("transform",`rotate(-90 15 ${H/2})`); S.appendChild(vl);
+  S.appendChild(txt(W/2,H-6,sN+" career citations — accumulated stature (log) →","middle","lbl"));
+  const vl=txt(15,H/2,sN+" citations/yr since 2020 — momentum (log) →","middle","lbl"); vl.setAttribute("transform",`rotate(-90 15 ${H/2})`); S.appendChild(vl);
   // median split
-  const mx=median(data.map(d=>d.f.oa_cites)), my=median(data.map(d=>d.r));
+  const mx=median(data.map(d=>d.c)), my=median(data.map(d=>d.r));
   S.appendChild(el("line",{x1:X(mx),y1:pt,x2:X(mx),y2:H-pb,stroke:css("--axis"),"stroke-width":1.4,"stroke-dasharray":"6 4"}));
   S.appendChild(el("line",{x1:pl,y1:Y(my),x2:W-pr,y2:Y(my),stroke:css("--axis"),"stroke-width":1.4,"stroke-dasharray":"6 4"}));
   const ql=(x,y,s,anc)=>{const t=txt(x,y,s,anc,"lbl");t.setAttribute("fill",css("--muted"));t.setAttribute("font-weight","600");t.setAttribute("letter-spacing",".04em");S.appendChild(t);};
   ql(W-pr-6,pt+14,"SUSTAINED","end"); ql(pl+6,pt+14,"RISING","start"); ql(W-pr-6,H-pb-8,"SLOWING","end"); ql(pl+6,H-pb-8,"QUIET","start");
   data.forEach(d=>{const tm=TEAMSET.has(d.f.key);
-    if(tm)S.appendChild(el("circle",{cx:X(d.f.oa_cites),cy:Y(d.r),r:8.5,fill:"none",stroke:css("--you"),"stroke-width":2.2}));
-    const c=el("circle",{cx:X(d.f.oa_cites),cy:Y(d.r),r:6,fill:rankcss(d.f),"fill-opacity":.72}); c.style.cursor="default";
-    const quadName=d.f.oa_cites>=mx?(d.r>=my?"Sustained":"Slowing"):(d.r>=my?"Rising":"Quiet");
-    c.addEventListener("pointermove",e=>showTip(`<b>${d.f.name}</b> · ${d.f.rank_group}<br><span class="r">${quadName} · ${cur(d.f.oa_cites)} career cites · ${Math.round(d.r).toLocaleString()}/yr since 2020</span>`,e));
+    if(tm)S.appendChild(el("circle",{cx:X(d.c),cy:Y(d.r),r:8.5,fill:"none",stroke:css("--you"),"stroke-width":2.2}));
+    const c=el("circle",{cx:X(d.c),cy:Y(d.r),r:6,fill:rankcss(d.f),"fill-opacity":.72}); c.style.cursor="default";
+    const quadName=d.c>=mx?(d.r>=my?"Sustained":"Slowing"):(d.r>=my?"Rising":"Quiet");
+    c.addEventListener("pointermove",e=>showTip(`<b>${d.f.name}</b> · ${d.f.rank_group}<br><span class="r">${quadName} · ${cur(d.c)} ${sN} career cites · ${Math.round(d.r).toLocaleString()}/yr since 2020</span>`,e));
     c.addEventListener("pointerleave",hideTip); S.appendChild(c);
-    if(tm){const t=txt(X(d.f.oa_cites),Y(d.r)-11,ab(d.f.name),"middle","glabel");t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");S.appendChild(t);}});
+    if(tm){const t=txt(X(d.c),Y(d.r)-11,ab(d.f.name),"middle","glabel");t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");S.appendChild(t);}});
   host.appendChild(S);
 }
 
@@ -642,6 +654,7 @@ legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other facult
 legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
 [["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"],["#leg10","Dashed = department medians"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
 wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segMed","med");wireSeg6();
+wireSrc("#segStripSrc",B9,rankStrip);wireSrc("#segQuadSrc",B10,quad);
 draw(); table();
 </script>
 </body>
