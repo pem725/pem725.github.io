@@ -134,13 +134,14 @@
     <div class="seg" id="segMetric"><button data-v="year" class="on">Per-year</button><button data-v="cum">Cumulative</button></div>
     <span class="seglab">Scale</span>
     <div class="seg" id="segScale"><button data-v="lin" class="on">Linear</button><button data-v="log">Log</button></div>
-    <div class="seg" id="segAvg"><button data-v="on" class="on">Dept average</button></div>
+    <div class="seg" id="segAvg"><button data-v="on" class="on">Dept median</button></div>
   </div>
   <div class="legend" id="leg5b"></div>
   <figure><div id="trajB"></div>
     <figcaption>Career year 0 = each person's first year with an indexed citation on the selected source.
     Your lab is highlighted; hover any faint line to trace and color it by rank. The dashed line is the
-    department average at each career year.</figcaption></figure>
+    department <b>median</b> at each career year (median, not mean — a few superstars would make the mean
+    misleading), drawn only where at least 5 faculty have reached that career year.</figcaption></figure>
 
   <h2>The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
@@ -170,6 +171,7 @@ const rankLeg=[{c:"var(--rk-asst)",t:"Assistant"},{c:"var(--rk-assoc)",t:"Associ
 // current-year projection: scale year-to-date citations to a full year by the fraction of the year elapsed at the snapshot
 const SNAP=(()=>{const p=B.snapshot_date.split("-").map(Number),d=Date.UTC(p[0],p[1]-1,p[2]),y0=Date.UTC(p[0],0,1),y1=Date.UTC(p[0]+1,0,1);return {year:p[0],frac:(d-y0)/(y1-y0)};})();
 const proj=(year,cites)=>year===SNAP.year?cites/SNAP.frac:cites;
+const median=a=>{const s=[...a].sort((x,y)=>x-y),n=s.length,m=n>>1;return n%2?s[m]:(s[m-1]+s[m])/2;};
 
 const s=B.self, C=B.concentration;
 $("#meta").textContent=`Snapshot ${B.snapshot_date}. ${B.n_faculty} full-time faculty; OpenAlex resolved ${B.n_openalex}, Google Scholar ${B.n_scholar}.`;
@@ -364,11 +366,12 @@ function trajB(){
     S.appendChild(path); s.el=path; s.col=col;
     if(tm){const q=s.pts[s.pts.length-1];const t=txt(X(q.t)+5,Y(q.v)+4,ab(s.t.name),"start","glabel");t.setAttribute("fill",col);t.setAttribute("font-weight","650");S.appendChild(t);}};
   series.filter(s=>!s.t.team).forEach(draw); series.filter(s=>s.t.team).forEach(draw);
-  // average line
+  // department median line (median, not mean — a few superstars make the mean misleading).
+  // Only drawn where >=5 faculty have reached that career year, so the tail isn't one long career.
   if(B5.avg){const byT={};series.forEach(s=>s.pts.forEach(p=>{(byT[p.t]=byT[p.t]||[]).push(p.v);}));
-    const avg=Object.keys(byT).map(Number).sort((a,b)=>a-b).map(t=>({t,v:byT[t].reduce((a,b)=>a+b,0)/byT[t].length}));
-    S.appendChild(el("path",{d:pathd(avg),fill:"none",stroke:css("--ink"),"stroke-width":2.4,"stroke-dasharray":"7 4","stroke-opacity":.85}));
-    const l=avg[avg.length-1];const t=txt(X(l.t)+5,Y(l.v)+4,"dept avg","start","glabel");t.setAttribute("fill",css("--ink"));t.setAttribute("font-weight","650");S.appendChild(t);}
+    const med=Object.keys(byT).map(Number).sort((a,b)=>a-b).filter(t=>byT[t].length>=5).map(t=>({t,v:median(byT[t])}));
+    if(med.length){S.appendChild(el("path",{d:pathd(med),fill:"none",stroke:css("--ink"),"stroke-width":2.4,"stroke-dasharray":"7 4","stroke-opacity":.9}));
+      const l=med[med.length-1];const t=txt(X(l.t)+5,Y(l.v)+4,"dept median","start","glabel");t.setAttribute("fill",css("--ink"));t.setAttribute("font-weight","650");S.appendChild(t);}}
   // hover-to-trace: fat invisible hit paths raise + recolor the real line by rank
   const hi=(s,on)=>{if(s.t.team)return;s.el.setAttribute("stroke",on?rankcss(s.t):s.col);s.el.setAttribute("stroke-opacity",on?1:.26);s.el.setAttribute("stroke-width",on?2.4:1);if(on)s.el.parentNode.appendChild(s.el);};
   series.forEach(s=>{const hit=el("path",{d:pathd(s.pts),fill:"none",stroke:"transparent","stroke-width":10,"pointer-events":"stroke"});hit.style.cursor="pointer";
@@ -421,7 +424,7 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
 
 $("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB"].forEach(id=>$(id).innerHTML="");draw();});
 function draw(){dept();slope();scatter();bars();traj();trajB();}
-legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover to trace)"},{c:"var(--ink)",t:"Dept average"}]);
+legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover to trace)"},{c:"var(--ink)",t:"Dept median"}]);
 wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segAvg","avg");
 draw(); table();
 </script>
