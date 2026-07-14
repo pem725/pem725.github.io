@@ -57,6 +57,7 @@
   tr.you td{background:var(--you-soft)} tr.you td.name{font-weight:650} .np{color:var(--muted);font-style:italic}
   .tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:9px;padding:8px 10px;font-size:.8rem;box-shadow:0 6px 24px rgba(0,0,0,.16);opacity:0;transition:opacity .08s;z-index:20;max-width:250px}
   .tip .r{color:var(--ink2)}
+  th.hcol{cursor:help;text-decoration:underline dotted var(--axis);text-underline-offset:3px;text-decoration-thickness:1px}
   .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
   .note b{color:var(--ink)}
   .callout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
@@ -132,6 +133,11 @@ const cur=v=>v==null?"—":v.toLocaleString();
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 const ab=n=>n.replace(/^(\w)\w+\s/,'$1. ');
 function txt(x,y,s,anchor,cls){const t=el("text",{x,y,"text-anchor":anchor||"middle"});t.setAttribute("class",cls||"tick");t.textContent=s;return t;}
+// rank encoding shared across the department distribution, scatter, and disagreement charts
+const TEAMSET=new Set(B.team.keys);
+const RKC={Assistant:"--rk-asst",Associate:"--rk-assoc",Full:"--rk-full",Other:"--rk-other"};
+const rankcss=f=>css(RKC[f.rank_group]||"--rk-other");
+const rankLeg=[{c:"var(--rk-asst)",t:"Assistant"},{c:"var(--rk-assoc)",t:"Associate"},{c:"var(--rk-full)",t:"Full professor"},{c:"var(--rk-other)",t:"Instructor / research"},{b:"var(--you)",t:"Your lab (outlined)"}];
 
 const s=B.self, C=B.concentration;
 $("#meta").textContent=`Snapshot ${B.snapshot_date}. ${B.n_faculty} full-time faculty; OpenAlex resolved ${B.n_openalex}, Google Scholar ${B.n_scholar}.`;
@@ -160,17 +166,15 @@ $("#callout").innerHTML=`
   <div class="cc"><div class="v">${C.bottom30}%</div><div class="k">held by the bottom 30 faculty</div></div>
   <div class="cc"><div class="v">${cur(C.median)}</div><div class="k">median faculty citations</div></div>`;
 function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c||'transparent'}${i.b?`;border:2px solid ${i.b};box-shadow:none`:''}"></span>${i.t}</span>`).join("");}
-legend("#leg1",[{c:"var(--rk-asst)",t:"Assistant"},{c:"var(--rk-assoc)",t:"Associate"},{c:"var(--rk-full)",t:"Full professor"},{c:"var(--rk-other)",t:"Instructor / research"},{b:"var(--you)",t:"Your lab (outlined)"}]);
+legend("#leg1",rankLeg);
 legend("#leg2",[{c:"var(--you)",t:"You"},{c:"var(--muted)",t:"Other faculty"}]);
-legend("#leg3",[{c:"var(--oa)",t:"Faculty (OpenAlex)"},{c:"var(--you)",t:"You"}]);
-legend("#leg4",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
+legend("#leg3",rankLeg);
+legend("#leg4",rankLeg);
 legend("#leg5",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}]);
 
 /* 1. department distribution (all active faculty, sorted, linear) */
 function dept(){
-  const team=new Set(B.team.keys);
-  const RKC={Assistant:"--rk-asst",Associate:"--rk-assoc",Full:"--rk-full",Other:"--rk-other"};
-  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:team.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank,rg:f.rank_group}));
+  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:TEAMSET.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank,rg:f.rank_group}));
   const W=980,H=420,pl=48,pr=14,pt=16; const pbb=54;
   const n=data.length, bw=(W-pl-pr)/n, cmax=Math.max(...data.map(d=>d.c));
   const Y=v=>H-pbb-v/cmax*(H-pt-pbb);
@@ -239,14 +243,14 @@ function scatter(){
   for(let i=0;i<=4;i++){const gx=pl+i*(W-pl-pr)/4;S.appendChild(txt(gx,H-pb+18,Math.round(xmax*i/4),"middle"));}
   S.appendChild(txt(W/2,H-6,"Breadth — number of works →","middle","lbl"));
   const vl=txt(15,H/2,"Depth — h-index →","middle","lbl"); vl.setAttribute("transform",`rotate(-90 15 ${H/2})`); S.appendChild(vl);
-  data.forEach(f=>{const you=f.is_self;
-    if(you)S.appendChild(el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites)+3,fill:"none",stroke:css("--you"),"stroke-width":2}));
-    const c=el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites),fill:you?css("--you"):css("--oa"),"fill-opacity":you?.9:.5});
+  data.forEach(f=>{const you=f.is_self,tm=TEAMSET.has(f.key);
+    if(tm)S.appendChild(el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites)+3,fill:"none",stroke:css("--you"),"stroke-width":2.2}));
+    const c=el("circle",{cx:X(f.oa_works),cy:Y(f.oa_h),r:R(f.oa_cites),fill:rankcss(f),"fill-opacity":.72});
     c.style.cursor="default";
-    c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">${cur(f.oa_works)} works · h ${f.oa_h} · ${cur(f.oa_cites)} cites</span>`,e));
+    c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b>${tm?' · your lab':''}<br><span class="r">${f.rank_group} · ${cur(f.oa_works)} works · h ${f.oa_h} · ${cur(f.oa_cites)} cites</span>`,e));
     c.addEventListener("pointerleave",hideTip); S.appendChild(c);
-    if(you||["Todd B. Kashdan","Gerald Matthews","Stephen Zaccaro","Deborah E. Rupp"].includes(f.name)){
-      const t=txt(X(f.oa_works),Y(f.oa_h)-R(f.oa_cites)-6,ab(f.name),"middle","glabel"); if(you){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");} S.appendChild(t);}});
+    if(tm||["Gerald Matthews","Stephen Zaccaro","Deborah E. Rupp"].includes(f.name)){
+      const t=txt(X(f.oa_works),Y(f.oa_h)-R(f.oa_cites)-6,ab(f.name),"middle","glabel"); if(tm){t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");} S.appendChild(t);}});
   $("#scatter").appendChild(S);
 }
 
@@ -256,12 +260,14 @@ function bars(){
   const W=980,rowH=22,pl=170,pr=66,pt=26,H=pt+data.length*rowH+10, xmax=Math.max(...data.map(f=>f.fold));
   const X=v=>pl+(v-1)/(xmax-1)*(W-pl-pr); const S=svg(W,H);
   for(let v=1;v<=Math.ceil(xmax);v++){const gx=X(v);S.appendChild(el("line",{x1:gx,y1:pt-6,x2:gx,y2:H-6,stroke:css(v===1?"--axis":"--grid"),"stroke-width":1}));S.appendChild(txt(gx,pt-10,v+"×","middle"));}
-  data.forEach((f,i)=>{const y=pt+i*rowH+3,h=13,you=f.is_self,col=you?css("--you"):css("--oa");
+  data.forEach((f,i)=>{const y=pt+i*rowH+3,h=13,you=f.is_self,tm=TEAMSET.has(f.key);
     const g=el("g",{}); g.style.cursor="default";
-    g.appendChild(el("rect",{x:pl,y,width:Math.max(1,X(f.fold)-pl),height:h,rx:3.5,fill:col,"fill-opacity":you?1:.82}));
-    const nm=txt(pl-8,y+10,ab(f.name),"end","glabel"); if(you){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}else nm.setAttribute("fill-opacity",".8");
+    const bar=el("rect",{x:pl,y,width:Math.max(1,X(f.fold)-pl),height:h,rx:3.5,fill:rankcss(f),"fill-opacity":.9});
+    if(tm){bar.setAttribute("stroke",css("--you"));bar.setAttribute("stroke-width",2);}
+    g.appendChild(bar);
+    const nm=txt(pl-8,y+10,ab(f.name),"end","glabel"); if(tm){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}else nm.setAttribute("fill-opacity",".8");
     g.appendChild(nm); g.appendChild(txt(X(f.fold)+7,y+10,f.fold+"×","start","val"));
-    g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b><br><span class="r">OpenAlex ${cur(f.oa_cites)} · Scholar ${cur(f.sch_cites)}<br>fold ${f.fold}× · CV ${f.cv}</span>`,e));
+    g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b>${tm?' · your lab':''}<br><span class="r">${f.rank_group} · OpenAlex ${cur(f.oa_cites)} · Scholar ${cur(f.sch_cites)}<br>fold ${f.fold}× · CV ${f.cv}</span>`,e));
     g.addEventListener("pointerleave",hideTip); S.appendChild(g);});
   $("#bars").appendChild(S);
 }
@@ -286,8 +292,18 @@ function traj(){
 }
 
 function table(){
-  const cols=[["name","Faculty"],["rank","Rank"],["oa_cites","OA cites"],["oa_h","OA h"],["oa_i10","OA i10"],["oa_works","OA works"],["sch_cites","Sch cites"],["sch_h","Sch h"],["fold","fold"],["cv","CV"]];
-  let html="<thead><tr>"+cols.map(c=>`<th>${c[1]}</th>`).join("")+"</tr></thead><tbody>";
+  const cols=[
+    ["name","Faculty",""],
+    ["rank","Rank","Academic rank / title — Assistant, Associate, or Full professor; non-tenure Instructor & research faculty are shown separately. This is the color coding used in the charts above."],
+    ["oa_cites","OA cites","<b>OpenAlex total citations.</b> Summed across all of the author's works (fetched by ORCID) so author-record fragmentation can't undercount. OpenAlex is a free, reproducible open catalog built from Crossref, PubMed and MAG."],
+    ["oa_h","OA h","<b>OpenAlex h-index.</b> The largest h such that h works have each been cited at least h times — rewards sustained impact, not a single hit."],
+    ["oa_i10","OA i10","<b>OpenAlex i10-index.</b> The number of works cited at least 10 times."],
+    ["oa_works","OA works","<b>OpenAlex works.</b> Count of indexed publications — a measure of the breadth of output."],
+    ["sch_cites","Sch cites","<b>Google Scholar total citations.</b> Scholar indexes almost everything crawlable — preprints, conference papers, theses, book chapters — so counts run higher and noisier than OpenAlex. No public API; harvested by hand."],
+    ["sch_h","Sch h","<b>Google Scholar h-index</b>, from the same broader, noisier index as the Scholar citation count."],
+    ["fold","fold","<b>Fold-ratio</b> = larger citation count ÷ smaller, across OpenAlex and Google Scholar. 1× = the databases agree; 3× = one reports triple the other. The source disagreement, quantified."],
+    ["cv","CV","<b>Coefficient of variation</b> of the two sources' citation counts (SD ÷ mean) — a second, scale-free read on how much a person's 'impact number' depends on which database you cite."]];
+  let html="<thead><tr>"+cols.map(c=>c[2]?`<th class="hcol" data-i="${c[0]}">${c[1]}</th>`:`<th>${c[1]}</th>`).join("")+"</tr></thead><tbody>";
   B.faculty.forEach(f=>{html+=`<tr class="${f.is_self?'you':''}">`+cols.map(c=>{let v=f[c[0]];
     if(c[0]==="name")return `<td class="name">${v}${f.is_self?' ★':''}</td>`;
     if(c[0]==="rank")return `<td class="name" style="color:var(--muted);font-size:.8rem">${v}</td>`;
@@ -295,6 +311,10 @@ function table(){
     if(c[0]==="fold")return `<td>${v}×</td>`;
     return `<td>${typeof v==="number"?v.toLocaleString():v}</td>`;}).join("")+"</tr>";});
   $("#tbl").innerHTML=html+"</tbody>";
+  const desc=Object.fromEntries(cols.filter(c=>c[2]).map(c=>[c[0],c[2]]));
+  $("#tbl").querySelectorAll("th.hcol").forEach(th=>{
+    th.addEventListener("pointermove",e=>showTip(`<b>${th.textContent}</b><br><span class="r">${desc[th.dataset.i]}</span>`,e));
+    th.addEventListener("pointerleave",hideTip);});
 }
 
 $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n_faculty} full-time faculty
