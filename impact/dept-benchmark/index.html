@@ -159,7 +159,41 @@
   <div class="legend" id="leg6"></div>
   <figure><div id="rel"></div>
     <figcaption>Cumulative citations ÷ department median, matched by career year (log axis; the median is
-    1× by construction). Your lab is highlighted; hover to trace, click to pin.</figcaption></figure>
+    1× by construction). Your lab is highlighted; hover to trace, click to pin.
+    <br><b>Read with care:</b> the median itself rises as junior faculty mature, so a line can drift
+    <em>down</em> without any real decline — it just means the pack caught up. This chart measures
+    <em>position relative to a moving target</em>, not absolute productivity. For that, see 5B (cumulative)
+    and 7–9 below.</figcaption></figure>
+
+  <h2>7 · Impact per paper <span class="exp">experimental</span></h2>
+  <p class="sub">Citations ÷ number of works — <b>influence density</b>, not volume. It separates
+  "publishes a lot" from "publishes work the field actually cites." A long back-catalogue of rarely-cited
+  papers lands low here; a few field-shaping papers land high. (OpenAlex only — it's the source with a
+  clean work count. Field norms differ, so read within rank, not across disciplines.)</p>
+  <div class="legend" id="leg7"></div>
+  <figure><div id="cpw"></div>
+    <figcaption>Mean citations per indexed work, sorted. Colored by rank; your lab outlined. Hover for the
+    underlying cites ÷ works.</figcaption></figure>
+
+  <h2>8 · Still cited now? <span class="exp">experimental</span></h2>
+  <p class="sub">Career citations (horizontal) vs. <b>recent citation rate</b> — average citations received
+  per year since 2020 (vertical). The dashed line is the department's typical ratio of the two. Above it =
+  getting cited <em>more</em> than a back-catalogue that size would predict (still landing); below and to
+  the right = a large body of work that the field has largely stopped citing. A post-COVID pulse check.</p>
+  <div class="legend" id="leg8"></div>
+  <figure><div id="recent"></div>
+    <figcaption>Both axes log. Recent rate projects the current year as in 5A. OpenAlex. Your lab outlined
+    and labeled; hover any point.</figcaption></figure>
+
+  <h2>9 · Citations by rank <span class="exp">experimental</span></h2>
+  <p class="sub">Every faculty member as a dot on their rank's row (log citation axis), with each rank's
+  <b>median</b> marked. Ranks are supposed to reflect a rising research record — so a dot that sits far to
+  the left of its row, down among a more junior rank's range, is the signal worth discussing. The question
+  isn't any one person; it's whether rank and research impact still track each other here.</p>
+  <div class="legend" id="leg9"></div>
+  <figure><div id="rankstrip"></div>
+    <figcaption>OpenAlex career citations, log scale. Dashed tick = that rank's median. OpenAlex-unresolved
+    faculty (e.g. a fragmented record) are absent — itself a kind of finding. Your lab outlined.</figcaption></figure>
 
   <h2>The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
@@ -447,6 +481,79 @@ function rel(){
 function wireSeg6(){$("#segRelSrc").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
   B6.src=b.dataset.v;$("#segRelSrc").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));rel();}));}
 
+/* 7. impact per paper — citations / works, sorted (OpenAlex) */
+function cpwFig(){
+  const host=$("#cpw"); host.innerHTML="";
+  const data=B.faculty.filter(f=>f.oa_resolved&&f.oa_works>0).map(f=>({f,v:f.oa_cites/f.oa_works})).sort((a,b)=>b.v-a.v);
+  if(!data.length)return;
+  const W=980,rowH=20,pl=168,pr=64,pt=26,H=pt+data.length*rowH+12,xmax=Math.max(...data.map(d=>d.v));
+  const X=v=>pl+v/xmax*(W-pl-pr); const S=svg(W,H);
+  const step=xmax>120?40:xmax>60?20:10; for(let v=0;v<=xmax;v+=step){const gx=X(v);S.appendChild(el("line",{x1:gx,y1:pt-6,x2:gx,y2:H-6,stroke:css(v===0?"--axis":"--grid"),"stroke-width":1}));S.appendChild(txt(gx,pt-10,v,"middle"));}
+  data.forEach((d,i)=>{const y=pt+i*rowH+3,h=12,tm=TEAMSET.has(d.f.key);
+    const g=el("g",{}); g.style.cursor="default";
+    const bar=el("rect",{x:pl,y,width:Math.max(1,X(d.v)-pl),height:h,rx:3,fill:rankcss(d.f),"fill-opacity":.9});
+    if(tm){bar.setAttribute("stroke",css("--you"));bar.setAttribute("stroke-width",2);}
+    g.appendChild(bar);
+    const nm=txt(pl-8,y+9,ab(d.f.name),"end","glabel"); if(tm){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}else nm.setAttribute("fill-opacity",".8");
+    g.appendChild(nm); g.appendChild(txt(X(d.v)+6,y+9,Math.round(d.v),"start","val"));
+    g.addEventListener("pointermove",e=>showTip(`<b>${d.f.name}</b> · ${d.f.rank_group}<br><span class="r">${Math.round(d.v)} citations per work · ${cur(d.f.oa_cites)} cites / ${cur(d.f.oa_works)} works</span>`,e));
+    g.addEventListener("pointerleave",hideTip); S.appendChild(g);});
+  host.appendChild(S);
+}
+
+/* 8. recent citation rate (since 2020) vs career citations — who's still landing (OpenAlex) */
+function recentFig(){
+  const host=$("#recent"); host.innerHTML="";
+  const tbk=Object.fromEntries(B.traj_all.map(t=>[t.key,t]));
+  const rate=t=>{const raw=t&&t.openalex; if(!raw)return null; const w=raw.filter(p=>p.year>=2020); if(!w.length)return null; return w.reduce((a,p)=>a+proj(p.year,p.cites),0)/w.length;};
+  const data=B.faculty.filter(f=>f.oa_resolved&&f.oa_cites>0).map(f=>({f,r:rate(tbk[f.key])})).filter(d=>d.r>0);
+  if(!data.length)return;
+  const W=980,H=520,pl=66,pr=22,pt=18,pb=48, lg=Math.log10;
+  const xmin=Math.min(...data.map(d=>d.f.oa_cites)),xmax=Math.max(...data.map(d=>d.f.oa_cites));
+  const ymin=Math.min(...data.map(d=>d.r)),ymax=Math.max(...data.map(d=>d.r));
+  const X=v=>pl+(lg(v)-lg(xmin))/(lg(xmax)-lg(xmin))*(W-pl-pr), Y=v=>H-pb-(lg(v)-lg(ymin))/(lg(ymax)-lg(ymin))*(H-pt-pb);
+  const S=svg(W,H);
+  const dec=(mn,mx)=>{const a=[];for(let e=Math.floor(lg(mn));e<=Math.ceil(lg(mx));e++)for(const m of [1,2,5]){const v=m*10**e; if(v>=mn*0.9&&v<=mx*1.1)a.push(v);}return a;};
+  dec(ymin,ymax).forEach(v=>{const gy=Y(v);S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(pl-8,gy+4,v.toLocaleString(),"end"));});
+  dec(xmin,xmax).forEach(v=>{const gx=X(v);S.appendChild(txt(gx,H-pb+18,v.toLocaleString(),"middle"));});
+  S.appendChild(txt(W/2,H-6,"Career citations (log) →","middle","lbl"));
+  const vl=txt(15,H/2,"Recent citations per year, 2020+ (log) →","middle","lbl"); vl.setAttribute("transform",`rotate(-90 15 ${H/2})`); S.appendChild(vl);
+  // typical ratio guide (median rate/total): above = still landing, below = fading
+  const rr=data.map(d=>d.r/d.f.oa_cites).sort((a,b)=>a-b), mr=rr[Math.floor(rr.length/2)];
+  S.appendChild(el("line",{x1:X(xmin),y1:Y(Math.min(Math.max(mr*xmin,ymin),ymax)),x2:X(xmax),y2:Y(Math.min(Math.max(mr*xmax,ymin),ymax)),stroke:css("--axis"),"stroke-width":1.5,"stroke-dasharray":"6 4"}));
+  data.forEach(d=>{const tm=TEAMSET.has(d.f.key);
+    if(tm)S.appendChild(el("circle",{cx:X(d.f.oa_cites),cy:Y(d.r),r:8.5,fill:"none",stroke:css("--you"),"stroke-width":2.2}));
+    const c=el("circle",{cx:X(d.f.oa_cites),cy:Y(d.r),r:6,fill:rankcss(d.f),"fill-opacity":.72}); c.style.cursor="default";
+    c.addEventListener("pointermove",e=>showTip(`<b>${d.f.name}</b> · ${d.f.rank_group}<br><span class="r">${cur(d.f.oa_cites)} career cites · ${Math.round(d.r).toLocaleString()}/yr since 2020</span>`,e));
+    c.addEventListener("pointerleave",hideTip); S.appendChild(c);
+    if(tm){const t=txt(X(d.f.oa_cites),Y(d.r)-11,ab(d.f.name),"middle","glabel");t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");S.appendChild(t);}});
+  host.appendChild(S);
+}
+
+/* 9. citations by rank — strip plot showing within-rank distributions (OpenAlex) */
+function rankStrip(){
+  const host=$("#rankstrip"); host.innerHTML="";
+  const groups=["Full","Associate","Assistant","Other"].filter(g=>B.faculty.some(f=>f.rank_group===g&&f.oa_resolved&&f.oa_cites>0));
+  const data=B.faculty.filter(f=>f.oa_resolved&&f.oa_cites>0);
+  const W=980,H=90+groups.length*76,pl=104,pr=26,pt=22,pb=44, lg=Math.log10;
+  const xmin=Math.min(...data.map(f=>f.oa_cites)),xmax=Math.max(...data.map(f=>f.oa_cites));
+  const X=v=>pl+(lg(v)-lg(xmin))/(lg(xmax)-lg(xmin))*(W-pl-pr);
+  const band=(H-pt-pb)/groups.length, rowY=g=>pt+groups.indexOf(g)*band+band/2;
+  const S=svg(W,H);
+  const dec=[];for(let e=Math.floor(lg(xmin));e<=Math.ceil(lg(xmax));e++)for(const m of [1,2,5]){const v=m*10**e;if(v>=xmin*0.9&&v<=xmax*1.1)dec.push(v);}
+  dec.forEach(v=>{const gx=X(v);S.appendChild(el("line",{x1:gx,y1:pt-4,x2:gx,y2:H-pb+4,stroke:css("--grid"),"stroke-width":1}));S.appendChild(txt(gx,H-pb+18,v.toLocaleString(),"middle"));});
+  S.appendChild(txt(W/2,H-6,"OpenAlex career citations (log) →","middle","lbl"));
+  groups.forEach(g=>{const y=rowY(g); S.appendChild(txt(pl-14,y+4,g,"end","glabel"));
+    const gd=data.filter(f=>f.rank_group===g);
+    if(gd.length){const med=median(gd.map(f=>f.oa_cites)); S.appendChild(el("line",{x1:X(med),y1:y-22,x2:X(med),y2:y+22,stroke:css("--ink"),"stroke-width":2,"stroke-dasharray":"3 3"})); S.appendChild(txt(X(med),y-26,"med "+Math.round(med).toLocaleString(),"middle","val"));}
+    gd.forEach((f,i)=>{const tm=TEAMSET.has(f.key), jy=y+(((i*37)%9)-4)*3.4;
+      if(tm)S.appendChild(el("circle",{cx:X(f.oa_cites),cy:jy,r:7.5,fill:"none",stroke:css("--you"),"stroke-width":2}));
+      const c=el("circle",{cx:X(f.oa_cites),cy:jy,r:5,fill:rankcss(f),"fill-opacity":.72}); c.style.cursor="default";
+      c.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b> · ${f.rank_group}<br><span class="r">${cur(f.oa_cites)} OpenAlex citations · ${cur(f.oa_works)} works</span>`,e));
+      c.addEventListener("pointerleave",hideTip); S.appendChild(c);});});
+  host.appendChild(S);
+}
+
 function table(){
   const cols=[
     ["name","Faculty",""],
@@ -485,10 +592,11 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 
-$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel"].forEach(id=>$(id).innerHTML="");draw();});
-function draw(){dept();slope();scatter();bars();traj();trajB();rel();}
+$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel","#cpw","#recent","#rankstrip"].forEach(id=>$(id).innerHTML="");draw();});
+function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();}
 legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);
 legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
+[["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
 wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segMed","med");wireSeg6();
 draw(); table();
 </script>
