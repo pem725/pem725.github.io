@@ -87,7 +87,13 @@ out <- list(
     oa_h = self$oa_h, sch_h = self$sch_h, fold = self$fold, cv = self$cv,
     share = round(100*self$oa_c0/tot,1)),
   faculty = wide |> arrange(desc(oa_c0)) |>
-    transmute(key=faculty_key, name=full_name, disc=discipline, rank, category, is_self,
+    mutate(rank_group = case_when(
+      category %in% c("instructor", "research") ~ "Other",
+      rank == "Assistant"                        ~ "Assistant",
+      rank == "Professor"                        ~ "Full",
+      grepl("Associate", rank)                   ~ "Associate",  # incl. "Associate Chair"
+      TRUE                                       ~ "Other")) |>
+    transmute(key=faculty_key, name=full_name, disc=discipline, rank, rank_group, category, is_self,
               oa_works, oa_cites, oa_h, oa_i10, sch_cites, sch_h, sch_i10,
               fold, cv, oa_rank, sch_rank, oa_resolved, sch_resolved),
   self_byyear = list(openalex = byyear("openalex"), scholar = byyear("scholar"))

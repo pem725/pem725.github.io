@@ -9,16 +9,20 @@
     --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
     --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
     --oa:#2a78d6; --sch:#1baf7a; --you:#eb6834; --you-soft:#fbe4d8;
+    --rk-asst:#8264c0; --rk-assoc:#5a3aa8; --rk-full:#38227e; --rk-other:#8f8d85;
   }
   @media (prefers-color-scheme:dark){
     :root{ --plane:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
       --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
-      --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418; }
+      --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418;
+      --rk-asst:#ccb8f4; --rk-assoc:#a081e2; --rk-full:#7654cc; --rk-other:#807f78; }
   }
   :root[data-theme=light]{ --plane:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
-    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10); --oa:#2a78d6; --sch:#1baf7a; --you:#eb6834; --you-soft:#fbe4d8; }
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10); --oa:#2a78d6; --sch:#1baf7a; --you:#eb6834; --you-soft:#fbe4d8;
+    --rk-asst:#8264c0; --rk-assoc:#5a3aa8; --rk-full:#38227e; --rk-other:#8f8d85; }
   :root[data-theme=dark]{ --plane:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
-    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10); --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418; }
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10); --oa:#3987e5; --sch:#199e70; --you:#d95926; --you-soft:#3a2418;
+    --rk-asst:#ccb8f4; --rk-assoc:#a081e2; --rk-full:#7654cc; --rk-other:#807f78; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--plane);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:980px;margin:0 auto;padding:32px 20px 80px}
@@ -155,8 +159,8 @@ $("#callout").innerHTML=`
   <div class="cc"><div class="v">${C.top5}%</div><div class="k">of all citations held by the top 5</div></div>
   <div class="cc"><div class="v">${C.bottom30}%</div><div class="k">held by the bottom 30 faculty</div></div>
   <div class="cc"><div class="v">${cur(C.median)}</div><div class="k">median faculty citations</div></div>`;
-function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c}"></span>${i.t}</span>`).join("");}
-legend("#leg1",[{c:"var(--you)",t:"Your lab (McKnight + Kashdan)"},{c:"var(--oa)",t:"Other faculty"}]);
+function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c||'transparent'}${i.b?`;border:2px solid ${i.b};box-shadow:none`:''}"></span>${i.t}</span>`).join("");}
+legend("#leg1",[{c:"var(--rk-asst)",t:"Assistant"},{c:"var(--rk-assoc)",t:"Associate"},{c:"var(--rk-full)",t:"Full professor"},{c:"var(--rk-other)",t:"Instructor / research"},{b:"var(--you)",t:"Your lab (outlined)"}]);
 legend("#leg2",[{c:"var(--you)",t:"You"},{c:"var(--muted)",t:"Other faculty"}]);
 legend("#leg3",[{c:"var(--oa)",t:"Faculty (OpenAlex)"},{c:"var(--you)",t:"You"}]);
 legend("#leg4",[{c:"var(--you)",t:"You"},{c:"var(--oa)",t:"Other faculty"}]);
@@ -165,7 +169,8 @@ legend("#leg5",[{c:"var(--oa)",t:"OpenAlex"},{c:"var(--sch)",t:"Google Scholar"}
 /* 1. department distribution (all active faculty, sorted, linear) */
 function dept(){
   const team=new Set(B.team.keys);
-  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:team.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank}));
+  const RKC={Assistant:"--rk-asst",Associate:"--rk-assoc",Full:"--rk-full",Other:"--rk-other"};
+  const data=B.faculty.map(f=>({name:f.name,is_self:f.is_self,team:team.has(f.key),c:f.oa_cites==null?0:f.oa_cites,resolved:f.oa_resolved,rk:f.oa_rank,rg:f.rank_group}));
   const W=980,H=420,pl=48,pr=14,pt=16; const pbb=54;
   const n=data.length, bw=(W-pl-pr)/n, cmax=Math.max(...data.map(d=>d.c));
   const Y=v=>H-pbb-v/cmax*(H-pt-pbb);
@@ -180,9 +185,11 @@ function dept(){
   data.forEach((d,i)=>{
     const x=pl+i*bw, h=Math.max(d.c>0?1.5:0, Y(0)-Y(d.c)), you=d.is_self;
     const g=el("g",{}); g.style.cursor="default";
-    g.appendChild(el("rect",{x:x+bw*0.12,y:Y(d.c),width:Math.max(1,bw*0.76),height:h,rx:1.5,
-      fill:d.team?css("--you"):css("--oa"),"fill-opacity":d.team?(you?1:.82):(d.resolved?.8:.35)}));
-    g.addEventListener("pointermove",e=>showTip(`<b>${d.name}</b>${d.team?' · your lab':''}<br><span class="r">#${d.rk} · ${d.resolved?cur(d.c)+' citations':'no indexed profile'}</span>`,e));
+    const r=el("rect",{x:x+bw*0.12,y:Y(d.c),width:Math.max(1,bw*0.76),height:h,rx:1.5,
+      fill:css(RKC[d.rg]||"--rk-other"),"fill-opacity":d.resolved?.92:.4});
+    if(d.team){r.setAttribute("stroke",css("--you"));r.setAttribute("stroke-width",2.2);}
+    g.appendChild(r);
+    g.addEventListener("pointermove",e=>showTip(`<b>${d.name}</b>${d.team?' · your lab':''}<br><span class="r">${d.rg} · #${d.rk} · ${d.resolved?cur(d.c)+' citations':'no indexed profile'}</span>`,e));
     g.addEventListener("pointerleave",hideTip);
     S.appendChild(g);
   });
