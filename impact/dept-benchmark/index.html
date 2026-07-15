@@ -55,7 +55,7 @@
   th{color:var(--muted);font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.03em;background:var(--surface)}
   td{font-variant-numeric:tabular-nums;color:var(--ink2)} td.name{color:var(--ink);font-variant-numeric:normal}
   tr.you td{background:var(--you-soft)} tr.you td.name{font-weight:650} .np{color:var(--muted);font-style:italic}
-  .tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:9px;padding:8px 10px;font-size:.8rem;box-shadow:0 6px 24px rgba(0,0,0,.16);opacity:0;transition:opacity .08s;z-index:20;max-width:250px}
+  .tip{position:fixed;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:9px;padding:8px 10px;font-size:.8rem;box-shadow:0 6px 24px rgba(0,0,0,.16);opacity:0;transition:opacity .08s;z-index:20;max-width:300px;line-height:1.4}
   .tip .r{color:var(--ink2)}
   th.hcol{cursor:help;text-decoration:underline dotted var(--axis);text-underline-offset:3px;text-decoration-thickness:1px}
   .segwrap{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:10px 4px 4px}
@@ -73,8 +73,9 @@
   .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
   .note b{color:var(--ink)}
   .callout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
-  .cc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
-  .cc .v{font-size:1.5rem;font-weight:650} .cc .k{font-size:.78rem;color:var(--muted)}
+  .cc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:help;transition:border-color .1s}
+  .cc:hover{border-color:var(--axis)}
+  .cc .v{font-size:1.5rem;font-weight:650} .cc .k{font-size:.78rem;color:var(--muted);text-decoration:underline dotted var(--axis);text-underline-offset:3px;text-decoration-thickness:1px}
 </style>
 </head>
 <body>
@@ -280,11 +281,22 @@ $("#teamBox").innerHTML=`<div style="background:var(--you-soft);border:1px solid
   (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, about one in five — which would rank
   <b>#${T.rank} of ${T.n_others}</b>, ahead of every individual. <span class="muted">(Summing both totals raw: ${T.share_simple}%.)</span></div>
 </div>`;
-$("#callout").innerHTML=`
-  <div class="cc"><div class="v">${C.gini}</div><div class="k">Gini coefficient (0=equal, 1=one person has all)</div></div>
-  <div class="cc"><div class="v">${C.top5}%</div><div class="k">of all citations held by the top 5</div></div>
-  <div class="cc"><div class="v">${C.bottom30}%</div><div class="k">held by the bottom 30 faculty</div></div>
-  <div class="cc"><div class="v">${cur(C.median)}</div><div class="k">median faculty citations</div></div>`;
+const NF=B.n_faculty, mean=Math.round(C.total/NF), botN=Math.min(30,NF);
+const ccards=[
+  {v:C.gini, k:"Gini coefficient (0=equal, 1=one person has all)", h:"Gini coefficient — how unequal impact is", t:
+   `The standard economics measure of inequality — here applied to career citations instead of income. <b>0</b> would mean all ${NF} faculty have identical impact; <b>1</b> would mean one person holds every citation. At <b>${C.gini}</b> our scholarly output is markedly more concentrated than U.S. household income (Gini ≈ 0.48). That top-heaviness is what an R1 department looks like: a few highly-cited scholars anchor the national reputation — so <b>who you hire measurably moves the whole curve.</b>`},
+  {v:C.top5+"%", k:"of all citations held by the top 5", h:"Concentration at the top", t:
+   `The <b>5</b> most-cited faculty account for <b>${C.top5}%</b> of the department's <b>${C.total.toLocaleString()}</b> career citations; the top <b>3</b> alone hold <b>${C.top3}%</b>, the top <b>6</b> hold <b>${C.top6}%</b>. Roughly half of GMU Psychology's scholarly visibility rests on a handful of people. When we recruit at an R1, this is the honest frame — a small core drives the reputation, and every senior hire shifts the distribution.`},
+  {v:C.bottom30+"%", k:`held by the bottom ${botN} faculty`, h:"The long tail", t:
+   `The least-cited <b>${botN}</b> of ${NF} faculty — a majority of the department — together hold just <b>${C.bottom30}%</b> of all citations. Many are instructors and clinicians whose contribution is teaching and practice, not indexed research; the metric counts them as research-zeros <i>by design</i>. Read next to the top-5 figure, this is the shape of a steep R1 distribution: a tall head, a long tail.`},
+  {v:cur(C.median), k:"median faculty citations", h:"The typical faculty member", t:
+   `Half the department has more than <b>${cur(C.median)}</b> career citations, half has fewer. We report the <b>median, not the mean (≈${cur(mean)})</b> — a few very-high scholars pull the average far above what a normal hire looks like, so the mean would flatter us. <b>${cur(C.median)} lifetime citations is the honest middle of a GMU Psychology hire</b> — a number worth saying out loud when we recruit.`}];
+$("#callout").innerHTML=ccards.map((c,i)=>
+  `<div class="cc" data-i="${i}"><div class="v">${c.v}</div><div class="k">${c.k}</div></div>`).join("");
+$("#callout").querySelectorAll(".cc").forEach(cc=>{
+  const c=ccards[cc.dataset.i];
+  cc.addEventListener("pointermove",e=>showTip(`<b>${c.h}</b><br><span class="r">${c.t}</span>`,e));
+  cc.addEventListener("pointerleave",hideTip);});
 function legend(id,items){$(id).innerHTML=items.map(i=>`<span><span class="sw" style="background:${i.c||'transparent'}${i.b?`;border:2px solid ${i.b};box-shadow:none`:''}"></span>${i.t}</span>`).join("");}
 legend("#leg1",rankLeg);
 legend("#leg2",rankLeg);
