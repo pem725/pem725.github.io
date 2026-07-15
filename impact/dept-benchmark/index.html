@@ -65,6 +65,11 @@
   .seg button:first-child{border-left:none}
   .seg button.on{background:var(--ink);color:var(--plane);font-weight:600}
   .exp{font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--you);border:1px solid var(--you);border-radius:5px;padding:1px 6px;vertical-align:middle;margin-left:6px}
+  .jump{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 4px}
+  .jump a{font-size:.76rem;color:var(--ink2);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:3px 11px;text-decoration:none;white-space:nowrap}
+  .jump a:hover{border-color:var(--you);color:var(--you)}
+  .jump a.je::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--you);opacity:.7;margin-left:5px;vertical-align:middle}
+  h1[id],h2[id]{scroll-margin-top:14px}
   .note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--you);border-radius:0 10px 10px 0;padding:14px 16px;margin:14px 0;font-size:.92rem;color:var(--ink2)}
   .note b{color:var(--ink)}
   .callout{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:12px 0}
@@ -82,12 +87,26 @@
   <b>how concentrated the department's research impact really is</b>, and <b>how much any one
   person's "number" depends on which database you cite.</b> Cards on the table.</p>
   <p class="muted" id="meta"></p>
+  <nav class="jump" aria-label="Jump to a figure">
+    <a href="#s1">1 · Concentration</a>
+    <a href="#s2">2 · Rank flips</a>
+    <a href="#s3">3 · Breadth × depth</a>
+    <a href="#s4">4 · Disagreement</a>
+    <a href="#s5a">5A · Trajectory</a>
+    <a href="#s5b">5B · Careers</a>
+    <a class="je" href="#s6">6 · vs median</a>
+    <a class="je" href="#s7">7 · Per paper</a>
+    <a class="je" href="#s8">8 · Recency</a>
+    <a class="je" href="#s9">9 · By rank</a>
+    <a class="je" href="#s10">10 · Quadrant</a>
+    <a href="#stable">Table</a>
+  </nav>
 
   <div class="tiles" id="tiles"></div>
   <p class="sub" id="selfline"></p>
   <div id="teamBox"></div>
 
-  <h2>1 · The whole department — a few people carry most of the impact</h2>
+  <h2 id="s1">1 · The whole department — a few people carry most of the impact</h2>
   <div class="callout" id="callout"></div>
   <div class="legend" id="leg1"></div>
   <figure><div id="dept"></div>
@@ -95,26 +114,26 @@
     the real skew is visible — not hidden by a log axis). The dashed line is the department
     median. Bars at zero are faculty with no indexed research profile (instructors, clinicians).</figcaption></figure>
 
-  <h2>2 · Your rank is not a fact — it moves with the source</h2>
+  <h2 id="s2">2 · Your rank is not a fact — it moves with the source</h2>
   <div class="legend" id="leg2"></div>
   <figure><div id="slope"></div>
     <figcaption>Each line is one faculty member with a profile on both databases; left = rank by
     OpenAlex, right = rank by Google Scholar. Lines that cross are people whose standing depends
     on which source you open.</figcaption></figure>
 
-  <h2>3 · Breadth vs. depth</h2>
+  <h2 id="s3">3 · Breadth vs. depth</h2>
   <div class="legend" id="leg3"></div>
   <figure><div id="scatter"></div>
     <figcaption>Horizontal = breadth (number of works); vertical = depth (h-index); marker size =
     total citations. OpenAlex, fragmentation-corrected. Top-right is broad <em>and</em> deep.</figcaption></figure>
 
-  <h2>4 · Who depends most on which database?</h2>
+  <h2 id="s4">4 · Who depends most on which database?</h2>
   <div class="legend" id="leg4"></div>
   <figure><div id="bars"></div>
     <figcaption>Fold-gap = larger citation count ÷ smaller, across the two sources. Near 1× =
     source-proof; a long bar = the headline is a choice. Hover for CV and both counts.</figcaption></figure>
 
-  <h2>5A · Your citation trajectory</h2>
+  <h2 id="s5a">5A · Your citation trajectory</h2>
   <div class="legend" id="leg5"></div>
   <figure><div id="traj"></div>
     <figcaption>Citations received each year, both sources. The gap is the same story at the
@@ -122,7 +141,7 @@
     <b>2026 is a projection*</b> (hollow marker, dashed) — year-to-date citations scaled to a full
     year by the fraction of the year elapsed at the snapshot date. A flat, linear estimate, not a model.</figcaption></figure>
 
-  <h2>5B · Career-centered trajectories — the whole department</h2>
+  <h2 id="s5b">5B · Career-centered trajectories — the whole department</h2>
   <p class="sub">Every faculty member's trajectory, each re-centered so <b>year 0 = their first indexed
   citation</b>. Strip away <em>when</em> someone started and you can compare the <em>shape</em> of a career:
   who accelerates, who plateaus, who is still climbing. Hover any line to trace one person; your lab is
@@ -146,7 +165,7 @@
     rank — because a few superstars would make the mean misleading; it's drawn only where enough faculty
     have reached that career year.</figcaption></figure>
 
-  <h2>6 · Relative to the pack <span class="exp">experimental</span></h2>
+  <h2 id="s6">6 · Relative to the pack <span class="exp">experimental</span></h2>
   <p class="sub">Each faculty's cumulative citations divided by the <b>department median at the same career
   year</b>. The solid line at <b>1×</b> is the median itself: above it means pulling ahead of the typical
   colleague at that stage, below means behind. This strips out both career length <em>and</em> absolute
@@ -165,7 +184,7 @@
     <em>position relative to a moving target</em>, not absolute productivity. For that, see 5B (cumulative)
     and 7–9 below.</figcaption></figure>
 
-  <h2>7 · Impact per paper <span class="exp">experimental</span></h2>
+  <h2 id="s7">7 · Impact per paper <span class="exp">experimental</span></h2>
   <p class="sub">Citations ÷ number of works — <b>influence density</b>, not volume. It separates
   "publishes a lot" from "publishes work the field actually cites." A long back-catalogue of rarely-cited
   papers lands low here; a few field-shaping papers land high. (OpenAlex only — it's the source with a
@@ -175,7 +194,7 @@
     <figcaption>Mean citations per indexed work, sorted. Colored by rank; your lab outlined. Hover for the
     underlying cites ÷ works.</figcaption></figure>
 
-  <h2>8 · Still cited now? <span class="exp">experimental</span></h2>
+  <h2 id="s8">8 · Still cited now? <span class="exp">experimental</span></h2>
   <p class="sub">Career citations (horizontal) vs. <b>recent citation rate</b> — average citations received
   per year since 2020 (vertical). The dashed line is the department's typical ratio of the two. Above it =
   getting cited <em>more</em> than a back-catalogue that size would predict (still landing); below and to
@@ -185,7 +204,7 @@
     <figcaption>Both axes log. Recent rate projects the current year as in 5A. OpenAlex. Your lab outlined
     and labeled; hover any point.</figcaption></figure>
 
-  <h2>9 · Citations by rank <span class="exp">experimental</span></h2>
+  <h2 id="s9">9 · Citations by rank <span class="exp">experimental</span></h2>
   <p class="sub">Every faculty member as a dot on their rank's row (log citation axis), with each rank's
   <b>median</b> marked. Ranks are supposed to reflect a rising research record — so a dot that sits far to
   the left of its row, down among a more junior rank's range, is the signal worth discussing. The question
@@ -197,7 +216,7 @@
     <figcaption>OpenAlex career citations, log scale. Dashed tick = that rank's median. OpenAlex-unresolved
     faculty (e.g. a fragmented record) are absent — itself a kind of finding. Your lab outlined.</figcaption></figure>
 
-  <h2>10 · Coasting vs. climbing <span class="exp">experimental</span></h2>
+  <h2 id="s10">10 · Coasting vs. climbing <span class="exp">experimental</span></h2>
   <p class="sub">Two things at once: <b>accumulated stature</b> (career citations, horizontal) and <b>current
   momentum</b> (average citations per year since 2020, vertical). The dashed cross-hairs are the department
   medians, splitting everyone into four quadrants — <b>Sustained</b> (big and still landing), <b>Rising</b>
@@ -210,7 +229,7 @@
     <figcaption>OpenAlex, both axes log; current year projected as in 5A. Colored by rank; your lab outlined
     and labeled. The Slowing quadrant (lower-right) is where accumulated citations outrun recent activity.</figcaption></figure>
 
-  <h2>The full table</h2>
+  <h2 id="stable">The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
   the notes below on unresolved cases.</p>
   <div class="tblwrap"><table id="tbl"></table></div>
