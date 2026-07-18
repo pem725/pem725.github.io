@@ -82,6 +82,21 @@ a:hover{border-bottom-color:var(--rust)}
 .repo-item a{font-family:'Roboto Mono',monospace;font-size:.8rem;font-weight:600}
 .repo-item .rdesc{color:var(--muted);font-size:.8rem}
 
+/* ── LIVE / AUTO-UPDATING SECTIONS ── */
+.sh-live{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.live-badge{font-family:'Roboto Mono',monospace;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.35rem;font-weight:600;border:1px solid var(--green);padding:.1rem .45rem;border-radius:3px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:livepulse 2s infinite}
+@keyframes livepulse{0%,100%{opacity:1}50%{opacity:.3}}
+.live-msg{font-size:.82rem;color:var(--muted);font-style:italic;padding:.4rem 0}
+.pubs{margin:.6rem 0}
+.pub-item{border-bottom:1px solid rgba(200,185,154,.5);padding:.5rem 0}
+.pub-item:last-child{border-bottom:none}
+.pub-title{font-size:.9rem;font-weight:700;line-height:1.4}
+.pub-title a{color:var(--ink);border-bottom:none}
+.pub-title a:hover{color:var(--rust)}
+.pub-meta{font-family:'Roboto Mono',monospace;font-size:.66rem;color:var(--steel);margin-top:.15rem;letter-spacing:.02em}
+.pub-meta .pub-yr{color:var(--rust);font-weight:600}
+
 /* ── PULL QUOTE ── */
 .pull{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:.9rem 0;margin:1.8rem 0;text-align:center}
 .pull p{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;font-style:italic;color:var(--steel);line-height:1.45}
@@ -124,6 +139,7 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
     <a class="qlink fun" href="apps/index.html">Interactive Stats Lab</a>
     <a class="qlink" href="#teaching">Teaching</a>
     <a class="qlink" href="#research">Research</a>
+    <a class="qlink" href="#publications">Publications</a>
     <a class="qlink" href="#ai-tools">AI Tools</a>
     <a class="qlink" href="#all-repos">All Repos</a>
   </div>
@@ -134,7 +150,7 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
       <p>I'm a professor at George Mason University who believes the best way to learn statistics is to care about the answer. My research lives at the intersection of measurement, motivation, and meaning — how people find purpose, how we measure psychological constructs, and how to do both without fooling ourselves.</p>
     </div>
     <div>
-      <p>This page collects my public work: course materials for students, research code, R packages, AI-powered tools, and the occasional project born purely from curiosity. If something here is useful to you, take it. If something is broken, let me know.</p>
+      <p>This page collects my public work: course materials for students, research code, R packages, AI-powered tools, and the occasional project born purely from curiosity. The <a href="#publications">publications</a> and <a href="#all-repos">repository list</a> below refresh themselves live from ORCID and GitHub, so they are always current. If something here is useful to you, take it. If something is broken, let me know.</p>
     </div>
   </div>
 
@@ -332,41 +348,28 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
   <hr>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- ALL REPOS -->
+  <!-- RECENT PUBLICATIONS (live from ORCID) -->
   <!-- ═══════════════════════════════════════ -->
-  <h2 class="sh" id="all-repos">All Public Repositories</h2>
+  <h2 class="sh sh-live" id="publications">Recent Publications
+    <span class="live-badge"><span class="live-dot"></span>Live &middot; ORCID</span></h2>
 
-  <p style="font-size:.9rem;color:var(--muted);margin-bottom:.8rem">62 public repos, sorted by most recent activity. <a href="https://github.com/pem725?tab=repositories">View all on GitHub &rarr;</a></p>
+  <p style="font-size:.9rem;color:var(--muted);margin-bottom:.6rem">Pulled live from my <a href="https://orcid.org/0000-0002-9067-9066">ORCID record</a> every time this page loads &mdash; new papers appear here automatically. Full history on my <a href="impact/index.html">Scholarly Impact</a> page and in my <a href="cv/index.html">CV</a>.</p>
 
-  <div class="repo-list">
-    <div class="repo-item"><a href="https://pem725.github.io/GradStats-Book/">GradStats-Book</a> <span class="rdesc">— Open grad stats textbook</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/the-sports-page">the-sports-page</a> <span class="rdesc">— Sports stats newsletter</span></div>
-    <div class="repo-item"><a href="https://pem725.github.io/Purpose3/">Purpose3</a> <span class="rdesc">— Purpose vs. happiness study</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/cv">cv</a> <span class="rdesc">— Academic CV</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/GMU-PSYC-405-Mystery-Madness-Murder">GMU-PSYC-405</a> <span class="rdesc">— Mystery, Madness &amp; Murder</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/ai-jumpstart">ai-jumpstart</a> <span class="rdesc">— AI guide</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/crossword-builder">crossword-builder</a> <span class="rdesc">— Puzzle maker</span></div>
-    <div class="repo-item"><a href="https://pem725.github.io/be-critical/">be-critical</a> <span class="rdesc">— Adversarial-critic skill</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/ai-rosetta-stone">ai-rosetta-stone</a> <span class="rdesc">— Cross-platform AI decoder</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/family-finance-report">family-finance-report</a> <span class="rdesc">— Tax report skill</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/Curiosity">Curiosity</a> <span class="rdesc">— Curiosity research</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/MyImpact">MyImpact</a> <span class="rdesc">— Impact tracking</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/clauderator">clauderator</a> <span class="rdesc">— Task phasing</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/humanizer">humanizer</a> <span class="rdesc">— AI writing fix</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/NeuronAutomator">NeuronAutomator</a> <span class="rdesc">— Newsletter bot</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/GMU-PSYC-325-PSYCHOPATHOLOGY">PSYC-325</a> <span class="rdesc">— Psychopathology</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/PSYC642">PSYC642</a> <span class="rdesc">— GLM I</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/PSYC643">PSYC643</a> <span class="rdesc">— GLM II</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/MRES">MRES</a> <span class="rdesc">— R package</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/GMU757">GMU757</a> <span class="rdesc">— Bayesian</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/Dunning-Kruger">Dunning-Kruger</a></div>
-    <div class="repo-item"><a href="https://github.com/pem725/PEMfunctions">PEMfunctions</a> <span class="rdesc">— Personal R utils</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/BayesianIntro">BayesianIntro</a> <span class="rdesc">— Bayes intro</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/ShinyApps">ShinyApps</a> <span class="rdesc">— Interactive demos</span></div>
-    <div class="repo-item"><a href="https://github.com/pem725/sillyprograms">sillyprograms</a></div>
-  </div>
+  <div class="pubs" id="live-pubs"><div class="live-msg">Loading latest publications from ORCID&hellip;</div></div>
 
-  <p style="font-size:.82rem;color:var(--muted);margin-top:.8rem;text-align:center"><a href="https://github.com/pem725?tab=repositories">See all 62 repositories on GitHub &rarr;</a></p>
+  <hr>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ALL REPOS (live from GitHub) -->
+  <!-- ═══════════════════════════════════════ -->
+  <h2 class="sh sh-live" id="all-repos">All Public Repositories
+    <span class="live-badge"><span class="live-dot"></span>Live &middot; GitHub</span></h2>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-bottom:.8rem" id="repo-count">Loading public repositories from GitHub&hellip; <a href="https://github.com/pem725?tab=repositories">View all on GitHub &rarr;</a></p>
+
+  <div class="repo-list" id="live-repos"><div class="live-msg">Fetching the latest from github.com/pem725&hellip;</div></div>
+
+  <p style="font-size:.82rem;color:var(--muted);margin-top:.8rem;text-align:center"><a href="https://github.com/pem725?tab=repositories">Browse every repository on GitHub &rarr;</a></p>
 
   <!-- CONTACT -->
   <div class="contact">
@@ -387,10 +390,87 @@ hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
 </div>
 
 <script>
+// Open external links in a new tab (curated, static links).
 document.querySelectorAll('a[href]').forEach(function(a){
   var h=a.getAttribute('href');
   if(h&&h.charAt(0)!=='#'){a.target='_blank';a.rel='noopener'}
 });
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+// ── LIVE: public repositories, straight from the GitHub API on every load ──
+(function loadRepos(){
+  var USER='pem725';
+  var list=document.getElementById('live-repos');
+  var countEl=document.getElementById('repo-count');
+  if(!list) return;
+  fetch('https://api.github.com/users/'+USER+'/repos?per_page=100&sort=pushed&type=owner',
+        {headers:{Accept:'application/vnd.github+json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(repos){
+      var pub=repos.filter(function(r){ return !r.fork && !r.archived && !r.private; });
+      pub.sort(function(a,b){ return new Date(b.pushed_at)-new Date(a.pushed_at); });
+      if(!pub.length) throw new Error('empty');
+      if(countEl) countEl.innerHTML=pub.length+' public repositories, sorted by most recent activity. '+
+        '<a href="https://github.com/'+USER+'?tab=repositories" target="_blank" rel="noopener">View all on GitHub &rarr;</a>';
+      list.innerHTML=pub.map(function(r){
+        var hasSite=r.homepage && /^https?:\/\//.test(r.homepage);
+        var url=hasSite?r.homepage:r.html_url;
+        var desc=r.description?' <span class="rdesc">&mdash; '+esc(r.description)+'</span>':'';
+        var src=hasSite?' <a href="'+esc(r.html_url)+'" target="_blank" rel="noopener" class="rdesc" style="font-size:.62rem">[src]</a>':'';
+        return '<div class="repo-item"><a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(r.name)+'</a>'+desc+src+'</div>';
+      }).join('');
+    })
+    .catch(function(){
+      if(countEl) countEl.innerHTML='<a href="https://github.com/'+USER+'?tab=repositories" target="_blank" rel="noopener">View all repositories on GitHub &rarr;</a>';
+      list.innerHTML='<div class="live-msg">GitHub’s live feed is unavailable right now (it rate-limits anonymous requests) &mdash; '+
+        '<a href="https://github.com/'+USER+'?tab=repositories" target="_blank" rel="noopener">browse all repos on GitHub</a>.</div>';
+    });
+})();
+
+// ── LIVE: recent publications, straight from the ORCID public API on every load ──
+(function loadPubs(){
+  var ORCID='0000-0002-9067-9066';
+  var el=document.getElementById('live-pubs');
+  if(!el) return;
+  fetch('https://pub.orcid.org/v3.0/'+ORCID+'/works',{headers:{Accept:'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){
+      var works=(d.group||[]).map(function(g){
+        var s=g['work-summary'][0], doi='';
+        var ids=((s['external-ids']||{})['external-id'])||[];
+        for(var i=0;i<ids.length;i++){ if(ids[i]['external-id-type']==='doi'){ doi=ids[i]['external-id-value']; break; } }
+        var pd=s['publication-date']||{};
+        return {
+          title:((s.title||{}).title||{}).value||'Untitled',
+          year:((pd.year||{}).value)||'',
+          month:((pd.month||{}).value)||'',
+          journal:(s['journal-title']||{}).value||'',
+          type:(s.type||'').replace(/-/g,' '),
+          doi:doi
+        };
+      });
+      works.sort(function(a,b){
+        return (parseInt(b.year||0)*100+parseInt(b.month||0))-(parseInt(a.year||0)*100+parseInt(a.month||0));
+      });
+      var top=works.slice(0,6);
+      if(!top.length){ el.innerHTML='<div class="live-msg">No works found on the ORCID record.</div>'; return; }
+      el.innerHTML=top.map(function(w){
+        var title=w.doi
+          ? '<a href="https://doi.org/'+esc(w.doi)+'" target="_blank" rel="noopener">'+esc(w.title)+'</a>'
+          : esc(w.title);
+        return '<div class="pub-item"><div class="pub-title">'+title+'</div>'+
+               '<div class="pub-meta"><span class="pub-yr">'+esc(w.year||'—')+'</span> &middot; '+
+               esc(w.journal||w.type)+'</div></div>';
+      }).join('');
+    })
+    .catch(function(){
+      el.innerHTML='<div class="live-msg">Live ORCID feed unavailable right now &mdash; see my '+
+        '<a href="https://orcid.org/'+ORCID+'" target="_blank" rel="noopener">ORCID record</a> or '+
+        '<a href="impact/index.html">Scholarly Impact</a> page.</div>';
+    });
+})();
 </script>
 </body>
 </html>
