@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses — Patrick E. McKnight, Ph.D. — George Mason University</title>
+<meta name="description" content="Courses taught by Patrick E. McKnight at George Mason University — graduate statistics, research methods, psychopathology, and forensic psychology.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1a1208; --cream:#f5f0e8; --aged:#e0d8c5; --rust:#b83a1e; --steel:#2c4a6e;
+  --gold:#c9962a; --muted:#6b5e4a; --div:#c8b99a; --card:#ede5d2; --green:#2a6e3f;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--aged);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;font-size:16px;line-height:1.72;padding:1.5rem 1rem 3rem}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:var(--rust)}
+
+/* MASTHEAD */
+.masthead{max-width:900px;margin:0 auto;text-align:center;border-top:4px solid var(--ink);padding:.5rem 0 0}
+.kicker{font-family:'Roboto Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.4rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:.15rem 0}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--muted);margin:.1rem 0 .3rem}
+.datebar{display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:.3rem 0;margin-top:.3rem;flex-wrap:wrap;gap:.2rem}
+
+/* PAPER */
+.paper{max-width:900px;margin:.8rem auto 0;background:var(--cream);padding:2.2rem 3rem 2.6rem;box-shadow:0 6px 40px rgba(0,0,0,.2);border:1px solid var(--div)}
+@media(max-width:600px){.paper{padding:1.6rem 1.4rem}}
+.intro{font-size:.98rem;line-height:1.75;margin-bottom:.6rem;max-width:66ch}
+
+/* SECTION HEADS */
+.sh{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--rust);padding-bottom:.2rem;margin:2rem 0 .3rem}
+.sh-note{font-size:.82rem;color:var(--muted);margin-bottom:1rem}
+
+/* COURSE CARD */
+.course{border:1px solid var(--div);background:var(--card);padding:1.1rem 1.3rem;margin:.9rem 0;transition:box-shadow .2s}
+.course:hover{box-shadow:0 3px 14px rgba(0,0,0,.1)}
+.course-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.course-num{font-family:'Roboto Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.08em;color:#fff;background:var(--steel);padding:.16rem .5rem;border-radius:3px;white-space:nowrap}
+.course-num.grad{background:var(--steel)} .course-num.ugrad{background:var(--green)}
+.course-title{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;line-height:1.2}
+.course-desc{font-size:.9rem;color:#3a3222;line-height:1.6;margin:.45rem 0 .55rem;max-width:70ch}
+.course-meta{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;font-family:'Roboto Mono',monospace;font-size:.66rem;color:var(--muted);letter-spacing:.04em}
+.course-links{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.15rem}
+.clink{font-family:'Roboto Mono',monospace;font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;padding:.28rem .7rem;border:1.5px solid var(--div);color:var(--ink);background:var(--cream);transition:all .18s}
+.clink:hover{border-color:var(--rust);color:var(--rust);border-bottom-color:var(--rust)}
+.clink.primary{background:var(--steel);color:#fff;border-color:var(--steel)}
+.clink.primary:hover{background:#1e3a56;color:#fff;border-bottom-color:#1e3a56}
+.clink.book{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.clink.book:hover{background:#e0aa30;border-bottom-color:#e0aa30}
+.term{color:var(--muted)}
+
+/* BACK / FOOTER */
+.backbar{max-width:900px;margin:0 auto 0;text-align:center}
+.backlink{font-family:'Roboto Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
+.note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:1.4rem;border-top:1px solid var(--div);padding-top:.8rem}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="kicker">George Mason University · Department of Psychology</div>
+  <div class="title">Courses</div>
+  <div class="subtitle">What I teach, and the materials behind it</div>
+  <div class="datebar">
+    <span><a href="../index.html" style="color:inherit;border:none">&larr; McKnight home</a></span>
+    <span>Fairfax, Virginia</span>
+    <span><a href="https://github.com/pem725" style="color:inherit;border:none">github.com/pem725</a></span>
+  </div>
+</div>
+
+<div class="paper">
+  <p class="intro">A running list of the courses I teach at George Mason — graduate statistics and
+  methods, plus undergraduate psychopathology and forensic psychology. Where a course has a public
+  repository or open book, it is linked; for the rest, materials are available on request. The best
+  way to learn statistics is to care about the answer.</p>
+
+  <h2 class="sh">Graduate</h2>
+  <div class="sh-note">Doctoral quantitative sequence and seminars.</div>
+  <div id="grad"></div>
+
+  <h2 class="sh">Undergraduate</h2>
+  <div class="sh-note">Courses for Mason undergraduates.</div>
+  <div id="ugrad"></div>
+
+  <p class="note">Course materials are drawn from my teaching archive. Student records and evaluations
+  are never posted here. If you are a student or instructor who would like access to materials for a
+  course without a public repository, <a href="mailto:pmcknigh@gmu.edu">email me</a>.</p>
+
+  <div class="footer">
+    <span>Patrick E. McKnight, Ph.D.</span>
+    <span>George Mason University</span>
+    <span>Built with stubbornness and serif fonts</span>
+  </div>
+</div>
+
+<script>
+/* Course data — edit this array to add/update a course. Rendered below. */
+const COURSES = [
+  // ── Graduate ──
+  {num:"611", title:"Advanced Methods & Statistics I", level:"grad", term:"Fall 2022",
+   desc:"The first graduate methods-and-statistics course — research design and measurement, scale development and reliability, hypothesis testing and power, multiple regression (MRC), and ANOVA, taught as principled argument.",
+   links:[{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"612", title:"Advanced Statistical & Research Methods II", level:"grad", term:"Spring 2017",
+   desc:"The multivariate sequel to 611 — principal components and exploratory factor analysis, mediation and moderation, missing data, and exploratory data analysis.",
+   links:[{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"642", title:"General Linear Modeling I", level:"grad", term:"Fall 2024",
+   desc:"General linear modeling I — the regression foundations of the GLM, delivered through an interactive Quarto/R course with live Shiny demonstrations.",
+   links:[{kind:"repo",label:"Course repo",href:"https://github.com/pem725/PSYC642"},{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"643", title:"General Linear Modeling II", level:"grad", term:"Spring 2024",
+   desc:"General linear modeling II — extending regression and the general linear model, including mediation, with applied R work.",
+   links:[{kind:"repo",label:"Course repo",href:"https://github.com/pem725/PSYC643"},{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"754", title:"Quantitative Methods III — Regression", level:"grad", term:"Spring 2023",
+   desc:"An immersive applied-regression course covering the full general linear model and its extensions — generalized linear models, GEE, linear mixed / hierarchical models, logistic regression, and path analysis.",
+   links:[{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"757 / 892", title:"Bayesian Data Analysis", level:"grad", term:"Spring 2024",
+   desc:"A graduate seminar in Bayesian data analysis — updating beliefs with data, from first principles to applied modeling in R.",
+   links:[{kind:"repo",label:"Course repo",href:"https://github.com/pem725/GMU757"},{kind:"repo",label:"Rethinking notes",href:"https://github.com/pem725/statistical-rethinking-2-2023"},{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  // ── Undergraduate ──
+  {num:"300", title:"Statistics in Psychology", level:"ugrad", term:"Fall 2024",
+   desc:"Introductory statistics for psychology and the social sciences — descriptive statistics, probability, hypothesis testing, t-tests, ANOVA, and correlation. Taught fully online.",
+   links:[{kind:"book",label:"Grad Stats Book",href:"https://pem725.github.io/GradStats-Book/"}]},
+  {num:"325", title:"Psychopathology", level:"ugrad",
+   desc:"Understanding mental disorders through evidence, not folklore — the science of psychopathology.",
+   links:[{kind:"repo",label:"Course repo",href:"https://github.com/pem725/GMU-PSYC-325-PSYCHOPATHOLOGY"}]},
+  {num:"405", title:"Mystery, Madness & Murder", level:"ugrad",
+   desc:"A critical-thinking seminar in forensic and interdisciplinary questions — students research and debate current topics (predicting violence, conspiracy theories, sports fandom), building reading, argumentation, and presentation skills.",
+   links:[{kind:"repo",label:"Course repo",href:"https://github.com/pem725/GMU-PSYC-405-Mystery-Madness-Murder"}]},
+];
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function card(c){
+  var lvl = c.level==='grad' ? 'grad' : 'ugrad';
+  var links = (c.links||[]).map(function(l){
+    var cls = l.kind==='site'?'clink primary':(l.kind==='book'?'clink book':'clink');
+    return '<a class="'+cls+'" href="'+esc(l.href)+'" target="_blank" rel="noopener">'+esc(l.label)+'</a>';
+  }).join('');
+  var id = 'psyc'+String(c.num).replace(/[^0-9].*$/,'');
+  return '<div class="course" id="'+id+'">'+
+    '<div class="course-head"><span class="course-num '+lvl+'">PSYC '+esc(c.num)+'</span>'+
+    '<span class="course-title">'+esc(c.title)+'</span></div>'+
+    (c.desc?'<div class="course-desc">'+esc(c.desc)+'</div>':'')+
+    '<div class="course-meta">'+(c.term?'<span class="term">Last taught: '+esc(c.term)+'</span>':'')+
+    '<span class="course-links">'+links+'</span></div>'+
+  '</div>';
+}
+(function render(){
+  var g=document.getElementById('grad'), u=document.getElementById('ugrad');
+  COURSES.filter(function(c){return c.level==='grad';}).forEach(function(c){g.insertAdjacentHTML('beforeend',card(c));});
+  COURSES.filter(function(c){return c.level!=='grad';}).forEach(function(c){u.insertAdjacentHTML('beforeend',card(c));});
+})();
+</script>
+</body>
+</html>
