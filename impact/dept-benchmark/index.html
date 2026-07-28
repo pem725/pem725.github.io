@@ -76,6 +76,13 @@
   .cc{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;cursor:help;transition:border-color .1s}
   .cc:hover{border-color:var(--axis)}
   .cc .v{font-size:1.5rem;font-weight:650} .cc .k{font-size:.78rem;color:var(--muted);text-decoration:underline dotted var(--axis);text-underline-offset:3px;text-decoration-thickness:1px}
+  .rsum{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}
+  .rchip{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:9px 13px;min-width:92px}
+  .rchip .rk{font-size:.64rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .rchip .rv{font-size:1.2rem;font-weight:650;margin-top:2px}
+  .rtopics{flex-basis:100%;margin-top:4px;font-size:.82rem;line-height:2}
+  .rtopics .rk{font-size:.64rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-right:6px}
+  .rtag{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:3px 9px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -100,6 +107,7 @@
     <a class="je" href="#s8">8 · Recency</a>
     <a class="je" href="#s9">9 · By rank</a>
     <a class="je" href="#s10">10 · Quadrant</a>
+    <a href="#s11">11 · Active now</a>
     <a href="#stable">Table</a>
   </nav>
 
@@ -230,6 +238,20 @@
     <figcaption>OpenAlex, both axes log; current year projected as in 5A. Colored by rank; your lab outlined
     and labeled. The Slowing quadrant (lower-right) is where accumulated citations outrun recent activity.</figcaption></figure>
 
+  <h2 id="s11">11 · Who's publishing now <span class="exp">2025–2026</span></h2>
+  <p class="sub">Every chart above rewards decades of accumulated citations. This one asks the opposite
+  question — <b>who is producing right now, and on what.</b> Each active faculty member's 2025–2026 output,
+  pulled by ORCID across <b>all fields and all access</b>, open <em>and</em> subscription, so no one is
+  penalized for publishing in a closed journal. This counts recent <em>works</em>, not citations — new work
+  hasn't had time to be cited yet, so it's a measure of current activity, not current impact.</p>
+  <div id="recentSummary" class="rsum"></div>
+  <div class="legend" id="leg11"></div>
+  <figure><div id="recentfig"></div>
+    <figcaption>Works published 2025–2026 per active faculty member (those with at least one). Colored by
+    rank; your lab outlined. Hover for the year split, open vs. closed access, and what each person worked on.
+    Faculty without an ORCID whose OpenAlex record is fragmented may undercount — the same caveat as the
+    lifetime metrics.</figcaption></figure>
+
   <h2 id="stable">The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
   the notes below on unresolved cases.</p>
@@ -239,6 +261,7 @@
 <div class="tip" id="tip"></div>
 
 <script src="web_data.js"></script>
+<script src="recent_data.js"></script>
 <script>
 const B=window.BENCH, $=s=>document.querySelector(s), NS="http://www.w3.org/2000/svg";
 const tip=$("#tip");
@@ -680,8 +703,42 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 
-$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel","#cpw","#recent","#rankstrip","#quad"].forEach(id=>$(id).innerHTML="");draw();});
-function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();}
+$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel","#cpw","#recent","#rankstrip","#quad","#recentfig"].forEach(id=>$(id).innerHTML="");draw();});
+/* 11. recent activity — who is publishing now (2025-2026), all fields, all access */
+function recentActivity(){
+  const R=window.RECENT; if(!R||!R.dept) return;
+  const d=R.dept, tot=d.oa+d.closed||1;
+  const grp=f=>{const r=f.rank||'';return /Instructor|Research/.test(r)?'Other':r==='Assistant'?'Assistant':r==='Professor'?'Full':/Associate/.test(r)?'Associate':'Other';};
+  const chips=[["Works "+R.years,d.total_works],["2025 / 2026",d.y2025+" / "+d.y2026],
+    ["Open access",d.oa+" ("+Math.round(100*d.oa/tot)+"%)"],["Closed access",d.closed+" ("+Math.round(100*d.closed/tot)+"%)"],
+    ["Active faculty",d.n_faculty]];
+  $("#recentSummary").innerHTML=chips.map(c=>`<div class="rchip"><div class="rk">${c[0]}</div><div class="rv">${c[1]}</div></div>`).join("")
+    +`<div class="rtopics"><span class="rk">What the department worked on</span> `
+    +d.top_topics.slice(0,6).map(t=>`<span class="rtag">${t.name} <b>${t.n}</b></span>`).join(" ")+`</div>`;
+  legend("#leg11",rankLeg);
+  const rows=R.faculty.filter(f=>f.works>0);
+  const W=980,rowH=18,padT=6,padB=8,labelW=152,padR=34, H=padT+padB+rows.length*rowH;
+  const wmax=Math.max(1,...rows.map(f=>f.works)), X=v=>labelW+v/wmax*(W-labelW-padR);
+  const S=svg(W,H);
+  rows.forEach((f,i)=>{
+    const y=padT+i*rowH, group=grp(f), team=TEAMSET.has(f.key), g=el("g",{});
+    const nm=txt(labelW-6,y+rowH*0.72,ab(f.name),"end","glabel");
+    if(team){nm.setAttribute("fill",css("--you"));nm.setAttribute("font-weight","650");}
+    g.appendChild(nm);
+    const r=el("rect",{x:labelW,y:y+2,width:Math.max(1,X(f.works)-labelW),height:rowH-5,rx:2,fill:css(RKC[group]||"--rk-other"),"fill-opacity":.9});
+    if(team){r.setAttribute("stroke",css("--you"));r.setAttribute("stroke-width",2);}
+    g.appendChild(r);
+    g.appendChild(txt(X(f.works)+5,y+rowH*0.72,f.works,"start","val"));
+    const types=Object.entries(f.by_type).map(([k,v])=>v+" "+k).join(", ");
+    const tops=f.top_topics.map(t=>t.name).slice(0,2).join("; ")||"—";
+    g.style.cursor="default";
+    g.addEventListener("pointermove",e=>showTip(`<b>${f.name}</b>${team?' · your lab':''}<br><span class="r">${group} · <b>${f.works}</b> works 2025–26 (${f.y2025}/${f.y2026}) · ${f.oa} open, ${f.closed} closed<br>${types}<br>Topics: ${tops}</span>`,e));
+    g.addEventListener("pointerleave",hideTip);
+    S.appendChild(g);
+  });
+  $("#recentfig").innerHTML=""; $("#recentfig").appendChild(S);
+}
+function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();}
 legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);
 legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
 [["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"],["#leg10","Dashed = department medians"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
