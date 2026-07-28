@@ -270,7 +270,7 @@ $("#tiles").innerHTML=`
   <div class="tile team"><div class="k">Your lab · combined</div><div class="v">${B.team.share_union}%<small> of dept · #${B.team.rank} of ${B.team.n_others}</small></div></div>
   <div class="tile"><div class="k">Your source-gap</div><div class="v">${s.fold}×<small> · CV ${s.cv}</small></div></div>`;
 $("#selfline").innerHTML=`Read honestly against the <b>entire</b> department: you are <b>#${s.oa_rank} of ${s.n}</b>
-  on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly five people who
+  on OpenAlex (${s.oa_pct}th percentile) and <b>#${s.sch_rank} of ${s.n}</b> on Scholar — one of roughly six people who
   carry the department, holding <b>${s.share}% of all its citations</b>. Not the top, not the bottom: a driver. And your
   ${s.fold}× source-gap sits near the department median, so your standing isn't an artifact of a favorable database.`;
 const T=B.team;
@@ -673,9 +673,10 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   author's works via ORCID). <b>Google Scholar</b> counts a wider universe (conference papers, chapters,
   self-citations) so it runs higher, especially in conference-heavy fields. ${B.no_profile.length} faculty
   have no indexed research profile on either source (mostly instructors/clinicians) and appear as zeros.
-  <b>Two caveats:</b> James C. Thompson's OpenAlex record is fragmented and polluted by a homonymous
-  biologist, so his OpenAlex citations are shown as unresolved (—) while his Scholar figure (self-curated)
-  stands; and Nastassia Savage's Scholar profile still lists Old Dominion (a recent hire). Web of
+  <b>Two caveats:</b> James C. Thompson is now resolved on OpenAlex by ORCID (11,887 citations, #5 in the
+  department) — and unusually his OpenAlex total runs far <i>above</i> his self-curated Scholar figure
+  (3,850, #23), a 3× reverse of the usual gap that points to a thin Scholar profile rather than a source
+  philosophy; and Nastassia Savage's Scholar profile still lists Old Dominion (a recent hire). Web of
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 

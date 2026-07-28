@@ -1,35 +1,35 @@
 window.BENCH = {
   "snapshot_date": "2026-07-13",
   "n_faculty": 59,
-  "n_openalex": 50,
+  "n_openalex": 51,
   "n_scholar": 44,
   "no_profile": ["Camelia Harb", "Raymond Abraham Bradni", "Danielle Dufresne", "Susanne M Furman", "Sara Montiel", "Robin Shusko", "Kevin Christopher Young", "Justin Ramsdell"],
   "concentration": {
-    "total": 200228,
-    "gini": 0.681,
-    "top3": 37,
-    "top5": 48,
-    "top6": 53,
-    "bottom30": 6.8,
-    "median": 1596
+    "total": 212115,
+    "gini": 0.673,
+    "top3": 35,
+    "top5": 46,
+    "top6": 51,
+    "bottom30": 7.2,
+    "median": 1639
   },
   "team": {
     "members": ["Patrick E. McKnight", "Todd B. Kashdan"],
     "keys": ["mcknight_p", "kashdan_t"],
-    "union_cites": 40777,
+    "union_cites": 40883,
     "simple_cites": 45117,
     "works": 435,
     "shared_works": 57,
-    "share_union": 20.4,
-    "share_simple": 22.5,
+    "share_union": 19.3,
+    "share_simple": 21.3,
     "rank": 1,
     "n_others": 58
   },
   "self": {
-    "oa_rank": 5,
+    "oa_rank": 6,
     "sch_rank": 7,
     "n": 59,
-    "oa_pct": 93,
+    "oa_pct": 91,
     "sch_pct": 90,
     "oa_cites": 10029,
     "sch_cites": 16629,
@@ -37,7 +37,7 @@ window.BENCH = {
     "sch_h": 52,
     "fold": 1.66,
     "cv": 0.35,
-    "share": 5
+    "share": 4.7
   },
   "faculty": [
     {
@@ -129,6 +129,28 @@ window.BENCH = {
       "sch_resolved": true
     },
     {
+      "key": "thompson_j",
+      "name": "James C Thompson",
+      "disc": "CBN",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 478,
+      "oa_cites": 11887,
+      "oa_h": 58,
+      "oa_i10": 259,
+      "sch_cites": 3850,
+      "sch_h": 34,
+      "sch_i10": 57,
+      "fold": 3.09,
+      "cv": 0.722,
+      "oa_rank": 5,
+      "sch_rank": 23,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
       "key": "mcknight_p",
       "name": "Patrick E. McKnight",
       "disc": "Human Factors",
@@ -145,7 +167,7 @@ window.BENCH = {
       "sch_i10": 80,
       "fold": 1.66,
       "cv": 0.35,
-      "oa_rank": 5,
+      "oa_rank": 6,
       "sch_rank": 7,
       "oa_resolved": true,
       "sch_resolved": true
@@ -167,7 +189,7 @@ window.BENCH = {
       "sch_i10": 137,
       "fold": 2.2,
       "cv": 0.53,
-      "oa_rank": 6,
+      "oa_rank": 7,
       "sch_rank": 6,
       "oa_resolved": true,
       "sch_resolved": true
@@ -189,7 +211,7 @@ window.BENCH = {
       "sch_i10": 71,
       "fold": 1.67,
       "cv": 0.356,
-      "oa_rank": 7,
+      "oa_rank": 8,
       "sch_rank": 8,
       "oa_resolved": true,
       "sch_resolved": true
@@ -211,7 +233,7 @@ window.BENCH = {
       "sch_i10": 140,
       "fold": 3.26,
       "cv": 0.75,
-      "oa_rank": 8,
+      "oa_rank": 9,
       "sch_rank": 5,
       "oa_resolved": true,
       "sch_resolved": true
@@ -233,7 +255,7 @@ window.BENCH = {
       "sch_i10": 61,
       "fold": 1.64,
       "cv": 0.341,
-      "oa_rank": 9,
+      "oa_rank": 10,
       "sch_rank": 11,
       "oa_resolved": true,
       "sch_resolved": true
@@ -255,7 +277,7 @@ window.BENCH = {
       "sch_i10": 93,
       "fold": 1.69,
       "cv": 0.365,
-      "oa_rank": 10,
+      "oa_rank": 11,
       "sch_rank": 14,
       "oa_resolved": true,
       "sch_resolved": true
@@ -277,7 +299,7 @@ window.BENCH = {
       "sch_i10": 62,
       "fold": 1.76,
       "cv": 0.39,
-      "oa_rank": 11,
+      "oa_rank": 12,
       "sch_rank": 13,
       "oa_resolved": true,
       "sch_resolved": true
@@ -299,7 +321,7 @@ window.BENCH = {
       "sch_i10": 46,
       "fold": 1.1,
       "cv": 0.066,
-      "oa_rank": 12,
+      "oa_rank": 13,
       "sch_rank": 21,
       "oa_resolved": true,
       "sch_resolved": true
@@ -321,7 +343,7 @@ window.BENCH = {
       "sch_i10": 75,
       "fold": 1.94,
       "cv": 0.451,
-      "oa_rank": 13,
+      "oa_rank": 14,
       "sch_rank": 12,
       "oa_resolved": true,
       "sch_resolved": true
@@ -343,7 +365,7 @@ window.BENCH = {
       "sch_i10": 93,
       "fold": 1.82,
       "cv": 0.411,
-      "oa_rank": 14,
+      "oa_rank": 15,
       "sch_rank": 15,
       "oa_resolved": true,
       "sch_resolved": true
@@ -365,7 +387,7 @@ window.BENCH = {
       "sch_i10": 54,
       "fold": 3.76,
       "cv": 0.82,
-      "oa_rank": 15,
+      "oa_rank": 16,
       "sch_rank": 9,
       "oa_resolved": true,
       "sch_resolved": true
@@ -387,7 +409,7 @@ window.BENCH = {
       "sch_i10": 18,
       "fold": 2.02,
       "cv": 0.478,
-      "oa_rank": 16,
+      "oa_rank": 17,
       "sch_rank": 18,
       "oa_resolved": true,
       "sch_resolved": true
@@ -409,7 +431,7 @@ window.BENCH = {
       "sch_i10": 68,
       "fold": 1.39,
       "cv": 0.233,
-      "oa_rank": 17,
+      "oa_rank": 18,
       "sch_rank": 22,
       "oa_resolved": true,
       "sch_resolved": true
@@ -431,7 +453,7 @@ window.BENCH = {
       "sch_i10": 57,
       "fold": 1.91,
       "cv": 0.443,
-      "oa_rank": 18,
+      "oa_rank": 19,
       "sch_rank": 19,
       "oa_resolved": true,
       "sch_resolved": true
@@ -453,7 +475,7 @@ window.BENCH = {
       "sch_i10": 51,
       "fold": 2.29,
       "cv": 0.553,
-      "oa_rank": 19,
+      "oa_rank": 20,
       "sch_rank": 17,
       "oa_resolved": true,
       "sch_resolved": true
@@ -475,7 +497,7 @@ window.BENCH = {
       "sch_i10": 26,
       "fold": 2.54,
       "cv": 0.614,
-      "oa_rank": 20,
+      "oa_rank": 21,
       "sch_rank": 16,
       "oa_resolved": true,
       "sch_resolved": true
@@ -497,7 +519,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 21,
+      "oa_rank": 22,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -519,7 +541,7 @@ window.BENCH = {
       "sch_i10": 44,
       "fold": 1.16,
       "cv": 0.108,
-      "oa_rank": 22,
+      "oa_rank": 23,
       "sch_rank": 30,
       "oa_resolved": true,
       "sch_resolved": true
@@ -541,7 +563,7 @@ window.BENCH = {
       "sch_i10": 53,
       "fold": 2.11,
       "cv": 0.503,
-      "oa_rank": 23,
+      "oa_rank": 24,
       "sch_rank": 20,
       "oa_resolved": true,
       "sch_resolved": true
@@ -563,7 +585,7 @@ window.BENCH = {
       "sch_i10": 87,
       "fold": 4.74,
       "cv": 0.921,
-      "oa_rank": 24,
+      "oa_rank": 25,
       "sch_rank": 10,
       "oa_resolved": true,
       "sch_resolved": true
@@ -585,7 +607,7 @@ window.BENCH = {
       "sch_i10": 53,
       "fold": 1.73,
       "cv": 0.377,
-      "oa_rank": 25,
+      "oa_rank": 26,
       "sch_rank": 24,
       "oa_resolved": true,
       "sch_resolved": true
@@ -607,7 +629,7 @@ window.BENCH = {
       "sch_i10": 25,
       "fold": 1.63,
       "cv": 0.337,
-      "oa_rank": 26,
+      "oa_rank": 27,
       "sch_rank": 25,
       "oa_resolved": true,
       "sch_resolved": true
@@ -629,7 +651,7 @@ window.BENCH = {
       "sch_i10": 49,
       "fold": 1.43,
       "cv": 0.252,
-      "oa_rank": 27,
+      "oa_rank": 28,
       "sch_rank": 29,
       "oa_resolved": true,
       "sch_resolved": true
@@ -651,7 +673,7 @@ window.BENCH = {
       "sch_i10": 13,
       "fold": 1.22,
       "cv": 0.14,
-      "oa_rank": 28,
+      "oa_rank": 29,
       "sch_rank": 37,
       "oa_resolved": true,
       "sch_resolved": true
@@ -673,7 +695,7 @@ window.BENCH = {
       "sch_i10": 37,
       "fold": 1.67,
       "cv": 0.355,
-      "oa_rank": 29,
+      "oa_rank": 30,
       "sch_rank": 28,
       "oa_resolved": true,
       "sch_resolved": true
@@ -695,7 +717,7 @@ window.BENCH = {
       "sch_i10": 23,
       "fold": 1.86,
       "cv": 0.427,
-      "oa_rank": 30,
+      "oa_rank": 31,
       "sch_rank": 27,
       "oa_resolved": true,
       "sch_resolved": true
@@ -717,7 +739,7 @@ window.BENCH = {
       "sch_i10": 21,
       "fold": 1.48,
       "cv": 0.272,
-      "oa_rank": 31,
+      "oa_rank": 32,
       "sch_rank": 32,
       "oa_resolved": true,
       "sch_resolved": true
@@ -739,7 +761,7 @@ window.BENCH = {
       "sch_i10": 26,
       "fold": 1.45,
       "cv": 0.261,
-      "oa_rank": 32,
+      "oa_rank": 33,
       "sch_rank": 33,
       "oa_resolved": true,
       "sch_resolved": true
@@ -761,7 +783,7 @@ window.BENCH = {
       "sch_i10": 27,
       "fold": 1.73,
       "cv": 0.377,
-      "oa_rank": 33,
+      "oa_rank": 34,
       "sch_rank": 31,
       "oa_resolved": true,
       "sch_resolved": true
@@ -783,7 +805,7 @@ window.BENCH = {
       "sch_i10": 28,
       "fold": 1.27,
       "cv": 0.169,
-      "oa_rank": 34,
+      "oa_rank": 35,
       "sch_rank": 35,
       "oa_resolved": true,
       "sch_resolved": true
@@ -805,7 +827,7 @@ window.BENCH = {
       "sch_i10": 24,
       "fold": 1.47,
       "cv": 0.27,
-      "oa_rank": 35,
+      "oa_rank": 36,
       "sch_rank": 34,
       "oa_resolved": true,
       "sch_resolved": true
@@ -827,7 +849,7 @@ window.BENCH = {
       "sch_i10": 15,
       "fold": 1.28,
       "cv": 0.174,
-      "oa_rank": 36,
+      "oa_rank": 37,
       "sch_rank": 40,
       "oa_resolved": true,
       "sch_resolved": true
@@ -849,7 +871,7 @@ window.BENCH = {
       "sch_i10": 23,
       "fold": 1.41,
       "cv": 0.239,
-      "oa_rank": 37,
+      "oa_rank": 38,
       "sch_rank": 39,
       "oa_resolved": true,
       "sch_resolved": true
@@ -871,7 +893,7 @@ window.BENCH = {
       "sch_i10": 16,
       "fold": 1.87,
       "cv": 0.427,
-      "oa_rank": 38,
+      "oa_rank": 39,
       "sch_rank": 36,
       "oa_resolved": true,
       "sch_resolved": true
@@ -893,7 +915,7 @@ window.BENCH = {
       "sch_i10": 10,
       "fold": 1.34,
       "cv": 0.206,
-      "oa_rank": 39,
+      "oa_rank": 40,
       "sch_rank": 41,
       "oa_resolved": true,
       "sch_resolved": true
@@ -915,7 +937,7 @@ window.BENCH = {
       "sch_i10": 28,
       "fold": 2.44,
       "cv": 0.592,
-      "oa_rank": 40,
+      "oa_rank": 41,
       "sch_rank": 38,
       "oa_resolved": true,
       "sch_resolved": true
@@ -937,7 +959,7 @@ window.BENCH = {
       "sch_i10": 36,
       "fold": 7.46,
       "cv": 1.08,
-      "oa_rank": 41,
+      "oa_rank": 42,
       "sch_rank": 26,
       "oa_resolved": true,
       "sch_resolved": true
@@ -959,7 +981,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 42,
+      "oa_rank": 43,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -981,7 +1003,7 @@ window.BENCH = {
       "sch_i10": 6,
       "fold": 1.77,
       "cv": 0.394,
-      "oa_rank": 43,
+      "oa_rank": 44,
       "sch_rank": 42,
       "oa_resolved": true,
       "sch_resolved": true
@@ -1003,7 +1025,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 44,
+      "oa_rank": 45,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1025,7 +1047,7 @@ window.BENCH = {
       "sch_i10": 3,
       "fold": 2.52,
       "cv": 0.61,
-      "oa_rank": 45,
+      "oa_rank": 46,
       "sch_rank": 43,
       "oa_resolved": true,
       "sch_resolved": true
@@ -1047,7 +1069,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 46,
+      "oa_rank": 47,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1069,7 +1091,7 @@ window.BENCH = {
       "sch_i10": 4,
       "fold": 2.06,
       "cv": 0.49,
-      "oa_rank": 47,
+      "oa_rank": 48,
       "sch_rank": 44,
       "oa_resolved": true,
       "sch_resolved": true
@@ -1091,7 +1113,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 48,
+      "oa_rank": 49,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1113,7 +1135,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 49,
+      "oa_rank": 50,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1135,7 +1157,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 50,
+      "oa_rank": 51,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1157,7 +1179,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1179,7 +1201,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1201,7 +1223,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1223,7 +1245,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1245,7 +1267,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1267,32 +1289,10 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
-    },
-    {
-      "key": "thompson_j",
-      "name": "James C Thompson",
-      "disc": "CBN",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": null,
-      "oa_cites": null,
-      "oa_h": null,
-      "oa_i10": null,
-      "sch_cites": 3850,
-      "sch_h": 34,
-      "sch_i10": 57,
-      "fold": null,
-      "cv": null,
-      "oa_rank": 51,
-      "sch_rank": 23,
-      "oa_resolved": false,
-      "sch_resolved": true
     },
     {
       "key": "young_k",
@@ -1311,7 +1311,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -1333,7 +1333,7 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 51,
+      "oa_rank": 52,
       "sch_rank": 45,
       "oa_resolved": false,
       "sch_resolved": false
@@ -8849,7 +8849,288 @@ window.BENCH = {
       "rg": "Full",
       "is_self": false,
       "team": false,
-      "openalex": [],
+      "openalex": [
+        {
+          "year": 1954,
+          "cites": 0
+        },
+        {
+          "year": 1956,
+          "cites": 0
+        },
+        {
+          "year": 1959,
+          "cites": 0
+        },
+        {
+          "year": 1960,
+          "cites": 0
+        },
+        {
+          "year": 1961,
+          "cites": 0
+        },
+        {
+          "year": 1962,
+          "cites": 0
+        },
+        {
+          "year": 1963,
+          "cites": 0
+        },
+        {
+          "year": 1964,
+          "cites": 0
+        },
+        {
+          "year": 1965,
+          "cites": 0
+        },
+        {
+          "year": 1966,
+          "cites": 0
+        },
+        {
+          "year": 1967,
+          "cites": 0
+        },
+        {
+          "year": 1968,
+          "cites": 0
+        },
+        {
+          "year": 1969,
+          "cites": 0
+        },
+        {
+          "year": 1970,
+          "cites": 0
+        },
+        {
+          "year": 1971,
+          "cites": 0
+        },
+        {
+          "year": 1972,
+          "cites": 0
+        },
+        {
+          "year": 1973,
+          "cites": 0
+        },
+        {
+          "year": 1974,
+          "cites": 0
+        },
+        {
+          "year": 1975,
+          "cites": 0
+        },
+        {
+          "year": 1976,
+          "cites": 0
+        },
+        {
+          "year": 1977,
+          "cites": 0
+        },
+        {
+          "year": 1978,
+          "cites": 0
+        },
+        {
+          "year": 1979,
+          "cites": 0
+        },
+        {
+          "year": 1980,
+          "cites": 0
+        },
+        {
+          "year": 1981,
+          "cites": 0
+        },
+        {
+          "year": 1982,
+          "cites": 0
+        },
+        {
+          "year": 1983,
+          "cites": 0
+        },
+        {
+          "year": 1984,
+          "cites": 0
+        },
+        {
+          "year": 1985,
+          "cites": 0
+        },
+        {
+          "year": 1986,
+          "cites": 0
+        },
+        {
+          "year": 1987,
+          "cites": 0
+        },
+        {
+          "year": 1988,
+          "cites": 0
+        },
+        {
+          "year": 1989,
+          "cites": 0
+        },
+        {
+          "year": 1990,
+          "cites": 0
+        },
+        {
+          "year": 1991,
+          "cites": 0
+        },
+        {
+          "year": 1992,
+          "cites": 0
+        },
+        {
+          "year": 1993,
+          "cites": 0
+        },
+        {
+          "year": 1994,
+          "cites": 0
+        },
+        {
+          "year": 1995,
+          "cites": 0
+        },
+        {
+          "year": 1996,
+          "cites": 0
+        },
+        {
+          "year": 1997,
+          "cites": 0
+        },
+        {
+          "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
+          "cites": 0
+        },
+        {
+          "year": 2000,
+          "cites": 0
+        },
+        {
+          "year": 2001,
+          "cites": 0
+        },
+        {
+          "year": 2002,
+          "cites": 0
+        },
+        {
+          "year": 2003,
+          "cites": 0
+        },
+        {
+          "year": 2004,
+          "cites": 0
+        },
+        {
+          "year": 2005,
+          "cites": 0
+        },
+        {
+          "year": 2006,
+          "cites": 0
+        },
+        {
+          "year": 2007,
+          "cites": 0
+        },
+        {
+          "year": 2008,
+          "cites": 0
+        },
+        {
+          "year": 2009,
+          "cites": 0
+        },
+        {
+          "year": 2010,
+          "cites": 0
+        },
+        {
+          "year": 2011,
+          "cites": 0
+        },
+        {
+          "year": 2012,
+          "cites": 279
+        },
+        {
+          "year": 2013,
+          "cites": 247
+        },
+        {
+          "year": 2014,
+          "cites": 235
+        },
+        {
+          "year": 2015,
+          "cites": 268
+        },
+        {
+          "year": 2016,
+          "cites": 241
+        },
+        {
+          "year": 2017,
+          "cites": 224
+        },
+        {
+          "year": 2018,
+          "cites": 231
+        },
+        {
+          "year": 2019,
+          "cites": 216
+        },
+        {
+          "year": 2020,
+          "cites": 268
+        },
+        {
+          "year": 2021,
+          "cites": 265
+        },
+        {
+          "year": 2022,
+          "cites": 253
+        },
+        {
+          "year": 2023,
+          "cites": 250
+        },
+        {
+          "year": 2024,
+          "cites": 236
+        },
+        {
+          "year": 2025,
+          "cites": 184
+        },
+        {
+          "year": 2026,
+          "cites": 107
+        }
+      ],
       "scholar": [
         {
           "year": 2001,

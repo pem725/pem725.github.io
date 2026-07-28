@@ -49,7 +49,7 @@ smithgray_s,Smith-Gray,Sybil,Sybil Smith-Gray,Assistant,tenure_line,Unknown,TRUE
 stagl_k,Stagl,Kevin,Kevin C Stagl,Associate,tenure_line,I-O,TRUE,FALSE,NA,A5075118367,Gm5m6zIAAAAJ,NA,NA,TRUE,Added in full-dept expansion
 stuewig_j,Stuewig,Jeffrey,Jeffrey B Stuewig,Associate,tenure_line,Clinical,TRUE,FALSE,NA,A5076800459,3-AdJBMAAAAJ,NA,NA,TRUE,Added in full-dept expansion
 thompson_d,Thompson,Dawna,Dawna M Thompson,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5027690329,NA,NA,NA,TRUE,Added in full-dept expansion
-thompson_j,Thompson,James,James C Thompson,Professor,tenure_line,CBN,TRUE,FALSE,NA,NA,2VKzuqwAAAAJ,NA,NA,TRUE,UNRESOLVED-OA: real CBN researcher but OpenAlex record fragmented across IDs and polluted by a homonymous biologist; do NOT treat as zero. Use Scholar.
+thompson_j,Thompson,James,James C Thompson,Professor,tenure_line,CBN,TRUE,FALSE,0000-0002-9824-8543,A5103394448,2VKzuqwAAAAJ,NA,NA,TRUE,RESOLVED-OA 2026-07-28: correct OpenAlex author id A5103394448 (ORCID-verified; GMU CBN; confirmed via 2011 Perception paper co-authored w/ McKnight). Previously UNRESOLVED due to fragmentation + homonymous biologist.
 tonge_n,Tonge,Natasha,Natasha A Tonge,Assistant,tenure_line,Clinical,TRUE,FALSE,0000-0001-7670-7991,A5077877685,bpou7qoAAAAJ,NA,NA,TRUE,Added in full-dept expansion
 wiener_m,Wiener,Martin,Martin Wiener,Associate,tenure_line,CBN,TRUE,FALSE,0000-0001-6006-2594,A5021965223,d35WLWYAAAAJ,NA,NA,TRUE,Added in full-dept expansion
 winsler_a,Winsler,Adam,Adam Winsler,Professor,tenure_line,Applied Developmental,TRUE,FALSE,0000-0001-6504-0802,A5048244213,_Ekthu4AAAAJ,NA,NA,TRUE,Added in full-dept expansion
