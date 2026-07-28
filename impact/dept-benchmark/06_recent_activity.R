@@ -82,13 +82,33 @@ srt <- function(l, k = 8) {
   o <- order(unlist(l), decreasing = TRUE)
   lapply(head(names(l)[o], k), function(nm) list(name = nm, n = l[[nm]]))
 }
-facout <- facout[order(-vapply(facout, function(f) f$works, integer(1)))]
+# Merge Google Scholar recent-works counts (harvested per profile into
+# scholar_recent.csv — Scholar indexes closed-access + conference/chapter/gray
+# literature that even all-access OpenAlex misses, so it runs higher). Fields are
+# NA for faculty with no Scholar profile; the page shows those as "no profile".
+sch <- tryCatch(read_csv("scholar_recent.csv", show_col_types = FALSE,
+                         col_types = cols(.default = col_character())), error = function(e) NULL)
+gi <- function(m, k) { if (is.null(m)) return(NA_integer_); v <- m[k]; if (is.na(v)) NA_integer_ else as.integer(v) }
+smap  <- if (!is.null(sch)) setNames(sch$scholar_recent, sch$faculty_key) else NULL
+s25   <- if (!is.null(sch)) setNames(sch$scholar_2025, sch$faculty_key)   else NULL
+s26   <- if (!is.null(sch)) setNames(sch$scholar_2026, sch$faculty_key)   else NULL
+for (j in seq_along(facout)) {
+  k <- facout[[j]]$key
+  facout[[j]]$sch     <- gi(smap, k)
+  facout[[j]]$sch2025 <- gi(s25, k)
+  facout[[j]]$sch2026 <- gi(s26, k)
+}
+sumf <- function(field) sum(vapply(facout, function(f) { v <- f[[field]]; if (is.null(v) || is.na(v)) 0L else v }, integer(1)))
+
+facout <- facout[order(-vapply(facout, function(f) max(f$works, f$sch %||% 0L), integer(1)))]
 out <- list(
   snapshot_date = SNAP, years = YEARS,
   dept = list(
     n_faculty = length(facout),
     total_works = sum(vapply(facout, function(f) f$works, integer(1))),
     y2025 = dept_2025, y2026 = dept_2026, oa = dept_oa, closed = dept_closed,
+    scholar_total = sumf("sch"), scholar_2025 = sumf("sch2025"), scholar_2026 = sumf("sch2026"),
+    scholar_snapshot = if (!is.null(sch)) sch$snapshot_date[1] else NA,
     by_type = dept_type, top_topics = srt(dept_topic, 12), by_field = srt(dept_field, 8)),
   faculty = facout)
 json <- toJSON(out, auto_unbox = TRUE, na = "null", pretty = TRUE)
