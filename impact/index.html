@@ -94,6 +94,24 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
 .cited-cites{font-family:'Roboto Mono',monospace;font-weight:600;font-size:.88rem;color:var(--rust);text-align:right}
 .cited-title{font-size:.85rem;font-weight:700;line-height:1.36}
 .cited-year{font-family:'Roboto Mono',monospace;font-size:.64rem;color:var(--muted);margin-left:.35rem;white-space:nowrap}
+/* Momentum section (data: data/momentum.js from impact/momentum/build_momentum.py) */
+.mo-intro{font-size:.88rem;color:var(--muted);margin:-.3rem 0 1rem}
+.stat-row.mo-tiles{grid-template-columns:repeat(4,1fr)}
+@media(max-width:620px){.stat-row.mo-tiles{grid-template-columns:1fr 1fr}}
+.mo-tiles .sc .v{font-size:1.9rem}
+.mo-tiles .sc .c{font-family:'Roboto Mono',monospace;font-size:.6rem;color:var(--muted);margin-top:.3rem;line-height:1.4}
+.mo-leg{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-family:'Roboto Mono',monospace;font-size:.62rem;color:var(--muted);margin-top:.5rem}
+.mo-leg i{display:inline-block;width:.75rem;height:.75rem;vertical-align:-.1rem;margin-right:.3rem;border-radius:2px}
+.mo-leg i.ln{height:2px;vertical-align:.2rem;border-radius:0}
+.mo-leg i.dash{background:repeating-linear-gradient(90deg,#8f8d85 0 5px,transparent 5px 8px)!important}
+.mo-tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--cream);font-family:'Roboto Mono',monospace;font-size:.66rem;line-height:1.45;padding:.4rem .55rem;border-radius:3px;opacity:0;transition:opacity .1s;z-index:20;max-width:260px}
+.mo-recent{list-style:none;margin:.4rem 0 0;padding:0}
+.mo-recent li{display:grid;grid-template-columns:3.2rem 1fr 5.5rem;gap:.55rem;align-items:center;padding:.4rem 0;border-bottom:1px solid rgba(200,185,154,.4);font-size:.84rem;line-height:1.35}
+.mo-recent li:last-child{border-bottom:none}
+.mo-recent .n{font-family:'Roboto Mono',monospace;font-weight:600;color:var(--rust);text-align:right}
+.mo-recent .y{font-family:'Roboto Mono',monospace;font-size:.66rem;color:var(--muted);margin-left:.3rem}
+.mo-note{font-size:.76rem;color:var(--muted);font-style:italic;margin-top:.8rem;line-height:1.55}
+.mo-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin:1.4rem 0 .2rem}
 </style>
 </head>
 <body>
@@ -105,8 +123,9 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
   <div class="datebar">
     <span><a href="../index.html" style="color:inherit;border:none">&larr; Homepage</a></span>
     <span><a href="../cv/index.html" style="color:inherit;border:none">Academic CV</a></span>
+    <span><a href="students/index.html" style="color:inherit;border:none">Lab Students &rarr;</a></span>
     <span><a href="dept-benchmark/index.html" style="color:inherit;border:none">Department Benchmark &rarr;</a></span>
-    <span>Source: Google Scholar · Reviewed July 2026</span>
+    <span>Lists: Google Scholar · Momentum: OpenAlex, weekly</span>
   </div>
 </div>
 
@@ -128,6 +147,25 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
     </div>
     <div id="orcid-live-list"><div class="ol-msg">Loading latest publications from ORCID&hellip;</div></div>
   </div>
+
+  <h2 class="sh" id="momentum">Momentum</h2>
+  <p class="mo-intro">Total citations only ever go up, so they cannot show whether work is still moving. These measure flow instead: citations received each year, whether that rate is rising, and how much of it goes to recent papers. Compared against the <a href="dept-benchmark/index.html">GMU Psychology department</a>. Refreshed weekly from OpenAlex<span id="moDate"></span>.</p>
+  <div class="stat-row mo-tiles" id="moTiles"></div>
+  <div class="chart-wrap">
+    <div class="chart-label">Citations received each year, split by when the cited paper was published &mdash; OpenAlex</div>
+    <div id="moEra"></div>
+    <div class="mo-leg" id="moEraLeg"></div>
+  </div>
+  <div class="chart-wrap">
+    <div class="chart-label">Share of each year&rsquo;s citations going to papers from the previous five years</div>
+    <div id="moFresh"></div>
+    <div class="mo-leg"><span><i class="ln" style="background:#2c4a6e"></i>McKnight</span><span><i class="ln dash"></i>Department median</span></div>
+  </div>
+  <div class="mo-h3">Newest papers already drawing citations</div>
+  <div class="chart-label">Published in the last six years &middot; bar = citations per year since publication</div>
+  <ol class="mo-recent" id="moRecent"></ol>
+  <p class="mo-note" id="moNote"></p>
+  <div class="mo-tip" id="moTip"></div>
 
   <h2 class="sh">Research Contributions by Area</h2>
   <div class="chart-label">Curated articles &amp; books by topic &mdash; bar length &prop; total citations</div>
@@ -1070,5 +1108,127 @@ function filterPubs() {
 })();
 </script>
 
+<script src="data/momentum.js"></script>
+<script>
+/* Momentum section. All numbers come from window.MOMENTUM (OpenAlex), built weekly. */
+(function(){
+  var M = window.MOMENTUM; if(!M || !M.self || !M.self.m) return;
+  var me = M.self.m, NS = 'http://www.w3.org/2000/svg';
+  var ERA_COL = ['#87a1c1','#6585b0','#4a6d9b','#355888','#223d63','#132640']; // ordinal, validated vs #ede5d2
+  var fmt = function(n){ return n==null ? '—' : Math.round(n).toLocaleString(); };
+  var pctf = function(x,d){ return x==null ? '—' : (x>0?'+':'') + (100*x).toFixed(d==null?1:d) + '%'; };
+  var cy = me.years[me.years.length-1], last = cy-1;
+  var tip = document.getElementById('moTip');
+  function showTip(e, html){ tip.innerHTML = html; tip.style.opacity = 1;
+    var x = e.clientX + 14, y = e.clientY + 14;
+    if (x + 270 > innerWidth) x = e.clientX - 270;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px'; }
+  function hideTip(){ tip.style.opacity = 0; }
+  function el(tag, attrs, parent){ var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; }
+  function median(a){ a = a.filter(function(v){return v!=null;}).sort(function(x,y){return x-y;});
+    if (!a.length) return null; var h = a.length>>1; return a.length%2 ? a[h] : (a[h-1]+a[h])/2; }
+  // Peers: department faculty with at least 20 citations last year (a stable rate to compare).
+  var peers = M.faculty.filter(function(f){ return f.m && f.m.vel_last >= 20; });
+  function pctile(key){ var v = me[key], arr = peers.map(function(f){return f.m[key];}).filter(function(x){return x!=null;});
+    return Math.round(100 * arr.filter(function(a){return a<=v;}).length / arr.length); }
+  function dmed(key){ return median(peers.map(function(f){return f.m[key];})); }
+
+  document.getElementById('moDate').textContent = ' (last refresh ' + M.generated + ')';
+  var tiles = [
+    [fmt(me.vel_last), 'Citations in ' + last, pctile('vel_last') + 'th percentile in dept · median ' + fmt(dmed('vel_last'))],
+    [pctf(me.growth), 'Growth per year', 'last 3 yrs vs 3 before · dept median ' + pctf(dmed('growth'))],
+    [(me.accel>0?'+':'') + fmt(me.accel), 'Cites/yr gained yearly', pctile('accel') + 'th percentile in dept'],
+    [pctf(me.fresh_last,0).replace('+',''), 'To papers ≤ 5 yrs old', 'share of ' + last + ' citations · dept median ' + pctf(dmed('fresh_last'),0).replace('+','')]
+  ];
+  document.getElementById('moTiles').innerHTML = tiles.map(function(t){
+    return '<div class="sc"><div class="v">'+t[0]+'</div><div class="l">'+t[1]+'</div><div class="c">'+t[2]+'</div></div>'; }).join('');
+
+  // --- Chart 1: stacked bars, citations per year by era of the cited paper
+  (function(){
+    var E = M.self.by_era, yrs = E.years, W = 700, H = 240, L = 46, R = 10, T = 14, B = 26;
+    var tot = yrs.map(function(_,i){ return E.eras.reduce(function(s,e){return s+e.cites[i];},0); });
+    var ymax = Math.ceil(Math.max.apply(null, tot) / 200) * 200, bw = (W-L-R)/yrs.length;
+    var y = function(v){ return H-B - (H-B-T) * v / ymax; };
+    var svg = el('svg', {viewBox:'0 0 '+W+' '+H, class:'chart', role:'img',
+      'aria-label':'Citations per year by era of the cited paper'}, document.getElementById('moEra'));
+    for (var g = 0; g <= ymax; g += 200) {
+      el('line', {x1:L, x2:W-R, y1:y(g), y2:y(g), stroke:'#c8b99a', 'stroke-width': g?0.5:1, 'stroke-dasharray': g?'2 3':''}, svg);
+      el('text', {x:L-6, y:y(g)+3, 'text-anchor':'end', 'font-family':'Roboto Mono', 'font-size':9, fill:'#6b5e4a'}, svg).textContent = g.toLocaleString();
+    }
+    yrs.forEach(function(yr, i){
+      var x = L + i*bw + bw*0.14, w = bw*0.72, acc = 0, partial = yr === cy;
+      var grp = el('g', {opacity: partial ? 0.55 : 1}, svg);
+      E.eras.forEach(function(e, k){ var v = e.cites[i]; if (!v) return;
+        el('rect', {x:x, y:y(acc+v), width:w, height:Math.max(0, y(acc)-y(acc+v)), fill:ERA_COL[k],
+          stroke:'#ede5d2', 'stroke-width':1}, grp); acc += v; });
+      el('text', {x:x+w/2, y:H-B+13, 'text-anchor':'middle', 'font-family':'Roboto Mono', 'font-size':9, fill:'#6b5e4a'}, svg)
+        .textContent = (i%2===0 || partial) ? (partial ? yr+'*' : yr) : '';
+      var hit = el('rect', {x:L+i*bw, y:T, width:bw, height:H-B-T, fill:'transparent'}, svg);
+      hit.addEventListener('pointermove', function(ev){
+        var rows = E.eras.slice().reverse().map(function(e){ var v = e.cites[i];
+          return v ? e.label + ': ' + v.toLocaleString() + ' (' + Math.round(100*v/tot[i]) + '%)' : null; }).filter(Boolean);
+        showTip(ev, '<b>' + yr + (partial ? ' — year to date' : '') + ': ' + tot[i].toLocaleString() + ' citations</b><br>' + rows.join('<br>'));
+      });
+      hit.addEventListener('pointerleave', hideTip);
+    });
+    // direct label on the latest complete year's total
+    var li = yrs.indexOf(last);
+    el('text', {x:L+li*bw+bw/2, y:y(tot[li])-4, 'text-anchor':'middle', 'font-family':'Roboto Mono', 'font-size':9, 'font-weight':700, fill:'#1a1208'}, svg).textContent = tot[li].toLocaleString();
+    document.getElementById('moEraLeg').innerHTML = E.eras.map(function(e,k){
+      return '<span><i style="background:'+ERA_COL[k]+'"></i>papers from '+e.label+'</span>'; }).join('') +
+      '<span>* ' + cy + ' is year to date</span>';
+  })();
+
+  // --- Chart 2: fresh-work share, McKnight vs department median
+  (function(){
+    var yrs = me.years, W = 700, H = 200, L = 46, R = 92, T = 12, B = 24;
+    var dept = yrs.map(function(yr, i){ return median(peers.filter(function(f){ return f.m.velocity[i] >= 20; })
+      .map(function(f){ return f.m.fresh_share[i]; })); });
+    var mine = me.fresh_share;
+    var ymax = Math.min(1, Math.ceil(Math.max.apply(null, mine.concat(dept).filter(function(v){return v!=null;})) * 10) / 10);
+    var x = function(i){ return L + (W-L-R) * i / (yrs.length-1); }, y = function(v){ return H-B - (H-B-T) * v / ymax; };
+    var svg = el('svg', {viewBox:'0 0 '+W+' '+H, class:'chart', role:'img', 'aria-label':'Share of citations going to recent papers'},
+      document.getElementById('moFresh'));
+    for (var g = 0; g <= ymax + 1e-9; g += 0.1) {
+      el('line', {x1:L, x2:W-R, y1:y(g), y2:y(g), stroke:'#c8b99a', 'stroke-width': g?0.5:1, 'stroke-dasharray': g?'2 3':''}, svg);
+      el('text', {x:L-6, y:y(g)+3, 'text-anchor':'end', 'font-family':'Roboto Mono', 'font-size':9, fill:'#6b5e4a'}, svg).textContent = Math.round(g*100) + '%';
+    }
+    yrs.forEach(function(yr, i){ if (i%2===0 || yr===cy) el('text', {x:x(i), y:H-B+14, 'text-anchor':'middle', 'font-family':'Roboto Mono', 'font-size':9, fill:'#6b5e4a'}, svg).textContent = yr===cy ? yr+'*' : yr; });
+    function path(arr){ var d = ''; arr.forEach(function(v,i){ if (v==null) return; d += (d?'L':'M') + x(i).toFixed(1) + ',' + y(v).toFixed(1); }); return d; }
+    el('path', {d:path(dept), fill:'none', stroke:'#8f8d85', 'stroke-width':2, 'stroke-dasharray':'5 3'}, svg);
+    el('path', {d:path(mine), fill:'none', stroke:'#2c4a6e', 'stroke-width':2}, svg);
+    var n = yrs.length-1;
+    el('text', {x:x(n)+6, y:y(mine[n])+3, 'font-family':'Roboto Mono', 'font-size':9, fill:'#1a1208'}, svg).textContent = 'McKnight ' + Math.round(mine[n]*100) + '%';
+    el('text', {x:x(n)+6, y:y(dept[n])+3, 'font-family':'Roboto Mono', 'font-size':9, fill:'#6b5e4a'}, svg).textContent = 'Dept ' + Math.round(dept[n]*100) + '%';
+    var cross = el('line', {y1:T, y2:H-B, stroke:'#6b5e4a', 'stroke-width':1, opacity:0}, svg);
+    var dot = el('circle', {r:4, fill:'#2c4a6e', stroke:'#ede5d2', 'stroke-width':2, opacity:0}, svg);
+    var hit = el('rect', {x:L, y:T, width:W-L-R, height:H-B-T, fill:'transparent'}, svg);
+    hit.addEventListener('pointermove', function(ev){
+      var r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) * W / r.width;
+      var i = Math.max(0, Math.min(n, Math.round((px - L) / (W-L-R) * n)));
+      cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i)); cross.setAttribute('opacity', .5);
+      if (mine[i]!=null){ dot.setAttribute('cx', x(i)); dot.setAttribute('cy', y(mine[i])); dot.setAttribute('opacity', 1); }
+      showTip(ev, '<b>' + yrs[i] + (yrs[i]===cy?' (year to date)':'') + '</b><br>McKnight: ' + (mine[i]==null?'—':Math.round(mine[i]*100)+'%') +
+        ' of ' + me.velocity[i].toLocaleString() + ' citations<br>Department median: ' + (dept[i]==null?'—':Math.round(dept[i]*100)+'%') +
+        '<br><span style="opacity:.75">recent = published ' + (yrs[i]-4) + '–' + yrs[i] + '</span>');
+    });
+    hit.addEventListener('pointerleave', function(){ hideTip(); cross.setAttribute('opacity',0); dot.setAttribute('opacity',0); });
+  })();
+
+  // --- Newest papers drawing citations, with a per-year mini bar
+  document.getElementById('moRecent').innerHTML = (M.self.top_recent || []).map(function(p){
+    var mx = Math.max.apply(null, p.by_year.concat([1])), bw = 6, svg = '<svg width="'+(p.by_year.length*(bw+2))+'" height="22" aria-hidden="true">' +
+      p.by_year.map(function(v,i){ var h = Math.round(20*v/mx); return '<rect x="'+(i*(bw+2))+'" y="'+(21-h)+'" width="'+bw+'" height="'+Math.max(h,1)+'" fill="#355888" rx="1"/>'; }).join('') + '</svg>';
+    var t = p.doi ? '<a href="https://doi.org/'+p.doi+'" target="_blank" rel="noopener">'+p.title+'</a>' : p.title;
+    return '<li><span class="n">'+p.cites+'</span><span>'+t+'<span class="y">'+p.year+'</span></span>'+svg+'</li>'; }).join('');
+
+  document.getElementById('moNote').textContent = 'OpenAlex counts ' + fmt(me.total_cites) + ' citations to ' + me.works +
+    ' works (h-index ' + me.h + '); Google Scholar counts more because it also indexes books, chapters and conference papers. ' +
+    'OpenAlex reports citations by year from 2012 on. Growth compares mean citations per year in ' + (last-2) + '–' + last +
+    ' with ' + (last-5) + '–' + (last-3) + '. Department comparisons use the ' + peers.length +
+    ' GMU Psychology faculty with at least 20 citations in ' + last + '.';
+})();
+</script>
 </body>
 </html>

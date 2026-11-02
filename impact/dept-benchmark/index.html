@@ -108,6 +108,7 @@
     <a class="je" href="#s9">9 · By rank</a>
     <a class="je" href="#s10">10 · Quadrant</a>
     <a href="#s11">11 · Active now</a>
+    <a href="#s12">12 · Momentum</a>
     <a href="#stable">Table</a>
   </nav>
 
@@ -256,6 +257,19 @@
     figures are harvested per profile (self-curated, so completeness varies); OpenAlex counts can undercount
     faculty without an ORCID whose record is fragmented.</figcaption></figure>
 
+  <h2 id="s12">12 · Gaining or losing momentum</h2>
+  <p class="sub">Career totals reward having started early. This asks whether each person's citations are
+  <b>speeding up or slowing down</b>: mean citations per year in the last three complete years against the three
+  before, as a yearly growth rate (vertical), placed against how much they are cited now (horizontal). Above the
+  zero line, the rate is rising; below it, falling. Growth is shown only for people with at least
+  5 citations a year in the earlier window, because growth off a tiny base is noise. Hover for how much of each
+  person's citations go to work from the last five years, which separates new work that is catching on from an
+  old paper that is still climbing. OpenAlex, refreshed weekly (<span id="m12date">—</span>).</p>
+  <div class="legend" id="leg12"></div>
+  <figure><div id="momfig"></div>
+    <figcaption>Each dot is one active faculty member with an OpenAlex record and enough citations to measure growth.
+    Colored by rank; your lab outlined. Dashed lines are department medians.</figcaption></figure>
+
   <h2 id="stable">The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
   the notes below on unresolved cases.</p>
@@ -266,6 +280,7 @@
 
 <script src="web_data.js"></script>
 <script src="recent_data.js"></script>
+<script src="../data/momentum.js"></script>
 <script>
 const B=window.BENCH, $=s=>document.querySelector(s), NS="http://www.w3.org/2000/svg";
 const tip=$("#tip");
@@ -707,7 +722,7 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 
-$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel","#cpw","#recent","#rankstrip","#quad","#recentfig"].forEach(id=>$(id).innerHTML="");draw();});
+$("#themeBtn").addEventListener("click",()=>{const c=document.documentElement.getAttribute("data-theme");const nx=c==="dark"?"light":c==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",nx);["#dept","#slope","#scatter","#bars","#traj","#trajB","#rel","#cpw","#recent","#rankstrip","#quad","#recentfig","#momfig"].forEach(id=>$(id).innerHTML="");draw();});
 /* 11. recent activity — who is publishing now (2025-2026), all fields, all access.
    Solid bar = OpenAlex (open + closed). Light tail = extra works only Google Scholar
    indexes (closed-access journals, conference papers, chapters, gray lit). */
@@ -752,10 +767,47 @@ function recentActivity(){
   });
   $("#recentfig").innerHTML=""; $("#recentfig").appendChild(S);
 }
-function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();}
+/* 12. momentum — growth of citations/yr (last 3 complete yrs vs 3 before) against
+   citations last year. Data: window.MOMENTUM from impact/momentum/build_momentum.py. */
+function momentumFig(){
+  const host=$("#momfig"), M=window.MOMENTUM; host.innerHTML=""; if(!M)return;
+  $("#m12date").textContent=M.generated;
+  const fk=Object.fromEntries(B.faculty.map(f=>[f.key,f]));
+  const data=M.faculty.filter(p=>p.m&&p.m.growth!=null&&p.m.vel_last>0).map(p=>({p,f:fk[p.key]||{key:p.key,name:p.name,rank_group:p.rank_group},x:p.m.vel_last,g:p.m.growth}));
+  if(!data.length)return;
+  const W=980,H=520,pl=66,pr=22,pt=26,pb=48, lg=Math.log10;
+  const xmin=Math.min(...data.map(d=>d.x)),xmax=Math.max(...data.map(d=>d.x));
+  // fit the growth axis to the data (it is rarely symmetric), capped at +120% / -60%
+  const ghi=Math.min(1.2,Math.max(0.1,Math.ceil(Math.max(...data.map(d=>d.g))*10)/10));
+  const glo=Math.max(-0.6,Math.min(-0.1,Math.floor(Math.min(...data.map(d=>d.g))*10)/10));
+  const gc=v=>Math.max(glo,Math.min(ghi,v)), glim=Math.max(ghi,-glo);
+  const X=v=>pl+(lg(v)-lg(xmin*0.9))/(lg(xmax*1.1)-lg(xmin*0.9))*(W-pl-pr), Y=v=>pt+(ghi-gc(v))/(ghi-glo)*(H-pt-pb);
+  const S=svg(W,H), step=ghi-glo>0.8?0.2:0.1;
+  for(let v=Math.ceil(glo/step)*step;v<=ghi+1e-9;v+=step){const gy=Y(v);S.appendChild(el("line",{x1:pl,y1:gy,x2:W-pr,y2:gy,stroke:css(Math.abs(v)<1e-9?"--axis":"--grid"),"stroke-width":Math.abs(v)<1e-9?1.6:1}));S.appendChild(txt(pl-8,gy+4,(v>0?"+":"")+Math.round(v*100)+"%","end"));}
+  [10,20,50,100,200,500,1000,2000,5000].filter(v=>v>=xmin*0.9&&v<=xmax*1.1).forEach(v=>S.appendChild(txt(X(v),H-pb+18,v.toLocaleString(),"middle")));
+  S.appendChild(txt(W/2,H-6,"Citations received in "+(+M.generated.slice(0,4)-1)+" (log) →","middle","lbl"));
+  const vl=txt(15,H/2,"Yearly growth in citations/yr →","middle","lbl"); vl.setAttribute("transform",`rotate(-90 15 ${H/2})`); S.appendChild(vl);
+  const mx=median(data.map(d=>d.x)), my=median(data.map(d=>d.g));
+  S.appendChild(el("line",{x1:X(mx),y1:pt,x2:X(mx),y2:H-pb,stroke:css("--axis"),"stroke-width":1.2,"stroke-dasharray":"6 4"}));
+  S.appendChild(el("line",{x1:pl,y1:Y(my),x2:W-pr,y2:Y(my),stroke:css("--axis"),"stroke-width":1.2,"stroke-dasharray":"6 4"}));
+  const ql=(x,y,t,anc)=>{const n=txt(x,y,t,anc,"lbl");n.setAttribute("fill",css("--muted"));n.setAttribute("font-weight","600");S.appendChild(n);};
+  ql(W-pr-6,pt+14,"HIGHLY CITED · RISING","end"); ql(pl+6,pt+14,"LESS CITED · RISING","start");
+  ql(W-pr-6,H-pb-8,"HIGHLY CITED · FALLING","end"); ql(pl+6,H-pb-8,"LESS CITED · FALLING","start");
+  const pc=v=>(v>0?"+":"")+Math.round(v*100)+"%";
+  data.forEach(d=>{const tm=TEAMSET.has(d.p.key), cx=X(d.x), cy=Y(d.g), m=d.p.m;
+    if(tm)S.appendChild(el("circle",{cx,cy,r:8.5,fill:"none",stroke:css("--you"),"stroke-width":2.2}));
+    const c=el("circle",{cx,cy,r:6,fill:rankcss(d.f),"fill-opacity":.75,stroke:css("--surface"),"stroke-width":1});
+    c.addEventListener("pointermove",e=>showTip(`<b>${d.p.name}</b> · ${d.p.rank_group}${d.p.label?" · "+d.p.label:""}<br><span class="r">${m.vel_last.toLocaleString()} citations last year · growth ${pc(m.growth)}/yr<br>mean/yr: ${Math.round(m.prior3)} → ${Math.round(m.recent3)} · ${m.fresh_last==null?"—":Math.round(m.fresh_last*100)+"%"} to papers ≤5 yrs old<br>${m.works_3y} papers in the last 3 years</span>`,e));
+    c.addEventListener("pointerleave",hideTip); S.appendChild(c);
+    if(tm){const t=txt(cx,cy-11,ab(d.p.name),"middle","glabel");t.setAttribute("fill",css("--you"));t.setAttribute("font-weight","650");S.appendChild(t);}
+    if(d.g>ghi||d.g<glo){const t=txt(cx+9,cy+4,pc(d.g),"start","tick");S.appendChild(t);}});
+  host.appendChild(S);
+}
+
+function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();momentumFig();}
 legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);
 legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
-[["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"],["#leg10","Dashed = department medians"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
+[["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"],["#leg10","Dashed = department medians"],["#leg12","Dashed = department medians"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
 wireSeg("#segSrc","src");wireSeg("#segMetric","metric");wireSeg("#segScale","scale");wireSeg("#segMed","med");wireSeg6();
 wireSrc("#segStripSrc",B9,rankStrip);wireSrc("#segQuadSrc",B10,quad);
 draw(); table();

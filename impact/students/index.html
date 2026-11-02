@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lab's Students — Patrick E. McKnight, Ph.D.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1208;--cream:#f5f0e8;--aged:#e0d8c5;--rust:#b83a1e;--steel:#2c4a6e;--gold:#c9962a;--muted:#6b5e4a;--div:#c8b99a;--card:#ede5d2;--green:#2a6e3f}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--aged);color:var(--ink);font-family:'Libre Baskerville',Georgia,serif;font-size:16px;line-height:1.72;padding:1.5rem 1rem 3rem}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:var(--rust)}
+
+.masthead{max-width:860px;margin:0 auto;text-align:center;border-top:4px solid var(--ink);padding:.5rem 0 0}
+.kicker{font-family:'Roboto Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin:.15rem 0}
+.subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--muted);margin:.1rem 0 .3rem}
+.datebar{display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:.65rem;color:var(--muted);letter-spacing:.1em;border-top:1px solid var(--ink);border-bottom:3px double var(--ink);padding:.3rem 0;margin-top:.3rem;flex-wrap:wrap;gap:.2rem}
+
+.paper{max-width:860px;margin:.8rem auto 0;background:var(--cream);padding:2.5rem 3rem 2.8rem;box-shadow:0 6px 40px rgba(0,0,0,.2);border:1px solid var(--div)}
+@media(max-width:600px){.paper{padding:1.6rem 1.4rem}}
+
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--div);border:1px solid var(--div);margin:0 0 1.8rem}
+@media(max-width:460px){.stat-row{grid-template-columns:1fr 1fr}}
+.sc{background:var(--card);padding:1rem .8rem;text-align:center}
+.sc .v{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;color:var(--steel)}
+.sc .l{font-family:'Roboto Mono',monospace;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.25rem}
+
+.sh{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--rust);padding-bottom:.2rem;margin:2rem 0 1rem}
+
+.chart-wrap{background:var(--card);border:1px solid var(--div);padding:1.2rem;margin:1.5rem 0;overflow-x:auto}
+.chart-label{font-family:'Roboto Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+svg.chart{height:auto;display:block}
+
+.search-box{width:100%;font-family:'Libre Baskerville',serif;font-size:.95rem;padding:.7rem 1rem;border:1px solid var(--div);background:var(--card);color:var(--ink);outline:none;transition:border-color .2s;margin-bottom:1rem}
+.search-box:focus{border-color:var(--steel)}
+.search-box::placeholder{color:var(--muted)}
+.search-count{font-family:'Roboto Mono',monospace;font-size:.7rem;color:var(--muted);margin-bottom:1rem}
+
+.year-header{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--rust);border-bottom:1px solid var(--div);padding:.5rem 0 .2rem;margin-top:1.5rem}
+.pub{padding:.6rem 0;border-bottom:1px solid rgba(200,185,154,.4)}
+.pub:last-child{border-bottom:none}
+.pub-title{font-size:.92rem;font-weight:700;line-height:1.4;margin-bottom:.15rem}
+.pub-authors{font-size:.82rem;color:var(--muted);line-height:1.5}
+.pub-authors strong{color:var(--ink)}
+.pub-journal{font-family:'Roboto Mono',monospace;font-size:.68rem;color:var(--steel);letter-spacing:.04em;font-style:italic}
+
+.footer{border-top:3px double var(--ink);padding-top:.7rem;margin-top:2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;font-family:'Roboto Mono',monospace;font-size:.63rem;color:var(--muted);letter-spacing:.07em}
+hr{border:none;border-top:1px solid var(--div);margin:1.5rem 0}
+
+details.pub-detail{margin-top:.3rem}
+details.pub-detail summary{font-family:'Roboto Mono',monospace;font-size:.65rem;letter-spacing:.06em;color:var(--steel);cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.3rem;padding:.15rem .4rem;border:1px solid var(--div);background:var(--card);transition:all .15s;user-select:none}
+details.pub-detail summary::-webkit-details-marker{display:none}
+details.pub-detail summary::before{content:'\25B6';font-size:.45rem;transition:transform .15s;color:var(--muted)}
+details.pub-detail[open] summary::before{transform:rotate(90deg)}
+details.pub-detail summary:hover{border-color:var(--steel);color:var(--rust)}
+details.pub-detail .pub-extra{margin-top:.4rem;padding:.5rem .7rem;background:var(--card);border-left:3px solid var(--steel);font-size:.8rem;line-height:1.6;color:var(--muted)}
+details.pub-detail .pub-extra a{color:var(--steel);font-family:'Roboto Mono',monospace;font-size:.72rem}
+details.pub-detail .pub-extra .pub-doi{margin-bottom:.25rem}
+details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace;font-size:.68rem;color:var(--muted)}
+
+/* Momentum section (data: data/momentum.js from impact/momentum/build_momentum.py) */
+.mo-intro{font-size:.88rem;color:var(--muted);margin:-.3rem 0 1rem}
+.stat-row.mo-tiles{grid-template-columns:repeat(4,1fr)}
+@media(max-width:620px){.stat-row.mo-tiles{grid-template-columns:1fr 1fr}}
+.mo-tiles .sc .v{font-size:1.9rem}
+.mo-tiles .sc .c{font-family:'Roboto Mono',monospace;font-size:.6rem;color:var(--muted);margin-top:.3rem;line-height:1.4}
+.mo-leg{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-family:'Roboto Mono',monospace;font-size:.62rem;color:var(--muted);margin-top:.5rem}
+.mo-leg i{display:inline-block;width:.75rem;height:.75rem;vertical-align:-.1rem;margin-right:.3rem;border-radius:2px}
+.mo-leg i.ln{height:2px;vertical-align:.2rem;border-radius:0}
+.mo-leg i.dash{background:repeating-linear-gradient(90deg,#8f8d85 0 5px,transparent 5px 8px)!important}
+.mo-tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--cream);font-family:'Roboto Mono',monospace;font-size:.66rem;line-height:1.45;padding:.4rem .55rem;border-radius:3px;opacity:0;transition:opacity .1s;z-index:20;max-width:260px}
+.mo-recent{list-style:none;margin:.4rem 0 0;padding:0}
+.mo-recent li{display:grid;grid-template-columns:3.2rem 1fr 5.5rem;gap:.55rem;align-items:center;padding:.4rem 0;border-bottom:1px solid rgba(200,185,154,.4);font-size:.84rem;line-height:1.35}
+.mo-recent li:last-child{border-bottom:none}
+.mo-recent .n{font-family:'Roboto Mono',monospace;font-weight:600;color:var(--rust);text-align:right}
+.mo-recent .y{font-family:'Roboto Mono',monospace;font-size:.66rem;color:var(--muted);margin-left:.3rem}
+.mo-note{font-size:.76rem;color:var(--muted);font-style:italic;margin-top:.8rem;line-height:1.55}
+.mo-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin:1.4rem 0 .2rem}
+
+.st-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.4rem}
+.st-table th{font-family:'Roboto Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:400;text-align:right;padding:.35rem .4rem;border-bottom:2px solid var(--ink);white-space:nowrap}
+.st-table th:first-child,.st-table td:first-child{text-align:left}
+.st-table td{padding:.45rem .4rem;border-bottom:1px solid rgba(200,185,154,.45);text-align:right;font-family:'Roboto Mono',monospace;font-size:.74rem;white-space:nowrap}
+.st-table td.nm{font-family:'Libre Baskerville',serif;font-size:.86rem;white-space:normal}
+.st-table td.nm small{display:block;font-family:'Roboto Mono',monospace;font-size:.6rem;color:var(--muted)}
+.st-table tr:hover td{background:rgba(200,185,154,.18)}
+.st-up{color:var(--green)}.st-dn{color:var(--rust)}
+.st-lab{display:inline-block;font-family:'Roboto Mono',monospace;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--div);padding:0 .3rem;margin-left:.3rem;color:var(--steel)}
+.st-wrap{overflow-x:auto}
+.st-pending{font-size:.84rem;color:var(--muted);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="masthead">
+  <div class="kicker"><a href="../../index.html" style="color:inherit;border:none">Patrick E. McKnight, Ph.D.</a> · George Mason University</div>
+  <div class="title">The Lab&rsquo;s Students</div>
+  <div class="subtitle">Doctoral students, then and now: what they publish and who cites it</div>
+  <div class="datebar">
+    <span><a href="../index.html" style="color:inherit;border:none">&larr; Scholarly Impact</a></span>
+    <span><a href="../dept-benchmark/index.html" style="color:inherit;border:none">Department Benchmark</a></span>
+    <span id="stDate">Source: OpenAlex</span>
+  </div>
+</div>
+<div class="paper">
+  <div class="stat-row mo-tiles" id="stTiles"></div>
+  <h2 class="sh">Students with a public research record</h2>
+  <p class="mo-intro">Sorted by citations received last year, the best single sign of whose work is being read right now. Growth compares the last three complete years with the three before; &ldquo;recent share&rdquo; is how much of last year&rsquo;s citations went to their papers from the last five years. Hover a row for the yearly trend.</p>
+  <div class="st-wrap"><table class="st-table" id="stTable"></table></div>
+  <h2 class="sh">Not yet linked</h2>
+  <p class="st-pending" id="stPending"></p>
+  <p class="mo-note" id="stNote"></p>
+  <div class="mo-tip" id="moTip"></div>
+  <div class="footer"><span>McKnight Lab · MRES of Science</span><span>Roster: CV &middot; Metrics: OpenAlex, refreshed weekly</span></div>
+</div>
+<script src="../data/momentum.js"></script>
+<script>
+(function(){
+  var M = window.MOMENTUM; if (!M) return;
+  var tip = document.getElementById('moTip');
+  var fmt = function(n){ return n==null ? '—' : Math.round(n).toLocaleString(); };
+  var cy = M.self.m.years[M.self.m.years.length-1], last = cy-1;
+  var linked = M.students.filter(function(s){ return s.m && s.m.works > 0; });
+  var pending = M.students.filter(function(s){ return !(s.m && s.m.works > 0); });
+  linked.sort(function(a,b){ return b.m.vel_last - a.m.vel_last || b.m.total_cites - a.m.total_cites; });
+  document.getElementById('stDate').textContent = 'Source: OpenAlex · refreshed ' + M.generated;
+  var sum = function(k){ return linked.reduce(function(s,x){ return s + (x.m[k]||0); }, 0); };
+  var tiles = [[M.students.length, 'Doctoral students', M.students.filter(function(s){return s.status==='current';}).length + ' current · ' + M.students.filter(function(s){return s.status!=='current';}).length + ' graduated'],
+    [fmt(sum('total_cites')), 'Citations, all students', linked.length + ' with an OpenAlex record'],
+    [fmt(sum('vel_last')), 'Citations in ' + last, 'to the students\u2019 papers'],
+    [fmt(sum('works_3y')), 'Papers, ' + (cy-2) + '\u2013' + cy, 'by the students, all venues']];
+  document.getElementById('stTiles').innerHTML = tiles.map(function(t){
+    return '<div class="sc"><div class="v">'+t[0]+'</div><div class="l">'+t[1]+'</div><div class="c">'+t[2]+'</div></div>'; }).join('');
+  function spark(v){ var mx = Math.max.apply(null, v.concat([1])), w = 4, n = v.length;
+    return '<svg width="'+(n*(w+1))+'" height="18" aria-hidden="true">' + v.map(function(x,i){ var h = Math.round(16*x/mx);
+      return '<rect x="'+(i*(w+1))+'" y="'+(17-h)+'" width="'+w+'" height="'+Math.max(h,1)+'" fill="'+(i===n-1?'#87a1c1':'#355888')+'" rx="1"/>'; }).join('') + '</svg>'; }
+  var head = '<tr><th>Student</th><th>Papers</th><th>Last 3 yrs</th><th>Citations</th><th>In ' + last + '</th><th>Growth</th><th>Recent share</th><th>h</th><th>' + M.self.m.years[0] + '\u2013' + cy + '</th></tr>';
+  document.getElementById('stTable').innerHTML = head + linked.map(function(s, i){
+    var m = s.m, g = m.growth, gcl = g==null ? '' : g > 0.02 ? 'st-up' : g < -0.02 ? 'st-dn' : '';
+    var who = s.status === 'current' ? 'current student' : 'PhD ' + s.year + (s.institution ? ', ' + s.institution.replace('University of ', 'U. ').replace('George Mason University','GMU') : '');
+    return '<tr data-i="'+i+'"><td class="nm">' + s.name + (s.label ? '<span class="st-lab">'+s.label+'</span>' : '') + '<small>'+who+'</small></td><td>' + m.works +
+      '</td><td>' + m.works_3y + '</td><td>' + fmt(m.total_cites) + '</td><td>' + fmt(m.vel_last) + '</td><td class="'+gcl+'">' +
+      (g==null ? '—' : (g>0?'+':'') + Math.round(g*100) + '%') + '</td><td>' + (m.fresh_last==null ? '—' : Math.round(m.fresh_last*100) + '%') +
+      '</td><td>' + m.h + '</td><td>' + spark(m.velocity) + '</td></tr>'; }).join('');
+  document.querySelectorAll('#stTable tr[data-i]').forEach(function(tr){
+    var s = linked[+tr.dataset.i], m = s.m;
+    tr.addEventListener('pointermove', function(e){
+      tip.innerHTML = '<b>' + s.name + '</b><br>' + m.years.map(function(y,i){ return y + (y===cy?'*':'') + ': ' + m.velocity[i]; }).slice(-8).join('<br>') +
+        '<br><span style="opacity:.75">citations per year; * year to date</span>';
+      tip.style.opacity = 1; var x = e.clientX + 14; if (x + 270 > innerWidth) x = e.clientX - 270;
+      tip.style.left = x + 'px'; tip.style.top = (e.clientY + 14) + 'px'; });
+    tr.addEventListener('pointerleave', function(){ tip.style.opacity = 0; });
+  });
+  document.getElementById('stPending').innerHTML = pending.map(function(s){
+    return s.name + ' <span style="font-size:.7rem">(' + (s.status==='current' ? 'current' : 'PhD ' + s.year) + ')</span>'; }).join(' &middot; ') +
+    '<br><span style="font-size:.76rem">No OpenAlex record we can match with confidence yet, often because a current student has not published, or a name is shared with another researcher. Adding an ORCID iD fixes it.</span>';
+  document.getElementById('stNote').textContent = 'Each student is identified through a paper co-authored with Patrick McKnight or by name plus a GMU / University of Arizona affiliation, checked by hand; homonyms are excluded. ' +
+    'Papers co-authored with McKnight count in both records. OpenAlex counts journal articles well and books, chapters and conference papers less fully than Google Scholar.';
+})();
+</script>
+</body>
+</html>

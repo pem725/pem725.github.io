@@ -1,0 +1,39 @@
+# Weekly refresh of the momentum data (OpenAlex) behind the impact, students
+# and department pages. The only automated thing that commits to this repo;
+# the AI-box watch (impact/watch/site_watch.py) only reads and reports.
+name: Refresh momentum data
+
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays 09:17 UTC (04:17/05:17 Eastern)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-momentum
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build momentum data from OpenAlex
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}   # optional
+        run: python3 impact/momentum/build_momentum.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add impact/data/momentum.js impact/data/momentum.json impact/data/momentum_history.csv
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          git commit -m "Momentum data refresh $(date -u +%Y-%m-%d)"
+          git pull --rebase -q origin "${GITHUB_REF_NAME}"
+          git push
