@@ -343,7 +343,9 @@ def resolve_students(yaml_path):
                      "institution": s["institution"],
                      "orcid": prev.get("orcid") or orcid,
                      "openalex_ids": prev.get("openalex_ids") or ";".join(hits),
-                     "resolved_by": prev.get("resolved_by") or ("co-authorship" if hits else "UNRESOLVED"),
+                     # a hand review beats co-authorship; co-authorship beats a stale UNRESOLVED
+                     "resolved_by": (prev.get("resolved_by") if prev.get("resolved_by") not in (None, "", "UNRESOLVED")
+                                     else ("co-authorship" if hits else "UNRESOLVED")),
                      "note": prev.get("note") or "; ".join(notes)})
         print(f"{s['name']:24} {len(hits)} id(s) {orcid or ''}", file=sys.stderr)
     STUDENTS_CSV.parent.mkdir(parents=True, exist_ok=True)

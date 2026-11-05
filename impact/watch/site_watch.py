@@ -20,8 +20,10 @@ Checks:
             the CV (the CV's Action adds journal articles itself; this catches
             preprints, chapters and anything it skipped).
   IN PRESS  CV entries marked "in press" that Crossref now shows as published.
-  TODD      toddkashdan.com: papers with McKnight as an author that are not in
-            the CV, and "in press" items on Todd's lab page that are published.
+  TODD      toddkashdan.com: up, and papers with McKnight as an author that are
+            not in the CV. (Todd keeps his own pages; staleness there isn't ours.)
+  STUDENTS  CV students missing from students.csv, and unlinked students who
+            now appear as McKnight co-authors (re-run --resolve-students).
   SPORTS    The Sports Page feed: days since the last issue.
   MOMENTUM  week-over-week change in Patrick's and the students' numbers.
 
@@ -215,10 +217,9 @@ def check_todd(findings):
     s = lab.read_text(errors="ignore")
     cv = (CV / "publications.yaml").read_text().lower() if (CV / "publications.yaml").exists() else ""
     for href, inner, after in re.findall(r'<li><a href="([^"]+)"[^>]*>(.*?)</a>([^<]{0,40})', s, re.S):
+        # Todd maintains his own site (Patrick, 2026-11-05): only report what affects
+        # Patrick's CV, never staleness on Todd's pages.
         title = html.unescape(re.sub("<[^>]+>", "", inner)).strip()
-        if "in press" in after.lower():
-            if hit := crossref_find(title, "Kashdan"):
-                alert(findings, "todd", f"Todd's lab page says in press, but '{title[:60]}' is published: doi {hit['DOI']}")
         m = re.search(r"(10\.\d{4,}/[^\s\"?#]+)", href)
         if not m:
             continue
@@ -231,6 +232,44 @@ def check_todd(findings):
             continue
         if any(a.get("family", "").lower() == "mcknight" for a in au):
             alert(findings, "todd", f"McKnight paper on Todd's site but not in the CV: '{title[:60]}' doi {doi}")
+
+
+# ------------------------------------------------------------------ STUDENTS
+def check_students(findings, last):
+    """New names on the CV roster, and unlinked students who have just co-authored
+    with Patrick. Reports only; build_momentum.py --resolve-students does the linking."""
+    flags = []
+    path = SITE / "impact/students/students.csv"
+    rows = list(csv.DictReader(open(path))) if path.exists() else []
+    known = {norm(r["name"]) for r in rows}
+    yml = (CV / "publications.yaml").read_text() if (CV / "publications.yaml").exists() else ""
+    for sec in ("students_current", "students_graduated"):
+        m = re.search(rf"^{sec}:\n(.*?)(?=^\S)", yml, re.S | re.M)
+        for name in re.findall(r'- name: "?([^"\n]+)"?', m.group(1) if m else ""):
+            if norm(name) not in known:
+                flags.append(f"{name} is on the CV but not on the students page")
+    pending = [r for r in rows if r["resolved_by"] == "UNRESOLVED"]
+    if pending:
+        since = (TODAY - dt.timedelta(days=730)).isoformat()
+        url = ("https://api.openalex.org/works?per_page=200&select=title,authorships&filter="
+               + urllib.parse.quote(f"author.orcid:0000-0002-9067-9066,from_publication_date:{since}"))
+        try:
+            works = json.loads(fetch(url, timeout=40)[1])["results"]
+        except Exception as e:
+            note(findings, "students", f"OpenAlex unreachable for the co-author check: {type(e).__name__}")
+            works = []
+        for r in pending:
+            parts = norm(r["name"]).split()
+            for w in works:
+                if any((t := norm(a["author"].get("display_name")).split()) and t[-1] == parts[-1]
+                       and t[0][0] == parts[0][0] for a in w["authorships"]):
+                    flags.append(f"{r['name']} co-authored '{(w['title'] or '')[:60]}' with you; "
+                                 "run build_momentum.py --resolve-students ~/GitTemp/cv/publications.yaml")
+                    break
+    seen = set(last.get("student_flags", []))
+    for f in flags:
+        (note if f in seen else alert)(findings, "students", f)
+    return flags
 
 
 # ------------------------------------------------------------------ Sports Page
@@ -315,6 +354,7 @@ def main():
     state["orcid_missing"] = check_orcid(findings, last)
     check_in_press(findings)
     check_todd(findings)
+    state["student_flags"] = check_students(findings, last)
     check_sports(findings)
     check_momentum(findings)
     findings.sort(key=lambda x: x["level"] != "ALERT")
