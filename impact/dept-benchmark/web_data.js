@@ -1,27 +1,29 @@
 window.BENCH = {
-  "snapshot_date": "2026-07-13",
+  "snapshot_date": "2026-11-11",
+  "oa_snapshot": "2026-11-11",
+  "sch_snapshot": "2026-11-11",
   "n_faculty": 59,
   "n_openalex": 51,
   "n_scholar": 44,
   "no_profile": ["Camelia Harb", "Raymond Abraham Bradni", "Danielle Dufresne", "Susanne M Furman", "Sara Montiel", "Robin Shusko", "Kevin Christopher Young", "Justin Ramsdell"],
   "concentration": {
-    "total": 212115,
-    "gini": 0.673,
-    "top3": 35,
-    "top5": 46,
-    "top6": 51,
-    "bottom30": 7.2,
-    "median": 1639
+    "total": 261668,
+    "gini": 0.681,
+    "top3": 36,
+    "top5": 48,
+    "top6": 52,
+    "bottom30": 6.6,
+    "median": 1837
   },
   "team": {
     "members": ["Patrick E. McKnight", "Todd B. Kashdan"],
     "keys": ["mcknight_p", "kashdan_t"],
-    "union_cites": 40883,
-    "simple_cites": 45117,
-    "works": 435,
-    "shared_works": 57,
-    "share_union": 19.3,
-    "share_simple": 21.3,
+    "union_cites": 45267,
+    "simple_cites": 50208,
+    "works": 425,
+    "shared_works": 58,
+    "share_union": 17.3,
+    "share_simple": 19.2,
     "rank": 1,
     "n_others": 58
   },
@@ -31,13 +33,13 @@ window.BENCH = {
     "n": 59,
     "oa_pct": 91,
     "sch_pct": 90,
-    "oa_cites": 10029,
-    "sch_cites": 16629,
+    "oa_cites": 10748,
+    "sch_cites": 19553,
     "oa_h": 45,
-    "sch_h": 52,
-    "fold": 1.66,
-    "cv": 0.35,
-    "share": 4.7
+    "sch_h": 53,
+    "fold": 1.82,
+    "cv": 0.411,
+    "share": 4.1
   },
   "faculty": [
     {
@@ -49,16 +51,38 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 335,
-      "oa_cites": 35088,
-      "oa_h": 100,
-      "oa_i10": 230,
-      "sch_cites": 61598,
-      "sch_h": 123,
-      "sch_i10": 247,
-      "fold": 1.76,
-      "cv": 0.388,
+      "oa_cites": 39460,
+      "oa_h": 102,
+      "oa_i10": 234,
+      "sch_cites": 63622,
+      "sch_h": 124,
+      "sch_i10": 246,
+      "fold": 1.61,
+      "cv": 0.331,
       "oa_rank": 1,
       "sch_rank": 1,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "matthews_g",
+      "name": "Gerald Matthews",
+      "disc": "Human Factors",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 555,
+      "oa_cites": 32183,
+      "oa_h": 93,
+      "oa_i10": 314,
+      "sch_cites": 60451,
+      "sch_h": 113,
+      "sch_i10": 410,
+      "fold": 1.88,
+      "cv": 0.432,
+      "oa_rank": 2,
+      "sch_rank": 2,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -70,16 +94,16 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 242,
-      "oa_cites": 19368,
-      "oa_h": 50,
-      "oa_i10": 92,
-      "sch_cites": 37219,
+      "oa_works": 239,
+      "oa_cites": 21464,
+      "oa_h": 52,
+      "oa_i10": 97,
+      "sch_cites": 37971,
       "sch_h": 68,
-      "sch_i10": 123,
-      "fold": 1.92,
-      "cv": 0.446,
-      "oa_rank": 2,
+      "sch_i10": 125,
+      "fold": 1.77,
+      "cv": 0.393,
+      "oa_rank": 3,
       "sch_rank": 4,
       "oa_resolved": true,
       "sch_resolved": true
@@ -93,38 +117,16 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 212,
-      "oa_cites": 18814,
-      "oa_h": 60,
-      "oa_i10": 94,
-      "sch_cites": 42634,
+      "oa_cites": 19905,
+      "oa_h": 59,
+      "oa_i10": 93,
+      "sch_cites": 43498,
       "sch_h": 74,
-      "sch_i10": 135,
-      "fold": 2.27,
-      "cv": 0.548,
-      "oa_rank": 3,
-      "sch_rank": 3,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "matthews_g",
-      "name": "Gerald Matthews",
-      "disc": "Human Factors",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 223,
-      "oa_cites": 12963,
-      "oa_h": 54,
-      "oa_i10": 128,
-      "sch_cites": 59175,
-      "sch_h": 113,
-      "sch_i10": 404,
-      "fold": 4.56,
-      "cv": 0.906,
+      "sch_i10": 136,
+      "fold": 2.19,
+      "cv": 0.526,
       "oa_rank": 4,
-      "sch_rank": 2,
+      "sch_rank": 3,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -136,15 +138,15 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 478,
-      "oa_cites": 11887,
-      "oa_h": 58,
-      "oa_i10": 259,
-      "sch_cites": 3850,
-      "sch_h": 34,
-      "sch_i10": 57,
-      "fold": 3.09,
-      "cv": 0.722,
+      "oa_works": 451,
+      "oa_cites": 11794,
+      "oa_h": 57,
+      "oa_i10": 256,
+      "sch_cites": 3986,
+      "sch_h": 35,
+      "sch_i10": 60,
+      "fold": 2.96,
+      "cv": 0.7,
       "oa_rank": 5,
       "sch_rank": 23,
       "oa_resolved": true,
@@ -158,15 +160,15 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": true,
-      "oa_works": 157,
-      "oa_cites": 10029,
+      "oa_works": 148,
+      "oa_cites": 10748,
       "oa_h": 45,
-      "oa_i10": 77,
-      "sch_cites": 16629,
-      "sch_h": 52,
-      "sch_i10": 80,
-      "fold": 1.66,
-      "cv": 0.35,
+      "oa_i10": 75,
+      "sch_cites": 19553,
+      "sch_h": 53,
+      "sch_i10": 81,
+      "fold": 1.82,
+      "cv": 0.411,
       "oa_rank": 6,
       "sch_rank": 7,
       "oa_resolved": true,
@@ -180,15 +182,15 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 185,
-      "oa_cites": 8925,
-      "oa_h": 52,
-      "oa_i10": 113,
-      "sch_cites": 19623,
+      "oa_works": 176,
+      "oa_cites": 9965,
+      "oa_h": 53,
+      "oa_i10": 115,
+      "sch_cites": 20175,
       "sch_h": 71,
-      "sch_i10": 137,
-      "fold": 2.2,
-      "cv": 0.53,
+      "sch_i10": 141,
+      "fold": 2.02,
+      "cv": 0.479,
       "oa_rank": 7,
       "sch_rank": 6,
       "oa_resolved": true,
@@ -202,17 +204,61 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 138,
-      "oa_cites": 8895,
+      "oa_works": 147,
+      "oa_cites": 9537,
       "oa_h": 39,
-      "oa_i10": 67,
-      "sch_cites": 14873,
-      "sch_h": 43,
-      "sch_i10": 71,
-      "fold": 1.67,
-      "cv": 0.356,
+      "oa_i10": 66,
+      "sch_cites": 15355,
+      "sch_h": 44,
+      "sch_i10": 72,
+      "fold": 1.61,
+      "cv": 0.331,
       "oa_rank": 8,
       "sch_rank": 8,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "stuewig_j",
+      "name": "Jeffrey B Stuewig",
+      "disc": "Clinical",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 92,
+      "oa_cites": 8571,
+      "oa_h": 38,
+      "oa_i10": 50,
+      "sch_cites": 14397,
+      "sch_h": 43,
+      "sch_i10": 55,
+      "fold": 1.68,
+      "cv": 0.359,
+      "oa_rank": 9,
+      "sch_rank": 9,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "fischer_s",
+      "name": "Sarah Fischer",
+      "disc": "Clinical",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 117,
+      "oa_cites": 7458,
+      "oa_h": 41,
+      "oa_i10": 81,
+      "sch_cites": 10877,
+      "sch_h": 47,
+      "sch_i10": 88,
+      "fold": 1.46,
+      "cv": 0.264,
+      "oa_rank": 10,
+      "sch_rank": 10,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -224,16 +270,16 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 270,
-      "oa_cites": 6178,
-      "oa_h": 42,
-      "oa_i10": 111,
-      "sch_cites": 20124,
-      "sch_h": 51,
+      "oa_works": 265,
+      "oa_cites": 6959,
+      "oa_h": 45,
+      "oa_i10": 121,
+      "sch_cites": 20599,
+      "sch_h": 52,
       "sch_i10": 140,
-      "fold": 3.26,
-      "cv": 0.75,
-      "oa_rank": 9,
+      "fold": 2.96,
+      "cv": 0.7,
+      "oa_rank": 11,
       "sch_rank": 5,
       "oa_resolved": true,
       "sch_resolved": true
@@ -246,83 +292,17 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 87,
-      "oa_cites": 5734,
-      "oa_h": 35,
-      "oa_i10": 58,
-      "sch_cites": 9380,
-      "sch_h": 40,
-      "sch_i10": 61,
-      "fold": 1.64,
-      "cv": 0.341,
-      "oa_rank": 10,
-      "sch_rank": 11,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "esposito_smythers_c",
-      "name": "Christianne Esposito-Smythers",
-      "disc": "Clinical",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 124,
-      "oa_cites": 5130,
-      "oa_h": 35,
-      "oa_i10": 72,
-      "sch_cites": 8695,
-      "sch_h": 45,
-      "sch_i10": 93,
-      "fold": 1.69,
-      "cv": 0.365,
-      "oa_rank": 11,
-      "sch_rank": 14,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "kaplan_s",
-      "name": "Seth Kaplan",
-      "disc": "I-O",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 126,
-      "oa_cites": 4982,
-      "oa_h": 30,
-      "oa_i10": 53,
-      "sch_cites": 8777,
-      "sch_h": 37,
-      "sch_i10": 62,
-      "fold": 1.76,
-      "cv": 0.39,
+      "oa_works": 86,
+      "oa_cites": 6612,
+      "oa_h": 36,
+      "oa_i10": 60,
+      "sch_cites": 9876,
+      "sch_h": 41,
+      "sch_i10": 64,
+      "fold": 1.49,
+      "cv": 0.28,
       "oa_rank": 12,
-      "sch_rank": 13,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "wiener_m",
-      "name": "Martin Wiener",
-      "disc": "CBN",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 268,
-      "oa_cites": 4959,
-      "oa_h": 30,
-      "oa_i10": 66,
-      "sch_cites": 4517,
-      "sch_h": 31,
-      "sch_i10": 46,
-      "fold": 1.1,
-      "cv": 0.066,
-      "oa_rank": 13,
-      "sch_rank": 21,
+      "sch_rank": 11,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -334,17 +314,83 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 102,
-      "oa_cites": 4666,
-      "oa_h": 36,
-      "oa_i10": 63,
-      "sch_cites": 9029,
-      "sch_h": 42,
-      "sch_i10": 75,
-      "fold": 1.94,
-      "cv": 0.451,
-      "oa_rank": 14,
+      "oa_works": 106,
+      "oa_cites": 5651,
+      "oa_h": 40,
+      "oa_i10": 68,
+      "sch_cites": 9379,
+      "sch_h": 45,
+      "sch_i10": 76,
+      "fold": 1.66,
+      "cv": 0.351,
+      "oa_rank": 13,
       "sch_rank": 12,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "kaplan_s",
+      "name": "Seth Kaplan",
+      "disc": "I-O",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 133,
+      "oa_cites": 5622,
+      "oa_h": 32,
+      "oa_i10": 59,
+      "sch_cites": 8980,
+      "sch_h": 38,
+      "sch_i10": 62,
+      "fold": 1.6,
+      "cv": 0.325,
+      "oa_rank": 14,
+      "sch_rank": 13,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "esposito_smythers_c",
+      "name": "Christianne Esposito-Smythers",
+      "disc": "Clinical",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 127,
+      "oa_cites": 5534,
+      "oa_h": 36,
+      "oa_i10": 74,
+      "sch_cites": 8946,
+      "sch_h": 46,
+      "sch_i10": 95,
+      "fold": 1.62,
+      "cv": 0.333,
+      "oa_rank": 15,
+      "sch_rank": 14,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "wiener_m",
+      "name": "Martin Wiener",
+      "disc": "CBN",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 241,
+      "oa_cites": 5009,
+      "oa_h": 32,
+      "oa_i10": 63,
+      "sch_cites": 4646,
+      "sch_h": 31,
+      "sch_i10": 46,
+      "fold": 1.08,
+      "cv": 0.053,
+      "oa_rank": 16,
+      "sch_rank": 22,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -356,39 +402,17 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 141,
-      "oa_cites": 3894,
-      "oa_h": 33,
-      "oa_i10": 81,
-      "sch_cites": 7085,
-      "sch_h": 46,
-      "sch_i10": 93,
-      "fold": 1.82,
-      "cv": 0.411,
-      "oa_rank": 15,
+      "oa_works": 139,
+      "oa_cites": 4449,
+      "oa_h": 36,
+      "oa_i10": 88,
+      "sch_cites": 7281,
+      "sch_h": 45,
+      "sch_i10": 92,
+      "fold": 1.64,
+      "cv": 0.341,
+      "oa_rank": 17,
       "sch_rank": 15,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "stuewig_j",
-      "name": "Jeffrey B Stuewig",
-      "disc": "Clinical",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 78,
-      "oa_cites": 3696,
-      "oa_h": 32,
-      "oa_i10": 42,
-      "sch_cites": 13899,
-      "sch_h": 43,
-      "sch_i10": 54,
-      "fold": 3.76,
-      "cv": 0.82,
-      "oa_rank": 16,
-      "sch_rank": 9,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -401,38 +425,16 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 39,
-      "oa_cites": 3217,
-      "oa_h": 11,
-      "oa_i10": 12,
-      "sch_cites": 6503,
+      "oa_cites": 3603,
+      "oa_h": 12,
+      "oa_i10": 14,
+      "sch_cites": 6635,
       "sch_h": 15,
       "sch_i10": 18,
-      "fold": 2.02,
-      "cv": 0.478,
-      "oa_rank": 17,
-      "sch_rank": 18,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "shaw_t",
-      "name": "Tyler H. Shaw",
-      "disc": "Human Factors",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 131,
-      "oa_cites": 3178,
-      "oa_h": 26,
-      "oa_i10": 49,
-      "sch_cites": 4430,
-      "sch_h": 30,
-      "sch_i10": 68,
-      "fold": 1.39,
-      "cv": 0.233,
+      "fold": 1.84,
+      "cv": 0.419,
       "oa_rank": 18,
-      "sch_rank": 22,
+      "sch_rank": 18,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -444,17 +446,39 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 165,
-      "oa_cites": 2933,
-      "oa_h": 27,
-      "oa_i10": 39,
-      "sch_cites": 5611,
+      "oa_works": 173,
+      "oa_cites": 3534,
+      "oa_h": 28,
+      "oa_i10": 44,
+      "sch_cites": 5980,
       "sch_h": 33,
-      "sch_i10": 57,
-      "fold": 1.91,
-      "cv": 0.443,
+      "sch_i10": 59,
+      "fold": 1.69,
+      "cv": 0.364,
       "oa_rank": 19,
       "sch_rank": 19,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "shaw_t",
+      "name": "Tyler H. Shaw",
+      "disc": "Human Factors",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 120,
+      "oa_cites": 3425,
+      "oa_h": 25,
+      "oa_i10": 51,
+      "sch_cites": 4754,
+      "sch_h": 30,
+      "sch_i10": 68,
+      "fold": 1.39,
+      "cv": 0.23,
+      "oa_rank": 20,
+      "sch_rank": 21,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -466,16 +490,16 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 86,
-      "oa_cites": 2899,
-      "oa_h": 24,
-      "oa_i10": 38,
-      "sch_cites": 6626,
+      "oa_works": 85,
+      "oa_cites": 3414,
+      "oa_h": 26,
+      "oa_i10": 40,
+      "sch_cites": 6877,
       "sch_h": 37,
       "sch_i10": 51,
-      "fold": 2.29,
-      "cv": 0.553,
-      "oa_rank": 20,
+      "fold": 2.01,
+      "cv": 0.476,
+      "oa_rank": 21,
       "sch_rank": 17,
       "oa_resolved": true,
       "sch_resolved": true
@@ -488,61 +512,17 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 85,
-      "oa_cites": 2743,
-      "oa_h": 17,
-      "oa_i10": 20,
-      "sch_cites": 6954,
+      "oa_works": 88,
+      "oa_cites": 3193,
+      "oa_h": 18,
+      "oa_i10": 21,
+      "sch_cites": 7187,
       "sch_h": 19,
-      "sch_i10": 26,
-      "fold": 2.54,
-      "cv": 0.614,
-      "oa_rank": 21,
-      "sch_rank": 16,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "dumas_t",
-      "name": "Theodore Constantine Dumas",
-      "disc": "CBN",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 92,
-      "oa_cites": 2340,
-      "oa_h": 30,
-      "oa_i10": 56,
-      "sch_cites": null,
-      "sch_h": null,
-      "sch_i10": null,
-      "fold": null,
-      "cv": null,
+      "sch_i10": 25,
+      "fold": 2.25,
+      "cv": 0.544,
       "oa_rank": 22,
-      "sch_rank": 45,
-      "oa_resolved": true,
-      "sch_resolved": false
-    },
-    {
-      "key": "lee_y",
-      "name": "Yi-Ching Lee",
-      "disc": "Human Factors",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 127,
-      "oa_cites": 2287,
-      "oa_h": 22,
-      "oa_i10": 40,
-      "sch_cites": 2664,
-      "sch_h": 24,
-      "sch_i10": 44,
-      "fold": 1.16,
-      "cv": 0.108,
-      "oa_rank": 23,
-      "sch_rank": 30,
+      "sch_rank": 16,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -554,39 +534,39 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 83,
-      "oa_cites": 2280,
-      "oa_h": 21,
-      "oa_i10": 31,
-      "sch_cites": 4801,
+      "oa_works": 95,
+      "oa_cites": 3180,
+      "oa_h": 24,
+      "oa_i10": 43,
+      "sch_cites": 4877,
       "sch_h": 31,
-      "sch_i10": 53,
-      "fold": 2.11,
-      "cv": 0.503,
-      "oa_rank": 24,
+      "sch_i10": 55,
+      "fold": 1.53,
+      "cv": 0.298,
+      "oa_rank": 23,
       "sch_rank": 20,
       "oa_resolved": true,
       "sch_resolved": true
     },
     {
-      "key": "fischer_s",
-      "name": "Sarah Fischer",
-      "disc": "Clinical",
-      "rank": "Professor",
-      "rank_group": "Full",
+      "key": "lee_y",
+      "name": "Yi-Ching Lee",
+      "disc": "Human Factors",
+      "rank": "Associate",
+      "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 112,
-      "oa_cites": 2251,
+      "oa_works": 115,
+      "oa_cites": 2489,
       "oa_h": 23,
-      "oa_i10": 46,
-      "sch_cites": 10666,
-      "sch_h": 48,
-      "sch_i10": 87,
-      "fold": 4.74,
-      "cv": 0.921,
-      "oa_rank": 25,
-      "sch_rank": 10,
+      "oa_i10": 41,
+      "sch_cites": 2846,
+      "sch_h": 25,
+      "sch_i10": 42,
+      "fold": 1.14,
+      "cv": 0.095,
+      "oa_rank": 24,
+      "sch_rank": 29,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -598,16 +578,16 @@ window.BENCH = {
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 104,
-      "oa_cites": 2127,
-      "oa_h": 22,
-      "oa_i10": 40,
-      "sch_cites": 3673,
-      "sch_h": 27,
-      "sch_i10": 53,
-      "fold": 1.73,
-      "cv": 0.377,
-      "oa_rank": 26,
+      "oa_works": 94,
+      "oa_cites": 2371,
+      "oa_h": 23,
+      "oa_i10": 42,
+      "sch_cites": 3962,
+      "sch_h": 28,
+      "sch_i10": 60,
+      "fold": 1.67,
+      "cv": 0.355,
+      "oa_rank": 25,
       "sch_rank": 24,
       "oa_resolved": true,
       "sch_resolved": true
@@ -621,15 +601,15 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 38,
-      "oa_cites": 1955,
-      "oa_h": 19,
-      "oa_i10": 21,
-      "sch_cites": 3179,
-      "sch_h": 22,
+      "oa_cites": 2295,
+      "oa_h": 21,
+      "oa_i10": 22,
+      "sch_cites": 3400,
+      "sch_h": 23,
       "sch_i10": 25,
-      "fold": 1.63,
-      "cv": 0.337,
-      "oa_rank": 27,
+      "fold": 1.48,
+      "cv": 0.274,
+      "oa_rank": 26,
       "sch_rank": 25,
       "oa_resolved": true,
       "sch_resolved": true
@@ -642,39 +622,17 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 73,
-      "oa_cites": 1868,
-      "oa_h": 26,
+      "oa_works": 71,
+      "oa_cites": 1979,
+      "oa_h": 27,
       "oa_i10": 47,
-      "sch_cites": 2679,
+      "sch_cites": 2720,
       "sch_h": 30,
       "sch_i10": 49,
-      "fold": 1.43,
-      "cv": 0.252,
-      "oa_rank": 28,
-      "sch_rank": 29,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "jack_a",
-      "name": "Allison E Jack",
-      "disc": "Applied Developmental",
-      "rank": "Assistant",
-      "rank_group": "Assistant",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 48,
-      "oa_cites": 1654,
-      "oa_h": 23,
-      "oa_i10": 28,
-      "sch_cites": 1356,
-      "sch_h": 13,
-      "sch_i10": 13,
-      "fold": 1.22,
-      "cv": 0.14,
-      "oa_rank": 29,
-      "sch_rank": 37,
+      "fold": 1.37,
+      "cv": 0.223,
+      "oa_rank": 27,
+      "sch_rank": 30,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -686,17 +644,83 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 55,
-      "oa_cites": 1639,
-      "oa_h": 21,
-      "oa_i10": 29,
-      "sch_cites": 2736,
-      "sch_h": 28,
-      "sch_i10": 37,
-      "fold": 1.67,
-      "cv": 0.355,
-      "oa_rank": 30,
+      "oa_works": 57,
+      "oa_cites": 1968,
+      "oa_h": 22,
+      "oa_i10": 35,
+      "sch_cites": 2863,
+      "sch_h": 29,
+      "sch_i10": 38,
+      "fold": 1.45,
+      "cv": 0.262,
+      "oa_rank": 28,
       "sch_rank": 28,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "dumas_t",
+      "name": "Theodore Constantine Dumas",
+      "disc": "CBN",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 58,
+      "oa_cites": 1921,
+      "oa_h": 27,
+      "oa_i10": 40,
+      "sch_cites": null,
+      "sch_h": null,
+      "sch_i10": null,
+      "fold": null,
+      "cv": null,
+      "oa_rank": 29,
+      "sch_rank": 45,
+      "oa_resolved": true,
+      "sch_resolved": false
+    },
+    {
+      "key": "doebel_s",
+      "name": "Sabine Doebel",
+      "disc": "Applied Developmental",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 57,
+      "oa_cites": 1837,
+      "oa_h": 19,
+      "oa_i10": 21,
+      "sch_cites": 2453,
+      "sch_h": 20,
+      "sch_i10": 21,
+      "fold": 1.34,
+      "cv": 0.203,
+      "oa_rank": 30,
+      "sch_rank": 31,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "jack_a",
+      "name": "Allison E Jack",
+      "disc": "Applied Developmental",
+      "rank": "Assistant",
+      "rank_group": "Assistant",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 53,
+      "oa_cites": 1827,
+      "oa_h": 26,
+      "oa_i10": 29,
+      "sch_cites": 2289,
+      "sch_h": 25,
+      "sch_i10": 29,
+      "fold": 1.25,
+      "cv": 0.159,
+      "oa_rank": 31,
+      "sch_rank": 33,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -708,39 +732,17 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 27,
-      "oa_cites": 1596,
-      "oa_h": 16,
-      "oa_i10": 20,
-      "sch_cites": 2976,
+      "oa_works": 29,
+      "oa_cites": 1756,
+      "oa_h": 15,
+      "oa_i10": 19,
+      "sch_cites": 3045,
       "sch_h": 18,
-      "sch_i10": 23,
-      "fold": 1.86,
-      "cv": 0.427,
-      "oa_rank": 31,
-      "sch_rank": 27,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "doebel_s",
-      "name": "Sabine Doebel",
-      "disc": "Applied Developmental",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 57,
-      "oa_cites": 1499,
-      "oa_h": 19,
-      "oa_i10": 20,
-      "sch_cites": 2214,
-      "sch_h": 20,
-      "sch_i10": 21,
-      "fold": 1.48,
-      "cv": 0.272,
+      "sch_i10": 22,
+      "fold": 1.73,
+      "cv": 0.38,
       "oa_rank": 32,
-      "sch_rank": 32,
+      "sch_rank": 27,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -752,61 +754,17 @@ window.BENCH = {
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 62,
-      "oa_cites": 1397,
-      "oa_h": 16,
-      "oa_i10": 25,
-      "sch_cites": 2028,
-      "sch_h": 19,
-      "sch_i10": 26,
-      "fold": 1.45,
-      "cv": 0.261,
-      "oa_rank": 33,
-      "sch_rank": 33,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "mehlenbeck_r",
-      "name": "Robyn Mehlenbeck",
-      "disc": "Clinical",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 44,
-      "oa_cites": 1348,
-      "oa_h": 18,
-      "oa_i10": 22,
-      "sch_cites": 2329,
-      "sch_h": 20,
-      "sch_i10": 27,
-      "fold": 1.73,
-      "cv": 0.377,
-      "oa_rank": 34,
-      "sch_rank": 31,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "flinn_j",
-      "name": "Jane M Flinn",
-      "disc": "CBN",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 56,
-      "oa_cites": 1341,
+      "oa_works": 61,
+      "oa_cites": 1641,
       "oa_h": 19,
-      "oa_i10": 28,
-      "sch_cites": 1704,
+      "oa_i10": 27,
+      "sch_cites": 2180,
       "sch_h": 21,
-      "sch_i10": 28,
-      "fold": 1.27,
-      "cv": 0.169,
-      "oa_rank": 35,
-      "sch_rank": 35,
+      "sch_i10": 26,
+      "fold": 1.33,
+      "cv": 0.199,
+      "oa_rank": 33,
+      "sch_rank": 34,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -818,39 +776,61 @@ window.BENCH = {
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 61,
-      "oa_cites": 1177,
-      "oa_h": 16,
-      "oa_i10": 22,
-      "sch_cites": 1732,
-      "sch_h": 19,
-      "sch_i10": 24,
-      "fold": 1.47,
-      "cv": 0.27,
-      "oa_rank": 36,
-      "sch_rank": 34,
+      "oa_works": 91,
+      "oa_cites": 1504,
+      "oa_h": 19,
+      "oa_i10": 27,
+      "sch_cites": 1972,
+      "sch_h": 21,
+      "sch_i10": 30,
+      "fold": 1.31,
+      "cv": 0.19,
+      "oa_rank": 34,
+      "sch_rank": 35,
       "oa_resolved": true,
       "sch_resolved": true
     },
     {
-      "key": "tonge_n",
-      "name": "Natasha A Tonge",
+      "key": "mehlenbeck_r",
+      "name": "Robyn Mehlenbeck",
       "disc": "Clinical",
-      "rank": "Assistant",
-      "rank_group": "Assistant",
+      "rank": "Professor",
+      "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 48,
-      "oa_cites": 867,
-      "oa_h": 13,
-      "oa_i10": 17,
-      "sch_cites": 1110,
-      "sch_h": 15,
-      "sch_i10": 15,
-      "fold": 1.28,
-      "cv": 0.174,
-      "oa_rank": 37,
-      "sch_rank": 40,
+      "oa_works": 45,
+      "oa_cites": 1421,
+      "oa_h": 18,
+      "oa_i10": 22,
+      "sch_cites": 2382,
+      "sch_h": 21,
+      "sch_i10": 27,
+      "fold": 1.68,
+      "cv": 0.357,
+      "oa_rank": 35,
+      "sch_rank": 32,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "flinn_j",
+      "name": "Jane M Flinn",
+      "disc": "CBN",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 50,
+      "oa_cites": 1286,
+      "oa_h": 18,
+      "oa_i10": 26,
+      "sch_cites": 1742,
+      "sch_h": 21,
+      "sch_i10": 29,
+      "fold": 1.35,
+      "cv": 0.213,
+      "oa_rank": 36,
+      "sch_rank": 36,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -862,17 +842,39 @@ window.BENCH = {
       "rank_group": "Other",
       "category": "research",
       "is_self": false,
-      "oa_works": 83,
-      "oa_cites": 838,
-      "oa_h": 18,
-      "oa_i10": 21,
-      "sch_cites": 1178,
-      "sch_h": 19,
-      "sch_i10": 23,
-      "fold": 1.41,
-      "cv": 0.239,
-      "oa_rank": 38,
+      "oa_works": 62,
+      "oa_cites": 1105,
+      "oa_h": 20,
+      "oa_i10": 25,
+      "sch_cites": 1426,
+      "sch_h": 20,
+      "sch_i10": 27,
+      "fold": 1.29,
+      "cv": 0.179,
+      "oa_rank": 37,
       "sch_rank": 39,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "tonge_n",
+      "name": "Natasha A Tonge",
+      "disc": "Clinical",
+      "rank": "Assistant",
+      "rank_group": "Assistant",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 43,
+      "oa_cites": 944,
+      "oa_h": 13,
+      "oa_i10": 16,
+      "sch_cites": 1160,
+      "sch_h": 15,
+      "sch_i10": 15,
+      "fold": 1.23,
+      "cv": 0.145,
+      "oa_rank": 38,
+      "sch_rank": 40,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -885,16 +887,16 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 33,
-      "oa_cites": 790,
+      "oa_cites": 923,
       "oa_h": 12,
-      "oa_i10": 13,
-      "sch_cites": 1474,
+      "oa_i10": 14,
+      "sch_cites": 1542,
       "sch_h": 15,
       "sch_i10": 16,
-      "fold": 1.87,
-      "cv": 0.427,
+      "fold": 1.67,
+      "cv": 0.355,
       "oa_rank": 39,
-      "sch_rank": 36,
+      "sch_rank": 37,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -906,15 +908,15 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 26,
-      "oa_cites": 715,
+      "oa_works": 23,
+      "oa_cites": 758,
       "oa_h": 9,
       "oa_i10": 9,
-      "sch_cites": 959,
+      "sch_cites": 962,
       "sch_h": 10,
       "sch_i10": 10,
-      "fold": 1.34,
-      "cv": 0.206,
+      "fold": 1.27,
+      "cv": 0.168,
       "oa_rank": 40,
       "sch_rank": 41,
       "oa_resolved": true,
@@ -929,14 +931,14 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 48,
-      "oa_cites": 543,
-      "oa_h": 13,
-      "oa_i10": 14,
-      "sch_cites": 1324,
-      "sch_h": 19,
-      "sch_i10": 28,
-      "fold": 2.44,
-      "cv": 0.592,
+      "oa_cites": 684,
+      "oa_h": 15,
+      "oa_i10": 20,
+      "sch_cites": 1474,
+      "sch_h": 20,
+      "sch_i10": 30,
+      "fold": 2.15,
+      "cv": 0.518,
       "oa_rank": 41,
       "sch_rank": 38,
       "oa_resolved": true,
@@ -950,15 +952,15 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 21,
-      "oa_cites": 424,
+      "oa_works": 15,
+      "oa_cites": 463,
       "oa_h": 8,
       "oa_i10": 8,
-      "sch_cites": 3165,
-      "sch_h": 25,
-      "sch_i10": 36,
-      "fold": 7.46,
-      "cv": 1.08,
+      "sch_cites": 3321,
+      "sch_h": 26,
+      "sch_i10": 38,
+      "fold": 7.17,
+      "cv": 1.068,
       "oa_rank": 42,
       "sch_rank": 26,
       "oa_resolved": true,
@@ -972,10 +974,10 @@ window.BENCH = {
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 27,
-      "oa_cites": 257,
+      "oa_works": 31,
+      "oa_cites": 289,
       "oa_h": 8,
-      "oa_i10": 7,
+      "oa_i10": 8,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
@@ -994,15 +996,15 @@ window.BENCH = {
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 21,
-      "oa_cites": 203,
-      "oa_h": 6,
-      "oa_i10": 5,
-      "sch_cites": 360,
+      "oa_works": 26,
+      "oa_cites": 287,
+      "oa_h": 7,
+      "oa_i10": 6,
+      "sch_cites": 418,
       "sch_h": 7,
-      "sch_i10": 6,
-      "fold": 1.77,
-      "cv": 0.394,
+      "sch_i10": 7,
+      "fold": 1.46,
+      "cv": 0.263,
       "oa_rank": 44,
       "sch_rank": 42,
       "oa_resolved": true,
@@ -1016,8 +1018,8 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 4,
-      "oa_cites": 153,
+      "oa_works": 6,
+      "oa_cites": 190,
       "oa_h": 2,
       "oa_i10": 2,
       "sch_cites": null,
@@ -1038,17 +1040,39 @@ window.BENCH = {
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 5,
-      "oa_cites": 116,
+      "oa_works": 7,
+      "oa_cites": 122,
       "oa_h": 4,
       "oa_i10": 2,
-      "sch_cites": 292,
+      "sch_cites": 300,
       "sch_h": 5,
       "sch_i10": 3,
-      "fold": 2.52,
-      "cv": 0.61,
+      "fold": 2.46,
+      "cv": 0.597,
       "oa_rank": 46,
       "sch_rank": 43,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "savage_n",
+      "name": "Nastassia Savage",
+      "disc": "Unknown",
+      "rank": "Assistant",
+      "rank_group": "Assistant",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 21,
+      "oa_cites": 103,
+      "oa_h": 5,
+      "oa_i10": 3,
+      "sch_cites": 188,
+      "sch_h": 6,
+      "sch_i10": 4,
+      "fold": 1.83,
+      "cv": 0.413,
+      "oa_rank": 47,
+      "sch_rank": 44,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -1061,7 +1085,7 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 6,
-      "oa_cites": 86,
+      "oa_cites": 101,
       "oa_h": 3,
       "oa_i10": 3,
       "sch_cites": null,
@@ -1069,32 +1093,10 @@ window.BENCH = {
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 47,
+      "oa_rank": 48,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
-    },
-    {
-      "key": "savage_n",
-      "name": "Nastassia Savage",
-      "disc": "Unknown",
-      "rank": "Assistant",
-      "rank_group": "Assistant",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 20,
-      "oa_cites": 84,
-      "oa_h": 4,
-      "oa_i10": 3,
-      "sch_cites": 173,
-      "sch_h": 5,
-      "sch_i10": 4,
-      "fold": 2.06,
-      "cv": 0.49,
-      "oa_rank": 48,
-      "sch_rank": 44,
-      "oa_resolved": true,
-      "sch_resolved": true
     },
     {
       "key": "davis_d",
@@ -1105,7 +1107,7 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 8,
-      "oa_cites": 45,
+      "oa_cites": 67,
       "oa_h": 3,
       "oa_i10": 1,
       "sch_cites": null,
@@ -1127,7 +1129,7 @@ window.BENCH = {
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 4,
-      "oa_cites": 42,
+      "oa_cites": 46,
       "oa_h": 4,
       "oa_i10": 2,
       "sch_cites": null,
@@ -1148,10 +1150,10 @@ window.BENCH = {
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 10,
-      "oa_cites": 15,
+      "oa_works": 9,
+      "oa_cites": 21,
       "oa_h": 2,
-      "oa_i10": 0,
+      "oa_i10": 1,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
@@ -1346,14 +1348,6 @@ window.BENCH = {
         "cites": 0
       },
       {
-        "year": 1991,
-        "cites": 0
-      },
-      {
-        "year": 1992,
-        "cites": 0
-      },
-      {
         "year": 1996,
         "cites": 0
       },
@@ -1411,77 +1405,77 @@ window.BENCH = {
       },
       {
         "year": 2012,
-        "cites": 240
+        "cites": 239
       },
       {
         "year": 2013,
-        "cites": 301
+        "cites": 292
       },
       {
         "year": 2014,
-        "cites": 357
+        "cites": 361
       },
       {
         "year": 2015,
-        "cites": 387
+        "cites": 380
       },
       {
         "year": 2016,
-        "cites": 355
+        "cites": 367
       },
       {
         "year": 2017,
-        "cites": 371
+        "cites": 398
       },
       {
         "year": 2018,
-        "cites": 469
+        "cites": 505
       },
       {
         "year": 2019,
-        "cites": 596
+        "cites": 605
       },
       {
         "year": 2020,
-        "cites": 816
+        "cites": 817
       },
       {
         "year": 2021,
-        "cites": 831
+        "cites": 830
       },
       {
         "year": 2022,
-        "cites": 822
+        "cites": 814
       },
       {
         "year": 2023,
-        "cites": 883
+        "cites": 935
       },
       {
         "year": 2024,
-        "cites": 989
+        "cites": 1091
       },
       {
         "year": 2025,
-        "cites": 919
+        "cites": 1095
       },
       {
         "year": 2026,
-        "cites": 506
+        "cites": 988
       }
     ],
     "scholar": [
       {
         "year": 2003,
-        "cites": 47
+        "cites": 49
       },
       {
         "year": 2004,
-        "cites": 67
+        "cites": 68
       },
       {
         "year": 2005,
-        "cites": 97
+        "cites": 101
       },
       {
         "year": 2006,
@@ -1493,11 +1487,11 @@ window.BENCH = {
       },
       {
         "year": 2008,
-        "cites": 152
+        "cites": 155
       },
       {
         "year": 2009,
-        "cites": 192
+        "cites": 189
       },
       {
         "year": 2010,
@@ -1505,67 +1499,67 @@ window.BENCH = {
       },
       {
         "year": 2011,
-        "cites": 274
+        "cites": 278
       },
       {
         "year": 2012,
-        "cites": 338
+        "cites": 344
       },
       {
         "year": 2013,
-        "cites": 435
+        "cites": 439
       },
       {
         "year": 2014,
-        "cites": 545
+        "cites": 568
       },
       {
         "year": 2015,
-        "cites": 667
+        "cites": 689
       },
       {
         "year": 2016,
-        "cites": 801
+        "cites": 814
       },
       {
         "year": 2017,
-        "cites": 852
+        "cites": 894
       },
       {
         "year": 2018,
-        "cites": 908
+        "cites": 965
       },
       {
         "year": 2019,
-        "cites": 1076
+        "cites": 1141
       },
       {
         "year": 2020,
-        "cites": 1161
+        "cites": 1276
       },
       {
         "year": 2021,
-        "cites": 1304
+        "cites": 1450
       },
       {
         "year": 2022,
-        "cites": 1468
+        "cites": 1697
       },
       {
         "year": 2023,
-        "cites": 1406
+        "cites": 1707
       },
       {
         "year": 2024,
-        "cites": 1538
+        "cites": 1924
       },
       {
         "year": 2025,
-        "cites": 1552
+        "cites": 2028
       },
       {
         "year": 2026,
-        "cites": 796
+        "cites": 1753
       }
     ]
   },
@@ -1579,14 +1573,6 @@ window.BENCH = {
       "openalex": [
         {
           "year": 1986,
-          "cites": 0
-        },
-        {
-          "year": 1991,
-          "cites": 0
-        },
-        {
-          "year": 1992,
           "cites": 0
         },
         {
@@ -1647,77 +1633,77 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 240
+          "cites": 239
         },
         {
           "year": 2013,
-          "cites": 301
+          "cites": 292
         },
         {
           "year": 2014,
-          "cites": 357
+          "cites": 361
         },
         {
           "year": 2015,
-          "cites": 387
+          "cites": 380
         },
         {
           "year": 2016,
-          "cites": 355
+          "cites": 367
         },
         {
           "year": 2017,
-          "cites": 371
+          "cites": 398
         },
         {
           "year": 2018,
-          "cites": 469
+          "cites": 505
         },
         {
           "year": 2019,
-          "cites": 596
+          "cites": 605
         },
         {
           "year": 2020,
-          "cites": 816
+          "cites": 817
         },
         {
           "year": 2021,
-          "cites": 831
+          "cites": 830
         },
         {
           "year": 2022,
-          "cites": 822
+          "cites": 814
         },
         {
           "year": 2023,
-          "cites": 883
+          "cites": 935
         },
         {
           "year": 2024,
-          "cites": 989
+          "cites": 1091
         },
         {
           "year": 2025,
-          "cites": 919
+          "cites": 1095
         },
         {
           "year": 2026,
-          "cites": 506
+          "cites": 988
         }
       ],
       "scholar": [
         {
           "year": 2003,
-          "cites": 47
+          "cites": 49
         },
         {
           "year": 2004,
-          "cites": 67
+          "cites": 68
         },
         {
           "year": 2005,
-          "cites": 97
+          "cites": 101
         },
         {
           "year": 2006,
@@ -1729,11 +1715,11 @@ window.BENCH = {
         },
         {
           "year": 2008,
-          "cites": 152
+          "cites": 155
         },
         {
           "year": 2009,
-          "cites": 192
+          "cites": 189
         },
         {
           "year": 2010,
@@ -1741,67 +1727,67 @@ window.BENCH = {
         },
         {
           "year": 2011,
-          "cites": 274
+          "cites": 278
         },
         {
           "year": 2012,
-          "cites": 338
+          "cites": 344
         },
         {
           "year": 2013,
-          "cites": 435
+          "cites": 439
         },
         {
           "year": 2014,
-          "cites": 545
+          "cites": 568
         },
         {
           "year": 2015,
-          "cites": 667
+          "cites": 689
         },
         {
           "year": 2016,
-          "cites": 801
+          "cites": 814
         },
         {
           "year": 2017,
-          "cites": 852
+          "cites": 894
         },
         {
           "year": 2018,
-          "cites": 908
+          "cites": 965
         },
         {
           "year": 2019,
-          "cites": 1076
+          "cites": 1141
         },
         {
           "year": 2020,
-          "cites": 1161
+          "cites": 1276
         },
         {
           "year": 2021,
-          "cites": 1304
+          "cites": 1450
         },
         {
           "year": 2022,
-          "cites": 1468
+          "cites": 1697
         },
         {
           "year": 2023,
-          "cites": 1406
+          "cites": 1707
         },
         {
           "year": 2024,
-          "cites": 1538
+          "cites": 1924
         },
         {
           "year": 2025,
-          "cites": 1552
+          "cites": 2028
         },
         {
           "year": 2026,
-          "cites": 796
+          "cites": 1753
         }
       ]
     },
@@ -1812,14 +1798,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1972,
-          "cites": 0
-        },
-        {
-          "year": 2000,
-          "cites": 0
-        },
         {
           "year": 2006,
           "cites": 0
@@ -1834,55 +1812,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 14
-        },
-        {
-          "year": 2015,
-          "cites": 19
-        },
-        {
-          "year": 2016,
-          "cites": 16
-        },
-        {
-          "year": 2017,
           "cites": 13
         },
         {
+          "year": 2015,
+          "cites": 22
+        },
+        {
+          "year": 2016,
+          "cites": 19
+        },
+        {
+          "year": 2017,
+          "cites": 14
+        },
+        {
           "year": 2018,
-          "cites": 26
+          "cites": 28
         },
         {
           "year": 2019,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2020,
-          "cites": 35
+          "cites": 33
         },
         {
           "year": 2021,
-          "cites": 50
+          "cites": 51
         },
         {
           "year": 2022,
-          "cites": 54
+          "cites": 53
         },
         {
           "year": 2023,
-          "cites": 52
+          "cites": 56
         },
         {
           "year": 2024,
-          "cites": 54
+          "cites": 58
         },
         {
           "year": 2025,
-          "cites": 39
+          "cites": 41
         },
         {
           "year": 2026,
-          "cites": 19
+          "cites": 40
         }
       ],
       "scholar": [
@@ -1896,55 +1874,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 67
+          "cites": 68
         },
         {
           "year": 2015,
-          "cites": 109
+          "cites": 110
         },
         {
           "year": 2016,
-          "cites": 114
+          "cites": 116
         },
         {
           "year": 2017,
-          "cites": 163
+          "cites": 160
         },
         {
           "year": 2018,
-          "cites": 230
-        },
-        {
-          "year": 2019,
           "cites": 232
         },
         {
+          "year": 2019,
+          "cites": 231
+        },
+        {
           "year": 2020,
-          "cites": 302
+          "cites": 305
         },
         {
           "year": 2021,
-          "cites": 323
+          "cites": 325
         },
         {
           "year": 2022,
-          "cites": 343
+          "cites": 348
         },
         {
           "year": 2023,
-          "cites": 360
+          "cites": 363
         },
         {
           "year": 2024,
-          "cites": 309
+          "cites": 313
         },
         {
           "year": 2025,
-          "cites": 351
+          "cites": 344
         },
         {
           "year": 2026,
-          "cites": 179
+          "cites": 308
         }
       ]
     },
@@ -1961,63 +1939,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 5
+          "cites": 6
         },
         {
           "year": 2013,
-          "cites": 19
+          "cites": 20
         },
         {
           "year": 2014,
-          "cites": 15
+          "cites": 16
         },
         {
           "year": 2015,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2016,
-          "cites": 24
+          "cites": 27
         },
         {
           "year": 2017,
-          "cites": 44
+          "cites": 51
         },
         {
           "year": 2018,
-          "cites": 72
+          "cites": 81
         },
         {
           "year": 2019,
-          "cites": 80
+          "cites": 94
         },
         {
           "year": 2020,
-          "cites": 72
+          "cites": 82
         },
         {
           "year": 2021,
-          "cites": 95
+          "cites": 101
         },
         {
           "year": 2022,
-          "cites": 97
+          "cites": 105
         },
         {
           "year": 2023,
-          "cites": 68
+          "cites": 74
         },
         {
           "year": 2024,
-          "cites": 96
+          "cites": 105
         },
         {
           "year": 2025,
-          "cites": 41
+          "cites": 58
         },
         {
           "year": 2026,
-          "cites": 29
+          "cites": 68
         }
       ],
       "scholar": [
@@ -2031,7 +2009,7 @@ window.BENCH = {
         },
         {
           "year": 2013,
-          "cites": 22
+          "cites": 21
         },
         {
           "year": 2014,
@@ -2039,43 +2017,43 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 51
+          "cites": 49
         },
         {
           "year": 2016,
-          "cites": 43
+          "cites": 44
         },
         {
           "year": 2017,
-          "cites": 79
-        },
-        {
-          "year": 2018,
           "cites": 76
         },
         {
+          "year": 2018,
+          "cites": 82
+        },
+        {
           "year": 2019,
-          "cites": 129
+          "cites": 132
         },
         {
           "year": 2020,
-          "cites": 147
+          "cites": 153
         },
         {
           "year": 2021,
-          "cites": 147
+          "cites": 143
         },
         {
           "year": 2022,
-          "cites": 165
+          "cites": 164
         },
         {
           "year": 2023,
-          "cites": 176
+          "cites": 177
         },
         {
           "year": 2024,
-          "cites": 179
+          "cites": 182
         },
         {
           "year": 2025,
@@ -2083,7 +2061,7 @@ window.BENCH = {
         },
         {
           "year": 2026,
-          "cites": 60
+          "cites": 109
         }
       ]
     },
@@ -2120,7 +2098,7 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 36
+          "cites": 37
         },
         {
           "year": 2013,
@@ -2128,19 +2106,19 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 64
-        },
-        {
-          "year": 2015,
-          "cites": 63
-        },
-        {
-          "year": 2016,
           "cites": 65
         },
         {
+          "year": 2015,
+          "cites": 69
+        },
+        {
+          "year": 2016,
+          "cites": 64
+        },
+        {
           "year": 2017,
-          "cites": 53
+          "cites": 58
         },
         {
           "year": 2018,
@@ -2148,15 +2126,15 @@ window.BENCH = {
         },
         {
           "year": 2019,
-          "cites": 48
+          "cites": 54
         },
         {
           "year": 2020,
-          "cites": 44
+          "cites": 46
         },
         {
           "year": 2021,
-          "cites": 44
+          "cites": 48
         },
         {
           "year": 2022,
@@ -2164,19 +2142,19 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 41
+          "cites": 40
         },
         {
           "year": 2024,
-          "cites": 26
+          "cites": 34
         },
         {
           "year": 2025,
-          "cites": 23
+          "cites": 26
         },
         {
           "year": 2026,
-          "cites": 5
+          "cites": 12
         }
       ],
       "scholar": [
@@ -2190,11 +2168,11 @@ window.BENCH = {
         },
         {
           "year": 2009,
-          "cites": 21
+          "cites": 22
         },
         {
           "year": 2010,
-          "cites": 25
+          "cites": 23
         },
         {
           "year": 2011,
@@ -2210,7 +2188,7 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 65
+          "cites": 66
         },
         {
           "year": 2015,
@@ -2226,15 +2204,15 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 44
+          "cites": 43
         },
         {
           "year": 2019,
-          "cites": 64
+          "cites": 65
         },
         {
           "year": 2020,
-          "cites": 66
+          "cites": 65
         },
         {
           "year": 2021,
@@ -2246,7 +2224,7 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 67
+          "cites": 64
         },
         {
           "year": 2024,
@@ -2254,11 +2232,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 40
+          "cites": 41
         },
         {
           "year": 2026,
-          "cites": 15
+          "cites": 22
         }
       ]
     },
@@ -2303,7 +2281,7 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 12
+          "cites": 13
         },
         {
           "year": 2013,
@@ -2315,51 +2293,51 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 10
-        },
-        {
-          "year": 2016,
-          "cites": 15
-        },
-        {
-          "year": 2017,
           "cites": 12
         },
         {
+          "year": 2016,
+          "cites": 16
+        },
+        {
+          "year": 2017,
+          "cites": 15
+        },
+        {
           "year": 2018,
-          "cites": 7
+          "cites": 9
         },
         {
           "year": 2019,
-          "cites": 16
+          "cites": 11
         },
         {
           "year": 2020,
-          "cites": 6
+          "cites": 10
         },
         {
           "year": 2021,
-          "cites": 18
+          "cites": 19
         },
         {
           "year": 2022,
-          "cites": 8
+          "cites": 9
         },
         {
           "year": 2023,
-          "cites": 8
+          "cites": 14
         },
         {
           "year": 2024,
-          "cites": 16
+          "cites": 22
         },
         {
           "year": 2025,
-          "cites": 16
+          "cites": 18
         },
         {
           "year": 2026,
-          "cites": 3
+          "cites": 7
         }
       ],
       "scholar": []
@@ -2405,69 +2383,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 80
+          "cites": 84
         },
         {
           "year": 2013,
-          "cites": 82
+          "cites": 84
         },
         {
           "year": 2014,
-          "cites": 134
+          "cites": 136
         },
         {
           "year": 2015,
-          "cites": 117
+          "cites": 129
         },
         {
           "year": 2016,
-          "cites": 107
+          "cites": 121
         },
         {
           "year": 2017,
-          "cites": 132
+          "cites": 149
         },
         {
           "year": 2018,
-          "cites": 163
+          "cites": 183
         },
         {
           "year": 2019,
-          "cites": 244
+          "cites": 273
         },
         {
           "year": 2020,
-          "cites": 245
+          "cites": 263
         },
         {
           "year": 2021,
-          "cites": 296
+          "cites": 336
         },
         {
           "year": 2022,
-          "cites": 224
+          "cites": 231
         },
         {
           "year": 2023,
-          "cites": 266
+          "cites": 339
         },
         {
           "year": 2024,
-          "cites": 276
+          "cites": 324
         },
         {
           "year": 2025,
-          "cites": 227
+          "cites": 277
         },
         {
           "year": 2026,
-          "cites": 107
+          "cites": 287
         }
       ],
       "scholar": [
         {
           "year": 2000,
-          "cites": 30
+          "cites": 34
         },
         {
           "year": 2001,
@@ -2475,11 +2453,11 @@ window.BENCH = {
         },
         {
           "year": 2002,
-          "cites": 30
+          "cites": 29
         },
         {
           "year": 2003,
-          "cites": 49
+          "cites": 47
         },
         {
           "year": 2004,
@@ -2487,71 +2465,71 @@ window.BENCH = {
         },
         {
           "year": 2005,
-          "cites": 77
+          "cites": 76
         },
         {
           "year": 2006,
-          "cites": 65
+          "cites": 66
         },
         {
           "year": 2007,
-          "cites": 85
+          "cites": 81
         },
         {
           "year": 2008,
-          "cites": 87
+          "cites": 89
         },
         {
           "year": 2009,
-          "cites": 104
+          "cites": 105
         },
         {
           "year": 2010,
-          "cites": 91
+          "cites": 90
         },
         {
           "year": 2011,
-          "cites": 190
+          "cites": 189
         },
         {
           "year": 2012,
-          "cites": 162
+          "cites": 158
         },
         {
           "year": 2013,
-          "cites": 192
+          "cites": 193
         },
         {
           "year": 2014,
-          "cites": 228
+          "cites": 230
         },
         {
           "year": 2015,
-          "cites": 286
+          "cites": 284
         },
         {
           "year": 2016,
-          "cites": 272
+          "cites": 270
         },
         {
           "year": 2017,
-          "cites": 309
+          "cites": 312
         },
         {
           "year": 2018,
-          "cites": 345
+          "cites": 342
         },
         {
           "year": 2019,
-          "cites": 392
+          "cites": 391
         },
         {
           "year": 2020,
-          "cites": 426
+          "cites": 438
         },
         {
           "year": 2021,
-          "cites": 557
+          "cites": 570
         },
         {
           "year": 2022,
@@ -2559,19 +2537,19 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 529
+          "cites": 524
         },
         {
           "year": 2024,
-          "cites": 528
+          "cites": 519
         },
         {
           "year": 2025,
-          "cites": 541
+          "cites": 548
         },
         {
           "year": 2026,
-          "cites": 290
+          "cites": 510
         }
       ]
     },
@@ -2612,69 +2590,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 161
+          "cites": 160
         },
         {
           "year": 2013,
-          "cites": 157
+          "cites": 169
         },
         {
           "year": 2014,
-          "cites": 237
+          "cites": 247
         },
         {
           "year": 2015,
-          "cites": 219
+          "cites": 231
         },
         {
           "year": 2016,
-          "cites": 268
+          "cites": 298
         },
         {
           "year": 2017,
-          "cites": 294
+          "cites": 328
         },
         {
           "year": 2018,
-          "cites": 318
+          "cites": 350
         },
         {
           "year": 2019,
-          "cites": 355
+          "cites": 392
         },
         {
           "year": 2020,
-          "cites": 468
+          "cites": 487
         },
         {
           "year": 2021,
-          "cites": 471
+          "cites": 501
         },
         {
           "year": 2022,
-          "cites": 451
+          "cites": 474
         },
         {
           "year": 2023,
-          "cites": 543
+          "cites": 597
         },
         {
           "year": 2024,
-          "cites": 545
+          "cites": 638
         },
         {
           "year": 2025,
-          "cites": 577
+          "cites": 717
         },
         {
           "year": 2026,
-          "cites": 306
+          "cites": 659
         }
       ],
       "scholar": [
         {
           "year": 2006,
-          "cites": 24
+          "cites": 25
         },
         {
           "year": 2007,
@@ -2682,11 +2660,11 @@ window.BENCH = {
         },
         {
           "year": 2008,
-          "cites": 77
+          "cites": 75
         },
         {
           "year": 2009,
-          "cites": 103
+          "cites": 108
         },
         {
           "year": 2010,
@@ -2694,67 +2672,67 @@ window.BENCH = {
         },
         {
           "year": 2011,
-          "cites": 167
+          "cites": 168
         },
         {
           "year": 2012,
-          "cites": 190
+          "cites": 203
         },
         {
           "year": 2013,
-          "cites": 229
+          "cites": 230
         },
         {
           "year": 2014,
-          "cites": 312
+          "cites": 313
         },
         {
           "year": 2015,
-          "cites": 336
+          "cites": 331
         },
         {
           "year": 2016,
-          "cites": 450
+          "cites": 449
         },
         {
           "year": 2017,
-          "cites": 471
+          "cites": 480
         },
         {
           "year": 2018,
-          "cites": 546
+          "cites": 551
         },
         {
           "year": 2019,
-          "cites": 570
+          "cites": 577
         },
         {
           "year": 2020,
-          "cites": 624
+          "cites": 636
         },
         {
           "year": 2021,
-          "cites": 754
+          "cites": 763
         },
         {
           "year": 2022,
-          "cites": 748
+          "cites": 751
         },
         {
           "year": 2023,
-          "cites": 866
+          "cites": 869
         },
         {
           "year": 2024,
-          "cites": 883
+          "cites": 882
         },
         {
           "year": 2025,
-          "cites": 1095
+          "cites": 1081
         },
         {
           "year": 2026,
-          "cites": 608
+          "cites": 1027
         }
       ]
     },
@@ -2783,133 +2761,133 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 82
+          "cites": 87
         },
         {
           "year": 2013,
-          "cites": 139
+          "cites": 157
         },
         {
           "year": 2014,
-          "cites": 181
+          "cites": 191
         },
         {
           "year": 2015,
-          "cites": 204
+          "cites": 223
         },
         {
           "year": 2016,
-          "cites": 273
+          "cites": 301
         },
         {
           "year": 2017,
-          "cites": 283
+          "cites": 321
         },
         {
           "year": 2018,
-          "cites": 322
+          "cites": 358
         },
         {
           "year": 2019,
-          "cites": 412
-        },
-        {
-          "year": 2020,
-          "cites": 445
-        },
-        {
-          "year": 2021,
           "cites": 447
         },
         {
+          "year": 2020,
+          "cites": 517
+        },
+        {
+          "year": 2021,
+          "cites": 511
+        },
+        {
           "year": 2022,
-          "cites": 412
+          "cites": 459
         },
         {
           "year": 2023,
-          "cites": 425
+          "cites": 523
         },
         {
           "year": 2024,
-          "cites": 408
+          "cites": 508
         },
         {
           "year": 2025,
-          "cites": 349
+          "cites": 498
         },
         {
           "year": 2026,
-          "cites": 179
+          "cites": 444
         }
       ],
       "scholar": [
         {
           "year": 2010,
-          "cites": 40
+          "cites": 41
         },
         {
           "year": 2011,
-          "cites": 82
+          "cites": 81
         },
         {
           "year": 2012,
-          "cites": 143
+          "cites": 140
         },
         {
           "year": 2013,
-          "cites": 211
+          "cites": 212
         },
         {
           "year": 2014,
-          "cites": 250
+          "cites": 260
         },
         {
           "year": 2015,
-          "cites": 355
+          "cites": 363
         },
         {
           "year": 2016,
-          "cites": 481
+          "cites": 485
         },
         {
           "year": 2017,
-          "cites": 499
+          "cites": 496
         },
         {
           "year": 2018,
-          "cites": 611
+          "cites": 601
         },
         {
           "year": 2019,
-          "cites": 728
+          "cites": 740
         },
         {
           "year": 2020,
-          "cites": 819
+          "cites": 822
         },
         {
           "year": 2021,
-          "cites": 781
+          "cites": 788
         },
         {
           "year": 2022,
-          "cites": 847
+          "cites": 849
         },
         {
           "year": 2023,
-          "cites": 903
+          "cites": 909
         },
         {
           "year": 2024,
-          "cites": 868
+          "cites": 858
         },
         {
           "year": 2025,
-          "cites": 874
+          "cites": 858
         },
         {
           "year": 2026,
-          "cites": 413
+          "cites": 736
         }
       ]
     },
@@ -2970,85 +2948,85 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 401
+          "cites": 398
         },
         {
           "year": 2013,
-          "cites": 359
+          "cites": 358
         },
         {
           "year": 2014,
-          "cites": 411
+          "cites": 398
         },
         {
           "year": 2015,
-          "cites": 428
+          "cites": 411
         },
         {
           "year": 2016,
-          "cites": 445
+          "cites": 441
         },
         {
           "year": 2017,
-          "cites": 477
+          "cites": 487
         },
         {
           "year": 2018,
-          "cites": 500
+          "cites": 511
         },
         {
           "year": 2019,
-          "cites": 579
+          "cites": 602
         },
         {
           "year": 2020,
-          "cites": 730
+          "cites": 743
         },
         {
           "year": 2021,
-          "cites": 736
+          "cites": 734
         },
         {
           "year": 2022,
-          "cites": 629
+          "cites": 635
         },
         {
           "year": 2023,
-          "cites": 667
+          "cites": 712
         },
         {
           "year": 2024,
-          "cites": 639
+          "cites": 729
         },
         {
           "year": 2025,
-          "cites": 639
+          "cites": 750
         },
         {
           "year": 2026,
-          "cites": 327
+          "cites": 717
         }
       ],
       "scholar": [
         {
           "year": 2004,
-          "cites": 58
+          "cites": 62
         },
         {
           "year": 2005,
-          "cites": 54
+          "cites": 51
         },
         {
           "year": 2006,
-          "cites": 94
+          "cites": 91
         },
         {
           "year": 2007,
-          "cites": 120
+          "cites": 123
         },
         {
           "year": 2008,
-          "cites": 168
+          "cites": 169
         },
         {
           "year": 2009,
@@ -3056,71 +3034,71 @@ window.BENCH = {
         },
         {
           "year": 2010,
-          "cites": 308
+          "cites": 311
         },
         {
           "year": 2011,
-          "cites": 309
+          "cites": 306
         },
         {
           "year": 2012,
-          "cites": 489
+          "cites": 493
         },
         {
           "year": 2013,
-          "cites": 521
+          "cites": 517
         },
         {
           "year": 2014,
-          "cites": 604
+          "cites": 605
         },
         {
           "year": 2015,
-          "cites": 691
+          "cites": 680
         },
         {
           "year": 2016,
-          "cites": 734
+          "cites": 744
         },
         {
           "year": 2017,
-          "cites": 846
+          "cites": 832
         },
         {
           "year": 2018,
-          "cites": 875
+          "cites": 857
         },
         {
           "year": 2019,
-          "cites": 923
+          "cites": 930
         },
         {
           "year": 2020,
-          "cites": 1081
+          "cites": 1087
         },
         {
           "year": 2021,
-          "cites": 1159
+          "cites": 1158
         },
         {
           "year": 2022,
-          "cites": 1124
+          "cites": 1123
         },
         {
           "year": 2023,
-          "cites": 1108
+          "cites": 1089
         },
         {
           "year": 2024,
-          "cites": 1196
+          "cites": 1180
         },
         {
           "year": 2025,
-          "cites": 1206
+          "cites": 1218
         },
         {
           "year": 2026,
-          "cites": 678
+          "cites": 1172
         }
       ]
     },
@@ -3145,11 +3123,11 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 3
+          "cites": 6
         },
         {
           "year": 2019,
-          "cites": 5
+          "cites": 6
         },
         {
           "year": 2020,
@@ -3157,27 +3135,27 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 2
+          "cites": 3
         },
         {
           "year": 2022,
-          "cites": 10
+          "cites": 12
         },
         {
           "year": 2023,
-          "cites": 7
+          "cites": 9
         },
         {
           "year": 2024,
-          "cites": 1
+          "cites": 3
         },
         {
           "year": 2025,
-          "cites": 7
+          "cites": 12
         },
         {
           "year": 2026,
-          "cites": 6
+          "cites": 12
         }
       ],
       "scholar": []
@@ -3199,7 +3177,7 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 7
+          "cites": 8
         },
         {
           "year": 2013,
@@ -3215,7 +3193,7 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 18
+          "cites": 20
         },
         {
           "year": 2017,
@@ -3223,19 +3201,19 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 46
+          "cites": 51
         },
         {
           "year": 2019,
-          "cites": 78
+          "cites": 76
         },
         {
           "year": 2020,
-          "cites": 83
+          "cites": 93
         },
         {
           "year": 2021,
-          "cites": 109
+          "cites": 116
         },
         {
           "year": 2022,
@@ -3243,26 +3221,22 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 225
+          "cites": 227
         },
         {
           "year": 2024,
-          "cites": 267
+          "cites": 313
         },
         {
           "year": 2025,
-          "cites": 272
+          "cites": 333
         },
         {
           "year": 2026,
-          "cites": 140
+          "cites": 346
         }
       ],
       "scholar": [
-        {
-          "year": 2011,
-          "cites": 7
-        },
         {
           "year": 2012,
           "cites": 14
@@ -3273,11 +3247,11 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 23
+          "cites": 24
         },
         {
           "year": 2015,
-          "cites": 25
+          "cites": 24
         },
         {
           "year": 2016,
@@ -3285,23 +3259,23 @@ window.BENCH = {
         },
         {
           "year": 2017,
-          "cites": 44
+          "cites": 47
         },
         {
           "year": 2018,
-          "cites": 68
+          "cites": 66
         },
         {
           "year": 2019,
-          "cites": 61
+          "cites": 63
         },
         {
           "year": 2020,
-          "cites": 101
+          "cites": 103
         },
         {
           "year": 2021,
-          "cites": 127
+          "cites": 126
         },
         {
           "year": 2022,
@@ -3309,19 +3283,19 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 291
+          "cites": 299
         },
         {
           "year": 2024,
-          "cites": 400
+          "cites": 395
         },
         {
           "year": 2025,
-          "cites": 463
+          "cites": 454
         },
         {
           "year": 2026,
-          "cites": 287
+          "cites": 518
         }
       ]
     },
@@ -3333,87 +3307,7 @@ window.BENCH = {
       "team": false,
       "openalex": [
         {
-          "year": 1962,
-          "cites": 0
-        },
-        {
-          "year": 1964,
-          "cites": 0
-        },
-        {
-          "year": 1966,
-          "cites": 0
-        },
-        {
-          "year": 1967,
-          "cites": 0
-        },
-        {
-          "year": 1968,
-          "cites": 0
-        },
-        {
-          "year": 1969,
-          "cites": 0
-        },
-        {
-          "year": 1972,
-          "cites": 0
-        },
-        {
-          "year": 1973,
-          "cites": 0
-        },
-        {
           "year": 1974,
-          "cites": 0
-        },
-        {
-          "year": 1975,
-          "cites": 0
-        },
-        {
-          "year": 1976,
-          "cites": 0
-        },
-        {
-          "year": 1977,
-          "cites": 0
-        },
-        {
-          "year": 1978,
-          "cites": 0
-        },
-        {
-          "year": 1979,
-          "cites": 0
-        },
-        {
-          "year": 1980,
-          "cites": 0
-        },
-        {
-          "year": 1981,
-          "cites": 0
-        },
-        {
-          "year": 1982,
-          "cites": 0
-        },
-        {
-          "year": 1983,
-          "cites": 0
-        },
-        {
-          "year": 1984,
-          "cites": 0
-        },
-        {
-          "year": 1985,
-          "cites": 0
-        },
-        {
-          "year": 1994,
           "cites": 0
         },
         {
@@ -3426,6 +3320,10 @@ window.BENCH = {
         },
         {
           "year": 1998,
+          "cites": 0
+        },
+        {
+          "year": 1999,
           "cites": 0
         },
         {
@@ -3457,68 +3355,64 @@ window.BENCH = {
           "cites": 0
         },
         {
-          "year": 2011,
-          "cites": 0
-        },
-        {
           "year": 2012,
-          "cites": 71
+          "cites": 63
         },
         {
           "year": 2013,
-          "cites": 69
+          "cites": 61
         },
         {
           "year": 2014,
-          "cites": 79
+          "cites": 67
         },
         {
           "year": 2015,
-          "cites": 111
+          "cites": 104
         },
         {
           "year": 2016,
-          "cites": 99
+          "cites": 92
         },
         {
           "year": 2017,
-          "cites": 98
+          "cites": 87
         },
         {
           "year": 2018,
-          "cites": 130
+          "cites": 117
         },
         {
           "year": 2019,
-          "cites": 124
+          "cites": 111
         },
         {
           "year": 2020,
-          "cites": 122
+          "cites": 112
         },
         {
           "year": 2021,
-          "cites": 148
+          "cites": 128
         },
         {
           "year": 2022,
-          "cites": 85
+          "cites": 76
         },
         {
           "year": 2023,
-          "cites": 94
+          "cites": 90
         },
         {
           "year": 2024,
-          "cites": 100
+          "cites": 98
         },
         {
           "year": 2025,
-          "cites": 83
+          "cites": 80
         },
         {
           "year": 2026,
-          "cites": 39
+          "cites": 72
         }
       ],
       "scholar": []
@@ -3564,69 +3458,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 220
+          "cites": 217
         },
         {
           "year": 2013,
-          "cites": 258
+          "cites": 254
         },
         {
           "year": 2014,
-          "cites": 333
+          "cites": 341
         },
         {
           "year": 2015,
-          "cites": 276
+          "cites": 288
         },
         {
           "year": 2016,
-          "cites": 258
+          "cites": 279
         },
         {
           "year": 2017,
-          "cites": 282
+          "cites": 296
         },
         {
           "year": 2018,
-          "cites": 331
+          "cites": 356
         },
         {
           "year": 2019,
-          "cites": 278
+          "cites": 307
         },
         {
           "year": 2020,
-          "cites": 336
+          "cites": 365
         },
         {
           "year": 2021,
-          "cites": 426
+          "cites": 439
         },
         {
           "year": 2022,
-          "cites": 360
-        },
-        {
-          "year": 2023,
-          "cites": 375
-        },
-        {
-          "year": 2024,
           "cites": 367
         },
         {
+          "year": 2023,
+          "cites": 399
+        },
+        {
+          "year": 2024,
+          "cites": 402
+        },
+        {
           "year": 2025,
-          "cites": 342
+          "cites": 402
         },
         {
           "year": 2026,
-          "cites": 170
+          "cites": 317
         }
       ],
       "scholar": [
         {
           "year": 2005,
-          "cites": 46
+          "cites": 49
         },
         {
           "year": 2006,
@@ -3638,67 +3532,67 @@ window.BENCH = {
         },
         {
           "year": 2008,
-          "cites": 137
+          "cites": 144
         },
         {
           "year": 2009,
-          "cites": 176
+          "cites": 170
         },
         {
           "year": 2010,
-          "cites": 213
+          "cites": 214
         },
         {
           "year": 2011,
-          "cites": 274
+          "cites": 277
         },
         {
           "year": 2012,
-          "cites": 348
+          "cites": 350
         },
         {
           "year": 2013,
-          "cites": 394
+          "cites": 396
         },
         {
           "year": 2014,
-          "cites": 483
+          "cites": 474
         },
         {
           "year": 2015,
-          "cites": 479
+          "cites": 468
         },
         {
           "year": 2016,
-          "cites": 452
+          "cites": 457
         },
         {
           "year": 2017,
-          "cites": 421
+          "cites": 418
         },
         {
           "year": 2018,
-          "cites": 511
+          "cites": 513
         },
         {
           "year": 2019,
-          "cites": 536
+          "cites": 541
         },
         {
           "year": 2020,
-          "cites": 569
+          "cites": 575
         },
         {
           "year": 2021,
-          "cites": 566
+          "cites": 571
         },
         {
           "year": 2022,
-          "cites": 630
+          "cites": 633
         },
         {
           "year": 2023,
-          "cites": 641
+          "cites": 644
         },
         {
           "year": 2024,
@@ -3706,11 +3600,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 596
+          "cites": 597
         },
         {
           "year": 2026,
-          "cites": 292
+          "cites": 500
         }
       ]
     },
@@ -3721,10 +3615,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1981,
-          "cites": 0
-        },
         {
           "year": 2003,
           "cites": 0
@@ -3763,81 +3653,81 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 108
+          "cites": 300
         },
         {
           "year": 2013,
-          "cites": 103
+          "cites": 385
         },
         {
           "year": 2014,
-          "cites": 119
+          "cites": 376
         },
         {
           "year": 2015,
-          "cites": 110
+          "cites": 438
         },
         {
           "year": 2016,
-          "cites": 91
+          "cites": 433
         },
         {
           "year": 2017,
-          "cites": 80
+          "cites": 430
         },
         {
           "year": 2018,
-          "cites": 90
+          "cites": 462
         },
         {
           "year": 2019,
-          "cites": 116
+          "cites": 495
         },
         {
           "year": 2020,
-          "cites": 130
+          "cites": 538
         },
         {
           "year": 2021,
-          "cites": 158
+          "cites": 541
         },
         {
           "year": 2022,
-          "cites": 174
+          "cites": 435
         },
         {
           "year": 2023,
-          "cites": 216
+          "cites": 470
         },
         {
           "year": 2024,
-          "cites": 162
+          "cites": 470
         },
         {
           "year": 2025,
-          "cites": 180
+          "cites": 474
         },
         {
           "year": 2026,
-          "cites": 76
+          "cites": 328
         }
       ],
       "scholar": [
         {
           "year": 2005,
-          "cites": 46
+          "cites": 45
         },
         {
           "year": 2006,
-          "cites": 53
+          "cites": 54
         },
         {
           "year": 2007,
-          "cites": 107
+          "cites": 109
         },
         {
           "year": 2008,
-          "cites": 165
+          "cites": 164
         },
         {
           "year": 2009,
@@ -3845,55 +3735,55 @@ window.BENCH = {
         },
         {
           "year": 2010,
-          "cites": 300
+          "cites": 288
         },
         {
           "year": 2011,
-          "cites": 315
+          "cites": 314
         },
         {
           "year": 2012,
-          "cites": 421
+          "cites": 423
         },
         {
           "year": 2013,
-          "cites": 540
+          "cites": 536
         },
         {
           "year": 2014,
-          "cites": 544
+          "cites": 535
         },
         {
           "year": 2015,
-          "cites": 647
+          "cites": 648
         },
         {
           "year": 2016,
-          "cites": 636
+          "cites": 638
         },
         {
           "year": 2017,
-          "cites": 655
+          "cites": 656
         },
         {
           "year": 2018,
-          "cites": 703
+          "cites": 687
         },
         {
           "year": 2019,
-          "cites": 709
+          "cites": 708
         },
         {
           "year": 2020,
-          "cites": 696
+          "cites": 708
         },
         {
           "year": 2021,
-          "cites": 701
+          "cites": 707
         },
         {
           "year": 2022,
-          "cites": 654
+          "cites": 667
         },
         {
           "year": 2023,
@@ -3905,11 +3795,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 696
+          "cites": 687
         },
         {
           "year": 2026,
-          "cites": 318
+          "cites": 517
         }
       ]
     },
@@ -3925,23 +3815,11 @@ window.BENCH = {
           "cites": 0
         },
         {
-          "year": 1971,
-          "cites": 0
-        },
-        {
-          "year": 1974,
-          "cites": 0
-        },
-        {
           "year": 1977,
           "cites": 0
         },
         {
           "year": 1979,
-          "cites": 0
-        },
-        {
-          "year": 1987,
           "cites": 0
         },
         {
@@ -3998,15 +3876,15 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 63
+          "cites": 62
         },
         {
           "year": 2013,
-          "cites": 49
+          "cites": 44
         },
         {
           "year": 2014,
-          "cites": 66
+          "cites": 65
         },
         {
           "year": 2015,
@@ -4014,11 +3892,11 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 57
+          "cites": 56
         },
         {
           "year": 2017,
-          "cites": 67
+          "cites": 65
         },
         {
           "year": 2018,
@@ -4026,27 +3904,27 @@ window.BENCH = {
         },
         {
           "year": 2019,
-          "cites": 78
+          "cites": 74
         },
         {
           "year": 2020,
-          "cites": 104
+          "cites": 98
         },
         {
           "year": 2021,
-          "cites": 85
+          "cites": 76
         },
         {
           "year": 2022,
-          "cites": 118
+          "cites": 108
         },
         {
           "year": 2023,
-          "cites": 92
+          "cites": 88
         },
         {
           "year": 2024,
-          "cites": 94
+          "cites": 93
         },
         {
           "year": 2025,
@@ -4054,13 +3932,13 @@ window.BENCH = {
         },
         {
           "year": 2026,
-          "cites": 31
+          "cites": 58
         }
       ],
       "scholar": [
         {
           "year": 2005,
-          "cites": 7
+          "cites": 8
         },
         {
           "year": 2006,
@@ -4072,11 +3950,11 @@ window.BENCH = {
         },
         {
           "year": 2008,
-          "cites": 36
+          "cites": 35
         },
         {
           "year": 2009,
-          "cites": 45
+          "cites": 47
         },
         {
           "year": 2010,
@@ -4084,11 +3962,11 @@ window.BENCH = {
         },
         {
           "year": 2011,
-          "cites": 75
+          "cites": 77
         },
         {
           "year": 2012,
-          "cites": 76
+          "cites": 72
         },
         {
           "year": 2013,
@@ -4096,15 +3974,15 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 89
+          "cites": 91
         },
         {
           "year": 2015,
-          "cites": 64
+          "cites": 66
         },
         {
           "year": 2016,
-          "cites": 71
+          "cites": 72
         },
         {
           "year": 2017,
@@ -4112,19 +3990,19 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 104
+          "cites": 103
         },
         {
           "year": 2019,
-          "cites": 100
+          "cites": 98
         },
         {
           "year": 2020,
-          "cites": 114
+          "cites": 116
         },
         {
           "year": 2021,
-          "cites": 113
+          "cites": 119
         },
         {
           "year": 2022,
@@ -4132,19 +4010,19 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 114
+          "cites": 115
         },
         {
           "year": 2024,
-          "cites": 113
+          "cites": 112
         },
         {
           "year": 2025,
-          "cites": 88
+          "cites": 93
         },
         {
           "year": 2026,
-          "cites": 51
+          "cites": 75
         }
       ]
     },
@@ -4173,129 +4051,129 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 28
+          "cites": 29
         },
         {
           "year": 2013,
-          "cites": 48
+          "cites": 50
         },
         {
           "year": 2014,
-          "cites": 95
+          "cites": 88
         },
         {
           "year": 2015,
-          "cites": 84
+          "cites": 89
         },
         {
           "year": 2016,
-          "cites": 92
+          "cites": 94
         },
         {
           "year": 2017,
-          "cites": 183
+          "cites": 176
         },
         {
           "year": 2018,
-          "cites": 300
+          "cites": 309
         },
         {
           "year": 2019,
-          "cites": 195
+          "cites": 209
         },
         {
           "year": 2020,
-          "cites": 257
+          "cites": 280
         },
         {
           "year": 2021,
-          "cites": 297
+          "cites": 292
         },
         {
           "year": 2022,
-          "cites": 311
+          "cites": 322
         },
         {
           "year": 2023,
-          "cites": 369
+          "cites": 416
         },
         {
           "year": 2024,
-          "cites": 237
+          "cites": 298
         },
         {
           "year": 2025,
-          "cites": 257
+          "cites": 386
         },
         {
           "year": 2026,
-          "cites": 146
+          "cites": 462
         }
       ],
       "scholar": [
         {
           "year": 2011,
-          "cites": 45
+          "cites": 39
         },
         {
           "year": 2012,
-          "cites": 41
+          "cites": 40
         },
         {
           "year": 2013,
-          "cites": 92
+          "cites": 88
         },
         {
           "year": 2014,
-          "cites": 152
+          "cites": 150
         },
         {
           "year": 2015,
-          "cites": 200
+          "cites": 197
         },
         {
           "year": 2016,
-          "cites": 199
+          "cites": 194
         },
         {
           "year": 2017,
-          "cites": 404
+          "cites": 406
         },
         {
           "year": 2018,
-          "cites": 294
+          "cites": 295
         },
         {
           "year": 2019,
-          "cites": 346
+          "cites": 345
         },
         {
           "year": 2020,
-          "cites": 448
+          "cites": 455
         },
         {
           "year": 2021,
-          "cites": 440
+          "cites": 433
         },
         {
           "year": 2022,
-          "cites": 572
+          "cites": 564
         },
         {
           "year": 2023,
-          "cites": 514
+          "cites": 522
         },
         {
           "year": 2024,
-          "cites": 577
+          "cites": 573
         },
         {
           "year": 2025,
-          "cites": 750
+          "cites": 754
         },
         {
           "year": 2026,
-          "cites": 401
+          "cites": 762
         }
       ]
     },
@@ -4307,10 +4185,6 @@ window.BENCH = {
       "team": false,
       "openalex": [
         {
-          "year": 1965,
-          "cites": 0
-        },
-        {
           "year": 1999,
           "cites": 0
         },
@@ -4360,89 +4234,93 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 178
+          "cites": 180
         },
         {
           "year": 2013,
-          "cites": 302
+          "cites": 319
         },
         {
           "year": 2014,
-          "cites": 290
+          "cites": 315
         },
         {
           "year": 2015,
-          "cites": 373
+          "cites": 410
         },
         {
           "year": 2016,
-          "cites": 326
+          "cites": 347
         },
         {
           "year": 2017,
-          "cites": 300
+          "cites": 348
         },
         {
           "year": 2018,
-          "cites": 382
+          "cites": 420
         },
         {
           "year": 2019,
-          "cites": 385
+          "cites": 413
         },
         {
           "year": 2020,
-          "cites": 336
+          "cites": 358
         },
         {
           "year": 2021,
-          "cites": 380
+          "cites": 402
         },
         {
           "year": 2022,
-          "cites": 494
+          "cites": 518
         },
         {
           "year": 2023,
-          "cites": 519
+          "cites": 682
         },
         {
           "year": 2024,
-          "cites": 439
+          "cites": 481
         },
         {
           "year": 2025,
-          "cites": 522
+          "cites": 570
         },
         {
           "year": 2026,
-          "cites": 208
+          "cites": 451
         }
       ],
       "scholar": [
+        {
+          "year": 1987,
+          "cites": 52
+        },
         {
           "year": 1988,
           "cites": 55
         },
         {
           "year": 1989,
-          "cites": 97
-        },
-        {
-          "year": 1990,
-          "cites": 75
-        },
-        {
-          "year": 1991,
-          "cites": 86
-        },
-        {
-          "year": 1992,
           "cites": 99
         },
         {
+          "year": 1990,
+          "cites": 77
+        },
+        {
+          "year": 1991,
+          "cites": 87
+        },
+        {
+          "year": 1992,
+          "cites": 95
+        },
+        {
           "year": 1993,
-          "cites": 101
+          "cites": 104
         },
         {
           "year": 1994,
@@ -4450,27 +4328,27 @@ window.BENCH = {
         },
         {
           "year": 1995,
-          "cites": 145
+          "cites": 146
         },
         {
           "year": 1996,
-          "cites": 152
+          "cites": 154
         },
         {
           "year": 1997,
-          "cites": 204
+          "cites": 206
         },
         {
           "year": 1998,
-          "cites": 185
+          "cites": 187
         },
         {
           "year": 1999,
-          "cites": 207
+          "cites": 211
         },
         {
           "year": 2000,
-          "cites": 235
+          "cites": 234
         },
         {
           "year": 2001,
@@ -4478,67 +4356,67 @@ window.BENCH = {
         },
         {
           "year": 2002,
-          "cites": 332
+          "cites": 325
         },
         {
           "year": 2003,
-          "cites": 355
+          "cites": 359
         },
         {
           "year": 2004,
-          "cites": 386
+          "cites": 390
         },
         {
           "year": 2005,
-          "cites": 418
+          "cites": 413
         },
         {
           "year": 2006,
-          "cites": 449
+          "cites": 447
         },
         {
           "year": 2007,
-          "cites": 435
+          "cites": 426
         },
         {
           "year": 2008,
-          "cites": 450
+          "cites": 451
         },
         {
           "year": 2009,
-          "cites": 518
+          "cites": 520
         },
         {
           "year": 2010,
-          "cites": 488
+          "cites": 489
         },
         {
           "year": 2011,
-          "cites": 576
+          "cites": 572
         },
         {
           "year": 2012,
-          "cites": 603
+          "cites": 601
         },
         {
           "year": 2013,
-          "cites": 794
+          "cites": 791
         },
         {
           "year": 2014,
-          "cites": 825
+          "cites": 820
         },
         {
           "year": 2015,
-          "cites": 899
+          "cites": 928
         },
         {
           "year": 2016,
-          "cites": 884
+          "cites": 880
         },
         {
           "year": 2017,
-          "cites": 984
+          "cites": 981
         },
         {
           "year": 2018,
@@ -4546,35 +4424,35 @@ window.BENCH = {
         },
         {
           "year": 2019,
-          "cites": 1010
+          "cites": 1037
         },
         {
           "year": 2020,
-          "cites": 930
+          "cites": 944
         },
         {
           "year": 2021,
-          "cites": 873
+          "cites": 828
         },
         {
           "year": 2022,
-          "cites": 904
+          "cites": 912
         },
         {
           "year": 2023,
-          "cites": 1008
+          "cites": 1007
         },
         {
           "year": 2024,
-          "cites": 982
+          "cites": 984
         },
         {
           "year": 2025,
-          "cites": 1051
+          "cites": 1050
         },
         {
           "year": 2026,
-          "cites": 555
+          "cites": 954
         }
       ]
     },
@@ -4599,7 +4477,7 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 12
+          "cites": 13
         },
         {
           "year": 2013,
@@ -4611,35 +4489,35 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 62
-        },
-        {
-          "year": 2016,
           "cites": 66
         },
         {
+          "year": 2016,
+          "cites": 68
+        },
+        {
           "year": 2017,
-          "cites": 82
+          "cites": 86
         },
         {
           "year": 2018,
-          "cites": 92
+          "cites": 107
         },
         {
           "year": 2019,
-          "cites": 84
+          "cites": 91
         },
         {
           "year": 2020,
-          "cites": 106
+          "cites": 108
         },
         {
           "year": 2021,
-          "cites": 177
+          "cites": 151
         },
         {
           "year": 2022,
-          "cites": 166
+          "cites": 174
         },
         {
           "year": 2023,
@@ -4647,15 +4525,15 @@ window.BENCH = {
         },
         {
           "year": 2024,
-          "cites": 189
+          "cites": 201
         },
         {
           "year": 2025,
-          "cites": 216
+          "cites": 240
         },
         {
           "year": 2026,
-          "cites": 134
+          "cites": 254
         }
       ],
       "scholar": [
@@ -4673,55 +4551,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 71
+          "cites": 77
         },
         {
           "year": 2015,
-          "cites": 94
+          "cites": 96
         },
         {
           "year": 2016,
-          "cites": 86
+          "cites": 84
         },
         {
           "year": 2017,
-          "cites": 100
+          "cites": 106
         },
         {
           "year": 2018,
-          "cites": 137
+          "cites": 133
         },
         {
           "year": 2019,
-          "cites": 124
+          "cites": 131
         },
         {
           "year": 2020,
-          "cites": 124
+          "cites": 135
         },
         {
           "year": 2021,
-          "cites": 136
+          "cites": 184
         },
         {
           "year": 2022,
-          "cites": 121
+          "cites": 192
         },
         {
           "year": 2023,
-          "cites": 83
+          "cites": 224
         },
         {
           "year": 2024,
-          "cites": 72
+          "cites": 203
         },
         {
           "year": 2025,
-          "cites": 86
+          "cites": 295
         },
         {
           "year": 2026,
-          "cites": 47
+          "cites": 331
         }
       ]
     },
@@ -4732,10 +4610,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1984,
-          "cites": 0
-        },
         {
           "year": 1987,
           "cites": 0
@@ -4782,153 +4656,153 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 187
+          "cites": 190
         },
         {
           "year": 2013,
-          "cites": 168
+          "cites": 174
         },
         {
           "year": 2014,
-          "cites": 177
+          "cites": 183
         },
         {
           "year": 2015,
-          "cites": 193
+          "cites": 200
         },
         {
           "year": 2016,
-          "cites": 214
+          "cites": 236
         },
         {
           "year": 2017,
-          "cites": 231
+          "cites": 251
         },
         {
           "year": 2018,
-          "cites": 287
+          "cites": 309
         },
         {
           "year": 2019,
-          "cites": 308
+          "cites": 349
         },
         {
           "year": 2020,
-          "cites": 432
+          "cites": 457
         },
         {
           "year": 2021,
-          "cites": 447
+          "cites": 487
         },
         {
           "year": 2022,
-          "cites": 504
+          "cites": 522
         },
         {
           "year": 2023,
-          "cites": 436
+          "cites": 510
         },
         {
           "year": 2024,
-          "cites": 380
+          "cites": 459
         },
         {
           "year": 2025,
-          "cites": 363
+          "cites": 447
         },
         {
           "year": 2026,
-          "cites": 172
+          "cites": 373
         }
       ],
       "scholar": [
         {
           "year": 2005,
-          "cites": 27
+          "cites": 28
         },
         {
           "year": 2006,
-          "cites": 54
+          "cites": 53
         },
         {
           "year": 2007,
-          "cites": 49
+          "cites": 47
         },
         {
           "year": 2008,
-          "cites": 107
+          "cites": 109
         },
         {
           "year": 2009,
-          "cites": 95
+          "cites": 94
         },
         {
           "year": 2010,
-          "cites": 150
+          "cites": 153
         },
         {
           "year": 2011,
-          "cites": 238
+          "cites": 227
         },
         {
           "year": 2012,
-          "cites": 276
+          "cites": 279
         },
         {
           "year": 2013,
-          "cites": 274
+          "cites": 270
         },
         {
           "year": 2014,
-          "cites": 312
+          "cites": 309
         },
         {
           "year": 2015,
-          "cites": 320
+          "cites": 316
         },
         {
           "year": 2016,
-          "cites": 394
+          "cites": 393
         },
         {
           "year": 2017,
-          "cites": 415
+          "cites": 413
         },
         {
           "year": 2018,
-          "cites": 517
+          "cites": 513
         },
         {
           "year": 2019,
-          "cites": 518
+          "cites": 516
         },
         {
           "year": 2020,
-          "cites": 631
+          "cites": 640
         },
         {
           "year": 2021,
-          "cites": 772
+          "cites": 767
         },
         {
           "year": 2022,
-          "cites": 846
+          "cites": 834
         },
         {
           "year": 2023,
-          "cites": 814
+          "cites": 812
         },
         {
           "year": 2024,
-          "cites": 726
+          "cites": 714
         },
         {
           "year": 2025,
-          "cites": 743
+          "cites": 732
         },
         {
           "year": 2026,
-          "cites": 362
+          "cites": 602
         }
       ]
     },
@@ -4997,149 +4871,149 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 968
+          "cites": 974
         },
         {
           "year": 2013,
-          "cites": 1162
+          "cites": 1204
         },
         {
           "year": 2014,
-          "cites": 1606
+          "cites": 1648
         },
         {
           "year": 2015,
-          "cites": 1600
+          "cites": 1713
         },
         {
           "year": 2016,
-          "cites": 1678
+          "cites": 1799
         },
         {
           "year": 2017,
-          "cites": 1707
+          "cites": 1877
         },
         {
           "year": 2018,
-          "cites": 2175
+          "cites": 2402
         },
         {
           "year": 2019,
-          "cites": 2297
+          "cites": 2490
         },
         {
           "year": 2020,
-          "cites": 2928
+          "cites": 3102
         },
         {
           "year": 2021,
-          "cites": 3006
+          "cites": 3187
         },
         {
           "year": 2022,
-          "cites": 3004
+          "cites": 3079
         },
         {
           "year": 2023,
-          "cites": 2965
+          "cites": 3342
         },
         {
           "year": 2024,
-          "cites": 3060
+          "cites": 3542
         },
         {
           "year": 2025,
-          "cites": 2830
+          "cites": 3501
         },
         {
           "year": 2026,
-          "cites": 1390
+          "cites": 2915
         }
       ],
       "scholar": [
         {
           "year": 2006,
-          "cites": 210
+          "cites": 214
         },
         {
           "year": 2007,
-          "cites": 298
+          "cites": 296
         },
         {
           "year": 2008,
-          "cites": 407
+          "cites": 409
         },
         {
           "year": 2009,
-          "cites": 642
+          "cites": 641
         },
         {
           "year": 2010,
-          "cites": 842
+          "cites": 847
         },
         {
           "year": 2011,
-          "cites": 1193
+          "cites": 1216
         },
         {
           "year": 2012,
-          "cites": 1455
+          "cites": 1471
         },
         {
           "year": 2013,
-          "cites": 1970
+          "cites": 1981
         },
         {
           "year": 2014,
-          "cites": 2361
+          "cites": 2366
         },
         {
           "year": 2015,
-          "cites": 2766
+          "cites": 2710
         },
         {
           "year": 2016,
-          "cites": 3058
+          "cites": 3030
         },
         {
           "year": 2017,
-          "cites": 3333
+          "cites": 3341
         },
         {
           "year": 2018,
-          "cites": 3509
+          "cites": 3528
         },
         {
           "year": 2019,
-          "cites": 3994
+          "cites": 4008
         },
         {
           "year": 2020,
-          "cites": 4707
+          "cites": 4725
         },
         {
           "year": 2021,
-          "cites": 5104
+          "cites": 5075
         },
         {
           "year": 2022,
-          "cites": 5254
+          "cites": 5227
         },
         {
           "year": 2023,
-          "cites": 5199
+          "cites": 5237
         },
         {
           "year": 2024,
-          "cites": 5436
+          "cites": 5411
         },
         {
           "year": 2025,
-          "cites": 5552
+          "cites": 5578
         },
         {
           "year": 2026,
-          "cites": 2800
+          "cites": 4632
         }
       ]
     },
@@ -5168,59 +5042,59 @@ window.BENCH = {
         },
         {
           "year": 2013,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2014,
-          "cites": 49
+          "cites": 50
         },
         {
           "year": 2015,
-          "cites": 53
+          "cites": 60
         },
         {
           "year": 2016,
-          "cites": 64
+          "cites": 68
         },
         {
           "year": 2017,
-          "cites": 52
+          "cites": 61
         },
         {
           "year": 2018,
-          "cites": 90
+          "cites": 97
         },
         {
           "year": 2019,
-          "cites": 135
+          "cites": 140
         },
         {
           "year": 2020,
-          "cites": 160
+          "cites": 170
         },
         {
           "year": 2021,
-          "cites": 171
+          "cites": 181
         },
         {
           "year": 2022,
-          "cites": 185
+          "cites": 197
         },
         {
           "year": 2023,
-          "cites": 175
+          "cites": 209
         },
         {
           "year": 2024,
-          "cites": 200
+          "cites": 241
         },
         {
           "year": 2025,
-          "cites": 148
+          "cites": 207
         },
         {
           "year": 2026,
-          "cites": 95
+          "cites": 224
         }
       ],
       "scholar": [
@@ -5238,55 +5112,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 56
+          "cites": 57
         },
         {
           "year": 2015,
-          "cites": 70
+          "cites": 72
         },
         {
           "year": 2016,
-          "cites": 91
+          "cites": 89
         },
         {
           "year": 2017,
-          "cites": 97
+          "cites": 96
         },
         {
           "year": 2018,
-          "cites": 136
+          "cites": 135
         },
         {
           "year": 2019,
-          "cites": 181
+          "cites": 176
         },
         {
           "year": 2020,
-          "cites": 245
+          "cites": 250
         },
         {
           "year": 2021,
-          "cites": 268
+          "cites": 265
         },
         {
           "year": 2022,
-          "cites": 270
+          "cites": 274
         },
         {
           "year": 2023,
-          "cites": 336
+          "cites": 335
         },
         {
           "year": 2024,
-          "cites": 319
+          "cites": 322
         },
         {
           "year": 2025,
-          "cites": 355
+          "cites": 357
         },
         {
           "year": 2026,
-          "cites": 214
+          "cites": 329
         }
       ]
     },
@@ -5307,51 +5181,51 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 15
+          "cites": 16
         },
         {
           "year": 2016,
-          "cites": 34
+          "cites": 37
         },
         {
           "year": 2017,
-          "cites": 62
+          "cites": 65
         },
         {
           "year": 2018,
-          "cites": 91
+          "cites": 101
         },
         {
           "year": 2019,
-          "cites": 116
+          "cites": 137
         },
         {
           "year": 2020,
-          "cites": 226
+          "cites": 236
         },
         {
           "year": 2021,
-          "cites": 232
-        },
-        {
-          "year": 2022,
-          "cites": 256
-        },
-        {
-          "year": 2023,
-          "cites": 262
-        },
-        {
-          "year": 2024,
           "cites": 246
         },
         {
+          "year": 2022,
+          "cites": 271
+        },
+        {
+          "year": 2023,
+          "cites": 279
+        },
+        {
+          "year": 2024,
+          "cites": 294
+        },
+        {
           "year": 2025,
-          "cites": 270
+          "cites": 308
         },
         {
           "year": 2026,
-          "cites": 131
+          "cites": 291
         }
       ],
       "scholar": [
@@ -5361,51 +5235,51 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 20
+          "cites": 18
         },
         {
           "year": 2016,
-          "cites": 48
+          "cites": 49
         },
         {
           "year": 2017,
-          "cites": 78
+          "cites": 79
         },
         {
           "year": 2018,
-          "cites": 150
+          "cites": 149
         },
         {
           "year": 2019,
-          "cites": 186
+          "cites": 185
         },
         {
           "year": 2020,
-          "cites": 273
+          "cites": 265
         },
         {
           "year": 2021,
-          "cites": 355
+          "cites": 370
         },
         {
           "year": 2022,
-          "cites": 444
+          "cites": 442
         },
         {
           "year": 2023,
-          "cites": 424
+          "cites": 419
         },
         {
           "year": 2024,
-          "cites": 408
+          "cites": 409
         },
         {
           "year": 2025,
-          "cites": 496
+          "cites": 504
         },
         {
           "year": 2026,
-          "cites": 243
+          "cites": 440
         }
       ]
     },
@@ -5416,10 +5290,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1991,
-          "cites": 0
-        },
         {
           "year": 2021,
           "cites": 0
@@ -5438,11 +5308,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 11
+          "cites": 14
         },
         {
           "year": 2026,
-          "cites": 1
+          "cites": 4
         }
       ],
       "scholar": []
@@ -5454,6 +5324,10 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
+        {
+          "year": 2012,
+          "cites": 2
+        },
         {
           "year": 2014,
           "cites": 1
@@ -5468,39 +5342,39 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 6
+          "cites": 7
         },
         {
           "year": 2019,
-          "cites": 17
+          "cites": 16
         },
         {
           "year": 2020,
-          "cites": 29
+          "cites": 30
         },
         {
           "year": 2021,
-          "cites": 64
+          "cites": 61
         },
         {
           "year": 2022,
-          "cites": 71
+          "cites": 70
         },
         {
           "year": 2023,
-          "cites": 82
+          "cites": 80
         },
         {
           "year": 2024,
-          "cites": 88
+          "cites": 99
         },
         {
           "year": 2025,
-          "cites": 103
+          "cites": 143
         },
         {
           "year": 2026,
-          "cites": 77
+          "cites": 170
         }
       ],
       "scholar": [
@@ -5510,7 +5384,7 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 9
+          "cites": 8
         },
         {
           "year": 2019,
@@ -5518,31 +5392,31 @@ window.BENCH = {
         },
         {
           "year": 2020,
-          "cites": 47
+          "cites": 46
         },
         {
           "year": 2021,
-          "cites": 113
+          "cites": 117
         },
         {
           "year": 2022,
-          "cites": 135
+          "cites": 131
         },
         {
           "year": 2023,
-          "cites": 205
+          "cites": 206
         },
         {
           "year": 2024,
-          "cites": 269
+          "cites": 261
         },
         {
           "year": 2025,
-          "cites": 299
+          "cites": 307
         },
         {
           "year": 2026,
-          "cites": 190
+          "cites": 328
         }
       ]
     },
@@ -5595,35 +5469,35 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 35
+          "cites": 31
         },
         {
           "year": 2013,
-          "cites": 42
+          "cites": 41
         },
         {
           "year": 2014,
-          "cites": 74
+          "cites": 69
         },
         {
           "year": 2015,
-          "cites": 64
+          "cites": 66
         },
         {
           "year": 2016,
-          "cites": 90
+          "cites": 91
         },
         {
           "year": 2017,
-          "cites": 94
+          "cites": 92
         },
         {
           "year": 2018,
-          "cites": 128
+          "cites": 131
         },
         {
           "year": 2019,
-          "cites": 112
+          "cites": 115
         },
         {
           "year": 2020,
@@ -5631,49 +5505,45 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 171
+          "cites": 167
         },
         {
           "year": 2022,
-          "cites": 211
+          "cites": 203
         },
         {
           "year": 2023,
-          "cites": 275
+          "cites": 288
         },
         {
           "year": 2024,
-          "cites": 249
+          "cites": 266
         },
         {
           "year": 2025,
-          "cites": 310
+          "cites": 338
         },
         {
           "year": 2026,
-          "cites": 189
+          "cites": 359
         }
       ],
       "scholar": [
-        {
-          "year": 2007,
-          "cites": 7
-        },
         {
           "year": 2008,
           "cites": 10
         },
         {
           "year": 2009,
-          "cites": 17
+          "cites": 19
         },
         {
           "year": 2010,
-          "cites": 13
+          "cites": 11
         },
         {
           "year": 2011,
-          "cites": 27
+          "cites": 26
         },
         {
           "year": 2012,
@@ -5689,19 +5559,19 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 72
+          "cites": 74
         },
         {
           "year": 2016,
-          "cites": 94
+          "cites": 93
         },
         {
           "year": 2017,
-          "cites": 96
+          "cites": 98
         },
         {
           "year": 2018,
-          "cites": 127
+          "cites": 125
         },
         {
           "year": 2019,
@@ -5713,27 +5583,27 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 196
+          "cites": 195
         },
         {
           "year": 2022,
-          "cites": 220
+          "cites": 226
         },
         {
           "year": 2023,
-          "cites": 316
+          "cites": 311
         },
         {
           "year": 2024,
-          "cites": 345
+          "cites": 355
         },
         {
           "year": 2025,
-          "cites": 407
+          "cites": 409
         },
         {
           "year": 2026,
-          "cites": 258
+          "cites": 417
         }
       ]
     },
@@ -5758,34 +5628,30 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 4
+          "cites": 6
         },
         {
           "year": 2022,
-          "cites": 11
+          "cites": 14
         },
         {
           "year": 2023,
-          "cites": 49
+          "cites": 54
         },
         {
           "year": 2024,
-          "cites": 37
+          "cites": 49
         },
         {
           "year": 2025,
-          "cites": 61
+          "cites": 74
         },
         {
           "year": 2026,
-          "cites": 40
+          "cites": 89
         }
       ],
       "scholar": [
-        {
-          "year": 2020,
-          "cites": 1
-        },
         {
           "year": 2021,
           "cites": 6
@@ -5796,7 +5662,7 @@ window.BENCH = {
         },
         {
           "year": 2023,
-          "cites": 47
+          "cites": 46
         },
         {
           "year": 2024,
@@ -5804,11 +5670,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 121
+          "cites": 124
         },
         {
           "year": 2026,
-          "cites": 88
+          "cites": 141
         }
       ]
     },
@@ -5821,94 +5687,6 @@ window.BENCH = {
       "openalex": [
         {
           "year": 1951,
-          "cites": 0
-        },
-        {
-          "year": 1952,
-          "cites": 0
-        },
-        {
-          "year": 1953,
-          "cites": 0
-        },
-        {
-          "year": 1954,
-          "cites": 0
-        },
-        {
-          "year": 1955,
-          "cites": 0
-        },
-        {
-          "year": 1956,
-          "cites": 0
-        },
-        {
-          "year": 1957,
-          "cites": 0
-        },
-        {
-          "year": 1958,
-          "cites": 0
-        },
-        {
-          "year": 1961,
-          "cites": 0
-        },
-        {
-          "year": 1962,
-          "cites": 0
-        },
-        {
-          "year": 1963,
-          "cites": 0
-        },
-        {
-          "year": 1964,
-          "cites": 0
-        },
-        {
-          "year": 1966,
-          "cites": 0
-        },
-        {
-          "year": 1967,
-          "cites": 0
-        },
-        {
-          "year": 1969,
-          "cites": 0
-        },
-        {
-          "year": 1970,
-          "cites": 0
-        },
-        {
-          "year": 1972,
-          "cites": 0
-        },
-        {
-          "year": 1973,
-          "cites": 0
-        },
-        {
-          "year": 1974,
-          "cites": 0
-        },
-        {
-          "year": 1975,
-          "cites": 0
-        },
-        {
-          "year": 1977,
-          "cites": 0
-        },
-        {
-          "year": 1982,
-          "cites": 0
-        },
-        {
-          "year": 1984,
           "cites": 0
         },
         {
@@ -6000,6 +5778,10 @@ window.BENCH = {
           "cites": 0
         },
         {
+          "year": 2007,
+          "cites": 0
+        },
+        {
           "year": 2008,
           "cites": 0
         },
@@ -6017,185 +5799,185 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 511
+          "cites": 1158
         },
         {
           "year": 2013,
-          "cites": 509
+          "cites": 1172
         },
         {
           "year": 2014,
-          "cites": 604
+          "cites": 1440
         },
         {
           "year": 2015,
-          "cites": 560
+          "cites": 1423
         },
         {
           "year": 2016,
-          "cites": 479
+          "cites": 1400
         },
         {
           "year": 2017,
-          "cites": 521
+          "cites": 1446
         },
         {
           "year": 2018,
-          "cites": 514
+          "cites": 1621
         },
         {
           "year": 2019,
-          "cites": 495
+          "cites": 1581
         },
         {
           "year": 2020,
-          "cites": 1014
+          "cites": 3006
         },
         {
           "year": 2021,
-          "cites": 493
+          "cites": 1750
         },
         {
           "year": 2022,
-          "cites": 453
+          "cites": 1512
         },
         {
           "year": 2023,
-          "cites": 442
+          "cites": 1601
         },
         {
           "year": 2024,
-          "cites": 447
+          "cites": 1626
         },
         {
           "year": 2025,
-          "cites": 354
+          "cites": 1578
         },
         {
           "year": 2026,
-          "cites": 159
+          "cites": 1364
         }
       ],
       "scholar": [
         {
           "year": 1997,
-          "cites": 213
+          "cites": 212
         },
         {
           "year": 1998,
-          "cites": 235
+          "cites": 233
         },
         {
           "year": 1999,
-          "cites": 277
+          "cites": 281
         },
         {
           "year": 2000,
-          "cites": 337
+          "cites": 334
         },
         {
           "year": 2001,
-          "cites": 339
+          "cites": 356
         },
         {
           "year": 2002,
-          "cites": 596
+          "cites": 600
         },
         {
           "year": 2003,
-          "cites": 588
+          "cites": 608
         },
         {
           "year": 2004,
-          "cites": 985
+          "cites": 988
         },
         {
           "year": 2005,
-          "cites": 973
+          "cites": 972
         },
         {
           "year": 2006,
-          "cites": 1178
+          "cites": 1166
         },
         {
           "year": 2007,
-          "cites": 1255
+          "cites": 1237
         },
         {
           "year": 2008,
-          "cites": 1473
+          "cites": 1454
         },
         {
           "year": 2009,
-          "cites": 1613
+          "cites": 1619
         },
         {
           "year": 2010,
-          "cites": 1709
+          "cites": 1691
         },
         {
           "year": 2011,
-          "cites": 2045
+          "cites": 2056
         },
         {
           "year": 2012,
-          "cites": 2064
+          "cites": 2055
         },
         {
           "year": 2013,
-          "cites": 2520
+          "cites": 2506
         },
         {
           "year": 2014,
-          "cites": 2563
+          "cites": 2596
         },
         {
           "year": 2015,
-          "cites": 2782
+          "cites": 2785
         },
         {
           "year": 2016,
-          "cites": 2833
+          "cites": 2794
         },
         {
           "year": 2017,
-          "cites": 3157
+          "cites": 3182
         },
         {
           "year": 2018,
-          "cites": 3129
+          "cites": 3148
         },
         {
           "year": 2019,
-          "cites": 3429
+          "cites": 3403
         },
         {
           "year": 2020,
-          "cites": 3272
+          "cites": 3275
         },
         {
           "year": 2021,
-          "cites": 3458
+          "cites": 3462
         },
         {
           "year": 2022,
-          "cites": 3260
+          "cites": 3266
         },
         {
           "year": 2023,
-          "cites": 3212
+          "cites": 3236
         },
         {
           "year": 2024,
-          "cites": 3321
+          "cites": 3249
         },
         {
           "year": 2025,
-          "cites": 3106
+          "cites": 3112
         },
         {
           "year": 2026,
-          "cites": 1484
+          "cites": 2566
         }
       ]
     },
@@ -6207,15 +5989,15 @@ window.BENCH = {
       "team": false,
       "openalex": [
         {
+          "year": 1994,
+          "cites": 0
+        },
+        {
           "year": 1995,
           "cites": 0
         },
         {
           "year": 1999,
-          "cites": 0
-        },
-        {
-          "year": 2003,
           "cites": 0
         },
         {
@@ -6252,69 +6034,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 53
+          "cites": 54
         },
         {
           "year": 2013,
-          "cites": 86
+          "cites": 90
         },
         {
           "year": 2014,
-          "cites": 104
+          "cites": 109
         },
         {
           "year": 2015,
-          "cites": 114
+          "cites": 122
         },
         {
           "year": 2016,
-          "cites": 114
-        },
-        {
-          "year": 2017,
-          "cites": 112
-        },
-        {
-          "year": 2018,
-          "cites": 121
-        },
-        {
-          "year": 2019,
-          "cites": 132
-        },
-        {
-          "year": 2020,
-          "cites": 114
-        },
-        {
-          "year": 2021,
-          "cites": 147
-        },
-        {
-          "year": 2022,
-          "cites": 126
-        },
-        {
-          "year": 2023,
-          "cites": 147
-        },
-        {
-          "year": 2024,
-          "cites": 113
-        },
-        {
-          "year": 2025,
           "cites": 118
         },
         {
+          "year": 2017,
+          "cites": 116
+        },
+        {
+          "year": 2018,
+          "cites": 136
+        },
+        {
+          "year": 2019,
+          "cites": 135
+        },
+        {
+          "year": 2020,
+          "cites": 116
+        },
+        {
+          "year": 2021,
+          "cites": 151
+        },
+        {
+          "year": 2022,
+          "cites": 125
+        },
+        {
+          "year": 2023,
+          "cites": 138
+        },
+        {
+          "year": 2024,
+          "cites": 123
+        },
+        {
+          "year": 2025,
+          "cites": 136
+        },
+        {
           "year": 2026,
-          "cites": 51
+          "cites": 94
         }
       ],
       "scholar": [
         {
           "year": 2000,
-          "cites": 14
+          "cites": 13
         },
         {
           "year": 2001,
@@ -6334,7 +6116,7 @@ window.BENCH = {
         },
         {
           "year": 2005,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2006,
@@ -6342,27 +6124,27 @@ window.BENCH = {
         },
         {
           "year": 2007,
-          "cites": 25
+          "cites": 24
         },
         {
           "year": 2008,
-          "cites": 38
+          "cites": 39
         },
         {
           "year": 2009,
-          "cites": 60
+          "cites": 61
         },
         {
           "year": 2010,
-          "cites": 48
+          "cites": 44
         },
         {
           "year": 2011,
-          "cites": 46
+          "cites": 48
         },
         {
           "year": 2012,
-          "cites": 78
+          "cites": 77
         },
         {
           "year": 2013,
@@ -6370,55 +6152,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 134
+          "cites": 132
         },
         {
           "year": 2015,
-          "cites": 181
+          "cites": 179
         },
         {
           "year": 2016,
-          "cites": 172
+          "cites": 170
         },
         {
           "year": 2017,
-          "cites": 137
+          "cites": 138
         },
         {
           "year": 2018,
-          "cites": 163
+          "cites": 162
         },
         {
           "year": 2019,
-          "cites": 181
+          "cites": 185
         },
         {
           "year": 2020,
-          "cites": 193
+          "cites": 192
         },
         {
           "year": 2021,
-          "cites": 184
+          "cites": 185
         },
         {
           "year": 2022,
-          "cites": 184
+          "cites": 186
         },
         {
           "year": 2023,
-          "cites": 207
+          "cites": 205
         },
         {
           "year": 2024,
-          "cites": 173
+          "cites": 174
         },
         {
           "year": 2025,
-          "cites": 165
+          "cites": 166
         },
         {
           "year": 2026,
-          "cites": 73
+          "cites": 118
         }
       ]
     },
@@ -6439,7 +6221,7 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 4
+          "cites": 3
         },
         {
           "year": 2019,
@@ -6447,61 +6229,49 @@ window.BENCH = {
         },
         {
           "year": 2020,
-          "cites": 11
+          "cites": 9
         },
         {
           "year": 2021,
-          "cites": 17
+          "cites": 14
         },
         {
           "year": 2022,
-          "cites": 61
+          "cites": 55
         },
         {
           "year": 2023,
-          "cites": 107
+          "cites": 123
         },
         {
           "year": 2024,
-          "cites": 199
+          "cites": 218
         },
         {
           "year": 2025,
-          "cites": 279
+          "cites": 335
         },
         {
           "year": 2026,
-          "cites": 155
+          "cites": 343
         }
       ],
       "scholar": [
-        {
-          "year": 2017,
-          "cites": 3
-        },
-        {
-          "year": 2018,
-          "cites": 3
-        },
-        {
-          "year": 2019,
-          "cites": 3
-        },
         {
           "year": 2020,
           "cites": 13
         },
         {
           "year": 2021,
-          "cites": 15
+          "cites": 13
         },
         {
           "year": 2022,
-          "cites": 64
+          "cites": 67
         },
         {
           "year": 2023,
-          "cites": 128
+          "cites": 132
         },
         {
           "year": 2024,
@@ -6509,11 +6279,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 424
+          "cites": 410
         },
         {
           "year": 2026,
-          "cites": 257
+          "cites": 503
         }
       ]
     },
@@ -6546,7 +6316,7 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 12
+          "cites": 11
         },
         {
           "year": 2015,
@@ -6562,7 +6332,7 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 6
+          "cites": 8
         },
         {
           "year": 2019,
@@ -6578,7 +6348,7 @@ window.BENCH = {
         },
         {
           "year": 2022,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2023,
@@ -6590,7 +6360,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 2
+          "cites": 4
+        },
+        {
+          "year": 2026,
+          "cites": 3
         }
       ],
       "scholar": [
@@ -6624,11 +6398,11 @@ window.BENCH = {
         },
         {
           "year": 2010,
-          "cites": 13
+          "cites": 15
         },
         {
           "year": 2011,
-          "cites": 9
+          "cites": 11
         },
         {
           "year": 2012,
@@ -6652,15 +6426,15 @@ window.BENCH = {
         },
         {
           "year": 2017,
-          "cites": 16
+          "cites": 15
         },
         {
           "year": 2018,
-          "cites": 17
+          "cites": 19
         },
         {
           "year": 2019,
-          "cites": 20
+          "cites": 19
         },
         {
           "year": 2020,
@@ -6668,27 +6442,27 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 19
+          "cites": 20
         },
         {
           "year": 2022,
-          "cites": 19
+          "cites": 20
         },
         {
           "year": 2023,
-          "cites": 10
+          "cites": 9
         },
         {
           "year": 2024,
-          "cites": 14
-        },
-        {
-          "year": 2025,
           "cites": 13
         },
         {
+          "year": 2025,
+          "cites": 11
+        },
+        {
           "year": 2026,
-          "cites": 3
+          "cites": 9
         }
       ]
     },
@@ -6709,7 +6483,7 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2013,
@@ -6725,15 +6499,15 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 5
+          "cites": 6
         },
         {
           "year": 2017,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2018,
-          "cites": 8
+          "cites": 10
         },
         {
           "year": 2019,
@@ -6741,31 +6515,31 @@ window.BENCH = {
         },
         {
           "year": 2020,
-          "cites": 17
+          "cites": 19
         },
         {
           "year": 2021,
-          "cites": 17
+          "cites": 18
         },
         {
           "year": 2022,
-          "cites": 13
+          "cites": 15
         },
         {
           "year": 2023,
-          "cites": 24
+          "cites": 29
         },
         {
           "year": 2024,
-          "cites": 12
+          "cites": 16
         },
         {
           "year": 2025,
-          "cites": 20
+          "cites": 23
         },
         {
           "year": 2026,
-          "cites": 11
+          "cites": 26
         }
       ],
       "scholar": []
@@ -6777,10 +6551,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1994,
-          "cites": 0
-        },
         {
           "year": 1997,
           "cites": 0
@@ -6835,63 +6605,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 140
+          "cites": 196
         },
         {
           "year": 2013,
-          "cites": 117
+          "cites": 169
         },
         {
           "year": 2014,
-          "cites": 100
+          "cites": 164
         },
         {
           "year": 2015,
-          "cites": 107
+          "cites": 157
         },
         {
           "year": 2016,
-          "cites": 95
+          "cites": 152
         },
         {
           "year": 2017,
-          "cites": 106
+          "cites": 176
         },
         {
           "year": 2018,
-          "cites": 67
+          "cites": 117
         },
         {
           "year": 2019,
-          "cites": 113
+          "cites": 169
         },
         {
           "year": 2020,
-          "cites": 101
+          "cites": 169
         },
         {
           "year": 2021,
-          "cites": 88
+          "cites": 127
         },
         {
           "year": 2022,
-          "cites": 78
+          "cites": 110
         },
         {
           "year": 2023,
-          "cites": 72
+          "cites": 129
         },
         {
           "year": 2024,
-          "cites": 62
+          "cites": 105
         },
         {
           "year": 2025,
-          "cites": 87
+          "cites": 115
         },
         {
           "year": 2026,
-          "cites": 35
+          "cites": 87
         }
       ],
       "scholar": [
@@ -6901,11 +6671,11 @@ window.BENCH = {
         },
         {
           "year": 2002,
-          "cites": 19
+          "cites": 20
         },
         {
           "year": 2003,
-          "cites": 50
+          "cites": 49
         },
         {
           "year": 2004,
@@ -6913,15 +6683,15 @@ window.BENCH = {
         },
         {
           "year": 2005,
-          "cites": 73
+          "cites": 71
         },
         {
           "year": 2006,
-          "cites": 127
+          "cites": 130
         },
         {
           "year": 2007,
-          "cites": 197
+          "cites": 200
         },
         {
           "year": 2008,
@@ -6929,19 +6699,19 @@ window.BENCH = {
         },
         {
           "year": 2009,
-          "cites": 217
+          "cites": 215
         },
         {
           "year": 2010,
-          "cites": 243
+          "cites": 239
         },
         {
           "year": 2011,
-          "cites": 282
+          "cites": 280
         },
         {
           "year": 2012,
-          "cites": 290
+          "cites": 295
         },
         {
           "year": 2013,
@@ -6949,11 +6719,11 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 283
+          "cites": 282
         },
         {
           "year": 2015,
-          "cites": 234
+          "cites": 236
         },
         {
           "year": 2016,
@@ -6965,39 +6735,39 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 202
+          "cites": 201
         },
         {
           "year": 2019,
-          "cites": 229
+          "cites": 230
         },
         {
           "year": 2020,
-          "cites": 200
+          "cites": 204
         },
         {
           "year": 2021,
-          "cites": 211
+          "cites": 205
         },
         {
           "year": 2022,
-          "cites": 152
+          "cites": 153
         },
         {
           "year": 2023,
-          "cites": 157
+          "cites": 167
         },
         {
           "year": 2024,
-          "cites": 169
+          "cites": 170
         },
         {
           "year": 2025,
-          "cites": 172
+          "cites": 176
         },
         {
           "year": 2026,
-          "cites": 108
+          "cites": 162
         }
       ]
     },
@@ -7008,22 +6778,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1978,
-          "cites": 0
-        },
-        {
-          "year": 1999,
-          "cites": 0
-        },
-        {
-          "year": 2003,
-          "cites": 0
-        },
-        {
-          "year": 2008,
-          "cites": 0
-        },
         {
           "year": 2009,
           "cites": 0
@@ -7038,69 +6792,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 31
-        },
-        {
-          "year": 2013,
-          "cites": 38
-        },
-        {
-          "year": 2014,
-          "cites": 25
-        },
-        {
-          "year": 2015,
           "cites": 21
         },
         {
+          "year": 2013,
+          "cites": 33
+        },
+        {
+          "year": 2014,
+          "cites": 18
+        },
+        {
+          "year": 2015,
+          "cites": 19
+        },
+        {
           "year": 2016,
-          "cites": 41
+          "cites": 34
         },
         {
           "year": 2017,
-          "cites": 27
+          "cites": 25
         },
         {
           "year": 2018,
-          "cites": 67
+          "cites": 61
         },
         {
           "year": 2019,
-          "cites": 104
+          "cites": 100
         },
         {
           "year": 2020,
-          "cites": 185
+          "cites": 177
         },
         {
           "year": 2021,
-          "cites": 221
+          "cites": 214
         },
         {
           "year": 2022,
-          "cites": 262
+          "cites": 273
         },
         {
           "year": 2023,
-          "cites": 270
+          "cites": 303
         },
         {
           "year": 2024,
-          "cites": 305
+          "cites": 355
         },
         {
           "year": 2025,
-          "cites": 330
+          "cites": 402
         },
         {
           "year": 2026,
-          "cites": 153
+          "cites": 325
         }
       ],
       "scholar": [
         {
           "year": 2012,
-          "cites": 14
+          "cites": 15
         },
         {
           "year": 2013,
@@ -7108,55 +6862,55 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 28
+          "cites": 26
         },
         {
           "year": 2015,
-          "cites": 18
+          "cites": 19
         },
         {
           "year": 2016,
-          "cites": 53
+          "cites": 56
         },
         {
           "year": 2017,
-          "cites": 34
+          "cites": 39
         },
         {
           "year": 2018,
-          "cites": 76
+          "cites": 84
         },
         {
           "year": 2019,
-          "cites": 152
+          "cites": 158
         },
         {
           "year": 2020,
-          "cites": 267
+          "cites": 271
         },
         {
           "year": 2021,
-          "cites": 319
+          "cites": 327
         },
         {
           "year": 2022,
-          "cites": 396
+          "cites": 406
         },
         {
           "year": 2023,
-          "cites": 556
+          "cites": 550
         },
         {
           "year": 2024,
-          "cites": 648
+          "cites": 653
         },
         {
           "year": 2025,
-          "cites": 696
+          "cites": 707
         },
         {
           "year": 2026,
-          "cites": 339
+          "cites": 562
         }
       ]
     },
@@ -7213,63 +6967,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 94
+          "cites": 95
         },
         {
           "year": 2013,
-          "cites": 121
+          "cites": 132
         },
         {
           "year": 2014,
-          "cites": 154
+          "cites": 165
         },
         {
           "year": 2015,
-          "cites": 223
+          "cites": 236
         },
         {
           "year": 2016,
-          "cites": 262
+          "cites": 281
         },
         {
           "year": 2017,
-          "cites": 225
+          "cites": 260
         },
         {
           "year": 2018,
-          "cites": 315
+          "cites": 339
         },
         {
           "year": 2019,
-          "cites": 285
+          "cites": 329
         },
         {
           "year": 2020,
-          "cites": 347
+          "cites": 369
         },
         {
           "year": 2021,
-          "cites": 318
+          "cites": 329
         },
         {
           "year": 2022,
-          "cites": 308
+          "cites": 327
         },
         {
           "year": 2023,
-          "cites": 291
+          "cites": 340
         },
         {
           "year": 2024,
-          "cites": 342
+          "cites": 405
         },
         {
           "year": 2025,
-          "cites": 235
+          "cites": 309
         },
         {
           "year": 2026,
-          "cites": 131
+          "cites": 290
         }
       ],
       "scholar": [
@@ -7279,11 +7033,11 @@ window.BENCH = {
         },
         {
           "year": 2009,
-          "cites": 47
+          "cites": 42
         },
         {
           "year": 2010,
-          "cites": 64
+          "cites": 63
         },
         {
           "year": 2011,
@@ -7291,63 +7045,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 168
+          "cites": 173
         },
         {
           "year": 2013,
-          "cites": 205
+          "cites": 198
         },
         {
           "year": 2014,
-          "cites": 282
+          "cites": 279
         },
         {
           "year": 2015,
-          "cites": 313
+          "cites": 319
         },
         {
           "year": 2016,
-          "cites": 422
+          "cites": 427
         },
         {
           "year": 2017,
-          "cites": 447
+          "cites": 446
         },
         {
           "year": 2018,
-          "cites": 490
+          "cites": 478
         },
         {
           "year": 2019,
-          "cites": 502
+          "cites": 501
         },
         {
           "year": 2020,
-          "cites": 575
+          "cites": 551
         },
         {
           "year": 2021,
-          "cites": 537
+          "cites": 538
         },
         {
           "year": 2022,
-          "cites": 594
+          "cites": 599
         },
         {
           "year": 2023,
-          "cites": 642
+          "cites": 646
         },
         {
           "year": 2024,
-          "cites": 615
+          "cites": 619
         },
         {
           "year": 2025,
-          "cites": 589
+          "cites": 584
         },
         {
           "year": 2026,
-          "cites": 287
+          "cites": 502
         }
       ]
     },
@@ -7359,40 +7113,36 @@ window.BENCH = {
       "team": false,
       "openalex": [
         {
-          "year": 1977,
-          "cites": 0
-        },
-        {
           "year": 2019,
           "cites": 0
         },
         {
           "year": 2020,
-          "cites": 13
+          "cites": 15
         },
         {
           "year": 2021,
-          "cites": 40
+          "cites": 38
         },
         {
           "year": 2022,
-          "cites": 113
+          "cites": 116
         },
         {
           "year": 2023,
-          "cites": 171
+          "cites": 177
         },
         {
           "year": 2024,
-          "cites": 229
+          "cites": 243
         },
         {
           "year": 2025,
-          "cites": 366
+          "cites": 414
         },
         {
           "year": 2026,
-          "cites": 243
+          "cites": 501
         }
       ],
       "scholar": [
@@ -7402,27 +7152,27 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 43
+          "cites": 44
         },
         {
           "year": 2022,
-          "cites": 147
+          "cites": 145
         },
         {
           "year": 2023,
-          "cites": 221
+          "cites": 224
         },
         {
           "year": 2024,
-          "cites": 329
+          "cites": 324
         },
         {
           "year": 2025,
-          "cites": 549
+          "cites": 550
         },
         {
           "year": 2026,
-          "cites": 414
+          "cites": 655
         }
       ]
     },
@@ -7483,157 +7233,157 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 737
+          "cites": 754
         },
         {
           "year": 2013,
-          "cites": 845
+          "cites": 850
         },
         {
           "year": 2014,
-          "cites": 989
+          "cites": 1022
         },
         {
           "year": 2015,
-          "cites": 999
+          "cites": 1035
         },
         {
           "year": 2016,
-          "cites": 915
+          "cites": 974
         },
         {
           "year": 2017,
-          "cites": 1068
+          "cites": 1163
         },
         {
           "year": 2018,
-          "cites": 1118
+          "cites": 1208
         },
         {
           "year": 2019,
-          "cites": 1318
+          "cites": 1451
         },
         {
           "year": 2020,
-          "cites": 1379
+          "cites": 1514
         },
         {
           "year": 2021,
-          "cites": 1405
+          "cites": 1524
         },
         {
           "year": 2022,
-          "cites": 1462
+          "cites": 1559
         },
         {
           "year": 2023,
-          "cites": 1447
+          "cites": 1599
         },
         {
           "year": 2024,
-          "cites": 1314
+          "cites": 1494
         },
         {
           "year": 2025,
-          "cites": 1220
+          "cites": 1528
         },
         {
           "year": 2026,
-          "cites": 601
+          "cites": 1307
         }
       ],
       "scholar": [
         {
           "year": 2004,
-          "cites": 118
+          "cites": 122
         },
         {
           "year": 2005,
-          "cites": 164
+          "cites": 161
         },
         {
           "year": 2006,
-          "cites": 283
+          "cites": 282
         },
         {
           "year": 2007,
-          "cites": 368
+          "cites": 375
         },
         {
           "year": 2008,
-          "cites": 552
+          "cites": 564
         },
         {
           "year": 2009,
-          "cites": 737
+          "cites": 742
         },
         {
           "year": 2010,
-          "cites": 818
+          "cites": 821
         },
         {
           "year": 2011,
-          "cites": 1086
+          "cites": 1078
         },
         {
           "year": 2012,
-          "cites": 1197
+          "cites": 1194
         },
         {
           "year": 2013,
-          "cites": 1529
+          "cites": 1527
         },
         {
           "year": 2014,
-          "cites": 1727
+          "cites": 1713
         },
         {
           "year": 2015,
-          "cites": 2009
+          "cites": 1990
         },
         {
           "year": 2016,
-          "cites": 1967
+          "cites": 1933
         },
         {
           "year": 2017,
-          "cites": 2171
+          "cites": 2183
         },
         {
           "year": 2018,
-          "cites": 2247
+          "cites": 2239
         },
         {
           "year": 2019,
-          "cites": 2559
+          "cites": 2550
         },
         {
           "year": 2020,
-          "cites": 2494
+          "cites": 2479
         },
         {
           "year": 2021,
-          "cites": 2635
+          "cites": 2625
         },
         {
           "year": 2022,
-          "cites": 2586
+          "cites": 2593
         },
         {
           "year": 2023,
-          "cites": 2662
+          "cites": 2655
         },
         {
           "year": 2024,
-          "cites": 2485
+          "cites": 2461
         },
         {
           "year": 2025,
-          "cites": 2627
+          "cites": 2578
         },
         {
           "year": 2026,
-          "cites": 1359
+          "cites": 2159
         }
       ]
     },
@@ -7666,7 +7416,7 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 10
+          "cites": 11
         },
         {
           "year": 2016,
@@ -7674,49 +7424,49 @@ window.BENCH = {
         },
         {
           "year": 2017,
-          "cites": 17
+          "cites": 19
         },
         {
           "year": 2018,
-          "cites": 50
+          "cites": 62
         },
         {
           "year": 2019,
-          "cites": 78
+          "cites": 79
         },
         {
           "year": 2020,
-          "cites": 126
+          "cites": 132
         },
         {
           "year": 2021,
-          "cites": 191
+          "cites": 188
         },
         {
           "year": 2022,
-          "cites": 181
+          "cites": 175
         },
         {
           "year": 2023,
-          "cites": 183
+          "cites": 189
         },
         {
           "year": 2024,
-          "cites": 232
+          "cites": 253
         },
         {
           "year": 2025,
-          "cites": 190
+          "cites": 222
         },
         {
           "year": 2026,
-          "cites": 112
+          "cites": 284
         }
       ],
       "scholar": [
         {
           "year": 2015,
-          "cites": 7
+          "cites": 8
         },
         {
           "year": 2016,
@@ -7724,11 +7474,11 @@ window.BENCH = {
         },
         {
           "year": 2017,
-          "cites": 21
+          "cites": 23
         },
         {
           "year": 2018,
-          "cites": 73
+          "cites": 70
         },
         {
           "year": 2019,
@@ -7736,31 +7486,31 @@ window.BENCH = {
         },
         {
           "year": 2020,
-          "cites": 149
+          "cites": 150
         },
         {
           "year": 2021,
-          "cites": 226
+          "cites": 228
         },
         {
           "year": 2022,
-          "cites": 277
+          "cites": 275
         },
         {
           "year": 2023,
-          "cites": 274
+          "cites": 276
         },
         {
           "year": 2024,
-          "cites": 307
+          "cites": 309
         },
         {
           "year": 2025,
-          "cites": 342
+          "cites": 337
         },
         {
           "year": 2026,
-          "cites": 188
+          "cites": 334
         }
       ]
     },
@@ -7789,11 +7539,11 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2019,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2020,
@@ -7805,11 +7555,11 @@ window.BENCH = {
         },
         {
           "year": 2022,
-          "cites": 10
+          "cites": 12
         },
         {
           "year": 2023,
-          "cites": 9
+          "cites": 10
         },
         {
           "year": 2024,
@@ -7817,11 +7567,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 25
+          "cites": 29
         },
         {
           "year": 2026,
-          "cites": 6
+          "cites": 16
         }
       ],
       "scholar": [
@@ -7831,7 +7581,7 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2017,
@@ -7855,7 +7605,7 @@ window.BENCH = {
         },
         {
           "year": 2022,
-          "cites": 18
+          "cites": 17
         },
         {
           "year": 2023,
@@ -7863,7 +7613,7 @@ window.BENCH = {
         },
         {
           "year": 2024,
-          "cites": 25
+          "cites": 27
         },
         {
           "year": 2025,
@@ -7871,7 +7621,7 @@ window.BENCH = {
         },
         {
           "year": 2026,
-          "cites": 16
+          "cites": 29
         }
       ]
     },
@@ -7916,73 +7666,69 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 11
+          "cites": 16
         },
         {
           "year": 2013,
-          "cites": 21
+          "cites": 27
         },
         {
           "year": 2014,
-          "cites": 35
+          "cites": 37
         },
         {
           "year": 2015,
-          "cites": 39
+          "cites": 42
         },
         {
           "year": 2016,
-          "cites": 122
+          "cites": 132
         },
         {
           "year": 2017,
-          "cites": 188
+          "cites": 199
         },
         {
           "year": 2018,
-          "cites": 206
+          "cites": 223
         },
         {
           "year": 2019,
-          "cites": 352
+          "cites": 387
         },
         {
           "year": 2020,
-          "cites": 309
+          "cites": 336
         },
         {
           "year": 2021,
-          "cites": 307
+          "cites": 330
         },
         {
           "year": 2022,
-          "cites": 300
+          "cites": 326
         },
         {
           "year": 2023,
-          "cites": 249
+          "cites": 296
         },
         {
           "year": 2024,
-          "cites": 271
+          "cites": 308
         },
         {
           "year": 2025,
-          "cites": 187
+          "cites": 255
         },
         {
           "year": 2026,
-          "cites": 83
+          "cites": 211
         }
       ],
       "scholar": [
         {
-          "year": 2007,
-          "cites": 17
-        },
-        {
           "year": 2008,
-          "cites": 45
+          "cites": 42
         },
         {
           "year": 2009,
@@ -7990,71 +7736,71 @@ window.BENCH = {
         },
         {
           "year": 2010,
-          "cites": 95
+          "cites": 101
         },
         {
           "year": 2011,
-          "cites": 89
+          "cites": 83
         },
         {
           "year": 2012,
-          "cites": 86
+          "cites": 87
         },
         {
           "year": 2013,
-          "cites": 146
+          "cites": 152
         },
         {
           "year": 2014,
-          "cites": 161
+          "cites": 159
         },
         {
           "year": 2015,
-          "cites": 201
+          "cites": 197
         },
         {
           "year": 2016,
-          "cites": 343
+          "cites": 339
         },
         {
           "year": 2017,
-          "cites": 512
+          "cites": 515
         },
         {
           "year": 2018,
-          "cites": 526
+          "cites": 520
         },
         {
           "year": 2019,
-          "cites": 637
+          "cites": 649
         },
         {
           "year": 2020,
-          "cites": 688
+          "cites": 691
         },
         {
           "year": 2021,
-          "cites": 569
+          "cites": 571
         },
         {
           "year": 2022,
-          "cites": 549
+          "cites": 535
         },
         {
           "year": 2023,
-          "cites": 605
+          "cites": 590
         },
         {
           "year": 2024,
-          "cites": 553
+          "cites": 562
         },
         {
           "year": 2025,
-          "cites": 597
+          "cites": 599
         },
         {
           "year": 2026,
-          "cites": 276
+          "cites": 454
         }
       ]
     },
@@ -8103,35 +7849,35 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 27
+          "cites": 21
         },
         {
           "year": 2013,
-          "cites": 13
+          "cites": 15
         },
         {
           "year": 2014,
-          "cites": 20
+          "cites": 18
         },
         {
           "year": 2015,
-          "cites": 27
+          "cites": 29
         },
         {
           "year": 2016,
-          "cites": 53
+          "cites": 54
         },
         {
           "year": 2017,
-          "cites": 59
+          "cites": 65
         },
         {
           "year": 2018,
-          "cites": 58
+          "cites": 67
         },
         {
           "year": 2019,
-          "cites": 87
+          "cites": 91
         },
         {
           "year": 2020,
@@ -8139,27 +7885,27 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 146
+          "cites": 154
         },
         {
           "year": 2022,
-          "cites": 136
+          "cites": 140
         },
         {
           "year": 2023,
-          "cites": 144
+          "cites": 161
         },
         {
           "year": 2024,
-          "cites": 129
+          "cites": 159
         },
         {
           "year": 2025,
-          "cites": 123
+          "cites": 154
         },
         {
           "year": 2026,
-          "cites": 63
+          "cites": 132
         }
       ],
       "scholar": [
@@ -8169,7 +7915,7 @@ window.BENCH = {
         },
         {
           "year": 1990,
-          "cites": 15
+          "cites": 16
         },
         {
           "year": 1991,
@@ -8189,11 +7935,11 @@ window.BENCH = {
         },
         {
           "year": 1995,
-          "cites": 38
+          "cites": 39
         },
         {
           "year": 1996,
-          "cites": 27
+          "cites": 28
         },
         {
           "year": 1997,
@@ -8201,7 +7947,7 @@ window.BENCH = {
         },
         {
           "year": 1998,
-          "cites": 39
+          "cites": 40
         },
         {
           "year": 1999,
@@ -8209,11 +7955,11 @@ window.BENCH = {
         },
         {
           "year": 2000,
-          "cites": 44
+          "cites": 45
         },
         {
           "year": 2001,
-          "cites": 37
+          "cites": 38
         },
         {
           "year": 2002,
@@ -8225,95 +7971,95 @@ window.BENCH = {
         },
         {
           "year": 2004,
-          "cites": 35
+          "cites": 34
         },
         {
           "year": 2005,
-          "cites": 43
+          "cites": 44
         },
         {
           "year": 2006,
-          "cites": 41
-        },
-        {
-          "year": 2007,
-          "cites": 30
-        },
-        {
-          "year": 2008,
-          "cites": 38
-        },
-        {
-          "year": 2009,
           "cites": 43
         },
         {
-          "year": 2010,
+          "year": 2007,
+          "cites": 28
+        },
+        {
+          "year": 2008,
+          "cites": 37
+        },
+        {
+          "year": 2009,
           "cites": 45
         },
         {
+          "year": 2010,
+          "cites": 43
+        },
+        {
           "year": 2011,
-          "cites": 33
+          "cites": 35
         },
         {
           "year": 2012,
-          "cites": 35
+          "cites": 39
         },
         {
           "year": 2013,
-          "cites": 35
+          "cites": 32
         },
         {
           "year": 2014,
-          "cites": 40
+          "cites": 38
         },
         {
           "year": 2015,
-          "cites": 55
+          "cites": 48
         },
         {
           "year": 2016,
-          "cites": 75
+          "cites": 73
         },
         {
           "year": 2017,
-          "cites": 104
+          "cites": 106
         },
         {
           "year": 2018,
-          "cites": 130
+          "cites": 129
         },
         {
           "year": 2019,
-          "cites": 150
+          "cites": 153
         },
         {
           "year": 2020,
-          "cites": 180
+          "cites": 178
         },
         {
           "year": 2021,
-          "cites": 237
+          "cites": 239
         },
         {
           "year": 2022,
-          "cites": 231
+          "cites": 226
         },
         {
           "year": 2023,
-          "cites": 251
+          "cites": 253
         },
         {
           "year": 2024,
-          "cites": 275
+          "cites": 272
         },
         {
           "year": 2025,
-          "cites": 229
+          "cites": 234
         },
         {
           "year": 2026,
-          "cites": 125
+          "cites": 193
         }
       ]
     },
@@ -8354,7 +8100,7 @@ window.BENCH = {
         },
         {
           "year": 2020,
-          "cites": 2
+          "cites": 3
         },
         {
           "year": 2021,
@@ -8366,6 +8112,10 @@ window.BENCH = {
         },
         {
           "year": 2023,
+          "cites": 3
+        },
+        {
+          "year": 2025,
           "cites": 2
         },
         {
@@ -8420,149 +8170,149 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 180
+          "cites": 187
         },
         {
           "year": 2013,
-          "cites": 171
-        },
-        {
-          "year": 2014,
-          "cites": 178
-        },
-        {
-          "year": 2015,
-          "cites": 200
-        },
-        {
-          "year": 2016,
-          "cites": 188
-        },
-        {
-          "year": 2017,
-          "cites": 211
-        },
-        {
-          "year": 2018,
-          "cites": 231
-        },
-        {
-          "year": 2019,
-          "cites": 172
-        },
-        {
-          "year": 2020,
-          "cites": 172
-        },
-        {
-          "year": 2021,
-          "cites": 214
-        },
-        {
-          "year": 2022,
-          "cites": 169
-        },
-        {
-          "year": 2023,
           "cites": 179
         },
         {
+          "year": 2014,
+          "cites": 185
+        },
+        {
+          "year": 2015,
+          "cites": 208
+        },
+        {
+          "year": 2016,
+          "cites": 199
+        },
+        {
+          "year": 2017,
+          "cites": 236
+        },
+        {
+          "year": 2018,
+          "cites": 255
+        },
+        {
+          "year": 2019,
+          "cites": 198
+        },
+        {
+          "year": 2020,
+          "cites": 200
+        },
+        {
+          "year": 2021,
+          "cites": 234
+        },
+        {
+          "year": 2022,
+          "cites": 186
+        },
+        {
+          "year": 2023,
+          "cites": 208
+        },
+        {
           "year": 2024,
-          "cites": 189
+          "cites": 220
         },
         {
           "year": 2025,
-          "cites": 159
+          "cites": 201
         },
         {
           "year": 2026,
-          "cites": 62
+          "cites": 163
         }
       ],
       "scholar": [
         {
           "year": 2006,
-          "cites": 47
+          "cites": 49
         },
         {
           "year": 2007,
-          "cites": 85
+          "cites": 86
         },
         {
           "year": 2008,
-          "cites": 161
+          "cites": 163
         },
         {
           "year": 2009,
-          "cites": 117
+          "cites": 119
         },
         {
           "year": 2010,
-          "cites": 247
+          "cites": 244
         },
         {
           "year": 2011,
-          "cites": 246
+          "cites": 247
         },
         {
           "year": 2012,
-          "cites": 340
-        },
-        {
-          "year": 2013,
           "cites": 337
         },
         {
+          "year": 2013,
+          "cites": 338
+        },
+        {
           "year": 2014,
-          "cites": 372
+          "cites": 374
         },
         {
           "year": 2015,
-          "cites": 380
+          "cites": 378
         },
         {
           "year": 2016,
-          "cites": 409
-        },
-        {
-          "year": 2017,
-          "cites": 469
-        },
-        {
-          "year": 2018,
-          "cites": 483
-        },
-        {
-          "year": 2019,
           "cites": 402
         },
         {
+          "year": 2017,
+          "cites": 458
+        },
+        {
+          "year": 2018,
+          "cites": 471
+        },
+        {
+          "year": 2019,
+          "cites": 409
+        },
+        {
           "year": 2020,
-          "cites": 386
+          "cites": 375
         },
         {
           "year": 2021,
-          "cites": 362
+          "cites": 356
         },
         {
           "year": 2022,
-          "cites": 310
+          "cites": 320
         },
         {
           "year": 2023,
-          "cites": 367
-        },
-        {
-          "year": 2024,
-          "cites": 344
-        },
-        {
-          "year": 2025,
           "cites": 362
         },
         {
+          "year": 2024,
+          "cites": 349
+        },
+        {
+          "year": 2025,
+          "cites": 372
+        },
+        {
           "year": 2026,
-          "cites": 164
+          "cites": 292
         }
       ]
     },
@@ -8573,6 +8323,10 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
+        {
+          "year": 1998,
+          "cites": 0
+        },
         {
           "year": 2000,
           "cites": 0
@@ -8619,109 +8373,109 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 144
+          "cites": 307
         },
         {
           "year": 2013,
-          "cites": 172
+          "cites": 384
         },
         {
           "year": 2014,
-          "cites": 181
+          "cites": 373
         },
         {
           "year": 2015,
-          "cites": 204
+          "cites": 419
         },
         {
           "year": 2016,
-          "cites": 219
+          "cites": 448
         },
         {
           "year": 2017,
-          "cites": 240
+          "cites": 454
         },
         {
           "year": 2018,
-          "cites": 232
+          "cites": 479
         },
         {
           "year": 2019,
-          "cites": 255
+          "cites": 579
         },
         {
           "year": 2020,
-          "cites": 312
+          "cites": 681
         },
         {
           "year": 2021,
-          "cites": 283
+          "cites": 622
         },
         {
           "year": 2022,
-          "cites": 270
+          "cites": 595
         },
         {
           "year": 2023,
-          "cites": 306
+          "cites": 675
         },
         {
           "year": 2024,
-          "cites": 221
+          "cites": 598
         },
         {
           "year": 2025,
-          "cites": 205
+          "cites": 666
         },
         {
           "year": 2026,
-          "cites": 106
+          "cites": 622
         }
       ],
       "scholar": [
         {
           "year": 2006,
-          "cites": 73
+          "cites": 77
         },
         {
           "year": 2007,
-          "cites": 91
+          "cites": 89
         },
         {
           "year": 2008,
-          "cites": 155
+          "cites": 158
         },
         {
           "year": 2009,
-          "cites": 194
+          "cites": 198
         },
         {
           "year": 2010,
-          "cites": 231
+          "cites": 227
         },
         {
           "year": 2011,
-          "cites": 370
+          "cites": 383
         },
         {
           "year": 2012,
-          "cites": 364
+          "cites": 360
         },
         {
           "year": 2013,
-          "cites": 525
+          "cites": 520
         },
         {
           "year": 2014,
-          "cites": 626
+          "cites": 630
         },
         {
           "year": 2015,
-          "cites": 641
+          "cites": 640
         },
         {
           "year": 2016,
-          "cites": 769
+          "cites": 756
         },
         {
           "year": 2017,
@@ -8729,39 +8483,39 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 839
+          "cites": 836
         },
         {
           "year": 2019,
-          "cites": 947
+          "cites": 959
         },
         {
           "year": 2020,
-          "cites": 978
+          "cites": 971
         },
         {
           "year": 2021,
-          "cites": 1033
+          "cites": 1035
         },
         {
           "year": 2022,
-          "cites": 1123
+          "cites": 1135
         },
         {
           "year": 2023,
-          "cites": 1015
+          "cites": 1016
         },
         {
           "year": 2024,
-          "cites": 1064
+          "cites": 1077
         },
         {
           "year": 2025,
-          "cites": 1115
+          "cites": 1093
         },
         {
           "year": 2026,
-          "cites": 648
+          "cites": 1107
         }
       ]
     },
@@ -8794,7 +8548,7 @@ window.BENCH = {
         },
         {
           "year": 2015,
-          "cites": 6
+          "cites": 7
         },
         {
           "year": 2016,
@@ -8806,11 +8560,11 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 4
+          "cites": 10
         },
         {
           "year": 2019,
-          "cites": 5
+          "cites": 6
         },
         {
           "year": 2020,
@@ -8818,15 +8572,15 @@ window.BENCH = {
         },
         {
           "year": 2021,
-          "cites": 3
+          "cites": 5
         },
         {
           "year": 2022,
-          "cites": 8
+          "cites": 4
         },
         {
           "year": 2023,
-          "cites": 12
+          "cites": 16
         },
         {
           "year": 2024,
@@ -8834,11 +8588,11 @@ window.BENCH = {
         },
         {
           "year": 2025,
-          "cites": 9
+          "cites": 11
         },
         {
           "year": 2026,
-          "cites": 3
+          "cites": 6
         }
       ],
       "scholar": []
@@ -9072,63 +8826,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 279
+          "cites": 282
         },
         {
           "year": 2013,
-          "cites": 247
+          "cites": 239
         },
         {
           "year": 2014,
-          "cites": 235
+          "cites": 238
         },
         {
           "year": 2015,
-          "cites": 268
+          "cites": 276
         },
         {
           "year": 2016,
-          "cites": 241
+          "cites": 247
         },
         {
           "year": 2017,
-          "cites": 224
+          "cites": 223
         },
         {
           "year": 2018,
-          "cites": 231
+          "cites": 241
         },
         {
           "year": 2019,
-          "cites": 216
+          "cites": 210
         },
         {
           "year": 2020,
-          "cites": 268
+          "cites": 255
         },
         {
           "year": 2021,
-          "cites": 265
+          "cites": 255
         },
         {
           "year": 2022,
-          "cites": 253
-        },
-        {
-          "year": 2023,
           "cites": 250
         },
         {
+          "year": 2023,
+          "cites": 243
+        },
+        {
           "year": 2024,
-          "cites": 236
+          "cites": 220
         },
         {
           "year": 2025,
-          "cites": 184
+          "cites": 197
         },
         {
           "year": 2026,
-          "cites": 107
+          "cites": 187
         }
       ],
       "scholar": [
@@ -9138,15 +8892,15 @@ window.BENCH = {
         },
         {
           "year": 2002,
-          "cites": 10
+          "cites": 9
         },
         {
           "year": 2003,
-          "cites": 11
+          "cites": 13
         },
         {
           "year": 2004,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2005,
@@ -9154,47 +8908,47 @@ window.BENCH = {
         },
         {
           "year": 2006,
-          "cites": 59
+          "cites": 58
         },
         {
           "year": 2007,
-          "cites": 78
+          "cites": 73
         },
         {
           "year": 2008,
-          "cites": 88
+          "cites": 90
         },
         {
           "year": 2009,
-          "cites": 110
+          "cites": 116
         },
         {
           "year": 2010,
-          "cites": 114
+          "cites": 118
         },
         {
           "year": 2011,
-          "cites": 119
+          "cites": 120
         },
         {
           "year": 2012,
-          "cites": 143
+          "cites": 144
         },
         {
           "year": 2013,
-          "cites": 188
+          "cites": 191
         },
         {
           "year": 2014,
-          "cites": 150
+          "cites": 156
         },
         {
           "year": 2015,
-          "cites": 202
+          "cites": 208
         },
         {
           "year": 2016,
-          "cites": 181
+          "cites": 180
         },
         {
           "year": 2017,
@@ -9202,39 +8956,39 @@ window.BENCH = {
         },
         {
           "year": 2018,
-          "cites": 214
+          "cites": 219
         },
         {
           "year": 2019,
-          "cites": 190
+          "cites": 191
         },
         {
           "year": 2020,
-          "cites": 225
+          "cites": 228
         },
         {
           "year": 2021,
-          "cites": 262
+          "cites": 267
         },
         {
           "year": 2022,
-          "cites": 270
+          "cites": 273
         },
         {
           "year": 2023,
-          "cites": 272
+          "cites": 273
         },
         {
           "year": 2024,
-          "cites": 254
+          "cites": 259
         },
         {
           "year": 2025,
-          "cites": 262
+          "cites": 261
         },
         {
           "year": 2026,
-          "cites": 152
+          "cites": 239
         }
       ]
     },
@@ -9251,15 +9005,15 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 11
+          "cites": 12
         },
         {
           "year": 2013,
-          "cites": 26
+          "cites": 25
         },
         {
           "year": 2014,
-          "cites": 15
+          "cites": 18
         },
         {
           "year": 2015,
@@ -9267,47 +9021,47 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2017,
-          "cites": 26
+          "cites": 32
         },
         {
           "year": 2018,
-          "cites": 57
+          "cites": 55
         },
         {
           "year": 2019,
-          "cites": 63
+          "cites": 62
         },
         {
           "year": 2020,
-          "cites": 81
+          "cites": 82
         },
         {
           "year": 2021,
-          "cites": 89
+          "cites": 88
         },
         {
           "year": 2022,
-          "cites": 89
+          "cites": 83
         },
         {
           "year": 2023,
-          "cites": 97
+          "cites": 100
         },
         {
           "year": 2024,
-          "cites": 89
+          "cites": 99
         },
         {
           "year": 2025,
-          "cites": 90
+          "cites": 104
         },
         {
           "year": 2026,
-          "cites": 51
+          "cites": 101
         }
       ],
       "scholar": [
@@ -9325,7 +9079,7 @@ window.BENCH = {
         },
         {
           "year": 2013,
-          "cites": 19
+          "cites": 20
         },
         {
           "year": 2014,
@@ -9337,7 +9091,7 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 47
+          "cites": 46
         },
         {
           "year": 2017,
@@ -9349,35 +9103,35 @@ window.BENCH = {
         },
         {
           "year": 2019,
-          "cites": 101
+          "cites": 102
         },
         {
           "year": 2020,
-          "cites": 109
+          "cites": 110
         },
         {
           "year": 2021,
-          "cites": 97
+          "cites": 95
         },
         {
           "year": 2022,
-          "cites": 103
+          "cites": 108
         },
         {
           "year": 2023,
-          "cites": 115
+          "cites": 112
         },
         {
           "year": 2024,
-          "cites": 135
+          "cites": 141
         },
         {
           "year": 2025,
-          "cites": 128
+          "cites": 127
         },
         {
           "year": 2026,
-          "cites": 86
+          "cites": 132
         }
       ]
     },
@@ -9388,22 +9142,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1932,
-          "cites": 0
-        },
-        {
-          "year": 1949,
-          "cites": 0
-        },
-        {
-          "year": 1950,
-          "cites": 0
-        },
-        {
-          "year": 1951,
-          "cites": 0
-        },
         {
           "year": 1971,
           "cites": 0
@@ -9534,133 +9272,133 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 133
+          "cites": 109
         },
         {
           "year": 2013,
-          "cites": 107
+          "cites": 89
         },
         {
           "year": 2014,
-          "cites": 129
+          "cites": 117
         },
         {
           "year": 2015,
-          "cites": 155
+          "cites": 142
         },
         {
           "year": 2016,
-          "cites": 103
+          "cites": 100
         },
         {
           "year": 2017,
-          "cites": 170
+          "cites": 105
         },
         {
           "year": 2018,
-          "cites": 141
+          "cites": 139
         },
         {
           "year": 2019,
-          "cites": 227
+          "cites": 202
         },
         {
           "year": 2020,
-          "cites": 254
+          "cites": 242
         },
         {
           "year": 2021,
-          "cites": 321
+          "cites": 299
         },
         {
           "year": 2022,
-          "cites": 316
+          "cites": 307
         },
         {
           "year": 2023,
-          "cites": 332
+          "cites": 346
         },
         {
           "year": 2024,
-          "cites": 360
+          "cites": 388
         },
         {
           "year": 2025,
-          "cites": 444
+          "cites": 515
         },
         {
           "year": 2026,
-          "cites": 251
+          "cites": 566
         }
       ],
       "scholar": [
         {
           "year": 2010,
-          "cites": 36
+          "cites": 37
         },
         {
           "year": 2011,
-          "cites": 86
+          "cites": 87
         },
         {
           "year": 2012,
-          "cites": 120
+          "cites": 117
         },
         {
           "year": 2013,
-          "cites": 182
+          "cites": 176
         },
         {
           "year": 2014,
-          "cites": 262
+          "cites": 264
         },
         {
           "year": 2015,
-          "cites": 214
+          "cites": 213
         },
         {
           "year": 2016,
-          "cites": 279
+          "cites": 278
         },
         {
           "year": 2017,
-          "cites": 257
+          "cites": 247
         },
         {
           "year": 2018,
-          "cites": 277
+          "cites": 281
         },
         {
           "year": 2019,
-          "cites": 263
+          "cites": 267
         },
         {
           "year": 2020,
-          "cites": 297
+          "cites": 295
         },
         {
           "year": 2021,
-          "cites": 351
-        },
-        {
-          "year": 2022,
-          "cites": 372
-        },
-        {
-          "year": 2023,
           "cites": 353
         },
         {
+          "year": 2022,
+          "cites": 373
+        },
+        {
+          "year": 2023,
+          "cites": 354
+        },
+        {
           "year": 2024,
-          "cites": 447
+          "cites": 446
         },
         {
           "year": 2025,
-          "cites": 410
+          "cites": 392
         },
         {
           "year": 2026,
-          "cites": 261
+          "cites": 410
         }
       ]
     },
@@ -9753,117 +9491,117 @@ window.BENCH = {
         },
         {
           "year": 2013,
-          "cites": 340
+          "cites": 353
         },
         {
           "year": 2014,
-          "cites": 356
+          "cites": 368
         },
         {
           "year": 2015,
-          "cites": 385
+          "cites": 391
         },
         {
           "year": 2016,
-          "cites": 481
+          "cites": 504
         },
         {
           "year": 2017,
-          "cites": 421
+          "cites": 472
         },
         {
           "year": 2018,
-          "cites": 555
+          "cites": 593
         },
         {
           "year": 2019,
-          "cites": 562
+          "cites": 620
         },
         {
           "year": 2020,
-          "cites": 610
+          "cites": 679
         },
         {
           "year": 2021,
-          "cites": 706
+          "cites": 731
         },
         {
           "year": 2022,
-          "cites": 654
+          "cites": 688
         },
         {
           "year": 2023,
-          "cites": 703
+          "cites": 795
         },
         {
           "year": 2024,
-          "cites": 623
+          "cites": 766
         },
         {
           "year": 2025,
-          "cites": 583
+          "cites": 742
         },
         {
           "year": 2026,
-          "cites": 251
+          "cites": 580
         }
       ],
       "scholar": [
         {
           "year": 1997,
-          "cites": 49
+          "cites": 50
         },
         {
           "year": 1998,
-          "cites": 83
+          "cites": 84
         },
         {
           "year": 1999,
-          "cites": 95
+          "cites": 92
         },
         {
           "year": 2000,
-          "cites": 98
+          "cites": 99
         },
         {
           "year": 2001,
-          "cites": 114
+          "cites": 115
         },
         {
           "year": 2002,
-          "cites": 140
+          "cites": 139
         },
         {
           "year": 2003,
-          "cites": 192
+          "cites": 191
         },
         {
           "year": 2004,
-          "cites": 133
+          "cites": 135
         },
         {
           "year": 2005,
-          "cites": 210
+          "cites": 215
         },
         {
           "year": 2006,
-          "cites": 213
+          "cites": 216
         },
         {
           "year": 2007,
-          "cites": 263
+          "cites": 258
         },
         {
           "year": 2008,
-          "cites": 338
+          "cites": 335
         },
         {
           "year": 2009,
-          "cites": 399
+          "cites": 408
         },
         {
           "year": 2010,
-          "cites": 384
+          "cites": 390
         },
         {
           "year": 2011,
@@ -9871,63 +9609,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 610
+          "cites": 608
         },
         {
           "year": 2013,
-          "cites": 634
+          "cites": 631
         },
         {
           "year": 2014,
-          "cites": 750
+          "cites": 736
         },
         {
           "year": 2015,
-          "cites": 801
+          "cites": 805
         },
         {
           "year": 2016,
-          "cites": 986
+          "cites": 967
         },
         {
           "year": 2017,
-          "cites": 981
+          "cites": 970
         },
         {
           "year": 2018,
-          "cites": 1195
+          "cites": 1184
         },
         {
           "year": 2019,
-          "cites": 1137
+          "cites": 1154
         },
         {
           "year": 2020,
-          "cites": 1204
+          "cites": 1200
         },
         {
           "year": 2021,
-          "cites": 1270
+          "cites": 1280
         },
         {
           "year": 2022,
-          "cites": 1391
+          "cites": 1400
         },
         {
           "year": 2023,
-          "cites": 1515
+          "cites": 1525
         },
         {
           "year": 2024,
-          "cites": 1439
+          "cites": 1457
         },
         {
           "year": 2025,
-          "cites": 1438
+          "cites": 1433
         },
         {
           "year": 2026,
-          "cites": 669
+          "cites": 1146
         }
       ]
     },
@@ -10056,193 +9794,193 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 943
+          "cites": 915
         },
         {
           "year": 2013,
-          "cites": 866
+          "cites": 865
         },
         {
           "year": 2014,
-          "cites": 939
+          "cites": 922
         },
         {
           "year": 2015,
-          "cites": 1002
+          "cites": 1009
         },
         {
           "year": 2016,
-          "cites": 978
+          "cites": 1000
         },
         {
           "year": 2017,
-          "cites": 1008
+          "cites": 1032
         },
         {
           "year": 2018,
-          "cites": 971
+          "cites": 1010
         },
         {
           "year": 2019,
-          "cites": 923
+          "cites": 974
         },
         {
           "year": 2020,
-          "cites": 1130
+          "cites": 1193
         },
         {
           "year": 2021,
-          "cites": 1044
+          "cites": 1071
         },
         {
           "year": 2022,
-          "cites": 983
+          "cites": 1056
         },
         {
           "year": 2023,
-          "cites": 967
+          "cites": 1135
         },
         {
           "year": 2024,
-          "cites": 869
+          "cites": 1035
         },
         {
           "year": 2025,
-          "cites": 704
+          "cites": 894
         },
         {
           "year": 2026,
-          "cites": 394
+          "cites": 875
         }
       ],
       "scholar": [
         {
           "year": 1995,
-          "cites": 120
+          "cites": 121
         },
         {
           "year": 1996,
-          "cites": 131
+          "cites": 133
         },
         {
           "year": 1997,
-          "cites": 141
+          "cites": 140
         },
         {
           "year": 1998,
-          "cites": 112
+          "cites": 115
         },
         {
           "year": 1999,
-          "cites": 158
+          "cites": 157
         },
         {
           "year": 2000,
-          "cites": 253
+          "cites": 254
         },
         {
           "year": 2001,
-          "cites": 282
+          "cites": 267
         },
         {
           "year": 2002,
-          "cites": 333
+          "cites": 341
         },
         {
           "year": 2003,
-          "cites": 442
+          "cites": 443
         },
         {
           "year": 2004,
-          "cites": 636
+          "cites": 645
         },
         {
           "year": 2005,
-          "cites": 616
+          "cites": 609
         },
         {
           "year": 2006,
-          "cites": 774
+          "cites": 756
         },
         {
           "year": 2007,
-          "cites": 840
+          "cites": 833
         },
         {
           "year": 2008,
-          "cites": 1171
+          "cites": 1164
         },
         {
           "year": 2009,
-          "cites": 1095
+          "cites": 1101
         },
         {
           "year": 2010,
-          "cites": 1221
+          "cites": 1211
         },
         {
           "year": 2011,
-          "cites": 1465
+          "cites": 1477
         },
         {
           "year": 2012,
-          "cites": 1830
+          "cites": 1842
         },
         {
           "year": 2013,
-          "cites": 1784
+          "cites": 1799
         },
         {
           "year": 2014,
-          "cites": 2064
+          "cites": 2063
         },
         {
           "year": 2015,
-          "cites": 2141
+          "cites": 2166
         },
         {
           "year": 2016,
-          "cites": 2214
+          "cites": 2197
         },
         {
           "year": 2017,
-          "cites": 2401
+          "cites": 2356
         },
         {
           "year": 2018,
-          "cites": 2286
+          "cites": 2304
         },
         {
           "year": 2019,
-          "cites": 2286
+          "cites": 2334
         },
         {
           "year": 2020,
-          "cites": 2369
+          "cites": 2407
         },
         {
           "year": 2021,
-          "cites": 2520
+          "cites": 2531
         },
         {
           "year": 2022,
-          "cites": 2256
+          "cites": 2295
         },
         {
           "year": 2023,
-          "cites": 2336
+          "cites": 2308
         },
         {
           "year": 2024,
-          "cites": 2185
+          "cites": 2192
         },
         {
           "year": 2025,
-          "cites": 2016
+          "cites": 2042
         },
         {
           "year": 2026,
-          "cites": 1065
+          "cites": 1723
         }
       ]
     },
@@ -10291,63 +10029,63 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 71
+          "cites": 68
         },
         {
           "year": 2013,
-          "cites": 74
+          "cites": 75
         },
         {
           "year": 2014,
-          "cites": 69
+          "cites": 71
         },
         {
           "year": 2015,
-          "cites": 73
+          "cites": 72
         },
         {
           "year": 2016,
-          "cites": 71
+          "cites": 74
         },
         {
           "year": 2017,
-          "cites": 76
+          "cites": 85
         },
         {
           "year": 2018,
-          "cites": 78
+          "cites": 77
         },
         {
           "year": 2019,
-          "cites": 79
+          "cites": 86
         },
         {
           "year": 2020,
-          "cites": 69
+          "cites": 76
         },
         {
           "year": 2021,
-          "cites": 90
+          "cites": 88
         },
         {
           "year": 2022,
-          "cites": 84
+          "cites": 83
         },
         {
           "year": 2023,
-          "cites": 92
+          "cites": 101
         },
         {
           "year": 2024,
-          "cites": 71
+          "cites": 80
         },
         {
           "year": 2025,
-          "cites": 60
+          "cites": 71
         },
         {
           "year": 2026,
-          "cites": 39
+          "cites": 66
         }
       ],
       "scholar": [
@@ -10357,11 +10095,11 @@ window.BENCH = {
         },
         {
           "year": 2003,
-          "cites": 13
+          "cites": 10
         },
         {
           "year": 2004,
-          "cites": 17
+          "cites": 20
         },
         {
           "year": 2005,
@@ -10373,67 +10111,67 @@ window.BENCH = {
         },
         {
           "year": 2007,
-          "cites": 44
+          "cites": 45
         },
         {
           "year": 2008,
-          "cites": 59
+          "cites": 58
         },
         {
           "year": 2009,
-          "cites": 68
+          "cites": 65
         },
         {
           "year": 2010,
-          "cites": 74
+          "cites": 76
         },
         {
           "year": 2011,
-          "cites": 93
+          "cites": 94
         },
         {
           "year": 2012,
-          "cites": 115
+          "cites": 118
         },
         {
           "year": 2013,
-          "cites": 135
+          "cites": 133
         },
         {
           "year": 2014,
-          "cites": 121
+          "cites": 124
         },
         {
           "year": 2015,
-          "cites": 116
+          "cites": 115
         },
         {
           "year": 2016,
-          "cites": 116
+          "cites": 118
         },
         {
           "year": 2017,
-          "cites": 122
+          "cites": 124
         },
         {
           "year": 2018,
-          "cites": 138
+          "cites": 140
         },
         {
           "year": 2019,
-          "cites": 132
+          "cites": 134
         },
         {
           "year": 2020,
-          "cites": 127
+          "cites": 128
         },
         {
           "year": 2021,
-          "cites": 136
+          "cites": 132
         },
         {
           "year": 2022,
-          "cites": 135
+          "cites": 137
         },
         {
           "year": 2023,
@@ -10441,15 +10179,15 @@ window.BENCH = {
         },
         {
           "year": 2024,
-          "cites": 137
+          "cites": 139
         },
         {
           "year": 2025,
-          "cites": 111
+          "cites": 113
         },
         {
           "year": 2026,
-          "cites": 67
+          "cites": 103
         }
       ]
     },
@@ -10460,18 +10198,6 @@ window.BENCH = {
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1980,
-          "cites": 0
-        },
-        {
-          "year": 1983,
-          "cites": 0
-        },
-        {
-          "year": 1993,
-          "cites": 0
-        },
         {
           "year": 2004,
           "cites": 0
@@ -10502,15 +10228,15 @@ window.BENCH = {
         },
         {
           "year": 2012,
-          "cites": 73
+          "cites": 65
         },
         {
           "year": 2013,
-          "cites": 81
+          "cites": 79
         },
         {
           "year": 2014,
-          "cites": 124
+          "cites": 120
         },
         {
           "year": 2015,
@@ -10518,47 +10244,47 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 76
+          "cites": 83
         },
         {
           "year": 2017,
-          "cites": 89
+          "cites": 98
         },
         {
           "year": 2018,
-          "cites": 145
+          "cites": 154
         },
         {
           "year": 2019,
-          "cites": 158
+          "cites": 163
         },
         {
           "year": 2020,
-          "cites": 241
+          "cites": 240
         },
         {
           "year": 2021,
-          "cites": 204
+          "cites": 193
         },
         {
           "year": 2022,
-          "cites": 261
+          "cites": 266
         },
         {
           "year": 2023,
-          "cites": 323
+          "cites": 346
         },
         {
           "year": 2024,
-          "cites": 356
+          "cites": 383
         },
         {
           "year": 2025,
-          "cites": 432
+          "cites": 490
         },
         {
           "year": 2026,
-          "cites": 213
+          "cites": 492
         }
       ],
       "scholar": [
@@ -10572,15 +10298,15 @@ window.BENCH = {
         },
         {
           "year": 2010,
-          "cites": 40
+          "cites": 41
         },
         {
           "year": 2011,
-          "cites": 67
+          "cites": 66
         },
         {
           "year": 2012,
-          "cites": 70
+          "cites": 69
         },
         {
           "year": 2013,
@@ -10588,7 +10314,7 @@ window.BENCH = {
         },
         {
           "year": 2014,
-          "cites": 144
+          "cites": 147
         },
         {
           "year": 2015,
@@ -10596,47 +10322,47 @@ window.BENCH = {
         },
         {
           "year": 2016,
-          "cites": 113
+          "cites": 112
         },
         {
           "year": 2017,
-          "cites": 151
+          "cites": 149
         },
         {
           "year": 2018,
-          "cites": 157
+          "cites": 152
         },
         {
           "year": 2019,
-          "cites": 263
+          "cites": 259
         },
         {
           "year": 2020,
-          "cites": 211
+          "cites": 214
         },
         {
           "year": 2021,
-          "cites": 296
+          "cites": 293
         },
         {
           "year": 2022,
-          "cites": 361
+          "cites": 364
         },
         {
           "year": 2023,
-          "cites": 485
+          "cites": 490
         },
         {
           "year": 2024,
-          "cites": 569
+          "cites": 579
         },
         {
           "year": 2025,
-          "cites": 702
+          "cites": 665
         },
         {
           "year": 2026,
-          "cites": 412
+          "cites": 741
         }
       ]
     }

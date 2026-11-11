@@ -320,7 +320,7 @@ $("#teamBox").innerHTML=`<div style="background:var(--you-soft);border:1px solid
   <div style="font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Team view — one lab</div>
   <div style="font-size:1.06rem;margin-top:5px;max-width:70ch"><b>${T.members[0]} + ${T.members[1]}</b> run one lab together —
   <b>${T.shared_works} co-authored papers</b>. As a single unit the lab holds <b>${T.union_cites.toLocaleString()} citations</b>
-  (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, about one in five — which would rank
+  (shared papers counted once) — <b>${T.share_union}% of the entire department</b>, about one in ${['zero','one','two','three','four','five','six','seven','eight','nine','ten'][Math.round(100/T.share_union)]||Math.round(100/T.share_union)} — which would rank
   <b>#${T.rank} of ${T.n_others}</b>, ahead of every individual. <span class="muted">(Summing both totals raw: ${T.share_simple}%.)</span></div>
 </div>`;
 const NF=B.n_faculty, mean=Math.round(C.total/NF), botN=Math.min(30,NF);
@@ -715,10 +715,12 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   author's works via ORCID). <b>Google Scholar</b> counts a wider universe (conference papers, chapters,
   self-citations) so it runs higher, especially in conference-heavy fields. ${B.no_profile.length} faculty
   have no indexed research profile on either source (mostly instructors/clinicians) and appear as zeros.
-  <b>Two caveats:</b> James C. Thompson is now resolved on OpenAlex by ORCID (11,887 citations, #5 in the
-  department) — and unusually his OpenAlex total runs far <i>above</i> his self-curated Scholar figure
-  (3,850, #23), a 3× reverse of the usual gap that points to a thin Scholar profile rather than a source
-  philosophy; and Nastassia Savage's Scholar profile still lists Old Dominion (a recent hire). Web of
+  <b>Caveats:</b> James C. Thompson's OpenAlex total (resolved by ORCID) runs far <i>above</i> his
+  self-curated Scholar figure — a reverse of the usual gap that points to a thin Scholar profile rather
+  than a source philosophy. Gerald Matthews has no ORCID and OpenAlex splits his record across several
+  author ids; since the November 2026 refresh those fragments are unioned (deduplicated by work), which is
+  why his OpenAlex total rose sharply. Sarah Fischer's ORCID was corrected the same day (the roster had
+  carried a different researcher's iD). Nastassia Savage's Scholar profile still lists Old Dominion (a recent hire). Web of
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;
 

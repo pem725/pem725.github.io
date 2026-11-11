@@ -1,59 +1,60 @@
 window.RECENT = {
-  "snapshot_date": "2026-07-28",
+  "snapshot_date": "2026-11-11",
   "years": "2025-2026",
   "dept": {
     "n_faculty": 51,
-    "total_works": 184,
-    "y2025": 129,
-    "y2026": 55,
-    "oa": 96,
-    "closed": 88,
-    "scholar_total": 254,
-    "scholar_2025": 166,
-    "scholar_2026": 88,
-    "scholar_snapshot": "2026-07-28",
+    "total_works": 240,
+    "y2025": 131,
+    "y2026": 109,
+    "oa": 134,
+    "closed": 106,
+    "scholar_total": 335,
+    "scholar_2025": 171,
+    "scholar_2026": 164,
+    "scholar_snapshot": "2026-11-11",
     "by_type": {
-      "article": 145,
-      "review": 7,
-      "book-chapter": 12,
-      "conference-paper": 19,
-      "book": 1
+      "article": 181,
+      "review": 20,
+      "book-chapter": 14,
+      "conference-paper": 23,
+      "book": 1,
+      "report": 1
     },
     "top_topics": [
       {
-        "name": "Job Satisfaction and Organizational Behavior",
-        "n": 12
-      },
-      {
         "name": "Social Robot Interaction and HRI",
-        "n": 11
+        "n": 29
       },
       {
-        "name": "Child and Adolescent Psychosocial and Emotional Development",
-        "n": 10
-      },
-      {
-        "name": "Psychological and Educational Research Studies",
-        "n": 6
+        "name": "Job Satisfaction and Organizational Behavior",
+        "n": 18
       },
       {
         "name": "Autism Spectrum Disorder Research",
-        "n": 6
+        "n": 12
       },
       {
-        "name": "Creativity in Education and Neuroscience",
-        "n": 5
+        "name": "Human-Automation Interaction and Safety",
+        "n": 12
       },
       {
-        "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
-        "n": 4
-      },
-      {
-        "name": "Child Abuse and Trauma",
-        "n": 4
+        "name": "Child and Adolescent Psychosocial and Emotional Development",
+        "n": 8
       },
       {
         "name": "Neural and Behavioral Psychology Studies",
+        "n": 5
+      },
+      {
+        "name": "Work-Family Balance Challenges",
+        "n": 5
+      },
+      {
+        "name": "Psychometric Methodologies and Testing",
+        "n": 5
+      },
+      {
+        "name": "Psychological Well-being and Life Satisfaction",
         "n": 4
       },
       {
@@ -61,46 +62,46 @@ window.RECENT = {
         "n": 4
       },
       {
-        "name": "Psychological Well-being and Life Satisfaction",
-        "n": 3
+        "name": "Ethics and Social Impacts of AI",
+        "n": 4
       },
       {
-        "name": "Ethics and Social Impacts of AI",
-        "n": 3
+        "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
+        "n": 4
       }
     ],
     "by_field": [
       {
         "name": "Psychology",
-        "n": 75
+        "n": 84
       },
       {
         "name": "Social Sciences",
-        "n": 36
-      },
-      {
-        "name": "Neuroscience",
-        "n": 19
+        "n": 51
       },
       {
         "name": "Business, Management and Accounting",
-        "n": 16
+        "n": 31
+      },
+      {
+        "name": "Neuroscience",
+        "n": 25
       },
       {
         "name": "Medicine",
-        "n": 9
+        "n": 17
+      },
+      {
+        "name": "Arts and Humanities",
+        "n": 10
       },
       {
         "name": "Computer Science",
-        "n": 8
+        "n": 9
       },
       {
-        "name": "Health Professions",
-        "n": 7
-      },
-      {
-        "name": "Biochemistry, Genetics and Molecular Biology",
-        "n": 3
+        "name": "Decision Sciences",
+        "n": 5
       }
     ]
   },
@@ -110,63 +111,120 @@ window.RECENT = {
       "name": "Eileen Roesler",
       "rank": "Assistant",
       "is_self": false,
-      "works": 19,
-      "y2025": 10,
-      "y2026": 9,
-      "oa": 5,
-      "closed": 14,
+      "works": 29,
+      "y2025": 15,
+      "y2026": 14,
+      "oa": 14,
+      "closed": 15,
       "by_type": {
-        "article": 8,
-        "conference-paper": 11
+        "article": 14,
+        "conference-paper": 14,
+        "review": 1
       },
       "top_topics": [
         {
           "name": "Social Robot Interaction and HRI",
-          "n": 9
+          "n": 20
         },
         {
           "name": "Human-Automation Interaction and Safety",
-          "n": 2
+          "n": 5
         },
         {
-          "name": "Software Reliability and Analysis Research",
-          "n": 1
+          "name": "Ethics and Social Impacts of AI",
+          "n": 2
         }
       ],
-      "sch": 23,
-      "sch2025": 12,
-      "sch2026": 11
+      "sch": 27,
+      "sch2025": 11,
+      "sch2026": 16
     },
     {
       "key": "mcquaid_g",
       "name": "Goldie Ann McQuaid",
       "rank": "Research Assistant Professor",
       "is_self": false,
-      "works": 8,
+      "works": 12,
       "y2025": 7,
-      "y2026": 1,
-      "oa": 8,
+      "y2026": 5,
+      "oa": 12,
       "closed": 0,
       "by_type": {
-        "article": 8
+        "article": 11,
+        "book-chapter": 1
+      },
+      "top_topics": [
+        {
+          "name": "Autism Spectrum Disorder Research",
+          "n": 8
+        },
+        {
+          "name": "Eating Disorders and Behaviors",
+          "n": 1
+        },
+        {
+          "name": "Down syndrome and intellectual disability research",
+          "n": 1
+        }
+      ],
+      "sch": 26,
+      "sch2025": 18,
+      "sch2026": 8
+    },
+    {
+      "key": "kaplan_s",
+      "name": "Seth Kaplan",
+      "rank": "Professor",
+      "is_self": false,
+      "works": 14,
+      "y2025": 7,
+      "y2026": 7,
+      "oa": 9,
+      "closed": 5,
+      "by_type": {
+        "article": 13,
+        "book-chapter": 1
+      },
+      "top_topics": [
+        {
+          "name": "Job Satisfaction and Organizational Behavior",
+          "n": 6
+        },
+        {
+          "name": "Emotional Labor in Professions",
+          "n": 1
+        },
+        {
+          "name": "Team Dynamics and Performance",
+          "n": 1
+        }
+      ],
+      "sch": 22,
+      "sch2025": 6,
+      "sch2026": 16
+    },
+    {
+      "key": "jack_a",
+      "name": "Allison E Jack",
+      "rank": "Assistant",
+      "is_self": false,
+      "works": 4,
+      "y2025": 1,
+      "y2026": 3,
+      "oa": 3,
+      "closed": 1,
+      "by_type": {
+        "article": 4
       },
       "top_topics": [
         {
           "name": "Autism Spectrum Disorder Research",
           "n": 4
-        },
-        {
-          "name": "LGBTQ Health, Identity, and Policy",
-          "n": 1
-        },
-        {
-          "name": "Child Nutrition and Feeding Issues",
-          "n": 1
         }
       ],
-      "sch": 20,
-      "sch2025": 17,
-      "sch2026": 3
+      "sch": 19,
+      "sch2025": 11,
+      "sch2026": 8
     },
     {
       "key": "wiener_m",
@@ -174,42 +232,76 @@ window.RECENT = {
       "rank": "Associate",
       "is_self": false,
       "works": 12,
-      "y2025": 8,
-      "y2026": 4,
-      "oa": 10,
-      "closed": 2,
+      "y2025": 6,
+      "y2026": 6,
+      "oa": 8,
+      "closed": 4,
       "by_type": {
-        "article": 7,
-        "conference-paper": 3,
+        "article": 6,
+        "conference-paper": 4,
         "book": 1,
         "book-chapter": 1
       },
       "top_topics": [
         {
-          "name": "Information Systems Theories and Implementation",
-          "n": 2
-        },
-        {
           "name": "E-Government and Public Services",
+          "n": 4
+        },
+        {
+          "name": "Legal and Labor Studies",
           "n": 2
         },
         {
-          "name": "Public Administration and Political Analysis",
-          "n": 1
+          "name": "Digital Economy and Work Transformation",
+          "n": 2
         }
       ],
-      "sch": 15,
+      "sch": 17,
       "sch2025": 11,
-      "sch2026": 4
+      "sch2026": 6
     },
     {
-      "key": "kaplan_s",
-      "name": "Seth Kaplan",
+      "key": "goldstein_t",
+      "name": "Thalia R Goldstein",
+      "rank": "Associate",
+      "is_self": false,
+      "works": 12,
+      "y2025": 6,
+      "y2026": 6,
+      "oa": 3,
+      "closed": 9,
+      "by_type": {
+        "article": 8,
+        "review": 2,
+        "conference-paper": 1,
+        "book-chapter": 1
+      },
+      "top_topics": [
+        {
+          "name": "Theatre and Performance Studies",
+          "n": 3
+        },
+        {
+          "name": "Aesthetic Perception and Analysis",
+          "n": 2
+        },
+        {
+          "name": "Diversity and Impact of Dance",
+          "n": 2
+        }
+      ],
+      "sch": 16,
+      "sch2025": 8,
+      "sch2026": 8
+    },
+    {
+      "key": "matthews_g",
+      "name": "Gerald Matthews",
       "rank": "Professor",
       "is_self": false,
       "works": 11,
-      "y2025": 7,
-      "y2026": 4,
+      "y2025": 2,
+      "y2026": 9,
       "oa": 6,
       "closed": 5,
       "by_type": {
@@ -218,134 +310,53 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Job Satisfaction and Organizational Behavior",
+          "name": "Human-Automation Interaction and Safety",
           "n": 3
         },
         {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 1
+          "name": "Social Robot Interaction and HRI",
+          "n": 3
         },
         {
-          "name": "Employment and Welfare Studies",
-          "n": 1
+          "name": "Neural and Behavioral Psychology Studies",
+          "n": 2
         }
       ],
       "sch": 14,
-      "sch2025": 7,
-      "sch2026": 7
+      "sch2025": 5,
+      "sch2026": 9
     },
     {
       "key": "kashdan_t",
       "name": "Todd B. Kashdan",
       "rank": "Professor",
       "is_self": false,
-      "works": 7,
+      "works": 8,
       "y2025": 4,
-      "y2026": 3,
+      "y2026": 4,
       "oa": 5,
-      "closed": 2,
+      "closed": 3,
       "by_type": {
-        "article": 7
+        "review": 2,
+        "article": 6
       },
       "top_topics": [
         {
-          "name": "Psychological and Educational Research Studies",
+          "name": "Psychological Well-being and Life Satisfaction",
           "n": 3
         },
         {
-          "name": "Psychological Well-being and Life Satisfaction",
+          "name": "Psychological and Educational Research Studies",
           "n": 2
         },
         {
-          "name": "Personality Traits and Psychology",
+          "name": "Social and Intergroup Psychology",
           "n": 1
         }
       ],
-      "sch": 12,
+      "sch": 13,
       "sch2025": 8,
-      "sch2026": 4
-    },
-    {
-      "key": "adams_l",
-      "name": "Leah M Adams",
-      "rank": "Associate",
-      "is_self": false,
-      "works": 1,
-      "y2025": 1,
-      "y2026": 0,
-      "oa": 1,
-      "closed": 0,
-      "by_type": {
-        "article": 1
-      },
-      "top_topics": [
-        {
-          "name": "Health disparities and outcomes",
-          "n": 1
-        }
-      ],
-      "sch": 11,
-      "sch2025": 7,
-      "sch2026": 4
-    },
-    {
-      "key": "helton_w",
-      "name": "William S Helton",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 6,
-      "y2025": 4,
-      "y2026": 2,
-      "oa": 1,
-      "closed": 5,
-      "by_type": {
-        "article": 4,
-        "review": 2
-      },
-      "top_topics": [
-        {
-          "name": "Occupational Health and Performance",
-          "n": 3
-        },
-        {
-          "name": "Neural and Behavioral Psychology Studies",
-          "n": 1
-        },
-        {
-          "name": "Mind wandering and attention",
-          "n": 1
-        }
-      ],
-      "sch": 11,
-      "sch2025": 8,
-      "sch2026": 3
-    },
-    {
-      "key": "matthews_g",
-      "name": "Gerald Matthews",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 2,
-      "y2025": 1,
-      "y2026": 1,
-      "oa": 2,
-      "closed": 0,
-      "by_type": {
-        "article": 2
-      },
-      "top_topics": [
-        {
-          "name": "Personality Traits and Psychology",
-          "n": 1
-        },
-        {
-          "name": "Risk and Safety Analysis",
-          "n": 1
-        }
-      ],
-      "sch": 11,
-      "sch2025": 5,
-      "sch2026": 6
+      "sch2026": 5
     },
     {
       "key": "tonge_n",
@@ -363,55 +374,49 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Biomedical and Engineering Education",
-          "n": 1
-        },
-        {
           "name": "Mental Health Treatment and Access",
+          "n": 2
+        },
+        {
+          "name": "Interdisciplinary Research and Collaboration",
           "n": 1
         },
         {
-          "name": "Mental Health Research Topics",
+          "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
           "n": 1
         }
       ],
-      "sch": 11,
+      "sch": 13,
       "sch2025": 6,
-      "sch2026": 5
+      "sch2026": 7
     },
     {
-      "key": "goldstein_t",
-      "name": "Thalia R Goldstein",
-      "rank": "Associate",
+      "key": "helton_w",
+      "name": "William S Helton",
+      "rank": "Professor",
       "is_self": false,
-      "works": 10,
-      "y2025": 6,
-      "y2026": 4,
-      "oa": 3,
-      "closed": 7,
+      "works": 6,
+      "y2025": 4,
+      "y2026": 2,
+      "oa": 1,
+      "closed": 5,
       "by_type": {
-        "article": 7,
-        "review": 1,
-        "conference-paper": 1,
-        "book-chapter": 1
+        "review": 3,
+        "article": 3
       },
       "top_topics": [
         {
-          "name": "Creativity in Education and Neuroscience",
-          "n": 5
+          "name": "Mind wandering and attention",
+          "n": 3
         },
         {
-          "name": "Art Therapy and Mental Health",
-          "n": 1
-        },
-        {
-          "name": "Diversity and Impact of Dance",
-          "n": 1
+          "name": "Occupational Health and Performance",
+          "n": 3
         }
       ],
-      "sch": 10,
+      "sch": 12,
       "sch2025": 7,
-      "sch2026": 3
+      "sch2026": 5
     },
     {
       "key": "phillips_e",
@@ -421,23 +426,133 @@ window.RECENT = {
       "works": 4,
       "y2025": 4,
       "y2026": 0,
-      "oa": 1,
-      "closed": 3,
+      "oa": 2,
+      "closed": 2,
       "by_type": {
         "article": 2,
         "conference-paper": 2
       },
       "top_topics": [
         {
-          "name": "Ethics and Social Impacts of AI",
-          "n": 2
+          "name": "Social Robot Interaction and HRI",
+          "n": 4
+        }
+      ],
+      "sch": 12,
+      "sch2025": 4,
+      "sch2026": 8
+    },
+    {
+      "key": "dalal_r",
+      "name": "Reeshad S. Dalal",
+      "rank": "Professor",
+      "is_self": false,
+      "works": 10,
+      "y2025": 6,
+      "y2026": 4,
+      "oa": 3,
+      "closed": 7,
+      "by_type": {
+        "article": 7,
+        "book-chapter": 3
+      },
+      "top_topics": [
+        {
+          "name": "Job Satisfaction and Organizational Behavior",
+          "n": 6
         },
         {
-          "name": "Social Robot Interaction and HRI",
+          "name": "Emotional Labor in Professions",
           "n": 1
         },
         {
-          "name": "Healthcare Education and Workforce Issues",
+          "name": "Workplace Health and Well-being",
+          "n": 1
+        }
+      ],
+      "sch": 11,
+      "sch2025": 7,
+      "sch2026": 4
+    },
+    {
+      "key": "adams_l",
+      "name": "Leah M Adams",
+      "rank": "Associate",
+      "is_self": false,
+      "works": 1,
+      "y2025": 1,
+      "y2026": 0,
+      "oa": 1,
+      "closed": 0,
+      "by_type": {
+        "article": 1
+      },
+      "top_topics": [
+        {
+          "name": "Suicide and Self-Harm Studies",
+          "n": 1
+        }
+      ],
+      "sch": 10,
+      "sch2025": 7,
+      "sch2026": 3
+    },
+    {
+      "key": "chaplin_t",
+      "name": "Tara Chaplin",
+      "rank": "Professor",
+      "is_self": false,
+      "works": 7,
+      "y2025": 2,
+      "y2026": 5,
+      "oa": 7,
+      "closed": 0,
+      "by_type": {
+        "article": 5,
+        "review": 2
+      },
+      "top_topics": [
+        {
+          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "n": 3
+        },
+        {
+          "name": "Obesity, Physical Activity, Diet",
+          "n": 1
+        },
+        {
+          "name": "Neuroendocrine regulation and behavior",
+          "n": 1
+        }
+      ],
+      "sch": 10,
+      "sch2025": 5,
+      "sch2026": 5
+    },
+    {
+      "key": "lee_p",
+      "name": "Philseok Lee",
+      "rank": "Associate",
+      "is_self": false,
+      "works": 7,
+      "y2025": 6,
+      "y2026": 1,
+      "oa": 2,
+      "closed": 5,
+      "by_type": {
+        "article": 7
+      },
+      "top_topics": [
+        {
+          "name": "Psychometric Methodologies and Testing",
+          "n": 4
+        },
+        {
+          "name": "Computational and Text Analysis Methods",
+          "n": 1
+        },
+        {
+          "name": "Topic Modeling",
           "n": 1
         }
       ],
@@ -446,29 +561,61 @@ window.RECENT = {
       "sch2026": 6
     },
     {
-      "key": "lee_p",
-      "name": "Philseok Lee",
-      "rank": "Associate",
+      "key": "curby_t",
+      "name": "Timothy W Curby",
+      "rank": "Professor",
       "is_self": false,
-      "works": 5,
-      "y2025": 5,
-      "y2026": 0,
-      "oa": 1,
-      "closed": 4,
+      "works": 7,
+      "y2025": 2,
+      "y2026": 5,
+      "oa": 4,
+      "closed": 3,
       "by_type": {
-        "article": 5
+        "article": 7
       },
       "top_topics": [
         {
-          "name": "Explainable Artificial Intelligence (XAI)",
+          "name": "Early Childhood Education and Development",
+          "n": 2
+        },
+        {
+          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "n": 2
+        },
+        {
+          "name": "Child Abuse and Trauma",
+          "n": 1
+        }
+      ],
+      "sch": 9,
+      "sch2025": 3,
+      "sch2026": 6
+    },
+    {
+      "key": "esposito_smythers_c",
+      "name": "Christianne Esposito-Smythers",
+      "rank": "Professor",
+      "is_self": false,
+      "works": 5,
+      "y2025": 2,
+      "y2026": 3,
+      "oa": 4,
+      "closed": 1,
+      "by_type": {
+        "review": 2,
+        "article": 3
+      },
+      "top_topics": [
+        {
+          "name": "Suicide and Self-Harm Studies",
           "n": 1
         },
         {
-          "name": "Economic and Environmental Valuation",
+          "name": "Research Data Management Practices",
           "n": 1
         },
         {
-          "name": "Neural Networks and Applications",
+          "name": "Substance Abuse Treatment and Outcomes",
           "n": 1
         }
       ],
@@ -482,8 +629,8 @@ window.RECENT = {
       "rank": "Professor",
       "is_self": false,
       "works": 7,
-      "y2025": 6,
-      "y2026": 1,
+      "y2025": 5,
+      "y2026": 2,
       "oa": 4,
       "closed": 3,
       "by_type": {
@@ -493,52 +640,52 @@ window.RECENT = {
       "top_topics": [
         {
           "name": "Job Satisfaction and Organizational Behavior",
-          "n": 2
-        },
-        {
-          "name": "Academic integrity and plagiarism",
-          "n": 1
+          "n": 3
         },
         {
           "name": "Employer Branding and e-HRM",
           "n": 1
+        },
+        {
+          "name": "Corporate Social Responsibility Reporting",
+          "n": 1
         }
       ],
       "sch": 9,
-      "sch2025": 7,
-      "sch2026": 2
+      "sch2025": 5,
+      "sch2026": 4
     },
     {
-      "key": "dalal_r",
-      "name": "Reeshad S. Dalal",
-      "rank": "Professor",
+      "key": "sanchez_a",
+      "name": "Amanda L Sanchez",
+      "rank": "Assistant",
       "is_self": false,
-      "works": 8,
-      "y2025": 6,
-      "y2026": 2,
-      "oa": 1,
-      "closed": 7,
+      "works": 9,
+      "y2025": 5,
+      "y2026": 4,
+      "oa": 9,
+      "closed": 0,
       "by_type": {
-        "article": 5,
-        "book-chapter": 3
+        "review": 3,
+        "article": 6
       },
       "top_topics": [
         {
-          "name": "Job Satisfaction and Organizational Behavior",
-          "n": 6
+          "name": "Cultural Competency in Health Care",
+          "n": 3
         },
         {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 1
+          "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
+          "n": 3
         },
         {
-          "name": "Cultural Differences and Values",
+          "name": "HIV/AIDS Research and Interventions",
           "n": 1
         }
       ],
-      "sch": 7,
-      "sch2025": 6,
-      "sch2026": 1
+      "sch": 4,
+      "sch2025": 4,
+      "sch2026": 0
     },
     {
       "key": "winsler_a",
@@ -551,7 +698,8 @@ window.RECENT = {
       "oa": 1,
       "closed": 4,
       "by_type": {
-        "article": 5
+        "review": 1,
+        "article": 4
       },
       "top_topics": [
         {
@@ -563,137 +711,13 @@ window.RECENT = {
           "n": 1
         },
         {
-          "name": "Diverse Education Studies and Reforms",
+          "name": "Early Childhood Education and Development",
           "n": 1
         }
       ],
       "sch": 8,
-      "sch2025": 5,
-      "sch2026": 3
-    },
-    {
-      "key": "chaplin_t",
-      "name": "Tara Chaplin",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 5,
-      "y2025": 2,
-      "y2026": 3,
-      "oa": 5,
-      "closed": 0,
-      "by_type": {
-        "article": 4,
-        "review": 1
-      },
-      "top_topics": [
-        {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 2
-        },
-        {
-          "name": "Digital Mental Health Interventions",
-          "n": 1
-        },
-        {
-          "name": "Mindfulness and Compassion Interventions",
-          "n": 1
-        }
-      ],
-      "sch": 7,
       "sch2025": 4,
-      "sch2026": 3
-    },
-    {
-      "key": "esposito_smythers_c",
-      "name": "Christianne Esposito-Smythers",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 2,
-      "y2025": 2,
-      "y2026": 0,
-      "oa": 2,
-      "closed": 0,
-      "by_type": {
-        "review": 1,
-        "article": 1
-      },
-      "top_topics": [
-        {
-          "name": "Suicide and Self-Harm Studies",
-          "n": 1
-        },
-        {
-          "name": "Digital Mental Health Interventions",
-          "n": 1
-        }
-      ],
-      "sch": 7,
-      "sch2025": 4,
-      "sch2026": 3
-    },
-    {
-      "key": "sanchez_a",
-      "name": "Amanda L Sanchez",
-      "rank": "Assistant",
-      "is_self": false,
-      "works": 7,
-      "y2025": 5,
-      "y2026": 2,
-      "oa": 6,
-      "closed": 1,
-      "by_type": {
-        "article": 4,
-        "review": 2,
-        "book-chapter": 1
-      },
-      "top_topics": [
-        {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 3
-        },
-        {
-          "name": "Attention Deficit Hyperactivity Disorder",
-          "n": 1
-        },
-        {
-          "name": "HIV/AIDS Research and Interventions",
-          "n": 1
-        }
-      ],
-      "sch": 4,
-      "sch2025": 4,
-      "sch2026": 0
-    },
-    {
-      "key": "curby_t",
-      "name": "Timothy W Curby",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 5,
-      "y2025": 2,
-      "y2026": 3,
-      "oa": 3,
-      "closed": 2,
-      "by_type": {
-        "article": 5
-      },
-      "top_topics": [
-        {
-          "name": "Child Abuse and Trauma",
-          "n": 2
-        },
-        {
-          "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
-          "n": 1
-        },
-        {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 1
-        }
-      ],
-      "sch": 6,
-      "sch2025": 3,
-      "sch2026": 3
+      "sch2026": 4
     },
     {
       "key": "kornienko_o",
@@ -703,22 +727,84 @@ window.RECENT = {
       "works": 6,
       "y2025": 3,
       "y2026": 3,
-      "oa": 4,
-      "closed": 2,
+      "oa": 5,
+      "closed": 1,
       "by_type": {
         "article": 6
       },
       "top_topics": [
         {
-          "name": "Racial and Ethnic Identity Research",
-          "n": 3
+          "name": "Education during COVID-19 pandemic",
+          "n": 2
         },
         {
           "name": "Bullying, Victimization, and Aggression",
           "n": 1
         },
         {
-          "name": "Early Childhood Education and Development",
+          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "n": 1
+        }
+      ],
+      "sch": 7,
+      "sch2025": 3,
+      "sch2026": 4
+    },
+    {
+      "key": "liang_y",
+      "name": "Yijue Liang",
+      "rank": "Assistant",
+      "is_self": false,
+      "works": 7,
+      "y2025": 4,
+      "y2026": 3,
+      "oa": 1,
+      "closed": 6,
+      "by_type": {
+        "article": 7
+      },
+      "top_topics": [
+        {
+          "name": "Job Satisfaction and Organizational Behavior",
+          "n": 2
+        },
+        {
+          "name": "Sexual Assault and Victimization Studies",
+          "n": 2
+        },
+        {
+          "name": "Workplace Violence and Bullying",
+          "n": 2
+        }
+      ],
+      "sch": 7,
+      "sch2025": 3,
+      "sch2026": 4
+    },
+    {
+      "key": "mcknight_p",
+      "name": "Patrick E. McKnight",
+      "rank": "Associate",
+      "is_self": true,
+      "works": 3,
+      "y2025": 3,
+      "y2026": 0,
+      "oa": 2,
+      "closed": 1,
+      "by_type": {
+        "article": 3
+      },
+      "top_topics": [
+        {
+          "name": "Social and Intergroup Psychology",
+          "n": 1
+        },
+        {
+          "name": "Psychological Well-being and Life Satisfaction",
+          "n": 1
+        },
+        {
+          "name": "Psychological and Educational Research Studies",
           "n": 1
         }
       ],
@@ -727,66 +813,67 @@ window.RECENT = {
       "sch2026": 3
     },
     {
-      "key": "mcknight_p",
-      "name": "Patrick E. McKnight",
-      "rank": "Associate",
-      "is_self": true,
-      "works": 5,
-      "y2025": 4,
-      "y2026": 1,
-      "oa": 4,
-      "closed": 1,
-      "by_type": {
-        "article": 5
-      },
-      "top_topics": [
-        {
-          "name": "Psychological and Educational Research Studies",
-          "n": 3
-        },
-        {
-          "name": "Natural Antidiabetic Agents Studies",
-          "n": 1
-        },
-        {
-          "name": "Psychological Well-being and Life Satisfaction",
-          "n": 1
-        }
-      ],
-      "sch": 5,
-      "sch2025": 3,
-      "sch2026": 2
-    },
-    {
       "key": "lee_y",
       "name": "Yi-Ching Lee",
       "rank": "Associate",
       "is_self": false,
-      "works": 5,
-      "y2025": 5,
-      "y2026": 0,
+      "works": 6,
+      "y2025": 3,
+      "y2026": 3,
       "oa": 3,
-      "closed": 2,
+      "closed": 3,
       "by_type": {
-        "article": 5
+        "article": 6
       },
       "top_topics": [
         {
-          "name": "Dental Health and Care Utilization",
+          "name": "Artificial Intelligence in Healthcare and Education",
           "n": 1
         },
         {
-          "name": "Surgical Simulation and Training",
+          "name": "Health Policy Implementation Science",
           "n": 1
         },
         {
-          "name": "Musculoskeletal pain and rehabilitation",
+          "name": "COVID-19 and Mental Health",
           "n": 1
         }
       ],
-      "sch": 1,
+      "sch": 2,
       "sch2025": 1,
-      "sch2026": 0
+      "sch2026": 1
+    },
+    {
+      "key": "doebel_s",
+      "name": "Sabine Doebel",
+      "rank": "Associate",
+      "is_self": false,
+      "works": 4,
+      "y2025": 1,
+      "y2026": 3,
+      "oa": 2,
+      "closed": 2,
+      "by_type": {
+        "article": 2,
+        "review": 2
+      },
+      "top_topics": [
+        {
+          "name": "Cognitive Abilities and Testing",
+          "n": 2
+        },
+        {
+          "name": "Career Development and Diversity",
+          "n": 1
+        },
+        {
+          "name": "Child and Animal Learning Development",
+          "n": 1
+        }
+      ],
+      "sch": 5,
+      "sch2025": 1,
+      "sch2026": 4
     },
     {
       "key": "cattaneo_l",
@@ -803,52 +890,21 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Resilience and Mental Health",
+          "name": "Racial and Ethnic Identity Research",
           "n": 1
         },
         {
-          "name": "Homelessness and Social Issues",
+          "name": "Critical and Liberation Pedagogy",
           "n": 1
         },
         {
-          "name": "Academic Freedom and Politics",
+          "name": "Intimate Partner and Family Violence",
           "n": 1
         }
       ],
       "sch": 4,
-      "sch2025": 4,
-      "sch2026": 0
-    },
-    {
-      "key": "liang_y",
-      "name": "Yijue Liang",
-      "rank": "Assistant",
-      "is_self": false,
-      "works": 4,
-      "y2025": 4,
-      "y2026": 0,
-      "oa": 0,
-      "closed": 4,
-      "by_type": {
-        "article": 4
-      },
-      "top_topics": [
-        {
-          "name": "Digital Economy and Work Transformation",
-          "n": 1
-        },
-        {
-          "name": "Sexual Assault and Victimization Studies",
-          "n": 1
-        },
-        {
-          "name": "Gender Diversity and Inequality",
-          "n": 1
-        }
-      ],
-      "sch": 4,
-      "sch2025": 4,
-      "sch2026": 0
+      "sch2025": 3,
+      "sch2026": 1
     },
     {
       "key": "renshaw_k",
@@ -866,7 +922,7 @@ window.RECENT = {
       "top_topics": [
         {
           "name": "Child Abuse and Trauma",
-          "n": 2
+          "n": 1
         },
         {
           "name": "Posttraumatic Stress Disorder Research",
@@ -882,30 +938,58 @@ window.RECENT = {
       "sch2026": 3
     },
     {
+      "key": "thompson_j",
+      "name": "James C Thompson",
+      "rank": "Professor",
+      "is_self": false,
+      "works": 2,
+      "y2025": 2,
+      "y2026": 0,
+      "oa": 2,
+      "closed": 0,
+      "by_type": {
+        "article": 2
+      },
+      "top_topics": [
+        {
+          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "n": 1
+        },
+        {
+          "name": "Neural and Behavioral Psychology Studies",
+          "n": 1
+        }
+      ],
+      "sch": 4,
+      "sch2025": 3,
+      "sch2026": 1
+    },
+    {
       "key": "zaccaro_s",
       "name": "Stephen Zaccaro",
       "rank": "Professor",
       "is_self": false,
-      "works": 3,
-      "y2025": 2,
+      "works": 4,
+      "y2025": 3,
       "y2026": 1,
       "oa": 0,
-      "closed": 3,
+      "closed": 4,
       "by_type": {
         "book-chapter": 2,
-        "article": 1
+        "article": 1,
+        "report": 1
       },
       "top_topics": [
+        {
+          "name": "Team Dynamics and Performance",
+          "n": 2
+        },
         {
           "name": "Academic and Historical Perspectives in Psychology",
           "n": 1
         },
         {
-          "name": "Team Dynamics and Performance",
-          "n": 1
-        },
-        {
-          "name": "Information and Cyber Security",
+          "name": "Innovation and Knowledge Management",
           "n": 1
         }
       ],
@@ -928,15 +1012,15 @@ window.RECENT = {
       },
       "top_topics": [
         {
+          "name": "Human-Automation Interaction and Safety",
+          "n": 2
+        },
+        {
           "name": "Social Robot Interaction and HRI",
           "n": 1
         },
         {
           "name": "Mind wandering and attention",
-          "n": 1
-        },
-        {
-          "name": "Safety Warnings and Signage",
           "n": 1
         }
       ],
@@ -950,30 +1034,28 @@ window.RECENT = {
       "rank": "Professor",
       "is_self": false,
       "works": 3,
-      "y2025": 3,
-      "y2026": 0,
-      "oa": 2,
-      "closed": 1,
+      "y2025": 2,
+      "y2026": 1,
+      "oa": 1,
+      "closed": 2,
       "by_type": {
-        "article": 3
+        "article": 1,
+        "book-chapter": 1,
+        "review": 1
       },
       "top_topics": [
         {
+          "name": "Eating Disorders and Behaviors",
+          "n": 2
+        },
+        {
           "name": "LGBTQ Health, Identity, and Policy",
-          "n": 1
-        },
-        {
-          "name": "Acute Kidney Injury Research",
-          "n": 1
-        },
-        {
-          "name": "Religious Education and Schools",
           "n": 1
         }
       ],
-      "sch": 2,
-      "sch2025": 2,
-      "sch2026": 0
+      "sch": 3,
+      "sch2025": 0,
+      "sch2026": 3
     },
     {
       "key": "kuykendall_l",
@@ -994,7 +1076,7 @@ window.RECENT = {
           "n": 2
         },
         {
-          "name": "Job Satisfaction and Organizational Behavior",
+          "name": "Stress and Burnout Research",
           "n": 1
         }
       ],
@@ -1017,7 +1099,7 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Sleep and related disorders",
+          "name": "Workplace Violence and Bullying",
           "n": 1
         }
       ],
@@ -1026,36 +1108,37 @@ window.RECENT = {
       "sch2026": 1
     },
     {
-      "key": "doebel_s",
-      "name": "Sabine Doebel",
+      "key": "short_j",
+      "name": "Jerome Short",
       "rank": "Associate",
       "is_self": false,
-      "works": 2,
-      "y2025": 1,
+      "works": 3,
+      "y2025": 2,
       "y2026": 1,
-      "oa": 1,
-      "closed": 1,
+      "oa": 3,
+      "closed": 0,
       "by_type": {
+        "review": 1,
         "article": 2
       },
       "top_topics": [
         {
-          "name": "Neural and Behavioral Psychology Studies",
-          "n": 1
+          "name": "Impact of Technology on Adolescents",
+          "n": 2
         },
         {
-          "name": "Science Education and Perceptions",
+          "name": "Dental Health and Care Utilization",
           "n": 1
         }
       ],
-      "sch": 2,
-      "sch2025": 1,
+      "sch": 1,
+      "sch2025": 0,
       "sch2026": 1
     },
     {
-      "key": "jack_a",
-      "name": "Allison E Jack",
-      "rank": "Assistant",
+      "key": "mcdonald_c",
+      "name": "Craig McDonald",
+      "rank": "Associate",
       "is_self": false,
       "works": 2,
       "y2025": 1,
@@ -1067,17 +1150,17 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Insect Resistance and Genetics",
+          "name": "Neural and Behavioral Psychology Studies",
           "n": 1
         },
         {
-          "name": "Autism Spectrum Disorder Research",
+          "name": "Social Robot Interaction and HRI",
           "n": 1
         }
       ],
-      "sch": 0,
-      "sch2025": 0,
-      "sch2026": 0
+      "sch": 2,
+      "sch2025": 1,
+      "sch2026": 1
     },
     {
       "key": "peterson_m",
@@ -1094,7 +1177,7 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Safety Warnings and Signage",
+          "name": "Human-Automation Interaction and Safety",
           "n": 1
         }
       ],
@@ -1122,7 +1205,7 @@ window.RECENT = {
           "n": 1
         },
         {
-          "name": "Organizational Strategy and Culture",
+          "name": "Museums and Cultural Heritage",
           "n": 1
         }
       ],
@@ -1131,13 +1214,13 @@ window.RECENT = {
       "sch2026": 0
     },
     {
-      "key": "thompson_j",
-      "name": "James C Thompson",
+      "key": "mehlenbeck_r",
+      "name": "Robyn Mehlenbeck",
       "rank": "Professor",
       "is_self": false,
       "works": 2,
-      "y2025": 2,
-      "y2026": 0,
+      "y2025": 0,
+      "y2026": 2,
       "oa": 2,
       "closed": 0,
       "by_type": {
@@ -1145,17 +1228,13 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
-          "n": 1
-        },
-        {
-          "name": "Neural and Behavioral Psychology Studies",
-          "n": 1
+          "name": "Per- and polyfluoroalkyl substances research",
+          "n": 2
         }
       ],
       "sch": 2,
-      "sch2025": 2,
-      "sch2026": 0
+      "sch2025": 0,
+      "sch2026": 2
     },
     {
       "key": "flinn_j",
@@ -1172,7 +1251,7 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Zebrafish Biomedical Research Applications",
+          "name": "Animal Behavior and Welfare Studies",
           "n": 1
         }
       ],
@@ -1181,13 +1260,13 @@ window.RECENT = {
       "sch2026": 1
     },
     {
-      "key": "mcdonald_c",
-      "name": "Craig McDonald",
+      "key": "melley_a",
+      "name": "Alison Heinhold Melley",
       "rank": "Associate",
       "is_self": false,
       "works": 1,
-      "y2025": 1,
-      "y2026": 0,
+      "y2025": 0,
+      "y2026": 1,
       "oa": 1,
       "closed": 0,
       "by_type": {
@@ -1195,28 +1274,12 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Neural and Behavioral Psychology Studies",
+          "name": "Evaluation of Teaching Practices",
           "n": 1
         }
       ],
-      "sch": 1,
-      "sch2025": 1,
-      "sch2026": 0
-    },
-    {
-      "key": "short_j",
-      "name": "Jerome Short",
-      "rank": "Associate",
-      "is_self": false,
-      "works": 0,
-      "y2025": 0,
-      "y2026": 0,
-      "oa": 0,
-      "closed": 0,
-      "by_type": [],
-      "top_topics": [],
-      "sch": 1,
-      "sch2025": 1,
+      "sch": 0,
+      "sch2025": 0,
       "sch2026": 0
     },
     {
@@ -1238,22 +1301,6 @@ window.RECENT = {
     {
       "key": "brielmaier_j",
       "name": "Jennifer Brielmaier",
-      "rank": "Associate",
-      "is_self": false,
-      "works": 0,
-      "y2025": 0,
-      "y2026": 0,
-      "oa": 0,
-      "closed": 0,
-      "by_type": [],
-      "top_topics": [],
-      "sch": 0,
-      "sch2025": 0,
-      "sch2026": 0
-    },
-    {
-      "key": "melley_a",
-      "name": "Alison Heinhold Melley",
       "rank": "Associate",
       "is_self": false,
       "works": 0,
@@ -1300,8 +1347,8 @@ window.RECENT = {
       "sch2026": 0
     },
     {
-      "key": "mehlenbeck_r",
-      "name": "Robyn Mehlenbeck",
+      "key": "burns_s",
+      "name": "M Susan Burns",
       "rank": "Professor",
       "is_self": false,
       "works": 0,
@@ -1311,29 +1358,6 @@ window.RECENT = {
       "closed": 0,
       "by_type": [],
       "top_topics": [],
-      "sch": 0,
-      "sch2025": 0,
-      "sch2026": 0
-    },
-    {
-      "key": "burns_s",
-      "name": "M Susan Burns",
-      "rank": "Professor",
-      "is_self": false,
-      "works": 1,
-      "y2025": 1,
-      "y2026": 0,
-      "oa": 0,
-      "closed": 1,
-      "by_type": {
-        "article": 1
-      },
-      "top_topics": [
-        {
-          "name": "Ethics and Social Impacts of AI",
-          "n": 1
-        }
-      ],
       "sch": null,
       "sch2025": null,
       "sch2026": null
@@ -1405,13 +1429,20 @@ window.RECENT = {
       "name": "Erin Quinlivan Murdoch",
       "rank": "Associate",
       "is_self": false,
-      "works": 0,
+      "works": 1,
       "y2025": 0,
-      "y2026": 0,
+      "y2026": 1,
       "oa": 0,
-      "closed": 0,
-      "by_type": [],
-      "top_topics": [],
+      "closed": 1,
+      "by_type": {
+        "article": 1
+      },
+      "top_topics": [
+        {
+          "name": "Animal Behavior and Welfare Studies",
+          "n": 1
+        }
+      ],
       "sch": null,
       "sch2025": null,
       "sch2026": null

@@ -16,7 +16,8 @@ sch <- read_csv("scholar_manual.csv", show_col_types = FALSE, col_types = cols(.
 fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default = col_character()))
 
 # (1) write scholar_id back into the master roster
-id_map <- sch |> filter(!is.na(scholar_id) & nzchar(scholar_id)) |> select(faculty_key, scholar_id)
+id_map <- sch |> filter(!is.na(scholar_id) & nzchar(scholar_id)) |> arrange(desc(snapshot_date)) |>
+  distinct(faculty_key, .keep_all = TRUE) |> select(faculty_key, scholar_id)   # one id per person across snapshots
 fac <- fac |> rows_update(id_map, by = "faculty_key", unmatched = "ignore")
 file.copy("faculty.csv", "faculty.csv.bak", overwrite = TRUE)
 write_csv(fac, "faculty.csv")

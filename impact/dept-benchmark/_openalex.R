@@ -73,18 +73,40 @@ oa_resolve_author <- function(full_name, orcid = NA) {
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
 # Fragmentation-proof: fetch ALL of an author's works by ORCID (preferred) or
-# author.id, following OpenAlex cursor pagination. Returns a list of works, each
+# author.id, following OpenAlex page pagination. Returns a list of works, each
 # a list(year, cites, counts_by_year). Summing over these avoids the undercount
 # you get from a single (possibly fragmented) author record's summary_stats.
-oa_author_works <- function(orcid = NA, author_id = NA) {
-  filt <- if (!is.na(orcid) && nzchar(orcid)) paste0("author.orcid:", orcid)
+oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0)) {
+  filt <- if (!is.na(orcid) && nzchar(orcid) && orcid != "NA") paste0("author.orcid:", orcid)
           else paste0("author.id:", author_id)
-  works <- list(); cursor <- "*"
+  if (length(extra_ids)) {             # union known fragments, dedup by work id
+    byid <- list()
+    for (f in c(filt, paste0("author.id:", extra_ids)))
+      for (w in oa_author_works_filt(f)) byid[[w$id]] <- w
+    return(unname(byid))
+  }
+  oa_author_works_filt(filt)
+}
+
+# Known OpenAlex fragment ids for people whose record is split across several
+# author ids that ORCID/primary-id alone don't reach. Unioned by work id, so
+# overlap is harmless. Verify any addition (GMU affiliation + on-topic works).
+#   Gerald Matthews (no ORCID on roster): 5+ GMU fragments, checked 2026-11-11.
+EXTRA_IDS <- list(
+  matthews_g = c("A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372")
+)
+
+oa_author_works_filt <- function(filt) {
+  # Page (not cursor) paging: since 2026 OpenAlex rejects cursor paging without
+  # an API key (HTTP 401). page= tops out at 10,000 results -- ample per person.
+  # A failed request STOPS rather than returning a silently truncated record.
+  works <- list(); pg <- 1L
   repeat {
-    url <- sprintf("%s/works?filter=%s&per-page=200&cursor=%s&select=id,publication_year,cited_by_count,counts_by_year",
-                   OA_BASE, filt, utils::URLencode(cursor, reserved = TRUE))
+    url <- sprintf("%s/works?filter=%s&per-page=200&page=%d&select=id,publication_year,cited_by_count,counts_by_year",
+                   OA_BASE, filt, pg)
     page <- oa_get(url)
-    if (is.null(page) || length(page$results) == 0) break
+    if (is.null(page)) stop("OpenAlex request failed for ", filt, " (page ", pg, ")")
+    if (length(page$results) == 0) break
     for (w in page$results) {
       cby <- list()
       for (c in (w$counts_by_year %||% list())) cby[[as.character(c$year)]] <- c$cited_by_count %||% 0L
@@ -94,8 +116,8 @@ oa_author_works <- function(orcid = NA, author_id = NA) {
         cites = w$cited_by_count %||% 0L,
         cby   = cby)
     }
-    cursor <- page$meta$next_cursor %||% NULL
-    if (is.null(cursor)) break
+    if (pg * 200 >= (page$meta$count %||% 0)) break
+    pg <- pg + 1L
   }
   works
 }

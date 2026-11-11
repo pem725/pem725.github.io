@@ -20,17 +20,20 @@ fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default
 # record OpenAlex has split (their recent works scatter across ids). Works are
 # deduped by work id, so listing the primary id too would be harmless.
 #   Gerald Matthews (no ORCID): recent papers sit on two secondary ids.
-EXTRA_IDS <- list(matthews_g = c("A5134484372", "A5025982678"))
+# EXTRA_IDS now lives in _openalex.R (shared with 02_pull_openalex.R).
 
 TYPES <- "type:article|review|book|book-chapter|conference-paper|report"
 fetch_by <- function(filt) {
-  out <- list(); cursor <- "*"
+  out <- list(); pg <- 1L   # page paging: cursor needs an API key since 2026
   repeat {
-    url <- sprintf("%s/works?filter=%s,publication_year:%s,%s&per-page=200&cursor=%s&select=id,type,publication_year,primary_topic,open_access",
-                   OA_BASE, filt, YEARS, TYPES, utils::URLencode(cursor, reserved = TRUE))
-    p <- oa_get(url); if (is.null(p) || length(p$results) == 0) break
+    url <- sprintf("%s/works?filter=%s,publication_year:%s,%s&per-page=200&page=%d&select=id,type,publication_year,primary_topic,open_access",
+                   OA_BASE, filt, YEARS, TYPES, pg)
+    p <- oa_get(url)
+    if (is.null(p)) stop("OpenAlex request failed for ", filt, " (page ", pg, ")")
+    if (length(p$results) == 0) break
     out <- c(out, p$results)
-    cursor <- p$meta$next_cursor %||% NULL; if (is.null(cursor)) break
+    if (pg * 200 >= (p$meta$count %||% 0)) break
+    pg <- pg + 1L
   }
   out
 }
@@ -40,7 +43,8 @@ fetch_by <- function(filt) {
 recent_works <- function(key, orcid, author_id) {
   filts <- if (!is.na(orcid) && nzchar(orcid) && orcid != "NA")
              paste0("author.orcid:", orcid) else paste0("author.id:", author_id)
-  filts <- c(filts, paste0("author.id:", EXTRA_IDS[[key]] %||% character(0)))
+  extra <- EXTRA_IDS[[key]] %||% character(0)
+  if (length(extra)) filts <- c(filts, paste0("author.id:", extra))   # paste0 on length-0 returns "author.id:"
   byid <- list()
   for (f in filts) for (w in fetch_by(f)) byid[[w$id]] <- w
   unname(byid)

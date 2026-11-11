@@ -11,8 +11,14 @@ suppressMessages({ library(readr); library(dplyr); library(tidyr); library(jsonl
 fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default = col_character()))
 m   <- read_csv("metrics_long.csv", show_col_types = FALSE, col_types = cols(.default = col_character())) |>
   mutate(across(c(works_count, cited_by_count, h_index, i10_index), as.numeric))
+# Each source is refreshed on its own cadence (OpenAlex via API, Scholar by browser
+# harvest), so take the latest snapshot PER SOURCE rather than one global date.
+m <- m |> group_by(source) |> filter(snapshot_date == max(snapshot_date)) |> ungroup()
+src_dates <- m |> distinct(source, snapshot_date)
 latest <- max(m$snapshot_date)
-life <- m |> filter(metric_year == "lifetime", snapshot_date == latest)
+oa_snapshot  <- src_dates$snapshot_date[src_dates$source == "openalex"][1]
+sch_snapshot <- src_dates$snapshot_date[src_dates$source == "scholar"][1]
+life <- m |> filter(metric_year == "lifetime")
 
 peers <- fac |> filter(active == "TRUE") |>
   select(faculty_key, full_name, discipline, rank, category, is_self)
@@ -75,8 +81,7 @@ team <- list(
   rank = sum(team_others > team_union) + 1, n_others = length(team_others) + 1)
 
 self <- wide |> filter(is_self)
-byyear <- function(key, src) m |> filter(faculty_key==key, source==src, metric_year!="lifetime",
-                                     snapshot_date==latest) |>
+byyear <- function(key, src) m |> filter(faculty_key==key, source==src, metric_year!="lifetime") |>
   transmute(year=as.integer(metric_year), cites=cited_by_count) |> arrange(year) |> filter(!is.na(cites))
 
 # All-faculty by-year trajectories (both sources) for the career-centered overlay (Fig 5B).
@@ -92,7 +97,8 @@ traj_all <- lapply(seq_len(n), function(i) {
 traj_all <- Filter(function(t) nrow(t$openalex) > 0 || nrow(t$scholar) > 0, traj_all)
 
 out <- list(
-  snapshot_date = latest, n_faculty = n,
+  snapshot_date = latest, oa_snapshot = oa_snapshot, sch_snapshot = sch_snapshot,
+  n_faculty = n,
   n_openalex = sum(wide$oa_resolved), n_scholar = sum(wide$sch_resolved),
   no_profile = wide$full_name[!wide$oa_resolved & !wide$sch_resolved],
   concentration = conc,

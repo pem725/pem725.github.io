@@ -27,7 +27,8 @@ if (nrow(fac) == 0) stop("No resolved openalex_id values. Run 01_resolve_openale
 rows <- list()
 for (i in seq_len(nrow(fac))) {
   key <- fac$faculty_key[i]
-  works <- oa_author_works(orcid = fac$orcid[i], author_id = fac$openalex_id[i])
+  works <- oa_author_works(orcid = fac$orcid[i], author_id = fac$openalex_id[i],
+                           extra_ids = EXTRA_IDS[[key]] %||% character(0))
   if (length(works) == 0) { warning("no works for ", key); next }
 
   cites <- vapply(works, function(w) as.integer(w$cites), integer(1))

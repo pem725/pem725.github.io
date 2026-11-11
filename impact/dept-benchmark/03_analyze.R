@@ -19,8 +19,9 @@ m   <- read_csv("metrics_long.csv", show_col_types = FALSE, col_types = cols(.de
 peers <- fac |> filter(active == "TRUE") |>
   select(faculty_key, full_name, discipline, is_self, rank)
 
+m <- m |> group_by(source) |> filter(snapshot_date == max(snapshot_date)) |> ungroup()  # latest per source
 latest <- max(m$snapshot_date)
-life <- m |> filter(metric_year == "lifetime", snapshot_date == latest) |>
+life <- m |> filter(metric_year == "lifetime") |>
   inner_join(peers, by = "faculty_key")
 
 # ---- Career-total ranking (per source) ----
