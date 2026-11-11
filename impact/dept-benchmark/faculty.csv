@@ -51,7 +51,7 @@ stuewig_j,Stuewig,Jeffrey,Jeffrey B Stuewig,Associate,tenure_line,Clinical,TRUE,
 thompson_d,Thompson,Dawna,Dawna M Thompson,Assistant,tenure_line,Unknown,TRUE,FALSE,NA,A5027690329,NA,NA,NA,TRUE,Added in full-dept expansion
 thompson_j,Thompson,James,James C Thompson,Professor,tenure_line,CBN,TRUE,FALSE,0000-0002-9824-8543,A5103394448,2VKzuqwAAAAJ,NA,NA,TRUE,RESOLVED-OA 2026-07-28: correct OpenAlex author id A5103394448 (ORCID-verified; GMU CBN; confirmed via 2011 Perception paper co-authored w/ McKnight). Previously UNRESOLVED due to fragmentation + homonymous biologist.
 tonge_n,Tonge,Natasha,Natasha A Tonge,Assistant,tenure_line,Clinical,TRUE,FALSE,0000-0001-7670-7991,A5077877685,bpou7qoAAAAJ,NA,NA,TRUE,Added in full-dept expansion
-wiener_m,Wiener,Martin,Martin Wiener,Associate,tenure_line,CBN,TRUE,FALSE,0000-0001-6006-2594,A5021965223,d35WLWYAAAAJ,NA,NA,TRUE,Added in full-dept expansion
+wiener_m,Wiener,Martin,Martin Wiener,Associate,tenure_line,CBN,TRUE,FALSE,0000-0001-5963-5439,A5021965223,d35WLWYAAAAJ,NA,NA,TRUE,ORCID corrected 2026-11-11: old 0000-0001-6006-2594 is Martin J. Wiener (TU Dresden information systems) and OpenAlex had also merged the Rice historian into it
 winsler_a,Winsler,Adam,Adam Winsler,Professor,tenure_line,Applied Developmental,TRUE,FALSE,0000-0001-6504-0802,A5048244213,_Ekthu4AAAAJ,NA,NA,TRUE,Added in full-dept expansion
 young_k,Young,Kevin,Kevin Christopher Young,Assistant,tenure_line,Clinical,TRUE,FALSE,NA,NA,NA,NA,NA,TRUE,No OpenAlex record found (new/low-output assistant prof); treated as ~0
 zaccaro_s,Zaccaro,Stephen,Stephen Zaccaro,Professor,tenure_line,I-O,TRUE,FALSE,0000-0002-8313-2206,A5045784042,EtEt5w0AAAAJ,NA,NA,TRUE,Added in full-dept expansion

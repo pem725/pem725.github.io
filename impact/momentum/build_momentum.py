@@ -63,7 +63,7 @@ AFFIL_RULES = {"thompson_j": {
 
 
 # Individual namesake works (mirrors EXCLUDE_WORKS in _openalex.R).
-EXCLUDE_WORKS = {"W2184987074", "W2896126560"}
+EXCLUDE_WORKS = {"W2184987074", "W2896126560", "W167837768", "W571322674", "W656031738"}
 
 
 def affil_ok(w, rule):

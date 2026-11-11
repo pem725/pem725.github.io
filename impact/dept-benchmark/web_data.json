@@ -7,12 +7,12 @@
   "n_scholar": 44,
   "no_profile": ["Camelia Harb", "Raymond Abraham Bradni", "Danielle Dufresne", "Susanne M Furman", "Sara Montiel", "Robin Shusko", "Kevin Christopher Young", "Justin Ramsdell"],
   "concentration": {
-    "total": 249919,
-    "gini": 0.682,
-    "top3": 36,
+    "total": 248638,
+    "gini": 0.683,
+    "top3": 37,
     "top5": 49,
     "top6": 53,
-    "bottom30": 6.9,
+    "bottom30": 7,
     "median": 1818
   },
   "team": {
@@ -20,10 +20,10 @@
     "keys": ["mcknight_p", "kashdan_t"],
     "union_cites": 45146,
     "simple_cites": 50072,
-    "works": 359,
+    "works": 358,
     "shared_works": 40,
-    "share_union": 18.1,
-    "share_simple": 20,
+    "share_union": 18.2,
+    "share_simple": 20.1,
     "rank": 1,
     "n_others": 58
   },
@@ -138,7 +138,7 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": true,
-      "oa_works": 124,
+      "oa_works": 123,
       "oa_cites": 10696,
       "oa_h": 45,
       "oa_i10": 74,
@@ -314,7 +314,7 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 103,
+      "oa_works": 102,
       "oa_cites": 5610,
       "oa_h": 32,
       "oa_i10": 59,
@@ -351,28 +351,6 @@
       "sch_resolved": true
     },
     {
-      "key": "wiener_m",
-      "name": "Martin Wiener",
-      "disc": "CBN",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 234,
-      "oa_cites": 5009,
-      "oa_h": 32,
-      "oa_i10": 63,
-      "sch_cites": 4646,
-      "sch_h": 31,
-      "sch_i10": 46,
-      "fold": 1.08,
-      "cv": 0.053,
-      "oa_rank": 15,
-      "sch_rank": 22,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
       "key": "renshaw_k",
       "name": "Keith D Renshaw",
       "disc": "Clinical",
@@ -389,8 +367,30 @@
       "sch_i10": 92,
       "fold": 1.64,
       "cv": 0.343,
-      "oa_rank": 16,
+      "oa_rank": 15,
       "sch_rank": 15,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "wiener_m",
+      "name": "Martin Wiener",
+      "disc": "CBN",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 71,
+      "oa_cites": 3750,
+      "oa_h": 29,
+      "oa_i10": 42,
+      "sch_cites": 4646,
+      "sch_h": 31,
+      "sch_i10": 46,
+      "fold": 1.24,
+      "cv": 0.151,
+      "oa_rank": 16,
+      "sch_rank": 22,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -666,10 +666,10 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 53,
-      "oa_cites": 1856,
+      "oa_works": 52,
+      "oa_cites": 1834,
       "oa_h": 26,
-      "oa_i10": 37,
+      "oa_i10": 36,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
@@ -1344,10 +1344,6 @@
   "self_byyear": {
     "openalex": [
       {
-        "year": 1986,
-        "cites": 0
-      },
-      {
         "year": 1996,
         "cites": 0
       },
@@ -1571,10 +1567,6 @@
       "is_self": true,
       "team": true,
       "openalex": [
-        {
-          "year": 1986,
-          "cites": 0
-        },
         {
           "year": 1996,
           "cites": 0
@@ -3295,10 +3287,6 @@
       "team": false,
       "openalex": [
         {
-          "year": 1974,
-          "cites": 0
-        },
-        {
           "year": 1995,
           "cites": 0
         },
@@ -3344,7 +3332,7 @@
         },
         {
           "year": 2012,
-          "cites": 63
+          "cites": 62
         },
         {
           "year": 2013,
@@ -3376,7 +3364,7 @@
         },
         {
           "year": 2020,
-          "cites": 106
+          "cites": 105
         },
         {
           "year": 2021,
@@ -3384,7 +3372,7 @@
         },
         {
           "year": 2022,
-          "cites": 69
+          "cites": 68
         },
         {
           "year": 2023,
@@ -4598,10 +4586,6 @@
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1987,
-          "cites": 0
-        },
         {
           "year": 2002,
           "cites": 0
@@ -8939,114 +8923,6 @@
       "team": false,
       "openalex": [
         {
-          "year": 1971,
-          "cites": 0
-        },
-        {
-          "year": 1972,
-          "cites": 0
-        },
-        {
-          "year": 1973,
-          "cites": 0
-        },
-        {
-          "year": 1974,
-          "cites": 0
-        },
-        {
-          "year": 1976,
-          "cites": 0
-        },
-        {
-          "year": 1979,
-          "cites": 0
-        },
-        {
-          "year": 1980,
-          "cites": 0
-        },
-        {
-          "year": 1981,
-          "cites": 0
-        },
-        {
-          "year": 1982,
-          "cites": 0
-        },
-        {
-          "year": 1983,
-          "cites": 0
-        },
-        {
-          "year": 1984,
-          "cites": 0
-        },
-        {
-          "year": 1985,
-          "cites": 0
-        },
-        {
-          "year": 1986,
-          "cites": 0
-        },
-        {
-          "year": 1987,
-          "cites": 0
-        },
-        {
-          "year": 1989,
-          "cites": 0
-        },
-        {
-          "year": 1992,
-          "cites": 0
-        },
-        {
-          "year": 1993,
-          "cites": 0
-        },
-        {
-          "year": 1994,
-          "cites": 0
-        },
-        {
-          "year": 1995,
-          "cites": 0
-        },
-        {
-          "year": 1996,
-          "cites": 0
-        },
-        {
-          "year": 1997,
-          "cites": 0
-        },
-        {
-          "year": 1998,
-          "cites": 0
-        },
-        {
-          "year": 1999,
-          "cites": 0
-        },
-        {
-          "year": 2001,
-          "cites": 0
-        },
-        {
-          "year": 2004,
-          "cites": 0
-        },
-        {
-          "year": 2005,
-          "cites": 0
-        },
-        {
-          "year": 2006,
-          "cites": 0
-        },
-        {
           "year": 2007,
           "cites": 0
         },
@@ -9068,63 +8944,63 @@
         },
         {
           "year": 2012,
-          "cites": 109
+          "cites": 106
         },
         {
           "year": 2013,
-          "cites": 89
+          "cites": 153
         },
         {
           "year": 2014,
-          "cites": 117
+          "cites": 199
         },
         {
           "year": 2015,
-          "cites": 142
+          "cites": 180
         },
         {
           "year": 2016,
-          "cites": 100
+          "cites": 218
         },
         {
           "year": 2017,
-          "cites": 105
+          "cites": 206
         },
         {
           "year": 2018,
-          "cites": 139
+          "cites": 255
         },
         {
           "year": 2019,
-          "cites": 202
+          "cites": 241
         },
         {
           "year": 2020,
-          "cites": 242
+          "cites": 205
         },
         {
           "year": 2021,
-          "cites": 299
+          "cites": 298
         },
         {
           "year": 2022,
-          "cites": 307
+          "cites": 310
         },
         {
           "year": 2023,
-          "cites": 346
+          "cites": 293
         },
         {
           "year": 2024,
-          "cites": 388
+          "cites": 316
         },
         {
           "year": 2025,
-          "cites": 515
+          "cites": 340
         },
         {
           "year": 2026,
-          "cites": 566
+          "cites": 277
         }
       ],
       "scholar": [

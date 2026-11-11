@@ -133,7 +133,10 @@ SKIP_TYPES <- c("erratum", "paratext", "retraction", "peer-review", "dataset", "
 # Audited 2026-11-11.
 EXCLUDE_WORKS <- c(
   "W2184987074",  # 1951 homing-pigeon navigation -- G.V.T. Matthews, ornithologist (not Gerald)
-  "W2896126560")  # 2017 'State-Trait Anxiety Inventory' reference entry -- Spielberger's instrument
+  "W2896126560",  # 2017 'State-Trait Anxiety Inventory' reference entry -- Spielberger's instrument
+  "W167837768",   # 1987 'Crack' -- not Seth Kaplan (I/O, PhD ~2000s)
+  "W571322674",   # 1974 'Oxidation of petrochemicals' -- not Ted Dumas (neuroscience)
+  "W656031738")   # 1986 'Expert Systems' proceedings -- not Patrick McKnight
 
 # TRUE if a raw OpenAlex work (selected WITH authorships) belongs to the person
 # under `rule`. No rule -> always TRUE.

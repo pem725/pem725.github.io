@@ -4,20 +4,19 @@
   "dept": {
     "n_faculty": 51,
     "total_works": 240,
-    "y2025": 131,
-    "y2026": 109,
-    "oa": 134,
-    "closed": 106,
+    "y2025": 133,
+    "y2026": 107,
+    "oa": 137,
+    "closed": 103,
     "scholar_total": 335,
     "scholar_2025": 171,
     "scholar_2026": 164,
     "scholar_snapshot": "2026-11-11",
     "by_type": {
-      "article": 181,
-      "review": 20,
-      "book-chapter": 14,
-      "conference-paper": 23,
-      "book": 1,
+      "article": 186,
+      "review": 21,
+      "book-chapter": 13,
+      "conference-paper": 19,
       "report": 1
     },
     "top_topics": [
@@ -62,34 +61,34 @@
         "n": 4
       },
       {
-        "name": "Ethics and Social Impacts of AI",
+        "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
         "n": 4
       },
       {
-        "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
-        "n": 4
+        "name": "Psychological and Educational Research Studies",
+        "n": 3
       }
     ],
     "by_field": [
       {
         "name": "Psychology",
-        "n": 84
+        "n": 86
       },
       {
         "name": "Social Sciences",
-        "n": 51
-      },
-      {
-        "name": "Business, Management and Accounting",
-        "n": 31
+        "n": 45
       },
       {
         "name": "Neuroscience",
-        "n": 25
+        "n": 32
+      },
+      {
+        "name": "Business, Management and Accounting",
+        "n": 27
       },
       {
         "name": "Medicine",
-        "n": 17
+        "n": 18
       },
       {
         "name": "Arts and Humanities",
@@ -97,11 +96,11 @@
       },
       {
         "name": "Computer Science",
-        "n": 9
+        "n": 7
       },
       {
         "name": "Decision Sciences",
-        "n": 5
+        "n": 6
       }
     ]
   },
@@ -232,27 +231,25 @@
       "rank": "Associate",
       "is_self": false,
       "works": 12,
-      "y2025": 6,
-      "y2026": 6,
-      "oa": 8,
-      "closed": 4,
+      "y2025": 8,
+      "y2026": 4,
+      "oa": 11,
+      "closed": 1,
       "by_type": {
-        "article": 6,
-        "conference-paper": 4,
-        "book": 1,
-        "book-chapter": 1
+        "article": 11,
+        "review": 1
       },
       "top_topics": [
         {
-          "name": "E-Government and Public Services",
-          "n": 4
+          "name": "Neuroscience and Music Perception",
+          "n": 3
         },
         {
-          "name": "Legal and Labor Studies",
-          "n": 2
+          "name": "Visual perception and processing mechanisms",
+          "n": 3
         },
         {
-          "name": "Digital Economy and Work Transformation",
+          "name": "Multisensory perception and integration",
           "n": 2
         }
       ],
