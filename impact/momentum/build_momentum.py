@@ -49,8 +49,31 @@ API = "https://api.openalex.org"
 MIN_BASE = 5            # growth needs >= 5 citations/yr in the prior 3 years
 FRESH_WINDOW = 5          # "recent" = published in the citing year or the 4 before
 SKIP_TYPES = {"erratum", "paratext", "retraction", "peer-review", "dataset", "preprint"}
-# Known OpenAlex fragment ids for faculty without an ORCID (mirrors 06_recent_activity.R).
-EXTRA_IDS = {"matthews_g": ["A5134484372", "A5025982678"]}
+# Known OpenAlex fragment ids for faculty without an ORCID (mirrors _openalex.R).
+EXTRA_IDS = {"matthews_g": ["A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372"]}
+# Namesake guard (mirrors AFFIL_RULES in impact/dept-benchmark/_openalex.R): OpenAlex
+# merged James Chilton Thompson (UTMB Galveston surgeon) and others into James C.
+# Thompson's ORCID. A work counts only if his authorship lists one of his own
+# institutions (Swinburne -> West Virginia U -> George Mason) or is on the audited list.
+AFFIL_RULES = {"thompson_j": {
+    "orcid": "0000-0002-9824-8543",
+    "insts": {"I57093077", "I12097938", "I162714631"},
+    "keep_unaffiliated": {"W2013420665", "W2496223641", "W1750447121", "W264001252", "W4250014721",
+                          "W2267885241", "W2015811195", "W2200247079", "W70651515"}}}
+
+
+# Individual namesake works (mirrors EXCLUDE_WORKS in _openalex.R).
+EXCLUDE_WORKS = {"W2184987074", "W2896126560"}
+
+
+def affil_ok(w, rule):
+    if not rule:
+        return True
+    mine = [a for a in w.get("authorships") or [] if (a["author"].get("orcid") or "").endswith(rule["orcid"])]
+    insts = {(i.get("id") or "").rsplit("/", 1)[-1] for a in mine for i in a.get("institutions") or []}
+    if insts:
+        return bool(insts & rule["insts"])
+    return w["id"].rsplit("/", 1)[-1] in rule["keep_unaffiliated"]
 
 
 # ---------------------------------------------------------------- OpenAlex
@@ -70,9 +93,11 @@ def get(path, params):
             time.sleep(2 ** attempt)
 
 
-def works_for(filters, select="id,doi,title,type,publication_year,cited_by_count,counts_by_year"):
+def works_for(filters, select="id,doi,title,type,publication_year,cited_by_count,counts_by_year", rule=None):
     """Union of works matching any of the filters, deduplicated by work id."""
     out = {}
+    if rule and "authorships" not in select:
+        select += ",authorships"
     # Page (not cursor) paging: since 2026 OpenAlex refuses cursor paging
     # without an API key (HTTP 401). Page paging tops out at 10,000 results,
     # far above any one person's record.
@@ -81,7 +106,8 @@ def works_for(filters, select="id,doi,title,type,publication_year,cited_by_count
         while True:
             j = get("works", {"filter": f, "per-page": 200, "page": page, "select": select})
             for w in j["results"]:
-                if w.get("type") not in SKIP_TYPES:
+                if (w.get("type") not in SKIP_TYPES and affil_ok(w, rule)
+                        and w["id"].rsplit("/", 1)[-1] not in EXCLUDE_WORKS):
                     out[w["id"]] = w
             if page * 200 >= j["meta"]["count"] or not j["results"]:
                 break
@@ -247,7 +273,7 @@ def era_breakdown(works, today):
 def person(p, today, keep_works=False):
     if not p["filters"]:
         return dict({k: v for k, v in p.items() if k != "filters"}, m=None, label=None), []
-    works = works_for(p["filters"])
+    works = works_for(p["filters"], rule=AFFIL_RULES.get(p.get("key")))
     m = metrics(works, today)
     entry = {k: v for k, v in p.items() if k != "filters"}
     entry.update(m=m, label=momentum_label(m))

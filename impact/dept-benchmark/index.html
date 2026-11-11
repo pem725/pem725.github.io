@@ -715,11 +715,15 @@ $("#methods").innerHTML=`<b>How to read this, honestly.</b> Peer set = all ${B.n
   author's works via ORCID). <b>Google Scholar</b> counts a wider universe (conference papers, chapters,
   self-citations) so it runs higher, especially in conference-heavy fields. ${B.no_profile.length} faculty
   have no indexed research profile on either source (mostly instructors/clinicians) and appear as zeros.
-  <b>Caveats:</b> James C. Thompson's OpenAlex total (resolved by ORCID) runs far <i>above</i> his
-  self-curated Scholar figure — a reverse of the usual gap that points to a thin Scholar profile rather
-  than a source philosophy. Gerald Matthews has no ORCID and OpenAlex splits his record across several
-  author ids; since the November 2026 refresh those fragments are unioned (deduplicated by work), which is
-  why his OpenAlex total rose sharply. Sarah Fischer's ORCID was corrected the same day (the roster had
+  <b>Caveats:</b> OpenAlex had merged a namesake — a Texas surgeon, James Chilton Thompson — into
+  James C. Thompson's ORCID record, inflating him roughly four-fold. Since the November 2026 refresh his
+  works count only when his own affiliation on the paper is one of his actual stops (Swinburne → West
+  Virginia University → George Mason) or the paper is on a short hand-audited list. Gerald Matthews has no ORCID and OpenAlex splits his record across several
+  author ids; since the November 2026 refresh those fragments are unioned (deduplicated by work) and
+  audited against his career trail (Cambridge → Aston → Dundee → Cincinnati → Central Florida → George Mason),
+  with two namesake items removed (a 1951 ornithology paper and a reference entry for someone else's
+  inventory). Across everyone, OpenAlex <i>works</i> now exclude non-scholarly records (dataset, paratext,
+  preprint, erratum), so work counts run lower than before. Sarah Fischer's ORCID was corrected the same day (the roster had
   carried a different researcher's iD). Nastassia Savage's Scholar profile still lists Old Dominion (a recent hire). Web of
   Science/Scopus (the conservative journal-only source) is deferred. Fully reproducible and re-runnable
   each year from <span class="muted">impact/dept-benchmark/</span>.`;

@@ -23,15 +23,15 @@ fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default
 # EXTRA_IDS now lives in _openalex.R (shared with 02_pull_openalex.R).
 
 TYPES <- "type:article|review|book|book-chapter|conference-paper|report"
-fetch_by <- function(filt) {
+fetch_by <- function(filt, rule = NULL) {
   out <- list(); pg <- 1L   # page paging: cursor needs an API key since 2026
   repeat {
-    url <- sprintf("%s/works?filter=%s,publication_year:%s,%s&per-page=200&page=%d&select=id,type,publication_year,primary_topic,open_access",
-                   OA_BASE, filt, YEARS, TYPES, pg)
+    url <- sprintf("%s/works?filter=%s,publication_year:%s,%s&per-page=200&page=%d&select=id,type,publication_year,primary_topic,open_access%s",
+                   OA_BASE, filt, YEARS, TYPES, pg, if (!is.null(rule)) ",authorships" else "")
     p <- oa_get(url)
     if (is.null(p)) stop("OpenAlex request failed for ", filt, " (page ", pg, ")")
     if (length(p$results) == 0) break
-    out <- c(out, p$results)
+    out <- c(out, Filter(function(w) affil_ok(w, rule) && !(sub(".*/", "", w$id) %in% EXCLUDE_WORKS), p$results))   # namesake guard (AFFIL_RULES)
     if (pg * 200 >= (p$meta$count %||% 0)) break
     pg <- pg + 1L
   }
@@ -46,7 +46,7 @@ recent_works <- function(key, orcid, author_id) {
   extra <- EXTRA_IDS[[key]] %||% character(0)
   if (length(extra)) filts <- c(filts, paste0("author.id:", extra))   # paste0 on length-0 returns "author.id:"
   byid <- list()
-  for (f in filts) for (w in fetch_by(f)) byid[[w$id]] <- w
+  for (f in filts) for (w in fetch_by(f, AFFIL_RULES[[key]])) byid[[w$id]] <- w
   unname(byid)
 }
 

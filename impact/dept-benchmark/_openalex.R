@@ -76,16 +76,18 @@ oa_resolve_author <- function(full_name, orcid = NA) {
 # author.id, following OpenAlex page pagination. Returns a list of works, each
 # a list(year, cites, counts_by_year). Summing over these avoids the undercount
 # you get from a single (possibly fragmented) author record's summary_stats.
-oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0)) {
+oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0), key = NA) {
+  rule <- if (!is.na(key)) AFFIL_RULES[[key]] else NULL
   filt <- if (!is.na(orcid) && nzchar(orcid) && orcid != "NA") paste0("author.orcid:", orcid)
           else paste0("author.id:", author_id)
-  if (length(extra_ids)) {             # union known fragments, dedup by work id
+  if (length(extra_ids) || !is.null(rule)) {  # union known fragments, dedup by work id
     byid <- list()
-    for (f in c(filt, paste0("author.id:", extra_ids)))
-      for (w in oa_author_works_filt(f)) byid[[w$id]] <- w
+    filts <- c(filt, if (length(extra_ids)) paste0("author.id:", extra_ids))
+    for (f in filts)
+      for (w in oa_author_works_filt(f, rule)) byid[[w$id]] <- w
     return(unname(byid))
   }
-  oa_author_works_filt(filt)
+  oa_author_works_filt(filt, rule)
 }
 
 # Known OpenAlex fragment ids for people whose record is split across several
@@ -96,18 +98,68 @@ EXTRA_IDS <- list(
   matthews_g = c("A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372")
 )
 
-oa_author_works_filt <- function(filt) {
+# Affiliation trail rules for people whose ORCID/author record OpenAlex has
+# merged with a namesake. A work counts only if THIS person's authorship on it
+# lists one of their known institutions, or it is on an audited list of their
+# genuinely unaffiliated works. Everything else is the namesake.
+#   James C. Thompson (GMU CBN): Swinburne (PhD, Melbourne) -> West Virginia U
+#   (postdoc) -> George Mason. OpenAlex merged in James Chilton Thompson (UTMB
+#   Galveston surgeon, gastrin/pancreas, 1960s-2000s), UT Austin chemistry and
+#   UCLA medicine: ~363 works / ~9,000 cites that are not his. Audited 2026-11-11.
+AFFIL_RULES <- list(
+  thompson_j = list(
+    orcid = "0000-0002-9824-8543",
+    insts = c("I57093077",    # Swinburne University of Technology
+              "I12097938",    # West Virginia University
+              "I162714631"),  # George Mason University
+    keep_unaffiliated = c(
+      "W2013420665",  # 2007 It's all in the eyes: gaze shifts
+      "W2496223641",  # 2012 Configural processing of human movement (chapter)
+      "W1750447121",  # 2000 Prefrontal SSVEP in visual vigilance
+      "W264001252",   # 2008 Intentions of others / mirror system
+      "W4250014721",  # 2013 Neuroimaging primer for I/O psychology
+      "W2267885241",  # 2002 ERPs: facial motion vs motion in general
+      "W2015811195",  # 2001 Cholinergic modulation of brain electrical activity
+      "W2200247079",  # 2003 Representation of digits
+      "W70651515"))   # 2000 Acetylcholine and normal variations in intelligence
+)
+
+# Non-scholarly record types never counted as works (same set as
+# impact/momentum/build_momentum.py). PsycTESTS "dataset" records and book
+# index/preface "paratext" entries otherwise pad prolific authors' counts.
+SKIP_TYPES <- c("erratum", "paratext", "retraction", "peer-review", "dataset", "preprint")
+
+# Individual works OpenAlex wrongly attributes to a faculty member (namesakes).
+# Audited 2026-11-11.
+EXCLUDE_WORKS <- c(
+  "W2184987074",  # 1951 homing-pigeon navigation -- G.V.T. Matthews, ornithologist (not Gerald)
+  "W2896126560")  # 2017 'State-Trait Anxiety Inventory' reference entry -- Spielberger's instrument
+
+# TRUE if a raw OpenAlex work (selected WITH authorships) belongs to the person
+# under `rule`. No rule -> always TRUE.
+affil_ok <- function(w, rule) {
+  if (is.null(rule)) return(TRUE)
+  wid <- sub(".*/", "", w$id %||% "")
+  mine <- Filter(function(a) endsWith(a$author$orcid %||% "", rule$orcid), w$authorships %||% list())
+  inst <- unlist(lapply(mine, function(a) vapply(a$institutions %||% list(),
+                                                 function(i) sub(".*/", "", i$id %||% ""), "")))
+  if (length(inst)) any(inst %in% rule$insts) else wid %in% rule$keep_unaffiliated
+}
+
+oa_author_works_filt <- function(filt, rule = NULL) {
+  sel <- paste0("id,type,publication_year,cited_by_count,counts_by_year", if (!is.null(rule)) ",authorships" else "")
   # Page (not cursor) paging: since 2026 OpenAlex rejects cursor paging without
   # an API key (HTTP 401). page= tops out at 10,000 results -- ample per person.
   # A failed request STOPS rather than returning a silently truncated record.
   works <- list(); pg <- 1L
   repeat {
-    url <- sprintf("%s/works?filter=%s&per-page=200&page=%d&select=id,publication_year,cited_by_count,counts_by_year",
-                   OA_BASE, filt, pg)
+    url <- sprintf("%s/works?filter=%s&per-page=200&page=%d&select=%s", OA_BASE, filt, pg, sel)
     page <- oa_get(url)
     if (is.null(page)) stop("OpenAlex request failed for ", filt, " (page ", pg, ")")
     if (length(page$results) == 0) break
     for (w in page$results) {
+      if (!affil_ok(w, rule)) next
+      if ((w$type %||% "") %in% SKIP_TYPES || sub(".*/", "", w$id %||% "") %in% EXCLUDE_WORKS) next
       cby <- list()
       for (c in (w$counts_by_year %||% list())) cby[[as.character(c$year)]] <- c$cited_by_count %||% 0L
       works[[length(works) + 1]] <- list(
