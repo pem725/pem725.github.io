@@ -95,7 +95,8 @@ oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0)
 # overlap is harmless. Verify any addition (GMU affiliation + on-topic works).
 #   Gerald Matthews (no ORCID on roster): 5+ GMU fragments, checked 2026-11-11.
 EXTRA_IDS <- list(
-  matthews_g = c("A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372")
+  matthews_g = c("A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372"),
+  adams_l    = c("A5084875053")   # 2nd ORCID record; filtered by AFFIL_RULES$adams_l
 )
 
 # Affiliation trail rules for people whose ORCID/author record OpenAlex has
@@ -121,7 +122,19 @@ AFFIL_RULES <- list(
       "W2267885241",  # 2002 ERPs: facial motion vs motion in general
       "W2015811195",  # 2001 Cholinergic modulation of brain electrical activity
       "W2200247079",  # 2003 Representation of digits
-      "W70651515"))   # 2000 Acetylcholine and normal variations in intelligence
+      "W70651515")),  # 2000 Acetylcholine and normal variations in intelligence
+  #   Leah M. Adams (GMU Clinical): LSU -> GMU PhD -> Kaiser Permanente Washington /
+  #   CU Anschutz collaborations -> GMU faculty. Her GMU-era papers sit on
+  #   a second record (ORCID ...6442) merged with a London respiratory physiologist
+  #   (Charing Cross, Imperial, St Bart's, Griffith, UC Davis; 1975-2019). Audited 2026-11-13.
+  adams_l = list(
+    orcid = c("0000-0002-1627-743X", "0000-0002-2042-6442"),
+    insts = c("I162714631",   # George Mason University
+              "I150117356",   # Kaiser Permanente Washington Health Research Institute
+              "I51713134",    # University of Colorado Anschutz
+              "I121820613"),  # Louisiana State University
+    keep_unaffiliated = c("W3015362523"),   # 2006 third-culture children (on her own ORCID)
+    unaffiliated_from = 2010)               # unaffiliated works from her career start count
 )
 
 # Non-scholarly record types never counted as works (same set as
@@ -136,17 +149,20 @@ EXCLUDE_WORKS <- c(
   "W2896126560",  # 2017 'State-Trait Anxiety Inventory' reference entry -- Spielberger's instrument
   "W167837768",   # 1987 'Crack' -- not Seth Kaplan (I/O, PhD ~2000s)
   "W571322674",   # 1974 'Oxidation of petrochemicals' -- not Ted Dumas (neuroscience)
-  "W656031738")   # 1986 'Expert Systems' proceedings -- not Patrick McKnight
+  "W656031738",   # 1986 'Expert Systems' proceedings -- not Patrick McKnight
+  "W2058590783")  # 1993 sex-offender communication -- predates Keith Renshaw's career (UNC 2000-)
 
 # TRUE if a raw OpenAlex work (selected WITH authorships) belongs to the person
 # under `rule`. No rule -> always TRUE.
 affil_ok <- function(w, rule) {
   if (is.null(rule)) return(TRUE)
   wid <- sub(".*/", "", w$id %||% "")
-  mine <- Filter(function(a) endsWith(a$author$orcid %||% "", rule$orcid), w$authorships %||% list())
+  mine <- Filter(function(a) any(endsWith(a$author$orcid %||% "", rule$orcid)), w$authorships %||% list())
   inst <- unlist(lapply(mine, function(a) vapply(a$institutions %||% list(),
                                                  function(i) sub(".*/", "", i$id %||% ""), "")))
-  if (length(inst)) any(inst %in% rule$insts) else wid %in% rule$keep_unaffiliated
+  if (length(inst)) return(any(inst %in% rule$insts))
+  yr <- w$publication_year %||% 0
+  (!is.null(rule$unaffiliated_from) && yr >= rule$unaffiliated_from) || wid %in% rule$keep_unaffiliated
 }
 
 oa_author_works_filt <- function(filt, rule = NULL) {

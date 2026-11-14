@@ -130,6 +130,13 @@ line up: `DATE=$(date +%F)`.
 
 5. **Analyze + export** — `Rscript 03_analyze.R` (sanity-check ranks in the console),
    then `Rscript 05_export_web.R` (regenerates `web_data.js` → the page updates automatically).
+   **05 runs the attribution guard first (`_guard.R`) and stops if any flag is open:** OpenAlex citations
+   above Scholar's, a ±30% jump since the last snapshot (a rise that stays under Scholar is treated as a
+   repair and allowed), or a 10-year publication gap that suggests a namesake's earlier career. Check each flag: either fix
+   the record (AFFIL_RULES / EXCLUDE_WORKS / EXTRA_IDS in `_openalex.R`, mirrored in
+   `impact/momentum/build_momentum.py`) or accept it in `guard_ok.csv` with a reason. `Rscript _guard.R` runs it alone.
+   The weekly momentum Action has a lighter guard: a big swing keeps last week's numbers and fails the run
+   (GitHub emails you); rerun locally with `--accept KEY` once the change is confirmed as intended.
 
 6. **Ship** — eyeball `index.html` locally, then `git add -A && git commit && git push`.
    The delta vs. last year is now in `metrics_long.csv`; add a chart for it if useful.

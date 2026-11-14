@@ -8,6 +8,13 @@
 setwd(dirname(sub("--file=", "", grep("--file=", commandArgs(FALSE), value = TRUE)[1])))
 suppressMessages({ library(readr); library(dplyr); library(tidyr); library(jsonlite) })
 
+# Attribution guard: refuse to rebuild the page while any wrong-ID / namesake
+# warning sign is open. Check each flag, then fix the record or accept it in
+# guard_ok.csv with a reason. See _guard.R.
+source("_guard.R")
+if (nrow(print_guard(run_guard())))
+  stop("Attribution guard has OPEN flags (guard_report.csv); fix or accept them in guard_ok.csv")
+
 fac <- read_csv("faculty.csv", show_col_types = FALSE, col_types = cols(.default = col_character()))
 m   <- read_csv("metrics_long.csv", show_col_types = FALSE, col_types = cols(.default = col_character())) |>
   mutate(across(c(works_count, cited_by_count, h_index, i10_index), as.numeric))

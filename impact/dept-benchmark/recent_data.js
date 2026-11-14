@@ -1,19 +1,19 @@
 window.RECENT = {
-  "snapshot_date": "2026-11-11",
+  "snapshot_date": "2026-11-13",
   "years": "2025-2026",
   "dept": {
     "n_faculty": 51,
-    "total_works": 240,
-    "y2025": 133,
-    "y2026": 107,
-    "oa": 137,
-    "closed": 103,
+    "total_works": 245,
+    "y2025": 137,
+    "y2026": 108,
+    "oa": 139,
+    "closed": 106,
     "scholar_total": 335,
     "scholar_2025": 171,
     "scholar_2026": 164,
     "scholar_snapshot": "2026-11-11",
     "by_type": {
-      "article": 186,
+      "article": 191,
       "review": 21,
       "book-chapter": 13,
       "conference-paper": 19,
@@ -76,7 +76,7 @@ window.RECENT = {
       },
       {
         "name": "Social Sciences",
-        "n": 45
+        "n": 47
       },
       {
         "name": "Neuroscience",
@@ -88,7 +88,7 @@ window.RECENT = {
       },
       {
         "name": "Medicine",
-        "n": 18
+        "n": 20
       },
       {
         "name": "Arts and Humanities",
@@ -476,17 +476,25 @@ window.RECENT = {
       "name": "Leah M Adams",
       "rank": "Associate",
       "is_self": false,
-      "works": 1,
-      "y2025": 1,
-      "y2026": 0,
-      "oa": 1,
-      "closed": 0,
+      "works": 6,
+      "y2025": 5,
+      "y2026": 1,
+      "oa": 3,
+      "closed": 3,
       "by_type": {
-        "article": 1
+        "article": 6
       },
       "top_topics": [
         {
           "name": "Suicide and Self-Harm Studies",
+          "n": 1
+        },
+        {
+          "name": "Food Security and Health in Diverse Populations",
+          "n": 1
+        },
+        {
+          "name": "Racial and Ethnic Identity Research",
           "n": 1
         }
       ],

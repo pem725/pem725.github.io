@@ -50,7 +50,8 @@ MIN_BASE = 5            # growth needs >= 5 citations/yr in the prior 3 years
 FRESH_WINDOW = 5          # "recent" = published in the citing year or the 4 before
 SKIP_TYPES = {"erratum", "paratext", "retraction", "peer-review", "dataset", "preprint"}
 # Known OpenAlex fragment ids for faculty without an ORCID (mirrors _openalex.R).
-EXTRA_IDS = {"matthews_g": ["A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372"]}
+EXTRA_IDS = {"matthews_g": ["A5101575317", "A5101575318", "A5025982678", "A5114001556", "A5134484372"],
+             "adams_l": ["A5084875053"]}
 # Namesake guard (mirrors AFFIL_RULES in impact/dept-benchmark/_openalex.R): OpenAlex
 # merged James Chilton Thompson (UTMB Galveston surgeon) and others into James C.
 # Thompson's ORCID. A work counts only if his authorship lists one of his own
@@ -59,20 +60,30 @@ AFFIL_RULES = {"thompson_j": {
     "orcid": "0000-0002-9824-8543",
     "insts": {"I57093077", "I12097938", "I162714631"},
     "keep_unaffiliated": {"W2013420665", "W2496223641", "W1750447121", "W264001252", "W4250014721",
-                          "W2267885241", "W2015811195", "W2200247079", "W70651515"}}}
+                          "W2267885241", "W2015811195", "W2200247079", "W70651515"}},
+    # Leah M. Adams: her GMU-era work sits on a second record (ORCID ...6442) merged
+    # with a London respiratory physiologist (Charing Cross/Imperial/Griffith, 1975-2019).
+    "adams_l": {
+    "orcid": ["0000-0002-1627-743X", "0000-0002-2042-6442"],
+    "insts": {"I162714631", "I150117356", "I51713134", "I121820613"},
+    "keep_unaffiliated": {"W3015362523"},
+    "unaffiliated_from": 2010}}
 
 
 # Individual namesake works (mirrors EXCLUDE_WORKS in _openalex.R).
-EXCLUDE_WORKS = {"W2184987074", "W2896126560", "W167837768", "W571322674", "W656031738"}
+EXCLUDE_WORKS = {"W2184987074", "W2896126560", "W167837768", "W571322674", "W656031738", "W2058590783"}
 
 
 def affil_ok(w, rule):
     if not rule:
         return True
-    mine = [a for a in w.get("authorships") or [] if (a["author"].get("orcid") or "").endswith(rule["orcid"])]
+    orcids = rule["orcid"] if isinstance(rule["orcid"], list) else [rule["orcid"]]
+    mine = [a for a in w.get("authorships") or [] if (a["author"].get("orcid") or "").endswith(tuple(orcids))]
     insts = {(i.get("id") or "").rsplit("/", 1)[-1] for a in mine for i in a.get("institutions") or []}
     if insts:
         return bool(insts & rule["insts"])
+    if (w.get("publication_year") or 0) >= rule.get("unaffiliated_from", 9999):
+        return True
     return w["id"].rsplit("/", 1)[-1] in rule["keep_unaffiliated"]
 
 
@@ -217,9 +228,9 @@ def load_faculty():
         orcid = clean(r["orcid"])
         out.append({"key": r["faculty_key"], "name": r["full_name"], "rank": r["rank"],
                     "rank_group": rank_group(r), "is_self": r["is_self"] == "TRUE",
-                    # ORCID alone when present (the dept pipeline's convention);
-                    # author ids only for people without one.
-                    "filters": filters_for(orcid, [] if orcid else ids)})
+                    # ORCID plus any audited fragment ids when present; the
+                    # primary author id only for people without an ORCID.
+                    "filters": filters_for(orcid, EXTRA_IDS.get(r["faculty_key"], []) if orcid else ids)})
     return out
 
 
@@ -303,6 +314,45 @@ def build(today):
             "self": me, "faculty": fac, "students": stu}
 
 
+# Attribution guard for the unattended weekly run (the R pipeline has the fuller
+# version in impact/dept-benchmark/_guard.R). A person whose citation total moves
+# more than GUARD_JUMP (and by GUARD_MIN+) since the last build, or who loses their
+# record entirely, keeps LAST WEEK'S numbers and is listed in data["held"]; the
+# workflow then fails so GitHub emails a notice. An intended change (a fixed ID)
+# is let through with --accept KEY.
+GUARD_JUMP, GUARD_MIN = 0.30, 200
+
+
+def guard(data, accept=()):
+    prev_f = DATA / "momentum.json"
+    if not prev_f.exists():
+        return data
+    prev = json.loads(prev_f.read_text())
+    old = {p["key"]: p for p in [prev["self"]] + prev["faculty"] + prev["students"]}
+    held = []
+
+    def check(p):
+        o = old.get(p["key"])
+        if not o or not o.get("m") or p["key"] in accept:
+            return p
+        a, b = o["m"]["total_cites"], (p["m"] or {}).get("total_cites")
+        if b is None:
+            why = f"record vanished (was {a} cites)"
+        elif abs(b - a) >= GUARD_MIN and a and abs(b / a - 1) > GUARD_JUMP:
+            why = f"{a} -> {b} cites ({(b / a - 1) * 100:+.0f}%)"
+        else:
+            return p
+        held.append({"key": p["key"], "name": p["name"], "why": why})
+        print(f"::warning::guard held {p['name']}: {why}; kept last build's numbers", file=sys.stderr)
+        return dict(o, held=why)
+
+    data["self"] = check(data["self"])
+    data["faculty"] = [check(p) for p in data["faculty"]]
+    data["students"] = [check(p) for p in data["students"]]
+    data["held"] = held
+    return data
+
+
 HIST_COLS = ["date", "group", "key", "total_cites", "h", "works", "works_3y", "vel_last",
              "vel_cur_ytd", "vel_cur_proj", "recent3", "prior3", "growth", "accel", "fresh_last", "label"]
 
@@ -319,7 +369,7 @@ def write(data):
     rows = [r for r in rows if r["date"] != data["generated"]]   # idempotent per day
     for group, people in (("self", [data["self"]]), ("faculty", data["faculty"]), ("student", data["students"])):
         for p in people:
-            if p.get("m"):
+            if p.get("m") and not p.get("held"):
                 rows.append({"date": data["generated"], "group": group, "key": p["key"],
                              "label": p.get("label") or "",
                              **{c: p["m"].get(c) for c in HIST_COLS if c in p["m"]}})
@@ -390,12 +440,14 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--resolve-students", metavar="PUBLICATIONS_YAML")
     ap.add_argument("--date", help="override today's date (YYYY-MM-DD), for testing")
+    ap.add_argument("--accept", action="append", default=[], metavar="KEY",
+                    help="let an intended big change for KEY through the guard")
     a = ap.parse_args()
     if a.resolve_students:
         resolve_students(a.resolve_students)
         sys.exit()
     today = dt.date.fromisoformat(a.date) if a.date else dt.date.today()
-    data = build(today)
+    data = guard(build(today), accept=set(a.accept))
     write(data)
     me = data["self"]["m"]
     print(f"self: {me['total_cites']} cites, h{me['h']}, last year {me['vel_last']}, "

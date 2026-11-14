@@ -37,3 +37,12 @@ jobs:
           git commit -m "Momentum data refresh $(date -u +%Y-%m-%d)"
           git pull --rebase -q origin "${GITHUB_REF_NAME}"
           git push
+      - name: Fail loudly if the attribution guard held anyone
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          held = json.load(open("impact/data/momentum.json")).get("held") or []
+          for h in held:
+              print(f"HELD {h['name']}: {h['why']}")
+          sys.exit(1 if held else 0)
+          PY
