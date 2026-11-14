@@ -150,7 +150,8 @@ EXCLUDE_WORKS <- c(
   "W167837768",   # 1987 'Crack' -- not Seth Kaplan (I/O, PhD ~2000s)
   "W571322674",   # 1974 'Oxidation of petrochemicals' -- not Ted Dumas (neuroscience)
   "W656031738",   # 1986 'Expert Systems' proceedings -- not Patrick McKnight
-  "W2058590783")  # 1993 sex-offender communication -- predates Keith Renshaw's career (UNC 2000-)
+  "W2058590783",  # 1993 sex-offender communication -- predates Keith Renshaw's career (UNC 2000-)
+  "W2990819053")  # 1969 molten-lead viscosity -- not Jane Flinn (confirmed by Patrick 2026-11-13)
 
 # TRUE if a raw OpenAlex work (selected WITH authorships) belongs to the person
 # under `rule`. No rule -> always TRUE.

@@ -842,7 +842,7 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 50,
+      "oa_works": 49,
       "oa_cites": 1291,
       "oa_h": 18,
       "oa_i10": 26,
@@ -3794,10 +3794,6 @@
       "is_self": false,
       "team": false,
       "openalex": [
-        {
-          "year": 1969,
-          "cites": 0
-        },
         {
           "year": 1977,
           "cites": 0
