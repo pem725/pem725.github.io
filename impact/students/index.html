@@ -89,6 +89,8 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
 .st-up{color:var(--green)}.st-dn{color:var(--rust)}
 .st-lab{display:inline-block;font-family:'Roboto Mono',monospace;font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--div);padding:0 .3rem;margin-left:.3rem;color:var(--steel)}
 .st-wrap{overflow-x:auto}
+.st-ast{color:var(--rust);font-family:'Roboto Mono',monospace;font-weight:600;cursor:help;margin-left:.1rem}
+.st-astnote{font-style:normal;border-left:3px solid var(--rust);padding-left:.7rem}
 .st-pending{font-size:.84rem;color:var(--muted);line-height:1.7}
 </style>
 </head>
@@ -110,6 +112,7 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
   <div class="st-wrap"><table class="st-table" id="stTable"></table></div>
   <h2 class="sh">Lab members not yet linked to a publication record</h2>
   <p class="st-pending" id="stPending"></p>
+  <p class="mo-note st-astnote" id="stAst"></p>
   <p class="mo-note" id="stNote"></p>
   <div class="mo-tip" id="moTip"></div>
   <div class="footer"><span>McKnight Lab · MRES of Science</span><span>Roster: CV &middot; Metrics: OpenAlex, refreshed weekly</span></div>
@@ -139,7 +142,7 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
   document.getElementById('stTable').innerHTML = head + linked.map(function(s, i){
     var m = s.m, g = m.growth, gcl = g==null ? '' : g > 0.02 ? 'st-up' : g < -0.02 ? 'st-dn' : '';
     var who = s.status === 'current' ? 'current student' : 'PhD ' + s.year + (s.institution ? ', ' + s.institution.replace('University of ', 'U. ').replace('George Mason University','GMU') : '');
-    return '<tr data-i="'+i+'"><td class="nm">' + s.name + (s.label ? '<span class="st-lab">'+s.label+'</span>' : '') + '<small>'+who+'</small></td><td>' + m.works +
+    return '<tr data-i="'+i+'"><td class="nm">' + s.name + (s.practice ? '<sup class="st-ast" title="'+s.practice+'">*</sup>' : '') + (s.label ? '<span class="st-lab">'+s.label+'</span>' : '') + '<small>'+who+'</small></td><td>' + m.works +
       '</td><td>' + m.works_3y + '</td><td>' + fmt(m.total_cites) + '</td><td>' + fmt(m.vel_last) + '</td><td class="'+gcl+'">' +
       (g==null ? '—' : (g>0?'+':'') + Math.round(g*100) + '%') + '</td><td>' + (m.fresh_last==null ? '—' : Math.round(m.fresh_last*100) + '%') +
       '</td><td>' + m.h + '</td><td>' + spark(m.velocity) + '</td></tr>'; }).join('');
@@ -153,8 +156,12 @@ details.pub-detail .pub-extra .pub-cite-info{font-family:'Roboto Mono',monospace
     tr.addEventListener('pointerleave', function(){ tip.style.opacity = 0; });
   });
   document.getElementById('stPending').innerHTML = pending.map(function(s){
-    return s.name + ' <span style="font-size:.7rem">(' + (s.status==='current' ? 'current' : 'PhD ' + s.year) + ')</span>'; }).join(' &middot; ') +
+    return s.name + (s.practice ? '<sup class="st-ast" title="'+s.practice+'">*</sup>' : '') + ' <span style="font-size:.7rem">(' + (s.status==='current' ? 'current' : 'PhD ' + s.year) + ')</span>'; }).join(' &middot; ') +
     '<br><span style="font-size:.76rem">No OpenAlex record we can match with confidence yet, often because a current student has not published, or a name is shared with another researcher. Adding an ORCID iD fixes it.</span>';
+  var ast = M.students.filter(function(s){ return s.practice; });
+  if (ast.length) document.getElementById('stAst').innerHTML =
+    ast.map(function(s){ return '<span class="st-ast">*</span> <b>' + s.name + '</b>: ' + s.practice; }).join('<br>') +
+    '<br>They are productive, but in ways that bibliometric sources cannot see, so the figures here understate their contribution.';
   document.getElementById('stNote').textContent = 'Each student is identified through a paper co-authored with Patrick McKnight or by name plus a GMU / University of Arizona affiliation, checked by hand; homonyms are excluded. ' +
     'Papers co-authored with McKnight count in both records. OpenAlex counts journal articles well and books, chapters and conference papers less fully than Google Scholar.';
 })();

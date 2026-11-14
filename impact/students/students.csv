@@ -1,25 +1,25 @@
-key,name,status,year,institution,orcid,openalex_ids,resolved_by,note
-getu_a,Amrote Getu,current,,,,A5001791204,name+GMU affiliation (reviewed 2026-11-02),
-carpenter_k,Kristin Carpenter,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-singer_d,Dan Singer,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-vilim_s,Spencer Vilim,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-jones_m,Maya Chrishawn Jones,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-booth_a,Ansley Booth,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-lane_r,Richard Lane,graduated,2000,University of Arizona,,,UNRESOLVED,OpenAlex 'Richard D. Lane' (Arizona psychiatry) is a different person
-caspi_o,Opher Caspi,graduated,2000,University of Arizona,0009-0003-6736-0182,A5069719948,co-authorship,
-bissel_k,Kim Bissel,graduated,2001,University of Arizona,,,UNRESOLVED,"OpenAlex 'Kim L. Bissell' (journalism, Alabama) is a different person"
-menke_m,Michael Menke,graduated,2005,University of Arizona,0000-0002-6351-088X,A5046505594,name+Arizona affiliation (reviewed 2026-11-02),J. Michael Menke
-chen_m,Mei Kuang Chen,graduated,2008,University of Arizona,0000-0002-0407-6788,A5031706404;A5125930910,name+Arizona affiliation (reviewed 2026-11-02),"not A5089455074 (MD Anderson, different person)"
-najab_j,Julius Najab,graduated,2013,George Mason University,,A5028369026,co-authorship,
-graybeal_j,John Graybeal,graduated,2016,George Mason University,,A5010923233,co-authorship,
-blalock_d,Dan Blalock,graduated,2016,George Mason University,0000-0002-8349-9825,A5004263038,co-authorship,
-yarbro_j,Jessica Yarbro,graduated,2016,George Mason University,,A5040082174,co-authorship,
-erchov_s,Simone Erchov,graduated,2017,George Mason University,,A5113934050,co-authorship,
-quartuccio_j,Jake Quartuccio,graduated,2017,George Mason University,,A5014991792;A5060477471,co-authorship,
-monfort_s,Sam Monfort,graduated,2017,George Mason University,0000-0002-6291-4305,A5058566135,co-authorship,
-shear_m,Max Shear,graduated,2018,George Mason University,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
-alexander_l,Lisa Alexander,graduated,2019,George Mason University,,A5076691883,co-authorship,
-harwood_a,Amanda Harwood,graduated,2020,George Mason University,0000-0002-3747-1098,A5001729348,co-authorship,
-waltrip_m,Michael Waltrip,graduated,2020,George Mason University,,A5044691917,name+GMU affiliation (reviewed 2026-11-02),
-cisler_d,Dean Cisler,graduated,2024,George Mason University,,A5053359350,name+GMU affiliation (reviewed 2026-11-02),
-massick_k,Kara Massick,graduated,2024,George Mason University,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known
+key,name,status,year,institution,orcid,openalex_ids,resolved_by,note,practice
+getu_a,Amrote Getu,current,,,,A5001791204,name+GMU affiliation (reviewed 2026-11-02),,
+carpenter_k,Kristin Carpenter,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+singer_d,Dan Singer,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+vilim_s,Spencer Vilim,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+jones_m,Maya Chrishawn Jones,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+booth_a,Ansley Booth,current,,,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+lane_r,Richard Lane,graduated,2000,University of Arizona,,,UNRESOLVED,OpenAlex 'Richard D. Lane' (Arizona psychiatry) is a different person,
+caspi_o,Opher Caspi,graduated,2000,University of Arizona,0009-0003-6736-0182,A5069719948,co-authorship,,
+bissel_k,Kim Bissel,graduated,2001,University of Arizona,,,UNRESOLVED,"OpenAlex 'Kim L. Bissell' (journalism, Alabama) is a different person",
+menke_m,Michael Menke,graduated,2005,University of Arizona,0000-0002-6351-088X,A5046505594,name+Arizona affiliation (reviewed 2026-11-02),J. Michael Menke,
+chen_m,Mei Kuang Chen,graduated,2008,University of Arizona,0000-0002-0407-6788,A5031706404;A5125930910,name+Arizona affiliation (reviewed 2026-11-02),"not A5089455074 (MD Anderson, different person)",
+najab_j,Julius Najab,graduated,2013,George Mason University,,A5028369026,co-authorship,,
+graybeal_j,John Graybeal,graduated,2016,George Mason University,,A5010923233,co-authorship,,
+blalock_d,Dan Blalock,graduated,2016,George Mason University,0000-0002-8349-9825,A5004263038,co-authorship,,
+yarbro_j,Jessica Yarbro,graduated,2016,George Mason University,,A5040082174,co-authorship,,
+erchov_s,Simone Erchov,graduated,2017,George Mason University,,A5113934050,co-authorship,,Government sector: steady internal research and technical reports that never reach a public index.
+quartuccio_j,Jake Quartuccio,graduated,2017,George Mason University,,A5014991792;A5060477471,co-authorship,,
+monfort_s,Sam Monfort,graduated,2017,George Mason University,0000-0002-6291-4305,A5058566135,co-authorship,,
+shear_m,Max Shear,graduated,2018,George Mason University,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,
+alexander_l,Lisa Alexander,graduated,2019,George Mason University,,A5076691883,co-authorship,,
+harwood_a,Amanda Harwood,graduated,2020,George Mason University,0000-0002-3747-1098,A5001729348,co-authorship,,Government sector: steady internal research and technical reports that never reach a public index.
+waltrip_m,Michael Waltrip,graduated,2020,George Mason University,,A5044691917,name+GMU affiliation (reviewed 2026-11-02),,
+cisler_d,Dean Cisler,graduated,2024,George Mason University,,A5053359350,name+GMU affiliation (reviewed 2026-11-02),,
+massick_k,Kara Massick,graduated,2024,George Mason University,,,UNRESOLVED,no OpenAlex profile found yet; add an ORCID here when known,

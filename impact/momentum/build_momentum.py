@@ -232,7 +232,11 @@ def load_students():
         f = filters_for(clean(r["orcid"]), ids)
         out.append({"key": r["key"], "name": r["name"], "status": r["status"],
                     "year": clean(r["year"]), "institution": clean(r["institution"]),
-                    "resolved": bool(f), "filters": f, "note": clean(r.get("note", ""))})
+                    "resolved": bool(f), "filters": f, "note": clean(r.get("note", "")),
+                    # Non-empty for students whose main output is invisible to
+                    # bibliometrics (e.g. government internal reports); the
+                    # students page marks them with an asterisk + this text.
+                    "practice": clean(r.get("practice", ""))})
     return out
 
 
