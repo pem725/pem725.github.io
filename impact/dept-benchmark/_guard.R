@@ -20,6 +20,7 @@ suppressMessages({ library(readr); library(dplyr) })
 GUARD <- list(
   above_ratio = 1.05, above_min = 300,   # OA > Scholar*1.05 and by 300+ (Wiener was +8%)
   jump        = 0.30, jump_min  = 200,   # +-30% and 200+ cites between OA snapshots
+  drop        = 0.05, drop_min  = 100,   # any fall > 5% (OpenAlex lost or re-typed a work)
   gap_years   = 10,   gap_after = 3)     # 10+ silent years, 1+ paper before, 3+ after
 
 run_guard <- function(dir = ".") {
@@ -46,8 +47,10 @@ run_guard <- function(dir = ".") {
     if (length(s) && !is.na(s) && c1 > s * GUARD$above_ratio && c1 - s >= GUARD$above_min)
       add(k, "oa_above_scholar", sprintf("OpenAlex %s vs Scholar %s cites", c1, s))
     p <- prv$cites[prv$faculty_key == k]
-    if (length(p) && !is.na(p) && p > 0 && abs(c1 - p) >= GUARD$jump_min && abs(c1 / p - 1) > GUARD$jump &&
-        !(c1 > p && length(s) && !is.na(s) && c1 <= s))          # a rise still under Scholar = repair
+    if (length(p) && !is.na(p) && p > 0 &&
+        ((abs(c1 - p) >= GUARD$jump_min && abs(c1 / p - 1) > GUARD$jump &&
+          !(c1 > p && length(s) && !is.na(s) && c1 <= s)) ||   # a rise still under Scholar = repair
+         (p - c1 >= GUARD$drop_min && 1 - c1 / p > GUARD$drop)))  # totals almost never fall
       add(k, "snapshot_jump", sprintf("%s -> %s cites (%+d%%) since %s", p, c1, round(100 * (c1 / p - 1)), snaps[2]))
 
     yrs <- oa |> filter(faculty_key == k, metric_year != "lifetime", works_count > 0) |>

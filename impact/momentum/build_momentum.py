@@ -42,6 +42,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 FACULTY_CSV = ROOT / "impact/dept-benchmark/faculty.csv"
 STUDENTS_CSV = ROOT / "impact/students/students.csv"
+# Former faculty (died, retired, moved on) whose work is still read. Shown on the
+# department page in their own "legacy" panel, never in the current-faculty ranks.
+LEGACY_CSV = ROOT / "impact/dept-benchmark/legacy.csv"
+LAB_KEYS = ["mcknight_p", "kashdan_t"]     # Patrick + Todd: the over-time panel
+TRACK_START = "2026-11-13"                 # first build after the attribution audit
 DATA = ROOT / "impact/data"
 SELF_ORCID = "0000-0002-9067-9066"
 SELF_KEY = "mcknight_p"
@@ -251,6 +256,44 @@ def load_students():
     return out
 
 
+def load_legacy():
+    if not LEGACY_CSV.exists():
+        return []
+    out = []
+    for r in csv.DictReader(open(LEGACY_CSV)):
+        ids = [i for i in clean(r["openalex_ids"]).split(";") if i]
+        orcid = clean(r["orcid"])
+        out.append({"key": r["key"], "name": r["name"], "status": r["status"], "now": clean(r["now"]),
+                    # union ORCID and ids: retirees' records are often split
+                    "filters": filters_for(orcid, ids)})
+    return out
+
+
+def lab_track(today_data):
+    """Patrick and Todd over time: department rank (of active faculty with an
+    OpenAlex record) by career citations and by citations last year, plus the
+    pair's share of department citations, at every build since TRACK_START."""
+    hist = DATA / "momentum_history.csv"
+    rows = [r for r in csv.DictReader(open(hist))] if hist.exists() else []
+    today = today_data["generated"]
+    rows = [r for r in rows if r["group"] == "faculty" and r["date"] != today]
+    rows += [{"date": today, "key": p["key"], "total_cites": p["m"]["total_cites"], "vel_last": p["m"]["vel_last"]}
+             for p in today_data["faculty"] if p.get("m")]
+    out = []
+    for d in sorted({r["date"] for r in rows if r["date"] >= TRACK_START}):
+        day = [r for r in rows if r["date"] == d]
+        f = lambda r, k: float(r[k] or 0)
+        rank = lambda key, k: 1 + sum(f(r, k) > f(me, k) for r in day for me in day if me["key"] == key)
+        tot = sum(f(r, "total_cites") for r in day) or 1
+        if not all(any(r["key"] == k for r in day) for k in LAB_KEYS):
+            continue
+        out.append({"date": d, "n": len(day),
+                    "rank_total": {k: rank(k, "total_cites") for k in LAB_KEYS},
+                    "rank_last": {k: rank(k, "vel_last") for k in LAB_KEYS},
+                    "share": round(100 * sum(f(r, "total_cites") for r in day if r["key"] in LAB_KEYS) / tot, 1)})
+    return out
+
+
 def top_recent(works, today, n=6):
     """Patrick's newest papers that are already drawing citations."""
     cy = today.year
@@ -309,9 +352,13 @@ def build(today):
     for p in load_students():
         print(f"student {p['key']} ...", file=sys.stderr)
         stu.append(person(p, today)[0])
+    leg = []
+    for p in load_legacy():
+        print(f"legacy {p['key']} ...", file=sys.stderr)
+        leg.append(person(p, today)[0])
     return {"generated": today.isoformat(), "year_frac": round(year_frac(today), 3),
             "fresh_window": FRESH_WINDOW, "source": "OpenAlex",
-            "self": me, "faculty": fac, "students": stu}
+            "self": me, "faculty": fac, "students": stu, "legacy": leg}
 
 
 # Attribution guard for the unattended weekly run (the R pipeline has the fuller
@@ -319,8 +366,11 @@ def build(today):
 # more than GUARD_JUMP (and by GUARD_MIN+) since the last build, or who loses their
 # record entirely, keeps LAST WEEK'S numbers and is listed in data["held"]; the
 # workflow then fails so GitHub emails a notice. An intended change (a fixed ID)
-# is let through with --accept KEY.
+# is let through with --accept KEY. Career citation totals essentially never fall,
+# so a DROP of more than GUARD_DROP is held too: that is OpenAlex losing or
+# re-typing a work (Nov 2026: the Mann-Whitney U entry vanished from list queries).
 GUARD_JUMP, GUARD_MIN = 0.30, 200
+GUARD_DROP, GUARD_DROP_MIN = 0.05, 100
 
 
 def guard(data, accept=()):
@@ -328,7 +378,7 @@ def guard(data, accept=()):
     if not prev_f.exists():
         return data
     prev = json.loads(prev_f.read_text())
-    old = {p["key"]: p for p in [prev["self"]] + prev["faculty"] + prev["students"]}
+    old = {p["key"]: p for p in [prev["self"]] + prev["faculty"] + prev["students"] + prev.get("legacy", [])}
     held = []
 
     def check(p):
@@ -338,7 +388,8 @@ def guard(data, accept=()):
         a, b = o["m"]["total_cites"], (p["m"] or {}).get("total_cites")
         if b is None:
             why = f"record vanished (was {a} cites)"
-        elif abs(b - a) >= GUARD_MIN and a and abs(b / a - 1) > GUARD_JUMP:
+        elif (abs(b - a) >= GUARD_MIN and a and abs(b / a - 1) > GUARD_JUMP) or \
+                (a - b >= GUARD_DROP_MIN and a and 1 - b / a > GUARD_DROP):
             why = f"{a} -> {b} cites ({(b / a - 1) * 100:+.0f}%)"
         else:
             return p
@@ -349,6 +400,7 @@ def guard(data, accept=()):
     data["self"] = check(data["self"])
     data["faculty"] = [check(p) for p in data["faculty"]]
     data["students"] = [check(p) for p in data["students"]]
+    data["legacy"] = [check(p) for p in data.get("legacy", [])]
     data["held"] = held
     return data
 
@@ -367,7 +419,8 @@ def write(data):
     hist = DATA / "momentum_history.csv"
     rows = list(csv.DictReader(open(hist))) if hist.exists() else []
     rows = [r for r in rows if r["date"] != data["generated"]]   # idempotent per day
-    for group, people in (("self", [data["self"]]), ("faculty", data["faculty"]), ("student", data["students"])):
+    for group, people in (("self", [data["self"]]), ("faculty", data["faculty"]), ("student", data["students"]),
+                          ("legacy", data.get("legacy", []))):
         for p in people:
             if p.get("m") and not p.get("held"):
                 rows.append({"date": data["generated"], "group": group, "key": p["key"],
@@ -448,6 +501,7 @@ if __name__ == "__main__":
         sys.exit()
     today = dt.date.fromisoformat(a.date) if a.date else dt.date.today()
     data = guard(build(today), accept=set(a.accept))
+    data["lab_track"] = lab_track(data)
     write(data)
     me = data["self"]["m"]
     print(f"self: {me['total_cites']} cites, h{me['h']}, last year {me['vel_last']}, "

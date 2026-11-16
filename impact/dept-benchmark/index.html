@@ -270,6 +270,19 @@
     <figcaption>Each dot is one active faculty member with an OpenAlex record and enough citations to measure growth.
     Colored by rank; your lab outlined. Dashed lines are department medians.</figcaption></figure>
 
+  <h2 id="s13">13 · You and Todd, over time</h2>
+  <p class="sub">The point of all this is the climb: where each of you ranks among the department's active faculty with
+  an OpenAlex record, by career citations and by citations received last year, plus your combined share of all
+  department citations (papers you wrote together count for each of you, so this runs a little above the
+  de-duplicated lab share in the tiles at the top). A new row is added with every weekly refresh, starting after the November 2026 attribution audit.</p>
+  <div class="tblwrap"><table id="labtrack"></table></div>
+
+  <h2 id="s14">14 · Legacy: former faculty whose work is still read</h2>
+  <p class="sub">Former faculty who built much of this department's research reputation. They are <b>not</b> in any of
+  the rankings above, which cover current faculty only. &ldquo;Would rank&rdquo; is the one counterfactual: where their
+  citations last year would place them among current faculty.</p>
+  <div class="tblwrap"><table id="legacy"></table></div>
+
   <h2 id="stable">The full table</h2>
   <p class="sub">Sorted by OpenAlex citations. “—” marks no indexed profile on that source. See
   the notes below on unresolved cases.</p>
@@ -812,7 +825,22 @@ function momentumFig(){
   host.appendChild(S);
 }
 
-function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();momentumFig();}
+function labTrack(){
+  const M=window.MOMENTUM, host=$("#labtrack"); if(!M||!M.lab_track||!host)return;
+  const nm={mcknight_p:"You",kashdan_t:"Todd"};
+  host.innerHTML='<tr><th>Week of</th><th>Todd · career</th><th>Todd · last year</th><th>You · career</th><th>You · last year</th><th>Combined share</th></tr>'+
+    M.lab_track.map(r=>`<tr><td>${r.date}</td><td>#${r.rank_total.kashdan_t} of ${r.n}</td><td>#${r.rank_last.kashdan_t}</td>`+
+      `<td>#${r.rank_total.mcknight_p} of ${r.n}</td><td>#${r.rank_last.mcknight_p}</td><td>${r.share}%</td></tr>`).join("");
+}
+function legacyTbl(){
+  const M=window.MOMENTUM, host=$("#legacy"); if(!M||!M.legacy||!host)return;
+  const cur=M.faculty.filter(p=>p.m).map(p=>p.m.vel_last), f=n=>n==null?"—":Math.round(n).toLocaleString();
+  const rows=M.legacy.filter(p=>p.m).sort((a,b)=>b.m.vel_last-a.m.vel_last);
+  host.innerHTML='<tr><th>Name</th><th>Status</th><th>Career citations</th><th>Citations last year</th><th>Would rank</th></tr>'+
+    rows.map(p=>`<tr><td>${p.name}${p.now?`<br><span class="muted" style="font-size:.78rem">${p.now}</span>`:""}</td><td>${p.status}</td>`+
+      `<td>${f(p.m.total_cites)}</td><td>${f(p.m.vel_last)}</td><td>#${1+cur.filter(v=>v>p.m.vel_last).length} of ${cur.length+1}</td></tr>`).join("");
+}
+function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();momentumFig();labTrack();legacyTbl();}
 legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);
 legend("#leg6",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--axis)",t:"Median = 1×"}]);
 [["#leg7",""],["#leg8","Dashed = typical recent-to-career ratio"],["#leg9","Dashed tick = rank median"],["#leg10","Dashed = department medians"],["#leg12","Dashed = department medians"]].forEach(([id,extra])=>legend(id,rankLeg.concat(extra?[{c:"var(--ink)",t:extra}]:[])));
