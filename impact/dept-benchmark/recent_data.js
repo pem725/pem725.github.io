@@ -1,20 +1,21 @@
 window.RECENT = {
-  "snapshot_date": "2026-11-13",
+  "snapshot_date": "2026-11-23",
   "years": "2025-2026",
   "dept": {
     "n_faculty": 51,
-    "total_works": 245,
-    "y2025": 137,
-    "y2026": 108,
-    "oa": 139,
-    "closed": 106,
+    "total_works": 249,
+    "y2025": 134,
+    "y2026": 115,
+    "oa": 141,
+    "closed": 108,
     "scholar_total": 335,
     "scholar_2025": 171,
     "scholar_2026": 164,
     "scholar_snapshot": "2026-11-11",
     "by_type": {
-      "article": 191,
+      "article": 194,
       "review": 21,
+      "book": 1,
       "book-chapter": 13,
       "conference-paper": 19,
       "report": 1
@@ -26,7 +27,7 @@ window.RECENT = {
       },
       {
         "name": "Job Satisfaction and Organizational Behavior",
-        "n": 18
+        "n": 19
       },
       {
         "name": "Autism Spectrum Disorder Research",
@@ -41,6 +42,10 @@ window.RECENT = {
         "n": 8
       },
       {
+        "name": "Psychometric Methodologies and Testing",
+        "n": 6
+      },
+      {
         "name": "Neural and Behavioral Psychology Studies",
         "n": 5
       },
@@ -49,11 +54,11 @@ window.RECENT = {
         "n": 5
       },
       {
-        "name": "Psychometric Methodologies and Testing",
-        "n": 5
+        "name": "Psychological Well-being and Life Satisfaction",
+        "n": 4
       },
       {
-        "name": "Psychological Well-being and Life Satisfaction",
+        "name": "Early Childhood Education and Development",
         "n": 4
       },
       {
@@ -63,20 +68,16 @@ window.RECENT = {
       {
         "name": "Anxiety, Depression, Psychometrics, Treatment, Cognitive Processes",
         "n": 4
-      },
-      {
-        "name": "Psychological and Educational Research Studies",
-        "n": 3
       }
     ],
     "by_field": [
       {
         "name": "Psychology",
-        "n": 86
+        "n": 85
       },
       {
         "name": "Social Sciences",
-        "n": 47
+        "n": 48
       },
       {
         "name": "Neuroscience",
@@ -84,22 +85,22 @@ window.RECENT = {
       },
       {
         "name": "Business, Management and Accounting",
-        "n": 27
+        "n": 28
       },
       {
         "name": "Medicine",
-        "n": 20
+        "n": 23
       },
       {
         "name": "Arts and Humanities",
         "n": 10
       },
       {
-        "name": "Computer Science",
+        "name": "Decision Sciences",
         "n": 7
       },
       {
-        "name": "Decision Sciences",
+        "name": "Computer Science",
         "n": 6
       }
     ]
@@ -110,13 +111,13 @@ window.RECENT = {
       "name": "Eileen Roesler",
       "rank": "Assistant",
       "is_self": false,
-      "works": 29,
-      "y2025": 15,
-      "y2026": 14,
+      "works": 28,
+      "y2025": 12,
+      "y2026": 16,
       "oa": 14,
-      "closed": 15,
+      "closed": 14,
       "by_type": {
-        "article": 14,
+        "article": 13,
         "conference-paper": 14,
         "review": 1
       },
@@ -130,8 +131,8 @@ window.RECENT = {
           "n": 5
         },
         {
-          "name": "Ethics and Social Impacts of AI",
-          "n": 2
+          "name": "Gender and Technology in Education",
+          "n": 1
         }
       ],
       "sch": 27,
@@ -143,13 +144,13 @@ window.RECENT = {
       "name": "Goldie Ann McQuaid",
       "rank": "Research Assistant Professor",
       "is_self": false,
-      "works": 12,
-      "y2025": 7,
+      "works": 13,
+      "y2025": 8,
       "y2026": 5,
-      "oa": 12,
+      "oa": 13,
       "closed": 0,
       "by_type": {
-        "article": 11,
+        "article": 12,
         "book-chapter": 1
       },
       "top_topics": [
@@ -162,7 +163,7 @@ window.RECENT = {
           "n": 1
         },
         {
-          "name": "Down syndrome and intellectual disability research",
+          "name": "Psychometric Methodologies and Testing",
           "n": 1
         }
       ],
@@ -194,7 +195,7 @@ window.RECENT = {
           "n": 1
         },
         {
-          "name": "Team Dynamics and Performance",
+          "name": "Work-Family Balance Challenges",
           "n": 1
         }
       ],
@@ -270,8 +271,8 @@ window.RECENT = {
       "by_type": {
         "article": 8,
         "review": 2,
-        "conference-paper": 1,
-        "book-chapter": 1
+        "book-chapter": 1,
+        "conference-paper": 1
       },
       "top_topics": [
         {
@@ -279,11 +280,11 @@ window.RECENT = {
           "n": 3
         },
         {
-          "name": "Aesthetic Perception and Analysis",
+          "name": "Diversity and Impact of Dance",
           "n": 2
         },
         {
-          "name": "Diversity and Impact of Dance",
+          "name": "Aesthetic Perception and Analysis",
           "n": 2
         }
       ],
@@ -392,14 +393,14 @@ window.RECENT = {
       "name": "William S Helton",
       "rank": "Professor",
       "is_self": false,
-      "works": 6,
-      "y2025": 4,
+      "works": 7,
+      "y2025": 5,
       "y2026": 2,
-      "oa": 1,
+      "oa": 2,
       "closed": 5,
       "by_type": {
         "review": 3,
-        "article": 3
+        "article": 4
       },
       "top_topics": [
         {
@@ -409,6 +410,10 @@ window.RECENT = {
         {
           "name": "Occupational Health and Performance",
           "n": 3
+        },
+        {
+          "name": "Cannabis and Cannabinoid Research",
+          "n": 1
         }
       ],
       "sch": 12,
@@ -421,8 +426,8 @@ window.RECENT = {
       "rank": "Assistant",
       "is_self": false,
       "works": 4,
-      "y2025": 4,
-      "y2026": 0,
+      "y2025": 3,
+      "y2026": 1,
       "oa": 2,
       "closed": 2,
       "by_type": {
@@ -444,19 +449,20 @@ window.RECENT = {
       "name": "Reeshad S. Dalal",
       "rank": "Professor",
       "is_self": false,
-      "works": 10,
-      "y2025": 6,
+      "works": 11,
+      "y2025": 7,
       "y2026": 4,
       "oa": 3,
-      "closed": 7,
+      "closed": 8,
       "by_type": {
         "article": 7,
+        "book": 1,
         "book-chapter": 3
       },
       "top_topics": [
         {
           "name": "Job Satisfaction and Organizational Behavior",
-          "n": 6
+          "n": 7
         },
         {
           "name": "Emotional Labor in Professions",
@@ -476,25 +482,25 @@ window.RECENT = {
       "name": "Leah M Adams",
       "rank": "Associate",
       "is_self": false,
-      "works": 6,
+      "works": 8,
       "y2025": 5,
-      "y2026": 1,
+      "y2026": 3,
       "oa": 3,
-      "closed": 3,
+      "closed": 5,
       "by_type": {
-        "article": 6
+        "article": 8
       },
       "top_topics": [
-        {
-          "name": "Suicide and Self-Harm Studies",
-          "n": 1
-        },
         {
           "name": "Food Security and Health in Diverse Populations",
           "n": 1
         },
         {
           "name": "Racial and Ethnic Identity Research",
+          "n": 1
+        },
+        {
+          "name": "HIV/AIDS Research and Interventions",
           "n": 1
         }
       ],
@@ -620,7 +626,7 @@ window.RECENT = {
           "n": 1
         },
         {
-          "name": "Substance Abuse Treatment and Outcomes",
+          "name": "Family Caregiving in Mental Illness",
           "n": 1
         }
       ],
@@ -743,11 +749,11 @@ window.RECENT = {
           "n": 2
         },
         {
-          "name": "Bullying, Victimization, and Aggression",
+          "name": "Impact of Technology on Adolescents",
           "n": 1
         },
         {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "name": "Bullying, Victimization, and Aggression",
           "n": 1
         }
       ],
@@ -761,8 +767,8 @@ window.RECENT = {
       "rank": "Assistant",
       "is_self": false,
       "works": 7,
-      "y2025": 4,
-      "y2026": 3,
+      "y2025": 3,
+      "y2026": 4,
       "oa": 1,
       "closed": 6,
       "by_type": {
@@ -832,15 +838,15 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Artificial Intelligence in Healthcare and Education",
-          "n": 1
-        },
-        {
           "name": "Health Policy Implementation Science",
           "n": 1
         },
         {
-          "name": "COVID-19 and Mental Health",
+          "name": "Artificial Intelligence in Healthcare and Education",
+          "n": 1
+        },
+        {
+          "name": "Problem and Project Based Learning",
           "n": 1
         }
       ],
@@ -865,7 +871,7 @@ window.RECENT = {
       "top_topics": [
         {
           "name": "Cognitive Abilities and Testing",
-          "n": 2
+          "n": 1
         },
         {
           "name": "Career Development and Diversity",
@@ -886,8 +892,8 @@ window.RECENT = {
       "rank": "Associate",
       "is_self": false,
       "works": 3,
-      "y2025": 3,
-      "y2026": 0,
+      "y2025": 2,
+      "y2026": 1,
       "oa": 0,
       "closed": 3,
       "by_type": {
@@ -957,11 +963,11 @@ window.RECENT = {
       },
       "top_topics": [
         {
-          "name": "Child and Adolescent Psychosocial and Emotional Development",
+          "name": "Neural and Behavioral Psychology Studies",
           "n": 1
         },
         {
-          "name": "Neural and Behavioral Psychology Studies",
+          "name": "Child and Adolescent Psychosocial and Emotional Development",
           "n": 1
         }
       ],

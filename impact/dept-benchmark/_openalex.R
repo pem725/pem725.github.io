@@ -77,6 +77,23 @@ oa_resolve_author <- function(full_name, orcid = NA) {
 # a list(year, cites, counts_by_year). Summing over these avoids the undercount
 # you get from a single (possibly fragmented) author record's summary_stats.
 oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0), key = NA) {
+  w <- oa_author_works_core(orcid, author_id, extra_ids, key)
+  # add back confirmed works that OpenAlex list queries no longer return
+  have <- vapply(w, function(x) x$id, "")
+  for (wid in setdiff(if (!is.na(key)) INCLUDE_WORKS[[key]] else character(0), have)) {
+    x <- oa_get(sprintf("%s/works/%s?select=id,publication_year,cited_by_count,counts_by_year", OA_BASE, wid))
+    if (is.null(x)) stop("OpenAlex request failed for ", wid)
+    cby <- list(); for (c in (x$counts_by_year %||% list())) cby[[as.character(c$year)]] <- c$cited_by_count %||% 0L
+    w[[length(w) + 1]] <- list(id = wid, year = x$publication_year %||% NA, cites = x$cited_by_count %||% 0L, cby = cby)
+  }
+  w
+}
+
+# Confirmed works OpenAlex list queries stopped returning (still fetchable by id).
+#   W1577581905  2010 'Mann-Whitney U Test' (Corsini Encyclopedia) -- Patrick confirmed 2026-11-23.
+INCLUDE_WORKS <- list(mcknight_p = "W1577581905")
+
+oa_author_works_core <- function(orcid = NA, author_id = NA, extra_ids = character(0), key = NA) {
   rule <- if (!is.na(key)) AFFIL_RULES[[key]] else NULL
   filt <- if (!is.na(orcid) && nzchar(orcid) && orcid != "NA") paste0("author.orcid:", orcid)
           else paste0("author.id:", author_id)

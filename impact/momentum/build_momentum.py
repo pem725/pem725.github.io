@@ -75,6 +75,14 @@ AFFIL_RULES = {"thompson_j": {
     "unaffiliated_from": 2010}}
 
 
+# Works that ARE the person's but that OpenAlex list queries stopped returning
+# (still fetchable by id). Added back by id. Mirrors INCLUDE_WORKS in _openalex.R.
+#   W1577581905  2010 'Mann-Whitney U Test' (Corsini Encyclopedia), McKnight & Najab;
+#                missing from list queries since Nov 2026; confirmed by Patrick 2026-11-23.
+#   W1510833811  2010 'Kruskal-Wallis Test' (Corsini), on Najab's record (Patrick's side
+#                is a misspelled 'McKight' stub, so not on Patrick's until he confirms).
+INCLUDE_WORKS = {"mcknight_p": ["W1577581905"], "najab_j": ["W1577581905", "W1510833811"]}
+
 # Individual namesake works (mirrors EXCLUDE_WORKS in _openalex.R).
 EXCLUDE_WORKS = {"W2184987074", "W2896126560", "W167837768", "W571322674", "W656031738", "W2058590783", "W2990819053"}
 
@@ -332,6 +340,10 @@ def person(p, today, keep_works=False):
     if not p["filters"]:
         return dict({k: v for k, v in p.items() if k != "filters"}, m=None, label=None), []
     works = works_for(p["filters"], rule=AFFIL_RULES.get(p.get("key")))
+    have = {w["id"].rsplit("/", 1)[-1] for w in works}
+    for wid in INCLUDE_WORKS.get(p.get("key"), []):
+        if wid not in have:
+            works.append(get(f"works/{wid}", {"select": "id,doi,title,type,publication_year,cited_by_count,counts_by_year"}))
     m = metrics(works, today)
     entry = {k: v for k, v in p.items() if k != "filters"}
     entry.update(m=m, label=momentum_label(m))

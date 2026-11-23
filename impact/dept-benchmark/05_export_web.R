@@ -70,10 +70,11 @@ source("_openalex.R")
 TEAM_KEYS <- c("mcknight_p", "kashdan_t")   # shared lab — edit if the lab changes
 team_orcids <- fac$orcid[match(TEAM_KEYS, fac$faculty_key)]
 umap <- list(); sets <- list()
-for (orc in team_orcids) {
+for (j in seq_along(team_orcids)) {
+  orc <- team_orcids[j]
   if (is.na(orc) || !nzchar(orc)) { sets[[length(sets)+1]] <- character(0); next }
   ids <- character(0)
-  for (w in oa_author_works(orcid = orc)) if (!is.na(w$id)) { umap[[w$id]] <- w$cites; ids <- c(ids, w$id) }
+  for (w in oa_author_works(orcid = orc, key = TEAM_KEYS[j])) if (!is.na(w$id)) { umap[[w$id]] <- w$cites; ids <- c(ids, w$id) }
   sets[[length(sets)+1]] <- ids
 }
 team_union  <- sum(unlist(umap)); team_works <- length(umap)

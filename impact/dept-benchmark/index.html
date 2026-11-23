@@ -280,7 +280,8 @@
   <h2 id="s14">14 · Legacy: former faculty whose work is still read</h2>
   <p class="sub">Former faculty who built much of this department's research reputation. They are <b>not</b> in any of
   the rankings above, which cover current faculty only. &ldquo;Would rank&rdquo; is the one counterfactual: where their
-  citations last year would place them among current faculty.</p>
+  citations last year would place them among current faculty. &ldquo;Growth&rdquo; is the same yearly rate as in section 12: near zero means their
+  work is still read at a steady pace.</p>
   <div class="tblwrap"><table id="legacy"></table></div>
 
   <h2 id="stable">The full table</h2>
@@ -836,9 +837,9 @@ function legacyTbl(){
   const M=window.MOMENTUM, host=$("#legacy"); if(!M||!M.legacy||!host)return;
   const cur=M.faculty.filter(p=>p.m).map(p=>p.m.vel_last), f=n=>n==null?"—":Math.round(n).toLocaleString();
   const rows=M.legacy.filter(p=>p.m).sort((a,b)=>b.m.vel_last-a.m.vel_last);
-  host.innerHTML='<tr><th>Name</th><th>Status</th><th>Career citations</th><th>Citations last year</th><th>Would rank</th></tr>'+
+  host.innerHTML='<tr><th>Name</th><th>Status</th><th>Career citations</th><th>Citations last year</th><th>Growth / yr</th><th>Would rank</th></tr>'+
     rows.map(p=>`<tr><td>${p.name}${p.now?`<br><span class="muted" style="font-size:.78rem">${p.now}</span>`:""}</td><td>${p.status}</td>`+
-      `<td>${f(p.m.total_cites)}</td><td>${f(p.m.vel_last)}</td><td>#${1+cur.filter(v=>v>p.m.vel_last).length} of ${cur.length+1}</td></tr>`).join("");
+      `<td>${f(p.m.total_cites)}</td><td>${f(p.m.vel_last)}</td><td>${p.m.growth==null?"—":(p.m.growth>0?"+":"")+(p.m.growth*100).toFixed(1)+"%"}</td><td>#${1+cur.filter(v=>v>p.m.vel_last).length} of ${cur.length+1}</td></tr>`).join("");
 }
 function draw(){dept();slope();scatter();bars();traj();trajB();rel();cpwFig();recentFig();rankStrip();quad();recentActivity();momentumFig();labTrack();legacyTbl();}
 legend("#leg5b",[{c:"var(--you)",t:"Your lab"},{c:"var(--muted)",t:"Other faculty (hover / click)"},{c:"var(--ink)",t:"Median"}]);

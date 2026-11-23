@@ -1,29 +1,29 @@
 {
-  "snapshot_date": "2026-11-13",
-  "oa_snapshot": "2026-11-13",
+  "snapshot_date": "2026-11-23",
+  "oa_snapshot": "2026-11-23",
   "sch_snapshot": "2026-11-11",
   "n_faculty": 59,
   "n_openalex": 51,
   "n_scholar": 44,
   "no_profile": ["Camelia Harb", "Raymond Abraham Bradni", "Danielle Dufresne", "Susanne M Furman", "Sara Montiel", "Robin Shusko", "Kevin Christopher Young", "Justin Ramsdell"],
   "concentration": {
-    "total": 250316,
-    "gini": 0.678,
-    "top3": 36,
-    "top5": 49,
-    "top6": 53,
-    "bottom30": 7.4,
-    "median": 1827
+    "total": 300653,
+    "gini": 0.687,
+    "top3": 38,
+    "top5": 50,
+    "top6": 54,
+    "bottom30": 7,
+    "median": 2098
   },
   "team": {
     "members": ["Patrick E. McKnight", "Todd B. Kashdan"],
     "keys": ["mcknight_p", "kashdan_t"],
-    "union_cites": 45260,
-    "simple_cites": 50193,
-    "works": 358,
+    "union_cites": 51661,
+    "simple_cites": 57178,
+    "works": 354,
     "shared_works": 40,
-    "share_union": 18.1,
-    "share_simple": 20.1,
+    "share_union": 17.2,
+    "share_simple": 19,
     "rank": 1,
     "n_others": 58
   },
@@ -33,13 +33,13 @@
     "n": 59,
     "oa_pct": 93,
     "sch_pct": 90,
-    "oa_cites": 10717,
+    "oa_cites": 12572,
     "sch_cites": 19553,
-    "oa_h": 45,
+    "oa_h": 46,
     "sch_h": 53,
-    "fold": 1.82,
-    "cv": 0.413,
-    "share": 4.3
+    "fold": 1.56,
+    "cv": 0.307,
+    "share": 4.2
   },
   "faculty": [
     {
@@ -50,15 +50,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 275,
-      "oa_cites": 39476,
-      "oa_h": 102,
-      "oa_i10": 232,
+      "oa_works": 272,
+      "oa_cites": 44606,
+      "oa_h": 106,
+      "oa_i10": 233,
       "sch_cites": 63622,
       "sch_h": 124,
       "sch_i10": 246,
-      "fold": 1.61,
-      "cv": 0.331,
+      "fold": 1.43,
+      "cv": 0.248,
       "oa_rank": 1,
       "sch_rank": 1,
       "oa_resolved": true,
@@ -72,15 +72,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 486,
-      "oa_cites": 30262,
-      "oa_h": 92,
-      "oa_i10": 311,
+      "oa_works": 559,
+      "oa_cites": 43161,
+      "oa_h": 103,
+      "oa_i10": 360,
       "sch_cites": 60451,
       "sch_h": 113,
       "sch_i10": 410,
-      "fold": 2,
-      "cv": 0.471,
+      "fold": 1.4,
+      "cv": 0.236,
       "oa_rank": 2,
       "sch_rank": 2,
       "oa_resolved": true,
@@ -94,15 +94,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 204,
-      "oa_cites": 21409,
-      "oa_h": 52,
-      "oa_i10": 94,
+      "oa_works": 194,
+      "oa_cites": 25649,
+      "oa_h": 55,
+      "oa_i10": 102,
       "sch_cites": 37971,
       "sch_h": 68,
       "sch_i10": 125,
-      "fold": 1.77,
-      "cv": 0.394,
+      "fold": 1.48,
+      "cv": 0.274,
       "oa_rank": 3,
       "sch_rank": 4,
       "oa_resolved": true,
@@ -116,15 +116,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 169,
-      "oa_cites": 19896,
-      "oa_h": 59,
-      "oa_i10": 93,
+      "oa_works": 167,
+      "oa_cites": 25476,
+      "oa_h": 61,
+      "oa_i10": 99,
       "sch_cites": 43498,
       "sch_h": 74,
       "sch_i10": 136,
-      "fold": 2.19,
-      "cv": 0.527,
+      "fold": 1.71,
+      "cv": 0.37,
       "oa_rank": 4,
       "sch_rank": 3,
       "oa_resolved": true,
@@ -138,15 +138,15 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": true,
-      "oa_works": 123,
-      "oa_cites": 10717,
-      "oa_h": 45,
+      "oa_works": 122,
+      "oa_cites": 12572,
+      "oa_h": 46,
       "oa_i10": 74,
       "sch_cites": 19553,
       "sch_h": 53,
       "sch_i10": 81,
-      "fold": 1.82,
-      "cv": 0.413,
+      "fold": 1.56,
+      "cv": 0.307,
       "oa_rank": 5,
       "sch_rank": 7,
       "oa_resolved": true,
@@ -160,15 +160,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 171,
-      "oa_cites": 9977,
-      "oa_h": 53,
-      "oa_i10": 115,
+      "oa_works": 168,
+      "oa_cites": 12276,
+      "oa_h": 57,
+      "oa_i10": 120,
       "sch_cites": 20175,
       "sch_h": 71,
       "sch_i10": 141,
-      "fold": 2.02,
-      "cv": 0.478,
+      "fold": 1.64,
+      "cv": 0.344,
       "oa_rank": 6,
       "sch_rank": 6,
       "oa_resolved": true,
@@ -182,15 +182,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 106,
-      "oa_cites": 9429,
-      "oa_h": 39,
-      "oa_i10": 64,
+      "oa_works": 99,
+      "oa_cites": 11032,
+      "oa_h": 40,
+      "oa_i10": 63,
       "sch_cites": 15355,
       "sch_h": 44,
       "sch_i10": 72,
-      "fold": 1.63,
-      "cv": 0.338,
+      "fold": 1.39,
+      "cv": 0.232,
       "oa_rank": 7,
       "sch_rank": 8,
       "oa_resolved": true,
@@ -205,14 +205,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 66,
-      "oa_cites": 8589,
-      "oa_h": 38,
+      "oa_cites": 10153,
+      "oa_h": 39,
       "oa_i10": 50,
       "sch_cites": 14397,
       "sch_h": 43,
       "sch_i10": 55,
-      "fold": 1.68,
-      "cv": 0.357,
+      "fold": 1.42,
+      "cv": 0.244,
       "oa_rank": 8,
       "sch_rank": 9,
       "oa_resolved": true,
@@ -226,15 +226,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 105,
-      "oa_cites": 7482,
-      "oa_h": 41,
+      "oa_works": 102,
+      "oa_cites": 8363,
+      "oa_h": 43,
       "oa_i10": 81,
       "sch_cites": 10877,
       "sch_h": 47,
       "sch_i10": 88,
-      "fold": 1.45,
-      "cv": 0.262,
+      "fold": 1.3,
+      "cv": 0.185,
       "oa_rank": 9,
       "sch_rank": 10,
       "oa_resolved": true,
@@ -249,14 +249,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 239,
-      "oa_cites": 6955,
-      "oa_h": 45,
-      "oa_i10": 121,
+      "oa_cites": 7734,
+      "oa_h": 47,
+      "oa_i10": 124,
       "sch_cites": 20599,
       "sch_h": 52,
       "sch_i10": 140,
-      "fold": 2.96,
-      "cv": 0.7,
+      "fold": 2.66,
+      "cv": 0.642,
       "oa_rank": 10,
       "sch_rank": 5,
       "oa_resolved": true,
@@ -270,15 +270,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 83,
-      "oa_cites": 6632,
-      "oa_h": 36,
+      "oa_works": 82,
+      "oa_cites": 7564,
+      "oa_h": 37,
       "oa_i10": 60,
       "sch_cites": 9876,
       "sch_h": 41,
       "sch_i10": 64,
-      "fold": 1.49,
-      "cv": 0.278,
+      "fold": 1.31,
+      "cv": 0.187,
       "oa_rank": 11,
       "sch_rank": 11,
       "oa_resolved": true,
@@ -293,14 +293,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 98,
-      "oa_cites": 5656,
-      "oa_h": 40,
-      "oa_i10": 68,
+      "oa_cites": 6658,
+      "oa_h": 42,
+      "oa_i10": 72,
       "sch_cites": 9379,
       "sch_h": 45,
       "sch_i10": 76,
-      "fold": 1.66,
-      "cv": 0.35,
+      "fold": 1.41,
+      "cv": 0.24,
       "oa_rank": 12,
       "sch_rank": 12,
       "oa_resolved": true,
@@ -314,15 +314,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 102,
-      "oa_cites": 5619,
-      "oa_h": 32,
+      "oa_works": 100,
+      "oa_cites": 6586,
+      "oa_h": 33,
       "oa_i10": 59,
       "sch_cites": 8980,
       "sch_h": 38,
       "sch_i10": 62,
-      "fold": 1.6,
-      "cv": 0.326,
+      "fold": 1.36,
+      "cv": 0.218,
       "oa_rank": 13,
       "sch_rank": 13,
       "oa_resolved": true,
@@ -336,15 +336,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 122,
-      "oa_cites": 5567,
-      "oa_h": 37,
-      "oa_i10": 74,
+      "oa_works": 121,
+      "oa_cites": 6075,
+      "oa_h": 38,
+      "oa_i10": 76,
       "sch_cites": 8946,
       "sch_h": 46,
       "sch_i10": 95,
-      "fold": 1.61,
-      "cv": 0.329,
+      "fold": 1.47,
+      "cv": 0.27,
       "oa_rank": 14,
       "sch_rank": 14,
       "oa_resolved": true,
@@ -359,16 +359,82 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 116,
-      "oa_cites": 4474,
-      "oa_h": 36,
-      "oa_i10": 88,
+      "oa_cites": 4988,
+      "oa_h": 38,
+      "oa_i10": 89,
       "sch_cites": 7281,
       "sch_h": 45,
       "sch_i10": 92,
-      "fold": 1.63,
-      "cv": 0.338,
+      "fold": 1.46,
+      "cv": 0.264,
       "oa_rank": 15,
       "sch_rank": 15,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "stagl_k",
+      "name": "Kevin C Stagl",
+      "disc": "I-O",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 29,
+      "oa_cites": 4443,
+      "oa_h": 13,
+      "oa_i10": 15,
+      "sch_cites": 6635,
+      "sch_h": 15,
+      "sch_i10": 18,
+      "fold": 1.49,
+      "cv": 0.28,
+      "oa_rank": 16,
+      "sch_rank": 18,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "sheridan_k",
+      "name": "Kimberly M Sheridan",
+      "disc": "Applied Developmental",
+      "rank": "Professor",
+      "rank_group": "Full",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 69,
+      "oa_cites": 4183,
+      "oa_h": 20,
+      "oa_i10": 21,
+      "sch_cites": 7187,
+      "sch_h": 19,
+      "sch_i10": 25,
+      "fold": 1.72,
+      "cv": 0.374,
+      "oa_rank": 17,
+      "sch_rank": 16,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "goldstein_t",
+      "name": "Thalia R Goldstein",
+      "disc": "Applied Developmental",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 146,
+      "oa_cites": 4164,
+      "oa_h": 30,
+      "oa_i10": 47,
+      "sch_cites": 5980,
+      "sch_h": 33,
+      "sch_i10": 59,
+      "fold": 1.44,
+      "cv": 0.253,
+      "oa_rank": 18,
+      "sch_rank": 19,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -381,60 +447,38 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 71,
-      "oa_cites": 3760,
-      "oa_h": 29,
-      "oa_i10": 42,
+      "oa_cites": 4056,
+      "oa_h": 30,
+      "oa_i10": 45,
       "sch_cites": 4646,
       "sch_h": 31,
       "sch_i10": 46,
-      "fold": 1.24,
-      "cv": 0.149,
-      "oa_rank": 16,
+      "fold": 1.15,
+      "cv": 0.096,
+      "oa_rank": 19,
       "sch_rank": 22,
       "oa_resolved": true,
       "sch_resolved": true
     },
     {
-      "key": "stagl_k",
-      "name": "Kevin C Stagl",
-      "disc": "I-O",
+      "key": "cattaneo_l",
+      "name": "Lauren B Cattaneo",
+      "disc": "Clinical",
       "rank": "Associate",
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 30,
-      "oa_cites": 3599,
-      "oa_h": 12,
-      "oa_i10": 14,
-      "sch_cites": 6635,
-      "sch_h": 15,
-      "sch_i10": 18,
-      "fold": 1.84,
-      "cv": 0.42,
-      "oa_rank": 17,
-      "sch_rank": 18,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "goldstein_t",
-      "name": "Thalia R Goldstein",
-      "disc": "Applied Developmental",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 145,
-      "oa_cites": 3538,
-      "oa_h": 28,
-      "oa_i10": 44,
-      "sch_cites": 5980,
-      "sch_h": 33,
-      "sch_i10": 59,
-      "fold": 1.69,
-      "cv": 0.363,
-      "oa_rank": 18,
-      "sch_rank": 19,
+      "oa_works": 60,
+      "oa_cites": 4000,
+      "oa_h": 27,
+      "oa_i10": 41,
+      "sch_cites": 6877,
+      "sch_h": 37,
+      "sch_i10": 51,
+      "fold": 1.72,
+      "cv": 0.374,
+      "oa_rank": 20,
+      "sch_rank": 17,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -447,60 +491,16 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 93,
-      "oa_cites": 3394,
-      "oa_h": 25,
-      "oa_i10": 50,
+      "oa_cites": 3841,
+      "oa_h": 27,
+      "oa_i10": 58,
       "sch_cites": 4754,
       "sch_h": 30,
       "sch_i10": 68,
-      "fold": 1.4,
-      "cv": 0.236,
-      "oa_rank": 19,
-      "sch_rank": 21,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "cattaneo_l",
-      "name": "Lauren B Cattaneo",
-      "disc": "Clinical",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 61,
-      "oa_cites": 3391,
-      "oa_h": 26,
-      "oa_i10": 40,
-      "sch_cites": 6877,
-      "sch_h": 37,
-      "sch_i10": 51,
-      "fold": 2.03,
-      "cv": 0.48,
-      "oa_rank": 20,
-      "sch_rank": 17,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "sheridan_k",
-      "name": "Kimberly M Sheridan",
-      "disc": "Applied Developmental",
-      "rank": "Professor",
-      "rank_group": "Full",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 72,
-      "oa_cites": 3196,
-      "oa_h": 18,
-      "oa_i10": 21,
-      "sch_cites": 7187,
-      "sch_h": 19,
-      "sch_i10": 25,
-      "fold": 2.25,
-      "cv": 0.544,
+      "fold": 1.24,
+      "cv": 0.15,
       "oa_rank": 21,
-      "sch_rank": 16,
+      "sch_rank": 21,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -513,14 +513,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 80,
-      "oa_cites": 3164,
-      "oa_h": 24,
-      "oa_i10": 42,
+      "oa_cites": 3556,
+      "oa_h": 25,
+      "oa_i10": 44,
       "sch_cites": 4877,
       "sch_h": 31,
       "sch_i10": 55,
-      "fold": 1.54,
-      "cv": 0.301,
+      "fold": 1.37,
+      "cv": 0.222,
       "oa_rank": 22,
       "sch_rank": 20,
       "oa_resolved": true,
@@ -534,15 +534,15 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 66,
-      "oa_cites": 2649,
-      "oa_h": 26,
-      "oa_i10": 44,
+      "oa_works": 63,
+      "oa_cites": 3254,
+      "oa_h": 28,
+      "oa_i10": 46,
       "sch_cites": 3986,
       "sch_h": 35,
       "sch_i10": 60,
-      "fold": 1.5,
-      "cv": 0.285,
+      "fold": 1.22,
+      "cv": 0.143,
       "oa_rank": 23,
       "sch_rank": 23,
       "oa_resolved": true,
@@ -557,14 +557,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 107,
-      "oa_cites": 2486,
-      "oa_h": 23,
-      "oa_i10": 41,
+      "oa_cites": 2855,
+      "oa_h": 24,
+      "oa_i10": 43,
       "sch_cites": 2846,
       "sch_h": 25,
       "sch_i10": 42,
-      "fold": 1.14,
-      "cv": 0.095,
+      "fold": 1,
+      "cv": 0.002,
       "oa_rank": 24,
       "sch_rank": 29,
       "oa_resolved": true,
@@ -579,14 +579,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 90,
-      "oa_cites": 2349,
-      "oa_h": 23,
-      "oa_i10": 41,
+      "oa_cites": 2836,
+      "oa_h": 25,
+      "oa_i10": 46,
       "sch_cites": 3962,
       "sch_h": 28,
       "sch_i10": 60,
-      "fold": 1.69,
-      "cv": 0.361,
+      "fold": 1.4,
+      "cv": 0.234,
       "oa_rank": 25,
       "sch_rank": 24,
       "oa_resolved": true,
@@ -600,17 +600,61 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 32,
-      "oa_cites": 2300,
+      "oa_works": 33,
+      "oa_cites": 2623,
       "oa_h": 21,
       "oa_i10": 22,
       "sch_cites": 3400,
       "sch_h": 23,
       "sch_i10": 25,
-      "fold": 1.48,
-      "cv": 0.273,
+      "fold": 1.3,
+      "cv": 0.182,
       "oa_rank": 26,
       "sch_rank": 25,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "adams_l",
+      "name": "Leah M Adams",
+      "disc": "Clinical",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 64,
+      "oa_cites": 2500,
+      "oa_h": 24,
+      "oa_i10": 37,
+      "sch_cites": 3321,
+      "sch_h": 26,
+      "sch_i10": 38,
+      "fold": 1.33,
+      "cv": 0.199,
+      "oa_rank": 27,
+      "sch_rank": 26,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "kornienko_o",
+      "name": "Olga Kornienko",
+      "disc": "Applied Developmental",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 55,
+      "oa_cites": 2179,
+      "oa_h": 25,
+      "oa_i10": 35,
+      "sch_cites": 2863,
+      "sch_h": 29,
+      "sch_i10": 38,
+      "fold": 1.31,
+      "cv": 0.192,
+      "oa_rank": 28,
+      "sch_rank": 28,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -623,38 +667,16 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 65,
-      "oa_cites": 1988,
-      "oa_h": 27,
-      "oa_i10": 47,
+      "oa_cites": 2143,
+      "oa_h": 28,
+      "oa_i10": 48,
       "sch_cites": 2720,
       "sch_h": 30,
       "sch_i10": 49,
-      "fold": 1.37,
-      "cv": 0.22,
-      "oa_rank": 27,
+      "fold": 1.27,
+      "cv": 0.168,
+      "oa_rank": 29,
       "sch_rank": 30,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "kornienko_o",
-      "name": "Olga Kornienko",
-      "disc": "Applied Developmental",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 56,
-      "oa_cites": 1974,
-      "oa_h": 23,
-      "oa_i10": 35,
-      "sch_cites": 2863,
-      "sch_h": 29,
-      "sch_i10": 38,
-      "fold": 1.45,
-      "cv": 0.26,
-      "oa_rank": 28,
-      "sch_rank": 28,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -666,19 +688,41 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 52,
-      "oa_cites": 1844,
-      "oa_h": 26,
-      "oa_i10": 36,
+      "oa_works": 53,
+      "oa_cites": 2098,
+      "oa_h": 27,
+      "oa_i10": 39,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
       "fold": null,
       "cv": null,
-      "oa_rank": 29,
+      "oa_rank": 30,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
+    },
+    {
+      "key": "short_j",
+      "name": "Jerome Short",
+      "disc": "Clinical",
+      "rank": "Associate",
+      "rank_group": "Associate",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 27,
+      "oa_cites": 2066,
+      "oa_h": 16,
+      "oa_i10": 19,
+      "sch_cites": 3045,
+      "sch_h": 18,
+      "sch_i10": 22,
+      "fold": 1.47,
+      "cv": 0.271,
+      "oa_rank": 31,
+      "sch_rank": 27,
+      "oa_resolved": true,
+      "sch_resolved": true
     },
     {
       "key": "doebel_s",
@@ -689,15 +733,15 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 29,
-      "oa_cites": 1827,
+      "oa_cites": 2005,
       "oa_h": 19,
       "oa_i10": 20,
       "sch_cites": 2453,
       "sch_h": 20,
       "sch_i10": 21,
-      "fold": 1.34,
-      "cv": 0.207,
-      "oa_rank": 30,
+      "fold": 1.22,
+      "cv": 0.142,
+      "oa_rank": 32,
       "sch_rank": 31,
       "oa_resolved": true,
       "sch_resolved": true
@@ -711,38 +755,16 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 39,
-      "oa_cites": 1818,
+      "oa_cites": 1956,
       "oa_h": 26,
       "oa_i10": 29,
       "sch_cites": 2289,
       "sch_h": 25,
       "sch_i10": 29,
-      "fold": 1.26,
-      "cv": 0.162,
-      "oa_rank": 31,
+      "fold": 1.17,
+      "cv": 0.111,
+      "oa_rank": 33,
       "sch_rank": 33,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "short_j",
-      "name": "Jerome Short",
-      "disc": "Clinical",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 27,
-      "oa_cites": 1754,
-      "oa_h": 15,
-      "oa_i10": 19,
-      "sch_cites": 3045,
-      "sch_h": 18,
-      "sch_i10": 22,
-      "fold": 1.74,
-      "cv": 0.38,
-      "oa_rank": 32,
-      "sch_rank": 27,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -754,39 +776,17 @@
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 54,
-      "oa_cites": 1651,
+      "oa_works": 53,
+      "oa_cites": 1818,
       "oa_h": 19,
-      "oa_i10": 27,
+      "oa_i10": 29,
       "sch_cites": 2180,
       "sch_h": 21,
       "sch_i10": 26,
-      "fold": 1.32,
-      "cv": 0.195,
-      "oa_rank": 33,
-      "sch_rank": 34,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "adams_l",
-      "name": "Leah M Adams",
-      "disc": "Clinical",
-      "rank": "Associate",
-      "rank_group": "Associate",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 56,
-      "oa_cites": 1639,
-      "oa_h": 20,
-      "oa_i10": 29,
-      "sch_cites": 3321,
-      "sch_h": 26,
-      "sch_i10": 38,
-      "fold": 2.03,
-      "cv": 0.48,
+      "fold": 1.2,
+      "cv": 0.128,
       "oa_rank": 34,
-      "sch_rank": 26,
+      "sch_rank": 34,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -799,14 +799,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 66,
-      "oa_cites": 1506,
+      "oa_cites": 1696,
       "oa_h": 19,
-      "oa_i10": 27,
+      "oa_i10": 29,
       "sch_cites": 1972,
       "sch_h": 21,
       "sch_i10": 30,
-      "fold": 1.31,
-      "cv": 0.189,
+      "fold": 1.16,
+      "cv": 0.106,
       "oa_rank": 35,
       "sch_rank": 35,
       "oa_resolved": true,
@@ -821,14 +821,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 46,
-      "oa_cites": 1424,
+      "oa_cites": 1629,
       "oa_h": 18,
-      "oa_i10": 22,
+      "oa_i10": 23,
       "sch_cites": 2382,
       "sch_h": 21,
       "sch_i10": 27,
-      "fold": 1.67,
-      "cv": 0.356,
+      "fold": 1.46,
+      "cv": 0.265,
       "oa_rank": 36,
       "sch_rank": 32,
       "oa_resolved": true,
@@ -843,14 +843,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 49,
-      "oa_cites": 1291,
+      "oa_cites": 1406,
       "oa_h": 18,
-      "oa_i10": 26,
+      "oa_i10": 27,
       "sch_cites": 1742,
       "sch_h": 21,
       "sch_i10": 29,
-      "fold": 1.35,
-      "cv": 0.21,
+      "fold": 1.24,
+      "cv": 0.151,
       "oa_rank": 37,
       "sch_rank": 36,
       "oa_resolved": true,
@@ -865,14 +865,14 @@
       "category": "research",
       "is_self": false,
       "oa_works": 50,
-      "oa_cites": 1111,
+      "oa_cites": 1212,
       "oa_h": 20,
-      "oa_i10": 25,
+      "oa_i10": 27,
       "sch_cites": 1426,
       "sch_h": 20,
       "sch_i10": 27,
-      "fold": 1.28,
-      "cv": 0.176,
+      "fold": 1.18,
+      "cv": 0.115,
       "oa_rank": 38,
       "sch_rank": 39,
       "oa_resolved": true,
@@ -887,14 +887,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 32,
-      "oa_cites": 925,
-      "oa_h": 12,
-      "oa_i10": 14,
+      "oa_cites": 1057,
+      "oa_h": 13,
+      "oa_i10": 15,
       "sch_cites": 1542,
       "sch_h": 15,
       "sch_i10": 16,
-      "fold": 1.67,
-      "cv": 0.354,
+      "fold": 1.46,
+      "cv": 0.264,
       "oa_rank": 39,
       "sch_rank": 37,
       "oa_resolved": true,
@@ -908,15 +908,15 @@
       "rank_group": "Assistant",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 27,
-      "oa_cites": 923,
+      "oa_works": 26,
+      "oa_cites": 994,
       "oa_h": 13,
-      "oa_i10": 15,
+      "oa_i10": 17,
       "sch_cites": 1160,
       "sch_h": 15,
       "sch_i10": 15,
-      "fold": 1.26,
-      "cv": 0.161,
+      "fold": 1.17,
+      "cv": 0.109,
       "oa_rank": 40,
       "sch_rank": 40,
       "oa_resolved": true,
@@ -930,15 +930,15 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 20,
-      "oa_cites": 760,
-      "oa_h": 9,
-      "oa_i10": 9,
+      "oa_works": 18,
+      "oa_cites": 841,
+      "oa_h": 10,
+      "oa_i10": 11,
       "sch_cites": 962,
       "sch_h": 10,
       "sch_i10": 10,
-      "fold": 1.27,
-      "cv": 0.166,
+      "fold": 1.14,
+      "cv": 0.095,
       "oa_rank": 41,
       "sch_rank": 41,
       "oa_resolved": true,
@@ -953,14 +953,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 44,
-      "oa_cites": 688,
-      "oa_h": 15,
+      "oa_cites": 781,
+      "oa_h": 16,
       "oa_i10": 20,
       "sch_cites": 1474,
       "sch_h": 20,
       "sch_i10": 30,
-      "fold": 2.14,
-      "cv": 0.514,
+      "fold": 1.89,
+      "cv": 0.435,
       "oa_rank": 42,
       "sch_rank": 38,
       "oa_resolved": true,
@@ -974,10 +974,10 @@
       "rank_group": "Full",
       "category": "tenure_line",
       "is_self": false,
-      "oa_works": 29,
-      "oa_cites": 290,
-      "oa_h": 8,
-      "oa_i10": 8,
+      "oa_works": 28,
+      "oa_cites": 441,
+      "oa_h": 11,
+      "oa_i10": 11,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
@@ -997,14 +997,14 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 22,
-      "oa_cites": 287,
+      "oa_cites": 323,
       "oa_h": 7,
       "oa_i10": 6,
       "sch_cites": 418,
       "sch_h": 7,
       "sch_i10": 7,
-      "fold": 1.46,
-      "cv": 0.263,
+      "fold": 1.29,
+      "cv": 0.181,
       "oa_rank": 44,
       "sch_rank": 42,
       "oa_resolved": true,
@@ -1019,7 +1019,7 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 4,
-      "oa_cites": 189,
+      "oa_cites": 230,
       "oa_h": 2,
       "oa_i10": 2,
       "sch_cites": null,
@@ -1041,38 +1041,16 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 6,
-      "oa_cites": 122,
+      "oa_cites": 141,
       "oa_h": 4,
       "oa_i10": 2,
       "sch_cites": 300,
       "sch_h": 5,
       "sch_i10": 3,
-      "fold": 2.46,
-      "cv": 0.597,
+      "fold": 2.13,
+      "cv": 0.51,
       "oa_rank": 46,
       "sch_rank": 43,
-      "oa_resolved": true,
-      "sch_resolved": true
-    },
-    {
-      "key": "savage_n",
-      "name": "Nastassia Savage",
-      "disc": "Unknown",
-      "rank": "Assistant",
-      "rank_group": "Assistant",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 19,
-      "oa_cites": 104,
-      "oa_h": 5,
-      "oa_i10": 3,
-      "sch_cites": 188,
-      "sch_h": 6,
-      "sch_i10": 4,
-      "fold": 1.81,
-      "cv": 0.407,
-      "oa_rank": 47,
-      "sch_rank": 44,
       "oa_resolved": true,
       "sch_resolved": true
     },
@@ -1085,7 +1063,7 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 3,
-      "oa_cites": 101,
+      "oa_cites": 116,
       "oa_h": 3,
       "oa_i10": 3,
       "sch_cites": null,
@@ -1093,7 +1071,51 @@
       "sch_i10": null,
       "fold": null,
       "cv": null,
+      "oa_rank": 47,
+      "sch_rank": 45,
+      "oa_resolved": true,
+      "sch_resolved": false
+    },
+    {
+      "key": "savage_n",
+      "name": "Nastassia Savage",
+      "disc": "Unknown",
+      "rank": "Assistant",
+      "rank_group": "Assistant",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 18,
+      "oa_cites": 113,
+      "oa_h": 5,
+      "oa_i10": 3,
+      "sch_cites": 188,
+      "sch_h": 6,
+      "sch_i10": 4,
+      "fold": 1.66,
+      "cv": 0.352,
       "oa_rank": 48,
+      "sch_rank": 44,
+      "oa_resolved": true,
+      "sch_resolved": true
+    },
+    {
+      "key": "smithgray_s",
+      "name": "Sybil Smith-Gray",
+      "disc": "Unknown",
+      "rank": "Assistant",
+      "rank_group": "Assistant",
+      "category": "tenure_line",
+      "is_self": false,
+      "oa_works": 5,
+      "oa_cites": 97,
+      "oa_h": 5,
+      "oa_i10": 4,
+      "sch_cites": null,
+      "sch_h": null,
+      "sch_i10": null,
+      "fold": null,
+      "cv": null,
+      "oa_rank": 49,
       "sch_rank": 45,
       "oa_resolved": true,
       "sch_resolved": false
@@ -1107,31 +1129,9 @@
       "category": "tenure_line",
       "is_self": false,
       "oa_works": 7,
-      "oa_cites": 67,
-      "oa_h": 3,
-      "oa_i10": 1,
-      "sch_cites": null,
-      "sch_h": null,
-      "sch_i10": null,
-      "fold": null,
-      "cv": null,
-      "oa_rank": 49,
-      "sch_rank": 45,
-      "oa_resolved": true,
-      "sch_resolved": false
-    },
-    {
-      "key": "smithgray_s",
-      "name": "Sybil Smith-Gray",
-      "disc": "Unknown",
-      "rank": "Assistant",
-      "rank_group": "Assistant",
-      "category": "tenure_line",
-      "is_self": false,
-      "oa_works": 4,
-      "oa_cites": 46,
+      "oa_cites": 86,
       "oa_h": 4,
-      "oa_i10": 2,
+      "oa_i10": 3,
       "sch_cites": null,
       "sch_h": null,
       "sch_i10": null,
@@ -1401,63 +1401,63 @@
       },
       {
         "year": 2012,
-        "cites": 240
+        "cites": 268
       },
       {
         "year": 2013,
-        "cites": 292
+        "cites": 332
       },
       {
         "year": 2014,
-        "cites": 357
+        "cites": 400
       },
       {
         "year": 2015,
-        "cites": 378
+        "cites": 429
       },
       {
         "year": 2016,
-        "cites": 365
+        "cites": 422
       },
       {
         "year": 2017,
-        "cites": 397
+        "cites": 470
       },
       {
         "year": 2018,
-        "cites": 502
+        "cites": 572
       },
       {
         "year": 2019,
-        "cites": 600
+        "cites": 684
       },
       {
         "year": 2020,
-        "cites": 810
+        "cites": 963
       },
       {
         "year": 2021,
-        "cites": 823
+        "cites": 963
       },
       {
         "year": 2022,
-        "cites": 808
+        "cites": 954
       },
       {
         "year": 2023,
-        "cites": 930
+        "cites": 1095
       },
       {
         "year": 2024,
-        "cites": 1089
+        "cites": 1283
       },
       {
         "year": 2025,
-        "cites": 1096
+        "cites": 1332
       },
       {
         "year": 2026,
-        "cites": 1000
+        "cites": 1261
       }
     ],
     "scholar": [
@@ -1625,63 +1625,63 @@
         },
         {
           "year": 2012,
-          "cites": 240
+          "cites": 268
         },
         {
           "year": 2013,
-          "cites": 292
+          "cites": 332
         },
         {
           "year": 2014,
-          "cites": 357
+          "cites": 400
         },
         {
           "year": 2015,
-          "cites": 378
+          "cites": 429
         },
         {
           "year": 2016,
-          "cites": 365
+          "cites": 422
         },
         {
           "year": 2017,
-          "cites": 397
+          "cites": 470
         },
         {
           "year": 2018,
-          "cites": 502
+          "cites": 572
         },
         {
           "year": 2019,
-          "cites": 600
+          "cites": 684
         },
         {
           "year": 2020,
-          "cites": 810
+          "cites": 963
         },
         {
           "year": 2021,
-          "cites": 823
+          "cites": 963
         },
         {
           "year": 2022,
-          "cites": 808
+          "cites": 954
         },
         {
           "year": 2023,
-          "cites": 930
+          "cites": 1095
         },
         {
           "year": 2024,
-          "cites": 1089
+          "cites": 1283
         },
         {
           "year": 2025,
-          "cites": 1096
+          "cites": 1332
         },
         {
           "year": 2026,
-          "cites": 1000
+          "cites": 1261
         }
       ],
       "scholar": [
@@ -1791,10 +1791,6 @@
       "team": false,
       "openalex": [
         {
-          "year": 2006,
-          "cites": 0
-        },
-        {
           "year": 2010,
           "cites": 0
         },
@@ -1804,63 +1800,63 @@
         },
         {
           "year": 2012,
-          "cites": 3
+          "cites": 7
         },
         {
           "year": 2013,
-          "cites": 13
+          "cites": 23
         },
         {
           "year": 2014,
-          "cites": 42
+          "cites": 59
         },
         {
           "year": 2015,
-          "cites": 50
+          "cites": 67
         },
         {
           "year": 2016,
-          "cites": 62
+          "cites": 92
         },
         {
           "year": 2017,
-          "cites": 56
+          "cites": 108
         },
         {
           "year": 2018,
-          "cites": 96
+          "cites": 161
         },
         {
           "year": 2019,
-          "cites": 115
+          "cites": 200
         },
         {
           "year": 2020,
-          "cites": 133
+          "cites": 227
         },
         {
           "year": 2021,
-          "cites": 158
+          "cites": 264
         },
         {
           "year": 2022,
-          "cites": 189
+          "cites": 274
         },
         {
           "year": 2023,
-          "cites": 193
+          "cites": 274
         },
         {
           "year": 2024,
-          "cites": 182
+          "cites": 244
         },
         {
           "year": 2025,
-          "cites": 179
+          "cites": 264
         },
         {
           "year": 2026,
-          "cites": 162
+          "cites": 225
         }
       ],
       "scholar": [
@@ -1939,7 +1935,7 @@
         },
         {
           "year": 2012,
-          "cites": 6
+          "cites": 5
         },
         {
           "year": 2013,
@@ -1947,55 +1943,55 @@
         },
         {
           "year": 2014,
-          "cites": 16
+          "cites": 19
         },
         {
           "year": 2015,
-          "cites": 32
+          "cites": 35
         },
         {
           "year": 2016,
-          "cites": 27
+          "cites": 30
         },
         {
           "year": 2017,
-          "cites": 51
+          "cites": 60
         },
         {
           "year": 2018,
-          "cites": 81
+          "cites": 91
         },
         {
           "year": 2019,
-          "cites": 94
-        },
-        {
-          "year": 2020,
-          "cites": 82
-        },
-        {
-          "year": 2021,
-          "cites": 101
-        },
-        {
-          "year": 2022,
           "cites": 105
         },
         {
+          "year": 2020,
+          "cites": 96
+        },
+        {
+          "year": 2021,
+          "cites": 110
+        },
+        {
+          "year": 2022,
+          "cites": 131
+        },
+        {
           "year": 2023,
-          "cites": 74
+          "cites": 90
         },
         {
           "year": 2024,
-          "cites": 106
+          "cites": 111
         },
         {
           "year": 2025,
-          "cites": 59
+          "cites": 69
         },
         {
           "year": 2026,
-          "cites": 68
+          "cites": 82
         }
       ],
       "scholar": [
@@ -2094,63 +2090,63 @@
         },
         {
           "year": 2012,
-          "cites": 37
+          "cites": 41
         },
         {
           "year": 2013,
-          "cites": 50
+          "cites": 52
         },
         {
           "year": 2014,
-          "cites": 65
+          "cites": 70
         },
         {
           "year": 2015,
-          "cites": 69
+          "cites": 77
         },
         {
           "year": 2016,
-          "cites": 64
+          "cites": 69
         },
         {
           "year": 2017,
-          "cites": 58
+          "cites": 60
         },
         {
           "year": 2018,
-          "cites": 35
-        },
-        {
-          "year": 2019,
-          "cites": 55
-        },
-        {
-          "year": 2020,
-          "cites": 46
-        },
-        {
-          "year": 2021,
-          "cites": 48
-        },
-        {
-          "year": 2022,
-          "cites": 42
-        },
-        {
-          "year": 2023,
           "cites": 40
         },
         {
+          "year": 2019,
+          "cites": 58
+        },
+        {
+          "year": 2020,
+          "cites": 52
+        },
+        {
+          "year": 2021,
+          "cites": 52
+        },
+        {
+          "year": 2022,
+          "cites": 45
+        },
+        {
+          "year": 2023,
+          "cites": 48
+        },
+        {
           "year": 2024,
-          "cites": 34
+          "cites": 40
         },
         {
           "year": 2025,
-          "cites": 27
+          "cites": 30
         },
         {
           "year": 2026,
-          "cites": 13
+          "cites": 24
         }
       ],
       "scholar": [
@@ -2277,63 +2273,63 @@
         },
         {
           "year": 2012,
-          "cites": 13
-        },
-        {
-          "year": 2013,
-          "cites": 7
-        },
-        {
-          "year": 2014,
-          "cites": 12
-        },
-        {
-          "year": 2015,
-          "cites": 12
-        },
-        {
-          "year": 2016,
           "cites": 16
         },
         {
-          "year": 2017,
-          "cites": 15
-        },
-        {
-          "year": 2018,
-          "cites": 9
-        },
-        {
-          "year": 2019,
+          "year": 2013,
           "cites": 11
         },
         {
-          "year": 2020,
-          "cites": 10
+          "year": 2014,
+          "cites": 19
         },
         {
-          "year": 2021,
-          "cites": 20
+          "year": 2015,
+          "cites": 19
         },
         {
-          "year": 2022,
-          "cites": 9
+          "year": 2016,
+          "cites": 28
         },
         {
-          "year": 2023,
-          "cites": 14
+          "year": 2017,
+          "cites": 27
         },
         {
-          "year": 2024,
-          "cites": 22
-        },
-        {
-          "year": 2025,
+          "year": 2018,
           "cites": 18
         },
         {
+          "year": 2019,
+          "cites": 13
+        },
+        {
+          "year": 2020,
+          "cites": 14
+        },
+        {
+          "year": 2021,
+          "cites": 29
+        },
+        {
+          "year": 2022,
+          "cites": 17
+        },
+        {
+          "year": 2023,
+          "cites": 25
+        },
+        {
+          "year": 2024,
+          "cites": 34
+        },
+        {
+          "year": 2025,
+          "cites": 26
+        },
+        {
           "year": 2026,
-          "cites": 7
+          "cites": 12
         }
       ],
       "scholar": []
@@ -2375,63 +2371,63 @@
         },
         {
           "year": 2012,
-          "cites": 80
+          "cites": 98
         },
         {
           "year": 2013,
-          "cites": 82
+          "cites": 103
         },
         {
           "year": 2014,
-          "cites": 135
+          "cites": 142
         },
         {
           "year": 2015,
-          "cites": 125
+          "cites": 161
         },
         {
           "year": 2016,
-          "cites": 118
+          "cites": 162
         },
         {
           "year": 2017,
-          "cites": 149
+          "cites": 179
         },
         {
           "year": 2018,
-          "cites": 182
+          "cites": 226
         },
         {
           "year": 2019,
-          "cites": 272
+          "cites": 326
         },
         {
           "year": 2020,
-          "cites": 263
+          "cites": 311
         },
         {
           "year": 2021,
-          "cites": 334
+          "cites": 383
         },
         {
           "year": 2022,
-          "cites": 231
+          "cites": 288
         },
         {
           "year": 2023,
-          "cites": 338
+          "cites": 368
         },
         {
           "year": 2024,
-          "cites": 324
+          "cites": 368
         },
         {
           "year": 2025,
-          "cites": 279
+          "cites": 325
         },
         {
           "year": 2026,
-          "cites": 291
+          "cites": 338
         }
       ],
       "scholar": [
@@ -2582,63 +2578,63 @@
         },
         {
           "year": 2012,
-          "cites": 161
+          "cites": 176
         },
         {
           "year": 2013,
-          "cites": 169
+          "cites": 203
         },
         {
           "year": 2014,
-          "cites": 247
+          "cites": 275
         },
         {
           "year": 2015,
-          "cites": 231
+          "cites": 266
         },
         {
           "year": 2016,
-          "cites": 298
+          "cites": 362
         },
         {
           "year": 2017,
-          "cites": 328
+          "cites": 389
         },
         {
           "year": 2018,
-          "cites": 349
+          "cites": 394
         },
         {
           "year": 2019,
-          "cites": 392
+          "cites": 462
         },
         {
           "year": 2020,
-          "cites": 486
+          "cites": 537
         },
         {
           "year": 2021,
-          "cites": 502
+          "cites": 564
         },
         {
           "year": 2022,
-          "cites": 476
+          "cites": 544
         },
         {
           "year": 2023,
-          "cites": 597
+          "cites": 665
         },
         {
           "year": 2024,
-          "cites": 639
+          "cites": 714
         },
         {
           "year": 2025,
-          "cites": 727
+          "cites": 829
         },
         {
           "year": 2026,
-          "cites": 666
+          "cites": 761
         }
       ],
       "scholar": [
@@ -2753,63 +2749,63 @@
         },
         {
           "year": 2012,
-          "cites": 87
+          "cites": 96
         },
         {
           "year": 2013,
-          "cites": 157
+          "cites": 170
         },
         {
           "year": 2014,
-          "cites": 193
+          "cites": 211
         },
         {
           "year": 2015,
-          "cites": 223
+          "cites": 275
         },
         {
           "year": 2016,
-          "cites": 301
+          "cites": 363
         },
         {
           "year": 2017,
-          "cites": 320
+          "cites": 374
         },
         {
           "year": 2018,
-          "cites": 357
+          "cites": 429
         },
         {
           "year": 2019,
-          "cites": 447
+          "cites": 540
         },
         {
           "year": 2020,
-          "cites": 516
+          "cites": 615
         },
         {
           "year": 2021,
-          "cites": 510
+          "cites": 595
         },
         {
           "year": 2022,
-          "cites": 462
+          "cites": 559
         },
         {
           "year": 2023,
-          "cites": 523
+          "cites": 597
         },
         {
           "year": 2024,
-          "cites": 507
+          "cites": 581
         },
         {
           "year": 2025,
-          "cites": 501
+          "cites": 579
         },
         {
           "year": 2026,
-          "cites": 446
+          "cites": 550
         }
       ],
       "scholar": [
@@ -2936,63 +2932,63 @@
         },
         {
           "year": 2012,
-          "cites": 388
+          "cites": 425
         },
         {
           "year": 2013,
-          "cites": 345
+          "cites": 371
         },
         {
           "year": 2014,
-          "cites": 384
-        },
-        {
-          "year": 2015,
-          "cites": 402
-        },
-        {
-          "year": 2016,
           "cites": 431
         },
         {
+          "year": 2015,
+          "cites": 467
+        },
+        {
+          "year": 2016,
+          "cites": 505
+        },
+        {
           "year": 2017,
-          "cites": 480
+          "cites": 610
         },
         {
           "year": 2018,
-          "cites": 506
+          "cites": 622
         },
         {
           "year": 2019,
-          "cites": 595
+          "cites": 718
         },
         {
           "year": 2020,
-          "cites": 737
+          "cites": 839
         },
         {
           "year": 2021,
-          "cites": 720
+          "cites": 816
         },
         {
           "year": 2022,
-          "cites": 634
+          "cites": 737
         },
         {
           "year": 2023,
-          "cites": 711
+          "cites": 823
         },
         {
           "year": 2024,
-          "cites": 727
+          "cites": 862
         },
         {
           "year": 2025,
-          "cites": 750
+          "cites": 872
         },
         {
           "year": 2026,
-          "cites": 729
+          "cites": 918
         }
       ],
       "scholar": [
@@ -3111,7 +3107,7 @@
         },
         {
           "year": 2018,
-          "cites": 6
+          "cites": 8
         },
         {
           "year": 2019,
@@ -3123,7 +3119,7 @@
         },
         {
           "year": 2021,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2022,
@@ -3131,19 +3127,19 @@
         },
         {
           "year": 2023,
-          "cites": 9
+          "cites": 13
         },
         {
           "year": 2024,
-          "cites": 3
+          "cites": 6
         },
         {
           "year": 2025,
-          "cites": 12
+          "cites": 15
         },
         {
           "year": 2026,
-          "cites": 12
+          "cites": 18
         }
       ],
       "scholar": []
@@ -3165,7 +3161,7 @@
         },
         {
           "year": 2012,
-          "cites": 8
+          "cites": 11
         },
         {
           "year": 2013,
@@ -3173,11 +3169,11 @@
         },
         {
           "year": 2014,
-          "cites": 14
+          "cites": 15
         },
         {
           "year": 2015,
-          "cites": 18
+          "cites": 22
         },
         {
           "year": 2016,
@@ -3185,43 +3181,43 @@
         },
         {
           "year": 2017,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2018,
-          "cites": 50
+          "cites": 51
         },
         {
           "year": 2019,
-          "cites": 75
+          "cites": 79
         },
         {
           "year": 2020,
-          "cites": 83
+          "cites": 90
         },
         {
           "year": 2021,
-          "cites": 116
+          "cites": 125
         },
         {
           "year": 2022,
-          "cites": 172
+          "cites": 190
         },
         {
           "year": 2023,
-          "cites": 225
+          "cites": 247
         },
         {
           "year": 2024,
-          "cites": 313
+          "cites": 334
         },
         {
           "year": 2025,
-          "cites": 333
+          "cites": 377
         },
         {
           "year": 2026,
-          "cites": 350
+          "cites": 390
         }
       ],
       "scholar": [
@@ -3340,63 +3336,63 @@
         },
         {
           "year": 2012,
-          "cites": 63
+          "cites": 73
         },
         {
           "year": 2013,
-          "cites": 62
-        },
-        {
-          "year": 2014,
-          "cites": 67
-        },
-        {
-          "year": 2015,
-          "cites": 101
-        },
-        {
-          "year": 2016,
-          "cites": 87
-        },
-        {
-          "year": 2017,
-          "cites": 88
-        },
-        {
-          "year": 2018,
-          "cites": 112
-        },
-        {
-          "year": 2019,
-          "cites": 106
-        },
-        {
-          "year": 2020,
-          "cites": 105
-        },
-        {
-          "year": 2021,
-          "cites": 119
-        },
-        {
-          "year": 2022,
           "cites": 68
         },
         {
+          "year": 2014,
+          "cites": 74
+        },
+        {
+          "year": 2015,
+          "cites": 118
+        },
+        {
+          "year": 2016,
+          "cites": 107
+        },
+        {
+          "year": 2017,
+          "cites": 98
+        },
+        {
+          "year": 2018,
+          "cites": 135
+        },
+        {
+          "year": 2019,
+          "cites": 130
+        },
+        {
+          "year": 2020,
+          "cites": 117
+        },
+        {
+          "year": 2021,
+          "cites": 140
+        },
+        {
+          "year": 2022,
+          "cites": 90
+        },
+        {
           "year": 2023,
-          "cites": 86
+          "cites": 94
         },
         {
           "year": 2024,
-          "cites": 92
+          "cites": 107
         },
         {
           "year": 2025,
-          "cites": 77
+          "cites": 90
         },
         {
           "year": 2026,
-          "cites": 66
+          "cites": 77
         }
       ],
       "scholar": []
@@ -3442,63 +3438,63 @@
         },
         {
           "year": 2012,
-          "cites": 220
+          "cites": 239
         },
         {
           "year": 2013,
-          "cites": 256
+          "cites": 276
         },
         {
           "year": 2014,
-          "cites": 345
-        },
-        {
-          "year": 2015,
-          "cites": 289
-        },
-        {
-          "year": 2016,
-          "cites": 279
-        },
-        {
-          "year": 2017,
-          "cites": 296
-        },
-        {
-          "year": 2018,
-          "cites": 356
-        },
-        {
-          "year": 2019,
-          "cites": 307
-        },
-        {
-          "year": 2020,
-          "cites": 365
-        },
-        {
-          "year": 2021,
-          "cites": 444
-        },
-        {
-          "year": 2022,
           "cites": 370
         },
         {
+          "year": 2015,
+          "cites": 315
+        },
+        {
+          "year": 2016,
+          "cites": 305
+        },
+        {
+          "year": 2017,
+          "cites": 321
+        },
+        {
+          "year": 2018,
+          "cites": 395
+        },
+        {
+          "year": 2019,
+          "cites": 348
+        },
+        {
+          "year": 2020,
+          "cites": 398
+        },
+        {
+          "year": 2021,
+          "cites": 470
+        },
+        {
+          "year": 2022,
+          "cites": 406
+        },
+        {
           "year": 2023,
-          "cites": 399
+          "cites": 437
         },
         {
           "year": 2024,
-          "cites": 402
+          "cites": 415
         },
         {
           "year": 2025,
-          "cites": 408
+          "cites": 457
         },
         {
           "year": 2026,
-          "cites": 323
+          "cites": 375
         }
       ],
       "scholar": [
@@ -3637,63 +3633,63 @@
         },
         {
           "year": 2012,
-          "cites": 300
+          "cites": 342
         },
         {
           "year": 2013,
-          "cites": 385
+          "cites": 426
         },
         {
           "year": 2014,
-          "cites": 377
+          "cites": 422
         },
         {
           "year": 2015,
-          "cites": 438
+          "cites": 506
         },
         {
           "year": 2016,
-          "cites": 433
+          "cites": 488
         },
         {
           "year": 2017,
-          "cites": 432
+          "cites": 509
         },
         {
           "year": 2018,
-          "cites": 462
+          "cites": 516
         },
         {
           "year": 2019,
-          "cites": 495
+          "cites": 559
         },
         {
           "year": 2020,
-          "cites": 542
+          "cites": 589
         },
         {
           "year": 2021,
-          "cites": 541
+          "cites": 601
         },
         {
           "year": 2022,
-          "cites": 435
+          "cites": 476
         },
         {
           "year": 2023,
-          "cites": 469
+          "cites": 502
         },
         {
           "year": 2024,
-          "cites": 475
+          "cites": 514
         },
         {
           "year": 2025,
-          "cites": 481
+          "cites": 530
         },
         {
           "year": 2026,
-          "cites": 334
+          "cites": 377
         }
       ],
       "scholar": [
@@ -3856,63 +3852,63 @@
         },
         {
           "year": 2012,
-          "cites": 62
+          "cites": 68
         },
         {
           "year": 2013,
-          "cites": 44
+          "cites": 47
         },
         {
           "year": 2014,
-          "cites": 65
+          "cites": 71
         },
         {
           "year": 2015,
-          "cites": 43
+          "cites": 47
         },
         {
           "year": 2016,
-          "cites": 56
+          "cites": 63
         },
         {
           "year": 2017,
-          "cites": 65
-        },
-        {
-          "year": 2018,
-          "cites": 77
-        },
-        {
-          "year": 2019,
           "cites": 74
         },
         {
-          "year": 2020,
-          "cites": 98
-        },
-        {
-          "year": 2021,
-          "cites": 76
-        },
-        {
-          "year": 2022,
-          "cites": 108
-        },
-        {
-          "year": 2023,
+          "year": 2018,
           "cites": 88
         },
         {
+          "year": 2019,
+          "cites": 82
+        },
+        {
+          "year": 2020,
+          "cites": 105
+        },
+        {
+          "year": 2021,
+          "cites": 84
+        },
+        {
+          "year": 2022,
+          "cites": 116
+        },
+        {
+          "year": 2023,
+          "cites": 94
+        },
+        {
           "year": 2024,
-          "cites": 93
+          "cites": 98
         },
         {
           "year": 2025,
-          "cites": 66
+          "cites": 69
         },
         {
           "year": 2026,
-          "cites": 60
+          "cites": 68
         }
       ],
       "scholar": [
@@ -4031,63 +4027,63 @@
         },
         {
           "year": 2012,
-          "cites": 29
+          "cites": 32
         },
         {
           "year": 2013,
-          "cites": 50
+          "cites": 59
         },
         {
           "year": 2014,
-          "cites": 88
+          "cites": 104
         },
         {
           "year": 2015,
-          "cites": 88
+          "cites": 116
         },
         {
           "year": 2016,
-          "cites": 94
+          "cites": 110
         },
         {
           "year": 2017,
-          "cites": 176
+          "cites": 187
         },
         {
           "year": 2018,
-          "cites": 309
+          "cites": 346
         },
         {
           "year": 2019,
-          "cites": 207
+          "cites": 234
         },
         {
           "year": 2020,
-          "cites": 279
+          "cites": 335
         },
         {
           "year": 2021,
-          "cites": 292
+          "cites": 338
         },
         {
           "year": 2022,
-          "cites": 322
+          "cites": 368
         },
         {
           "year": 2023,
-          "cites": 416
+          "cites": 458
         },
         {
           "year": 2024,
-          "cites": 298
+          "cites": 366
         },
         {
           "year": 2025,
-          "cites": 386
+          "cites": 491
         },
         {
           "year": 2026,
-          "cites": 471
+          "cites": 577
         }
       ],
       "scholar": [
@@ -4214,63 +4210,63 @@
         },
         {
           "year": 2012,
-          "cites": 180
+          "cites": 191
         },
         {
           "year": 2013,
-          "cites": 319
+          "cites": 359
         },
         {
           "year": 2014,
-          "cites": 315
+          "cites": 335
         },
         {
           "year": 2015,
-          "cites": 410
+          "cites": 437
         },
         {
           "year": 2016,
-          "cites": 347
+          "cites": 415
         },
         {
           "year": 2017,
-          "cites": 347
+          "cites": 399
         },
         {
           "year": 2018,
-          "cites": 419
+          "cites": 472
         },
         {
           "year": 2019,
-          "cites": 413
+          "cites": 456
         },
         {
           "year": 2020,
-          "cites": 358
+          "cites": 415
         },
         {
           "year": 2021,
-          "cites": 402
+          "cites": 432
         },
         {
           "year": 2022,
-          "cites": 518
+          "cites": 561
         },
         {
           "year": 2023,
-          "cites": 682
+          "cites": 738
         },
         {
           "year": 2024,
-          "cites": 481
+          "cites": 521
         },
         {
           "year": 2025,
-          "cites": 568
+          "cites": 653
         },
         {
           "year": 2026,
-          "cites": 454
+          "cites": 536
         }
       ],
       "scholar": [
@@ -4461,59 +4457,59 @@
         },
         {
           "year": 2013,
-          "cites": 24
+          "cites": 25
         },
         {
           "year": 2014,
-          "cites": 60
+          "cites": 64
         },
         {
           "year": 2015,
-          "cites": 66
+          "cites": 71
         },
         {
           "year": 2016,
-          "cites": 68
+          "cites": 76
         },
         {
           "year": 2017,
-          "cites": 86
+          "cites": 94
         },
         {
           "year": 2018,
-          "cites": 107
+          "cites": 114
         },
         {
           "year": 2019,
-          "cites": 91
+          "cites": 99
         },
         {
           "year": 2020,
-          "cites": 108
+          "cites": 110
         },
         {
           "year": 2021,
-          "cites": 151
+          "cites": 160
         },
         {
           "year": 2022,
-          "cites": 174
+          "cites": 189
         },
         {
           "year": 2023,
-          "cites": 174
+          "cites": 186
         },
         {
           "year": 2024,
-          "cites": 201
+          "cites": 220
         },
         {
           "year": 2025,
-          "cites": 238
+          "cites": 253
         },
         {
           "year": 2026,
-          "cites": 247
+          "cites": 272
         }
       ],
       "scholar": [
@@ -4632,63 +4628,63 @@
         },
         {
           "year": 2012,
-          "cites": 189
+          "cites": 206
         },
         {
           "year": 2013,
-          "cites": 173
+          "cites": 194
         },
         {
           "year": 2014,
-          "cites": 183
+          "cites": 214
         },
         {
           "year": 2015,
-          "cites": 200
+          "cites": 223
         },
         {
           "year": 2016,
-          "cites": 236
+          "cites": 285
         },
         {
           "year": 2017,
-          "cites": 251
+          "cites": 300
         },
         {
           "year": 2018,
-          "cites": 309
+          "cites": 376
         },
         {
           "year": 2019,
-          "cites": 348
+          "cites": 424
         },
         {
           "year": 2020,
-          "cites": 456
+          "cites": 518
         },
         {
           "year": 2021,
-          "cites": 486
+          "cites": 582
         },
         {
           "year": 2022,
-          "cites": 521
+          "cites": 611
         },
         {
           "year": 2023,
-          "cites": 507
+          "cites": 586
         },
         {
           "year": 2024,
-          "cites": 460
+          "cites": 548
         },
         {
           "year": 2025,
-          "cites": 448
+          "cites": 519
         },
         {
           "year": 2026,
-          "cites": 378
+          "cites": 459
         }
       ],
       "scholar": [
@@ -4847,63 +4843,63 @@
         },
         {
           "year": 2012,
-          "cites": 973
+          "cites": 1070
         },
         {
           "year": 2013,
-          "cites": 1206
+          "cites": 1390
         },
         {
           "year": 2014,
-          "cites": 1645
+          "cites": 1766
         },
         {
           "year": 2015,
-          "cites": 1713
+          "cites": 1908
         },
         {
           "year": 2016,
-          "cites": 1798
+          "cites": 2088
         },
         {
           "year": 2017,
-          "cites": 1877
+          "cites": 2266
         },
         {
           "year": 2018,
-          "cites": 2404
+          "cites": 2728
         },
         {
           "year": 2019,
-          "cites": 2486
+          "cites": 2855
         },
         {
           "year": 2020,
-          "cites": 3095
+          "cites": 3429
         },
         {
           "year": 2021,
-          "cites": 3185
+          "cites": 3614
         },
         {
           "year": 2022,
-          "cites": 3075
+          "cites": 3433
         },
         {
           "year": 2023,
-          "cites": 3333
+          "cites": 3697
         },
         {
           "year": 2024,
-          "cites": 3541
+          "cites": 3942
         },
         {
           "year": 2025,
-          "cites": 3510
+          "cites": 4040
         },
         {
           "year": 2026,
-          "cites": 2952
+          "cites": 3434
         }
       ],
       "scholar": [
@@ -5018,59 +5014,59 @@
         },
         {
           "year": 2013,
-          "cites": 32
+          "cites": 33
         },
         {
           "year": 2014,
-          "cites": 50
+          "cites": 52
         },
         {
           "year": 2015,
-          "cites": 60
+          "cites": 62
         },
         {
           "year": 2016,
-          "cites": 68
+          "cites": 76
         },
         {
           "year": 2017,
-          "cites": 61
+          "cites": 68
         },
         {
           "year": 2018,
-          "cites": 97
+          "cites": 104
         },
         {
           "year": 2019,
-          "cites": 140
+          "cites": 153
         },
         {
           "year": 2020,
-          "cites": 171
+          "cites": 188
         },
         {
           "year": 2021,
-          "cites": 181
+          "cites": 196
         },
         {
           "year": 2022,
-          "cites": 197
+          "cites": 214
         },
         {
           "year": 2023,
-          "cites": 208
+          "cites": 230
         },
         {
           "year": 2024,
-          "cites": 242
+          "cites": 257
         },
         {
           "year": 2025,
-          "cites": 209
+          "cites": 249
         },
         {
           "year": 2026,
-          "cites": 227
+          "cites": 266
         }
       ],
       "scholar": [
@@ -5153,55 +5149,55 @@
         },
         {
           "year": 2014,
-          "cites": 11
+          "cites": 12
         },
         {
           "year": 2015,
-          "cites": 16
+          "cites": 18
         },
         {
           "year": 2016,
-          "cites": 37
+          "cites": 43
         },
         {
           "year": 2017,
-          "cites": 65
+          "cites": 74
         },
         {
           "year": 2018,
-          "cites": 101
+          "cites": 119
         },
         {
           "year": 2019,
-          "cites": 137
+          "cites": 165
         },
         {
           "year": 2020,
-          "cites": 236
+          "cites": 260
         },
         {
           "year": 2021,
-          "cites": 246
+          "cites": 276
         },
         {
           "year": 2022,
-          "cites": 270
+          "cites": 313
         },
         {
           "year": 2023,
-          "cites": 279
+          "cites": 313
         },
         {
           "year": 2024,
-          "cites": 295
+          "cites": 337
         },
         {
           "year": 2025,
-          "cites": 309
+          "cites": 360
         },
         {
           "year": 2026,
-          "cites": 295
+          "cites": 330
         }
       ],
       "scholar": [
@@ -5305,6 +5301,10 @@
           "cites": 2
         },
         {
+          "year": 2013,
+          "cites": 1
+        },
+        {
           "year": 2014,
           "cites": 1
         },
@@ -5314,7 +5314,7 @@
         },
         {
           "year": 2017,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2018,
@@ -5322,35 +5322,35 @@
         },
         {
           "year": 2019,
-          "cites": 16
+          "cites": 17
         },
         {
           "year": 2020,
-          "cites": 30
+          "cites": 32
         },
         {
           "year": 2021,
-          "cites": 61
+          "cites": 65
         },
         {
           "year": 2022,
-          "cites": 70
+          "cites": 81
         },
         {
           "year": 2023,
-          "cites": 80
+          "cites": 84
         },
         {
           "year": 2024,
-          "cites": 100
+          "cites": 113
         },
         {
           "year": 2025,
-          "cites": 144
+          "cites": 169
         },
         {
           "year": 2026,
-          "cites": 172
+          "cites": 203
         }
       ],
       "scholar": [
@@ -5441,63 +5441,63 @@
         },
         {
           "year": 2012,
-          "cites": 31
+          "cites": 32
         },
         {
           "year": 2013,
-          "cites": 41
+          "cites": 45
         },
         {
           "year": 2014,
-          "cites": 69
+          "cites": 75
         },
         {
           "year": 2015,
-          "cites": 64
+          "cites": 79
         },
         {
           "year": 2016,
-          "cites": 91
+          "cites": 107
         },
         {
           "year": 2017,
-          "cites": 92
+          "cites": 106
         },
         {
           "year": 2018,
-          "cites": 129
+          "cites": 151
         },
         {
           "year": 2019,
-          "cites": 115
+          "cites": 128
         },
         {
           "year": 2020,
-          "cites": 159
+          "cites": 171
         },
         {
           "year": 2021,
-          "cites": 166
+          "cites": 183
         },
         {
           "year": 2022,
-          "cites": 203
+          "cites": 236
         },
         {
           "year": 2023,
-          "cites": 288
+          "cites": 325
         },
         {
           "year": 2024,
-          "cites": 267
+          "cites": 304
         },
         {
           "year": 2025,
-          "cites": 338
+          "cites": 397
         },
         {
           "year": 2026,
-          "cites": 361
+          "cites": 432
         }
       ],
       "scholar": [
@@ -5608,19 +5608,19 @@
         },
         {
           "year": 2023,
-          "cites": 54
+          "cites": 59
         },
         {
           "year": 2024,
-          "cites": 49
+          "cites": 53
         },
         {
           "year": 2025,
-          "cites": 74
+          "cites": 82
         },
         {
           "year": 2026,
-          "cites": 89
+          "cites": 108
         }
       ],
       "scholar": [
@@ -5767,63 +5767,63 @@
         },
         {
           "year": 2012,
-          "cites": 1078
+          "cites": 1404
         },
         {
           "year": 2013,
-          "cites": 1078
+          "cites": 1499
         },
         {
           "year": 2014,
-          "cites": 1337
+          "cites": 1840
         },
         {
           "year": 2015,
-          "cites": 1339
+          "cites": 1944
         },
         {
           "year": 2016,
-          "cites": 1335
+          "cites": 1950
         },
         {
           "year": 2017,
-          "cites": 1399
+          "cites": 2034
         },
         {
           "year": 2018,
-          "cites": 1573
+          "cites": 2200
         },
         {
           "year": 2019,
-          "cites": 1529
+          "cites": 2296
         },
         {
           "year": 2020,
-          "cites": 2949
+          "cites": 3973
         },
         {
           "year": 2021,
-          "cites": 1710
+          "cites": 2457
         },
         {
           "year": 2022,
-          "cites": 1492
+          "cites": 2168
         },
         {
           "year": 2023,
-          "cites": 1578
+          "cites": 2355
         },
         {
           "year": 2024,
-          "cites": 1607
+          "cites": 2338
         },
         {
           "year": 2025,
-          "cites": 1564
+          "cites": 2376
         },
         {
           "year": 2026,
-          "cites": 1363
+          "cites": 2092
         }
       ],
       "scholar": [
@@ -6002,63 +6002,63 @@
         },
         {
           "year": 2012,
-          "cites": 54
+          "cites": 59
         },
         {
           "year": 2013,
-          "cites": 91
+          "cites": 87
         },
         {
           "year": 2014,
-          "cites": 109
-        },
-        {
-          "year": 2015,
-          "cites": 122
-        },
-        {
-          "year": 2016,
-          "cites": 118
-        },
-        {
-          "year": 2017,
-          "cites": 116
-        },
-        {
-          "year": 2018,
-          "cites": 136
-        },
-        {
-          "year": 2019,
-          "cites": 136
-        },
-        {
-          "year": 2020,
           "cites": 117
         },
         {
+          "year": 2015,
+          "cites": 134
+        },
+        {
+          "year": 2016,
+          "cites": 129
+        },
+        {
+          "year": 2017,
+          "cites": 127
+        },
+        {
+          "year": 2018,
+          "cites": 146
+        },
+        {
+          "year": 2019,
+          "cites": 144
+        },
+        {
+          "year": 2020,
+          "cites": 127
+        },
+        {
           "year": 2021,
-          "cites": 151
+          "cites": 156
         },
         {
           "year": 2022,
-          "cites": 125
+          "cites": 142
         },
         {
           "year": 2023,
-          "cites": 138
+          "cites": 145
         },
         {
           "year": 2024,
-          "cites": 123
+          "cites": 133
         },
         {
           "year": 2025,
-          "cites": 136
+          "cites": 146
         },
         {
           "year": 2026,
-          "cites": 100
+          "cites": 122
         }
       ],
       "scholar": [
@@ -6184,44 +6184,48 @@
           "cites": 0
         },
         {
+          "year": 2014,
+          "cites": 1
+        },
+        {
           "year": 2017,
-          "cites": 2
+          "cites": 3
         },
         {
           "year": 2018,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2019,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2020,
-          "cites": 9
+          "cites": 10
         },
         {
           "year": 2021,
-          "cites": 14
+          "cites": 15
         },
         {
           "year": 2022,
-          "cites": 55
+          "cites": 64
         },
         {
           "year": 2023,
-          "cites": 122
+          "cites": 126
         },
         {
           "year": 2024,
-          "cites": 224
+          "cites": 244
         },
         {
           "year": 2025,
-          "cites": 335
+          "cites": 363
         },
         {
           "year": 2026,
-          "cites": 344
+          "cites": 378
         }
       ],
       "scholar": [
@@ -6276,15 +6280,15 @@
         },
         {
           "year": 2012,
-          "cites": 6
+          "cites": 7
         },
         {
           "year": 2013,
-          "cites": 6
+          "cites": 7
         },
         {
           "year": 2014,
-          "cites": 11
+          "cites": 13
         },
         {
           "year": 2015,
@@ -6292,31 +6296,31 @@
         },
         {
           "year": 2016,
-          "cites": 2
-        },
-        {
-          "year": 2017,
-          "cites": 6
-        },
-        {
-          "year": 2018,
-          "cites": 8
-        },
-        {
-          "year": 2019,
           "cites": 3
         },
         {
-          "year": 2020,
-          "cites": 6
-        },
-        {
-          "year": 2021,
+          "year": 2017,
           "cites": 8
         },
         {
-          "year": 2022,
+          "year": 2018,
+          "cites": 12
+        },
+        {
+          "year": 2019,
           "cites": 5
+        },
+        {
+          "year": 2020,
+          "cites": 8
+        },
+        {
+          "year": 2021,
+          "cites": 11
+        },
+        {
+          "year": 2022,
+          "cites": 4
         },
         {
           "year": 2023,
@@ -6324,7 +6328,7 @@
         },
         {
           "year": 2024,
-          "cites": 3
+          "cites": 4
         },
         {
           "year": 2025,
@@ -6455,7 +6459,7 @@
         },
         {
           "year": 2013,
-          "cites": 2
+          "cites": 3
         },
         {
           "year": 2014,
@@ -6463,19 +6467,19 @@
         },
         {
           "year": 2015,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2016,
-          "cites": 6
+          "cites": 8
         },
         {
           "year": 2017,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2018,
-          "cites": 9
+          "cites": 10
         },
         {
           "year": 2019,
@@ -6483,31 +6487,31 @@
         },
         {
           "year": 2020,
-          "cites": 19
+          "cites": 46
         },
         {
           "year": 2021,
-          "cites": 18
+          "cites": 20
         },
         {
           "year": 2022,
-          "cites": 15
-        },
-        {
-          "year": 2023,
-          "cites": 29
-        },
-        {
-          "year": 2024,
           "cites": 16
         },
         {
+          "year": 2023,
+          "cites": 30
+        },
+        {
+          "year": 2024,
+          "cites": 18
+        },
+        {
           "year": 2025,
-          "cites": 23
+          "cites": 24
         },
         {
           "year": 2026,
-          "cites": 26
+          "cites": 27
         }
       ],
       "scholar": []
@@ -6569,63 +6573,63 @@
         },
         {
           "year": 2012,
-          "cites": 196
+          "cites": 216
         },
         {
           "year": 2013,
-          "cites": 167
+          "cites": 202
         },
         {
           "year": 2014,
-          "cites": 164
+          "cites": 193
         },
         {
           "year": 2015,
-          "cites": 158
+          "cites": 173
         },
         {
           "year": 2016,
-          "cites": 150
+          "cites": 186
         },
         {
           "year": 2017,
-          "cites": 176
+          "cites": 210
         },
         {
           "year": 2018,
-          "cites": 117
+          "cites": 132
         },
         {
           "year": 2019,
-          "cites": 168
+          "cites": 181
         },
         {
           "year": 2020,
-          "cites": 168
+          "cites": 179
         },
         {
           "year": 2021,
-          "cites": 126
+          "cites": 144
         },
         {
           "year": 2022,
-          "cites": 110
+          "cites": 118
         },
         {
           "year": 2023,
-          "cites": 129
+          "cites": 139
         },
         {
           "year": 2024,
-          "cites": 104
+          "cites": 119
         },
         {
           "year": 2025,
-          "cites": 116
+          "cites": 130
         },
         {
           "year": 2026,
-          "cites": 89
+          "cites": 105
         }
       ],
       "scholar": [
@@ -6760,11 +6764,11 @@
         },
         {
           "year": 2013,
-          "cites": 33
+          "cites": 38
         },
         {
           "year": 2014,
-          "cites": 18
+          "cites": 19
         },
         {
           "year": 2015,
@@ -6772,47 +6776,47 @@
         },
         {
           "year": 2016,
-          "cites": 34
+          "cites": 35
         },
         {
           "year": 2017,
-          "cites": 25
+          "cites": 26
         },
         {
           "year": 2018,
-          "cites": 61
+          "cites": 65
         },
         {
           "year": 2019,
-          "cites": 100
+          "cites": 110
         },
         {
           "year": 2020,
-          "cites": 177
+          "cites": 197
         },
         {
           "year": 2021,
-          "cites": 214
+          "cites": 238
         },
         {
           "year": 2022,
-          "cites": 271
+          "cites": 315
         },
         {
           "year": 2023,
-          "cites": 297
+          "cites": 365
         },
         {
           "year": 2024,
-          "cites": 352
+          "cites": 440
         },
         {
           "year": 2025,
-          "cites": 392
+          "cites": 474
         },
         {
           "year": 2026,
-          "cites": 324
+          "cites": 463
         }
       ],
       "scholar": [
@@ -6923,63 +6927,63 @@
         },
         {
           "year": 2012,
-          "cites": 95
+          "cites": 107
         },
         {
           "year": 2013,
-          "cites": 131
+          "cites": 141
         },
         {
           "year": 2014,
-          "cites": 165
+          "cites": 192
         },
         {
           "year": 2015,
-          "cites": 235
+          "cites": 250
         },
         {
           "year": 2016,
-          "cites": 281
+          "cites": 309
         },
         {
           "year": 2017,
-          "cites": 259
+          "cites": 296
         },
         {
           "year": 2018,
-          "cites": 339
-        },
-        {
-          "year": 2019,
-          "cites": 329
-        },
-        {
-          "year": 2020,
           "cites": 373
         },
         {
+          "year": 2019,
+          "cites": 363
+        },
+        {
+          "year": 2020,
+          "cites": 417
+        },
+        {
           "year": 2021,
-          "cites": 329
+          "cites": 371
         },
         {
           "year": 2022,
-          "cites": 327
+          "cites": 372
         },
         {
           "year": 2023,
-          "cites": 345
+          "cites": 382
         },
         {
           "year": 2024,
-          "cites": 408
+          "cites": 441
         },
         {
           "year": 2025,
-          "cites": 318
+          "cites": 364
         },
         {
           "year": 2026,
-          "cites": 301
+          "cites": 358
         }
       ],
       "scholar": [
@@ -7074,11 +7078,11 @@
         },
         {
           "year": 2020,
-          "cites": 15
+          "cites": 14
         },
         {
           "year": 2021,
-          "cites": 38
+          "cites": 41
         },
         {
           "year": 2022,
@@ -7086,19 +7090,19 @@
         },
         {
           "year": 2023,
-          "cites": 177
+          "cites": 203
         },
         {
           "year": 2024,
-          "cites": 243
+          "cites": 263
         },
         {
           "year": 2025,
-          "cites": 413
+          "cites": 451
         },
         {
           "year": 2026,
-          "cites": 504
+          "cites": 608
         }
       ],
       "scholar": [
@@ -7189,63 +7193,63 @@
         },
         {
           "year": 2012,
-          "cites": 748
+          "cites": 902
         },
         {
           "year": 2013,
-          "cites": 846
+          "cites": 970
         },
         {
           "year": 2014,
-          "cites": 1018
+          "cites": 1146
         },
         {
           "year": 2015,
-          "cites": 1030
+          "cites": 1183
         },
         {
           "year": 2016,
-          "cites": 971
+          "cites": 1249
         },
         {
           "year": 2017,
-          "cites": 1157
+          "cites": 1416
         },
         {
           "year": 2018,
-          "cites": 1205
+          "cites": 1540
         },
         {
           "year": 2019,
-          "cites": 1448
+          "cites": 1800
         },
         {
           "year": 2020,
-          "cites": 1509
+          "cites": 1803
         },
         {
           "year": 2021,
-          "cites": 1525
+          "cites": 1795
         },
         {
           "year": 2022,
-          "cites": 1554
+          "cites": 1828
         },
         {
           "year": 2023,
-          "cites": 1595
+          "cites": 1865
         },
         {
           "year": 2024,
-          "cites": 1489
+          "cites": 1842
         },
         {
           "year": 2025,
-          "cites": 1529
+          "cites": 1846
         },
         {
           "year": 2026,
-          "cites": 1315
+          "cites": 1642
         }
       ],
       "scholar": [
@@ -7364,59 +7368,59 @@
         },
         {
           "year": 2013,
-          "cites": 1
+          "cites": 4
         },
         {
           "year": 2014,
-          "cites": 8
+          "cites": 10
         },
         {
           "year": 2015,
-          "cites": 11
+          "cites": 14
         },
         {
           "year": 2016,
-          "cites": 8
+          "cites": 9
         },
         {
           "year": 2017,
-          "cites": 19
+          "cites": 22
         },
         {
           "year": 2018,
-          "cites": 62
+          "cites": 73
         },
         {
           "year": 2019,
-          "cites": 79
+          "cites": 94
         },
         {
           "year": 2020,
-          "cites": 132
+          "cites": 145
         },
         {
           "year": 2021,
-          "cites": 188
+          "cites": 204
         },
         {
           "year": 2022,
-          "cites": 175
+          "cites": 196
         },
         {
           "year": 2023,
-          "cites": 189
+          "cites": 204
         },
         {
           "year": 2024,
-          "cites": 258
+          "cites": 268
         },
         {
           "year": 2025,
-          "cites": 223
+          "cites": 242
         },
         {
           "year": 2026,
-          "cites": 288
+          "cites": 321
         }
       ],
       "scholar": [
@@ -7487,7 +7491,7 @@
         },
         {
           "year": 2016,
-          "cites": 1
+          "cites": 2
         },
         {
           "year": 2017,
@@ -7503,11 +7507,11 @@
         },
         {
           "year": 2020,
-          "cites": 2
+          "cites": 3
         },
         {
           "year": 2021,
-          "cites": 4
+          "cites": 5
         },
         {
           "year": 2022,
@@ -7515,7 +7519,7 @@
         },
         {
           "year": 2023,
-          "cites": 10
+          "cites": 12
         },
         {
           "year": 2024,
@@ -7523,11 +7527,11 @@
         },
         {
           "year": 2025,
-          "cites": 29
+          "cites": 32
         },
         {
           "year": 2026,
-          "cites": 17
+          "cites": 18
         }
       ],
       "scholar": [
@@ -7622,63 +7626,63 @@
         },
         {
           "year": 2012,
-          "cites": 16
+          "cites": 21
         },
         {
           "year": 2013,
-          "cites": 27
+          "cites": 35
         },
         {
           "year": 2014,
-          "cites": 37
+          "cites": 49
         },
         {
           "year": 2015,
-          "cites": 42
+          "cites": 65
         },
         {
           "year": 2016,
-          "cites": 132
+          "cites": 166
         },
         {
           "year": 2017,
-          "cites": 199
+          "cites": 267
         },
         {
           "year": 2018,
-          "cites": 223
+          "cites": 314
         },
         {
           "year": 2019,
-          "cites": 387
+          "cites": 504
         },
         {
           "year": 2020,
-          "cites": 336
+          "cites": 404
         },
         {
           "year": 2021,
-          "cites": 330
+          "cites": 398
         },
         {
           "year": 2022,
-          "cites": 326
+          "cites": 374
         },
         {
           "year": 2023,
-          "cites": 297
+          "cites": 367
         },
         {
           "year": 2024,
-          "cites": 308
+          "cites": 401
         },
         {
           "year": 2025,
-          "cites": 255
+          "cites": 373
         },
         {
           "year": 2026,
-          "cites": 213
+          "cites": 366
         }
       ],
       "scholar": [
@@ -7805,63 +7809,63 @@
         },
         {
           "year": 2012,
-          "cites": 21
+          "cites": 25
         },
         {
           "year": 2013,
-          "cites": 15
+          "cites": 16
         },
         {
           "year": 2014,
-          "cites": 18
+          "cites": 20
         },
         {
           "year": 2015,
-          "cites": 29
+          "cites": 32
         },
         {
           "year": 2016,
-          "cites": 54
-        },
-        {
-          "year": 2017,
-          "cites": 65
-        },
-        {
-          "year": 2018,
           "cites": 66
         },
         {
+          "year": 2017,
+          "cites": 77
+        },
+        {
+          "year": 2018,
+          "cites": 90
+        },
+        {
           "year": 2019,
-          "cites": 91
+          "cites": 116
         },
         {
           "year": 2020,
-          "cites": 114
+          "cites": 127
         },
         {
           "year": 2021,
-          "cites": 153
+          "cites": 174
         },
         {
           "year": 2022,
-          "cites": 140
+          "cites": 171
         },
         {
           "year": 2023,
-          "cites": 161
+          "cites": 183
         },
         {
           "year": 2024,
-          "cites": 158
+          "cites": 179
         },
         {
           "year": 2025,
-          "cites": 154
+          "cites": 186
         },
         {
           "year": 2026,
-          "cites": 134
+          "cites": 152
         }
       ],
       "scholar": [
@@ -8031,16 +8035,20 @@
           "cites": 0
         },
         {
+          "year": 1999,
+          "cites": 0
+        },
+        {
           "year": 2004,
           "cites": 0
         },
         {
           "year": 2012,
-          "cites": 3
+          "cites": 8
         },
         {
           "year": 2013,
-          "cites": 2
+          "cites": 8
         },
         {
           "year": 2014,
@@ -8048,19 +8056,27 @@
         },
         {
           "year": 2015,
-          "cites": 1
+          "cites": 6
+        },
+        {
+          "year": 2016,
+          "cites": 2
         },
         {
           "year": 2017,
-          "cites": 1
-        },
-        {
-          "year": 2020,
           "cites": 3
         },
         {
+          "year": 2018,
+          "cites": 2
+        },
+        {
+          "year": 2020,
+          "cites": 2
+        },
+        {
           "year": 2021,
-          "cites": 1
+          "cites": 3
         },
         {
           "year": 2022,
@@ -8072,7 +8088,7 @@
         },
         {
           "year": 2025,
-          "cites": 2
+          "cites": 5
         },
         {
           "year": 2026,
@@ -8126,63 +8142,63 @@
         },
         {
           "year": 2012,
-          "cites": 184
+          "cites": 223
         },
         {
           "year": 2013,
-          "cites": 179
+          "cites": 216
         },
         {
           "year": 2014,
-          "cites": 185
+          "cites": 232
         },
         {
           "year": 2015,
-          "cites": 208
+          "cites": 253
         },
         {
           "year": 2016,
-          "cites": 198
+          "cites": 256
         },
         {
           "year": 2017,
-          "cites": 236
+          "cites": 297
         },
         {
           "year": 2018,
-          "cites": 254
+          "cites": 323
         },
         {
           "year": 2019,
-          "cites": 198
+          "cites": 285
         },
         {
           "year": 2020,
-          "cites": 200
+          "cites": 257
         },
         {
           "year": 2021,
-          "cites": 235
+          "cites": 271
         },
         {
           "year": 2022,
-          "cites": 186
+          "cites": 224
         },
         {
           "year": 2023,
-          "cites": 208
+          "cites": 243
         },
         {
           "year": 2024,
-          "cites": 220
+          "cites": 262
         },
         {
           "year": 2025,
-          "cites": 202
+          "cites": 251
         },
         {
           "year": 2026,
-          "cites": 163
+          "cites": 218
         }
       ],
       "scholar": [
@@ -8329,63 +8345,63 @@
         },
         {
           "year": 2012,
-          "cites": 308
+          "cites": 340
         },
         {
           "year": 2013,
-          "cites": 384
+          "cites": 423
         },
         {
           "year": 2014,
-          "cites": 373
+          "cites": 444
         },
         {
           "year": 2015,
-          "cites": 419
+          "cites": 468
         },
         {
           "year": 2016,
-          "cites": 445
+          "cites": 539
         },
         {
           "year": 2017,
-          "cites": 457
+          "cites": 549
         },
         {
           "year": 2018,
-          "cites": 478
+          "cites": 606
         },
         {
           "year": 2019,
-          "cites": 583
+          "cites": 712
         },
         {
           "year": 2020,
-          "cites": 681
+          "cites": 780
         },
         {
           "year": 2021,
-          "cites": 626
+          "cites": 723
         },
         {
           "year": 2022,
-          "cites": 594
+          "cites": 727
         },
         {
           "year": 2023,
-          "cites": 674
+          "cites": 788
         },
         {
           "year": 2024,
-          "cites": 600
+          "cites": 711
         },
         {
           "year": 2025,
-          "cites": 666
+          "cites": 812
         },
         {
           "year": 2026,
-          "cites": 636
+          "cites": 756
         }
       ],
       "scholar": [
@@ -8492,11 +8508,11 @@
         },
         {
           "year": 2013,
-          "cites": 2
+          "cites": 4
         },
         {
           "year": 2014,
-          "cites": 7
+          "cites": 8
         },
         {
           "year": 2015,
@@ -8504,15 +8520,15 @@
         },
         {
           "year": 2016,
-          "cites": 6
+          "cites": 9
         },
         {
           "year": 2017,
-          "cites": 5
+          "cites": 8
         },
         {
           "year": 2018,
-          "cites": 10
+          "cites": 11
         },
         {
           "year": 2019,
@@ -8520,15 +8536,15 @@
         },
         {
           "year": 2020,
-          "cites": 11
+          "cites": 12
         },
         {
           "year": 2021,
-          "cites": 5
+          "cites": 6
         },
         {
           "year": 2022,
-          "cites": 4
+          "cites": 6
         },
         {
           "year": 2023,
@@ -8544,7 +8560,7 @@
         },
         {
           "year": 2026,
-          "cites": 6
+          "cites": 7
         }
       ],
       "scholar": []
@@ -8566,10 +8582,6 @@
         },
         {
           "year": 2001,
-          "cites": 0
-        },
-        {
-          "year": 2002,
           "cites": 0
         },
         {
@@ -8606,63 +8618,63 @@
         },
         {
           "year": 2012,
-          "cites": 114
-        },
-        {
-          "year": 2013,
-          "cites": 119
-        },
-        {
-          "year": 2014,
-          "cites": 123
-        },
-        {
-          "year": 2015,
-          "cites": 141
-        },
-        {
-          "year": 2016,
-          "cites": 138
-        },
-        {
-          "year": 2017,
-          "cites": 120
-        },
-        {
-          "year": 2018,
           "cites": 139
         },
         {
-          "year": 2019,
-          "cites": 135
-        },
-        {
-          "year": 2020,
-          "cites": 163
-        },
-        {
-          "year": 2021,
-          "cites": 157
-        },
-        {
-          "year": 2022,
-          "cites": 164
-        },
-        {
-          "year": 2023,
-          "cites": 175
-        },
-        {
-          "year": 2024,
+          "year": 2013,
           "cites": 144
         },
         {
+          "year": 2014,
+          "cites": 153
+        },
+        {
+          "year": 2015,
+          "cites": 202
+        },
+        {
+          "year": 2016,
+          "cites": 173
+        },
+        {
+          "year": 2017,
+          "cites": 158
+        },
+        {
+          "year": 2018,
+          "cites": 177
+        },
+        {
+          "year": 2019,
+          "cites": 161
+        },
+        {
+          "year": 2020,
+          "cites": 187
+        },
+        {
+          "year": 2021,
+          "cites": 178
+        },
+        {
+          "year": 2022,
+          "cites": 179
+        },
+        {
+          "year": 2023,
+          "cites": 181
+        },
+        {
+          "year": 2024,
+          "cites": 170
+        },
+        {
           "year": 2025,
-          "cites": 132
+          "cites": 141
         },
         {
           "year": 2026,
-          "cites": 137
+          "cites": 163
         }
       ],
       "scholar": [
@@ -8789,19 +8801,19 @@
         },
         {
           "year": 2013,
-          "cites": 26
-        },
-        {
-          "year": 2014,
-          "cites": 18
-        },
-        {
-          "year": 2015,
           "cites": 27
         },
         {
+          "year": 2014,
+          "cites": 19
+        },
+        {
+          "year": 2015,
+          "cites": 28
+        },
+        {
           "year": 2016,
-          "cites": 32
+          "cites": 36
         },
         {
           "year": 2017,
@@ -8809,39 +8821,39 @@
         },
         {
           "year": 2018,
-          "cites": 54
+          "cites": 56
         },
         {
           "year": 2019,
-          "cites": 59
+          "cites": 60
         },
         {
           "year": 2020,
-          "cites": 82
-        },
-        {
-          "year": 2021,
-          "cites": 86
-        },
-        {
-          "year": 2022,
-          "cites": 78
-        },
-        {
-          "year": 2023,
           "cites": 95
         },
         {
-          "year": 2024,
+          "year": 2021,
+          "cites": 91
+        },
+        {
+          "year": 2022,
+          "cites": 86
+        },
+        {
+          "year": 2023,
           "cites": 97
         },
         {
+          "year": 2024,
+          "cites": 102
+        },
+        {
           "year": 2025,
-          "cites": 103
+          "cites": 123
         },
         {
           "year": 2026,
-          "cites": 98
+          "cites": 107
         }
       ],
       "scholar": [
@@ -8944,7 +8956,7 @@
         },
         {
           "year": 2012,
-          "cites": 106
+          "cites": 119
         },
         {
           "year": 2013,
@@ -8952,55 +8964,55 @@
         },
         {
           "year": 2014,
-          "cites": 199
+          "cites": 210
         },
         {
           "year": 2015,
-          "cites": 180
+          "cites": 183
         },
         {
           "year": 2016,
-          "cites": 219
+          "cites": 235
         },
         {
           "year": 2017,
-          "cites": 206
+          "cites": 224
         },
         {
           "year": 2018,
-          "cites": 255
+          "cites": 268
         },
         {
           "year": 2019,
-          "cites": 241
+          "cites": 257
         },
         {
           "year": 2020,
-          "cites": 206
+          "cites": 217
         },
         {
           "year": 2021,
-          "cites": 298
+          "cites": 319
         },
         {
           "year": 2022,
-          "cites": 310
+          "cites": 340
         },
         {
           "year": 2023,
-          "cites": 293
+          "cites": 309
         },
         {
           "year": 2024,
-          "cites": 316
+          "cites": 352
         },
         {
           "year": 2025,
-          "cites": 345
+          "cites": 372
         },
         {
           "year": 2026,
-          "cites": 280
+          "cites": 343
         }
       ],
       "scholar": [
@@ -9159,63 +9171,63 @@
         },
         {
           "year": 2012,
-          "cites": 307
+          "cites": 379
         },
         {
           "year": 2013,
-          "cites": 353
+          "cites": 440
         },
         {
           "year": 2014,
-          "cites": 368
+          "cites": 448
         },
         {
           "year": 2015,
-          "cites": 393
+          "cites": 483
         },
         {
           "year": 2016,
-          "cites": 504
+          "cites": 613
         },
         {
           "year": 2017,
-          "cites": 473
+          "cites": 629
         },
         {
           "year": 2018,
-          "cites": 592
+          "cites": 746
         },
         {
           "year": 2019,
-          "cites": 619
+          "cites": 768
         },
         {
           "year": 2020,
-          "cites": 679
+          "cites": 794
         },
         {
           "year": 2021,
-          "cites": 731
+          "cites": 869
         },
         {
           "year": 2022,
-          "cites": 689
+          "cites": 851
         },
         {
           "year": 2023,
-          "cites": 795
+          "cites": 921
         },
         {
           "year": 2024,
-          "cites": 767
+          "cites": 919
         },
         {
           "year": 2025,
-          "cites": 757
+          "cites": 887
         },
         {
           "year": 2026,
-          "cites": 582
+          "cites": 781
         }
       ],
       "scholar": [
@@ -9466,63 +9478,63 @@
         },
         {
           "year": 2012,
-          "cites": 915
+          "cites": 1120
         },
         {
           "year": 2013,
-          "cites": 864
+          "cites": 1050
         },
         {
           "year": 2014,
-          "cites": 920
+          "cites": 1171
         },
         {
           "year": 2015,
-          "cites": 1008
+          "cites": 1255
         },
         {
           "year": 2016,
-          "cites": 999
+          "cites": 1351
         },
         {
           "year": 2017,
-          "cites": 1031
+          "cites": 1384
         },
         {
           "year": 2018,
-          "cites": 1010
+          "cites": 1387
         },
         {
           "year": 2019,
-          "cites": 970
+          "cites": 1372
         },
         {
           "year": 2020,
-          "cites": 1192
+          "cites": 1523
         },
         {
           "year": 2021,
-          "cites": 1072
+          "cites": 1421
         },
         {
           "year": 2022,
-          "cites": 1056
+          "cites": 1396
         },
         {
           "year": 2023,
-          "cites": 1135
+          "cites": 1436
         },
         {
           "year": 2024,
-          "cites": 1035
+          "cites": 1346
         },
         {
           "year": 2025,
-          "cites": 894
+          "cites": 1202
         },
         {
           "year": 2026,
-          "cites": 883
+          "cites": 1190
         }
       ],
       "scholar": [
@@ -9701,63 +9713,63 @@
         },
         {
           "year": 2012,
-          "cites": 68
-        },
-        {
-          "year": 2013,
-          "cites": 75
-        },
-        {
-          "year": 2014,
-          "cites": 71
-        },
-        {
-          "year": 2015,
-          "cites": 72
-        },
-        {
-          "year": 2016,
-          "cites": 74
-        },
-        {
-          "year": 2017,
-          "cites": 85
-        },
-        {
-          "year": 2018,
           "cites": 77
         },
         {
-          "year": 2019,
-          "cites": 86
+          "year": 2013,
+          "cites": 89
         },
         {
-          "year": 2020,
-          "cites": 76
-        },
-        {
-          "year": 2021,
-          "cites": 90
-        },
-        {
-          "year": 2022,
-          "cites": 83
-        },
-        {
-          "year": 2023,
-          "cites": 101
-        },
-        {
-          "year": 2024,
+          "year": 2014,
           "cites": 80
         },
         {
+          "year": 2015,
+          "cites": 85
+        },
+        {
+          "year": 2016,
+          "cites": 93
+        },
+        {
+          "year": 2017,
+          "cites": 97
+        },
+        {
+          "year": 2018,
+          "cites": 94
+        },
+        {
+          "year": 2019,
+          "cites": 101
+        },
+        {
+          "year": 2020,
+          "cites": 87
+        },
+        {
+          "year": 2021,
+          "cites": 99
+        },
+        {
+          "year": 2022,
+          "cites": 93
+        },
+        {
+          "year": 2023,
+          "cites": 110
+        },
+        {
+          "year": 2024,
+          "cites": 84
+        },
+        {
           "year": 2025,
-          "cites": 72
+          "cites": 86
         },
         {
           "year": 2026,
-          "cites": 66
+          "cites": 72
         }
       ],
       "scholar": [
@@ -9900,63 +9912,63 @@
         },
         {
           "year": 2012,
-          "cites": 62
+          "cites": 61
         },
         {
           "year": 2013,
-          "cites": 77
+          "cites": 91
         },
         {
           "year": 2014,
-          "cites": 119
+          "cites": 128
         },
         {
           "year": 2015,
-          "cites": 136
+          "cites": 150
         },
         {
           "year": 2016,
-          "cites": 83
+          "cites": 96
         },
         {
           "year": 2017,
-          "cites": 98
+          "cites": 110
         },
         {
           "year": 2018,
-          "cites": 152
+          "cites": 160
         },
         {
           "year": 2019,
-          "cites": 161
+          "cites": 180
         },
         {
           "year": 2020,
-          "cites": 240
+          "cites": 267
         },
         {
           "year": 2021,
-          "cites": 193
+          "cites": 210
         },
         {
           "year": 2022,
-          "cites": 263
+          "cites": 301
         },
         {
           "year": 2023,
-          "cites": 344
+          "cites": 374
         },
         {
           "year": 2024,
-          "cites": 378
+          "cites": 419
         },
         {
           "year": 2025,
-          "cites": 481
+          "cites": 552
         },
         {
           "year": 2026,
-          "cites": 492
+          "cites": 596
         }
       ],
       "scholar": [
