@@ -79,9 +79,9 @@ AFFIL_RULES = {"thompson_j": {
 # (still fetchable by id). Added back by id. Mirrors INCLUDE_WORKS in _openalex.R.
 #   W1577581905  2010 'Mann-Whitney U Test' (Corsini Encyclopedia), McKnight & Najab;
 #                missing from list queries since Nov 2026; confirmed by Patrick 2026-11-23.
-#   W1510833811  2010 'Kruskal-Wallis Test' (Corsini), on Najab's record (Patrick's side
-#                is a misspelled 'McKight' stub, so not on Patrick's until he confirms).
-INCLUDE_WORKS = {"mcknight_p": ["W1577581905"], "najab_j": ["W1577581905", "W1510833811"]}
+#   W1510833811  2010 'Kruskal-Wallis Test' (Corsini), McKnight & Najab; Patrick's side is a
+#                misspelled 'McKight' stub (A5083748542). Confirmed by Patrick 2026-11-24.
+INCLUDE_WORKS = {"mcknight_p": ["W1577581905", "W1510833811"], "najab_j": ["W1577581905", "W1510833811"]}
 
 # Individual namesake works (mirrors EXCLUDE_WORKS in _openalex.R).
 EXCLUDE_WORKS = {"W2184987074", "W2896126560", "W167837768", "W571322674", "W656031738", "W2058590783", "W2990819053"}

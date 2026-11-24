@@ -91,7 +91,8 @@ oa_author_works <- function(orcid = NA, author_id = NA, extra_ids = character(0)
 
 # Confirmed works OpenAlex list queries stopped returning (still fetchable by id).
 #   W1577581905  2010 'Mann-Whitney U Test' (Corsini Encyclopedia) -- Patrick confirmed 2026-11-23.
-INCLUDE_WORKS <- list(mcknight_p = "W1577581905")
+#   W1510833811  2010 'Kruskal-Wallis Test' (Corsini), on a misspelled 'McKight' stub -- confirmed 2026-11-24.
+INCLUDE_WORKS <- list(mcknight_p = c("W1577581905", "W1510833811"))
 
 oa_author_works_core <- function(orcid = NA, author_id = NA, extra_ids = character(0), key = NA) {
   rule <- if (!is.na(key)) AFFIL_RULES[[key]] else NULL

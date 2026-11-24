@@ -1,29 +1,29 @@
 {
-  "snapshot_date": "2026-11-23",
-  "oa_snapshot": "2026-11-23",
+  "snapshot_date": "2026-11-24",
+  "oa_snapshot": "2026-11-24",
   "sch_snapshot": "2026-11-11",
   "n_faculty": 59,
   "n_openalex": 51,
   "n_scholar": 44,
   "no_profile": ["Camelia Harb", "Raymond Abraham Bradni", "Danielle Dufresne", "Susanne M Furman", "Sara Montiel", "Robin Shusko", "Kevin Christopher Young", "Justin Ramsdell"],
   "concentration": {
-    "total": 300653,
-    "gini": 0.687,
+    "total": 301751,
+    "gini": 0.688,
     "top3": 38,
-    "top5": 50,
-    "top6": 54,
+    "top5": 51,
+    "top6": 55,
     "bottom30": 7,
     "median": 2098
   },
   "team": {
     "members": ["Patrick E. McKnight", "Todd B. Kashdan"],
     "keys": ["mcknight_p", "kashdan_t"],
-    "union_cites": 51661,
-    "simple_cites": 57178,
-    "works": 354,
+    "union_cites": 52759,
+    "simple_cites": 58276,
+    "works": 355,
     "shared_works": 40,
-    "share_union": 17.2,
-    "share_simple": 19,
+    "share_union": 17.5,
+    "share_simple": 19.3,
     "rank": 1,
     "n_others": 58
   },
@@ -33,13 +33,13 @@
     "n": 59,
     "oa_pct": 93,
     "sch_pct": 90,
-    "oa_cites": 12572,
+    "oa_cites": 13670,
     "sch_cites": 19553,
     "oa_h": 46,
     "sch_h": 53,
-    "fold": 1.56,
-    "cv": 0.307,
-    "share": 4.2
+    "fold": 1.43,
+    "cv": 0.25,
+    "share": 4.5
   },
   "faculty": [
     {
@@ -138,15 +138,15 @@
       "rank_group": "Associate",
       "category": "tenure_line",
       "is_self": true,
-      "oa_works": 122,
-      "oa_cites": 12572,
+      "oa_works": 123,
+      "oa_cites": 13670,
       "oa_h": 46,
-      "oa_i10": 74,
+      "oa_i10": 75,
       "sch_cites": 19553,
       "sch_h": 53,
       "sch_i10": 81,
-      "fold": 1.56,
-      "cv": 0.307,
+      "fold": 1.43,
+      "cv": 0.25,
       "oa_rank": 5,
       "sch_rank": 7,
       "oa_resolved": true,
@@ -1401,63 +1401,63 @@
       },
       {
         "year": 2012,
-        "cites": 268
+        "cites": 277
       },
       {
         "year": 2013,
-        "cites": 332
+        "cites": 342
       },
       {
         "year": 2014,
-        "cites": 400
+        "cites": 410
       },
       {
         "year": 2015,
-        "cites": 429
+        "cites": 437
       },
       {
         "year": 2016,
-        "cites": 422
+        "cites": 435
       },
       {
         "year": 2017,
-        "cites": 470
+        "cites": 496
       },
       {
         "year": 2018,
-        "cites": 572
+        "cites": 600
       },
       {
         "year": 2019,
-        "cites": 684
+        "cites": 722
       },
       {
         "year": 2020,
-        "cites": 963
+        "cites": 1023
       },
       {
         "year": 2021,
-        "cites": 963
+        "cites": 1040
       },
       {
         "year": 2022,
-        "cites": 954
+        "cites": 1045
       },
       {
         "year": 2023,
-        "cites": 1095
+        "cites": 1232
       },
       {
         "year": 2024,
-        "cites": 1283
+        "cites": 1480
       },
       {
         "year": 2025,
-        "cites": 1332
+        "cites": 1555
       },
       {
         "year": 2026,
-        "cites": 1261
+        "cites": 1423
       }
     ],
     "scholar": [
@@ -1625,63 +1625,63 @@
         },
         {
           "year": 2012,
-          "cites": 268
+          "cites": 277
         },
         {
           "year": 2013,
-          "cites": 332
+          "cites": 342
         },
         {
           "year": 2014,
-          "cites": 400
+          "cites": 410
         },
         {
           "year": 2015,
-          "cites": 429
+          "cites": 437
         },
         {
           "year": 2016,
-          "cites": 422
+          "cites": 435
         },
         {
           "year": 2017,
-          "cites": 470
+          "cites": 496
         },
         {
           "year": 2018,
-          "cites": 572
+          "cites": 600
         },
         {
           "year": 2019,
-          "cites": 684
+          "cites": 722
         },
         {
           "year": 2020,
-          "cites": 963
+          "cites": 1023
         },
         {
           "year": 2021,
-          "cites": 963
+          "cites": 1040
         },
         {
           "year": 2022,
-          "cites": 954
+          "cites": 1045
         },
         {
           "year": 2023,
-          "cites": 1095
+          "cites": 1232
         },
         {
           "year": 2024,
-          "cites": 1283
+          "cites": 1480
         },
         {
           "year": 2025,
-          "cites": 1332
+          "cites": 1555
         },
         {
           "year": 2026,
-          "cites": 1261
+          "cites": 1423
         }
       ],
       "scholar": [
